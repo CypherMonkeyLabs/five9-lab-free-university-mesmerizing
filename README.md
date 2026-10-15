@@ -30,7 +30,7 @@ node scripts/verify.mjs
 - Dialer pacing simulator for preview, progressive, power, predictive, and TCPA manual touch. It is a classroom clock, not the Five9 dialer.
 - 3D topology with failure toggles. Reduced motion draws a flat map instead of WebGL.
 - Eight boss incidents, an interview deck, a glossary, and a certification page that refuses invented exam codes.
-- Settings stay in this browser: futuristic, gaming, neon, and light, plus signal, paper, high contrast, amber, and aurora. Sound, narration, reduced motion, and four text sizes stay local.
+- Settings stay in this browser. The floor opens on the neon theme: black-violet space, cyan and magenta. Light is the pastel theme. Futuristic, gaming, holographic, sunset, cyberpunk, signal, paper, high contrast, amber, and aurora stay in the swatches. Sound, narration, reduced motion, and four text sizes stay local.
 - University pages for deployment, SIP and PSTN, migration checklists, ports, playbooks, WFM (the calculator is Erlang C, not Five9's engine), recording, E911, reporting, CRM, AI, security, a 2026 notes page, and study frames.
 - Cheat sheets in `campus/downloads/` as HTML, PDF, and PNG, plus flashcards and an offline zip. The in-app pack builds the same zip in the browser.
 - Ports game, flow map, daily challenge drawn from the lesson bank, badges tied to real progress, and a share card.

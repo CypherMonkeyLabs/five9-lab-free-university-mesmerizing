@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="holographic" data-motion="full" data-font="16" data-look="day">
+<html lang="en" data-theme="neon" data-motion="full" data-font="16" data-look="day">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,7 +14,7 @@
     try {
       var saved = JSON.parse(localStorage.getItem("f9lab-settings") || "{}");
       if (saved.theme) document.documentElement.dataset.theme = saved.theme;
-      else document.documentElement.dataset.theme = "holographic";
+      else document.documentElement.dataset.theme = "neon";
       if (saved.font) document.documentElement.dataset.font = String(saved.font);
       if (saved.reduced === true) document.documentElement.dataset.motion = "reduce";
       if (saved.reduced === false) document.documentElement.dataset.motion = "full";

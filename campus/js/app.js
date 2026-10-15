@@ -64,7 +64,7 @@ function esc(value) {
 
 function loadSettings() {
   const base = {
-    theme: "holographic",
+    theme: "neon",
     lang: "en",
     sound: false,
     narration: false,
@@ -932,7 +932,7 @@ function bindChrome() {
   const mode = document.querySelector("#mode-toggle");
   if (mode) {
     mode.addEventListener("click", () => {
-      session.settings.theme = session.settings.theme === "light" ? "holographic" : "light";
+      session.settings.theme = session.settings.theme === "light" ? "neon" : "light";
       saveSettings();
     });
   }

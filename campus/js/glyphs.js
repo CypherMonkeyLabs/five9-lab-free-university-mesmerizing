@@ -128,7 +128,7 @@ function paintImages() {
 export function glyphImg(key) {
   const safe = cache.has(key) ? key : (cache.has("t01") ? "t01" : key);
   const src = cache.get(safe) || "";
-  return `<img class="glyph" data-glyph="${safe}" alt="" width="112" height="112"${src ? ` src="${src}"` : ""}>`;
+  return `<img class="glyph" data-glyph="${safe}" alt="" width="168" height="168"${src ? ` src="${src}"` : ""}>`;
 }
 
 export function warmGlyphs() {
