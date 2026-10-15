@@ -913,7 +913,6 @@ function bindChrome() {
     paintSettingsForm();
     document.querySelector("#settings").showModal();
   });
-  document.querySelector("#tab-settings").addEventListener("click", () => document.querySelector("#open-settings").click());
   document.querySelector("#settings-close").addEventListener("click", () => document.querySelector("#settings").close());
   const soundToggle = document.querySelector("#sound-toggle");
   if (soundToggle) {
@@ -930,12 +929,20 @@ function bindChrome() {
     saveSettings();
   });
   const lang = document.querySelector("#lang-pick");
+  const menuLang = document.querySelector("#menu-lang");
+  const applyLang = (value) => {
+    session.settings.lang = value;
+    if (lang) lang.value = value;
+    if (menuLang) menuLang.value = value;
+    saveSettings();
+  };
   if (lang) {
     lang.value = session.settings.lang || "en";
-    lang.addEventListener("change", () => {
-      session.settings.lang = lang.value;
-      saveSettings();
-    });
+    lang.addEventListener("change", () => applyLang(lang.value));
+  }
+  if (menuLang) {
+    menuLang.value = session.settings.lang || "en";
+    menuLang.addEventListener("change", () => applyLang(menuLang.value));
   }
   const mode = document.querySelector("#mode-toggle");
   if (mode) {

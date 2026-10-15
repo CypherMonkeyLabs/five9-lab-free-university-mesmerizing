@@ -115,6 +115,10 @@ export function mountMindmap(svg) {
     ]
   };
   try {
+    const box = svg.getBoundingClientRect();
+    const width = Math.max(320, Math.round(box.width || 720));
+    svg.setAttribute("width", String(width));
+    svg.setAttribute("height", "360");
     markmap.Markmap.create(svg, { embedGlobalCSS: true, duration: 0, maxInitialScale: 1 }, root);
   } catch (err) {
     svg.replaceChildren();

@@ -226,7 +226,7 @@ async function renderCharts(ctx) {
   const catalog = await ctx.getCatalog();
   const data = await loadUni();
   ctx.setTitle("Charts", "Six charts from this lab's catalog and the cited bandwidth and port tables.");
-  ctx.view.innerHTML = `${counterRow(catalog)}<div class="chart-grid">${chartStrip(catalog, data)}</div><h2>Study map</h2><svg id="study-map"></svg><p class="note">The mind map is a study outline for this lab. It is not a Five9 organization chart. It is drawn by the vendored markmap build and does not fetch a stylesheet.</p>`;
+  ctx.view.innerHTML = `${counterRow(catalog)}<div class="chart-grid">${chartStrip(catalog, data)}</div><h2>Study map</h2><svg id="study-map" width="720" height="360"></svg><p class="note">The mind map is a study outline for this lab. It is not a Five9 organization chart. It is drawn by the vendored markmap build and does not fetch a stylesheet.</p>`;
   import("./effects.js").then((mod) => mod.mountMindmap(ctx.view.querySelector("#study-map"))).catch(() => {});
 }
 
@@ -856,15 +856,68 @@ function paintCrumbs(bare) {
 }
 
 function paintMenu(bare) {
-  document.querySelectorAll("#primary-menu a").forEach((link) => {
+  const current = (href) => {
+    if (href === bare || (href === "#/" && (bare === "" || bare === "#/"))) return true;
+    if (href === "#/tracks" && (bare.startsWith("#/track") || bare.startsWith("#/lesson"))) return true;
+    return false;
+  };
+  document.querySelectorAll("#primary-menu a, #phone-nav a, #tabbar a").forEach((link) => {
     const href = link.getAttribute("href");
-    const on = href === bare || (href === "#/career" && bare === "#/career");
-    if (on) link.setAttribute("aria-current", "page");
+    if (current(href)) link.setAttribute("aria-current", "page");
     else link.removeAttribute("aria-current");
   });
   document.querySelectorAll("[data-theme-pick]").forEach((button) => {
     button.setAttribute("aria-pressed", button.dataset.themePick === document.documentElement.dataset.theme ? "true" : "false");
   });
+}
+
+let menuPushed = false;
+
+function setMenuExpanded(open) {
+  document.querySelectorAll("#menu-toggle, #tab-menu").forEach((button) => {
+    button.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+}
+
+function closePhoneMenu(fromPop) {
+  const dialog = document.querySelector("#phone-menu");
+  const shouldBack = menuPushed && !fromPop;
+  menuPushed = false;
+  setMenuExpanded(false);
+  if (dialog && dialog.open) dialog.close();
+  if (shouldBack) history.back();
+}
+
+function openPhoneMenu() {
+  const dialog = document.querySelector("#phone-menu");
+  if (!dialog || dialog.open) return;
+  dialog.showModal();
+  setMenuExpanded(true);
+  history.pushState({ f9menu: 1 }, "");
+  menuPushed = true;
+  const close = document.querySelector("#phone-close");
+  if (close) close.focus();
+}
+
+let revealWatch = null;
+
+function armReveal(root) {
+  if (revealWatch) revealWatch.disconnect();
+  const nodes = [...(root || document).querySelectorAll("#view .card, #view .panel, #view .fold, #view section, #view .spotlight")];
+  const reduced = document.documentElement.dataset.motion === "reduce" || !("IntersectionObserver" in window);
+  nodes.forEach((node) => node.classList.add("reveal"));
+  if (reduced) {
+    nodes.forEach((node) => node.classList.add("is-in"));
+    return;
+  }
+  revealWatch = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("is-in");
+      revealWatch.unobserve(entry.target);
+    });
+  }, { threshold: 0.12 });
+  nodes.forEach((node) => revealWatch.observe(node));
 }
 
 function measureChrome() {
@@ -965,6 +1018,7 @@ export function afterRoute() {
     decorateTrack(view).catch(() => {});
   }
   tickCounters(document);
+  armReveal(document);
   import("./effects.js").then((mod) => mod.stopStage()).catch(() => {});
 }
 
@@ -1026,6 +1080,73 @@ export function initUniversity() {
       links[next].focus();
     });
   }
+  const phoneMenu = document.querySelector("#phone-menu");
+  const openers = ["#menu-toggle", "#tab-menu"];
+  openers.forEach((sel) => {
+    const button = document.querySelector(sel);
+    if (button) button.addEventListener("click", () => openPhoneMenu());
+  });
+  const phoneClose = document.querySelector("#phone-close");
+  if (phoneClose) phoneClose.addEventListener("click", () => closePhoneMenu(false));
+  if (phoneMenu) {
+    phoneMenu.addEventListener("close", () => {
+      setMenuExpanded(false);
+      if (menuPushed) {
+        menuPushed = false;
+        history.back();
+      }
+    });
+    phoneMenu.addEventListener("click", (event) => {
+      const link = event.target.closest("#phone-nav a");
+      if (!link) return;
+      event.preventDefault();
+      const href = link.getAttribute("href") || "#/";
+      const pushed = menuPushed;
+      menuPushed = false;
+      setMenuExpanded(false);
+      if (phoneMenu.open) phoneMenu.close();
+      if (!pushed) {
+        if ((location.hash || "#/") !== href) location.hash = href;
+        return;
+      }
+      const go = () => {
+        window.removeEventListener("popstate", go);
+        if ((location.hash || "#/") !== href) location.hash = href;
+      };
+      window.addEventListener("popstate", go);
+      history.back();
+    });
+  }
+  window.addEventListener("popstate", () => {
+    if (phoneMenu && phoneMenu.open) closePhoneMenu(true);
+  });
+  const menuSettings = document.querySelector("#menu-settings");
+  if (menuSettings) {
+    menuSettings.addEventListener("click", () => {
+      closePhoneMenu(false);
+      const open = document.querySelector("#open-settings");
+      if (open) open.click();
+    });
+  }
+  const listen = document.querySelector("#tab-listen");
+  if (listen) {
+    listen.addEventListener("click", () => {
+      if (phoneMenu && phoneMenu.open) closePhoneMenu(false);
+      const dock = document.querySelector("#audio-dock");
+      if (!dock) return;
+      const reduced = document.documentElement.dataset.motion === "reduce";
+      dock.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "start" });
+      const clip = dock.querySelector("audio");
+      if (clip) clip.focus();
+    });
+  }
+  window.addEventListener("scroll", () => {
+    if (document.documentElement.dataset.motion === "reduce") return;
+    const copy = document.querySelector("#hero-copy");
+    if (!copy) return;
+    const shift = Math.min(window.scrollY, 180) * 0.18;
+    copy.style.transform = shift ? `translateY(${shift}px)` : "";
+  }, { passive: true });
   document.addEventListener("click", (event) => {
     const opener = event.target.closest("[data-open-diagram]");
     if (opener) openLightbox(opener.dataset.openDiagram);

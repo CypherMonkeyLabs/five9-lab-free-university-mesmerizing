@@ -84,6 +84,10 @@
     <div class="top-actions">
       <button type="button" class="btn links-toggle" id="links-toggle" aria-expanded="false" aria-controls="utilbar">Links</button>
       <button type="button" class="btn" id="open-settings">Settings</button>
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="phone-menu">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
+        Menu
+      </button>
     </div>
   </header>
   <nav class="primary-menu" id="primary-menu" aria-label="University menu">
@@ -118,14 +122,63 @@
       </div>
     </main>
   </div>
-  <nav class="tabbar" id="tabbar" aria-label="Mobile">
-    <a href="#/" data-tab="home">Home</a>
-    <a href="#/tracks" data-tab="tracks">Tracks</a>
-    <a href="#/tools" data-tab="tools">Tools</a>
-    <a href="#/atlas" data-tab="atlas">Atlas</a>
-    <a href="#/progress" data-tab="progress">Progress</a>
-    <button type="button" id="tab-settings">Settings</button>
+  <nav class="tabbar" id="tabbar" aria-label="Quick bar">
+    <a href="#/tracks" data-tab="learn">Learn</a>
+    <a href="#/atlas" data-tab="diagrams">Diagrams</a>
+    <a href="#/play" data-tab="play">Play</a>
+    <button type="button" id="tab-menu" aria-expanded="false" aria-controls="phone-menu">Menu</button>
+    <button type="button" id="tab-listen">Listen</button>
   </nav>
+  <dialog id="phone-menu" aria-labelledby="phone-menu-title">
+    <div class="phone-menu-bar">
+      <h2 id="phone-menu-title">Menu</h2>
+      <button type="button" class="btn" id="phone-close">Close</button>
+    </div>
+    <nav id="phone-nav" aria-label="All sections">
+      <a href="#/">Home</a>
+      <a href="#/tracks">Learn</a>
+      <a href="#/atlas">Diagrams</a>
+      <a href="#/flows">Flows</a>
+      <a href="#/charts">Charts</a>
+      <a href="#/downloads">Cheat Codes</a>
+      <a href="#/play">Play</a>
+      <a href="#/ecosystem">Ecosystem</a>
+      <a href="#/offline">Downloads</a>
+      <a href="#/career">Careers</a>
+      <a href="#/tools">Tools</a>
+      <a href="#/topology">3D topology</a>
+      <a href="#/ivr">IVR builder</a>
+      <a href="#/pacing">Dialer pacing</a>
+      <a href="#/certs">Certifications</a>
+      <a href="#/boss">Boss incidents</a>
+      <a href="#/interview">Interview</a>
+      <a href="#/progress">Progress</a>
+      <a href="#/regions">Regions</a>
+      <a href="#/badges">Badges</a>
+    </nav>
+    <div class="phone-menu-tools">
+      <label class="lang">Language
+        <select id="menu-lang" aria-label="Language">
+          <option value="en">English</option>
+          <option value="es">Español</option>
+          <option value="hi">हिन्दी</option>
+          <option value="te">తెలుగు</option>
+          <option value="fr">Français</option>
+          <option value="de">Deutsch</option>
+          <option value="ja">日本語</option>
+          <option value="ar">العربية</option>
+        </select>
+      </label>
+      <div class="swatches" role="group" aria-label="Theme">
+        <button type="button" class="swatch" data-theme-pick="neon" style="background:linear-gradient(135deg,#00fff0,#ff2bd6)" aria-label="Neon"></button>
+        <button type="button" class="swatch" data-theme-pick="light" style="background:linear-gradient(135deg,#fb7185,#a78bfa,#22d3ee)" aria-label="Light"></button>
+        <button type="button" class="swatch" data-theme-pick="holographic" style="background:linear-gradient(135deg,#ffd6f2,#b8fff4,#ffe7a8)" aria-label="Holographic"></button>
+        <button type="button" class="swatch" data-theme-pick="cyberpunk" style="background:#d6ff00" aria-label="Cyberpunk"></button>
+        <button type="button" class="swatch" data-theme-pick="sunset" style="background:#ff8a3d" aria-label="Sunset"></button>
+      </div>
+      <button type="button" class="btn" id="menu-settings">Settings</button>
+    </div>
+  </dialog>
   <dialog id="settings" aria-labelledby="settings-title">
     <h2 id="settings-title">Floor settings</h2>
     <p class="note">Saved in this browser only.</p>
@@ -218,7 +271,7 @@
       <div>
         <p class="signature">CYPHER0X9 · Five9 Lab · Signal University</p>
         <p class="legal">Independent educational project, not affiliated with or endorsed by any vendor. Trademarks belong to their owners. MIT code, CC BY-NC-SA content. Product behavior belongs to the cited Five9 pages. This lab does not speak for Five9, Inc.</p>
-        <p><a href="https://cyphermonkeylabs.com/#contact">Report a concern or takedown</a> · <a href="https://cyphermonkeylabs.com/#contact">Work with us</a></p>
+        <p><a href="https://github.com/cipher0x9/five9-lab-free-university-mesmerizing">Rate, comment, help</a> · <a href="https://cyphermonkeylabs.com/#contact">Report a concern or takedown</a> · <a href="https://cyphermonkeylabs.com/#contact">Work with us</a></p>
       </div>
       <div>
         <p class="kicker">Next lab</p>
