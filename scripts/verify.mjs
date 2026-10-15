@@ -1,4 +1,5 @@
 import { readFileSync, statSync } from "node:fs";
+import { diagramIds } from "../campus/js/diagrams.js";
 import { join } from "node:path";
 
 const root = new URL("..", import.meta.url).pathname;
@@ -36,6 +37,13 @@ const eco = read("campus/data/ecosystem.json");
 if (interview.items.length < 36) problems.push("interview");
 if (bosses.items.length < 8) problems.push("boss");
 if (eco.glossary.length < 30) problems.push("glossary");
+const uni = read("campus/data/university.json");
+if (!uni.ports || uni.ports.length < 10) problems.push("ports");
+if (!uni.playbooks || uni.playbooks.length < 8) problems.push("playbooks");
+if (diagramIds.length < 30) problems.push("diagrams");
+const sheets = read("campus/downloads/manifest.json");
+if (!sheets.files.some((file) => file.href.endsWith(".pdf"))) problems.push("pdf");
+if (!sheets.files.some((file) => file.href.endsWith(".png"))) problems.push("png");
 
 const shellFiles = [
   "campus/index.html",

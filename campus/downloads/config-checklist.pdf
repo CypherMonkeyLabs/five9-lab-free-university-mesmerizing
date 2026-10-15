@@ -1,0 +1,93 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 1596 >>
+stream
+BT
+/F1 10 Tf
+48 740 Td
+14 TL
+(Outbound campaign) Tj
+T*
+(Create skill groups.) Tj
+T*
+(Create user profiles, then users, and put agents in the skills.) Tj
+T*
+(Create contact fields and reconcile a list.) Tj
+T*
+(Create dispositions. A final disposition stops the other numbers on that record for the) Tj
+T*
+(campaign.) Tj
+T*
+(Create a campaign profile. ANI and list behavior sit on the profile. One profile is assigned) Tj
+T*
+(to the campaign.) Tj
+T*
+(Create the campaign and choose preview, progressive, power, predictive, or manual touch on) Tj
+T*
+(purpose.) Tj
+T*
+(Inbound campaign) Tj
+T*
+(Prompts exist before the script.) Tj
+T*
+(The script uses the module names in the IVR guide.) Tj
+T*
+(Skill Transfer names a skill, or you accept Default.) Tj
+T*
+(The DNIS is on a campaign that is running. A schedule is how you close, not a stopped) Tj
+T*
+(campaign you forget.) Tj
+T*
+(Service level is the scoreboard you agreed to read.) Tj
+T*
+(People and evidence) Tj
+T*
+(Reason codes exist so Not Ready means something.) Tj
+T*
+(The reporting role can generate a standard report.) Tj
+T*
+(Call variables are flagged for reporting or they are not history.) Tj
+T*
+(WEM, if you bought it, is a second product surface. Do not assume the dialer believes a) Tj
+T*
+(schedule you never connected.) Tj
+T*
+() Tj
+T*
+(CYPHER0X9 Five9 Lab. Independent study. Not affiliated with Five9.) Tj
+T*
+(https://cyphermonkeylabs.com) Tj
+T*
+(https://linktr.ee/cyphermonkey) Tj
+T*
+(https://github.com/cipher0x9/five9-lab-free-university-mesmerizing) Tj
+T*
+(MIT code, CC BY-NC-SA content. Trademarks belong to their owners.) Tj
+T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Contents 2 0 R /Resources << /Font << /F1 1 0 R >> >> >>
+endobj
+4 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+5 0 obj
+<< /Type /Catalog /Pages 4 0 R >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000001727 00000 n 
+0000001853 00000 n 
+0000001910 00000 n 
+trailer << /Size 6 /Root 5 0 R >>
+startxref
+1959
+%%EOF

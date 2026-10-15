@@ -1,0 +1,85 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 1715 >>
+stream
+BT
+/F1 10 Tf
+48 740 Td
+14 TL
+(80 TCP Outbound: HTTP for sign-in, reporting, and support pages.) Tj
+T*
+(443 TCP Outbound: HTTPS for sign-in, reporting, and support.) Tj
+T*
+(1024-65535 UDP Outbound: RTP between Five9 applications. Without a stateful firewall, allow) Tj
+T*
+(the return path. WebRTC also sends STUN on these ports.) Tj
+T*
+(2200-2300 TCP Outbound: Encrypted Java RMI on the community softphone table. Java Agent and) Tj
+T*
+(Supervisor desktops left the customer portal after 1 August 2026. Confirm whether your site) Tj
+T*
+(still launches Java admin.) Tj
+T*
+(5060-5067 UDP Outbound: SIP for the agent application.) Tj
+T*
+(5080 UDP Outbound: SIP signaling on the Five9 SIP proxy.) Tj
+T*
+(5081 TCP Outbound: SIP over TLS on the Five9 SIP proxy.) Tj
+T*
+(8000-8015 UDP Outbound: Source ports the article lists for desktop RTP.) Tj
+T*
+(8080/8081 TCP Outbound: Network assessment at quality.five9.com.) Tj
+T*
+(8083 TCP Local: Five9 Softphone Service. The article says to keep other processes off it,) Tj
+T*
+(and to open it on the host firewall when VDI needs it.) Tj
+T*
+(8843 TCP Outbound: HTTPS download of Five9 applications and API.) Tj
+T*
+(8880 TCP Outbound: HTTP download of Five9 applications.) Tj
+T*
+(443 TCP Outbound: Supervisor PC to WEM cloud, application access.) Tj
+T*
+(4443 TCP Outbound: Supervisor or admin workstation to the VO cloud for the Interaction) Tj
+T*
+(Analytics UI.) Tj
+T*
+() Tj
+T*
+(CYPHER0X9 Five9 Lab. Independent study. Not affiliated with Five9.) Tj
+T*
+(https://cyphermonkeylabs.com) Tj
+T*
+(https://linktr.ee/cyphermonkey) Tj
+T*
+(https://github.com/cipher0x9/five9-lab-free-university-mesmerizing) Tj
+T*
+(MIT code, CC BY-NC-SA content. Trademarks belong to their owners.) Tj
+T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Contents 2 0 R /Resources << /Font << /F1 1 0 R >> >> >>
+endobj
+4 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+5 0 obj
+<< /Type /Catalog /Pages 4 0 R >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000001846 00000 n 
+0000001972 00000 n 
+0000002029 00000 n 
+trailer << /Size 6 /Root 5 0 R >>
+startxref
+2078
+%%EOF

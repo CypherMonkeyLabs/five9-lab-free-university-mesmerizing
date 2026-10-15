@@ -1,4 +1,5 @@
 import { loadTopology, loadIvr, loadPacing } from "./loaders.js";
+import { tryUniversityRoute, afterRoute, initUniversity, decorateRail } from "./university.js";
 
 const SETTINGS_KEY = "f9lab-settings";
 const PROGRESS_KEY = "f9lab-progress";
@@ -61,7 +62,7 @@ function esc(value) {
 
 function loadSettings() {
   const base = {
-    theme: "signal",
+    theme: "futuristic",
     sound: false,
     narration: false,
     voiceURI: "",
@@ -306,6 +307,7 @@ function renderRail() {
     ${Object.entries(groups).map(([group, tracks]) => `<h2>${esc(group)}</h2>${tracks.map((track) => `<a href="#/track/${esc(track.id)}"><span class="dot a4"></span>${esc(track.short)}</a>`).join("")}`).join("")}
     <h2>Benches</h2>
     ${tools.map(([href, label, dot]) => `<a href="${href}"><span class="dot ${dot}"></span>${esc(label)}</a>`).join("")}`;
+  decorateRail();
   markCurrent();
 }
 
@@ -701,28 +703,29 @@ function renderProgress() {
 }
 
 async function renderSearch(query) {
-  setTitle("Search", "Titles and blurbs from the catalog. Lesson bodies load when you open a track.");
+  setTitle("Search", "Lessons, glossary rows, and university pages. The index is built from the lesson text in this repo.");
   const q = (query || "").trim().toLowerCase();
   const hits = [];
+  let index = [];
+  try {
+    index = (await getJson("data/search-index.json")).items;
+  } catch (err) {
+    index = [];
+  }
   if (q) {
-    session.catalog.tracks.forEach((track) => {
-      if (`${track.title} ${track.blurb}`.toLowerCase().includes(q)) {
-        hits.push({ href: `#/track/${track.id}`, title: track.title, note: track.blurb });
-      }
-      track.lessons.forEach((lesson) => {
-        if (lesson.title.toLowerCase().includes(q)) {
-          hits.push({ href: `#/lesson/${track.id}/${lesson.id}`, title: lesson.title, note: track.title });
-        }
-      });
+    index.forEach((item) => {
+      const hay = `${item.title} ${item.note || ""} ${item.snippet || ""}`.toLowerCase();
+      if (hay.includes(q)) hits.push(item);
     });
   }
+  const shown = hits.slice(0, 40);
   view.innerHTML = `
     <form id="search-form" role="search">
       <div class="field"><label for="q">Search lessons</label><input id="q" name="q" type="search" value="${esc(query || "")}"></div>
       <button class="btn primary" type="submit">Search</button>
     </form>
-    ${q ? `<p>${hits.length ? `${hits.length} matches` : "No matches in titles. Try a product word such as DNIS, TCPA, or RedSky."}</p>` : `<p class="note">Enter a word. The search does not download every track.</p>`}
-    <ul>${hits.map((hit) => `<li><a href="${esc(hit.href)}">${esc(hit.title)}</a> <span class="note">${esc(hit.note)}</span></li>`).join("")}</ul>`;
+    ${q ? `<p>${hits.length ? `${shown.length} shown${hits.length > shown.length ? ` of ${hits.length}` : ""}` : "No matches. Try DNIS, TCPA, RedSky, or WEM."}</p>` : `<p class="note">Enter a word. The index includes lesson openings and glossary rows.</p>`}
+    <ul>${shown.map((hit) => `<li><a href="${esc(hit.href)}">${esc(hit.title)}</a> <span class="note">${esc(hit.note)}</span></li>`).join("")}</ul>`;
   on(view.querySelector("#search-form"), "submit", (event) => {
     event.preventDefault();
     location.hash = `#/search?q=${encodeURIComponent(view.querySelector("#q").value)}`;
@@ -876,6 +879,7 @@ async function route() {
   try {
     await getCatalog();
     renderRail();
+    if (await tryUniversityRoute(bare, { view, setTitle, esc, getJson, getTrack, getCatalog, session, audio, on, motionReduced })) return;
     if (bare === "#/" || bare === "") return renderHome();
     if (bare === "#/tracks") return renderTracks();
     if (bare === "#/tools") return renderTools();
@@ -900,6 +904,8 @@ async function route() {
     return renderMissing("That page is not on this floor");
   } catch (err) {
     renderError("Check the network and reload. Track files stay out of the first download until you open them.");
+  } finally {
+    afterRoute();
   }
 }
 
@@ -979,4 +985,5 @@ function bindChrome() {
 
 applySettings();
 bindChrome();
+initUniversity();
 route();

@@ -1,0 +1,699 @@
+import { diagram, diagramIds, diagramMeta } from "./diagrams.js";
+import { buildZip } from "./zipstore.js";
+
+const UNI_KEY = "f9lab-university";
+const REPO = "https://github.com/cipher0x9/five9-lab-free-university-mesmerizing";
+const LABS = "https://cyphermonkeylabs.com";
+
+const NAV = [
+  ["#/atlas", "Atlas"],
+  ["#/explorer", "Flow map"],
+  ["#/ports", "Ports game"],
+  ["#/deploy", "Deployment"],
+  ["#/sip", "SIP and PSTN"],
+  ["#/migrate", "Migration"],
+  ["#/config", "Configure"],
+  ["#/trouble", "Playbooks"],
+  ["#/wfm", "WFM"],
+  ["#/record", "Recording"],
+  ["#/e911", "E911"],
+  ["#/analytics", "Reporting"],
+  ["#/integrations", "CRM and APIs"],
+  ["#/ai", "AI agents"],
+  ["#/security", "Security"],
+  ["#/roadmap", "2026 notes"],
+  ["#/career", "Career"],
+  ["#/downloads", "Cheat codes"],
+  ["#/daily", "Daily"],
+  ["#/badges", "Badges"],
+  ["#/sandbox", "Call-flow sandbox"]
+];
+
+let pack = null;
+const sky = { raf: 0, pointer: { x: 0.5, y: 0.2 } };
+
+function esc(value) {
+  return String(value ?? "").replace(/[&<>"']/g, (ch) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  }[ch]));
+}
+
+function loadState() {
+  const base = { checks: {}, portsBest: 0, daily: {}, egg: false, downloads: 0, share: "" };
+  try {
+    return Object.assign(base, JSON.parse(localStorage.getItem(UNI_KEY) || "{}"));
+  } catch (err) {
+    return base;
+  }
+}
+
+function saveState(state) {
+  localStorage.setItem(UNI_KEY, JSON.stringify(state));
+  if (state.egg) document.documentElement.dataset.egg = "1";
+}
+
+async function loadUni() {
+  if (pack) return pack;
+  const response = await fetch("data/university.json");
+  if (!response.ok) throw new Error("university");
+  pack = await response.json();
+  return pack;
+}
+
+function lookFor(hash) {
+  const state = loadState();
+  if (state.egg) return "egg";
+  if (hash.startsWith("#/ivr") || hash.startsWith("#/sandbox")) return "ivr";
+  if (hash.startsWith("#/pacing") || hash.startsWith("#/ports")) return "dial";
+  if (hash.startsWith("#/boss") || hash.startsWith("#/trouble")) return "boss";
+  const hour = new Date().getHours();
+  if (hour < 5 || hour >= 21) return "night";
+  if (hour < 11) return "dawn";
+  if (hour < 17) return "day";
+  return "dusk";
+}
+
+function updateMascot() {
+  document.documentElement.dataset.look = lookFor(location.hash || "#/");
+}
+
+function toast(text) {
+  document.querySelectorAll(".toast").forEach((node) => node.remove());
+  const node = document.createElement("p");
+  node.className = "toast";
+  node.setAttribute("role", "status");
+  node.textContent = text;
+  document.body.appendChild(node);
+  setTimeout(() => node.remove(), 3200);
+}
+
+function citesHtml(items) {
+  if (!items || !items.length) return "";
+  return `<ol class="cites">${items.map((item) => `<li><a href="${esc(item.url)}" rel="noopener" target="_blank">${esc(item.label)}</a></li>`).join("")}</ol>`;
+}
+
+function figure(id, caption) {
+  const svg = diagram(id);
+  if (!svg) return "";
+  return `<figure class="figure">${svg}<figcaption>${esc(caption || id)}</figcaption></figure>`;
+}
+
+function renderBlocks(section, data, ctx) {
+  const state = loadState();
+  return section.blocks.map((block) => {
+    if (block.kind === "prose") {
+      return `<section class="panel"><h2>${esc(block.h)}</h2>${block.p.map((p) => `<p>${esc(p)}</p>`).join("")}</section>`;
+    }
+    if (block.kind === "steps") {
+      return `<section class="panel"><h2>${esc(block.h)}</h2><ol>${block.items.map((item) => `<li>${esc(item)}</li>`).join("")}</ol></section>`;
+    }
+    if (block.kind === "checks") {
+      const picked = state.checks[block.id] || [];
+      return `<section class="panel"><h2>${esc(block.h)}</h2><p class="note">${picked.length} of ${block.items.length} checked on this browser.</p><ul class="checks" data-check-list="${esc(block.id)}">${block.items.map((item, i) => `<li><label><input type="checkbox" data-check="${i}" ${picked.includes(i) ? "checked" : ""}> ${esc(item)}</label></li>`).join("")}</ul></section>`;
+    }
+    if (block.kind === "cites") return `<section><h2>Sources</h2>${citesHtml(block.items)}</section>`;
+    if (block.kind === "widget" && block.id === "erlang") return erlangHtml();
+    if (block.kind === "customers") return customersHtml(data);
+    if (block.kind === "roadmap") return roadmapHtml(data);
+    return `<p class="uncertain">Unknown block.</p>`;
+  }).join("");
+}
+
+function bindChecks(ctx) {
+  ctx.view.querySelectorAll("[data-check-list]").forEach((list) => {
+    list.querySelectorAll("[data-check]").forEach((box) => {
+      ctx.on(box, "change", () => {
+        const state = loadState();
+        const id = list.dataset.checkList;
+        state.checks[id] = [...list.querySelectorAll("[data-check]:checked")].map((node) => Number(node.dataset.check));
+        saveState(state);
+        const note = list.parentElement.querySelector(".note");
+        if (note) note.textContent = `${state.checks[id].length} of ${list.querySelectorAll("[data-check]").length} checked on this browser.`;
+      });
+    });
+  });
+  const form = ctx.view.querySelector("#erlang-form");
+  if (form) ctx.on(form, "submit", (event) => { event.preventDefault(); runErlang(ctx.view); });
+}
+
+function erlangHtml() {
+  return `<section class="panel"><h2>Classroom Erlang C</h2><p>Enter your own interval. The result is textbook traffic theory. It is not the Five9 WFM engine.</p>
+    <form id="erlang-form">
+      <div class="field"><label for="er-calls">Calls in the interval</label><input id="er-calls" type="number" min="1" max="5000" value="120"></div>
+      <div class="field"><label for="er-min">Interval minutes</label><input id="er-min" type="number" min="5" max="60" value="30"></div>
+      <div class="field"><label for="er-aht">Average handle seconds, including after-call work</label><input id="er-aht" type="number" min="30" max="3600" value="300"></div>
+      <div class="field"><label for="er-wait">Target probability of waiting</label><input id="er-wait" type="number" min="0.01" max="0.5" step="0.01" value="0.2"></div>
+      <button class="btn primary" type="submit">Calculate</button>
+    </form>
+    <p id="erlang-out" class="note">Waiting for your numbers.</p></section>`;
+}
+
+function erlangB(load, agents) {
+  let inverse = 1;
+  for (let k = 1; k <= agents; k += 1) inverse = 1 + inverse * k / load;
+  return 1 / inverse;
+}
+
+function erlangC(load, agents) {
+  if (agents <= load) return 1;
+  const b = erlangB(load, agents);
+  return (agents * b) / (agents - load * (1 - b));
+}
+
+function runErlang(root) {
+  const calls = Number(root.querySelector("#er-calls").value);
+  const minutes = Number(root.querySelector("#er-min").value);
+  const aht = Number(root.querySelector("#er-aht").value);
+  const target = Number(root.querySelector("#er-wait").value);
+  const out = root.querySelector("#erlang-out");
+  if (!(calls > 0 && minutes > 0 && aht > 0 && target > 0 && target < 1)) {
+    out.textContent = "Use positive numbers. The wait target stays below 1.";
+    return;
+  }
+  const load = (calls * aht) / (minutes * 60);
+  let agents = Math.floor(load) + 1;
+  let guard = 0;
+  while (erlangC(load, agents) > target && guard < 500) {
+    agents += 1;
+    guard += 1;
+  }
+  out.textContent = `Offered load is ${load.toFixed(2)} erlangs. ${agents} agents keep the wait probability at or under ${target}. Occupancy would be about ${Math.min(99, (load / agents) * 100).toFixed(0)} percent if every agent takes only this work. Five9 has not published this formula as WEM.`;
+}
+
+function customersHtml(data) {
+  return `<section><h2>Public case studies</h2><p class="note">Figures are the headlines on Five9's own pages as retrieved in October 2026. This lab did not audit them.</p><div class="grid">${data.customers.map((row) => `<article class="panel"><h3><a href="${esc(row.href)}" rel="noopener" target="_blank">${esc(row.name)}</a></h3><ul>${row.claims.map((claim) => `<li>${esc(claim)}</li>`).join("")}</ul></article>`).join("")}</div></section>`;
+}
+
+function roadmapHtml(data) {
+  return `<ol class="checks">${data.roadmap.map((row) => `<li><strong>${esc(row.when)}</strong> <span class="tag">${esc(row.status)}</span><p>${esc(row.what)}</p><p><a href="${esc(row.url)}" rel="noopener" target="_blank">${esc(row.source)}</a></p></li>`).join("")}</ol>`;
+}
+
+async function renderSection(ctx, key) {
+  const data = await loadUni();
+  const section = data.sections[key];
+  ctx.setTitle(section.title, section.lede);
+  const extra = key === "career" ? `<p><a class="btn" href="#/interview">Interview deck</a> <a class="btn" href="#/certs">Credentials</a> <a class="btn" href="#/tracks">All tracks</a></p>` : "";
+  ctx.view.innerHTML = `<p class="note">${esc(data.banner)}</p>${figure(section.diagram, section.title)}${renderBlocks(section, data, ctx)}${extra}<p><a class="btn" href="#/downloads">Cheat sheets</a></p>`;
+  bindChecks(ctx);
+}
+
+function renderTrouble(ctx, data) {
+  ctx.setTitle("Troubleshooting playbooks", "Ten symptoms. Each one names the object that actually failed.");
+  ctx.view.innerHTML = `<p class="note">${esc(data.banner)}</p>${figure("nat-path", "Signaling up does not prove media")}<div class="grid">${data.playbooks.map((book) => `<article class="panel"><h2>${esc(book.symptom)}</h2><ol>${book.tree.map((step) => `<li>${esc(step)}</li>`).join("")}</ol><p>${esc(book.meaning)}</p><p><a href="${esc(book.lesson)}">Open the lesson</a> · <a href="${esc(book.url)}" rel="noopener" target="_blank">${esc(book.source)}</a></p></article>`).join("")}</div>`;
+}
+
+function renderAtlas(ctx) {
+  ctx.setTitle("Architecture atlas", "Teaching drawings. The caption names the public page. None of these are captured Five9 traces.");
+  ctx.view.innerHTML = `<div class="snap">${diagramMeta.map(([id, title, source]) => `<figure class="figure float-card">${diagram(id)}<figcaption><strong>${esc(title)}</strong><br>${esc(source)}</figcaption></figure>`).join("")}</div><p class="note">${diagramIds.length} diagrams on this page. Reduced motion stops the dashes.</p>`;
+}
+
+function renderPorts(ctx, data) {
+  ctx.setTitle("Ports and protocols", "The table is the community softphone list plus the WEM supervisor ports. The game uses those same rows.");
+  const state = { index: 0, score: 0, order: shuffle(data.ports.map((_, i) => i)), locked: false };
+  const paint = () => {
+    const row = data.ports[state.order[state.index]];
+    const choices = decoys(data.ports, row);
+    ctx.view.innerHTML = `
+      <p class="note">${esc(data.banner)}</p>
+      ${figure("firewall", "A few of the softphone rows, drawn")}
+      <section class="panel" id="port-game">
+        <h2>Port mastery</h2>
+        <p class="game-score">Correct ${state.score} · answered ${state.index} · best ${loadState().portsBest}</p>
+        <p>Question ${state.index + 1} of ${data.ports.length}</p>
+        <p><strong>${esc(row.use)}</strong></p>
+        <div class="choice-grid">${choices.map((choice) => `<button type="button" class="btn" data-port="${esc(choice.port)}">${esc(choice.port)} ${esc(choice.proto)}</button>`).join("")}</div>
+        <p class="why" id="port-why" role="status"></p>
+      </section>
+      <h2>Bandwidth, G.711 table</h2>
+      <p class="note">Copied as figures from the technical requirements PDF read in October 2026. <a href="${esc(data.bandwidthSource.url)}" rel="noopener" target="_blank">${esc(data.bandwidthSource.label)}</a></p>
+      <div class="table-wrap"><table><thead><tr><th>Use</th><th>Minimum</th><th>Recommended</th><th>Note</th></tr></thead><tbody>
+        ${data.bandwidth.map((row) => `<tr><td>${esc(row.use)}</td><td>${esc(row.min)}</td><td>${esc(row.rec)}</td><td>${esc(row.note)}</td></tr>`).join("")}
+      </tbody></table></div>
+      <h2>Firewall matrix</h2>
+      <div class="table-wrap"><table><thead><tr><th>Port</th><th>Proto</th><th>Direction</th><th>Who</th><th>Purpose</th><th>Source</th></tr></thead><tbody>
+        ${data.ports.map((item) => `<tr><td>${esc(item.port)}</td><td>${esc(item.proto)}</td><td>${esc(item.dir)}</td><td>${esc(item.who)}</td><td>${esc(item.use)}</td><td><a href="${esc(item.url)}" rel="noopener" target="_blank">${esc(item.source)}</a></td></tr>`).join("")}
+      </tbody></table></div>
+      <p><button type="button" class="btn" id="share-ports">Share this score</button></p><div id="share-host"></div>`;
+    ctx.view.querySelectorAll("[data-port]").forEach((button) => {
+      ctx.on(button, "click", () => {
+        if (state.locked) return;
+        state.locked = true;
+        const why = ctx.view.querySelector("#port-why");
+        const right = button.dataset.port === row.port;
+        if (right) {
+          state.score += 1;
+          why.textContent = `Yes. ${row.port}/${row.proto}. ${row.source}.`;
+          why.className = "why ok";
+          ctx.audio.ok();
+        } else {
+          why.textContent = `That port is a different row. This purpose is ${row.port}/${row.proto}.`;
+          why.className = "why bad";
+          ctx.audio.bad();
+        }
+        setTimeout(() => {
+          if (!ctx.view.isConnected) return;
+          state.index += 1;
+          state.locked = false;
+          if (state.index >= data.ports.length) {
+            finish();
+            return;
+          }
+          paint();
+        }, 700);
+      });
+    });
+    const share = ctx.view.querySelector("#share-ports");
+    if (share) ctx.on(share, "click", () => shareCard(ctx.view.querySelector("#share-host"), `Ports ${state.score}/${state.index}`));
+  };
+  const finish = () => {
+    const saved = loadState();
+    saved.portsBest = Math.max(saved.portsBest || 0, state.score);
+    saveState(saved);
+    toast(`Round complete. ${state.score} of ${data.ports.length}.`);
+    const game = ctx.view.querySelector("#port-game");
+    if (game) {
+      game.innerHTML = `<h2>Round complete</h2><p class="game-score">${state.score} of ${data.ports.length}</p><button type="button" class="btn primary" id="port-again">Play again</button> <button type="button" class="btn" id="share-ports">Share this score</button><div id="share-host"></div>`;
+      ctx.on(game.querySelector("#port-again"), "click", () => renderPorts(ctx, data));
+      ctx.on(game.querySelector("#share-ports"), "click", () => shareCard(game.querySelector("#share-host"), `Ports ${state.score}/${data.ports.length}`));
+    }
+  };
+  paint();
+}
+
+function shuffle(list) {
+  const copy = list.slice();
+  for (let i = copy.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy;
+}
+
+function decoys(ports, row) {
+  const others = shuffle(ports.filter((item) => item.port !== row.port)).slice(0, 3);
+  return shuffle([row, ...others]);
+}
+
+const MAP_NODES = [
+  { id: "pstn", x: 40, y: 40, w: 140, h: 48, label: "PSTN / ITSP", text: "Five9 as the carrier, your carrier into Five9, or your own gateway.", href: "#/sip", url: "https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/SIP-trunk-options/_ch-five9-sip-trunk-options.htm" },
+  { id: "sbc", x: 250, y: 40, w: 150, h: 48, label: "SIP edge", text: "DNS SRV is preferred. Pinning IPs means you watch the domains.", href: "#/ports", url: "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf" },
+  { id: "vcc", x: 470, y: 120, w: 160, h: 56, label: "VCC domain", text: "Skills, lists, campaigns, and IVR live in the tenant.", href: "#/track/t01", url: "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm" },
+  { id: "ivr", x: 250, y: 210, w: 140, h: 48, label: "IVR", text: "Modules, then a Skill Transfer that names a skill.", href: "#/ivr", url: "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm" },
+  { id: "agent", x: 40, y: 300, w: 150, h: 48, label: "Agent station", text: "Softphone, WebRTC, gateway, or PSTN station.", href: "#/deploy", url: "https://community.five9.com/s/article/VCC-Five9-WebRTC" },
+  { id: "crm", x: 250, y: 300, w: 150, h: 48, label: "CRM adapter", text: "HTTPS and Secure WebSocket. Voice can be up while the pop is down.", href: "#/integrations", url: "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf" },
+  { id: "wem", x: 470, y: 300, w: 150, h: 48, label: "WEM / QM", text: "Workforce, quality, recording. Verint is a second path.", href: "#/wfm", url: "https://www.five9.com/products/capabilities/workforce-optimization" },
+  { id: "e911", x: 470, y: 40, w: 140, h: 48, label: "E911", text: "Dispatchable location. The data sheet names RedSky.", href: "#/e911", url: "https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF" }
+];
+
+const MAP_EDGES = [["pstn", "sbc"], ["sbc", "vcc"], ["sbc", "e911"], ["vcc", "ivr"], ["ivr", "agent"], ["vcc", "crm"], ["vcc", "wem"]];
+
+function renderExplorer(ctx) {
+  ctx.setTitle("Flow map explorer", "Click a box. The note is a teaching summary with the page it came from.");
+  const edges = MAP_EDGES.map(([a, b]) => {
+    const from = MAP_NODES.find((node) => node.id === a);
+    const to = MAP_NODES.find((node) => node.id === b);
+    return `<line class="flow-line" x1="${from.x + from.w / 2}" y1="${from.y + from.h / 2}" x2="${to.x + to.w / 2}" y2="${to.y + to.h / 2}"></line>`;
+  }).join("");
+  const nodes = MAP_NODES.map((node) => `<g class="hot node tone-a" data-node="${node.id}" tabindex="0" role="button"><rect x="${node.x}" y="${node.y}" width="${node.w}" height="${node.h}" rx="12"></rect><text x="${node.x + node.w / 2}" y="${node.y + 28}" text-anchor="middle">${esc(node.label)}</text></g>`).join("");
+  ctx.view.innerHTML = `<div class="explorer"><div class="panel">${frameMap(edges + nodes)}</div><aside class="panel" id="map-note"><h2>Pick a box</h2><p>The dashes are the relationships this lab wants you to name. They are not a live trace.</p></aside></div>`;
+  const show = (id) => {
+    const node = MAP_NODES.find((item) => item.id === id);
+    ctx.view.querySelectorAll(".hot").forEach((el) => el.classList.toggle("is-on", el.dataset.node === id));
+    ctx.view.querySelector("#map-note").innerHTML = `<h2>${esc(node.label)}</h2><p>${esc(node.text)}</p><p><a href="${esc(node.href)}">Open the lab page</a></p><p><a href="${esc(node.url)}" rel="noopener" target="_blank">Source</a></p>`;
+  };
+  ctx.view.querySelectorAll(".hot").forEach((el) => {
+    ctx.on(el, "click", () => show(el.dataset.node));
+    ctx.on(el, "keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        show(el.dataset.node);
+      }
+    });
+  });
+}
+
+function frameMap(body) {
+  return `<svg class="diag" viewBox="0 0 680 380" role="img" aria-label="Five9 teaching map"><rect class="diag-bg" width="680" height="380" rx="16"></rect>${body}</svg>`;
+}
+
+async function renderDownloads(ctx) {
+  ctx.setTitle("Cheat codes", "One-page sheets, a flashcard deck, and the offline bundle. Generated in this repo.");
+  const response = await fetch("downloads/manifest.json");
+  const manifest = await response.json();
+  ctx.view.innerHTML = `<p>Each file carries the lab footer: cyphermonkeylabs.com, the Linktree, this repo, and the independent-study disclaimer. No address is printed.</p>
+    <div class="sheet-list">${manifest.files.map((file) => `<p><a class="btn" href="${esc(file.href)}" download>${esc(file.title)}</a> <span class="note">${esc(file.kind)}</span></p>`).join("")}</div>
+    <h2>Build a pack in the browser</h2>
+    <p>This walks the file list and stores an uncompressed zip. It does not call another host.</p>
+    <button type="button" class="btn primary" id="build-pack">Download offline zip</button>
+    <p id="pack-status" class="note" role="status"></p>`;
+  ctx.on(ctx.view.querySelector("#build-pack"), "click", () => downloadPack(ctx.view.querySelector("#pack-status")));
+}
+
+async function downloadPack(status) {
+  const state = loadState();
+  state.downloads = (state.downloads || 0) + 1;
+  saveState(state);
+  status.textContent = "Reading the file list…";
+  const manifest = await (await fetch("data/pack-manifest.json")).json();
+  const files = [];
+  for (let i = 0; i < manifest.files.length; i += 1) {
+    const name = manifest.files[i];
+    status.textContent = `Fetching ${i + 1} of ${manifest.files.length}: ${name}`;
+    const response = await fetch(name);
+    if (!response.ok) {
+      status.textContent = `Stopped. ${name} did not load.`;
+      return;
+    }
+    files.push({ name, data: new Uint8Array(await response.arrayBuffer()) });
+  }
+  const blob = buildZip(files);
+  const link = document.createElement("a");
+  link.href = URL.createObjectURL(blob);
+  link.download = "five9-lab-offline.zip";
+  link.click();
+  status.textContent = `Saved ${files.length} files. Open the zip and serve the campus folder, or open campus/index.html on a static server.`;
+}
+
+async function renderDaily(ctx) {
+  ctx.setTitle("Daily challenge", "One real quiz item from the lesson bank. The date picks it. The answer stays hidden until you check.");
+  const bank = await (await fetch("data/daily-bank.json")).json();
+  const day = new Date().toISOString().slice(0, 10);
+  const index = Math.abs(hashCode(day)) % bank.items.length;
+  const item = bank.items[index];
+  const saved = loadState();
+  const done = !!saved.daily[day];
+  ctx.setTitle("Daily challenge", `${day}. Question ${index + 1} in a bank of ${bank.items.length}.`);
+  ctx.view.innerHTML = `<article class="panel"><p class="kicker">${esc(item.track)}</p><h2>${esc(item.q)}</h2>
+    ${item.choices.map((choice, i) => `<label class="choice"><input type="radio" name="daily" value="${i}" ${done ? "disabled" : ""}> ${esc(choice)}</label>`).join("")}
+    <div class="row"><button type="button" class="btn primary" id="daily-check" ${done ? "disabled" : ""}>Check</button>
+    <a class="btn" href="${esc(item.href)}">Read the lesson</a></div>
+    <p class="why" id="daily-why" role="status">${done ? "Already checked today." : ""}</p>
+    <p class="note"><a href="${esc(item.url)}" rel="noopener" target="_blank">${esc(item.source)}</a></p></article>
+    <p>Streak on this browser: ${streak(saved.daily)} day${streak(saved.daily) === 1 ? "" : "s"}.</p>
+    <button type="button" class="btn" id="share-daily">Share card</button><div id="share-host"></div>`;
+  ctx.on(ctx.view.querySelector("#daily-check"), "click", () => {
+    const picked = ctx.view.querySelector("input[name=daily]:checked");
+    const why = ctx.view.querySelector("#daily-why");
+    if (!picked) { why.textContent = "Choose an answer."; return; }
+    const ok = Number(picked.value) === item.answer;
+    why.textContent = ok ? item.why : `Not that one. ${item.why}`;
+    why.className = ok ? "why ok" : "why bad";
+    if (ok) ctx.audio.ok(); else ctx.audio.bad();
+    const state = loadState();
+    state.daily[day] = ok;
+    saveState(state);
+  });
+  ctx.on(ctx.view.querySelector("#share-daily"), "click", () => shareCard(ctx.view.querySelector("#share-host"), `Daily ${day}`));
+}
+
+function hashCode(text) {
+  let h = 0;
+  for (let i = 0; i < text.length; i += 1) h = (h * 31 + text.charCodeAt(i)) | 0;
+  return h;
+}
+
+function streak(daily) {
+  let count = 0;
+  const cursor = new Date();
+  for (let i = 0; i < 400; i += 1) {
+    const key = cursor.toISOString().slice(0, 10);
+    if (!Object.prototype.hasOwnProperty.call(daily, key)) break;
+    count += 1;
+    cursor.setUTCDate(cursor.getUTCDate() - 1);
+  }
+  return count;
+}
+
+function badgeList(session) {
+  const progress = session ? session.progress : { lessons: {}, faults: {}, bosses: {} };
+  const lessons = Object.values(progress.lessons || {}).filter((row) => row && row.done).length;
+  const faults = Object.keys(progress.faults || {}).length;
+  const bosses = Object.keys(progress.bosses || {}).length;
+  const state = loadState();
+  const days = streak(state.daily || {});
+  return [
+    ["First light", "Finish one lesson.", lessons >= 1],
+    ["Floor walker", "Finish ten lessons.", lessons >= 10],
+    ["Domain keeper", "Finish thirty lessons.", lessons >= 30],
+    ["Fault ear", "Solve five fault logs.", faults >= 5],
+    ["Night shift", "Clear a boss incident.", bosses >= 1],
+    ["Port ace", "Score at least 10 in one ports round.", (state.portsBest || 0) >= 10],
+    ["Three-day wire", "Check the daily challenge three days running.", days >= 3],
+    ["Pack rat", "Build the offline zip once.", (state.downloads || 0) >= 1],
+    ["Signal thief", "The arrow code. Up, up, down, down, left, right, left, right, B, A.", !!state.egg]
+  ];
+}
+
+function renderBadges(ctx) {
+  const rows = badgeList(ctx.session);
+  const earned = rows.filter((row) => row[2]).length;
+  ctx.setTitle("Badges", `${earned} of ${rows.length} earned on this browser. They read real progress, not a counter that starts empty and stays empty.`);
+  ctx.view.innerHTML = `<div class="badge-grid">${rows.map(([name, detail, on]) => `<article class="badge ${on ? "earned" : ""}"><strong>${esc(name)}</strong><p>${esc(detail)}</p><p class="note">${on ? "Earned" : "Still open"}</p></article>`).join("")}</div>
+    <button type="button" class="btn primary" id="share-badges">Share card</button><div id="share-host"></div>`;
+  ctx.on(ctx.view.querySelector("#share-badges"), "click", () => shareCard(ctx.view.querySelector("#share-host"), `${earned}/${rows.length} badges`));
+}
+
+function shareCard(host, line) {
+  const canvas = document.createElement("canvas");
+  canvas.width = 1200;
+  canvas.height = 630;
+  const ctx = canvas.getContext("2d");
+  ctx.fillStyle = "#061018";
+  ctx.fillRect(0, 0, 1200, 630);
+  ctx.strokeStyle = "#5ce1ff";
+  ctx.lineWidth = 8;
+  ctx.strokeRect(24, 24, 1152, 582);
+  ctx.fillStyle = "#ffb020";
+  ctx.font = "600 28px sans-serif";
+  ctx.fillText("CYPHERMONKEY · FIVE9 LAB", 64, 100);
+  ctx.fillStyle = "#e8f4ff";
+  ctx.font = "700 64px sans-serif";
+  ctx.fillText(line, 64, 240);
+  ctx.font = "32px sans-serif";
+  ctx.fillStyle = "#9aefff";
+  ctx.fillText(LABS, 64, 340);
+  ctx.fillStyle = "#b7c9dc";
+  ctx.font = "24px sans-serif";
+  wrapText(ctx, "Independent educational project. Not affiliated with or endorsed by Five9. Trademarks belong to their owners.", 64, 420, 1000, 34);
+  const link = document.createElement("a");
+  link.href = canvas.toDataURL("image/png");
+  link.download = "five9-lab-card.png";
+  link.textContent = "Save the card (PNG)";
+  link.className = "btn";
+  host.innerHTML = "";
+  host.appendChild(canvas);
+  host.appendChild(document.createElement("br"));
+  host.appendChild(link);
+  canvas.style.width = "100%";
+  canvas.style.height = "auto";
+}
+
+function wrapText(ctx, text, x, y, max, line) {
+  const words = text.split(" ");
+  let row = "";
+  words.forEach((word) => {
+    const trial = row ? `${row} ${word}` : word;
+    if (ctx.measureText(trial).width > max) {
+      ctx.fillText(row, x, y);
+      y += line;
+      row = word;
+    } else row = trial;
+  });
+  ctx.fillText(row, x, y);
+}
+
+function lessonsDone() {
+  try {
+    const progress = JSON.parse(localStorage.getItem("f9lab-progress") || "{}");
+    return Object.values(progress.lessons || {}).filter((row) => row && row.done).length;
+  } catch (err) {
+    return 0;
+  }
+}
+
+async function mountHome(view) {
+  const [catalog, data] = await Promise.all([
+    fetch("data/catalog.json").then((res) => res.json()),
+    loadUni()
+  ]);
+  if ((location.hash || "#/") !== "#/" || !view.isConnected) return;
+  const done = lessonsDone();
+  const deck = document.createElement("div");
+  deck.id = "uni-home";
+  deck.className = "uni-hero";
+  const titles = Object.fromEntries(diagramMeta.map(([id, title]) => [id, title]));
+  const featured = ["domain-stack", "sip-entries", "dialer-modes", "ivr-tree", "e911-path", "adapters"];
+  deck.innerHTML = `
+    <section class="panel">
+      <p class="kicker">Signal university</p>
+      <p>${esc(data.banner)}</p>
+      <p>${done} lessons marked done on this browser, out of ${catalog.counts.lessons}. Quiz bank: ${catalog.counts.quiz}. Flashcards: ${catalog.counts.cards}.</p>
+      <div class="row">
+        <a class="btn primary" href="#/atlas">Open the atlas</a>
+        <a class="btn" href="#/ports">Play the ports game</a>
+        <a class="btn" href="#/daily">Daily challenge</a>
+        <a class="btn" href="#/downloads">Cheat codes</a>
+      </div>
+    </section>
+    <div class="snap">${featured.map((id) => `<figure class="figure float-card">${diagram(id)}<figcaption>${esc(titles[id] || id)}</figcaption></figure>`).join("")}</div>
+    <section>
+      <h2>Study path</h2>
+      <div class="path-row"><strong>Week 1</strong><span>Tracks 1–3. Domain, admin, inbound. <a href="#/track/t01">Start</a></span></div>
+      <div class="path-row"><strong>Week 2</strong><span>Tracks 4–6. Lists, dialer modes, blended staffing.</span></div>
+      <div class="path-row"><strong>Week 3</strong><span>Tracks 7–9. IVR, skills, Agent Desktop Plus. Then the <a href="#/ivr">sandbox</a>.</span></div>
+      <div class="path-row"><strong>Week 4</strong><span>Tracks 10–12. WEM, IVA, CRM.</span></div>
+      <div class="path-row"><strong>Week 5</strong><span>Tracks 13–15. SIP, APIs, the Cisco bridge. <a href="#/migrate">Cutover card</a></span></div>
+      <div class="path-row"><strong>Week 6</strong><span>Tracks 16–18. Safety, ecosystem, credentials you can cite.</span></div>
+      <p class="note">This pace is the lab's plan, not a Five9 University syllabus.</p>
+    </section>
+    <section>
+      <h2>Floor plan</h2>
+      <div class="grid">${NAV.map(([href, label]) => `<a class="card" href="${href}"><h2>${esc(label)}</h2><p>Open ${esc(label.toLowerCase())}.</p></a>`).join("")}</div>
+    </section>`;
+  view.insertBefore(deck, view.firstChild);
+}
+
+function startSky() {
+  const canvas = document.querySelector("#sky");
+  if (!canvas) return;
+  const ctx = canvas.getContext("2d");
+  const dots = Array.from({ length: 48 }, () => ({
+    x: Math.random(),
+    y: Math.random(),
+    r: 0.6 + Math.random() * 1.6,
+    s: 0.15 + Math.random() * 0.35
+  }));
+  const draw = (time) => {
+    const reduced = document.documentElement.dataset.motion === "reduce";
+    const w = canvas.width = window.innerWidth;
+    const h = canvas.height = window.innerHeight;
+    ctx.clearRect(0, 0, w, h);
+    const styles = getComputedStyle(document.documentElement);
+    const accent = styles.getPropertyValue("--cc-accent-1").trim() || "#5ce1ff";
+    ctx.fillStyle = accent;
+    const shift = reduced ? 0 : (sky.pointer.x - 0.5) * 24;
+    dots.forEach((dot, i) => {
+      const drift = reduced ? 0 : Math.sin(time / 4000 + i) * dot.s * 8;
+      ctx.globalAlpha = 0.35;
+      ctx.beginPath();
+      ctx.arc(dot.x * w + shift, (dot.y * h + drift) % h, dot.r, 0, Math.PI * 2);
+      ctx.fill();
+    });
+    ctx.globalAlpha = 1;
+    if (!reduced && !location.hash.startsWith("#/topology")) sky.raf = requestAnimationFrame(draw);
+  };
+  cancelAnimationFrame(sky.raf);
+  sky.raf = requestAnimationFrame(draw);
+}
+
+function updateReadbar() {
+  const bar = document.querySelector("#readbar");
+  if (!bar) return;
+  const max = document.documentElement.scrollHeight - window.innerHeight;
+  bar.style.width = max > 0 ? `${(window.scrollY / max) * 100}%` : "0%";
+}
+
+function armKonami() {
+  const code = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a"];
+  let pos = 0;
+  document.addEventListener("keydown", (event) => {
+    const key = event.key.length === 1 ? event.key.toLowerCase() : event.key;
+    if (key === code[pos]) {
+      pos += 1;
+      if (pos === code.length) {
+        pos = 0;
+        const state = loadState();
+        state.egg = true;
+        saveState(state);
+        updateMascot();
+        toast("Signal thief. CypherMonkey found the night market.");
+      }
+    } else {
+      pos = key === code[0] ? 1 : 0;
+    }
+  });
+}
+
+export function decorateRail() {
+  const rail = document.querySelector("#rail");
+  if (!rail || rail.querySelector("#uni-rail")) return;
+  const block = document.createElement("div");
+  block.id = "uni-rail";
+  block.innerHTML = `<h2>University</h2>${NAV.map(([href, label]) => `<a href="${href}"><span class="dot a3"></span>${esc(label)}</a>`).join("")}`;
+  rail.appendChild(block);
+}
+
+export async function tryUniversityRoute(bare, ctx) {
+  if (bare === "#/sandbox") {
+    location.hash = "#/ivr";
+    return true;
+  }
+  const pages = {
+    "#/atlas": async () => renderAtlas(ctx),
+    "#/ports": async () => renderPorts(ctx, await loadUni()),
+    "#/trouble": async () => renderTrouble(ctx, await loadUni()),
+    "#/explorer": async () => renderExplorer(ctx),
+    "#/downloads": async () => renderDownloads(ctx),
+    "#/daily": async () => renderDaily(ctx),
+    "#/badges": async () => renderBadges(ctx)
+  };
+  if (pages[bare]) {
+    await pages[bare]();
+    return true;
+  }
+  const section = bare.match(/^#\/(deploy|migrate|config|sip|wfm|record|e911|analytics|integrations|ai|security|roadmap|career)$/);
+  if (section) {
+    await renderSection(ctx, section[1]);
+    return true;
+  }
+  return false;
+}
+
+export function afterRoute() {
+  updateMascot();
+  updateReadbar();
+  startSky();
+  const view = document.querySelector("#view");
+  const bare = (location.hash || "#/").split("?")[0];
+  if (view && (bare === "#/" || bare === "") && !view.querySelector("#uni-home")) {
+    mountHome(view).catch(() => {});
+  }
+}
+
+export function initUniversity() {
+  const state = loadState();
+  if (state.egg) document.documentElement.dataset.egg = "1";
+  updateMascot();
+  setInterval(updateMascot, 60000);
+  armKonami();
+  startSky();
+  window.addEventListener("resize", () => { cancelAnimationFrame(sky.raf); startSky(); });
+  window.addEventListener("pointermove", (event) => {
+    sky.pointer.x = event.clientX / window.innerWidth;
+    sky.pointer.y = event.clientY / window.innerHeight;
+  });
+  window.addEventListener("scroll", updateReadbar, { passive: true });
+  const search = document.querySelector("#uni-search");
+  if (search) {
+    search.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const q = new FormData(search).get("q") || "";
+      location.hash = `#/search?q=${encodeURIComponent(String(q))}`;
+    });
+  }
+  const focus = document.querySelector("#read-focus");
+  if (focus) {
+    focus.addEventListener("click", () => {
+      const on = document.documentElement.dataset.read === "1";
+      document.documentElement.dataset.read = on ? "0" : "1";
+      focus.setAttribute("aria-pressed", on ? "false" : "true");
+      focus.textContent = on ? "Reading focus" : "Exit focus";
+    });
+  }
+  const offline = document.querySelector("#offline-pack");
+  if (offline) {
+    offline.addEventListener("click", () => { location.hash = "#/downloads"; });
+  }
+}
+
+export { diagramIds };

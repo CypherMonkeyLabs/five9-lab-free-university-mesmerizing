@@ -1,0 +1,83 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 1568 >>
+stream
+BT
+/F1 10 Tf
+48 740 Td
+14 TL
+(The DNIS does not answer. First check: Is the inbound campaign running, or only built?) Tj
+T*
+(Callers land on a queue nobody staffed. First check: Open the Skill Transfer module.) Tj
+T*
+(The agent hears silence, or the caller does. First check: Confirm signaling is up. A 200 OK) Tj
+T*
+(does not prove RTP.) Tj
+T*
+(Voice is live and the CRM pane is blank. First check: The adapter uses HTTPS and Secure) Tj
+T*
+(WebSocket.) Tj
+T*
+(The agent cannot paste a phone number. First check: Check whether the campaign is in TCPA) Tj
+T*
+(manual touch.) Tj
+T*
+(Customers hear a click and no agent. First check: Name the mode. Preview does not outdial.) Tj
+T*
+(Predictive does.) Tj
+T*
+(A test 911 call would send responders to the old HQ. First check: The address has to be the) Tj
+T*
+(room the person is in.) Tj
+T*
+(Standard reports are missing for a supervisor. First check: The user needs the reporting) Tj
+T*
+(role and a reporting permission.) Tj
+T*
+(The audio you need is gone. First check: Name which clock: audio, E911 recording, agent) Tj
+T*
+(data, campaign state, the call log, or the DID.) Tj
+T*
+(The IVA will not return the caller to a person. First check: Confirm the Studio region) Tj
+T*
+(matches the task you copied.) Tj
+T*
+() Tj
+T*
+(CYPHER0X9 Five9 Lab. Independent study. Not affiliated with Five9.) Tj
+T*
+(https://cyphermonkeylabs.com) Tj
+T*
+(https://linktr.ee/cyphermonkey) Tj
+T*
+(https://github.com/cipher0x9/five9-lab-free-university-mesmerizing) Tj
+T*
+(MIT code, CC BY-NC-SA content. Trademarks belong to their owners.) Tj
+T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Contents 2 0 R /Resources << /Font << /F1 1 0 R >> >> >>
+endobj
+4 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+5 0 obj
+<< /Type /Catalog /Pages 4 0 R >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000001699 00000 n 
+0000001825 00000 n 
+0000001882 00000 n 
+trailer << /Size 6 /Root 5 0 R >>
+startxref
+1931
+%%EOF

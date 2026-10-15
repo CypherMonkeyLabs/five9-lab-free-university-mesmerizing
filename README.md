@@ -18,6 +18,7 @@ Rebuild the lesson JSON after editing a track module:
 
 ```bash
 python3 scripts/build_curriculum.py
+python3 scripts/build_university_assets.py
 node scripts/verify.mjs
 ```
 
@@ -29,13 +30,14 @@ node scripts/verify.mjs
 - Dialer pacing simulator for preview, progressive, power, predictive, and TCPA manual touch. It is a classroom clock, not the Five9 dialer.
 - 3D topology with failure toggles. Reduced motion draws a flat map instead of WebGL.
 - Eight boss incidents, an interview deck, a glossary, and a certification page that refuses invented exam codes.
-- Settings stay in this browser: five themes (signal, paper, high contrast, amber, aurora), sound, narration with a voice list that waits for `voiceschanged` and avoids classic robotic desktop voices, speed, reduced motion, and four text sizes.
+- Settings stay in this browser: futuristic, gaming, neon, and light, plus signal, paper, high contrast, amber, and aurora. Sound, narration, reduced motion, and four text sizes stay local.
+- University pages for deployment, SIP and PSTN, migration checklists, ports, playbooks, WFM (the calculator is Erlang C, not Five9's engine), recording, E911, reporting, CRM, AI, security, a 2026 notes page, and study frames.
+- Cheat sheets in `campus/downloads/` as HTML, PDF, and PNG, plus flashcards and an offline zip. The in-app pack builds the same zip in the browser.
+- Ports game, flow map, daily challenge drawn from the lesson bank, badges tied to real progress, and a share card.
 
 ## Counts
 
-`node scripts/verify.mjs` reports 18 tracks, 126 lessons, 630 quiz questions, 504 flashcards, 126 labs, 126 faults, 36 interview answers, 8 boss incidents, and 40 glossary rows. The shell (HTML, CSS, app script, and loaders) is 63,976 bytes. Three.js stays off the first load.
-
-Lighthouse mobile, measured against the running lab: home performance 99 and accessibility 100. A lesson page (`#/lesson/t05/l04`) scored the same. The home view is one `h1` and about 320 DOM nodes.
+`node scripts/verify.mjs` reports 18 tracks, 126 lessons, 630 quiz questions, 504 flashcards, 126 labs, 126 faults, 36 interview answers, 8 boss incidents, and 40 glossary rows. The counted shell (HTML, `app.css`, `app.js`, and loaders) stays under the script's limit. Three.js stays off the first paint. University CSS, diagrams, and the cheat-sheet files load with the pages that need them.
 
 ## Screenshots
 
@@ -53,4 +55,4 @@ Lighthouse mobile, measured against the running lab: home performance 99 and acc
 
 ## License
 
-Code is [MIT](LICENSE). Lesson content is [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Three.js is MIT, under `campus/vendor/three/LICENSE`.
+Code is [MIT](LICENSE). Lesson content is [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). Three.js is MIT, under `campus/vendor/three/LICENSE`.
