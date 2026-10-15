@@ -1,0 +1,3532 @@
+{
+  "cards": [
+    {
+      "front": "Outbound, what comes first?",
+      "back": "Skill groups, then users, lists, dispositions, profiles, campaigns.",
+      "track": "Foundations and the domain",
+      "lesson": "A contact center is not a phone system",
+      "href": "#/lesson/t01/l01"
+    },
+    {
+      "front": "Which builds add IVR?",
+      "back": "Inbound and autodial.",
+      "track": "Foundations and the domain",
+      "lesson": "A contact center is not a phone system",
+      "href": "#/lesson/t01/l01"
+    },
+    {
+      "front": "What is a skill group?",
+      "back": "Agents and supervisors for a campaign queue.",
+      "track": "Foundations and the domain",
+      "lesson": "A contact center is not a phone system",
+      "href": "#/lesson/t01/l01"
+    },
+    {
+      "front": "What is a domain?",
+      "back": "The VCC tenant.",
+      "track": "Foundations and the domain",
+      "lesson": "A contact center is not a phone system",
+      "href": "#/lesson/t01/l01"
+    },
+    {
+      "front": "Domain boundary?",
+      "back": "Users, lists, skills, and campaigns stay in that domain.",
+      "track": "Foundations and the domain",
+      "lesson": "The domain is the tenant",
+      "href": "#/lesson/t01/l02"
+    },
+    {
+      "front": "CUCM partition equivalent?",
+      "back": "There isn't one. Teach domain, skills, campaigns.",
+      "track": "Foundations and the domain",
+      "lesson": "The domain is the tenant",
+      "href": "#/lesson/t01/l02"
+    },
+    {
+      "front": "Skill membership?",
+      "back": "Agent or supervisor users, and a user may have several skills.",
+      "track": "Foundations and the domain",
+      "lesson": "The domain is the tenant",
+      "href": "#/lesson/t01/l02"
+    },
+    {
+      "front": "Multiple skills on a campaign?",
+      "back": "Yes.",
+      "track": "Foundations and the domain",
+      "lesson": "The domain is the tenant",
+      "href": "#/lesson/t01/l02"
+    },
+    {
+      "front": "Reporting menu missing?",
+      "back": "Check the Reporting role and a reporting permission.",
+      "track": "Foundations and the domain",
+      "lesson": "Roles on the floor",
+      "href": "#/lesson/t01/l03"
+    },
+    {
+      "front": "Supervisor in a skill?",
+      "back": "Yes, the skill topic allows it.",
+      "track": "Foundations and the domain",
+      "lesson": "Roles on the floor",
+      "href": "#/lesson/t01/l03"
+    },
+    {
+      "front": "Call variable permission?",
+      "back": "User Can Edit Call Variables.",
+      "track": "Foundations and the domain",
+      "lesson": "Roles on the floor",
+      "href": "#/lesson/t01/l03"
+    },
+    {
+      "front": "Who edits IVR?",
+      "back": "An administrator.",
+      "track": "Foundations and the domain",
+      "lesson": "Roles on the floor",
+      "href": "#/lesson/t01/l03"
+    },
+    {
+      "front": "Three types?",
+      "back": "Inbound, outbound, autodial.",
+      "track": "Foundations and the domain",
+      "lesson": "Three campaign types",
+      "href": "#/lesson/t01/l04"
+    },
+    {
+      "front": "Stopped inbound?",
+      "back": "Busy signal.",
+      "track": "Foundations and the domain",
+      "lesson": "Three campaign types",
+      "href": "#/lesson/t01/l04"
+    },
+    {
+      "front": "What is blended?",
+      "back": "Agents working inbound and outbound, not a fourth type.",
+      "track": "Foundations and the domain",
+      "lesson": "Three campaign types",
+      "href": "#/lesson/t01/l04"
+    },
+    {
+      "front": "Autodial needs?",
+      "back": "List plus prompts and IVR, per the planning topic.",
+      "track": "Foundations and the domain",
+      "lesson": "Three campaign types",
+      "href": "#/lesson/t01/l04"
+    },
+    {
+      "front": "Final disposition?",
+      "back": "Stops all numbers on that record for the campaign.",
+      "track": "Foundations and the domain",
+      "lesson": "Contacts, fields, and lists",
+      "href": "#/lesson/t01/l05"
+    },
+    {
+      "front": "Which types load lists?",
+      "back": "Outbound and autodial.",
+      "track": "Foundations and the domain",
+      "lesson": "Contacts, fields, and lists",
+      "href": "#/lesson/t01/l05"
+    },
+    {
+      "front": "What is number1?",
+      "back": "The first phone field the dial order can use.",
+      "track": "Foundations and the domain",
+      "lesson": "Contacts, fields, and lists",
+      "href": "#/lesson/t01/l05"
+    },
+    {
+      "front": "Does upload start dialing?",
+      "back": "No.",
+      "track": "Foundations and the domain",
+      "lesson": "Contacts, fields, and lists",
+      "href": "#/lesson/t01/l05"
+    },
+    {
+      "front": "Default system redials?",
+      "back": "Often five, if the default count is left in place.",
+      "track": "Foundations and the domain",
+      "lesson": "Dispositions are the dialer's memory",
+      "href": "#/lesson/t01/l06"
+    },
+    {
+      "front": "What does reset change?",
+      "back": "Selected codes on lists currently loaded.",
+      "track": "Foundations and the domain",
+      "lesson": "Dispositions are the dialer's memory",
+      "href": "#/lesson/t01/l06"
+    },
+    {
+      "front": "Safe reset rule?",
+      "back": "Only codes you are willing to dial.",
+      "track": "Foundations and the domain",
+      "lesson": "Dispositions are the dialer's memory",
+      "href": "#/lesson/t01/l06"
+    },
+    {
+      "front": "Batch update?",
+      "back": "Manual rows or scheduled CSV.",
+      "track": "Foundations and the domain",
+      "lesson": "Dispositions are the dialer's memory",
+      "href": "#/lesson/t01/l06"
+    },
+    {
+      "front": "Profiles per campaign?",
+      "back": "One.",
+      "track": "Foundations and the domain",
+      "lesson": "One profile, many campaigns",
+      "href": "#/lesson/t01/l07"
+    },
+    {
+      "front": "Can a profile be shared?",
+      "back": "Yes, across campaigns.",
+      "track": "Foundations and the domain",
+      "lesson": "One profile, many campaigns",
+      "href": "#/lesson/t01/l07"
+    },
+    {
+      "front": "What can it override?",
+      "back": "Defaults such as the ANI.",
+      "track": "Foundations and the domain",
+      "lesson": "One profile, many campaigns",
+      "href": "#/lesson/t01/l07"
+    },
+    {
+      "front": "How can it change later?",
+      "back": "Workflow rules.",
+      "track": "Foundations and the domain",
+      "lesson": "One profile, many campaigns",
+      "href": "#/lesson/t01/l07"
+    },
+    {
+      "front": "Mac ARM and Java admin?",
+      "back": "Not supported. Use the web administrator.",
+      "track": "VCC administration",
+      "lesson": "Two administrator applications",
+      "href": "#/lesson/t02/l01"
+    },
+    {
+      "front": "Why Plus?",
+      "back": "Web apps do not need Java SE.",
+      "track": "VCC administration",
+      "lesson": "Two administrator applications",
+      "href": "#/lesson/t02/l01"
+    },
+    {
+      "front": "Plus transport?",
+      "back": "HTTPS and WSS.",
+      "track": "VCC administration",
+      "lesson": "Two administrator applications",
+      "href": "#/lesson/t02/l01"
+    },
+    {
+      "front": "IE exception?",
+      "back": "IE 11 for Oracle Service Cloud only.",
+      "track": "VCC administration",
+      "lesson": "Two administrator applications",
+      "href": "#/lesson/t02/l01"
+    },
+    {
+      "front": "Profile or account first?",
+      "back": "Profile, then account.",
+      "track": "VCC administration",
+      "lesson": "User profiles before user accounts",
+      "href": "#/lesson/t02/l02"
+    },
+    {
+      "front": "Who joins a skill?",
+      "back": "Agent or supervisor users.",
+      "track": "VCC administration",
+      "lesson": "User profiles before user accounts",
+      "href": "#/lesson/t02/l02"
+    },
+    {
+      "front": "Missing permission symptom?",
+      "back": "It looks like a missing feature.",
+      "track": "VCC administration",
+      "lesson": "User profiles before user accounts",
+      "href": "#/lesson/t02/l02"
+    },
+    {
+      "front": "Call variable edits?",
+      "back": "A named permission on the administrator role.",
+      "track": "VCC administration",
+      "lesson": "User profiles before user accounts",
+      "href": "#/lesson/t02/l02"
+    },
+    {
+      "front": "Inbound tab name?",
+      "back": "Outbound Skills.",
+      "track": "VCC administration",
+      "lesson": "Skill groups are the queues",
+      "href": "#/lesson/t02/l03"
+    },
+    {
+      "front": "Outbound tab name?",
+      "back": "Skills.",
+      "track": "VCC administration",
+      "lesson": "Skill groups are the queues",
+      "href": "#/lesson/t02/l03"
+    },
+    {
+      "front": "Multiple skills per campaign?",
+      "back": "Yes.",
+      "track": "VCC administration",
+      "lesson": "Skill groups are the queues",
+      "href": "#/lesson/t02/l03"
+    },
+    {
+      "front": "Multiple skills per user?",
+      "back": "Yes.",
+      "track": "VCC administration",
+      "lesson": "Skill groups are the queues",
+      "href": "#/lesson/t02/l03"
+    },
+    {
+      "front": "Prompts before scripts?",
+      "back": "Yes, on the inbound and autodial roadmap.",
+      "track": "VCC administration",
+      "lesson": "Prompts before the script",
+      "href": "#/lesson/t02/l04"
+    },
+    {
+      "front": "Skill greeting vs Play prompt?",
+      "back": "Different objects.",
+      "track": "VCC administration",
+      "lesson": "Prompts before the script",
+      "href": "#/lesson/t02/l04"
+    },
+    {
+      "front": "Stopped campaign?",
+      "back": "Busy, prompt unheard.",
+      "track": "VCC administration",
+      "lesson": "Prompts before the script",
+      "href": "#/lesson/t02/l04"
+    },
+    {
+      "front": "TTS?",
+      "back": "The query example uses a TTS prompt on Play.",
+      "track": "VCC administration",
+      "lesson": "Prompts before the script",
+      "href": "#/lesson/t02/l04"
+    },
+    {
+      "front": "IVR module?",
+      "back": "Set DNC.",
+      "track": "VCC administration",
+      "lesson": "Do-not-call is a list, and a module",
+      "href": "#/lesson/t02/l05"
+    },
+    {
+      "front": "Is a disposition the same?",
+      "back": "Not documented as the same object.",
+      "track": "VCC administration",
+      "lesson": "Do-not-call is a list, and a module",
+      "href": "#/lesson/t02/l05"
+    },
+    {
+      "front": "Report category?",
+      "back": "Do Not Call Reports.",
+      "track": "VCC administration",
+      "lesson": "Do-not-call is a list, and a module",
+      "href": "#/lesson/t02/l05"
+    },
+    {
+      "front": "Product grouping?",
+      "back": "With time-zone rules and Certified Caller.",
+      "track": "VCC administration",
+      "lesson": "Do-not-call is a list, and a module",
+      "href": "#/lesson/t02/l05"
+    },
+    {
+      "front": "Efficiency Mode?",
+      "back": "Off for live calls.",
+      "track": "VCC administration",
+      "lesson": "Workstations that drop live calls",
+      "href": "#/lesson/t02/l06"
+    },
+    {
+      "front": "Analog headsets?",
+      "back": "Not supported.",
+      "track": "VCC administration",
+      "lesson": "Workstations that drop live calls",
+      "href": "#/lesson/t02/l06"
+    },
+    {
+      "front": "5G?",
+      "back": "Not supported.",
+      "track": "VCC administration",
+      "lesson": "Workstations that drop live calls",
+      "href": "#/lesson/t02/l06"
+    },
+    {
+      "front": "ADP bandwidth?",
+      "back": "128 kbps in the table, G.711 default.",
+      "track": "VCC administration",
+      "lesson": "Workstations that drop live calls",
+      "href": "#/lesson/t02/l06"
+    },
+    {
+      "front": "Skill voicemail?",
+      "back": "Yes, with its own greeting.",
+      "track": "VCC administration",
+      "lesson": "Reason codes, voicemail, and what admin is not",
+      "href": "#/lesson/t02/l07"
+    },
+    {
+      "front": "TCPA timeout state?",
+      "back": "Not Ready, no auto-dial.",
+      "track": "VCC administration",
+      "lesson": "Reason codes, voicemail, and what admin is not",
+      "href": "#/lesson/t02/l07"
+    },
+    {
+      "front": "Where do dialer settings live?",
+      "back": "On the campaign, not in a side spreadsheet.",
+      "track": "VCC administration",
+      "lesson": "Reason codes, voicemail, and what admin is not",
+      "href": "#/lesson/t02/l07"
+    },
+    {
+      "front": "Profiles and pop-ups?",
+      "back": "Profiles can control them.",
+      "track": "VCC administration",
+      "lesson": "Reason codes, voicemail, and what admin is not",
+      "href": "#/lesson/t02/l07"
+    },
+    {
+      "front": "Stopped inbound?",
+      "back": "Busy.",
+      "track": "Inbound campaigns",
+      "lesson": "A DNIS answers only while the campaign runs",
+      "href": "#/lesson/t03/l01"
+    },
+    {
+      "front": "What runs after answer?",
+      "back": "The campaign IVR.",
+      "track": "Inbound campaigns",
+      "lesson": "A DNIS answers only while the campaign runs",
+      "href": "#/lesson/t03/l01"
+    },
+    {
+      "front": "What is DNIS?",
+      "back": "The called number presented to the campaign.",
+      "track": "Inbound campaigns",
+      "lesson": "A DNIS answers only while the campaign runs",
+      "href": "#/lesson/t03/l01"
+    },
+    {
+      "front": "First busy check?",
+      "back": "Is the campaign running?",
+      "track": "Inbound campaigns",
+      "lesson": "A DNIS answers only while the campaign runs",
+      "href": "#/lesson/t03/l01"
+    },
+    {
+      "front": "Script after agent connect?",
+      "back": "Complete.",
+      "track": "Inbound campaigns",
+      "lesson": "The script is the inbound product",
+      "href": "#/lesson/t03/l02"
+    },
+    {
+      "front": "Long queue options?",
+      "back": "Voicemail and third-party forward.",
+      "track": "Inbound campaigns",
+      "lesson": "The script is the inbound product",
+      "href": "#/lesson/t03/l02"
+    },
+    {
+      "front": "Priority?",
+      "back": "Supported in the inbound topic.",
+      "track": "Inbound campaigns",
+      "lesson": "The script is the inbound product",
+      "href": "#/lesson/t03/l02"
+    },
+    {
+      "front": "Branching?",
+      "back": "In the IVR script.",
+      "track": "Inbound campaigns",
+      "lesson": "The script is the inbound product",
+      "href": "#/lesson/t03/l02"
+    },
+    {
+      "front": "Hold vs voicemail?",
+      "back": "Different.",
+      "track": "Inbound campaigns",
+      "lesson": "Queue treatment is a choice, not a hope",
+      "href": "#/lesson/t03/l03"
+    },
+    {
+      "front": "Third party module?",
+      "back": "Third Party Transfer.",
+      "track": "Inbound campaigns",
+      "lesson": "Queue treatment is a choice, not a hope",
+      "href": "#/lesson/t03/l03"
+    },
+    {
+      "front": "Voicemail module?",
+      "back": "Voicemail Transfer.",
+      "track": "Inbound campaigns",
+      "lesson": "Queue treatment is a choice, not a hope",
+      "href": "#/lesson/t03/l03"
+    },
+    {
+      "front": "Stopped campaign as overflow?",
+      "back": "No. Callers hear busy.",
+      "track": "Inbound campaigns",
+      "lesson": "Queue treatment is a choice, not a hope",
+      "href": "#/lesson/t03/l03"
+    },
+    {
+      "front": "Where is service level?",
+      "back": "On the skill group.",
+      "track": "Inbound campaigns",
+      "lesson": "Priority and service level",
+      "href": "#/lesson/t03/l04"
+    },
+    {
+      "front": "Where is IVR priority?",
+      "back": "Skill Transfer's priority tab.",
+      "track": "Inbound campaigns",
+      "lesson": "Priority and service level",
+      "href": "#/lesson/t03/l04"
+    },
+    {
+      "front": "Are they the same knob?",
+      "back": "No.",
+      "track": "Inbound campaigns",
+      "lesson": "Priority and service level",
+      "href": "#/lesson/t03/l04"
+    },
+    {
+      "front": "Who says inbound can be prioritized?",
+      "back": "The inbound campaign topic.",
+      "track": "Inbound campaigns",
+      "lesson": "Priority and service level",
+      "href": "#/lesson/t03/l04"
+    },
+    {
+      "front": "When is the schedule set?",
+      "back": "After scripts exist.",
+      "track": "Inbound campaigns",
+      "lesson": "Schedules, not a stopped campaign",
+      "href": "#/lesson/t03/l05"
+    },
+    {
+      "front": "Nightly stop?",
+      "back": "Causes busy, not a closed prompt.",
+      "track": "Inbound campaigns",
+      "lesson": "Schedules, not a stopped campaign",
+      "href": "#/lesson/t03/l05"
+    },
+    {
+      "front": "Which types have the schedule topic?",
+      "back": "Autodial and inbound.",
+      "track": "Inbound campaigns",
+      "lesson": "Schedules, not a stopped campaign",
+      "href": "#/lesson/t03/l05"
+    },
+    {
+      "front": "Campaign state at night?",
+      "back": "Running, with a different script.",
+      "track": "Inbound campaigns",
+      "lesson": "Schedules, not a stopped campaign",
+      "href": "#/lesson/t03/l05"
+    },
+    {
+      "front": "Where?",
+      "back": "Skill Transfer General tab.",
+      "track": "Inbound campaigns",
+      "lesson": "Pause before the next call",
+      "href": "#/lesson/t03/l06"
+    },
+    {
+      "front": "Default?",
+      "back": "0.",
+      "track": "Inbound campaigns",
+      "lesson": "Pause before the next call",
+      "href": "#/lesson/t03/l06"
+    },
+    {
+      "front": "On Hold in reports?",
+      "back": "No.",
+      "track": "Inbound campaigns",
+      "lesson": "Pause before the next call",
+      "href": "#/lesson/t03/l06"
+    },
+    {
+      "front": "Why set it above 0?",
+      "back": "A gap before the next call.",
+      "track": "Inbound campaigns",
+      "lesson": "Pause before the next call",
+      "href": "#/lesson/t03/l06"
+    },
+    {
+      "front": "Are the seven checks trunk settings?",
+      "back": "No.",
+      "track": "Inbound campaigns",
+      "lesson": "Inbound design review",
+      "href": "#/lesson/t03/l07"
+    },
+    {
+      "front": "Wrong skill tab?",
+      "back": "Empty queue.",
+      "track": "Inbound campaigns",
+      "lesson": "Inbound design review",
+      "href": "#/lesson/t03/l07"
+    },
+    {
+      "front": "Night busy?",
+      "back": "State or schedule.",
+      "track": "Inbound campaigns",
+      "lesson": "Inbound design review",
+      "href": "#/lesson/t03/l07"
+    },
+    {
+      "front": "Then what?",
+      "back": "Trunk and topology.",
+      "track": "Inbound campaigns",
+      "lesson": "Inbound design review",
+      "href": "#/lesson/t03/l07"
+    },
+    {
+      "front": "Does upload dial?",
+      "back": "No.",
+      "track": "Outbound lists",
+      "lesson": "A list is not a campaign",
+      "href": "#/lesson/t04/l01"
+    },
+    {
+      "front": "Which lists does reset touch?",
+      "back": "Lists loaded in the campaign.",
+      "track": "Outbound lists",
+      "lesson": "A list is not a campaign",
+      "href": "#/lesson/t04/l01"
+    },
+    {
+      "front": "number1?",
+      "back": "A phone field.",
+      "track": "Outbound lists",
+      "lesson": "A list is not a campaign",
+      "href": "#/lesson/t04/l01"
+    },
+    {
+      "front": "Sales list campaign type?",
+      "back": "Outbound or autodial.",
+      "track": "Outbound lists",
+      "lesson": "A list is not a campaign",
+      "href": "#/lesson/t04/l01"
+    },
+    {
+      "front": "Filter vs vertical?",
+      "back": "Different.",
+      "track": "Outbound lists",
+      "lesson": "Profiles filter the list the agent sees",
+      "href": "#/lesson/t04/l02"
+    },
+    {
+      "front": "Profiles at once?",
+      "back": "One.",
+      "track": "Outbound lists",
+      "lesson": "Profiles filter the list the agent sees",
+      "href": "#/lesson/t04/l02"
+    },
+    {
+      "front": "ANI override?",
+      "back": "On the profile.",
+      "track": "Outbound lists",
+      "lesson": "Profiles filter the list the agent sees",
+      "href": "#/lesson/t04/l02"
+    },
+    {
+      "front": "Pop-ups?",
+      "back": "A profile can control them.",
+      "track": "Outbound lists",
+      "lesson": "Profiles filter the list the agent sees",
+      "href": "#/lesson/t04/l02"
+    },
+    {
+      "front": "Default list mode?",
+      "back": "List penetration.",
+      "track": "Outbound lists",
+      "lesson": "List penetration and vertical dialing",
+      "href": "#/lesson/t04/l03"
+    },
+    {
+      "front": "Vertical in one sentence?",
+      "back": "Finish one record's numbers, then move on.",
+      "track": "Outbound lists",
+      "lesson": "List penetration and vertical dialing",
+      "href": "#/lesson/t04/l03"
+    },
+    {
+      "front": "Compass words?",
+      "back": "Use the definitions, not 'vertical' as a direction.",
+      "track": "Outbound lists",
+      "lesson": "List penetration and vertical dialing",
+      "href": "#/lesson/t04/l03"
+    },
+    {
+      "front": "Final disposition?",
+      "back": "Stops the whole record.",
+      "track": "Outbound lists",
+      "lesson": "List penetration and vertical dialing",
+      "href": "#/lesson/t04/l03"
+    },
+    {
+      "front": "Reset Sale?",
+      "back": "Only if you mean to call them again.",
+      "track": "Outbound lists",
+      "lesson": "Reset is a loaded gun",
+      "href": "#/lesson/t04/l04"
+    },
+    {
+      "front": "Which lists?",
+      "back": "Currently loaded.",
+      "track": "Outbound lists",
+      "lesson": "Reset is a loaded gun",
+      "href": "#/lesson/t04/l04"
+    },
+    {
+      "front": "Position reset?",
+      "back": "Back toward the top.",
+      "track": "Outbound lists",
+      "lesson": "Reset is a loaded gun",
+      "href": "#/lesson/t04/l04"
+    },
+    {
+      "front": "Proof?",
+      "back": "List details.",
+      "track": "Outbound lists",
+      "lesson": "Reset is a loaded gun",
+      "href": "#/lesson/t04/l04"
+    },
+    {
+      "front": "US abandon window?",
+      "back": "Rolling 30 days.",
+      "track": "Outbound lists",
+      "lesson": "Time zone and call analysis are guarded defaults",
+      "href": "#/lesson/t04/l05"
+    },
+    {
+      "front": "UK window?",
+      "back": "24 hours.",
+      "track": "Outbound lists",
+      "lesson": "Time zone and call analysis are guarded defaults",
+      "href": "#/lesson/t04/l05"
+    },
+    {
+      "front": "Who sets US vs UK?",
+      "back": "A Five9 representative, per the topic.",
+      "track": "Outbound lists",
+      "lesson": "Time zone and call analysis are guarded defaults",
+      "href": "#/lesson/t04/l05"
+    },
+    {
+      "front": "Numeric default in this lab?",
+      "back": "Not stated. Read the domain.",
+      "track": "Outbound lists",
+      "lesson": "Time zone and call analysis are guarded defaults",
+      "href": "#/lesson/t04/l05"
+    },
+    {
+      "front": "Where is voice detection level?",
+      "back": "Campaign dialing defaults.",
+      "track": "Outbound lists",
+      "lesson": "Call analysis is not a guarantee",
+      "href": "#/lesson/t04/l06"
+    },
+    {
+      "front": "Published accuracy?",
+      "back": "Not in this lab.",
+      "track": "Outbound lists",
+      "lesson": "Call analysis is not a guarantee",
+      "href": "#/lesson/t04/l06"
+    },
+    {
+      "front": "Automatic voicemail?",
+      "back": "Named on the outbound product page.",
+      "track": "Outbound lists",
+      "lesson": "Call analysis is not a guarantee",
+      "href": "#/lesson/t04/l06"
+    },
+    {
+      "front": "False machine?",
+      "back": "A live person misses the agent.",
+      "track": "Outbound lists",
+      "lesson": "Call analysis is not a guarantee",
+      "href": "#/lesson/t04/l06"
+    },
+    {
+      "front": "Where is local caller ID marketed?",
+      "back": "Outbound product page.",
+      "track": "Outbound lists",
+      "lesson": "Local caller ID is a profile choice",
+      "href": "#/lesson/t04/l07"
+    },
+    {
+      "front": "Which object overrides ANI?",
+      "back": "Campaign profile.",
+      "track": "Outbound lists",
+      "lesson": "Local caller ID is a profile choice",
+      "href": "#/lesson/t04/l07"
+    },
+    {
+      "front": "Is that STIR/SHAKEN?",
+      "back": "No. Certified Caller is separate.",
+      "track": "Outbound lists",
+      "lesson": "Local caller ID is a profile choice",
+      "href": "#/lesson/t04/l07"
+    },
+    {
+      "front": "Unassigned profile?",
+      "back": "No effect.",
+      "track": "Outbound lists",
+      "lesson": "Local caller ID is a profile choice",
+      "href": "#/lesson/t04/l07"
+    },
+    {
+      "front": "Why preview?",
+      "back": "Context before the dial.",
+      "track": "Dialer modes and pacing",
+      "lesson": "Preview lets the agent read first",
+      "href": "#/lesson/t05/l01"
+    },
+    {
+      "front": "Same as TCPA?",
+      "back": "No. TCPA removes automatic dialing.",
+      "track": "Dialer modes and pacing",
+      "lesson": "Preview lets the agent read first",
+      "href": "#/lesson/t05/l01"
+    },
+    {
+      "front": "Overdial?",
+      "back": "Not the design.",
+      "track": "Dialer modes and pacing",
+      "lesson": "Preview lets the agent read first",
+      "href": "#/lesson/t05/l01"
+    },
+    {
+      "front": "Still needs a list?",
+      "back": "Yes.",
+      "track": "Dialer modes and pacing",
+      "lesson": "Preview lets the agent read first",
+      "href": "#/lesson/t05/l01"
+    },
+    {
+      "front": "One per agent?",
+      "back": "That is the outbound page.",
+      "track": "Dialer modes and pacing",
+      "lesson": "Progressive keeps one call per free agent",
+      "href": "#/lesson/t05/l02"
+    },
+    {
+      "front": "Ten-agent hint?",
+      "back": "Dialer page guidance, not a proven hard limit.",
+      "track": "Dialer modes and pacing",
+      "lesson": "Progressive keeps one call per free agent",
+      "href": "#/lesson/t05/l02"
+    },
+    {
+      "front": "Why low abandon?",
+      "back": "The agent is reserved.",
+      "track": "Dialer modes and pacing",
+      "lesson": "Progressive keeps one call per free agent",
+      "href": "#/lesson/t05/l02"
+    },
+    {
+      "front": "Simulator?",
+      "back": "Teaching model.",
+      "track": "Dialer modes and pacing",
+      "lesson": "Progressive keeps one call per free agent",
+      "href": "#/lesson/t05/l02"
+    },
+    {
+      "front": "Who sets the ratio?",
+      "back": "The administrator.",
+      "track": "Dialer modes and pacing",
+      "lesson": "Power dials a ratio you chose",
+      "href": "#/lesson/t05/l03"
+    },
+    {
+      "front": "Who is it for?",
+      "back": "Small team, large list.",
+      "track": "Dialer modes and pacing",
+      "lesson": "Power dials a ratio you chose",
+      "href": "#/lesson/t05/l03"
+    },
+    {
+      "front": "Extra live answer?",
+      "back": "An abandon.",
+      "track": "Dialer modes and pacing",
+      "lesson": "Power dials a ratio you chose",
+      "href": "#/lesson/t05/l03"
+    },
+    {
+      "front": "Where is the brake?",
+      "back": "Abandon monitor and max percent.",
+      "track": "Dialer modes and pacing",
+      "lesson": "Power dials a ratio you chose",
+      "href": "#/lesson/t05/l03"
+    },
+    {
+      "front": "Ten-agent line?",
+      "back": "Dialer page guidance.",
+      "track": "Dialer modes and pacing",
+      "lesson": "Predictive fills idle time, and it can drop calls",
+      "href": "#/lesson/t05/l04"
+    },
+    {
+      "front": "US window?",
+      "back": "30 days.",
+      "track": "Dialer modes and pacing",
+      "lesson": "Predictive fills idle time, and it can drop calls",
+      "href": "#/lesson/t05/l04"
+    },
+    {
+      "front": "Test article?",
+      "back": "Mixed field note.",
+      "track": "Dialer modes and pacing",
+      "lesson": "Predictive fills idle time, and it can drop calls",
+      "href": "#/lesson/t05/l04"
+    },
+    {
+      "front": "Simulator window?",
+      "back": "Not Five9's 30 days.",
+      "track": "Dialer modes and pacing",
+      "lesson": "Predictive fills idle time, and it can drop calls",
+      "href": "#/lesson/t05/l04"
+    },
+    {
+      "front": "Where does the mode exist?",
+      "back": "Domains enabled for it, with no other mode.",
+      "track": "Dialer modes and pacing",
+      "lesson": "TCPA manual touch is a typed number",
+      "href": "#/lesson/t05/l05"
+    },
+    {
+      "front": "Paste?",
+      "back": "Blocked.",
+      "track": "Dialer modes and pacing",
+      "lesson": "TCPA manual touch is a typed number",
+      "href": "#/lesson/t05/l05"
+    },
+    {
+      "front": "Dial enables when?",
+      "back": "The typed number matches.",
+      "track": "Dialer modes and pacing",
+      "lesson": "TCPA manual touch is a typed number",
+      "href": "#/lesson/t05/l05"
+    },
+    {
+      "front": "Timeout?",
+      "back": "Not Ready, no auto-dial.",
+      "track": "Dialer modes and pacing",
+      "lesson": "TCPA manual touch is a typed number",
+      "href": "#/lesson/t05/l05"
+    },
+    {
+      "front": "Why defaults?",
+      "back": "A stated compliance posture.",
+      "track": "Dialer modes and pacing",
+      "lesson": "The defaults are the compliance posture",
+      "href": "#/lesson/t05/l06"
+    },
+    {
+      "front": "Example warning?",
+      "back": "Max abandon percent.",
+      "track": "Dialer modes and pacing",
+      "lesson": "The defaults are the compliance posture",
+      "href": "#/lesson/t05/l06"
+    },
+    {
+      "front": "US vs UK?",
+      "back": "30 days vs 24 hours.",
+      "track": "Dialer modes and pacing",
+      "lesson": "The defaults are the compliance posture",
+      "href": "#/lesson/t05/l06"
+    },
+    {
+      "front": "Where is the legal text?",
+      "back": "The agency rule, not this lab.",
+      "track": "Dialer modes and pacing",
+      "lesson": "The defaults are the compliance posture",
+      "href": "#/lesson/t05/l06"
+    },
+    {
+      "front": "No consent?",
+      "back": "TCPA manual touch on an enabled domain.",
+      "track": "Dialer modes and pacing",
+      "lesson": "Pick a mode in one page",
+      "href": "#/lesson/t05/l07"
+    },
+    {
+      "front": "Forty agents?",
+      "back": "Predictive, eyes open.",
+      "track": "Dialer modes and pacing",
+      "lesson": "Pick a mode in one page",
+      "href": "#/lesson/t05/l07"
+    },
+    {
+      "front": "No drops, small team?",
+      "back": "Progressive.",
+      "track": "Dialer modes and pacing",
+      "lesson": "Pick a mode in one page",
+      "href": "#/lesson/t05/l07"
+    },
+    {
+      "front": "System of record?",
+      "back": "The domain dialog.",
+      "track": "Dialer modes and pacing",
+      "lesson": "Pick a mode in one page",
+      "href": "#/lesson/t05/l07"
+    },
+    {
+      "front": "What is blended?",
+      "back": "Agents moving across inbound and outbound.",
+      "track": "Blended operations and autodial",
+      "lesson": "Blended is a staffing plan",
+      "href": "#/lesson/t06/l01"
+    },
+    {
+      "front": "Is it a campaign type?",
+      "back": "Not in the planning list.",
+      "track": "Blended operations and autodial",
+      "lesson": "Blended is a staffing plan",
+      "href": "#/lesson/t06/l01"
+    },
+    {
+      "front": "Predictive plus shared agents?",
+      "back": "Availability gets stolen.",
+      "track": "Blended operations and autodial",
+      "lesson": "Blended is a staffing plan",
+      "href": "#/lesson/t06/l01"
+    },
+    {
+      "front": "How do you build it?",
+      "back": "Skills and running campaigns.",
+      "track": "Blended operations and autodial",
+      "lesson": "Blended is a staffing plan",
+      "href": "#/lesson/t06/l01"
+    },
+    {
+      "front": "Planning extras?",
+      "back": "Prompts and IVR.",
+      "track": "Blended operations and autodial",
+      "lesson": "Autodial is the IVR's outbound",
+      "href": "#/lesson/t06/l02"
+    },
+    {
+      "front": "Needs a list?",
+      "back": "Yes.",
+      "track": "Blended operations and autodial",
+      "lesson": "Autodial is the IVR's outbound",
+      "href": "#/lesson/t06/l02"
+    },
+    {
+      "front": "Skill tab?",
+      "back": "Outbound Skills.",
+      "track": "Blended operations and autodial",
+      "lesson": "Autodial is the IVR's outbound",
+      "href": "#/lesson/t06/l02"
+    },
+    {
+      "front": "Read-first alternative?",
+      "back": "Outbound preview.",
+      "track": "Blended operations and autodial",
+      "lesson": "Autodial is the IVR's outbound",
+      "href": "#/lesson/t06/l02"
+    },
+    {
+      "front": "Numeric ratio in this lesson?",
+      "back": "None.",
+      "track": "Blended operations and autodial",
+      "lesson": "Priority and ratio are campaign settings",
+      "href": "#/lesson/t06/l03"
+    },
+    {
+      "front": "Steal rule?",
+      "back": "Write who may take the agent.",
+      "track": "Blended operations and autodial",
+      "lesson": "Priority and ratio are campaign settings",
+      "href": "#/lesson/t06/l03"
+    },
+    {
+      "front": "Predictive on a shared pod?",
+      "back": "Exposed.",
+      "track": "Blended operations and autodial",
+      "lesson": "Priority and ratio are campaign settings",
+      "href": "#/lesson/t06/l03"
+    },
+    {
+      "front": "Service level?",
+      "back": "A measure, not the dialer.",
+      "track": "Blended operations and autodial",
+      "lesson": "Priority and ratio are campaign settings",
+      "href": "#/lesson/t06/l03"
+    },
+    {
+      "front": "TCPA timeout?",
+      "back": "Not Ready, no dial.",
+      "track": "Blended operations and autodial",
+      "lesson": "Not Ready is a real state",
+      "href": "#/lesson/t06/l04"
+    },
+    {
+      "front": "Count them as free?",
+      "back": "No.",
+      "track": "Blended operations and autodial",
+      "lesson": "Not Ready is a real state",
+      "href": "#/lesson/t06/l04"
+    },
+    {
+      "front": "Which report category?",
+      "back": "Agent reports.",
+      "track": "Blended operations and autodial",
+      "lesson": "Not Ready is a real state",
+      "href": "#/lesson/t06/l04"
+    },
+    {
+      "front": "Adding lines?",
+      "back": "Makes abandon worse.",
+      "track": "Blended operations and autodial",
+      "lesson": "Not Ready is a real state",
+      "href": "#/lesson/t06/l04"
+    },
+    {
+      "front": "Final code?",
+      "back": "Stops the record.",
+      "track": "Blended operations and autodial",
+      "lesson": "After-call work feeds the next dial",
+      "href": "#/lesson/t06/l05"
+    },
+    {
+      "front": "Pause vs wrap?",
+      "back": "Different gaps.",
+      "track": "Blended operations and autodial",
+      "lesson": "After-call work feeds the next dial",
+      "href": "#/lesson/t06/l05"
+    },
+    {
+      "front": "Default system redials?",
+      "back": "Often five.",
+      "track": "Blended operations and autodial",
+      "lesson": "After-call work feeds the next dial",
+      "href": "#/lesson/t06/l05"
+    },
+    {
+      "front": "Simulator wrap?",
+      "back": "Teaching delay.",
+      "track": "Blended operations and autodial",
+      "lesson": "After-call work feeds the next dial",
+      "href": "#/lesson/t06/l05"
+    },
+    {
+      "front": "Blend includes digital?",
+      "back": "The outbound page says so.",
+      "track": "Blended operations and autodial",
+      "lesson": "Digital and voice share the person",
+      "href": "#/lesson/t06/l06"
+    },
+    {
+      "front": "Plus promise?",
+      "back": "One screen.",
+      "track": "Blended operations and autodial",
+      "lesson": "Digital and voice share the person",
+      "href": "#/lesson/t06/l06"
+    },
+    {
+      "front": "Text blocked?",
+      "back": "Antivirus is a documented suspect.",
+      "track": "Blended operations and autodial",
+      "lesson": "Digital and voice share the person",
+      "href": "#/lesson/t06/l06"
+    },
+    {
+      "front": "Chat and predictive?",
+      "back": "The agent is busy.",
+      "track": "Blended operations and autodial",
+      "lesson": "Digital and voice share the person",
+      "href": "#/lesson/t06/l06"
+    },
+    {
+      "front": "No screen, no design?",
+      "back": "Correct.",
+      "track": "Blended operations and autodial",
+      "lesson": "A blend you can defend",
+      "href": "#/lesson/t06/l07"
+    },
+    {
+      "front": "Simulator equals domain?",
+      "back": "No.",
+      "track": "Blended operations and autodial",
+      "lesson": "A blend you can defend",
+      "href": "#/lesson/t06/l07"
+    },
+    {
+      "front": "US window?",
+      "back": "30 days.",
+      "track": "Blended operations and autodial",
+      "lesson": "A blend you can defend",
+      "href": "#/lesson/t06/l07"
+    },
+    {
+      "front": "Dedicated pod?",
+      "back": "Outside the steal rule.",
+      "track": "Blended operations and autodial",
+      "lesson": "A blend you can defend",
+      "href": "#/lesson/t06/l07"
+    },
+    {
+      "front": "Is Hangup in the chapter list?",
+      "back": "Not in the list this lab read.",
+      "track": "IVR scripts",
+      "lesson": "The module list is the vocabulary",
+      "href": "#/lesson/t07/l01"
+    },
+    {
+      "front": "When does Skill Transfer finish the script?",
+      "back": "When an agent connects.",
+      "track": "IVR scripts",
+      "lesson": "The module list is the vocabulary",
+      "href": "#/lesson/t07/l01"
+    },
+    {
+      "front": "Bench JSON?",
+      "back": "Not a VCC import.",
+      "track": "IVR scripts",
+      "lesson": "The module list is the vocabulary",
+      "href": "#/lesson/t07/l01"
+    },
+    {
+      "front": "Menu exists?",
+      "back": "Yes.",
+      "track": "IVR scripts",
+      "lesson": "The module list is the vocabulary",
+      "href": "#/lesson/t07/l01"
+    },
+    {
+      "front": "ZIP module?",
+      "back": "Input.",
+      "track": "IVR scripts",
+      "lesson": "Play, Menu, digits, and voice",
+      "href": "#/lesson/t07/l02"
+    },
+    {
+      "front": "Why No Match?",
+      "back": "Wrong input needs an exit.",
+      "track": "IVR scripts",
+      "lesson": "Play, Menu, digits, and voice",
+      "href": "#/lesson/t07/l02"
+    },
+    {
+      "front": "Speech modules?",
+      "back": "Voice Input and Natural Language Processing.",
+      "track": "IVR scripts",
+      "lesson": "Play, Menu, digits, and voice",
+      "href": "#/lesson/t07/l02"
+    },
+    {
+      "front": "TTS?",
+      "back": "Yes, in the example.",
+      "track": "IVR scripts",
+      "lesson": "Play, Menu, digits, and voice",
+      "href": "#/lesson/t07/l02"
+    },
+    {
+      "front": "Two ways?",
+      "back": "If/Else.",
+      "track": "IVR scripts",
+      "lesson": "If/Else is two ways. Case is more",
+      "href": "#/lesson/t07/l03"
+    },
+    {
+      "front": "Three ways?",
+      "back": "Case.",
+      "track": "IVR scripts",
+      "lesson": "If/Else is two ways. Case is more",
+      "href": "#/lesson/t07/l03"
+    },
+    {
+      "front": "Who writes the condition?",
+      "back": "You do.",
+      "track": "IVR scripts",
+      "lesson": "If/Else is two ways. Case is more",
+      "href": "#/lesson/t07/l03"
+    },
+    {
+      "front": "Caller choice?",
+      "back": "Menu, not If/Else.",
+      "track": "IVR scripts",
+      "lesson": "If/Else is two ways. Case is more",
+      "href": "#/lesson/t07/l03"
+    },
+    {
+      "front": "Either skill or both?",
+      "back": "Either.",
+      "track": "IVR scripts",
+      "lesson": "Skill Transfer has more than a skill name",
+      "href": "#/lesson/t07/l04"
+    },
+    {
+      "front": "Report recommendation?",
+      "back": "One skill per module.",
+      "track": "IVR scripts",
+      "lesson": "Skill Transfer has more than a skill name",
+      "href": "#/lesson/t07/l04"
+    },
+    {
+      "front": "No skill?",
+      "back": "Default queue.",
+      "track": "IVR scripts",
+      "lesson": "Skill Transfer has more than a skill name",
+      "href": "#/lesson/t07/l04"
+    },
+    {
+      "front": "Article's default disposition?",
+      "back": "Abandon.",
+      "track": "IVR scripts",
+      "lesson": "Skill Transfer has more than a skill name",
+      "href": "#/lesson/t07/l04"
+    },
+    {
+      "front": "Example request?",
+      "back": "XML web service POST.",
+      "track": "IVR scripts",
+      "lesson": "Variables, lookup, and query",
+      "href": "#/lesson/t07/l05"
+    },
+    {
+      "front": "Why script variables?",
+      "back": "No agent on that call.",
+      "track": "IVR scripts",
+      "lesson": "Variables, lookup, and query",
+      "href": "#/lesson/t07/l05"
+    },
+    {
+      "front": "History backfill?",
+      "back": "No.",
+      "track": "IVR scripts",
+      "lesson": "Variables, lookup, and query",
+      "href": "#/lesson/t07/l05"
+    },
+    {
+      "front": "Lookup exists?",
+      "back": "Yes.",
+      "track": "IVR scripts",
+      "lesson": "Variables, lookup, and query",
+      "href": "#/lesson/t07/l05"
+    },
+    {
+      "front": "Jump to another script?",
+      "back": "Foreign Script.",
+      "track": "IVR scripts",
+      "lesson": "IVA, foreign scripts, DNC, and leaving the platform",
+      "href": "#/lesson/t07/l06"
+    },
+    {
+      "front": "Opt out?",
+      "back": "Set DNC.",
+      "track": "IVR scripts",
+      "lesson": "IVA, foreign scripts, DNC, and leaving the platform",
+      "href": "#/lesson/t07/l06"
+    },
+    {
+      "front": "Digital keys?",
+      "back": "Build permission plus a task key.",
+      "track": "IVR scripts",
+      "lesson": "IVA, foreign scripts, DNC, and leaving the platform",
+      "href": "#/lesson/t07/l06"
+    },
+    {
+      "front": "Third party stays on your skill?",
+      "back": "No.",
+      "track": "IVR scripts",
+      "lesson": "IVA, foreign scripts, DNC, and leaving the platform",
+      "href": "#/lesson/t07/l06"
+    },
+    {
+      "front": "Which header?",
+      "back": "X-Frame-Options.",
+      "track": "IVR scripts",
+      "lesson": "Visual IVR and frames",
+      "href": "#/lesson/t07/l07"
+    },
+    {
+      "front": "Trust the old browser table?",
+      "back": "No. Retest.",
+      "track": "IVR scripts",
+      "lesson": "Visual IVR and frames",
+      "href": "#/lesson/t07/l07"
+    },
+    {
+      "front": "Who turns it on?",
+      "back": "A VCC administrator.",
+      "track": "IVR scripts",
+      "lesson": "Visual IVR and frames",
+      "href": "#/lesson/t07/l07"
+    },
+    {
+      "front": "Voice versus visual?",
+      "back": "Different surfaces.",
+      "track": "IVR scripts",
+      "lesson": "Visual IVR and frames",
+      "href": "#/lesson/t07/l07"
+    },
+    {
+      "front": "Membership?",
+      "back": "Agent or supervisor.",
+      "track": "Skills routing",
+      "lesson": "A skill is a queue with people in it",
+      "href": "#/lesson/t08/l01"
+    },
+    {
+      "front": "Empty skill?",
+      "back": "No delivery.",
+      "track": "Skills routing",
+      "lesson": "A skill is a queue with people in it",
+      "href": "#/lesson/t08/l01"
+    },
+    {
+      "front": "Service level?",
+      "back": "On the skill.",
+      "track": "Skills routing",
+      "lesson": "A skill is a queue with people in it",
+      "href": "#/lesson/t08/l01"
+    },
+    {
+      "front": "Several skills per user?",
+      "back": "Yes.",
+      "track": "Skills routing",
+      "lesson": "A skill is a queue with people in it",
+      "href": "#/lesson/t08/l01"
+    },
+    {
+      "front": "Inbound tab?",
+      "back": "Outbound Skills.",
+      "track": "Skills routing",
+      "lesson": "The tab is named backwards on inbound",
+      "href": "#/lesson/t08/l02"
+    },
+    {
+      "front": "Ready but wrong tab?",
+      "back": "No offer.",
+      "track": "Skills routing",
+      "lesson": "The tab is named backwards on inbound",
+      "href": "#/lesson/t08/l02"
+    },
+    {
+      "front": "Autodial?",
+      "back": "Same tab as inbound.",
+      "track": "Skills routing",
+      "lesson": "The tab is named backwards on inbound",
+      "href": "#/lesson/t08/l02"
+    },
+    {
+      "front": "Where documented?",
+      "back": "Skill groups topic.",
+      "track": "Skills routing",
+      "lesson": "The tab is named backwards on inbound",
+      "href": "#/lesson/t08/l02"
+    },
+    {
+      "front": "Any or all?",
+      "back": "Any one skill.",
+      "track": "Skills routing",
+      "lesson": "One module, one skill, when you need the truth",
+      "href": "#/lesson/t08/l03"
+    },
+    {
+      "front": "Report tip?",
+      "back": "One skill.",
+      "track": "Skills routing",
+      "lesson": "One module, one skill, when you need the truth",
+      "href": "#/lesson/t08/l03"
+    },
+    {
+      "front": "Deliberate pool?",
+      "back": "Allowed if intended.",
+      "track": "Skills routing",
+      "lesson": "One module, one skill, when you need the truth",
+      "href": "#/lesson/t08/l03"
+    },
+    {
+      "front": "No selection?",
+      "back": "Default.",
+      "track": "Skills routing",
+      "lesson": "One module, one skill, when you need the truth",
+      "href": "#/lesson/t08/l03"
+    },
+    {
+      "front": "Same number?",
+      "back": "No.",
+      "track": "Skills routing",
+      "lesson": "Skill level versus list order",
+      "href": "#/lesson/t08/l04"
+    },
+    {
+      "front": "What does ignore-order do?",
+      "back": "Uses agent skill level.",
+      "track": "Skills routing",
+      "lesson": "Skill level versus list order",
+      "href": "#/lesson/t08/l04"
+    },
+    {
+      "front": "Click-path quoted here?",
+      "back": "No.",
+      "track": "Skills routing",
+      "lesson": "Skill level versus list order",
+      "href": "#/lesson/t08/l04"
+    },
+    {
+      "front": "Switch off?",
+      "back": "List order stands.",
+      "track": "Skills routing",
+      "lesson": "Skill level versus list order",
+      "href": "#/lesson/t08/l04"
+    },
+    {
+      "front": "No selection?",
+      "back": "Default queue.",
+      "track": "Skills routing",
+      "lesson": "Default is a queue, not a compliment",
+      "href": "#/lesson/t08/l05"
+    },
+    {
+      "front": "Label?",
+      "back": "Default.",
+      "track": "Skills routing",
+      "lesson": "Default is a queue, not a compliment",
+      "href": "#/lesson/t08/l05"
+    },
+    {
+      "front": "User with no skills?",
+      "back": "Catch-all eligible.",
+      "track": "Skills routing",
+      "lesson": "Default is a queue, not a compliment",
+      "href": "#/lesson/t08/l05"
+    },
+    {
+      "front": "Safe pattern?",
+      "back": "Name the skill.",
+      "track": "Skills routing",
+      "lesson": "Default is a queue, not a compliment",
+      "href": "#/lesson/t08/l05"
+    },
+    {
+      "front": "Target without people?",
+      "back": "Still misses.",
+      "track": "Skills routing",
+      "lesson": "Service level is the scoreboard",
+      "href": "#/lesson/t08/l06"
+    },
+    {
+      "front": "What steers?",
+      "back": "Priority.",
+      "track": "Skills routing",
+      "lesson": "Service level is the scoreboard",
+      "href": "#/lesson/t08/l06"
+    },
+    {
+      "front": "Where is the target?",
+      "back": "The skill.",
+      "track": "Skills routing",
+      "lesson": "Service level is the scoreboard",
+      "href": "#/lesson/t08/l06"
+    },
+    {
+      "front": "Easier target?",
+      "back": "A new definition, not new staff.",
+      "track": "Skills routing",
+      "lesson": "Service level is the scoreboard",
+      "href": "#/lesson/t08/l06"
+    },
+    {
+      "front": "Greeting object?",
+      "back": "Skill audio.",
+      "track": "Skills routing",
+      "lesson": "Skill voicemail is its own mailbox",
+      "href": "#/lesson/t08/l07"
+    },
+    {
+      "front": "Default callback code?",
+      "back": "Abandon. Replace it.",
+      "track": "Skills routing",
+      "lesson": "Skill voicemail is its own mailbox",
+      "href": "#/lesson/t08/l07"
+    },
+    {
+      "front": "Why a specific code?",
+      "back": "So the promise is visible.",
+      "track": "Skills routing",
+      "lesson": "Skill voicemail is its own mailbox",
+      "href": "#/lesson/t08/l07"
+    },
+    {
+      "front": "Cell mailbox?",
+      "back": "Not this object.",
+      "track": "Skills routing",
+      "lesson": "Skill voicemail is its own mailbox",
+      "href": "#/lesson/t08/l07"
+    },
+    {
+      "front": "Form factor?",
+      "back": "One screen.",
+      "track": "Agent Desktop Plus",
+      "lesson": "One screen is the product",
+      "href": "#/lesson/t09/l01"
+    },
+    {
+      "front": "Transcription source?",
+      "back": "Engage page.",
+      "track": "Agent Desktop Plus",
+      "lesson": "One screen is the product",
+      "href": "#/lesson/t09/l01"
+    },
+    {
+      "front": "Adapter voice stack?",
+      "back": "Same underlying technology, per the desktop page.",
+      "track": "Agent Desktop Plus",
+      "lesson": "One screen is the product",
+      "href": "#/lesson/t09/l01"
+    },
+    {
+      "front": "Assist bandwidth?",
+      "back": "12 kbps extra.",
+      "track": "Agent Desktop Plus",
+      "lesson": "One screen is the product",
+      "href": "#/lesson/t09/l01"
+    },
+    {
+      "front": "Adapter transport?",
+      "back": "HTTPS and WSS.",
+      "track": "Agent Desktop Plus",
+      "lesson": "Plus adapters speak HTTPS and WSS",
+      "href": "#/lesson/t09/l02"
+    },
+    {
+      "front": "Proxy?",
+      "back": "Must support WSS.",
+      "track": "Agent Desktop Plus",
+      "lesson": "Plus adapters speak HTTPS and WSS",
+      "href": "#/lesson/t09/l02"
+    },
+    {
+      "front": "TLS 1.1?",
+      "back": "Not supported.",
+      "track": "Agent Desktop Plus",
+      "lesson": "Plus adapters speak HTTPS and WSS",
+      "href": "#/lesson/t09/l02"
+    },
+    {
+      "front": "Pop down, voice up?",
+      "back": "Look at WSS.",
+      "track": "Agent Desktop Plus",
+      "lesson": "Plus adapters speak HTTPS and WSS",
+      "href": "#/lesson/t09/l02"
+    },
+    {
+      "front": "Where is Assist named?",
+      "back": "Engage.",
+      "track": "Agent Desktop Plus",
+      "lesson": "Transcription and assist are features you turn on",
+      "href": "#/lesson/t09/l03"
+    },
+    {
+      "front": "Studio's first named app?",
+      "back": "Summaries, among Agent Assist.",
+      "track": "Agent Desktop Plus",
+      "lesson": "Transcription and assist are features you turn on",
+      "href": "#/lesson/t09/l03"
+    },
+    {
+      "front": "Universal model name?",
+      "back": "Do not assume one.",
+      "track": "Agent Desktop Plus",
+      "lesson": "Transcription and assist are features you turn on",
+      "href": "#/lesson/t09/l03"
+    },
+    {
+      "front": "Why the same screen?",
+      "back": "So the agent sees it.",
+      "track": "Agent Desktop Plus",
+      "lesson": "Transcription and assist are features you turn on",
+      "href": "#/lesson/t09/l03"
+    },
+    {
+      "front": "What does Plus show from WEM?",
+      "back": "Schedules, adherence, time off, evaluations.",
+      "track": "Agent Desktop Plus",
+      "lesson": "WEM lives in the same desktop",
+      "href": "#/lesson/t09/l04"
+    },
+    {
+      "front": "Break equals idle?",
+      "back": "No.",
+      "track": "Agent Desktop Plus",
+      "lesson": "WEM lives in the same desktop",
+      "href": "#/lesson/t09/l04"
+    },
+    {
+      "front": "CRM path?",
+      "back": "WFO connectors, per the desktop page.",
+      "track": "Agent Desktop Plus",
+      "lesson": "WEM lives in the same desktop",
+      "href": "#/lesson/t09/l04"
+    },
+    {
+      "front": "Adherence?",
+      "back": "Plan versus actual.",
+      "track": "Agent Desktop Plus",
+      "lesson": "WEM lives in the same desktop",
+      "href": "#/lesson/t09/l04"
+    },
+    {
+      "front": "Avast example means?",
+      "back": "AV can block text.",
+      "track": "Agent Desktop Plus",
+      "lesson": "Digital text can be blocked",
+      "href": "#/lesson/t09/l05"
+    },
+    {
+      "front": "Blank text suspect?",
+      "back": "Antivirus.",
+      "track": "Agent Desktop Plus",
+      "lesson": "Digital text can be blocked",
+      "href": "#/lesson/t09/l05"
+    },
+    {
+      "front": "Dropped call suspect?",
+      "back": "Efficiency Mode, among others.",
+      "track": "Agent Desktop Plus",
+      "lesson": "Digital text can be blocked",
+      "href": "#/lesson/t09/l05"
+    },
+    {
+      "front": "Change both at once?",
+      "back": "No.",
+      "track": "Agent Desktop Plus",
+      "lesson": "Digital text can be blocked",
+      "href": "#/lesson/t09/l05"
+    },
+    {
+      "front": "Analog?",
+      "back": "Not supported.",
+      "track": "Agent Desktop Plus",
+      "lesson": "Headsets and the path under the desk",
+      "href": "#/lesson/t09/l06"
+    },
+    {
+      "front": "5G agent path?",
+      "back": "Not supported.",
+      "track": "Agent Desktop Plus",
+      "lesson": "Headsets and the path under the desk",
+      "href": "#/lesson/t09/l06"
+    },
+    {
+      "front": "Default codec in that table?",
+      "back": "G.711.",
+      "track": "Agent Desktop Plus",
+      "lesson": "Headsets and the path under the desk",
+      "href": "#/lesson/t09/l06"
+    },
+    {
+      "front": "One-way latency?",
+      "back": "Under 150 ms.",
+      "track": "Agent Desktop Plus",
+      "lesson": "Headsets and the path under the desk",
+      "href": "#/lesson/t09/l06"
+    },
+    {
+      "front": "One-way audio next stop?",
+      "back": "NAT and SIP.",
+      "track": "Agent Desktop Plus",
+      "lesson": "The desktop review",
+      "href": "#/lesson/t09/l07"
+    },
+    {
+      "front": "Efficiency Mode?",
+      "back": "Desktop review.",
+      "track": "Agent Desktop Plus",
+      "lesson": "The desktop review",
+      "href": "#/lesson/t09/l07"
+    },
+    {
+      "front": "WSS?",
+      "back": "Desktop review.",
+      "track": "Agent Desktop Plus",
+      "lesson": "The desktop review",
+      "href": "#/lesson/t09/l07"
+    },
+    {
+      "front": "Skip the schedule?",
+      "back": "You will mis-count people.",
+      "track": "Agent Desktop Plus",
+      "lesson": "The desktop review",
+      "href": "#/lesson/t09/l07"
+    },
+    {
+      "front": "Verint?",
+      "back": "A named partner path, not the only path.",
+      "track": "Workforce engagement",
+      "lesson": "Five9 WEM and a Verint path both exist",
+      "href": "#/lesson/t10/l01"
+    },
+    {
+      "front": "Data sheet pieces?",
+      "back": "Recording, QM, WFM, analytics, surveys, connectors.",
+      "track": "Workforce engagement",
+      "lesson": "Five9 WEM and a Verint path both exist",
+      "href": "#/lesson/t10/l01"
+    },
+    {
+      "front": "Who upgrades?",
+      "back": "Five9, per the page.",
+      "track": "Workforce engagement",
+      "lesson": "Five9 WEM and a Verint path both exist",
+      "href": "#/lesson/t10/l01"
+    },
+    {
+      "front": "Guess the vendor?",
+      "back": "No.",
+      "track": "Workforce engagement",
+      "lesson": "Five9 WEM and a Verint path both exist",
+      "href": "#/lesson/t10/l01"
+    },
+    {
+      "front": "Does WFM pick preview vs power?",
+      "back": "No. It staffs.",
+      "track": "Workforce engagement",
+      "lesson": "Workforce management is the roster",
+      "href": "#/lesson/t10/l02"
+    },
+    {
+      "front": "Break?",
+      "back": "Not available.",
+      "track": "Workforce engagement",
+      "lesson": "Workforce management is the roster",
+      "href": "#/lesson/t10/l02"
+    },
+    {
+      "front": "Adherence?",
+      "back": "Plan versus actual.",
+      "track": "Workforce engagement",
+      "lesson": "Workforce management is the roster",
+      "href": "#/lesson/t10/l02"
+    },
+    {
+      "front": "Service level needs?",
+      "back": "The people.",
+      "track": "Workforce engagement",
+      "lesson": "Workforce management is the roster",
+      "href": "#/lesson/t10/l02"
+    },
+    {
+      "front": "Where do agents read evaluations?",
+      "back": "Plus, per the desktop page.",
+      "track": "Workforce engagement",
+      "lesson": "Quality management listens on purpose",
+      "href": "#/lesson/t10/l03"
+    },
+    {
+      "front": "Hold recorded?",
+      "back": "Yes, per the EULA.",
+      "track": "Workforce engagement",
+      "lesson": "Quality management listens on purpose",
+      "href": "#/lesson/t10/l03"
+    },
+    {
+      "front": "Who handles consent?",
+      "back": "The customer, per the EULA.",
+      "track": "Workforce engagement",
+      "lesson": "Quality management listens on purpose",
+      "href": "#/lesson/t10/l03"
+    },
+    {
+      "front": "Wrong form?",
+      "back": "Teaches the wrong work.",
+      "track": "Workforce engagement",
+      "lesson": "Quality management listens on purpose",
+      "href": "#/lesson/t10/l03"
+    },
+    {
+      "front": "Survey versus abandon?",
+      "back": "Different.",
+      "track": "Workforce engagement",
+      "lesson": "Analytics and surveys sit beside the call",
+      "href": "#/lesson/t10/l04"
+    },
+    {
+      "front": "A topic without an owner?",
+      "back": "A poster.",
+      "track": "Workforce engagement",
+      "lesson": "Analytics and surveys sit beside the call",
+      "href": "#/lesson/t10/l04"
+    },
+    {
+      "front": "Screens identical?",
+      "back": "Do not assume.",
+      "track": "Workforce engagement",
+      "lesson": "Analytics and surveys sit beside the call",
+      "href": "#/lesson/t10/l04"
+    },
+    {
+      "front": "Surveys in the data sheet?",
+      "back": "Yes.",
+      "track": "Workforce engagement",
+      "lesson": "Analytics and surveys sit beside the call",
+      "href": "#/lesson/t10/l04"
+    },
+    {
+      "front": "VCC audio rule?",
+      "back": "30 days or successful offload, or the contract.",
+      "track": "Workforce engagement",
+      "lesson": "Recordings expire",
+      "href": "#/lesson/t10/l05"
+    },
+    {
+      "front": "Failed copy?",
+      "back": "The clock continues.",
+      "track": "Workforce engagement",
+      "lesson": "Recordings expire",
+      "href": "#/lesson/t10/l05"
+    },
+    {
+      "front": "E911 audio?",
+      "back": "30 days on that page.",
+      "track": "Workforce engagement",
+      "lesson": "Recordings expire",
+      "href": "#/lesson/t10/l05"
+    },
+    {
+      "front": "Agent data?",
+      "back": "60 days on that page.",
+      "track": "Workforce engagement",
+      "lesson": "Recordings expire",
+      "href": "#/lesson/t10/l05"
+    },
+    {
+      "front": "Time off in Plus?",
+      "back": "Named.",
+      "track": "Workforce engagement",
+      "lesson": "The agent should not need a second login",
+      "href": "#/lesson/t10/l06"
+    },
+    {
+      "front": "Shift bidding?",
+      "back": "Named, rules not copied here.",
+      "track": "Workforce engagement",
+      "lesson": "The agent should not need a second login",
+      "href": "#/lesson/t10/l06"
+    },
+    {
+      "front": "Bid without a schedule change?",
+      "back": "The dialer never sees it.",
+      "track": "Workforce engagement",
+      "lesson": "The agent should not need a second login",
+      "href": "#/lesson/t10/l06"
+    },
+    {
+      "front": "Second login?",
+      "back": "Connector probably unused.",
+      "track": "Workforce engagement",
+      "lesson": "The agent should not need a second login",
+      "href": "#/lesson/t10/l06"
+    },
+    {
+      "front": "Approve time off here?",
+      "back": "No.",
+      "track": "Workforce engagement",
+      "lesson": "What this lab will not pretend to run",
+      "href": "#/lesson/t10/l07"
+    },
+    {
+      "front": "Pacing bench?",
+      "back": "A model.",
+      "track": "Workforce engagement",
+      "lesson": "What this lab will not pretend to run",
+      "href": "#/lesson/t10/l07"
+    },
+    {
+      "front": "Roster of record?",
+      "back": "The suite.",
+      "track": "Workforce engagement",
+      "lesson": "What this lab will not pretend to run",
+      "href": "#/lesson/t10/l07"
+    },
+    {
+      "front": "Recording after the clock?",
+      "back": "The offload.",
+      "track": "Workforce engagement",
+      "lesson": "What this lab will not pretend to run",
+      "href": "#/lesson/t10/l07"
+    },
+    {
+      "front": "Region matters?",
+      "back": "Yes. Use the matching portal.",
+      "track": "IVA and GenAI",
+      "lesson": "Studio has regions",
+      "href": "#/lesson/t11/l01"
+    },
+    {
+      "front": "Legacy hosts listed?",
+      "back": "Yes.",
+      "track": "IVA and GenAI",
+      "lesson": "Studio has regions",
+      "href": "#/lesson/t11/l01"
+    },
+    {
+      "front": "How to find SIP?",
+      "back": "DNS SRV.",
+      "track": "IVA and GenAI",
+      "lesson": "Studio has regions",
+      "href": "#/lesson/t11/l01"
+    },
+    {
+      "front": "Paste Studio ports onto every trunk?",
+      "back": "No. Confirm the family.",
+      "track": "IVA and GenAI",
+      "lesson": "Studio has regions",
+      "href": "#/lesson/t11/l01"
+    },
+    {
+      "front": "Digital key permission?",
+      "back": "Build.",
+      "track": "IVA and GenAI",
+      "lesson": "A task key is not a vibe",
+      "href": "#/lesson/t11/l02"
+    },
+    {
+      "front": "Task type in that article?",
+      "back": "ChatBot.",
+      "track": "IVA and GenAI",
+      "lesson": "A task key is not a vibe",
+      "href": "#/lesson/t11/l02"
+    },
+    {
+      "front": "Where does the key go?",
+      "back": "The VCC side.",
+      "track": "IVA and GenAI",
+      "lesson": "A task key is not a vibe",
+      "href": "#/lesson/t11/l02"
+    },
+    {
+      "front": "Same as voice?",
+      "back": "Do not assume.",
+      "track": "IVA and GenAI",
+      "lesson": "A task key is not a vibe",
+      "href": "#/lesson/t11/l02"
+    },
+    {
+      "front": "No failure branch?",
+      "back": "The caller is stranded.",
+      "track": "IVA and GenAI",
+      "lesson": "Contain, or hand back with context",
+      "href": "#/lesson/t11/l03"
+    },
+    {
+      "front": "No skill selected?",
+      "back": "Default.",
+      "track": "IVA and GenAI",
+      "lesson": "Contain, or hand back with context",
+      "href": "#/lesson/t11/l03"
+    },
+    {
+      "front": "History?",
+      "back": "Enable a reporting call variable. New calls only.",
+      "track": "IVA and GenAI",
+      "lesson": "Contain, or hand back with context",
+      "href": "#/lesson/t11/l03"
+    },
+    {
+      "front": "Engage handoff?",
+      "back": "With context.",
+      "track": "IVA and GenAI",
+      "lesson": "Contain, or hand back with context",
+      "href": "#/lesson/t11/l03"
+    },
+    {
+      "front": "Engine-agnostic?",
+      "back": "Yes.",
+      "track": "IVA and GenAI",
+      "lesson": "GenAI Studio is a hub, not a slogan",
+      "href": "#/lesson/t11/l04"
+    },
+    {
+      "front": "First named app?",
+      "back": "Agent Assist summaries.",
+      "track": "IVA and GenAI",
+      "lesson": "GenAI Studio is a hub, not a slogan",
+      "href": "#/lesson/t11/l04"
+    },
+    {
+      "front": "Test data?",
+      "back": "Real calls, per the page.",
+      "track": "IVA and GenAI",
+      "lesson": "GenAI Studio is a hub, not a slogan",
+      "href": "#/lesson/t11/l04"
+    },
+    {
+      "front": "Untested prompt?",
+      "back": "Not the control the page describes.",
+      "track": "IVA and GenAI",
+      "lesson": "GenAI Studio is a hub, not a slogan",
+      "href": "#/lesson/t11/l04"
+    },
+    {
+      "front": "Same block?",
+      "back": "No.",
+      "track": "IVA and GenAI",
+      "lesson": "NLP in the IVR is not the same as Studio",
+      "href": "#/lesson/t11/l05"
+    },
+    {
+      "front": "Studio handoff?",
+      "back": "IVA Transfer.",
+      "track": "IVA and GenAI",
+      "lesson": "NLP in the IVR is not the same as Studio",
+      "href": "#/lesson/t11/l05"
+    },
+    {
+      "front": "Short speech menu?",
+      "back": "An IVR module can do it.",
+      "track": "IVA and GenAI",
+      "lesson": "NLP in the IVR is not the same as Studio",
+      "href": "#/lesson/t11/l05"
+    },
+    {
+      "front": "Wrong name?",
+      "back": "Wrong system.",
+      "track": "IVA and GenAI",
+      "lesson": "NLP in the IVR is not the same as Studio",
+      "href": "#/lesson/t11/l05"
+    },
+    {
+      "front": "Prompt edit?",
+      "back": "A release.",
+      "track": "IVA and GenAI",
+      "lesson": "Prompts are a production change",
+      "href": "#/lesson/t11/l06"
+    },
+    {
+      "front": "Test on?",
+      "back": "Call data.",
+      "track": "IVA and GenAI",
+      "lesson": "Prompts are a production change",
+      "href": "#/lesson/t11/l06"
+    },
+    {
+      "front": "Same as a WAV?",
+      "back": "No.",
+      "track": "IVA and GenAI",
+      "lesson": "Prompts are a production change",
+      "href": "#/lesson/t11/l06"
+    },
+    {
+      "front": "Invented policy?",
+      "back": "Not ready.",
+      "track": "IVA and GenAI",
+      "lesson": "Prompts are a production change",
+      "href": "#/lesson/t11/l06"
+    },
+    {
+      "front": "Skip region?",
+      "back": "The review is incomplete.",
+      "track": "IVA and GenAI",
+      "lesson": "A bot review you can finish",
+      "href": "#/lesson/t11/l07"
+    },
+    {
+      "front": "Build permission source?",
+      "back": "The digital IVA article.",
+      "track": "IVA and GenAI",
+      "lesson": "A bot review you can finish",
+      "href": "#/lesson/t11/l07"
+    },
+    {
+      "front": "Why the clock?",
+      "back": "Audio expires.",
+      "track": "IVA and GenAI",
+      "lesson": "A bot review you can finish",
+      "href": "#/lesson/t11/l07"
+    },
+    {
+      "front": "Does this lab host Studio?",
+      "back": "No.",
+      "track": "IVA and GenAI",
+      "lesson": "A bot review you can finish",
+      "href": "#/lesson/t11/l07"
+    },
+    {
+      "front": "ServiceNow listed?",
+      "back": "Yes.",
+      "track": "CRM integrations",
+      "lesson": "The adapter family",
+      "href": "#/lesson/t12/l01"
+    },
+    {
+      "front": "Homegrown CRM?",
+      "back": "CRM SDK.",
+      "track": "CRM integrations",
+      "lesson": "The adapter family",
+      "href": "#/lesson/t12/l01"
+    },
+    {
+      "front": "URL pop versus adapter?",
+      "back": "Name which one.",
+      "track": "CRM integrations",
+      "lesson": "The adapter family",
+      "href": "#/lesson/t12/l01"
+    },
+    {
+      "front": "Proxy?",
+      "back": "Must support WSS.",
+      "track": "CRM integrations",
+      "lesson": "The adapter family",
+      "href": "#/lesson/t12/l01"
+    },
+    {
+      "front": "Is 2.46 forever?",
+      "back": "No. Recheck the PDF.",
+      "track": "CRM integrations",
+      "lesson": "Salesforce versions move",
+      "href": "#/lesson/t12/l02"
+    },
+    {
+      "front": "SAML?",
+      "back": "2.0 in that PDF.",
+      "track": "CRM integrations",
+      "lesson": "Salesforce versions move",
+      "href": "#/lesson/t12/l02"
+    },
+    {
+      "front": "Lightning?",
+      "back": "Supported.",
+      "track": "CRM integrations",
+      "lesson": "Salesforce versions move",
+      "href": "#/lesson/t12/l02"
+    },
+    {
+      "front": "IE 11 remains for Salesforce?",
+      "back": "No. The exception is Oracle Service Cloud.",
+      "track": "CRM integrations",
+      "lesson": "Salesforce versions move",
+      "href": "#/lesson/t12/l02"
+    },
+    {
+      "front": "Workspaces?",
+      "back": "Service Operations and Configurable.",
+      "track": "CRM integrations",
+      "lesson": "ServiceNow releases are named",
+      "href": "#/lesson/t12/l03"
+    },
+    {
+      "front": "Those three names?",
+      "back": "Releases in the PDF.",
+      "track": "CRM integrations",
+      "lesson": "ServiceNow releases are named",
+      "href": "#/lesson/t12/l03"
+    },
+    {
+      "front": "Off-list release?",
+      "back": "Do not call it supported.",
+      "track": "CRM integrations",
+      "lesson": "ServiceNow releases are named",
+      "href": "#/lesson/t12/l03"
+    },
+    {
+      "front": "Forever?",
+      "back": "No.",
+      "track": "CRM integrations",
+      "lesson": "ServiceNow releases are named",
+      "href": "#/lesson/t12/l03"
+    },
+    {
+      "front": "Epic listed?",
+      "back": "Yes.",
+      "track": "CRM integrations",
+      "lesson": "The rest of the named CRMs",
+      "href": "#/lesson/t12/l04"
+    },
+    {
+      "front": "Salesforce package fixes Zendesk?",
+      "back": "No.",
+      "track": "CRM integrations",
+      "lesson": "The rest of the named CRMs",
+      "href": "#/lesson/t12/l04"
+    },
+    {
+      "front": "NetSuite package in this lab?",
+      "back": "Not stated.",
+      "track": "CRM integrations",
+      "lesson": "The rest of the named CRMs",
+      "href": "#/lesson/t12/l04"
+    },
+    {
+      "front": "IE exception scope?",
+      "back": "Oracle Service Cloud only.",
+      "track": "CRM integrations",
+      "lesson": "The rest of the named CRMs",
+      "href": "#/lesson/t12/l04"
+    },
+    {
+      "front": "SDK named?",
+      "back": "Yes.",
+      "track": "CRM integrations",
+      "lesson": "SDK and connectors when there is no adapter",
+      "href": "#/lesson/t12/l05"
+    },
+    {
+      "front": "Connectors named?",
+      "back": "Yes.",
+      "track": "CRM integrations",
+      "lesson": "SDK and connectors when there is no adapter",
+      "href": "#/lesson/t12/l05"
+    },
+    {
+      "front": "Who retests custom code?",
+      "back": "You.",
+      "track": "CRM integrations",
+      "lesson": "SDK and connectors when there is no adapter",
+      "href": "#/lesson/t12/l05"
+    },
+    {
+      "front": "URL pop scope?",
+      "back": "Smaller than a full adapter.",
+      "track": "CRM integrations",
+      "lesson": "SDK and connectors when there is no adapter",
+      "href": "#/lesson/t12/l05"
+    },
+    {
+      "front": "Voice proves the pop?",
+      "back": "No.",
+      "track": "CRM integrations",
+      "lesson": "Screen pop down, voice up",
+      "href": "#/lesson/t12/l06"
+    },
+    {
+      "front": "Profiles and pop-ups?",
+      "back": "Yes, they can control them.",
+      "track": "CRM integrations",
+      "lesson": "Screen pop down, voice up",
+      "href": "#/lesson/t12/l06"
+    },
+    {
+      "front": "TLS 1.1?",
+      "back": "Unsupported.",
+      "track": "CRM integrations",
+      "lesson": "Screen pop down, voice up",
+      "href": "#/lesson/t12/l06"
+    },
+    {
+      "front": "Dead URL?",
+      "back": "Blank screen.",
+      "track": "CRM integrations",
+      "lesson": "Screen pop down, voice up",
+      "href": "#/lesson/t12/l06"
+    },
+    {
+      "front": "IVR Salesforce module?",
+      "back": "A script block.",
+      "track": "CRM integrations",
+      "lesson": "Salesforce modules inside the IVR",
+      "href": "#/lesson/t12/l07"
+    },
+    {
+      "front": "Einstein module?",
+      "back": "Named in the chapter.",
+      "track": "CRM integrations",
+      "lesson": "Salesforce modules inside the IVR",
+      "href": "#/lesson/t12/l07"
+    },
+    {
+      "front": "ZIP example?",
+      "back": "Query, not the Salesforce module.",
+      "track": "CRM integrations",
+      "lesson": "Salesforce modules inside the IVR",
+      "href": "#/lesson/t12/l07"
+    },
+    {
+      "front": "After connect?",
+      "back": "The adapter.",
+      "track": "CRM integrations",
+      "lesson": "Salesforce modules inside the IVR",
+      "href": "#/lesson/t12/l07"
+    },
+    {
+      "front": "Five9 ITSP?",
+      "back": "One of the three stories.",
+      "track": "SIP and carriers",
+      "lesson": "Three ways a call can enter",
+      "href": "#/lesson/t13/l01"
+    },
+    {
+      "front": "Customer ITSP lands on?",
+      "back": "Five9 SBCs.",
+      "track": "SIP and carriers",
+      "lesson": "Three ways a call can enter",
+      "href": "#/lesson/t13/l01"
+    },
+    {
+      "front": "Gateway names?",
+      "back": "Avaya, Cisco, Asterisk.",
+      "track": "SIP and carriers",
+      "lesson": "Three ways a call can enter",
+      "href": "#/lesson/t13/l01"
+    },
+    {
+      "front": "Does Cisco here import UCCX?",
+      "back": "No.",
+      "track": "SIP and carriers",
+      "lesson": "Three ways a call can enter",
+      "href": "#/lesson/t13/l01"
+    },
+    {
+      "front": "DNS?",
+      "back": "SRV preferred.",
+      "track": "SIP and carriers",
+      "lesson": "DNS, codecs, and the default voice",
+      "href": "#/lesson/t13/l02"
+    },
+    {
+      "front": "Default codec?",
+      "back": "G.711.",
+      "track": "SIP and carriers",
+      "lesson": "DNS, codecs, and the default voice",
+      "href": "#/lesson/t13/l02"
+    },
+    {
+      "front": "20 ms?",
+      "back": "Practitioner, uncertain, not a PDF quote here.",
+      "track": "SIP and carriers",
+      "lesson": "DNS, codecs, and the default voice",
+      "href": "#/lesson/t13/l02"
+    },
+    {
+      "front": "Digit RFC?",
+      "back": "4733.",
+      "track": "SIP and carriers",
+      "lesson": "DNS, codecs, and the default voice",
+      "href": "#/lesson/t13/l02"
+    },
+    {
+      "front": "Plus?",
+      "back": "128 kbps.",
+      "track": "SIP and carriers",
+      "lesson": "How much bandwidth a seat costs",
+      "href": "#/lesson/t13/l03"
+    },
+    {
+      "front": "Java agent?",
+      "back": "88 kbps.",
+      "track": "SIP and carriers",
+      "lesson": "How much bandwidth a seat costs",
+      "href": "#/lesson/t13/l03"
+    },
+    {
+      "front": "Assist?",
+      "back": "About +12.",
+      "track": "SIP and carriers",
+      "lesson": "How much bandwidth a seat costs",
+      "href": "#/lesson/t13/l03"
+    },
+    {
+      "front": "Satellite?",
+      "back": "Not supported.",
+      "track": "SIP and carriers",
+      "lesson": "How much bandwidth a seat costs",
+      "href": "#/lesson/t13/l03"
+    },
+    {
+      "front": "Double NAT?",
+      "back": "No.",
+      "track": "SIP and carriers",
+      "lesson": "NAT, idle timers, and split tunnels",
+      "href": "#/lesson/t13/l04"
+    },
+    {
+      "front": "UDP idle?",
+      "back": "30 seconds.",
+      "track": "SIP and carriers",
+      "lesson": "NAT, idle timers, and split tunnels",
+      "href": "#/lesson/t13/l04"
+    },
+    {
+      "front": "Shorter timer?",
+      "back": "Keepalives.",
+      "track": "SIP and carriers",
+      "lesson": "NAT, idle timers, and split tunnels",
+      "href": "#/lesson/t13/l04"
+    },
+    {
+      "front": "Split tunnel?",
+      "back": "Do not exclude Five9.",
+      "track": "SIP and carriers",
+      "lesson": "NAT, idle timers, and split tunnels",
+      "href": "#/lesson/t13/l04"
+    },
+    {
+      "front": "Handoff?",
+      "back": "Layer 3.",
+      "track": "SIP and carriers",
+      "lesson": "Direct Connect and the edges",
+      "href": "#/lesson/t13/l05"
+    },
+    {
+      "front": "Failover?",
+      "back": "BGP.",
+      "track": "SIP and carriers",
+      "lesson": "Direct Connect and the edges",
+      "href": "#/lesson/t13/l05"
+    },
+    {
+      "front": "London?",
+      "back": "LD5 in that PDF.",
+      "track": "SIP and carriers",
+      "lesson": "Direct Connect and the edges",
+      "href": "#/lesson/t13/l05"
+    },
+    {
+      "front": "Is the list forever?",
+      "back": "No.",
+      "track": "SIP and carriers",
+      "lesson": "Direct Connect and the edges",
+      "href": "#/lesson/t13/l05"
+    },
+    {
+      "front": "TLS floor?",
+      "back": "1.2.",
+      "track": "SIP and carriers",
+      "lesson": "TLS, and ports that are not universal",
+      "href": "#/lesson/t13/l06"
+    },
+    {
+      "front": "TLS 1.1?",
+      "back": "Not supported.",
+      "track": "SIP and carriers",
+      "lesson": "TLS, and ports that are not universal",
+      "href": "#/lesson/t13/l06"
+    },
+    {
+      "front": "Studio 5060 on every trunk?",
+      "back": "No.",
+      "track": "SIP and carriers",
+      "lesson": "TLS, and ports that are not universal",
+      "href": "#/lesson/t13/l06"
+    },
+    {
+      "front": "5061 caveat?",
+      "back": "Beta in that PDF.",
+      "track": "SIP and carriers",
+      "lesson": "TLS, and ports that are not universal",
+      "href": "#/lesson/t13/l06"
+    },
+    {
+      "front": "Headset?",
+      "back": "USB noise-canceling.",
+      "track": "SIP and carriers",
+      "lesson": "Headsets, and the call that only fails one way",
+      "href": "#/lesson/t13/l07"
+    },
+    {
+      "front": "Analog?",
+      "back": "Not supported.",
+      "track": "SIP and carriers",
+      "lesson": "Headsets, and the call that only fails one way",
+      "href": "#/lesson/t13/l07"
+    },
+    {
+      "front": "Wireless at scale?",
+      "back": "Not recommended.",
+      "track": "SIP and carriers",
+      "lesson": "Headsets, and the call that only fails one way",
+      "href": "#/lesson/t13/l07"
+    },
+    {
+      "front": "Efficiency Mode?",
+      "back": "Can drop live calls.",
+      "track": "SIP and carriers",
+      "lesson": "Headsets, and the call that only fails one way",
+      "href": "#/lesson/t13/l07"
+    },
+    {
+      "front": "Web2Campaign?",
+      "back": "A named API.",
+      "track": "APIs and reporting",
+      "lesson": "The API names on the product page",
+      "href": "#/lesson/t14/l01"
+    },
+    {
+      "front": "Reporting versus Statistics?",
+      "back": "Both named, not the same label.",
+      "track": "APIs and reporting",
+      "lesson": "The API names on the product page",
+      "href": "#/lesson/t14/l01"
+    },
+    {
+      "front": "Homegrown CRM?",
+      "back": "CRM SDK.",
+      "track": "APIs and reporting",
+      "lesson": "The API names on the product page",
+      "href": "#/lesson/t14/l01"
+    },
+    {
+      "front": "SOAP or REST?",
+      "back": "Do not guess per family.",
+      "track": "APIs and reporting",
+      "lesson": "The API names on the product page",
+      "href": "#/lesson/t14/l01"
+    },
+    {
+      "front": "Role?",
+      "back": "Reporting, plus a permission.",
+      "track": "APIs and reporting",
+      "lesson": "Reporting is a role",
+      "href": "#/lesson/t14/l02"
+    },
+    {
+      "front": "IVR category?",
+      "back": "Yes.",
+      "track": "APIs and reporting",
+      "lesson": "Reporting is a role",
+      "href": "#/lesson/t14/l02"
+    },
+    {
+      "front": "Admin without the role?",
+      "back": "No standard reports.",
+      "track": "APIs and reporting",
+      "lesson": "Reporting is a role",
+      "href": "#/lesson/t14/l02"
+    },
+    {
+      "front": "Digital versus Legacy Digital?",
+      "back": "Both named.",
+      "track": "APIs and reporting",
+      "lesson": "Reporting is a role",
+      "href": "#/lesson/t14/l02"
+    },
+    {
+      "front": "Three layouts?",
+      "back": "Tabular, Summary, Matrix.",
+      "track": "APIs and reporting",
+      "lesson": "Layouts, and the matrix that will not export",
+      "href": "#/lesson/t14/l03"
+    },
+    {
+      "front": "Matrix to CSV?",
+      "back": "Not directly.",
+      "track": "APIs and reporting",
+      "lesson": "Layouts, and the matrix that will not export",
+      "href": "#/lesson/t14/l03"
+    },
+    {
+      "front": "Row-level?",
+      "back": "Tabular.",
+      "track": "APIs and reporting",
+      "lesson": "Layouts, and the matrix that will not export",
+      "href": "#/lesson/t14/l03"
+    },
+    {
+      "front": "Totals?",
+      "back": "Summary.",
+      "track": "APIs and reporting",
+      "lesson": "Layouts, and the matrix that will not export",
+      "href": "#/lesson/t14/l03"
+    },
+    {
+      "front": "Call log window?",
+      "back": "About 60 days unless extended, per that article.",
+      "track": "APIs and reporting",
+      "lesson": "The call log is a window, not an archive",
+      "href": "#/lesson/t14/l04"
+    },
+    {
+      "front": "Audio?",
+      "back": "30 days, offload, or contract \u2014 whichever is sooner.",
+      "track": "APIs and reporting",
+      "lesson": "The call log is a window, not an archive",
+      "href": "#/lesson/t14/l04"
+    },
+    {
+      "front": "Same clock?",
+      "back": "No.",
+      "track": "APIs and reporting",
+      "lesson": "The call log is a window, not an archive",
+      "href": "#/lesson/t14/l04"
+    },
+    {
+      "front": "Why date the article?",
+      "back": "The window can change.",
+      "track": "APIs and reporting",
+      "lesson": "The call log is a window, not an archive",
+      "href": "#/lesson/t14/l04"
+    },
+    {
+      "front": "Backfill?",
+      "back": "No.",
+      "track": "APIs and reporting",
+      "lesson": "Call variables are not history",
+      "href": "#/lesson/t14/l05"
+    },
+    {
+      "front": "Permission name?",
+      "back": "User Can Edit Call Variables.",
+      "track": "APIs and reporting",
+      "lesson": "Call variables are not history",
+      "href": "#/lesson/t14/l05"
+    },
+    {
+      "front": "All dispositions includes custom?",
+      "back": "No.",
+      "track": "APIs and reporting",
+      "lesson": "Call variables are not history",
+      "href": "#/lesson/t14/l05"
+    },
+    {
+      "front": "Both switches?",
+      "back": "Permission and the reporting flag.",
+      "track": "APIs and reporting",
+      "lesson": "Call variables are not history",
+      "href": "#/lesson/t14/l05"
+    },
+    {
+      "front": "Prebuilt names?",
+      "back": "Zoom Phone and Teams, among the product lines.",
+      "track": "APIs and reporting",
+      "lesson": "Prebuilt UC and the connector that is not an adapter",
+      "href": "#/lesson/t14/l06"
+    },
+    {
+      "front": "Local Teams client?",
+      "back": "About 320 kbps.",
+      "track": "APIs and reporting",
+      "lesson": "Prebuilt UC and the connector that is not an adapter",
+      "href": "#/lesson/t14/l06"
+    },
+    {
+      "front": "URL pop?",
+      "back": "Web Connector.",
+      "track": "APIs and reporting",
+      "lesson": "Prebuilt UC and the connector that is not an adapter",
+      "href": "#/lesson/t14/l06"
+    },
+    {
+      "front": "Does prebuilt erase bandwidth?",
+      "back": "No.",
+      "track": "APIs and reporting",
+      "lesson": "Prebuilt UC and the connector that is not an adapter",
+      "href": "#/lesson/t14/l06"
+    },
+    {
+      "front": "Agent data?",
+      "back": "60 days.",
+      "track": "APIs and reporting",
+      "lesson": "What an extract is allowed to remember",
+      "href": "#/lesson/t14/l07"
+    },
+    {
+      "front": "Campaign state?",
+      "back": "120 days.",
+      "track": "APIs and reporting",
+      "lesson": "What an extract is allowed to remember",
+      "href": "#/lesson/t14/l07"
+    },
+    {
+      "front": "DIDs after closure?",
+      "back": "90 days.",
+      "track": "APIs and reporting",
+      "lesson": "What an extract is allowed to remember",
+      "href": "#/lesson/t14/l07"
+    },
+    {
+      "front": "Disabled domain?",
+      "back": "120 days after closure.",
+      "track": "APIs and reporting",
+      "lesson": "What an extract is allowed to remember",
+      "href": "#/lesson/t14/l07"
+    },
+    {
+      "front": "Official importer?",
+      "back": "None cited here.",
+      "track": "From UCCX and UCCE",
+      "lesson": "There is no import button",
+      "href": "#/lesson/t15/l01"
+    },
+    {
+      "front": "Cisco in the PDF?",
+      "back": "A gateway type.",
+      "track": "From UCCX and UCCE",
+      "lesson": "There is no import button",
+      "href": "#/lesson/t15/l01"
+    },
+    {
+      "front": "Build order?",
+      "back": "Skills through profiles, then campaigns.",
+      "track": "From UCCX and UCCE",
+      "lesson": "There is no import button",
+      "href": "#/lesson/t15/l01"
+    },
+    {
+      "front": "Blended?",
+      "back": "Not a fourth campaign type.",
+      "track": "From UCCX and UCCE",
+      "lesson": "There is no import button",
+      "href": "#/lesson/t15/l01"
+    },
+    {
+      "front": "CSQ maps toward?",
+      "back": "A skill group, as a teaching map.",
+      "track": "From UCCX and UCCE",
+      "lesson": "CSQs, skills, and the partition you will not find",
+      "href": "#/lesson/t15/l02"
+    },
+    {
+      "front": "Partitions?",
+      "back": "Not in Five9. Use domains.",
+      "track": "From UCCX and UCCE",
+      "lesson": "CSQs, skills, and the partition you will not find",
+      "href": "#/lesson/t15/l02"
+    },
+    {
+      "front": "Two tenants?",
+      "back": "Two domains.",
+      "track": "From UCCX and UCCE",
+      "lesson": "CSQs, skills, and the partition you will not find",
+      "href": "#/lesson/t15/l02"
+    },
+    {
+      "front": "Precision attributes?",
+      "back": "Redesign, do not invent a paste field.",
+      "track": "From UCCX and UCCE",
+      "lesson": "CSQs, skills, and the partition you will not find",
+      "href": "#/lesson/t15/l02"
+    },
+    {
+      "front": "Import the .aef?",
+      "back": "No.",
+      "track": "From UCCX and UCCE",
+      "lesson": "Scripts are rebuilt in modules",
+      "href": "#/lesson/t15/l03"
+    },
+    {
+      "front": "Greeting?",
+      "back": "Play.",
+      "track": "From UCCX and UCCE",
+      "lesson": "Scripts are rebuilt in modules",
+      "href": "#/lesson/t15/l03"
+    },
+    {
+      "front": "Queue?",
+      "back": "Skill Transfer.",
+      "track": "From UCCX and UCCE",
+      "lesson": "Scripts are rebuilt in modules",
+      "href": "#/lesson/t15/l03"
+    },
+    {
+      "front": "Builder JSON?",
+      "back": "Learning model only.",
+      "track": "From UCCX and UCCE",
+      "lesson": "Scripts are rebuilt in modules",
+      "href": "#/lesson/t15/l03"
+    },
+    {
+      "front": "Mode names?",
+      "back": "Preview, progressive, power, predictive, manual touch.",
+      "track": "From UCCX and UCCE",
+      "lesson": "Dialing modes do not survive the move by osmosis",
+      "href": "#/lesson/t15/l04"
+    },
+    {
+      "front": "Simulator?",
+      "back": "A teaching model.",
+      "track": "From UCCX and UCCE",
+      "lesson": "Dialing modes do not survive the move by osmosis",
+      "href": "#/lesson/t15/l04"
+    },
+    {
+      "front": "Copy the Cisco ratio into abandon %?",
+      "back": "No.",
+      "track": "From UCCX and UCCE",
+      "lesson": "Dialing modes do not survive the move by osmosis",
+      "href": "#/lesson/t15/l04"
+    },
+    {
+      "front": "Numeric default?",
+      "back": "Not stated here.",
+      "track": "From UCCX and UCCE",
+      "lesson": "Dialing modes do not survive the move by osmosis",
+      "href": "#/lesson/t15/l04"
+    },
+    {
+      "front": "Lists in the script file?",
+      "back": "No.",
+      "track": "From UCCX and UCCE",
+      "lesson": "Numbers, lists, and ANI are a data project",
+      "href": "#/lesson/t15/l05"
+    },
+    {
+      "front": "ANI lives on?",
+      "back": "The campaign profile.",
+      "track": "From UCCX and UCCE",
+      "lesson": "Numbers, lists, and ANI are a data project",
+      "href": "#/lesson/t15/l05"
+    },
+    {
+      "front": "Certified Caller?",
+      "back": "A separate project.",
+      "track": "From UCCX and UCCE",
+      "lesson": "Numbers, lists, and ANI are a data project",
+      "href": "#/lesson/t15/l05"
+    },
+    {
+      "front": "Stopped inbound?",
+      "back": "Does not answer.",
+      "track": "From UCCX and UCCE",
+      "lesson": "Numbers, lists, and ANI are a data project",
+      "href": "#/lesson/t15/l05"
+    },
+    {
+      "front": "INVITE failures?",
+      "back": "Check both sides.",
+      "track": "From UCCX and UCCE",
+      "lesson": "The gateway cut, without pretending to be the CUBE guide",
+      "href": "#/lesson/t15/l06"
+    },
+    {
+      "front": "Extensions as DNIS?",
+      "back": "Do not assume it.",
+      "track": "From UCCX and UCCE",
+      "lesson": "The gateway cut, without pretending to be the CUBE guide",
+      "href": "#/lesson/t15/l06"
+    },
+    {
+      "front": "20 ms?",
+      "back": "Uncertain practitioner note.",
+      "track": "From UCCX and UCCE",
+      "lesson": "The gateway cut, without pretending to be the CUBE guide",
+      "href": "#/lesson/t15/l06"
+    },
+    {
+      "front": "SRV?",
+      "back": "Preferred on the Five9 side.",
+      "track": "From UCCX and UCCE",
+      "lesson": "The gateway cut, without pretending to be the CUBE guide",
+      "href": "#/lesson/t15/l06"
+    },
+    {
+      "front": "Busy DNIS?",
+      "back": "Campaign not running.",
+      "track": "From UCCX and UCCE",
+      "lesson": "Cutover morning is a checklist, not a mood",
+      "href": "#/lesson/t15/l07"
+    },
+    {
+      "front": "E911 address?",
+      "back": "Where the agent is.",
+      "track": "From UCCX and UCCE",
+      "lesson": "Cutover morning is a checklist, not a mood",
+      "href": "#/lesson/t15/l07"
+    },
+    {
+      "front": "Test one path first?",
+      "back": "Yes.",
+      "track": "From UCCX and UCCE",
+      "lesson": "Cutover morning is a checklist, not a mood",
+      "href": "#/lesson/t15/l07"
+    },
+    {
+      "front": "Why test the pop?",
+      "back": "It is a separate channel.",
+      "track": "From UCCX and UCCE",
+      "lesson": "Cutover morning is a checklist, not a mood",
+      "href": "#/lesson/t15/l07"
+    },
+    {
+      "front": "Prefix?",
+      "back": "None. Dial 911.",
+      "track": "Safety and compliance",
+      "lesson": "911 is a location, not a prefix",
+      "href": "#/lesson/t16/l01"
+    },
+    {
+      "front": "Partner on the sheet?",
+      "back": "RedSky.",
+      "track": "Safety and compliance",
+      "lesson": "911 is a location, not a prefix",
+      "href": "#/lesson/t16/l01"
+    },
+    {
+      "front": "Wrong address?",
+      "back": "The EULA says the call can fail.",
+      "track": "Safety and compliance",
+      "lesson": "911 is a location, not a prefix",
+      "href": "#/lesson/t16/l01"
+    },
+    {
+      "front": "Same map on both docs?",
+      "back": "No. Cite which one.",
+      "track": "Safety and compliance",
+      "lesson": "911 is a location, not a prefix",
+      "href": "#/lesson/t16/l01"
+    },
+    {
+      "front": "Dispatchable?",
+      "back": "Where responders can find the person.",
+      "track": "Safety and compliance",
+      "lesson": "The address has to be the room they are in",
+      "href": "#/lesson/t16/l02"
+    },
+    {
+      "front": "History fields?",
+      "back": "Time, user, number, location, recording, SIP invite.",
+      "track": "Safety and compliance",
+      "lesson": "The address has to be the room they are in",
+      "href": "#/lesson/t16/l02"
+    },
+    {
+      "front": "History instead of registration?",
+      "back": "No.",
+      "track": "Safety and compliance",
+      "lesson": "The address has to be the room they are in",
+      "href": "#/lesson/t16/l02"
+    },
+    {
+      "front": "A move?",
+      "back": "Register again.",
+      "track": "Safety and compliance",
+      "lesson": "The address has to be the room they are in",
+      "href": "#/lesson/t16/l02"
+    },
+    {
+      "front": "Who owns notice?",
+      "back": "The customer.",
+      "track": "Safety and compliance",
+      "lesson": "Recording is the customer's duty too",
+      "href": "#/lesson/t16/l03"
+    },
+    {
+      "front": "Hold recorded?",
+      "back": "The EULA says it can be.",
+      "track": "Safety and compliance",
+      "lesson": "Recording is the customer's duty too",
+      "href": "#/lesson/t16/l03"
+    },
+    {
+      "front": "Transfer?",
+      "back": "Can still be recorded.",
+      "track": "Safety and compliance",
+      "lesson": "Recording is the customer's duty too",
+      "href": "#/lesson/t16/l03"
+    },
+    {
+      "front": "Universal script?",
+      "back": "No.",
+      "track": "Safety and compliance",
+      "lesson": "Recording is the customer's duty too",
+      "href": "#/lesson/t16/l03"
+    },
+    {
+      "front": "E911 recordings?",
+      "back": "30 days.",
+      "track": "Safety and compliance",
+      "lesson": "Retention is several clocks",
+      "href": "#/lesson/t16/l04"
+    },
+    {
+      "front": "Agent data?",
+      "back": "60 days.",
+      "track": "Safety and compliance",
+      "lesson": "Retention is several clocks",
+      "href": "#/lesson/t16/l04"
+    },
+    {
+      "front": "DIDs?",
+      "back": "90 days after closure.",
+      "track": "Safety and compliance",
+      "lesson": "Retention is several clocks",
+      "href": "#/lesson/t16/l04"
+    },
+    {
+      "front": "Audio?",
+      "back": "Sooner of 30 days, offload, or contract.",
+      "track": "Safety and compliance",
+      "lesson": "Retention is several clocks",
+      "href": "#/lesson/t16/l04"
+    },
+    {
+      "front": "Certified Caller?",
+      "back": "STIR/SHAKEN program.",
+      "track": "Safety and compliance",
+      "lesson": "Attestation is not an ANI field",
+      "href": "#/lesson/t16/l05"
+    },
+    {
+      "front": "Profile ANI equals attestation?",
+      "back": "No.",
+      "track": "Safety and compliance",
+      "lesson": "Attestation is not an ANI field",
+      "href": "#/lesson/t16/l05"
+    },
+    {
+      "front": "Regulators named?",
+      "back": "FCC and CRTC.",
+      "track": "Safety and compliance",
+      "lesson": "Attestation is not an ANI field",
+      "href": "#/lesson/t16/l05"
+    },
+    {
+      "front": "Can you say the profile signs calls?",
+      "back": "No.",
+      "track": "Safety and compliance",
+      "lesson": "Attestation is not an ANI field",
+      "href": "#/lesson/t16/l05"
+    },
+    {
+      "front": "Warning?",
+      "back": "Yes, if you change the max abandon percentage.",
+      "track": "Safety and compliance",
+      "lesson": "Abandon rate is a regulated posture",
+      "href": "#/lesson/t16/l06"
+    },
+    {
+      "front": "US window?",
+      "back": "Rolling 30 days.",
+      "track": "Safety and compliance",
+      "lesson": "Abandon rate is a regulated posture",
+      "href": "#/lesson/t16/l06"
+    },
+    {
+      "front": "UK window?",
+      "back": "24 hours.",
+      "track": "Safety and compliance",
+      "lesson": "Abandon rate is a regulated posture",
+      "href": "#/lesson/t16/l06"
+    },
+    {
+      "front": "Who sets the window?",
+      "back": "A Five9 representative.",
+      "track": "Safety and compliance",
+      "lesson": "Abandon rate is a regulated posture",
+      "href": "#/lesson/t16/l06"
+    },
+    {
+      "front": "Paste?",
+      "back": "Blocked.",
+      "track": "Safety and compliance",
+      "lesson": "TCPA manual touch is a physical control",
+      "href": "#/lesson/t16/l07"
+    },
+    {
+      "front": "When does Dial enable?",
+      "back": "When the typed number matches.",
+      "track": "Safety and compliance",
+      "lesson": "TCPA manual touch is a physical control",
+      "href": "#/lesson/t16/l07"
+    },
+    {
+      "front": "Timeout?",
+      "back": "Not Ready, no auto dial.",
+      "track": "Safety and compliance",
+      "lesson": "TCPA manual touch is a physical control",
+      "href": "#/lesson/t16/l07"
+    },
+    {
+      "front": "Skip permission?",
+      "back": "User Can Skip Contact Records in TCPA Manual Touch.",
+      "track": "Safety and compliance",
+      "lesson": "TCPA manual touch is a physical control",
+      "href": "#/lesson/t16/l07"
+    },
+    {
+      "front": "WEM equals the dialer?",
+      "back": "No.",
+      "track": "Ecosystem",
+      "lesson": "The domain has neighbors",
+      "href": "#/lesson/t17/l01"
+    },
+    {
+      "front": "E911?",
+      "back": "Its own location service.",
+      "track": "Ecosystem",
+      "lesson": "The domain has neighbors",
+      "href": "#/lesson/t17/l01"
+    },
+    {
+      "front": "Pop equals trunk?",
+      "back": "No.",
+      "track": "Ecosystem",
+      "lesson": "The domain has neighbors",
+      "href": "#/lesson/t17/l01"
+    },
+    {
+      "front": "Uncited boxes?",
+      "back": "Leave them off.",
+      "track": "Ecosystem",
+      "lesson": "The domain has neighbors",
+      "href": "#/lesson/t17/l01"
+    },
+    {
+      "front": "What does the page include?",
+      "back": "WFM, QM, analytics, surveys, recording, Verint.",
+      "track": "Ecosystem",
+      "lesson": "Workforce, quality, and the recording shelf",
+      "href": "#/lesson/t17/l02"
+    },
+    {
+      "front": "Scores move skills by themselves?",
+      "back": "No.",
+      "track": "Ecosystem",
+      "lesson": "Workforce, quality, and the recording shelf",
+      "href": "#/lesson/t17/l02"
+    },
+    {
+      "front": "Who upgrades the delivered solution?",
+      "back": "Five9, per the page.",
+      "track": "Ecosystem",
+      "lesson": "Workforce, quality, and the recording shelf",
+      "href": "#/lesson/t17/l02"
+    },
+    {
+      "front": "Which retention text?",
+      "back": "The retention page.",
+      "track": "Ecosystem",
+      "lesson": "Workforce, quality, and the recording shelf",
+      "href": "#/lesson/t17/l02"
+    },
+    {
+      "front": "Wallboard versus report?",
+      "back": "Different pipes.",
+      "track": "Ecosystem",
+      "lesson": "Analytics and the report that is not a dashboard rumor",
+      "href": "#/lesson/t17/l03"
+    },
+    {
+      "front": "Statistics API?",
+      "back": "A named family.",
+      "track": "Ecosystem",
+      "lesson": "Analytics and the report that is not a dashboard rumor",
+      "href": "#/lesson/t17/l03"
+    },
+    {
+      "front": "Reporting role?",
+      "back": "Gates standard reports.",
+      "track": "Ecosystem",
+      "lesson": "Analytics and the report that is not a dashboard rumor",
+      "href": "#/lesson/t17/l03"
+    },
+    {
+      "front": "Matrix as CSV?",
+      "back": "No.",
+      "track": "Ecosystem",
+      "lesson": "Analytics and the report that is not a dashboard rumor",
+      "href": "#/lesson/t17/l03"
+    },
+    {
+      "front": "Default model named here?",
+      "back": "No.",
+      "track": "Ecosystem",
+      "lesson": "AI agents are a handoff with a name",
+      "href": "#/lesson/t17/l04"
+    },
+    {
+      "front": "IVA Transfer?",
+      "back": "A real module.",
+      "track": "Ecosystem",
+      "lesson": "AI agents are a handoff with a name",
+      "href": "#/lesson/t17/l04"
+    },
+    {
+      "front": "Digital handoff?",
+      "back": "A Studio task key.",
+      "track": "Ecosystem",
+      "lesson": "AI agents are a handoff with a name",
+      "href": "#/lesson/t17/l04"
+    },
+    {
+      "front": "No exit?",
+      "back": "A dead end.",
+      "track": "Ecosystem",
+      "lesson": "AI agents are a handoff with a name",
+      "href": "#/lesson/t17/l04"
+    },
+    {
+      "front": "Epic listed?",
+      "back": "Yes.",
+      "track": "Ecosystem",
+      "lesson": "CRM, UC, and the desktop are three contracts",
+      "href": "#/lesson/t17/l05"
+    },
+    {
+      "front": "Local Teams?",
+      "back": "About 320 kbps.",
+      "track": "Ecosystem",
+      "lesson": "CRM, UC, and the desktop are three contracts",
+      "href": "#/lesson/t17/l05"
+    },
+    {
+      "front": "Blank card, live voice?",
+      "back": "Adapter incident.",
+      "track": "Ecosystem",
+      "lesson": "CRM, UC, and the desktop are three contracts",
+      "href": "#/lesson/t17/l05"
+    },
+    {
+      "front": "SDK?",
+      "back": "Unlisted CRMs.",
+      "track": "Ecosystem",
+      "lesson": "CRM, UC, and the desktop are three contracts",
+      "href": "#/lesson/t17/l05"
+    },
+    {
+      "front": "No page?",
+      "back": "Mark the word local.",
+      "track": "Ecosystem",
+      "lesson": "The glossary is the contract with yourself",
+      "href": "#/lesson/t17/l06"
+    },
+    {
+      "front": "Two profiles?",
+      "back": "Different objects.",
+      "track": "Ecosystem",
+      "lesson": "The glossary is the contract with yourself",
+      "href": "#/lesson/t17/l06"
+    },
+    {
+      "front": "Blended?",
+      "back": "Not a campaign type.",
+      "track": "Ecosystem",
+      "lesson": "The glossary is the contract with yourself",
+      "href": "#/lesson/t17/l06"
+    },
+    {
+      "front": "Partition?",
+      "back": "A visiting word.",
+      "track": "Ecosystem",
+      "lesson": "The glossary is the contract with yourself",
+      "href": "#/lesson/t17/l06"
+    },
+    {
+      "front": "Missing row?",
+      "back": "No citation yet.",
+      "track": "Ecosystem",
+      "lesson": "Read the map before you add a box",
+      "href": "#/lesson/t17/l07"
+    },
+    {
+      "front": "RedSky versus ITSP?",
+      "back": "Different roles.",
+      "track": "Ecosystem",
+      "lesson": "Read the map before you add a box",
+      "href": "#/lesson/t17/l07"
+    },
+    {
+      "front": "Studio versus Equinix?",
+      "back": "Different lists.",
+      "track": "Ecosystem",
+      "lesson": "Read the map before you add a box",
+      "href": "#/lesson/t17/l07"
+    },
+    {
+      "front": "Two Salesforces?",
+      "back": "Module versus adapter.",
+      "track": "Ecosystem",
+      "lesson": "Read the map before you add a box",
+      "href": "#/lesson/t17/l07"
+    },
+    {
+      "front": "Exam code in this lab?",
+      "back": "None.",
+      "track": "Certifications and practice",
+      "lesson": "University is a catalog, not a secret exam code",
+      "href": "#/lesson/t18/l01"
+    },
+    {
+      "front": "Formats?",
+      "back": "Online, webinars, ILT, train-the-trainer, custom.",
+      "track": "Certifications and practice",
+      "lesson": "University is a catalog, not a secret exam code",
+      "href": "#/lesson/t18/l01"
+    },
+    {
+      "front": "Assessments?",
+      "back": "Mentioned, no code quoted.",
+      "track": "Certifications and practice",
+      "lesson": "University is a catalog, not a secret exam code",
+      "href": "#/lesson/t18/l01"
+    },
+    {
+      "front": "Invented codes?",
+      "back": "Ignore them.",
+      "track": "Certifications and practice",
+      "lesson": "University is a catalog, not a secret exam code",
+      "href": "#/lesson/t18/l01"
+    },
+    {
+      "front": "What is the badge?",
+      "back": "IVA sales, for partners.",
+      "track": "Certifications and practice",
+      "lesson": "The badge we could verify is a sales badge",
+      "href": "#/lesson/t18/l02"
+    },
+    {
+      "front": "Questions?",
+      "back": "20.",
+      "track": "Certifications and practice",
+      "lesson": "The badge we could verify is a sales badge",
+      "href": "#/lesson/t18/l02"
+    },
+    {
+      "front": "Pass mark?",
+      "back": "80 percent.",
+      "track": "Certifications and practice",
+      "lesson": "The badge we could verify is a sales badge",
+      "href": "#/lesson/t18/l02"
+    },
+    {
+      "front": "Admin substitute?",
+      "back": "No.",
+      "track": "Certifications and practice",
+      "lesson": "The badge we could verify is a sales badge",
+      "href": "#/lesson/t18/l02"
+    },
+    {
+      "front": "Practice equals the planning order?",
+      "back": "Yes.",
+      "track": "Certifications and practice",
+      "lesson": "Practice is the domain, not the badge",
+      "href": "#/lesson/t18/l03"
+    },
+    {
+      "front": "Stopped campaign?",
+      "back": "Busy DNIS.",
+      "track": "Certifications and practice",
+      "lesson": "Practice is the domain, not the badge",
+      "href": "#/lesson/t18/l03"
+    },
+    {
+      "front": "Invent a percent?",
+      "back": "No.",
+      "track": "Certifications and practice",
+      "lesson": "Practice is the domain, not the badge",
+      "href": "#/lesson/t18/l03"
+    },
+    {
+      "front": "Reporting role?",
+      "back": "Separate.",
+      "track": "Certifications and practice",
+      "lesson": "Practice is the domain, not the badge",
+      "href": "#/lesson/t18/l03"
+    },
+    {
+      "front": "2.46?",
+      "back": "Dated PDF fact.",
+      "track": "Certifications and practice",
+      "lesson": "Version timelines go stale on purpose",
+      "href": "#/lesson/t18/l04"
+    },
+    {
+      "front": "ServiceNow names?",
+      "back": "Australia, Zurich, Yokohama, in that reading.",
+      "track": "Certifications and practice",
+      "lesson": "Version timelines go stale on purpose",
+      "href": "#/lesson/t18/l04"
+    },
+    {
+      "front": "JRE updates?",
+      "back": "421, 451, 461.",
+      "track": "Certifications and practice",
+      "lesson": "Version timelines go stale on purpose",
+      "href": "#/lesson/t18/l04"
+    },
+    {
+      "front": "Curriculum brief equals the JRE list?",
+      "back": "No.",
+      "track": "Certifications and practice",
+      "lesson": "Version timelines go stale on purpose",
+      "href": "#/lesson/t18/l04"
+    },
+    {
+      "front": "Four beats?",
+      "back": "Object, behavior, page, gap.",
+      "track": "Certifications and practice",
+      "lesson": "How to answer without inventing",
+      "href": "#/lesson/t18/l05"
+    },
+    {
+      "front": "Invent a port?",
+      "back": "No. Stop.",
+      "track": "Certifications and practice",
+      "lesson": "How to answer without inventing",
+      "href": "#/lesson/t18/l05"
+    },
+    {
+      "front": "Cisco map?",
+      "back": "A teaching bridge.",
+      "track": "Certifications and practice",
+      "lesson": "How to answer without inventing",
+      "href": "#/lesson/t18/l05"
+    },
+    {
+      "front": "Versions?",
+      "back": "Dated.",
+      "track": "Certifications and practice",
+      "lesson": "How to answer without inventing",
+      "href": "#/lesson/t18/l05"
+    },
+    {
+      "front": "Session goal?",
+      "back": "Object plus the page.",
+      "track": "Certifications and practice",
+      "lesson": "A study week that stays inside the documents",
+      "href": "#/lesson/t18/l06"
+    },
+    {
+      "front": "Skip uncertain notes?",
+      "back": "No.",
+      "track": "Certifications and practice",
+      "lesson": "A study week that stays inside the documents",
+      "href": "#/lesson/t18/l06"
+    },
+    {
+      "front": "Campaign types?",
+      "back": "Three.",
+      "track": "Certifications and practice",
+      "lesson": "A study week that stays inside the documents",
+      "href": "#/lesson/t18/l06"
+    },
+    {
+      "front": "Boss logs?",
+      "back": "Synthetic.",
+      "track": "Certifications and practice",
+      "lesson": "A study week that stays inside the documents",
+      "href": "#/lesson/t18/l06"
+    },
+    {
+      "front": "Can the lab edit your domain?",
+      "back": "No.",
+      "track": "Certifications and practice",
+      "lesson": "What this lab will not pretend to be",
+      "href": "#/lesson/t18/l07"
+    },
+    {
+      "front": "IVR export?",
+      "back": "Learning file.",
+      "track": "Certifications and practice",
+      "lesson": "What this lab will not pretend to be",
+      "href": "#/lesson/t18/l07"
+    },
+    {
+      "front": "Outage?",
+      "back": "Five9 support.",
+      "track": "Certifications and practice",
+      "lesson": "What this lab will not pretend to be",
+      "href": "#/lesson/t18/l07"
+    },
+    {
+      "front": "Uncertain?",
+      "back": "Confirm before you depend on it.",
+      "track": "Certifications and practice",
+      "lesson": "What this lab will not pretend to be",
+      "href": "#/lesson/t18/l07"
+    }
+  ]
+}

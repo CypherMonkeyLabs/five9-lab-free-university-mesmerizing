@@ -1,0 +1,258 @@
+{
+  "readOn": "2026-10-15",
+  "banner": "Public Five9 pages and the technical-requirements PDF as read for this lab in October 2026. Re-read the live page before you change a domain. Vendor case-study numbers are their claims, not an audit.",
+  "ports": [
+    {"port": "80", "proto": "TCP", "dir": "Outbound", "who": "Softphone workstations", "use": "HTTP for sign-in, reporting, and support pages.", "url": "https://community.five9.com/s/article/Network-Port-Requirements-for-Softphone-Gateway-PSTN-Customers?language=en_US", "source": "Community port article"},
+    {"port": "443", "proto": "TCP", "dir": "Outbound", "who": "Softphone and WebRTC", "use": "HTTPS for sign-in, reporting, and support.", "url": "https://community.five9.com/s/article/Network-Port-Requirements-for-Softphone-Gateway-PSTN-Customers?language=en_US", "source": "Community port article"},
+    {"port": "1024-65535", "proto": "UDP", "dir": "Outbound", "who": "Softphone and WebRTC", "use": "RTP between Five9 applications. Without a stateful firewall, allow the return path. WebRTC also sends STUN on these ports.", "url": "https://community.five9.com/s/article/VCC-Five9-WebRTC", "source": "WebRTC community article"},
+    {"port": "2200-2300", "proto": "TCP", "dir": "Outbound", "who": "Java RMI", "use": "Encrypted Java RMI on the community softphone table. Java Agent and Supervisor desktops left the customer portal after 1 August 2026. Confirm whether your site still launches Java admin.", "url": "https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/agent-supervisor-apps/java-based-application-reqs.htm", "source": "Java application requirements"},
+    {"port": "5060-5067", "proto": "UDP", "dir": "Outbound", "who": "Softphone", "use": "SIP for the agent application.", "url": "https://community.five9.com/s/article/Network-Port-Requirements-for-Softphone-Gateway-PSTN-Customers?language=en_US", "source": "Community port article"},
+    {"port": "5080", "proto": "UDP", "dir": "Outbound", "who": "Softphone", "use": "SIP signaling on the Five9 SIP proxy.", "url": "https://community.five9.com/s/article/Network-Port-Requirements-for-Softphone-Gateway-PSTN-Customers?language=en_US", "source": "Community port article"},
+    {"port": "5081", "proto": "TCP", "dir": "Outbound", "who": "Softphone", "use": "SIP over TLS on the Five9 SIP proxy.", "url": "https://community.five9.com/s/article/Network-Port-Requirements-for-Softphone-Gateway-PSTN-Customers?language=en_US", "source": "Community port article"},
+    {"port": "8000-8015", "proto": "UDP", "dir": "Outbound", "who": "Agent desktop", "use": "Source ports the article lists for desktop RTP.", "url": "https://community.five9.com/s/article/Network-Port-Requirements-for-Softphone-Gateway-PSTN-Customers?language=en_US", "source": "Community port article"},
+    {"port": "8080/8081", "proto": "TCP", "dir": "Outbound", "who": "Assessment", "use": "Network assessment at quality.five9.com.", "url": "https://community.five9.com/s/article/Network-Port-Requirements-for-Softphone-Gateway-PSTN-Customers?language=en_US", "source": "Community port article"},
+    {"port": "8083", "proto": "TCP", "dir": "Local", "who": "Softphone service", "use": "Five9 Softphone Service. The article says to keep other processes off it, and to open it on the host firewall when VDI needs it.", "url": "https://community.five9.com/s/article/Network-Port-Requirements-for-Softphone-Gateway-PSTN-Customers?language=en_US", "source": "Community port article"},
+    {"port": "8843", "proto": "TCP", "dir": "Outbound", "who": "Downloads and API", "use": "HTTPS download of Five9 applications and API.", "url": "https://community.five9.com/s/article/Network-Port-Requirements-for-Softphone-Gateway-PSTN-Customers?language=en_US", "source": "Community port article"},
+    {"port": "8880", "proto": "TCP", "dir": "Outbound", "who": "Downloads", "use": "HTTP download of Five9 applications.", "url": "https://community.five9.com/s/article/Network-Port-Requirements-for-Softphone-Gateway-PSTN-Customers?language=en_US", "source": "Community port article"},
+    {"port": "443", "proto": "TCP", "dir": "Outbound", "who": "WEM supervisor", "use": "Supervisor PC to WEM cloud, application access.", "url": "https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/workforce-optimization/supervisor-workstation-reqs/supervisor-workstation-reqs.htm", "source": "Supervisor workstation requirements"},
+    {"port": "4443", "proto": "TCP", "dir": "Outbound", "who": "Interaction Analytics", "use": "Supervisor or admin workstation to the VO cloud for the Interaction Analytics UI.", "url": "https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/workforce-optimization/supervisor-workstation-reqs/supervisor-workstation-reqs.htm", "source": "Supervisor workstation requirements"}
+  ],
+  "bandwidth": [
+    {"use": "Agent Desktop Plus and Plus adapters", "min": "128 kbps", "rec": "128 kbps", "note": "G.711 default, described as uncompressed high-quality voice."},
+    {"use": "Java agent standalone", "min": "88 kbps", "rec": "88 kbps", "note": "Still printed in the PDF. The portal stopped offering Java Agent Desktop after 1 August 2026."},
+    {"use": "Agent plus light web browsing", "min": "112 kbps", "rec": "128 kbps", "note": "Same G.711 table."},
+    {"use": "Agent Assist", "min": "12 kbps", "rec": "12 kbps", "note": "In addition to the agent application."},
+    {"use": "VPN", "min": "+64 kbps", "rec": "+64 kbps", "note": "On top of the seat."},
+    {"use": "CRM or similar business app", "min": "+64 kbps", "rec": "+64 kbps", "note": "On top of the seat."},
+    {"use": "Screen recording", "min": "+160 kbps", "rec": "+160 kbps", "note": "Per agent, in addition to the stated voice figure."},
+    {"use": "Five9 UC for Teams, Zoom, Office@Hand, RingCentral, or Nextiva", "min": "320 kbps", "rec": "320 kbps", "note": "Each named UC client, not a sum of all of them unless the agent runs that client."},
+    {"use": "Video engagement stream", "min": "100 kbps", "rec": "up to 500 kbps", "note": "Audio, video, and sharing. The PDF says to validate capacity. A later line says about 300-500 kbps per simultaneous video session."}
+  ],
+  "bandwidthSource": {"label": "Five9 technical requirements PDF", "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf"},
+  "customers": [
+    {"name": "Mason Companies", "href": "https://www.five9.com/resources/case-study/mason-companies", "claims": ["95% CSAT", "45% call containment with AI agents", "93% quality score within a year", "4,000+ agent hours and $60,000 labor moved, as the page states"]},
+    {"name": "Wyndham Hotels & Resorts", "href": "https://www.five9.com/resources/case-study/wyndham", "claims": ["40,000+ monthly password resets automated", "80% of booking cancellations streamlined", "Call abandonment under 1%, as the page states"]},
+    {"name": "Lumexa Imaging", "href": "https://www.five9.com/resources/case-study/lumexa-imaging", "claims": ["Salesforce named on the page", "Abandonment under 4%", "25% more call volume and about 15 FTEs", "$4M new revenue and 24% higher appointment conversion, as the page states"]},
+    {"name": "ALDO Group", "href": "https://www.five9.com/resources/case-study/aldo-group", "claims": ["40% lower contact-center systems cost", "Attrition down 20%", "CES 80%, up from 60%, as the page states"]}
+  ],
+  "roadmap": [
+    {"when": "2022-11", "what": "E911 data sheet on the public site names emergency services and RedSky. The PDF date is in the file path. Treat coverage claims as dated.", "status": "Dated source", "url": "https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF", "source": "E911 data sheet"},
+    {"when": "2023-04", "what": "University curriculum brief names online, webinar, instructor-led, train-the-trainer, and custom formats. The live catalog wins if they differ.", "status": "Dated source", "url": "https://www.five9.com/sites/default/files/2023-04/Five9_University_Curriculum_Brief_v5.pdf", "source": "University curriculum brief"},
+    {"when": "2026-03", "what": "Technical-requirements change log says Studio 7 network text was clarified for GCP and for CHI/VIR, and callback, email, and VoiceStream IP notes were updated. This lab does not copy those IP ranges.", "status": "Verified in the PDF contents", "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf", "source": "Technical requirements PDF"},
+    {"when": "2026-07", "what": "The same change log consolidates Verint Workforce Optimization IPs and mentions added domains for US, Canadian, and European centers. IP lists move. Use the PDF, not a copy in this lab.", "status": "Verified in the PDF contents", "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf", "source": "Technical requirements PDF"},
+    {"when": "2026-07-14", "what": "A community article describes the call log as a filtered window of about 60 days unless retention is extended. Re-read it before you promise an archive.", "status": "Uncertain if the window moved", "url": "https://community.five9.com/s/article/Reporting-Apply-Filter-s-in-the-Call-Log-Report", "source": "Call log filters"},
+    {"when": "2026-08-01", "what": "Java-based Agent Desktop and Supervisor Desktop are no longer on the customer portal after this date. The page tells people to use Agent Desktop Plus and Supervisor Desktop Plus. Java VCC Administrator remains documented, including a web launch.", "status": "Verified on the docs page", "url": "https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/agent-supervisor-apps/java-based-application-reqs.htm", "source": "Java application requirements"},
+    {"when": "2026-09-25", "what": "VCC Administrator via Web is documented as a browser launch with no local Java. The page lists gaps versus Java admin: usernames with spaces or non-English characters, some audio playback, HTML script preview, Trusted IP bypass, and Cmd+A.", "status": "Verified on the docs page", "url": "https://documentation.five9.com/bundle/admin-console/page/admin-console/java-vcc/_ch-vcc-on-the-web.htm", "source": "VCC Administrator as a web application"}
+  ],
+  "playbooks": [
+    {"id": "dnis-dark", "symptom": "The DNIS does not answer.", "tree": ["Is the inbound campaign running, or only built?", "Is this DNIS on that campaign?", "Did a schedule stop the campaign while leaving the number assigned?"], "meaning": "A stopped campaign does not answer. Busy is not the same fact as a stopped campaign.", "lesson": "#/lesson/t03/l01", "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm", "source": "Inbound campaigns"},
+    {"id": "default-queue", "symptom": "Callers land on a queue nobody staffed.", "tree": ["Open the Skill Transfer module.", "See whether a skill is selected.", "Check the Default skill before you blame the carrier."], "meaning": "The community write-up says a Skill Transfer with no skill uses the Default queue.", "lesson": "#/lesson/t08/l05", "url": "https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features", "source": "Skill Transfer functions"},
+    {"id": "one-way", "symptom": "The agent hears silence, or the caller does.", "tree": ["Confirm signaling is up. A 200 OK does not prove RTP.", "If the firewall is not stateful, return UDP was not allowed.", "Compare softphone and WebRTC. WebRTC still needs the RTP range, plus STUN."], "meaning": "Media and signaling are different paths.", "lesson": "#/lesson/t13/l04", "url": "https://community.five9.com/s/article/Network-Port-Requirements-for-Softphone-Gateway-PSTN-Customers?language=en_US", "source": "Community port article"},
+    {"id": "pop-blank", "symptom": "Voice is live and the CRM pane is blank.", "tree": ["The adapter uses HTTPS and Secure WebSocket.", "A proxy that strips WSS fails the pop and leaves the call.", "Name the adapter and the CRM release before you restart the phone."], "meaning": "Two channels. Fix the one that failed.", "lesson": "#/lesson/t12/l06", "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf", "source": "Technical requirements PDF"},
+    {"id": "paste-block", "symptom": "The agent cannot paste a phone number.", "tree": ["Check whether the campaign is in TCPA manual touch.", "Manual touch expects a typed number and enables Dial on a match.", "Pasting is the control working, not a browser bug."], "meaning": "The mode is a physical control.", "lesson": "#/lesson/t05/l05", "url": "https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US", "source": "TCPA manual touch"},
+    {"id": "drops", "symptom": "Customers hear a click and no agent.", "tree": ["Name the mode. Preview does not outdial. Predictive does.", "Read the abandon field. This lab will not invent the percent.", "Predictive guidance on the product page is about larger teams. Quote the page you mean."], "meaning": "An abandon is a pacing outcome, then a compliance posture.", "lesson": "#/lesson/t05/l04", "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm", "source": "Default campaign settings"},
+    {"id": "stale-911", "symptom": "A test 911 call would send responders to the old HQ.", "tree": ["The address has to be the room the person is in.", "A DID pointed at a corporate lobby is not a dispatchable location.", "MyE911 history is the place to see time, user, number, location, recording, and SIP invite."], "meaning": "E911 is a location product. The data sheet names RedSky.", "lesson": "#/lesson/t16/l02", "url": "https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF", "source": "E911 data sheet"},
+    {"id": "no-report", "symptom": "Standard reports are missing for a supervisor.", "tree": ["The user needs the reporting role and a reporting permission.", "A wallboard feed is not the standard-report permission.", "Call variables stay invisible until the edit permission and the reporting flag."], "meaning": "Reporting is a role, not a hope.", "lesson": "#/lesson/t14/l02", "url": "https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports", "source": "Generating standard reports"},
+    {"id": "recording-gone", "symptom": "The audio you need is gone.", "tree": ["Name which clock: audio, E911 recording, agent data, campaign state, the call log, or the DID.", "Screen recording bandwidth is not the same fact as retention.", "The retention page is the policy. A domain setting can be shorter."], "meaning": "There is no single keep-forever switch on the pages this lab cites.", "lesson": "#/lesson/t10/l05", "url": "https://www.five9.com/legal/dataretention", "source": "Data retention"},
+    {"id": "bot-trap", "symptom": "The IVA will not return the caller to a person.", "tree": ["Confirm the Studio region matches the task you copied.", "The VCC side wants the task key, not a nickname.", "The handoff needs a named skill. Default is a queue, not a compliment."], "meaning": "A bot without a door back is a trap.", "lesson": "#/lesson/t11/l03", "url": "https://community.five9.com/s/article/Studio-7-Integrate-Digital-IVA-in-Studio-with-VCC?language=en_US", "source": "Studio digital IVA with VCC"}
+  ],
+  "sections": {
+    "deploy": {
+      "title": "Deployment",
+      "lede": "Pick the station, the trunk, the firewall behavior, and the bandwidth extras before anyone logs in.",
+      "diagram": "sip-entries",
+      "blocks": [
+        {"kind": "prose", "h": "Station types", "p": ["The WebRTC community article says agents and supervisors can choose WebRTC instead of Softphone, PSTN, or Gateway in Agent Desktop Plus, the Agent Desktop Toolkit path, and Supervisor Plus. WebRTC skips the softphone install. FVS and FGV customers on that article use G.711.", "VDI is called out on the same article: media still has to reach Five9. Treat a thin client that cannot send RTP as a failed station, not as a codec bug."]},
+        {"kind": "prose", "h": "How the site connects", "p": ["The technical requirements PDF lists public internet, VPN, Equinix Fabric, Agent Connect (MPLS), and Direct Connect. Direct Connect is a full-duplex ethernet handoff you bring to the data center, 10/100/1000, as an alternative to VPN when you want more control of bandwidth and QoS.", "DNS SRV is the preferred lookup for SIP targets. The PDF says people who pin IPs have to watch the domains, because the addresses move. This lab does not reprint IP ranges."]},
+        {"kind": "steps", "h": "Bring-up order this lab will defend", "items": ["Name the trunk story: Five9 as ITSP, your ITSP to Five9, or your gateway (Cisco, Avaya, or Asterisk) over internet, VPN, or Direct Connect.", "Name the station story separately. A gateway trunk does not choose the agent's headset path.", "Open the ports for that station. Prefer a stateful firewall so RTP return is implied.", "Add bandwidth for CRM, VPN, screen recording, Agent Assist, and any UC client the seat actually runs.", "Use Agent Desktop Plus and Supervisor Desktop Plus. Do not plan a new Java agent install after 1 August 2026.", "Place 911 locations before the first live DID, not after the first real emergency."]},
+        {"kind": "cites", "items": [
+          {"label": "SIP trunk options", "url": "https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/SIP-trunk-options/_ch-five9-sip-trunk-options.htm"},
+          {"label": "WebRTC community article", "url": "https://community.five9.com/s/article/VCC-Five9-WebRTC"},
+          {"label": "Technical requirements PDF", "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf"},
+          {"label": "Java application requirements", "url": "https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/agent-supervisor-apps/java-based-application-reqs.htm"}
+        ]}
+      ]
+    },
+    "migrate": {
+      "title": "Migration and cutover",
+      "lede": "There is no UCCX or UCCE import button on the pages this lab cites. Rebuild the domain, prove one number, then decide.",
+      "diagram": "cutover",
+      "blocks": [
+        {"kind": "prose", "h": "What moves by hand", "p": ["Skill groups are the queue with people in it. A CSQ does not arrive by itself. Scripts are rebuilt as IVR modules. Dialing modes are chosen again. Lists, ANI, and hours are a data project. The gateway cut is a SIP design, and this lab will not pretend to be a CUBE guide.", "The same honesty applies to other platforms. Avaya, Asterisk, Amazon Connect, or Genesys objects are not Five9 objects until someone rebuilds them. That sentence is this lab's boundary, not a vendor migration SKU."]},
+        {"kind": "checks", "id": "migrate-build", "h": "Rebuild checklist", "items": ["Skills exist, and the right users are in them.", "User profiles exist before user accounts.", "Contact fields, lists, and dispositions exist before the outbound campaign.", "Inbound and autodial have prompts and an IVR script.", "One campaign profile is assigned. ANI lives there, not in a rumor.", "Reporting role can open a standard report on a test call.", "DNC list and IVR DNC behavior are named.", "911 locations match the rooms people sit in."]},
+        {"kind": "checks", "id": "cutover-morning", "h": "Cutover morning", "items": ["Maintenance window is named, and a rollback DID is named.", "One DNIS moves. The campaign that owns it is running.", "A test call hits the skill you chose, not Default, unless Default was the plan.", "Recording notice and retention clock are known for that call.", "Abandon posture is the campaign field, not a number invented in a slide.", "Someone can stop the cut if 911, recording, or the test call fails."]},
+        {"kind": "cites", "items": [
+          {"label": "Planning your implementation", "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm"},
+          {"label": "IVR modules", "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm"},
+          {"label": "SIP trunk options", "url": "https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/SIP-trunk-options/_ch-five9-sip-trunk-options.htm"},
+          {"label": "E911 data sheet", "url": "https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF"}
+        ]}
+      ]
+    },
+    "config": {
+      "title": "Configuration walkthroughs",
+      "lede": "The order below is the published planning order plus the failure modes the admin guides imply. It is not a screenshot tour of a tenant.",
+      "diagram": "outbound-order",
+      "blocks": [
+        {"kind": "steps", "h": "Outbound campaign", "items": ["Create skill groups.", "Create user profiles, then users, and put agents in the skills.", "Create contact fields and reconcile a list.", "Create dispositions. A final disposition stops the other numbers on that record for the campaign.", "Create a campaign profile. ANI and list behavior sit on the profile. One profile is assigned to the campaign.", "Create the campaign and choose preview, progressive, power, predictive, or manual touch on purpose."]},
+        {"kind": "steps", "h": "Inbound campaign", "items": ["Prompts exist before the script.", "The script uses the module names in the IVR guide.", "Skill Transfer names a skill, or you accept Default.", "The DNIS is on a campaign that is running. A schedule is how you close, not a stopped campaign you forget.", "Service level is the scoreboard you agreed to read."]},
+        {"kind": "steps", "h": "People and evidence", "items": ["Reason codes exist so Not Ready means something.", "The reporting role can generate a standard report.", "Call variables are flagged for reporting or they are not history.", "WEM, if you bought it, is a second product surface. Do not assume the dialer believes a schedule you never connected."]},
+        {"kind": "cites", "items": [
+          {"label": "Planning your implementation", "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm"},
+          {"label": "Campaign profiles", "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/campaign-profiles/_ch-campaign-profiles.htm"},
+          {"label": "Inbound campaigns", "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm"},
+          {"label": "List dialing modes", "url": "https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US"}
+        ]}
+      ]
+    },
+    "sip": {
+      "title": "SIP, PSTN, and bring-your-own carrier",
+      "lede": "Three trunk stories. Four station stories. G.711 unless you have a written exception.",
+      "diagram": "sip-ladder",
+      "blocks": [
+        {"kind": "prose", "h": "Trunks", "p": ["Five9 can be the ITSP. Your carrier can deliver to Five9 SBCs. Or a gateway such as Cisco, Avaya, or Asterisk can SIP-trunk to Five9 across the internet, a VPN, or Direct Connect. Those are the stories in the SIP trunk chapter and the technical requirements PDF.", "Bring-your-own carrier means you still name DNS SRV, codecs, and who sends 911. It does not mean the remote PBX's dial plan appears inside the domain."]},
+        {"kind": "prose", "h": "The ladder on this page", "p": ["The ladder is a classroom drawing of INVITE, 100, 180, 200, ACK, and BYE. It follows the shape of RFC 3261. It is not a pcap from a Five9 edge, and it does not prove your SBC's header policy.", "DTMF in the media path is usually RFC 4733 telephone events. In-band tones and SIP INFO are different mechanisms. Say which one you captured."]},
+        {"kind": "prose", "h": "Codec and identity", "p": ["The bandwidth table says G.711 is the default and describes it as uncompressed. The WebRTC article says FVS and FGV customers use G.711.", "A campaign profile can set ANI. Certified Caller is Five9's STIR/SHAKEN program for FCC and CRTC attestation. Those are different fields."]},
+        {"kind": "cites", "items": [
+          {"label": "SIP trunk options", "url": "https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/SIP-trunk-options/_ch-five9-sip-trunk-options.htm"},
+          {"label": "RFC 3261", "url": "https://www.rfc-editor.org/rfc/rfc3261"},
+          {"label": "RFC 4733", "url": "https://www.rfc-editor.org/rfc/rfc4733"},
+          {"label": "Certified Caller", "url": "https://www.five9.com/resources/five9_certified_caller"}
+        ]}
+      ]
+    },
+    "wfm": {
+      "title": "Workforce management",
+      "lede": "Five9 sells WEM, including workforce tools, and also names a Verint path. The calculator on this page is textbook Erlang C, not their optimizer.",
+      "diagram": "forecast-loop",
+      "blocks": [
+        {"kind": "prose", "h": "What the product page is allowed to mean", "p": ["The workforce engagement page describes a suite for workforce, quality, analytics, surveys, and recording, and it also describes a Verint partnership. Native WEM and Verint are not synonyms.", "This lab has not seen a public formula for Five9's forecaster. Do not tell a buyer the slider below is what WEM will staff."]},
+        {"kind": "prose", "h": "Classroom ideas that are still useful", "p": ["Forecast an interval from history. Schedule people against that interval. Adherence is scheduled activity versus the state the dialer saw. After-call work and Not Ready are real states, so a forecast that ignores them will overstate idle time.", "The dialer should not be fed a fantasy roster. If WEM is not connected, the schedule is a spreadsheet with no authority."]},
+        {"kind": "widget", "id": "erlang"},
+        {"kind": "cites", "items": [
+          {"label": "Workforce engagement management", "url": "https://www.five9.com/products/capabilities/workforce-optimization"},
+          {"label": "WEM data sheet", "url": "https://www.five9.com/resources/data-sheet/five9-wem"},
+          {"label": "Erlang unit, textbook model", "url": "https://en.wikipedia.org/wiki/Erlang_(unit)"}
+        ]}
+      ]
+    },
+    "record": {
+      "title": "Recording and quality",
+      "lede": "Quality management is a decision to listen. Retention is a set of clocks. Screen recording has a bandwidth cost.",
+      "diagram": "qm-loop",
+      "blocks": [
+        {"kind": "prose", "h": "Listen on purpose", "p": ["WEM's public page includes quality management, analytics, surveys, and recording. A score without a sampled call is a rumor. Coach from a named interaction.", "Interaction Analytics UI access is TCP 4443 from supervisor or admin workstations to the VO cloud, in the supervisor workstation requirements. WEM application access on that page is TCP 443."]},
+        {"kind": "prose", "h": "Keep the file you think you kept", "p": ["The data-retention page is the policy for how long classes of data last. Audio, emergency recordings, agent data, and telephony identifiers do not share one sentence. The call-log report is a separate window.", "The technical requirements PDF adds 160 kbps per agent when screen recording is on. That is capacity, not a retention promise.", "The end-user license agreement is where this lab points for the customer's own recording duties. Read the current EULA. This page does not restate it."]},
+        {"kind": "cites", "items": [
+          {"label": "Workforce engagement management", "url": "https://www.five9.com/products/capabilities/workforce-optimization"},
+          {"label": "Data retention", "url": "https://www.five9.com/legal/dataretention"},
+          {"label": "End-user license agreement", "url": "https://www.five9.com/legal/end-user-license-agreement"},
+          {"label": "Supervisor workstation requirements", "url": "https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/workforce-optimization/supervisor-workstation-reqs/supervisor-workstation-reqs.htm"}
+        ]}
+      ]
+    },
+    "e911": {
+      "title": "E911 and emergency calling",
+      "lede": "A dispatchable location is the room responders can find. A prefix on a dial plan is not that room.",
+      "diagram": "e911-path",
+      "blocks": [
+        {"kind": "prose", "h": "What the 2022 data sheet supports", "p": ["The public E911 data sheet, filed under a November 2022 path, describes Five9 emergency services and names RedSky. This lab does not draw a coverage map from that sheet and does not claim every country works the same way.", "People move. A location that still says headquarters after a team went home is a failed test, even if the SIP call completes."]},
+        {"kind": "prose", "h": "After the call", "p": ["The MyE911 community article describes call history an org admin can read: time, user, number, location, recording, and SIP invite. Use it to see what was sent, not as a substitute for placing the right location first."]},
+        {"kind": "steps", "h": "A location test this lab will accept", "items": ["Pick a real seat, not the server room.", "Read the location that would be sent for that user and number.", "Place a test only in the way your local emergency authority allows. This lab does not tell you to call 911 for practice.", "If the history shows the wrong site, stop the cutover."]},
+        {"kind": "cites", "items": [
+          {"label": "E911 data sheet", "url": "https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF"},
+          {"label": "MyE911 call history", "url": "https://community.five9.com/s/article/MyE911-Call-History?language=en_US"}
+        ]}
+      ]
+    },
+    "analytics": {
+      "title": "Reporting and analytics",
+      "lede": "Name the role, the layout, and the clock. A dashboard rumor is not a report.",
+      "diagram": "report-pipes",
+      "blocks": [
+        {"kind": "prose", "h": "The pipes", "p": ["Standard reports require the reporting role and a reporting permission. The community article is the procedure. Call variables become reportable only after the edit permission and the reporting flag.", "The APIs and SDKs page names more than one web service, including statistics and reporting. A wallboard and a standard report can be different pipes. This lab does not assign each name to SOAP or REST. That split was not settled on the page we cite."]},
+        {"kind": "prose", "h": "Windows", "p": ["The call log is a filtered report. A community article dated in the lab's notes as 14 July 2026 describes about 60 days unless retention is extended. Confirm before you promise a year.", "Matrix layouts that will not export are a product behavior to test in your domain. This page will not invent an export button."]},
+        {"kind": "cites", "items": [
+          {"label": "Generating standard reports", "url": "https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports"},
+          {"label": "Call variables for reporting", "url": "https://community.five9.com/s/article/Administrator-Enabling-Call-Variables-for-Reporting?language=en_US"},
+          {"label": "APIs and SDKs", "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks"},
+          {"label": "Call log filters", "url": "https://community.five9.com/s/article/Reporting-Apply-Filter-s-in-the-Call-Log-Report"}
+        ]}
+      ]
+    },
+    "integrations": {
+      "title": "CRM, APIs, and customer stories",
+      "lede": "Name the adapter. Date the release. Case-study metrics stay attributed to Five9's pages.",
+      "diagram": "adapters",
+      "blocks": [
+        {"kind": "prose", "h": "Plus adapters", "p": ["The technical requirements PDF lists Plus adapters for Agent Desktop Toolkit, Epic, Microsoft Dynamics 365, NetSuite, Oracle, Salesforce, ServiceNow, and Zendesk. They use HTTPS and Secure WebSocket. A proxy has to support WSS.", "Salesforce, on that PDF, is Lightning CTI plus Sales Cloud and Service Cloud on Professional, Enterprise, Unlimited, and Performance editions. This lab will not quote a managed-package number. The PDF's package line was not stable enough to copy.", "ServiceNow, on the PDF read in October 2026, supports Service Operations and Configurable workspaces and names the Australia, Zurich, and Yokohama releases. The change log says Classic workspace support was removed. Re-read before you upgrade.", "Dynamics 365 Online version 9.0 and on-premises 2013 or higher are named, with limited Channel Integration Framework support. Zendesk needs Support and Talk Partner Edition on that PDF. Epic names Hyperdrive and Hyperspace, hosted or self-hosted, and says Willow pharmacy is not supported. Oracle chat needs at least the 2014 server generation named in the PDF. Internet Explorer is ended except the note that IE 11 remains only for the Oracle Service Cloud adapter."]},
+        {"kind": "prose", "h": "When there is no adapter", "p": ["The APIs and SDKs page is the front door for the CRM SDK, Web2Campaign, a Web Connector that opens a URL, and the statistics and reporting services. A Web Connector is not a Plus adapter. Salesforce modules inside the IVR, including the Einstein module the IVR guide names, are script modules, not the desktop adapter."]},
+        {"kind": "customers"},
+        {"kind": "cites", "items": [
+          {"label": "Technical requirements PDF", "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf"},
+          {"label": "APIs and SDKs", "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks"},
+          {"label": "IVR modules", "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm"},
+          {"label": "ServiceNow Plus adapter", "url": "https://documentation.five9.com/bundle/servicenowadmins/page/crm-admins/ServiceNow/introduction/_ch-configuring-the-five9-plus-adapter-for-servicenow.htm"}
+        ]}
+      ]
+    },
+    "ai": {
+      "title": "IVA, bots, and GenAI",
+      "lede": "A bot is a task in a region, a key in VCC, and a door back to a skill. A prompt change is a production change.",
+      "diagram": "iva-handoff",
+      "blocks": [
+        {"kind": "prose", "h": "Studio", "p": ["The Studio 7 community article describes copying a ChatBot task key from the regional Studio portal into VCC for a digital IVA. The region matters. A key from the wrong portal is a different bot.", "IVR modules can also hand a call to an IVA or to another script. That is not the same object as a Studio task. Say which one you built."]},
+        {"kind": "prose", "h": "GenAI Studio and assist", "p": ["The GenAI Studio product page describes knowledge and prompts for Five9 AI applications. This lab does not name a default model. Agent Assist is a named bandwidth line of 12 kbps on top of the desktop, and the product story connects summaries to that hub. Confirm the current page before you promise a feature list.", "Containment is a choice. The handoff still needs a named skill and the context the agent can see. The IVA Sales Certified Credly badge is a partner sales assessment: 5 modules, a 20-question final, 80 percent. It is not a VCC engineering exam."]},
+        {"kind": "cites", "items": [
+          {"label": "Studio digital IVA with VCC", "url": "https://community.five9.com/s/article/Studio-7-Integrate-Digital-IVA-in-Studio-with-VCC?language=en_US"},
+          {"label": "GenAI Studio", "url": "https://www.five9.com/products/capabilities/gen-ai-studio"},
+          {"label": "IVR modules", "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm"},
+          {"label": "IVA Sales Certified badge", "url": "https://www.credly.com/org/five9/badge/five9-iva-sales-certified"}
+        ]}
+      ]
+    },
+    "security": {
+      "title": "Security and compliance",
+      "lede": "TLS 1.2 is the protocol the PDF requires. The abandon percent is a field you read in the campaign, not a number this lab invents.",
+      "diagram": "security-layers",
+      "blocks": [
+        {"kind": "prose", "h": "Transport", "p": ["The technical requirements PDF says TLS 1.2 is supported and that TLS 1.1 is not supported for inbound or outbound traffic. A later video note on the same PDF says TLS 1.0 and 1.1 are not supported. Enable TLS 1.2 in the browser. This lab does not copy the cipher-suite list. Open the PDF.", "Plus adapters use HTTPS and Secure WebSocket. Trusted IP controls do not behave the same in VCC Administrator via Web: the September 2026 page says the Admin Console bypasses those IPs and any address can get in. That is a documented gap, not a suggestion to disable the control everywhere."]},
+        {"kind": "prose", "h": "Calling posture", "p": ["Certified Caller is the STIR/SHAKEN program. Profile ANI is a caller-ID choice. Quote the one you configured.", "TCPA manual touch blocks paste and dials on a typed match, per the community article. The campaign has a max abandoned-call percentage field, and the admin guide warns you when you change it. This lab still will not print a default percent.", "Recording duties sit with the customer as well as the platform. Start at the EULA and the retention page."]},
+        {"kind": "cites", "items": [
+          {"label": "Technical requirements PDF", "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf"},
+          {"label": "VCC Administrator via Web", "url": "https://documentation.five9.com/bundle/admin-console/page/admin-console/java-vcc/_ch-vcc-on-the-web.htm"},
+          {"label": "TCPA manual touch", "url": "https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US"},
+          {"label": "Default campaign settings", "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm"},
+          {"label": "Certified Caller", "url": "https://www.five9.com/resources/five9_certified_caller"}
+        ]}
+      ]
+    },
+    "roadmap": {
+      "title": "Roadmap and what changed",
+      "lede": "Only dated public notes. Anything without a page is absent on purpose.",
+      "diagram": "retention",
+      "blocks": [
+        {"kind": "roadmap"},
+        {"kind": "prose", "h": "Not a roadmap", "p": ["This lab did not find a public administrator exam code. Five9 University is the training front door. Prices, SKUs, and uncited feature promises are out of scope.", "IP allowlists in the March and July 2026 change log are intentionally not copied. They move."]},
+        {"kind": "cites", "items": [
+          {"label": "Five9 University", "url": "https://www.five9.com/contact-center-services/training"},
+          {"label": "Technical requirements PDF", "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf"}
+        ]}
+      ]
+    },
+    "career": {
+      "title": "Interview prep and study frames",
+      "lede": "These frames are how this lab groups the work. They are not Five9 job requisitions.",
+      "diagram": "career-stack",
+      "blocks": [
+        {"kind": "prose", "h": "Six ways to practice", "p": ["Administrator: domain objects in planning order, tracks 1 and 2.", "Voice: inbound, lists, dialer modes, and blended staffing, tracks 3 through 6.", "IVR and skills: modules and Default, tracks 7 and 8.", "Desktop, WEM, and IVA: tracks 9 through 11.", "Systems: CRM, SIP, and APIs, tracks 12 through 14.", "Migration, safety, and the words you will not invent: tracks 15 through 18."]},
+        {"kind": "prose", "h": "How to answer", "p": ["Say the object, the mode, and the page. If two Five9 pages disagree, quote both. Progressive pacing is one of those cases: the outbound page and the dialer page are not worded the same way.", "The interview deck on this lab uses the same citations as the lessons. A badge you cannot open on Credly or Five9's site does not belong in the answer."]},
+        {"kind": "cites", "items": [
+          {"label": "Five9 University", "url": "https://www.five9.com/contact-center-services/training"},
+          {"label": "Dialer product page", "url": "https://www.five9.com/products/capabilities/dialer-system"},
+          {"label": "Outbound product page", "url": "https://www.five9.com/products/capabilities/outbound-contact-center"}
+        ]}
+      ]
+    }
+  }
+}

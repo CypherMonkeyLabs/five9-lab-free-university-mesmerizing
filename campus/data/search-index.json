@@ -1,0 +1,1264 @@
+{
+  "items": [
+    {
+      "href": "#/track/t01",
+      "title": "Foundations and the domain",
+      "note": "Platform",
+      "snippet": "A domain is the tenant. Campaigns come after skills, users, lists, dispositions, and a profile."
+    },
+    {
+      "href": "#/lesson/t01/l01",
+      "title": "A contact center is not a phone system",
+      "note": "Foundations and the domain",
+      "snippet": "A PBX connects extensions. A contact center adds queues, skills, lists, dispositions, and reports around those calls. Five9 Virtual Contact Center is that layer, hosted as a domain rather than as servers you rack. The planning topic does no"
+    },
+    {
+      "href": "#/lesson/t01/l02",
+      "title": "The domain is the tenant",
+      "note": "Foundations and the domain",
+      "snippet": "You sign into one domain. Skill groups, users, lists, prompts, scripts, and campaigns live there. Another domain does not inherit them. Five9 does not use CUCM-style partitions and calling search spaces. If you are coming from Unified Commu"
+    },
+    {
+      "href": "#/lesson/t01/l03",
+      "title": "Roles on the floor",
+      "note": "Foundations and the domain",
+      "snippet": "The same person is not every role. Agents take contacts. Supervisors can sit in skill groups with agents. Administrators configure the domain. Reporting is its own permission: standard reports do not appear without the Reporting role and at"
+    },
+    {
+      "href": "#/lesson/t01/l04",
+      "title": "Three campaign types",
+      "note": "Foundations and the domain",
+      "snippet": "Public admin topics describe three campaign types: inbound, outbound, and autodial. Inbound answers a DNIS and runs the campaign IVR. Outbound uses the dialer and an agent. Autodial also dials a list, and the planning topic groups it with i"
+    },
+    {
+      "href": "#/lesson/t01/l05",
+      "title": "Contacts, fields, and lists",
+      "note": "Foundations and the domain",
+      "snippet": "A contact record is a row of fields. number1, number2, and number3 are the usual phone slots the dialer walks. Lists are sets of those rows attached to outbound and autodial campaigns. The list-mode article says a final disposition stops ev"
+    },
+    {
+      "href": "#/lesson/t01/l06",
+      "title": "Dispositions are the dialer's memory",
+      "note": "Foundations and the domain",
+      "snippet": "A disposition is the outcome stored on a record. System dispositions and custom dispositions both exist. The disposition topic says many system dispositions are redialed five times if you leave the default redial count, and you can reset th"
+    },
+    {
+      "href": "#/lesson/t01/l07",
+      "title": "One profile, many campaigns",
+      "note": "Foundations and the domain",
+      "snippet": "A campaign profile overrides campaign defaults such as the ANI. You may create many profiles. A campaign uses one profile at a time. The same profile can be on more than one campaign. You attach it in Advanced mode, and workflow rules can s"
+    },
+    {
+      "href": "#/track/t02",
+      "title": "VCC administration",
+      "note": "Platform",
+      "snippet": "The administrator console is where the domain becomes a floor people can work."
+    },
+    {
+      "href": "#/lesson/t02/l01",
+      "title": "Two administrator applications",
+      "note": "VCC administration",
+      "snippet": "The technical requirements still describe a Java VCC Administrator and a web Administrator Console. Java is not supported on Mac workstations with ARM processors. On those machines the document says to use VCC Administrator via Web in Admin"
+    },
+    {
+      "href": "#/lesson/t02/l02",
+      "title": "User profiles before user accounts",
+      "note": "VCC administration",
+      "snippet": "The planning roadmap says to define user profiles before you add user accounts. A profile is the permission bundle. An account is the person. Creating people first and hoping the default permissions match the job is how reporting and call-v"
+    },
+    {
+      "href": "#/lesson/t02/l03",
+      "title": "Skill groups are the queues",
+      "note": "VCC administration",
+      "snippet": "Skill groups organize agent and supervisor users into the queues that belong to campaigns. A user can be in several groups. A campaign can list several groups. The same help topic uses two different places for the assignment. Outbound campa"
+    },
+    {
+      "href": "#/lesson/t02/l04",
+      "title": "Prompts before the script",
+      "note": "VCC administration",
+      "snippet": "The inbound and autodial roadmaps tell you to define and record prompts before you build the IVR. A Play or Menu module can only speak what the prompt library already holds, or what a text-to-speech entry supplies in that module. Skill grou"
+    },
+    {
+      "href": "#/lesson/t02/l05",
+      "title": "Do-not-call is a list, and a module",
+      "note": "VCC administration",
+      "snippet": "Outbound product material lists DNC list management with time-zone rules and Certified Caller as compliance tools. Inside the IVR, Set DNC is a real module in the modules chapter. A spoken 'remove me' path should hit that module, not a note"
+    },
+    {
+      "href": "#/lesson/t02/l06",
+      "title": "Workstations that drop live calls",
+      "note": "VCC administration",
+      "snippet": "The technical requirements tell you to turn off Windows 11 Efficiency Mode on PCs that take live calls. Efficiency Mode can limit CPU and sleep inactive tabs, and the PDF says that can drop active Five9 calls. If you leave it on, use a high"
+    },
+    {
+      "href": "#/lesson/t02/l07",
+      "title": "Reason codes, voicemail, and what admin is not",
+      "note": "VCC administration",
+      "snippet": "Not every silence is a carrier failure. Agents have Not Ready states. TCPA manual touch even forces Not Ready when preview time expires. Skill groups can hold voicemail, greetings, and messages. Those are administrator objects with their ow"
+    },
+    {
+      "href": "#/track/t03",
+      "title": "Inbound campaigns",
+      "note": "Voice",
+      "snippet": "Inbound is a running campaign plus a script. Busy means the campaign is not in the call."
+    },
+    {
+      "href": "#/lesson/t03/l01",
+      "title": "A DNIS answers only while the campaign runs",
+      "note": "Inbound campaigns",
+      "snippet": "An inbound campaign receives calls for a DNIS and processes them with that campaign's IVR script. The inbound topic is blunt about state: if the campaign is not running, callers hear a busy signal. Greetings, skills, and hold music never ge"
+    },
+    {
+      "href": "#/lesson/t03/l02",
+      "title": "The script is the inbound product",
+      "note": "Inbound campaigns",
+      "snippet": "Once the campaign answers, the IVR script is the product the caller meets. The inbound topic lists custom greetings, loops and branching, collecting information, using contact data, voicemail when the queue is long, forward to a third party"
+    },
+    {
+      "href": "#/lesson/t03/l03",
+      "title": "Queue treatment is a choice, not a hope",
+      "note": "Inbound campaigns",
+      "snippet": "The inbound topic allows custom prompts and hold music, a message when agents are unavailable, voicemail, and a forward to a third party. Those are different exits. Hold music is not voicemail. A forward leaves your agents entirely. Third P"
+    },
+    {
+      "href": "#/lesson/t03/l04",
+      "title": "Priority and service level",
+      "note": "Inbound campaigns",
+      "snippet": "The inbound topic says you can prioritize inbound traffic. Skill Transfer has a Priority tab in the community write-up. Skill groups themselves have service-level settings in the basic admin topic. Priority is not the same number as a servi"
+    },
+    {
+      "href": "#/lesson/t03/l05",
+      "title": "Schedules, not a stopped campaign",
+      "note": "Inbound campaigns",
+      "snippet": "The campaign admin tree includes IVR script schedules for autodial and inbound campaigns. The planning topic tells you to set the campaign IVR schedule after the script exists. A schedule swaps treatment by time. Stopping the campaign does "
+    },
+    {
+      "href": "#/lesson/t03/l06",
+      "title": "Pause before the next call",
+      "note": "Inbound campaigns",
+      "snippet": "Skill Transfer has Pause Before Transfer, in seconds, on the General tab. The default is 0. A value above 0 waits that long after an agent is selected before the call is delivered, so a queue does not slap the next call down instantly. The "
+    },
+    {
+      "href": "#/lesson/t03/l07",
+      "title": "Inbound design review",
+      "note": "Inbound campaigns",
+      "snippet": "A review you can finish in one sitting: DNIS, running campaign, script, skill on the Outbound Skills tab, overflow module, schedule, and pause. Each one has a public page. None of them is a trunk setting. If all seven are right and the call"
+    },
+    {
+      "href": "#/track/t04",
+      "title": "Outbound lists",
+      "note": "Voice",
+      "snippet": "Outbound dials a loaded list under a mode. Resets and ANI changes are explicit."
+    },
+    {
+      "href": "#/lesson/t04/l01",
+      "title": "A list is not a campaign",
+      "note": "Outbound lists",
+      "snippet": "Outbound and autodial campaigns dial lists of contact records. The list has an order. The campaign has a run state and a dialing mode. Uploading a CSV does neither of those. The disposition topic says you reset list position and disposition"
+    },
+    {
+      "href": "#/lesson/t04/l02",
+      "title": "Profiles filter the list the agent sees",
+      "note": "Outbound lists",
+      "snippet": "Campaign profiles filter and sort lists, control agent pop-ups, and manage disposition counts. They also override defaults such as the ANI. One campaign, one profile. Workflow rules can swap the profile. A filter on the profile changes whic"
+    },
+    {
+      "href": "#/lesson/t04/l03",
+      "title": "List penetration and vertical dialing",
+      "note": "Outbound lists",
+      "snippet": "List penetration is the default. The dialer tries the first phone on every record, then the next phone on a later pass. Vertical dialing stays with one contact and moves across that contact's numbers before it moves on. The community articl"
+    },
+    {
+      "href": "#/lesson/t04/l04",
+      "title": "Reset is a loaded gun",
+      "note": "Outbound lists",
+      "snippet": "Reset list position sends the dialer back to the top. Reset Disposition clears selected outcomes so those rows can dial again. Both act on lists currently loaded. The disposition topic says to reset only codes you know are safe. A scheduled"
+    },
+    {
+      "href": "#/lesson/t04/l05",
+      "title": "Time zone and call analysis are guarded defaults",
+      "note": "Outbound lists",
+      "snippet": "The campaign admin tree includes time zone dialing options, and the default-settings topic says call analysis and voice detection level ship with vendor defaults. Changing defaults can raise a compliance warning. The same topic says US doma"
+    },
+    {
+      "href": "#/lesson/t04/l06",
+      "title": "Call analysis is not a guarantee",
+      "note": "Outbound lists",
+      "snippet": "Call analysis and voice detection level are defaulted campaign fields. Product pages also list answering-machine detection and automatic voicemail as agent-efficiency tools. None of those pages give you a percent accuracy you can put in a c"
+    },
+    {
+      "href": "#/lesson/t04/l07",
+      "title": "Local caller ID is a profile choice",
+      "note": "Outbound lists",
+      "snippet": "The outbound product page lists local caller ID as a business-efficiency tool, and campaign profiles are the documented place to override the default ANI. Showing a local number is a profile and number-plan problem, not a skill-group proble"
+    },
+    {
+      "href": "#/track/t05",
+      "title": "Dialer modes and pacing",
+      "note": "Voice",
+      "snippet": "Five modes. The simulator is a classroom. The campaign dialog is the system of record."
+    },
+    {
+      "href": "#/lesson/t05/l01",
+      "title": "Preview lets the agent read first",
+      "note": "Dialer modes and pacing",
+      "snippet": "Preview delivers the contact and, on the product page, CRM history before the call is placed. It is the mode for conversations that need context. It does not overdial, so abandon from extra ringing lines is not the design. The product page'"
+    },
+    {
+      "href": "#/lesson/t05/l02",
+      "title": "Progressive keeps one call per free agent",
+      "note": "Dialer modes and pacing",
+      "snippet": "The outbound product page says progressive dialing automatically dials one customer per available agent and is what centers use when they want to avoid dropped outbound calls. The dialer product page also says progressive is appropriate whe"
+    },
+    {
+      "href": "#/lesson/t05/l03",
+      "title": "Power dials a ratio you chose",
+      "note": "Dialer modes and pacing",
+      "snippet": "The dialer page says power dials a user-configured number of calls per available agent and adjusts from abandon rates. It points that mode at a small group with a large list. The outbound page says the same shape: a small sales team and a l"
+    },
+    {
+      "href": "#/lesson/t05/l04",
+      "title": "Predictive fills idle time, and it can drop calls",
+      "note": "Dialer modes and pacing",
+      "snippet": "The dialer page says predictive mode uses algorithms to predict agent availability and is suited to more than 10 active agents. The outbound page says it increases time spent talking to people instead of dialing. Both are marketing descript"
+    },
+    {
+      "href": "#/lesson/t05/l05",
+      "title": "TCPA manual touch is a typed number",
+      "note": "Dialer modes and pacing",
+      "snippet": "TCPA manual touch exists only on domains enabled for it. The community article says those domains are generally for telemarketing to cell phones without express consent, and that no other dialing mode is available. Contacts are shown and no"
+    },
+    {
+      "href": "#/lesson/t05/l06",
+      "title": "The defaults are the compliance posture",
+      "note": "Dialer modes and pacing",
+      "snippet": "For every dialing mode, the default-settings topic says options start at values Five9 recommends for FCC, FTC, and UK Ofcom telemarketing rules. If you change them you can see a warning. The example field is Max Abandoned Call Percentage. O"
+    },
+    {
+      "href": "#/lesson/t05/l07",
+      "title": "Pick a mode in one page",
+      "note": "Dialer modes and pacing",
+      "snippet": "Use the person's job, not the logo. Context before the call is preview. A promise of no dropped calls and a small team is progressive. A small team and a huge list, with eyes on abandon, is power. A large team whose idle time is the enemy i"
+    },
+    {
+      "href": "#/track/t06",
+      "title": "Blended operations and autodial",
+      "note": "Voice",
+      "snippet": "Blended is a staffing plan. Autodial is the scripted outbound. Predictive people should stay dedicated."
+    },
+    {
+      "href": "#/lesson/t06/l01",
+      "title": "Blended is a staffing plan",
+      "note": "Blended operations and autodial",
+      "snippet": "The outbound product page says outbound works with inbound digital channels and that blended behavior lets agents move between inbound and outbound as inbound rises and falls. It does not add a campaign type named Blended to the planning ro"
+    },
+    {
+      "href": "#/lesson/t06/l02",
+      "title": "Autodial is the IVR's outbound",
+      "note": "Blended operations and autodial",
+      "snippet": "Autodial is the third campaign type. The planning topic groups it with inbound when it tells you to record prompts and build IVR scripts. It still uses lists, like outbound. Think of it as the dialer reaching a person and then handing them "
+    },
+    {
+      "href": "#/lesson/t06/l03",
+      "title": "Priority and ratio are campaign settings",
+      "note": "Blended operations and autodial",
+      "snippet": "The campaign admin tree includes a topic for campaign priority and ratio settings. This lab has not quoted that topic's fields, so it will not invent the numbers. What is safe to say is that inbound priority, Skill Transfer priority, and an"
+    },
+    {
+      "href": "#/lesson/t06/l04",
+      "title": "Not Ready is a real state",
+      "note": "Blended operations and autodial",
+      "snippet": "Agents are not always available. TCPA manual touch forces Not Ready when preview time runs out, and it does not dial. A blend that assumes every login is a dialer resource will over-predict. Reason codes and Not Ready are how you explain th"
+    },
+    {
+      "href": "#/lesson/t06/l05",
+      "title": "After-call work feeds the next dial",
+      "note": "Blended operations and autodial",
+      "snippet": "A disposition is what the dialer remembers. A final code stops the record. A retryable code brings it back after the redial rules. Wrap time, in the simulator, is the gap before the agent is free again. Five9's pause-before-transfer is a di"
+    },
+    {
+      "href": "#/lesson/t06/l06",
+      "title": "Digital and voice share the person",
+      "note": "Blended operations and autodial",
+      "snippet": "The outbound page says the dialer works with inbound digital engagement, and Agent Desktop Plus is the screen where voice, digital, and context are meant to meet. A blend that is only a voice story misses chat and email sitting on the same "
+    },
+    {
+      "href": "#/lesson/t06/l07",
+      "title": "A blend you can defend",
+      "note": "Blended operations and autodial",
+      "snippet": "A defensible blend is a paragraph: which campaigns run, which skills overlap, which mode each outbound book uses, who may be stolen, what Not Ready does to the count, and which abandon window the domain uses. Every noun in that paragraph is"
+    },
+    {
+      "href": "#/track/t07",
+      "title": "IVR scripts",
+      "note": "Voice",
+      "snippet": "Scripts are named modules. The builder speaks that vocabulary and does not pretend to export a VCC file."
+    },
+    {
+      "href": "#/lesson/t07/l01",
+      "title": "The module list is the vocabulary",
+      "note": "IVR scripts",
+      "snippet": "The IVR modules chapter names the blocks you may place. The list includes Play, Menu, Get Digits, Input, Voice Input, If/Else, Case, Set Variable, Lookup Contact Record, Query, Skill Transfer, IVA Transfer, Voicemail Transfer, Set DNC, Thir"
+    },
+    {
+      "href": "#/lesson/t07/l02",
+      "title": "Play, Menu, digits, and voice",
+      "note": "IVR scripts",
+      "snippet": "Play speaks a prompt or TTS. Menu takes a choice and has an exit per option. Get Digits and Input collect what the caller types. Voice Input and the Natural Language Processing module are the speech-side blocks in the same chapter. Input is"
+    },
+    {
+      "href": "#/lesson/t07/l03",
+      "title": "If/Else is two ways. Case is more",
+      "note": "IVR scripts",
+      "snippet": "If/Else has two branches. The modules chapter includes both If/Else and Case. When you need three or more outcomes, Case is the block that exists for that. Nesting If/Else until the drawing looks like a hedge is how scripts become unreviewa"
+    },
+    {
+      "href": "#/lesson/t07/l04",
+      "title": "Skill Transfer has more than a skill name",
+      "note": "IVR scripts",
+      "snippet": "The community article lists General, Skills, Announcement, Priority, Connectors, Queue Callback, and Disposition. It also says 'six tabs' and then names more than six. Count the tabs in your editor. Do not trust the word six. Multiple skill"
+    },
+    {
+      "href": "#/lesson/t07/l05",
+      "title": "Variables, lookup, and query",
+      "note": "IVR scripts",
+      "snippet": "Set Variable writes a value. Lookup Contact Record reads the contact. Query calls out, and the published example is an XML web service POST whose response groups are mapped with regular expressions into variables. That example uses script v"
+    },
+    {
+      "href": "#/lesson/t07/l06",
+      "title": "IVA, foreign scripts, DNC, and leaving the platform",
+      "note": "IVR scripts",
+      "snippet": "IVA Transfer hands the call to a Studio task. Foreign Script jumps to another IVR script. Set DNC is the removal action. Third Party Transfer leaves your agents. Language switches prompt language. These are five different exits. A diagram t"
+    },
+    {
+      "href": "#/lesson/t07/l07",
+      "title": "Visual IVR and frames",
+      "note": "IVR scripts",
+      "snippet": "The technical requirements say administrators can apply web page security so a Visual IVR script is not embedded in a frame where the user can be hijacked. The mechanism named is the X-Frame-Options header. The browser table in that PDF lis"
+    },
+    {
+      "href": "#/track/t08",
+      "title": "Skills routing",
+      "note": "Voice",
+      "snippet": "A skill is people plus a place on the campaign. Default is what you get when you forget."
+    },
+    {
+      "href": "#/lesson/t08/l01",
+      "title": "A skill is a queue with people in it",
+      "note": "Skills routing",
+      "snippet": "A skill group holds users who have the agent or supervisor role. Campaigns point at one or more groups. The people, not the name, determine who can receive the contact. Service level, voicemail, greetings, and a message to the group are all"
+    },
+    {
+      "href": "#/lesson/t08/l02",
+      "title": "The tab is named backwards on inbound",
+      "note": "Skills routing",
+      "snippet": "Outbound campaigns take skills on the Skills tab. Inbound and autodial take them on a tab named Outbound Skills. The skill topic says this in one paragraph. People miss it because the word outbound sits on an inbound campaign. If the right "
+    },
+    {
+      "href": "#/lesson/t08/l03",
+      "title": "One module, one skill, when you need the truth",
+      "note": "Skills routing",
+      "snippet": "Skill Transfer may list several skills, and any agent who has one of them can take the call. The same article recommends a single skill in the module when you want reports that mean something. A shared pool is a valid design. An accidental "
+    },
+    {
+      "href": "#/lesson/t08/l04",
+      "title": "Skill level versus list order",
+      "note": "Skills routing",
+      "snippet": "The skill transfer article describes an option to ignore the order of skills in the module and distribute by the agent's skill level instead. Order and level are different ideas. Order is the list you typed. Level is a property of the agent"
+    },
+    {
+      "href": "#/lesson/t08/l05",
+      "title": "Default is a queue, not a compliment",
+      "note": "Skills routing",
+      "snippet": "If Skill Transfer has no skill selected, the article says calls go to users who are not assigned skills. That queue is labeled Default in the softphone. It is a catch-all, not a place you want billing calls. Supervisors and agents with empt"
+    },
+    {
+      "href": "#/lesson/t08/l06",
+      "title": "Service level is the scoreboard",
+      "note": "Skills routing",
+      "snippet": "The skill topic includes service levels. A service level answers 'how fast is acceptable,' usually as a percent of contacts answered inside a number of seconds. It does not, by itself, reorder the queue. Priority does the ordering. The scor"
+    },
+    {
+      "href": "#/lesson/t08/l07",
+      "title": "Skill voicemail is its own mailbox",
+      "note": "Skills routing",
+      "snippet": "The skill topic covers routing voicemail to the group, greetings, messages, and audio files. That mailbox is not the campaign Play prompt and not an agent's personal phone mailbox unless you have built it that way. Queue callback, on Skill "
+    },
+    {
+      "href": "#/track/t09",
+      "title": "Agent Desktop Plus",
+      "note": "People",
+      "snippet": "Plus is the agent's instrument. Voice, pop, text, and the schedule fail in different ways."
+    },
+    {
+      "href": "#/lesson/t09/l01",
+      "title": "One screen is the product",
+      "note": "Agent Desktop Plus",
+      "snippet": "Agent Desktop Plus is described as a single screen so the agent can stay with the customer. The Engage page adds real-time transcription, AI Agent Assist, and case context on that screen. The same underlying technology is what the desktop p"
+    },
+    {
+      "href": "#/lesson/t09/l02",
+      "title": "Plus adapters speak HTTPS and WSS",
+      "note": "Agent Desktop Plus",
+      "snippet": "The technical requirements say Plus adapters use HTTPS and Secure WebSocket. If a proxy is in the path, it must support WSS. The PDF also says Five9 does not support TLS 1.1, and that browsers need TLS 1.2. Unencrypted API connections are r"
+    },
+    {
+      "href": "#/lesson/t09/l03",
+      "title": "Transcription and assist are features you turn on",
+      "note": "Agent Desktop Plus",
+      "snippet": "The Engage page describes transcription, sentiment language, and Agent Assist suggestions on the desktop. GenAI Studio's page says it powers Five9 AI applications and initially focuses on Agent Assist summaries, with control over the output"
+    },
+    {
+      "href": "#/lesson/t09/l04",
+      "title": "WEM lives in the same desktop",
+      "note": "Agent Desktop Plus",
+      "snippet": "The desktop page says Plus can show schedules, adherence, time-off requests, and evaluations without another app. CRM connectors can surface the same WFO actions inside Salesforce and the other named CRMs. That is the staffing blend meeting"
+    },
+    {
+      "href": "#/lesson/t09/l05",
+      "title": "Digital text can be blocked",
+      "note": "Agent Desktop Plus",
+      "snippet": "The technical requirements say some antivirus software, naming Avast as an example, can stop chat, social, or email text from loading. Voice can continue. The symptom is a blank digital pane, not a busy DNIS. Efficiency Mode can also sleep "
+    },
+    {
+      "href": "#/lesson/t09/l06",
+      "title": "Headsets and the path under the desk",
+      "note": "Agent Desktop Plus",
+      "snippet": "USB noise-canceling headsets are the recommendation. Analog is not supported. Wireless is discouraged above about ten active agents because of delay. Wired LAN is preferred. Wi-Fi is tolerated only when bandwidth holds. Satellite and cellul"
+    },
+    {
+      "href": "#/lesson/t09/l07",
+      "title": "The desktop review",
+      "note": "Agent Desktop Plus",
+      "snippet": "A desktop review is short: one screen, WSS through the proxy, TLS 1.2, the schedule visible, text not blocked, USB headset, supported path, Efficiency Mode off, and the bandwidth rows added up. Each line is from the product page or the PDF."
+    },
+    {
+      "href": "#/track/t10",
+      "title": "Workforce engagement",
+      "note": "People",
+      "snippet": "WEM tells you who should be there. The dialer should believe the schedule. Recordings do not last by hope."
+    },
+    {
+      "href": "#/lesson/t10/l01",
+      "title": "Five9 WEM and a Verint path both exist",
+      "note": "Workforce engagement",
+      "snippet": "The workforce page says Five9 offers WEM natively and also partners with vendors such as Verint so a customer can fit the suite they already run. It says Five9 manages installation, configuration, maintenance, and upgrades for the WEM solut"
+    },
+    {
+      "href": "#/lesson/t10/l02",
+      "title": "Workforce management is the roster",
+      "note": "Workforce engagement",
+      "snippet": "WFM, in the product language, is how you staff to the work: schedules, intraday changes, adherence. It is not the dialer mode and not the service level target, though it exists so those can be met. A predictive book that uses headcount inst"
+    },
+    {
+      "href": "#/lesson/t10/l03",
+      "title": "Quality management listens on purpose",
+      "note": "Workforce engagement",
+      "snippet": "The product page describes multi-channel evaluations, desktop monitoring, and automated scoring. The desktop page says agents can review evaluations without leaving Plus. That is QM: a sample of work, a score, a conversation with the person"
+    },
+    {
+      "href": "#/lesson/t10/l04",
+      "title": "Analytics and surveys sit beside the call",
+      "note": "Workforce engagement",
+      "snippet": "The data sheet and the product page put interaction analytics and customer surveys next to QM and WFM. Analytics is how you see topics across many calls. A survey is how the customer scores the one call. They are not the abandon rate and th"
+    },
+    {
+      "href": "#/lesson/t10/l05",
+      "title": "Recordings expire",
+      "note": "Workforce engagement",
+      "snippet": "The retention page says VCC audio recordings are kept for the sooner of 30 days or a successful SFTP or FTP offload, or as the contract says. E911 call recordings are listed at 30 days. Agent data is 60 days. Campaign state is 120 days. Dis"
+    },
+    {
+      "href": "#/lesson/t10/l06",
+      "title": "The agent should not need a second login",
+      "note": "Workforce engagement",
+      "snippet": "The desktop page's point is that schedules, adherence, time off, shift bidding, and evaluations are reachable in Plus and, through connectors, in the CRM. A second password for WEM is a design smell if the connector was in the contract. Shi"
+    },
+    {
+      "href": "#/lesson/t10/l07",
+      "title": "What this lab will not pretend to run",
+      "note": "Workforce engagement",
+      "snippet": "This lab has no live WEM tenant. You cannot approve a real time-off request here. You can say which product page promised the button, which retention clock will delete the evidence, and which dialer mistake a bad roster causes. That is the "
+    },
+    {
+      "href": "#/track/t11",
+      "title": "IVA and GenAI",
+      "note": "Intelligence",
+      "snippet": "A bot is a task in the right region, with a way back to a named skill, and a prompt that was tested."
+    },
+    {
+      "href": "#/lesson/t11/l01",
+      "title": "Studio has regions",
+      "note": "IVA and GenAI",
+      "snippet": "The technical requirements publish Studio portal hosts by region: five9.us, five9.au, five9.ca, five9.uk, and five9.br studioportal.io, plus older inferencecommunications.com names. A task built in the wrong region will not be the task your"
+    },
+    {
+      "href": "#/lesson/t11/l02",
+      "title": "A task key is not a vibe",
+      "note": "IVA and GenAI",
+      "snippet": "IVA Transfer is a module. It needs a task to transfer to. The digital integration article, dated in the community as 26 March 2026, says you copy a ChatBot task key into the VCC IVA transfer side after the Studio task exists. Voice and digi"
+    },
+    {
+      "href": "#/lesson/t11/l03",
+      "title": "Contain, or hand back with context",
+      "note": "IVA and GenAI",
+      "snippet": "A useful bot either finishes the job or returns the caller to a skill with the reason intact. IVA Transfer that dead-ends, or a Skill Transfer with no skill, is how you manufacture the Default queue. The Engage page describes sentiment and "
+    },
+    {
+      "href": "#/lesson/t11/l04",
+      "title": "GenAI Studio is a hub, not a slogan",
+      "note": "IVA and GenAI",
+      "snippet": "The GenAI Studio page describes a low-code hub: choose among models, attach knowledge and customer data, test on real call data, keep a prompt library, and control output. It says the hub powers Five9 AI applications and initially focuses o"
+    },
+    {
+      "href": "#/lesson/t11/l05",
+      "title": "NLP in the IVR is not the same as Studio",
+      "note": "IVA and GenAI",
+      "snippet": "The modules chapter includes a Natural Language Processing module and Voice Input, and it also includes IVA Transfer. They are different blocks. NLP inside a script is not automatically a Studio task, and a Studio task is not automatically "
+    },
+    {
+      "href": "#/lesson/t11/l06",
+      "title": "Prompts are a production change",
+      "note": "IVA and GenAI",
+      "snippet": "A prompt library in GenAI Studio is production configuration. Changing a summary prompt changes what agents and customers are told. The page says you can test with call data and control output. A change without a test is how a policy you do"
+    },
+    {
+      "href": "#/lesson/t11/l07",
+      "title": "A bot review you can finish",
+      "note": "IVA and GenAI",
+      "snippet": "Region, key permission, task type, failure branch, named skill, variable the agent sees, prompt test, and the recording clock. Eight checks. Each one has a page. A bot project that cannot pass them is a slide. The pacing bench and the IVR b"
+    },
+    {
+      "href": "#/track/t12",
+      "title": "CRM integrations",
+      "note": "Systems",
+      "snippet": "Name the adapter. Date the version. A blank screen with live voice is a different channel."
+    },
+    {
+      "href": "#/lesson/t12/l01",
+      "title": "The adapter family",
+      "note": "CRM integrations",
+      "snippet": "The technical requirements list Plus adapters for Agent Desktop Toolkit, Epic, Microsoft Dynamics 365, NetSuite, Oracle, Salesforce, ServiceNow, and Zendesk. They use HTTPS and Secure WebSocket. The desktop page says a pre-built adapter and"
+    },
+    {
+      "href": "#/lesson/t12/l02",
+      "title": "Salesforce versions move",
+      "note": "CRM integrations",
+      "snippet": "The technical requirements fetched for this lab say the Salesforce managed package is 2.46, SAML 2.0 is supported, and Lightning CTI is supported on Sales Cloud and Service Cloud for Professional, Enterprise, Unlimited, and Performance. Lig"
+    },
+    {
+      "href": "#/lesson/t12/l03",
+      "title": "ServiceNow releases are named",
+      "note": "CRM integrations",
+      "snippet": "The same PDF says the ServiceNow Plus adapter supports the Service Operations and Configurable workspaces, and names the Australia, Zurich, and Yokohama releases. Those names are a support list with a date on it, like the Salesforce package"
+    },
+    {
+      "href": "#/lesson/t12/l04",
+      "title": "The rest of the named CRMs",
+      "note": "CRM integrations",
+      "snippet": "Dynamics 365, Zendesk, Oracle, NetSuite, and Epic are in the same Plus adapter list as Salesforce and ServiceNow. The PDF does not give this lab a package number for each of them. Absence of a number here is not absence of an adapter. Treat"
+    },
+    {
+      "href": "#/lesson/t12/l05",
+      "title": "SDK and connectors when there is no adapter",
+      "note": "CRM integrations",
+      "snippet": "The API product page lists a CRM SDK and web connectors beside the CTI, configuration, reporting, and statistics web services, plus Web2Campaign. The desktop page says bring your own CRM with the SDK. A connector is a lighter pop. An SDK in"
+    },
+    {
+      "href": "#/lesson/t12/l06",
+      "title": "Screen pop down, voice up",
+      "note": "CRM integrations",
+      "snippet": "This is the signature adapter incident. The caller is heard. The record is not on screen. Causes you can cite: WSS blocked, TLS 1.1, the wrong CRM chapter, an unassigned campaign profile that was supposed to control pop-up behavior, or a co"
+    },
+    {
+      "href": "#/lesson/t12/l07",
+      "title": "Salesforce modules inside the IVR",
+      "note": "CRM integrations",
+      "snippet": "The IVR modules chapter includes a Salesforce module and an SFDC Einstein module, plus Contact Update and Lookup Contact Record. Those run in the script, before an agent exists. They are not the Plus adapter the agent uses after connect. A "
+    },
+    {
+      "href": "#/track/t13",
+      "title": "SIP and carriers",
+      "note": "Systems",
+      "snippet": "Name the path. G.711 is the default you can cite. Studio ports are not every trunk."
+    },
+    {
+      "href": "#/lesson/t13/l01",
+      "title": "Three ways a call can enter",
+      "note": "SIP and carriers",
+      "snippet": "The technical requirements describe three SIP stories. Five9 can provide ITSP trunks. Your ITSP can connect to Five9 session border controllers, and there is a checklist for that. Or a gateway you already own \u2014 Avaya, Cisco, or Asterisk \u2014 c"
+    },
+    {
+      "href": "#/lesson/t13/l02",
+      "title": "DNS, codecs, and the default voice",
+      "note": "SIP and carriers",
+      "snippet": "The requirements prefer DNS SRV for the SIP targets. G.711 is the default codec, and the PDF describes it as uncompressed. Do not invent a packetization time. A 20 millisecond ptime shows up in practitioner notes about Cisco gateways. It is"
+    },
+    {
+      "href": "#/lesson/t13/l03",
+      "title": "How much bandwidth a seat costs",
+      "note": "SIP and carriers",
+      "snippet": "The requirements give planning numbers. Agent Desktop Plus and the Plus adapters are 128 kbps. The Java agent is 88 kbps. Agent Assist adds about 12 kbps. A VPN adds about 64. CRM or other business apps add about 64. A UC client such as Tea"
+    },
+    {
+      "href": "#/lesson/t13/l04",
+      "title": "NAT, idle timers, and split tunnels",
+      "note": "SIP and carriers",
+      "snippet": "NAT and PAT are acceptable. Double NAT is not. UDP bindings that idle out cause one-way audio. The requirements use a 30 second UDP idle timeout as the planning number, and they tell you to send keepalives when the binding is shorter. On a "
+    },
+    {
+      "href": "#/lesson/t13/l05",
+      "title": "Direct Connect and the edges",
+      "note": "SIP and carriers",
+      "snippet": "Direct Connect in the requirements is a Layer-3 handoff. There is no Layer-2 requirement. The port is 10, 100, or 1000 full duplex, and failover uses BGP. Equinix Fabric edges named in the PDF this lab read are Chicago CH3, Washington DC10,"
+    },
+    {
+      "href": "#/lesson/t13/l06",
+      "title": "TLS, and ports that are not universal",
+      "note": "SIP and carriers",
+      "snippet": "Unencrypted APIs are not the story. TLS 1.2 is required. TLS 1.1 is not supported. The requirements also list TLS 1.3 inbound ciphers: AES-128-GCM, AES-256-GCM, and CHACHA20. Studio portal hosts and Studio SIP ports live in the Studio secti"
+    },
+    {
+      "href": "#/lesson/t13/l07",
+      "title": "Headsets, and the call that only fails one way",
+      "note": "SIP and carriers",
+      "snippet": "USB noise-canceling headsets are the recommendation. Analog headsets are not supported. Wireless is not recommended once you are above roughly ten agents. Windows 11 Efficiency Mode can drop live calls. Java admin is not the Mac ARM path; u"
+    },
+    {
+      "href": "#/track/t14",
+      "title": "APIs and reporting",
+      "note": "Systems",
+      "snippet": "Name the API family. Name the report layout. Name which clock you mean."
+    },
+    {
+      "href": "#/lesson/t14/l01",
+      "title": "The API names on the product page",
+      "note": "APIs and reporting",
+      "snippet": "The APIs and SDKs page names CTI Web Services, Configuration Web Services, Reporting Web Services, Statistics Web Services, Web2Campaign, the CRM SDK, and Web Connectors. The same page also says REST. It does not, in the text this lab relie"
+    },
+    {
+      "href": "#/lesson/t14/l02",
+      "title": "Reporting is a role",
+      "note": "APIs and reporting",
+      "snippet": "Standard reports do not appear because you are an administrator. The community reporting article says you need the Reporting role and at least one reporting permission. Categories named there include Agent, Call Log, IVR, ACD Queue, Campaig"
+    },
+    {
+      "href": "#/lesson/t14/l03",
+      "title": "Layouts, and the matrix that will not export",
+      "note": "APIs and reporting",
+      "snippet": "The same reporting guidance describes three layouts: Tabular, Summary, and Matrix. A matrix answers a cross-tab question. It is not the layout you hand to a spreadsheet as a direct CSV. Pick the layout from the question. 'Every call' wants "
+    },
+    {
+      "href": "#/lesson/t14/l04",
+      "title": "The call log is a window, not an archive",
+      "note": "APIs and reporting",
+      "snippet": "The call log report is the place people look for one call. The community article on filters, dated 14 July 2026, describes a window of about 60 days unless retention has been extended. Data-retention terms are a different clock: VCC audio i"
+    },
+    {
+      "href": "#/lesson/t14/l05",
+      "title": "Call variables are not history",
+      "note": "APIs and reporting",
+      "snippet": "Call variables can be reported when two things are true: the user has permission to edit them, and the variable is enabled for reporting. The community article is explicit that they are not historical. Turn the flag on today and yesterday's"
+    },
+    {
+      "href": "#/lesson/t14/l06",
+      "title": "Prebuilt UC and the connector that is not an adapter",
+      "note": "APIs and reporting",
+      "snippet": "The product material names prebuilt connections for Zoom Phone and Microsoft Teams. A prebuilt path is a product. A Web Connector that opens a URL is also a product. They are not the bandwidth line you add for a Teams client on the agent's "
+    },
+    {
+      "href": "#/lesson/t14/l07",
+      "title": "What an extract is allowed to remember",
+      "note": "APIs and reporting",
+      "snippet": "Reporting Web Services can move numbers out of the domain. Retention still applies to what Five9 keeps, not to the warehouse you built. Once a row is in your bucket, your policy owns it. Disabled domains, campaign state, agent data, and num"
+    },
+    {
+      "href": "#/track/t15",
+      "title": "From UCCX and UCCE",
+      "note": "Bridge",
+      "snippet": "There is no import button. Rebuild the domain, then move a number."
+    },
+    {
+      "href": "#/lesson/t15/l01",
+      "title": "There is no import button",
+      "note": "From UCCX and UCCE",
+      "snippet": "This track is a teaching bridge. Five9's public pages name Cisco as a SIP gateway type. They do not publish a wizard that reads a UCCX script or a UCCE dial plan and emits a domain. The planning order still applies on the Five9 side: skills"
+    },
+    {
+      "href": "#/lesson/t15/l02",
+      "title": "CSQs, skills, and the partition you will not find",
+      "note": "From UCCX and UCCE",
+      "snippet": "In this teaching map, a UCCX contact service queue is closest to a Five9 skill group: the people who can take that work. A UCCE skill group is a similar idea with a different name. Precision queues and attributes do not have a one-field equ"
+    },
+    {
+      "href": "#/lesson/t15/l03",
+      "title": "Scripts are rebuilt in modules",
+      "note": "From UCCX and UCCE",
+      "snippet": "A UCCX script is a document in Cisco's editor. A Five9 IVR script is a chain of modules from the IVR Administrator's Guide: Menu, Get Digits, If/Else, Skill Transfer, Play, and the rest of that chapter. The lab's builder speaks those names "
+    },
+    {
+      "href": "#/lesson/t15/l04",
+      "title": "Dialing modes do not survive the move by osmosis",
+      "note": "From UCCX and UCCE",
+      "snippet": "UCCE outbound has its own pacing words. Five9's product pages talk about Preview, Progressive, Power, Predictive, and Manual Touch. The simulator in this lab is a classroom clock, not either vendor's algorithm. Progressive on the outbound p"
+    },
+    {
+      "href": "#/lesson/t15/l05",
+      "title": "Numbers, lists, and ANI are a data project",
+      "note": "From UCCX and UCCE",
+      "snippet": "DNIS values, calling lists, dispositions, and do-not-call entries are domain data. They are not inside the Cisco script file. A cutover that moves only the IVR still has nothing to dial and nowhere legal to send a call. Campaign profiles ho"
+    },
+    {
+      "href": "#/lesson/t15/l06",
+      "title": "The gateway cut, without pretending to be the CUBE guide",
+      "note": "From UCCX and UCCE",
+      "snippet": "When the third SIP story is a Cisco gateway, the technical requirements are still the Five9 side: DNS SRV preferred, G.711 as the default codec, TLS 1.2, no double NAT. What the gateway itself must rewrite \u2014 number format, a normalization s"
+    },
+    {
+      "href": "#/lesson/t15/l07",
+      "title": "Cutover morning is a checklist, not a mood",
+      "note": "From UCCX and UCCE",
+      "snippet": "The morning the numbers move, the domain should already contain skills, a script, a running inbound campaign, loaded lists, dispositions, DNC, an assigned profile, and a desktop the agent has signed into. E911 addresses have to be dispatcha"
+    },
+    {
+      "href": "#/track/t16",
+      "title": "Safety and compliance",
+      "note": "Platform",
+      "snippet": "Quote the document. Quote the clock. Do not invent a percent or a coverage map."
+    },
+    {
+      "href": "#/lesson/t16/l01",
+      "title": "911 is a location, not a prefix",
+      "note": "Safety and compliance",
+      "snippet": "The E911 data sheet says agents dial 911 directly, with no prefix, and that the service sends a dispatchable location. It names the United States and its territories, Kari's Law, and RAY BAUM'S Act. The partner named on that sheet is RedSky"
+    },
+    {
+      "href": "#/lesson/t16/l02",
+      "title": "The address has to be the room they are in",
+      "note": "Safety and compliance",
+      "snippet": "A dispatchable location is the place responders can find a person. A headquarters address while the agent is at home is the failure the EULA describes. Remote and hybrid floors have to register the location the agent is actually using. MyE9"
+    },
+    {
+      "href": "#/lesson/t16/l03",
+      "title": "Recording is the customer's duty too",
+      "note": "Safety and compliance",
+      "snippet": "The EULA treats recordings as customer data. It says calls can be recorded while the caller is on hold and after a transfer. It puts notice and consent on the customer, who has to follow the laws that apply to their calls. This lab will not"
+    },
+    {
+      "href": "#/lesson/t16/l04",
+      "title": "Retention is several clocks",
+      "note": "Safety and compliance",
+      "snippet": "The public retention page splits the clocks. VCC audio is the sooner of 30 days, a successful SFTP or FTP offload, or the contract. E911 recordings are 30 days. Agent data is 60 days. Campaign state is 120 days. A disabled domain is 120 day"
+    },
+    {
+      "href": "#/lesson/t16/l05",
+      "title": "Attestation is not an ANI field",
+      "note": "Safety and compliance",
+      "snippet": "Certified Caller is Five9's published STIR/SHAKEN program, tied to FCC and CRTC expectations. A campaign profile that overrides ANI changes what you present. It does not, by itself, mean the call is attested. Say 'we set local ANI' or 'we a"
+    },
+    {
+      "href": "#/lesson/t16/l06",
+      "title": "Abandon rate is a regulated posture",
+      "note": "Safety and compliance",
+      "snippet": "Default campaign settings call out a warning if you change Max Abandoned Call Percentage. Other fields on that page include Max Queue Time, Show Out of Numbers Alert, Monitor Abandoned Call Percentage, Call Analysis, Voice Detection level, "
+    },
+    {
+      "href": "#/lesson/t16/l07",
+      "title": "TCPA manual touch is a physical control",
+      "note": "Safety and compliance",
+      "snippet": "On domains where TCPA manual touch is enabled, other dialing modes are not available. Agents type the external number. Paste and drag are blocked. Dial enables only when the typed number matches. If preview times out, the agent goes Not Rea"
+    },
+    {
+      "href": "#/track/t17",
+      "title": "Ecosystem",
+      "note": "Ecosystem",
+      "snippet": "Every box needs a link. Every word needs a page or a local label."
+    },
+    {
+      "href": "#/lesson/t17/l01",
+      "title": "The domain has neighbors",
+      "note": "Ecosystem",
+      "snippet": "A Five9 domain does not live alone. Voice arrives on a SIP story. Agents sit in a desktop. WEM or a partner workforce suite watches the roster. A CRM pops. GenAI Studio may draft a summary. E911 carries a location. Reports leave through a r"
+    },
+    {
+      "href": "#/lesson/t17/l02",
+      "title": "Workforce, quality, and the recording shelf",
+      "note": "Ecosystem",
+      "snippet": "The WEM product page describes workforce management, quality, analytics, surveys, and recording, and it also describes a Verint partnership. Five9 says it manages install and upgrades for the solution it delivers. The data sheet is the shor"
+    },
+    {
+      "href": "#/lesson/t17/l03",
+      "title": "Analytics and the report that is not a dashboard rumor",
+      "note": "Ecosystem",
+      "snippet": "Analytics shows up on the WEM page and inside reporting. They are not one button. Standard reports need the Reporting role. Categories include ACD Queue, Campaign, Call Log, and the rest of that list. Layouts are tabular, summary, and matri"
+    },
+    {
+      "href": "#/lesson/t17/l04",
+      "title": "AI agents are a handoff with a name",
+      "note": "Ecosystem",
+      "snippet": "Five9 Engage talks about self-service and the agent desktop together. Studio holds a digital IVA task. GenAI Studio is where knowledge and prompts are tested, and the product page says it powers Five9 AI applications, starting with Agent As"
+    },
+    {
+      "href": "#/lesson/t17/l05",
+      "title": "CRM, UC, and the desktop are three contracts",
+      "note": "Ecosystem",
+      "snippet": "Plus adapters named in the technical requirements include Salesforce, ServiceNow, Dynamics 365, Zendesk, Oracle, NetSuite, Epic, and the Agent Desktop Toolkit. Zoom Phone and Teams show up as prebuilt paths on the API page. A UC app on the "
+    },
+    {
+      "href": "#/lesson/t17/l06",
+      "title": "The glossary is the contract with yourself",
+      "note": "Ecosystem",
+      "snippet": "Teams lose hours to words that Five9 uses narrowly: domain, skill, campaign profile, DNIS, disposition, list penetration, vertical dialing, campaign, autodial, blended, manual touch. The ecosystem glossary in this lab defines the ones we co"
+    },
+    {
+      "href": "#/lesson/t17/l07",
+      "title": "Read the map before you add a box",
+      "note": "Ecosystem",
+      "snippet": "Integration maps fail when a logo is enough. Salesforce in the IVR is a module. Salesforce on the desktop is an adapter. Certified Caller is not the ANI. RedSky is not the ITSP. Verint is not automatically your WEM. Studio regions are not E"
+    },
+    {
+      "href": "#/track/t18",
+      "title": "Certifications and practice",
+      "note": "Practice",
+      "snippet": "No invented exam codes. The sales badge is a sales badge. Date every number."
+    },
+    {
+      "href": "#/lesson/t18/l01",
+      "title": "University is a catalog, not a secret exam code",
+      "note": "Certifications and practice",
+      "snippet": "Five9 University is the public training front door: online classes, webinars, instructor-led classes, train-the-trainer, and custom programs. The curriculum brief this lab read is dated April 2023. Treat the mix of courses as a dated brochu"
+    },
+    {
+      "href": "#/lesson/t18/l02",
+      "title": "The badge we could verify is a sales badge",
+      "note": "Certifications and practice",
+      "snippet": "Five9 IVA Sales Certified is a Credly badge. The public badge says five modules and a 20-question final, with a passing mark of 80 percent. The partner blog describes it as a sales certification for partners. It is not an engineering creden"
+    },
+    {
+      "href": "#/lesson/t18/l03",
+      "title": "Practice is the domain, not the badge",
+      "note": "Certifications and practice",
+      "snippet": "The objects you must be able to touch are the ones in the planning topic and the IVR chapter: skill groups, users, lists, dispositions, profiles, campaigns, and modules. A certification that never had you start a stopped inbound campaign di"
+    },
+    {
+      "href": "#/lesson/t18/l04",
+      "title": "Version timelines go stale on purpose",
+      "note": "Certifications and practice",
+      "snippet": "Numbers you copy from a PDF are dates, not laws. The technical requirements this lab read named Salesforce managed package 2.46, ServiceNow releases Australia, Zurich, and Yokohama, JRE 8 updates 421, 451, and 461, and macOS 15 Sequoia, 26 "
+    },
+    {
+      "href": "#/lesson/t18/l05",
+      "title": "How to answer without inventing",
+      "note": "Certifications and practice",
+      "snippet": "An interview answer in this lab has four beats: the object, the behavior, the page, and the gap. 'A stopped inbound campaign does not answer. The inbound topic says callers hear busy. I have not memorized a numeric abandon default.' That is"
+    },
+    {
+      "href": "#/lesson/t18/l06",
+      "title": "A study week that stays inside the documents",
+      "note": "Certifications and practice",
+      "snippet": "Six sessions cover the floor without a fake exam. One: planning order and skills. Two: inbound, lists, and the three campaign types. Three: dial modes and the abandon warning, plus the pacing lab. Four: IVR modules and the builder. Five: de"
+    },
+    {
+      "href": "#/lesson/t18/l07",
+      "title": "What this lab will not pretend to be",
+      "note": "Certifications and practice",
+      "snippet": "Five9 Lab is an independent study floor. It is not Five9, not a partner portal, and not a place that can change your domain. The builder's JSON is not an import. The pacing chart is not the dialer. The 3D topology is a picture of failure, n"
+    },
+    {
+      "href": "#/ecosystem",
+      "title": "Domain",
+      "note": "Glossary",
+      "snippet": "The VCC tenant. Skills, users, lists, and campaigns stay inside it."
+    },
+    {
+      "href": "#/ecosystem",
+      "title": "Skill group",
+      "note": "Glossary",
+      "snippet": "Agents or supervisors who can take a campaign's work. A user and a campaign can have more than one."
+    },
+    {
+      "href": "#/ecosystem",
+      "title": "User profile",
+      "note": "Glossary",
+      "snippet": "The permission template for a person. Not a campaign profile."
+    },
+    {
+      "href": "#/ecosystem",
+      "title": "Campaign profile",
+      "note": "Glossary",
+      "snippet": "Overrides defaults such as ANI. One profile is assigned to a campaign. The same profile can be reused."
+    },
+    {
+      "href": "#/ecosystem",
+      "title": "Campaign",
+      "note": "Glossary",
+      "snippet": "Inbound, outbound, or autodial. Blended is staffing language, not a fourth type."
+    },
+    {
+      "href": "#/ecosystem",
+      "title": "DNIS",
+      "note": "Glossary",
+      "snippet": "The number an inbound campaign answers. A stopped campaign does not answer."
+    },
+    {
+      "href": "#/ecosystem",
+      "title": "Disposition",
+      "note": "Glossary",
+      "snippet": "The outcome code on a call. Final disposition stops the other numbers on that record for the campaign."
+    },
+    {
+      "href": "#/ecosystem",
+      "title": "List penetration",
+      "note": "Glossary",
+      "snippet": "The default list walk: first number on every record, then the next number."
+    },
+    {
+      "href": "#/ecosystem",
+      "title": "Vertical dialing",
+      "note": "Glossary",
+      "snippet": "Finishes the numbers on one record before moving on. Community notes say the compass wording is easy to misread."
+    },
+    {
+      "href": "#/ecosystem",
+      "title": "Preview",
+      "note": "Glossary",
+      "snippet": "The agent sees CRM history before the dial."
+    },
+    {
+      "href": "#/ecosystem",
+      "title": "Progressive",
+      "note": "Glossary",
+      "snippet": "The outbound page describes one customer call per available agent. The dialer page also says adaptive pace. Quote the page you mean."
+    },
+    {
+      "href": "#/ecosystem",
+      "title": "Power",
+      "note": "Glossary",
+      "snippet": "A configured number of calls per agent, with an abandon throttle."
+    },
+    {
+      "href": "#/ecosystem",
+      "title": "Predictive",
+      "note": "Glossary",
+      "snippet": "Algorithmic pacing. Product guidance talks about teams larger than about ten agents."
+    },
+    {
+      "href": "#/ecosystem",
+      "title": "Manual touch",
+      "note": "Glossary",
+      "snippet": "No automatic dial. TCPA manual touch adds typing, blocks paste, and enables Dial on a match."
+    },
+    {
+      "href": "#/ecosystem",
+      "title": "Max Abandoned Call Percentage",
+      "note": "Glossary",
+      "snippet": "A campaign field with a warning if you change it. This lab does not state a numeric default."
+    },
+    {
+      "href": "#/ecosystem",
+      "title": "IVR module",
+      "note": "Glossary",
+      "snippet": "A named block in the IVR Administrator's Guide, such as Menu, Play, If/Else, or Skill Transfer."
+    },
+    {
+      "href": "#/ecosystem",
+      "title": "Skill Transfer",
+      "note": "Glossary",
+      "snippet": "Sends the call toward one or more skills. No skill selected means the Default queue in the community write-up."
+    },
+    {
+      "href": "#/ecosystem",
+      "title": "Default queue",
+      "note": "Glossary",
+      "snippet": "Where a Skill Transfer with no skill goes, per the community article."
+    },
+    {
+      "href": "#/ecosystem",
+      "title": "Call variable",
+      "note": "Glossary",
+      "snippet": "Reportable only after the edit permission and the reporting flag. Not historical."
+    },
+    {
+      "href": "#/ecosystem",
+      "title": "Reporting role",
+      "note": "Glossary",
+      "snippet": "Required, with a reporting permission, before standard reports appear."
+    },
+    {
+      "href": "#/ecosystem",
+      "title": "Call log",
+      "note": "Glossary",
+      "snippet": "A report with filters. A July 2026 community article describes about 60 days unless retention is extended."
+    },
+    {
+      "href": "#/ecosystem",
+      "title": "Web2Campaign",
+      "note": "Glossary",
+      "snippet": "One of the API names on the APIs and SDKs page."
+    },
+    {
+      "href": "#/ecosystem",
+      "title": "CRM SDK",
+      "note": "Glossary",
+      "snippet": "The path for a CRM that is not a named Plus adapter."
+    },
+    {
+      "href": "#/ecosystem",
+      "title": "Web Connector",
+      "note": "Glossary",
+      "snippet": "Opens a URL. Not the same object as a Plus adapter."
+    },
+    {
+      "href": "#/ecosystem",
+      "title": "Plus adapter",
+      "note": "Glossary",
+      "snippet": "The listed CRM integrations, using HTTPS and Secure WebSocket."
+    },
+    {
+      "href": "#/ecosystem",
+      "title": "G.711",
+      "note": "Glossary",
+      "snippet": "The default codec in the technical requirements, described as uncompressed."
+    },
+    {
+      "href": "#/ecosystem",
+      "title": "DNS SRV",
+      "note": "Glossary",
+      "snippet": "The preferred lookup for SIP targets in the technical requirements."
+    },
+    {
+      "href": "#/ecosystem",
+      "title": "TLS 1.2",
+      "note": "Glossary",
+      "snippet": "The required TLS version. TLS 1.1 is not supported."
+    },
+    {
+      "href": "#/ecosystem",
+      "title": "Direct Connect",
+      "note": "Glossary",
+      "snippet": "Layer-3 handoff, full duplex, BGP failover, in the technical requirements."
+    },
+    {
+      "href": "#/ecosystem",
+      "title": "Certified Caller",
+      "note": "Glossary",
+      "snippet": "Five9's STIR/SHAKEN program. Not the same thing as a local ANI on a profile."
+    },
+    {
+      "href": "#/ecosystem",
+      "title": "E911",
+      "note": "Glossary",
+      "snippet": "Direct 911 with a dispatchable location. The data sheet names RedSky."
+    },
+    {
+      "href": "#/ecosystem",
+      "title": "Dispatchable location",
+      "note": "Glossary",
+      "snippet": "The place responders can find the caller. A stale HQ address fails that test."
+    },
+    {
+      "href": "#/ecosystem",
+      "title": "MyE911",
+      "note": "Glossary",
+      "snippet": "Org-admin history: time, user, number, location, recording, SIP invite."
+    },
+    {
+      "href": "#/ecosystem",
+      "title": "WEM",
+      "note": "Glossary",
+      "snippet": "Workforce, quality, analytics, surveys, and recording. Native suite and a Verint partnership are both on the product page."
+    },
+    {
+      "href": "#/ecosystem",
+      "title": "GenAI Studio",
+      "note": "Glossary",
+      "snippet": "Knowledge and prompts for Five9 AI apps. This lab does not name a default model."
+    },
+    {
+      "href": "#/ecosystem",
+      "title": "Studio task key",
+      "note": "Glossary",
+      "snippet": "The key copied from a ChatBot task into VCC for a digital IVA."
+    },
+    {
+      "href": "#/ecosystem",
+      "title": "Agent Desktop Plus",
+      "note": "Glossary",
+      "snippet": "The single agent screen. Same underlying technology as the prebuilt CRM adapters, per the desktop page."
+    },
+    {
+      "href": "#/ecosystem",
+      "title": "Retention",
+      "note": "Glossary",
+      "snippet": "Separate clocks for audio, E911 recordings, agent data, campaign state, domains, and DIDs."
+    },
+    {
+      "href": "#/ecosystem",
+      "title": "RFC 3261",
+      "note": "Glossary",
+      "snippet": "The SIP specification. It does not choose your dial plan."
+    },
+    {
+      "href": "#/ecosystem",
+      "title": "RFC 4733",
+      "note": "Glossary",
+      "snippet": "Telephone events, the usual way DTMF rides in the media."
+    },
+    {
+      "href": "#/trouble",
+      "title": "The DNIS does not answer.",
+      "note": "Playbook",
+      "snippet": "Is the inbound campaign running, or only built? Is this DNIS on that campaign? Did a schedule stop the campaign while leaving the number assigned?"
+    },
+    {
+      "href": "#/trouble",
+      "title": "Callers land on a queue nobody staffed.",
+      "note": "Playbook",
+      "snippet": "Open the Skill Transfer module. See whether a skill is selected. Check the Default skill before you blame the carrier."
+    },
+    {
+      "href": "#/trouble",
+      "title": "The agent hears silence, or the caller does.",
+      "note": "Playbook",
+      "snippet": "Confirm signaling is up. A 200 OK does not prove RTP. If the firewall is not stateful, return UDP was not allowed. Compare softphone and WebRTC. WebRTC still needs the RTP range, plus STUN."
+    },
+    {
+      "href": "#/trouble",
+      "title": "Voice is live and the CRM pane is blank.",
+      "note": "Playbook",
+      "snippet": "The adapter uses HTTPS and Secure WebSocket. A proxy that strips WSS fails the pop and leaves the call. Name the adapter and the CRM release before you restart the phone."
+    },
+    {
+      "href": "#/trouble",
+      "title": "The agent cannot paste a phone number.",
+      "note": "Playbook",
+      "snippet": "Check whether the campaign is in TCPA manual touch. Manual touch expects a typed number and enables Dial on a match. Pasting is the control working, not a browser bug."
+    },
+    {
+      "href": "#/trouble",
+      "title": "Customers hear a click and no agent.",
+      "note": "Playbook",
+      "snippet": "Name the mode. Preview does not outdial. Predictive does. Read the abandon field. This lab will not invent the percent. Predictive guidance on the product page is about larger teams. Quote the page you mean."
+    },
+    {
+      "href": "#/trouble",
+      "title": "A test 911 call would send responders to the old HQ.",
+      "note": "Playbook",
+      "snippet": "The address has to be the room the person is in. A DID pointed at a corporate lobby is not a dispatchable location. MyE911 history is the place to see time, user, number, location, recording, and SIP invite."
+    },
+    {
+      "href": "#/trouble",
+      "title": "Standard reports are missing for a supervisor.",
+      "note": "Playbook",
+      "snippet": "The user needs the reporting role and a reporting permission. A wallboard feed is not the standard-report permission. Call variables stay invisible until the edit permission and the reporting flag."
+    },
+    {
+      "href": "#/trouble",
+      "title": "The audio you need is gone.",
+      "note": "Playbook",
+      "snippet": "Name which clock: audio, E911 recording, agent data, campaign state, the call log, or the DID. Screen recording bandwidth is not the same fact as retention. The retention page is the policy. A domain setting can be shorter."
+    },
+    {
+      "href": "#/trouble",
+      "title": "The IVA will not return the caller to a person.",
+      "note": "Playbook",
+      "snippet": "Confirm the Studio region matches the task you copied. The VCC side wants the task key, not a nickname. The handoff needs a named skill. Default is a queue, not a compliment."
+    },
+    {
+      "href": "#/atlas",
+      "title": "Architecture atlas",
+      "note": "University",
+      "snippet": "Architecture atlas"
+    },
+    {
+      "href": "#/deploy",
+      "title": "Deployment",
+      "note": "University",
+      "snippet": "Deployment"
+    },
+    {
+      "href": "#/migrate",
+      "title": "Migration and cutover",
+      "note": "University",
+      "snippet": "Migration and cutover"
+    },
+    {
+      "href": "#/ports",
+      "title": "Ports and protocols",
+      "note": "University",
+      "snippet": "Ports and protocols"
+    },
+    {
+      "href": "#/sip",
+      "title": "SIP and PSTN",
+      "note": "University",
+      "snippet": "SIP and PSTN"
+    },
+    {
+      "href": "#/wfm",
+      "title": "Workforce management",
+      "note": "University",
+      "snippet": "Workforce management"
+    },
+    {
+      "href": "#/record",
+      "title": "Recording and quality",
+      "note": "University",
+      "snippet": "Recording and quality"
+    },
+    {
+      "href": "#/e911",
+      "title": "E911",
+      "note": "University",
+      "snippet": "E911"
+    },
+    {
+      "href": "#/analytics",
+      "title": "Reporting",
+      "note": "University",
+      "snippet": "Reporting"
+    },
+    {
+      "href": "#/integrations",
+      "title": "CRM and APIs",
+      "note": "University",
+      "snippet": "CRM and APIs"
+    },
+    {
+      "href": "#/ai",
+      "title": "AI agents",
+      "note": "University",
+      "snippet": "AI agents"
+    },
+    {
+      "href": "#/security",
+      "title": "Security",
+      "note": "University",
+      "snippet": "Security"
+    },
+    {
+      "href": "#/roadmap",
+      "title": "Roadmap",
+      "note": "University",
+      "snippet": "Roadmap"
+    },
+    {
+      "href": "#/career",
+      "title": "Career",
+      "note": "University",
+      "snippet": "Career"
+    },
+    {
+      "href": "#/downloads",
+      "title": "Cheat codes",
+      "note": "University",
+      "snippet": "Cheat codes"
+    },
+    {
+      "href": "#/daily",
+      "title": "Daily challenge",
+      "note": "University",
+      "snippet": "Daily challenge"
+    }
+  ]
+}

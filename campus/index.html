@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="signal" data-motion="full" data-font="16">
+<html lang="en" data-theme="neon" data-motion="full" data-font="16" data-look="day">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Five9 Lab</title>
   <meta name="description" content="Independent study lab for Five9 Virtual Contact Center: campaigns, dialer modes, IVR, skills, Agent Desktop Plus, WEM, IVA, CRM, SIP, APIs, and Cisco migration.">
   <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/university.css">
+  <link rel="stylesheet" href="css/wow.css">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect rx='8' width='32' height='32' fill='%2307111c'/%3E%3Cpath d='M8 20c4-8 12-8 16 0' stroke='%233ee0ff' fill='none' stroke-width='2'/%3E%3Ccircle cx='16' cy='14' r='2' fill='%23f5b942'/%3E%3C/svg%3E">
   <script>
     try {
       var saved = JSON.parse(localStorage.getItem("f9lab-settings") || "{}");
       if (saved.theme) document.documentElement.dataset.theme = saved.theme;
+      else document.documentElement.dataset.theme = "neon";
       if (saved.font) document.documentElement.dataset.font = String(saved.font);
       if (saved.reduced === true) document.documentElement.dataset.motion = "reduce";
       if (saved.reduced === false) document.documentElement.dataset.motion = "full";
@@ -29,7 +32,19 @@
   </script>
 </head>
 <body>
+  <div id="readbar"></div>
+  <canvas id="sky" aria-hidden="true"></canvas>
   <a class="skip" href="#main">Skip to content</a>
+  <div class="chrome" id="chrome">
+  <div class="utilbar" id="utilbar">
+    <a href="https://cyphermonkeylabs.com">cyphermonkeylabs.com</a>
+    <a href="https://linktr.ee/cyphermonkey">linktr.ee/cyphermonkey</a>
+    <a href="https://github.com/cipher0x9/five9-lab-free-university-mesmerizing">Rate, comment, help</a>
+    <a href="https://dev.to/cyphermonkey">dev.to</a>
+    <a href="https://huggingface.co/Cypher0x9">Hugging Face</a>
+    <a href="https://x.com/Cypher0x9">X</a>
+    <button type="button" class="linkish" id="offline-pack">Offline download</button>
+  </div>
   <header class="topbar">
     <a class="brand" href="#/">
       <svg class="mark" viewBox="0 0 36 36" aria-hidden="true">
@@ -39,17 +54,63 @@
       </svg>
       <span>
         <span class="brand-name">Five9 Lab</span>
-        <span class="brand-sub">Signal Floor</span>
+        <span class="brand-sub">Signal University</span>
       </span>
     </a>
+    <a class="mascot-link" id="mascot-link" href="#/badges" aria-label="CypherMonkey. Open badges.">
+      <svg id="mascot" viewBox="0 0 72 72" aria-hidden="true">
+        <path class="tail" d="M10 46c-6 2-8 10-4 14"></path>
+        <ellipse class="ear" cx="18" cy="18" rx="8" ry="10"></ellipse>
+        <ellipse class="ear" cx="54" cy="18" rx="8" ry="10"></ellipse>
+        <circle class="head" cx="36" cy="34" r="22"></circle>
+        <ellipse class="muzzle" cx="36" cy="42" rx="10" ry="7"></ellipse>
+        <ellipse class="eye" cx="28" cy="32" rx="3" ry="3.4"></ellipse>
+        <ellipse class="eye" cx="44" cy="32" rx="3" ry="3.4"></ellipse>
+        <circle class="shine" cx="29" cy="31" r="1"></circle>
+        <circle class="shine" cx="45" cy="31" r="1"></circle>
+        <ellipse class="lid" cx="28" cy="32" rx="4" ry="3"></ellipse>
+        <ellipse class="lid" cx="44" cy="32" rx="4" ry="3"></ellipse>
+        <path class="smile" d="M30 44c2 3 10 3 12 0"></path>
+        <g class="prop prop-day"><rect x="22" y="14" width="28" height="6" rx="2" fill="#5ce1ff"></rect></g>
+        <g class="prop prop-dawn"><circle cx="58" cy="14" r="4" fill="#ffb020"></circle></g>
+        <g class="prop prop-dusk"><circle cx="58" cy="16" r="5" fill="#ff7a45"></circle></g>
+        <g class="prop prop-night"><circle cx="60" cy="12" r="2" fill="#fff"></circle></g>
+        <g class="prop prop-ivr"><rect x="20" y="24" width="32" height="8" rx="3" fill="#9b8cff" opacity="0.85"></rect></g>
+        <g class="prop prop-dial"><circle cx="58" cy="40" r="6" fill="none" stroke="#c6ff4a" stroke-width="2"></circle></g>
+        <g class="prop prop-boss"><rect x="48" y="46" width="14" height="6" rx="2" fill="#ffe14a"></rect></g>
+        <g class="prop prop-egg"><polygon points="36,8 40,16 32,16" fill="#ff2bd6"></polygon></g>
+      </svg>
+    </a>
     <div class="top-actions">
-      <button type="button" class="btn ghost hide-sm" id="sound-toggle" aria-pressed="false">Sound off</button>
+      <button type="button" class="btn links-toggle" id="links-toggle" aria-expanded="false" aria-controls="utilbar">Links</button>
       <button type="button" class="btn" id="open-settings">Settings</button>
     </div>
   </header>
+  <nav class="primary-menu" id="primary-menu" aria-label="University menu">
+    <a href="#/atlas" data-i18n="diagrams">Diagrams</a>
+    <a href="#/flows" data-i18n="flows">Flows</a>
+    <a href="#/charts" data-i18n="charts">Charts</a>
+    <a href="#/downloads" data-i18n="cheats">Cheat Codes</a>
+    <a href="#/play" data-i18n="play">Play</a>
+    <a href="#/ecosystem" data-i18n="ecosystem">Ecosystem</a>
+    <a href="#/offline" data-i18n="downloads">Downloads</a>
+    <a href="#/career" data-i18n="careers">Careers</a>
+  </nav>
+  </div>
+  <div id="hero-slot" hidden>
+    <div class="hero-flat" id="hero-flat" hidden></div>
+    <div class="hero-hit" id="hero-hit"></div>
+    <div class="hero-copy" id="hero-copy"></div>
+    <div class="queue-meter" id="queue-meter">
+      <span>Queue</span>
+      <strong id="queue-count">6</strong>
+      <span class="qm-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+    </div>
+  </div>
   <div class="shell">
     <nav class="rail" id="rail" aria-label="Lab sections"></nav>
     <main id="main">
+      <nav id="crumbs" class="crumbs" aria-label="Breadcrumb"><a href="#/">Home</a></nav>
       <h1 id="view-title">Five9 Lab</h1>
       <p id="lede" class="lede">Run the floor. Build an IVR, pace a dialer, and break a SIP path on purpose.</p>
       <div id="view" aria-live="polite">
@@ -61,15 +122,43 @@
     <a href="#/" data-tab="home">Home</a>
     <a href="#/tracks" data-tab="tracks">Tracks</a>
     <a href="#/tools" data-tab="tools">Tools</a>
+    <a href="#/atlas" data-tab="atlas">Atlas</a>
     <a href="#/progress" data-tab="progress">Progress</a>
     <button type="button" id="tab-settings">Settings</button>
   </nav>
   <dialog id="settings" aria-labelledby="settings-title">
     <h2 id="settings-title">Floor settings</h2>
     <p class="note">Saved in this browser only.</p>
+    <form class="uni-search" id="uni-search" role="search">
+      <label for="uni-q">Search lessons</label>
+      <input id="uni-q" name="q" type="search" placeholder="Search lessons" enterkeyhint="search">
+    </form>
+    <div class="row">
+      <label class="lang"><span data-i18n="lang">Language</span>
+        <select id="lang-pick" aria-label="Language">
+          <option value="en">English</option>
+          <option value="es">Español</option>
+          <option value="hi">हिन्दी</option>
+          <option value="te">తెలుగు</option>
+          <option value="fr">Français</option>
+          <option value="de">Deutsch</option>
+          <option value="ja">日本語</option>
+          <option value="ar">العربية</option>
+        </select>
+      </label>
+      <a class="btn ghost" href="#/regions" data-i18n="regions">Regions</a>
+      <button type="button" class="btn ghost" id="mode-toggle">Light</button>
+    </div>
     <div class="field">
       <span class="lbl" id="theme-label">Theme</span>
       <div class="swatches" role="group" aria-labelledby="theme-label">
+        <button type="button" class="swatch" data-theme-pick="holographic" style="background:linear-gradient(135deg,#ffd6f2,#b8fff4,#ffe7a8)" aria-label="Holographic"></button>
+        <button type="button" class="swatch" data-theme-pick="neon" style="background:linear-gradient(135deg,#00fff0,#39ff14)" aria-label="Neon"></button>
+        <button type="button" class="swatch" data-theme-pick="cyberpunk" style="background:#d6ff00" aria-label="Cyberpunk"></button>
+        <button type="button" class="swatch" data-theme-pick="sunset" style="background:#ff8a3d" aria-label="Sunset"></button>
+        <button type="button" class="swatch" data-theme-pick="light" style="background:linear-gradient(135deg,#fb7185,#a78bfa,#22d3ee)" aria-label="Light"></button>
+        <button type="button" class="swatch" data-theme-pick="futuristic" style="background:#061018" aria-label="Futuristic"></button>
+        <button type="button" class="swatch" data-theme-pick="gaming" style="background:#c6ff4a" aria-label="Gaming"></button>
         <button type="button" class="swatch" data-theme-pick="signal" style="background:#07111c" aria-label="Signal night"></button>
         <button type="button" class="swatch" data-theme-pick="paper" style="background:#f3f6fb" aria-label="Paper floor"></button>
         <button type="button" class="swatch" data-theme-pick="contrast" style="background:#000;border-color:#ffe600" aria-label="High contrast"></button>
@@ -103,6 +192,47 @@
       <button type="button" class="btn ghost" id="narrate-sample">Play sample</button>
     </div>
   </dialog>
+  <aside class="audio-dock" id="audio-dock">
+    <h2 data-i18n="audio">Architect conversation</h2>
+    <p class="note">The player stays on these paths so a later recording can replace the files. What is here now is a short espeak-ng study dialogue, not a Five9 recording.</p>
+    <p><strong>How to use the floor</strong><br><audio id="lab-audio" controls preload="metadata" src="audio/architect-floor.mp3"></audio></p>
+    <p><strong>How to share the lab</strong><br><audio id="lab-audio-share" controls preload="metadata" src="audio/architect-share.mp3"></audio></p>
+    <label>Playback rate <select id="audio-rate" aria-label="Playback rate"><option value="0.85">0.85</option><option value="1" selected>1</option><option value="1.15">1.15</option><option value="1.3">1.3</option></select></label>
+    <p id="audio-fallback" class="note" hidden>The audio files did not load. The scripts are in audio/scripts/.</p>
+    <p><a href="https://github.com/cipher0x9/five9-lab-free-university-mesmerizing">Rate, comment, help</a> · <a href="https://cyphermonkeylabs.com">Share the lab</a> · <a href="https://linktr.ee/cyphermonkey">linktr.ee/cyphermonkey</a></p>
+  </aside>
+  <div id="tip" hidden></div>
+  <dialog id="lightbox" aria-labelledby="lb-title">
+    <div class="row">
+      <h2 id="lb-title">Diagram</h2>
+      <button type="button" class="btn" id="lb-play">Pause</button>
+      <button type="button" class="btn" id="lb-step">Step</button>
+      <button type="button" class="btn primary" id="lb-close">Close</button>
+    </div>
+    <div id="lb-stage"></div>
+    <p id="lb-why"></p>
+    <p id="lb-legend" class="note"></p>
+  </dialog>
+  <footer class="site-footer">
+    <div class="foot-grid">
+      <div>
+        <p class="signature">CYPHER0X9 · Five9 Lab · Signal University</p>
+        <p class="legal">Independent educational project, not affiliated with or endorsed by any vendor. Trademarks belong to their owners. MIT code, CC BY-NC-SA content. Product behavior belongs to the cited Five9 pages. This lab does not speak for Five9, Inc.</p>
+        <p><a href="https://cyphermonkeylabs.com/#contact">Report a concern or takedown</a> · <a href="https://cyphermonkeylabs.com/#contact">Work with us</a></p>
+      </div>
+      <div>
+        <p class="kicker">Next lab</p>
+        <div class="next-labs">
+          <a href="https://cipher0x9.github.io/webex-lab-free-university-mesmerizing/">Webex Canon</a>
+          <a href="https://cipher0x9.github.io/uc-lab-free-university-mesmerizing/">UC Lab</a>
+          <a href="https://cipher0x9.github.io/ai-lab-free-university-mesmerizing/">AI Lab</a>
+          <a href="https://cipher0x9.github.io/five9-lab-free-university-mesmerizing/">Five9 Lab</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="vendor/d3/d3.min.js"></script>
+  <script src="vendor/markmap/view.js"></script>
   <script type="module" src="js/app.js"></script>
 </body>
 </html>

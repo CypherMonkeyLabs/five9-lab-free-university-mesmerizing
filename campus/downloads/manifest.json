@@ -1,0 +1,174 @@
+{
+  "files": [
+    {
+      "title": "Ports and protocols (HTML)",
+      "href": "downloads/ports-protocols.html",
+      "kind": "HTML"
+    },
+    {
+      "title": "Ports and protocols (PDF)",
+      "href": "downloads/ports-protocols.pdf",
+      "kind": "PDF"
+    },
+    {
+      "title": "Ports and protocols (PNG)",
+      "href": "downloads/ports-protocols.png",
+      "kind": "PNG"
+    },
+    {
+      "title": "G.711 bandwidth extras (HTML)",
+      "href": "downloads/bandwidth.html",
+      "kind": "HTML"
+    },
+    {
+      "title": "G.711 bandwidth extras (PDF)",
+      "href": "downloads/bandwidth.pdf",
+      "kind": "PDF"
+    },
+    {
+      "title": "G.711 bandwidth extras (PNG)",
+      "href": "downloads/bandwidth.png",
+      "kind": "PNG"
+    },
+    {
+      "title": "Call flows to say out loud (HTML)",
+      "href": "downloads/call-flows.html",
+      "kind": "HTML"
+    },
+    {
+      "title": "Call flows to say out loud (PDF)",
+      "href": "downloads/call-flows.pdf",
+      "kind": "PDF"
+    },
+    {
+      "title": "Call flows to say out loud (PNG)",
+      "href": "downloads/call-flows.png",
+      "kind": "PNG"
+    },
+    {
+      "title": "Configuration checklist (HTML)",
+      "href": "downloads/config-checklist.html",
+      "kind": "HTML"
+    },
+    {
+      "title": "Configuration checklist (PDF)",
+      "href": "downloads/config-checklist.pdf",
+      "kind": "PDF"
+    },
+    {
+      "title": "Configuration checklist (PNG)",
+      "href": "downloads/config-checklist.png",
+      "kind": "PNG"
+    },
+    {
+      "title": "Troubleshooting tree (HTML)",
+      "href": "downloads/troubleshooting.html",
+      "kind": "HTML"
+    },
+    {
+      "title": "Troubleshooting tree (PDF)",
+      "href": "downloads/troubleshooting.pdf",
+      "kind": "PDF"
+    },
+    {
+      "title": "Troubleshooting tree (PNG)",
+      "href": "downloads/troubleshooting.png",
+      "kind": "PNG"
+    },
+    {
+      "title": "Glossary starter (HTML)",
+      "href": "downloads/glossary.html",
+      "kind": "HTML"
+    },
+    {
+      "title": "Glossary starter (PDF)",
+      "href": "downloads/glossary.pdf",
+      "kind": "PDF"
+    },
+    {
+      "title": "Glossary starter (PNG)",
+      "href": "downloads/glossary.png",
+      "kind": "PNG"
+    },
+    {
+      "title": "Migration cutover card (HTML)",
+      "href": "downloads/migration-cutover.html",
+      "kind": "HTML"
+    },
+    {
+      "title": "Migration cutover card (PDF)",
+      "href": "downloads/migration-cutover.pdf",
+      "kind": "PDF"
+    },
+    {
+      "title": "Migration cutover card (PNG)",
+      "href": "downloads/migration-cutover.png",
+      "kind": "PNG"
+    },
+    {
+      "title": "CRM and API card (HTML)",
+      "href": "downloads/crm-adapters.html",
+      "kind": "HTML"
+    },
+    {
+      "title": "CRM and API card (PDF)",
+      "href": "downloads/crm-adapters.pdf",
+      "kind": "PDF"
+    },
+    {
+      "title": "CRM and API card (PNG)",
+      "href": "downloads/crm-adapters.png",
+      "kind": "PNG"
+    },
+    {
+      "title": "E911 card (HTML)",
+      "href": "downloads/e911.html",
+      "kind": "HTML"
+    },
+    {
+      "title": "E911 card (PDF)",
+      "href": "downloads/e911.pdf",
+      "kind": "PDF"
+    },
+    {
+      "title": "E911 card (PNG)",
+      "href": "downloads/e911.png",
+      "kind": "PNG"
+    },
+    {
+      "title": "Security and compliance card (HTML)",
+      "href": "downloads/security-compliance.html",
+      "kind": "HTML"
+    },
+    {
+      "title": "Security and compliance card (PDF)",
+      "href": "downloads/security-compliance.pdf",
+      "kind": "PDF"
+    },
+    {
+      "title": "Security and compliance card (PNG)",
+      "href": "downloads/security-compliance.png",
+      "kind": "PNG"
+    },
+    {
+      "title": "Flashcards (JSON)",
+      "href": "downloads/flashcards.json",
+      "kind": "JSON"
+    },
+    {
+      "title": "Flashcards (printable HTML)",
+      "href": "downloads/flashcards.html",
+      "kind": "HTML"
+    },
+    {
+      "title": "Flashcards (PDF)",
+      "href": "downloads/flashcards.pdf",
+      "kind": "PDF"
+    },
+    {
+      "title": "Full offline bundle (zip)",
+      "href": "downloads/five9-lab-offline.zip",
+      "kind": "ZIP"
+    }
+  ]
+}

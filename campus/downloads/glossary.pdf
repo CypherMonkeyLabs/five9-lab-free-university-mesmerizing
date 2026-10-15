@@ -1,0 +1,103 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 2383 >>
+stream
+BT
+/F1 10 Tf
+48 740 Td
+14 TL
+(Domain: The VCC tenant. Skills, users, lists, and campaigns stay inside it.) Tj
+T*
+(Skill group: Agents or supervisors who can take a campaign's work. A user and a campaign can) Tj
+T*
+(have more than one.) Tj
+T*
+(User profile: The permission template for a person. Not a campaign profile.) Tj
+T*
+(Campaign profile: Overrides defaults such as ANI. One profile is assigned to a campaign. The) Tj
+T*
+(same profile can be reused.) Tj
+T*
+(Campaign: Inbound, outbound, or autodial. Blended is staffing language, not a fourth type.) Tj
+T*
+(DNIS: The number an inbound campaign answers. A stopped campaign does not answer.) Tj
+T*
+(Disposition: The outcome code on a call. Final disposition stops the other numbers on that) Tj
+T*
+(record for the campaign.) Tj
+T*
+(List penetration: The default list walk: first number on every record, then the next number.) Tj
+T*
+(Vertical dialing: Finishes the numbers on one record before moving on. Community notes say) Tj
+T*
+(the compass wording is easy to misread.) Tj
+T*
+(Preview: The agent sees CRM history before the dial.) Tj
+T*
+(Progressive: The outbound page describes one customer call per available agent. The dialer) Tj
+T*
+(page also says adaptive pace. Quote the page you mean.) Tj
+T*
+(Power: A configured number of calls per agent, with an abandon throttle.) Tj
+T*
+(Predictive: Algorithmic pacing. Product guidance talks about teams larger than about ten) Tj
+T*
+(agents.) Tj
+T*
+(Manual touch: No automatic dial. TCPA manual touch adds typing, blocks paste, and enables) Tj
+T*
+(Dial on a match.) Tj
+T*
+(Max Abandoned Call Percentage: A campaign field with a warning if you change it. This lab) Tj
+T*
+(does not state a numeric default.) Tj
+T*
+(IVR module: A named block in the IVR Administrator's Guide, such as Menu, Play, If/Else, or) Tj
+T*
+(Skill Transfer.) Tj
+T*
+(Skill Transfer: Sends the call toward one or more skills. No skill selected means the) Tj
+T*
+(Default queue in the community write-up.) Tj
+T*
+(Default queue: Where a Skill Transfer with no skill goes, per the community article.) Tj
+T*
+() Tj
+T*
+(CYPHER0X9 Five9 Lab. Independent study. Not affiliated with Five9.) Tj
+T*
+(https://cyphermonkeylabs.com) Tj
+T*
+(https://linktr.ee/cyphermonkey) Tj
+T*
+(https://github.com/cipher0x9/five9-lab-free-university-mesmerizing) Tj
+T*
+(MIT code, CC BY-NC-SA content. Trademarks belong to their owners.) Tj
+T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Contents 2 0 R /Resources << /Font << /F1 1 0 R >> >> >>
+endobj
+4 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+5 0 obj
+<< /Type /Catalog /Pages 4 0 R >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000002514 00000 n 
+0000002640 00000 n 
+0000002697 00000 n 
+trailer << /Size 6 /Root 5 0 R >>
+startxref
+2746
+%%EOF
