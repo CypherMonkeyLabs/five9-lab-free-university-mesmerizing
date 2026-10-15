@@ -15,6 +15,13 @@ body > #chrome {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
 }
 body > #readbar { z-index: 90; }
+body > #tabbar {
+  position: fixed;
+  z-index: 70;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 .topbar { flex-wrap: nowrap; overflow-x: auto; align-items: center; }
 .mascot-link, #mascot { width: 48px; height: 48px; flex: none; overflow: hidden; }
 .primary-menu {
@@ -56,24 +63,39 @@ body > #readbar { z-index: 90; }
 .hero-copy {
   position: absolute;
   z-index: 2;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   display: grid;
-  gap: 10px;
-  padding: 64px 4vw 18px;
+  grid-template-rows: auto 1fr auto;
+  gap: 8px;
+  padding: 14px 3vw 16px;
   pointer-events: none;
-  background: linear-gradient(180deg, transparent, color-mix(in srgb, var(--cc-bg) 78%, transparent) 36%);
+  background: none;
 }
 .hero-greet {
   margin: 0;
-  font-size: clamp(2rem, 4.8vw, 4.2rem);
+  justify-self: start;
+  font-size: clamp(1.6rem, 3vw, 2.7rem);
   font-weight: 800;
   letter-spacing: -0.045em;
   line-height: 0.95;
   color: #fff;
   text-shadow: 0 0 22px var(--scene-b), 0 0 6px var(--scene-a);
 }
+.hero-dock {
+  display: grid;
+  gap: 8px;
+  padding: 10px 12px 12px;
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--cc-bg) 58%, transparent);
+  border: 1px solid color-mix(in srgb, var(--scene-a) 40%, transparent);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
+}
+.hero-dock .live-counters .stat strong { font-size: 1.35rem; }
+.hero-dock .spotlight { min-height: 48px; padding: 8px 10px; }
+#chrome #read-focus,
+#chrome #sound-toggle { display: none; }
+.top-actions .swatch { width: 26px; height: 26px; border-radius: 8px; }
 .hero-copy a, .hero-copy button { pointer-events: auto; }
 .hero-flat {
   background-image:
@@ -177,7 +199,11 @@ a.card:hover .iso { transform: rotateX(16deg) rotateY(-22deg) translateY(-6px); 
 .ring-bg { fill: none; stroke: var(--cc-line); stroke-width: 4; }
 .ring-val { fill: none; stroke: var(--scene-a); stroke-width: 4; stroke-linecap: round; transform: rotate(-90deg); transform-origin: 18px 18px; }
 
-.atlas-grid .diag { min-height: 240px; }
+.atlas-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.atlas-grid figure:first-child { grid-column: 1 / -1; }
+.atlas-grid .diag { min-height: 280px; }
+.atlas-grid figure:first-child .diag { min-height: 420px; }
+.chart-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .atlas-grid figure { position: relative; }
 .enlarge {
   margin-top: 8px;
@@ -341,10 +367,15 @@ html[dir="rtl"] .primary-menu { direction: rtl; }
 html[dir="rtl"] .hero-copy { direction: rtl; }
 
 @media (max-width: 800px) {
-  #hero-slot { min-height: 640px; }
-  a.card { grid-template-columns: 64px minmax(0, 1fr); }
+  #hero-slot { min-height: 0; height: calc(100vh - var(--chrome-h) - 72px); }
+  .primary-menu { flex-wrap: wrap; overflow: visible; }
+  .primary-menu a { padding: 6px 10px; font-size: 0.82rem; }
+  a.card:has(.iso) { grid-template-columns: 64px minmax(0, 1fr); }
   .iso { width: 64px; height: 52px; }
   .topbar { overflow-x: auto; }
+  .atlas-grid, .chart-grid { grid-template-columns: 1fr; }
+  .atlas-grid figure:first-child .diag { min-height: 280px; }
+  .hero-greet { font-size: 1.45rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   #mascot, a.card::after, .hero-flat::before, .chart .bar { animation: none; }

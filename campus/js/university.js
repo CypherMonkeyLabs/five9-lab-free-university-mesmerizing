@@ -264,7 +264,7 @@ function renderPlay(ctx) {
     ["#/daily", "Daily challenge", "One real quiz item from the lesson bank."],
     ["#/explorer", "Flow map", "Click a box. The note cites the page."]
   ];
-  ctx.view.innerHTML = `<div class="grid">${tiles.map(([href, title, text]) => `<a class="card" href="${href}"><h2>${esc(title)}</h2><p>${esc(text)}</p></a>`).join("")}</div>`;
+  ctx.view.innerHTML = `<div class="grid">${tiles.map(([href, title, text], index) => `<a class="card" href="${href}">${isoMarkup(index)}<div class="card-copy"><h2>${esc(title)}</h2><p>${esc(text)}</p></div></a>`).join("")}</div>`;
 }
 
 function renderPorts(ctx, data) {
@@ -662,9 +662,12 @@ export function paintHeroCopy(catalog) {
   ];
   host.innerHTML = `
     <p class="hero-greet" data-i18n="greet">Signal university</p>
-    <div class="ring-wrap"><svg class="ring" viewBox="0 0 36 36" aria-hidden="true"><circle class="ring-bg" cx="18" cy="18" r="15"></circle><circle class="ring-val" cx="18" cy="18" r="15" stroke-dasharray="${dash} 94"></circle></svg><span>${pct}% of lessons finished here</span></div>
-    ${counterRow(catalog)}
-    <div class="spot-row">${spots.map(([href, key, label, detail]) => `<a class="spotlight" href="${href}"><span data-i18n="${key}">${esc(label)}</span><strong>${esc(detail)}</strong></a>`).join("")}</div>`;
+    <div class="hero-mid" aria-hidden="true"></div>
+    <div class="hero-dock">
+      <div class="ring-wrap"><svg class="ring" viewBox="0 0 36 36" aria-hidden="true"><circle class="ring-bg" cx="18" cy="18" r="15"></circle><circle class="ring-val" cx="18" cy="18" r="15" stroke-dasharray="${dash} 94"></circle></svg><span>${pct}% of lessons finished here</span></div>
+      ${counterRow(catalog)}
+      <div class="spot-row">${spots.map(([href, key, label, detail]) => `<a class="spotlight" href="${href}"><span data-i18n="${key}">${esc(label)}</span><strong>${esc(detail)}</strong></a>`).join("")}</div>
+    </div>`;
   slot.hidden = false;
   applyI18n();
 }

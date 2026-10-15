@@ -72,7 +72,8 @@ export function mountHero(host) {
     showFlat(host, true);
     return;
   }
-  if (live && live.host === host) {
+  const theme = document.documentElement.dataset.theme || "";
+  if (live && live.host === host && live.theme === theme) {
     recolorHero();
     showFlat(host, false);
     return;
@@ -88,26 +89,29 @@ export function mountHero(host) {
   const scene = new THREE.Scene();
   scene.fog = new THREE.Fog(colors.bg, 10, 28);
   const camera = new THREE.PerspectiveCamera(48, 1, 0.1, 40);
-  camera.position.set(0, 2.1, 9);
+  camera.position.set(0, 1.6, 7.2);
   const mats = [];
   const mat = (color) => {
     const material = new THREE.MeshBasicMaterial({ color, wireframe: true });
     mats.push(material);
     return material;
   };
+  const lightTheme = theme === "light" || theme === "paper" || theme === "aurora";
   const glowMat = (color) => {
     const material = new THREE.SpriteMaterial({
       map: glowTexture(),
       color,
       transparent: true,
-      blending: THREE.AdditiveBlending,
+      opacity: lightTheme ? 0.55 : 1,
+      blending: lightTheme ? THREE.NormalBlending : THREE.AdditiveBlending,
       depthWrite: false
     });
     mats.push(material);
     return material;
   };
-  const ico = new THREE.Mesh(new THREE.IcosahedronGeometry(1.7, 1), mat(colors.a));
-  scene.add(ico);
+  const ico = new THREE.Mesh(new THREE.IcosahedronGeometry(2.05, 1), mat(colors.a));
+  const core = new THREE.Mesh(new THREE.IcosahedronGeometry(1.05, 0), mat(colors.c));
+  scene.add(ico, core);
   const halo = new THREE.Sprite(glowMat(colors.b));
   halo.scale.set(6.5, 6.5, 1);
   scene.add(halo);
@@ -174,6 +178,8 @@ export function mountHero(host) {
     const t = now * 0.001;
     ico.rotation.y = t * 0.18;
     ico.rotation.x = Math.sin(t * 0.3) * 0.2;
+    core.rotation.y = -t * 0.32;
+    core.rotation.z = t * 0.12;
     ringA.rotation.x = t * 0.22;
     ringA.rotation.y = t * 0.08;
     ringB.rotation.z = t * 0.16;
@@ -188,13 +194,13 @@ export function mountHero(host) {
     stars.rotation.y = t * 0.02;
     const scroll = Math.min(window.scrollY / 800, 1);
     camera.position.x = (pointer.x - 0.5) * 2.2;
-    camera.position.y = 2.1 + (0.5 - pointer.y) * 1.1 - scroll * 0.6;
-    camera.position.z = 9 - scroll * 1.2;
+    camera.position.y = 1.6 + (0.5 - pointer.y) * 1.1 - scroll * 0.6;
+    camera.position.z = 7.2 - scroll * 1.2;
     camera.lookAt(0, 0, 0);
     renderer.render(scene, camera);
     live.clock.raf = requestAnimationFrame(tick);
   };
-  live = { host, renderer, canvas: renderer.domElement, mats, onMove, onResize, clock };
+  live = { host, renderer, canvas: renderer.domElement, mats, onMove, onResize, clock, theme };
   live.clock.raf = requestAnimationFrame(tick);
 }
 
