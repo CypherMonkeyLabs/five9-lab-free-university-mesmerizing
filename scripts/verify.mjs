@@ -62,7 +62,7 @@ for (const file of htmlSheets) {
   const text = readFileSync(join(root, "campus", file.href), "utf8");
   if (!text.includes("https://cyphermonkeylabs.com")) problems.push(`sheet-labs ${file.href}`);
   if (!text.includes("https://linktr.ee/cyphermonkey")) problems.push(`sheet-tree ${file.href}`);
-  if (!text.includes("https://github.com/cipher0x9/five9-lab-free-university-mesmerizing")) problems.push(`sheet-repo ${file.href}`);
+  if (!text.includes("https://github.com/CypherMonkeyLabs/five9-lab-free-university-mesmerizing")) problems.push(`sheet-repo ${file.href}`);
   if (!text.includes("CC BY-NC-SA")) problems.push(`sheet-license ${file.href}`);
   if (/linkedin/i.test(text)) problems.push(`sheet-linkedin ${file.href}`);
   if (/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i.test(text)) problems.push(`sheet-email ${file.href}`);
@@ -77,10 +77,10 @@ for (const label of ["Diagrams", "Flows", "Charts", "Cheat Codes", "Play", "Ecos
 if (!page.includes('id="primary-menu"') || !page.includes('id="crumbs"')) problems.push("chrome");
 if (!uniJs.includes('id="fold"') || !uniJs.includes("track-band")) problems.push("surfaces");
 for (const href of [
-  "https://cipher0x9.github.io/webex-lab-free-university-mesmerizing/",
-  "https://cipher0x9.github.io/uc-lab-free-university-mesmerizing/",
-  "https://cipher0x9.github.io/ai-lab-free-university-mesmerizing/",
-  "https://cipher0x9.github.io/five9-lab-free-university-mesmerizing/"
+  "https://cyphermonkeylabs.com/webex-lab-free-university-mesmerizing/",
+  "https://cyphermonkeylabs.com/uc-lab-free-university-mesmerizing/",
+  "https://cyphermonkeylabs.com/ai-lab-free-university-mesmerizing/",
+  "https://cyphermonkeylabs.com/five9-lab-free-university-mesmerizing/"
 ]) {
   if (!page.includes(href) || !rootPage.includes(href)) problems.push(`sibling ${href}`);
 }
