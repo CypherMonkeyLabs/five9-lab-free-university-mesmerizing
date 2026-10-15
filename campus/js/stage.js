@@ -77,6 +77,8 @@ export function stopHero() {
   if (live.fly) live.fly.resolve();
   live.host.removeEventListener("pointermove", live.onMove);
   window.removeEventListener("resize", live.onResize);
+  if (live.onVis) document.removeEventListener("visibilitychange", live.onVis);
+  if (live.watch) live.watch.disconnect();
   live.renderer.dispose();
   live.renderer.forceContextLoss();
   live.canvas.remove();
@@ -122,7 +124,7 @@ export function mountHero(host) {
   const colors = sceneColors();
   if (theme === "neon") colors.bg = 0x05010c;
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false, powerPreference: "high-performance" });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
   renderer.setClearColor(colors.bg, 1);
   renderer.domElement.className = "hero-gl";
   host.insertBefore(renderer.domElement, host.firstChild);
@@ -373,7 +375,8 @@ export function mountHero(host) {
     shaft.rotation.y = t * 0.08;
     stars.rotation.y = t * 0.015;
     dust.rotation.y = -t * 0.03;
-    const scroll = Math.min(window.scrollY / 800, 1);
+    const motion = document.documentElement.dataset.motion === "reduce";
+    const scroll = motion ? 0 : Math.min(window.scrollY / 800, 1);
     let z = 7.6 - scroll * 0.8;
     if (live.intro) {
       const introU = Math.min(1, (now - live.intro.start) / live.intro.dur);
@@ -395,8 +398,30 @@ export function mountHero(host) {
     camera.position.z = z;
     camera.lookAt(0.15, 0.15, 0);
     renderer.render(scene, camera);
-    if (live && live.renderer === renderer) live.clock.raf = requestAnimationFrame(tick);
+    if (live && live.renderer === renderer && !live.held) live.clock.raf = requestAnimationFrame(tick);
   };
+  const hold = () => {
+    if (!live || live.renderer !== renderer) return;
+    const stop = document.hidden || live.offscreen;
+    if (stop) {
+      if (live.clock.raf) cancelAnimationFrame(live.clock.raf);
+      live.clock.raf = 0;
+      live.held = true;
+      return;
+    }
+    if (live.held) {
+      live.held = false;
+      live.clock.raf = requestAnimationFrame(tick);
+    }
+  };
+  const onVis = () => hold();
+  document.addEventListener("visibilitychange", onVis);
+  const watch = new IntersectionObserver((entries) => {
+    if (!live || live.renderer !== renderer) return;
+    live.offscreen = !entries.some((entry) => entry.isIntersecting);
+    hold();
+  }, { threshold: 0.05 });
+  watch.observe(host);
   live = {
     host,
     renderer,
@@ -409,9 +434,16 @@ export function mountHero(host) {
     theme,
     qtick: -1,
     intro: document.documentElement.dataset.motion === "reduce" ? null : { start: performance.now(), dur: 1300 },
-    fly: null
+    fly: null,
+    held: false,
+    offscreen: false,
+    onVis,
+    watch
   };
-  live.clock.raf = requestAnimationFrame(tick);
+  live.clock.raf = requestAnimationFrame((now) => {
+    tick(now);
+    hold();
+  });
 }
 
 export function heroIsLive() {
