@@ -1,5 +1,5 @@
 import { loadTopology, loadIvr, loadPacing } from "./loaders.js";
-import { tryUniversityRoute, afterRoute, initUniversity, decorateRail } from "./university.js";
+import { tryUniversityRoute, afterRoute, initUniversity, decorateRail, homeFoldHtml, signalDeck } from "./university.js";
 
 const SETTINGS_KEY = "f9lab-settings";
 const PROGRESS_KEY = "f9lab-progress";
@@ -251,31 +251,6 @@ function doneCount() {
   return Object.values(session.progress.lessons).filter((row) => row.done).length;
 }
 
-function heroArt() {
-  return `<div class="hero-art" aria-hidden="true">
-    <div class="scan"></div>
-    <svg viewBox="0 0 520 280">
-      <rect width="520" height="280" fill="#041018"></rect>
-      <g stroke="#1d3c52" stroke-width="1">
-        ${Array.from({ length: 8 }, (_, i) => `<line x1="0" y1="${30 + i * 30}" x2="520" y2="${30 + i * 30}"></line>`).join("")}
-      </g>
-      <g fill="none" stroke="#3ee0ff" stroke-width="2">
-        <path d="M40 190 C 120 190, 140 80, 220 80 S 320 190, 400 120" ></path>
-        <path d="M70 210 H 180" stroke="#f5b942"></path>
-        <path d="M400 120 H 470" stroke="#3ddc97"></path>
-      </g>
-      <g>
-        <rect x="28" y="168" width="70" height="44" rx="8" fill="#102033" stroke="#f5b942"></rect>
-        <rect x="186" y="58" width="86" height="48" rx="8" fill="#102033" stroke="#3ee0ff"></rect>
-        <rect x="360" y="96" width="78" height="48" rx="8" fill="#102033" stroke="#3ddc97"></rect>
-        <text x="40" y="194" fill="#f5b942" font-size="12">PSTN</text>
-        <text x="200" y="86" fill="#9aefff" font-size="12">VCC domain</text>
-        <text x="374" y="124" fill="#3ddc97" font-size="12">Agents</text>
-      </g>
-    </svg>
-  </div>`;
-}
-
 function card(href, kicker, heading, body, tags) {
   return `<a class="card" href="${esc(href)}"><p class="kicker">${esc(kicker)}</p><h2>${esc(heading)}</h2><p>${esc(body)}</p>${tags ? `<div class="tags">${tags}</div>` : ""}</a>`;
 }
@@ -321,32 +296,23 @@ function markCurrent() {
   });
 }
 
-function renderHome() {
+async function renderHome() {
   setTitle("Five9 Lab", "Run the floor. Build an IVR, pace a dialer, and break a SIP path on purpose.");
   const catalog = session.catalog;
-  const lessons = lessonCount();
-  const done = doneCount();
   const last = session.progress.last;
+  const fold = await homeFoldHtml();
   view.innerHTML = `
-    <section class="hero">
-      <div class="panel">
-        <p class="kicker">Independent study floor</p>
-        <p>A contact-center operations console for Five9 Virtual Contact Center. Campaigns, dialer modes, IVR, skills, Agent Desktop Plus, WEM, IVA, CRM adapters, SIP, APIs, and a Cisco UCCX/UCCE bridge. Every claim is linked. Anything not settled in a public page is marked uncertain.</p>
-        <p class="note">Not affiliated with Five9, Inc. Names are used so the citations stay checkable.</p>
-        <div class="row">
-          ${last ? `<a class="btn primary" href="${esc(last)}">Resume</a>` : `<a class="btn primary" href="#/track/t01">Start with the domain</a>`}
-          <a class="btn" href="#/topology">Open the 3D floor</a>
-          <a class="btn" href="#/ivr">IVR builder</a>
-        </div>
+    ${fold}
+    ${signalDeck(catalog)}
+    <section class="panel">
+      <p>A contact-center operations console for Five9 Virtual Contact Center. Campaigns, dialer modes, IVR, skills, Agent Desktop Plus, WEM, IVA, CRM adapters, SIP, APIs, and a Cisco UCCX/UCCE bridge. Every claim is linked. Anything not settled in a public page is marked uncertain.</p>
+      <p class="note">Not affiliated with Five9, Inc. Names are used so the citations stay checkable.</p>
+      <div class="row">
+        ${last ? `<a class="btn primary" href="${esc(last)}">Resume</a>` : `<a class="btn primary" href="#/track/t01">Start with the domain</a>`}
+        <a class="btn" href="#/topology">Open the 3D floor</a>
+        <a class="btn" href="#/play">Play</a>
       </div>
-      ${heroArt()}
     </section>
-    <div class="stats">
-      <div class="panel stat"><strong>${catalog.tracks.length}</strong><span>Tracks</span></div>
-      <div class="panel stat"><strong>${lessons}</strong><span>Lessons</span></div>
-      <div class="panel stat"><strong>${catalog.counts.quiz}</strong><span>Quiz questions</span></div>
-      <div class="panel stat"><strong>${done}</strong><span>Lessons finished</span></div>
-    </div>
     <h2>Benches</h2>
     <div class="grid">
       ${card("#/topology", "WebGL", "3D topology", "Orbit the domain, SBCs, IVR, agents, CRM, and RedSky. Toggle a trunk, a WAN, or a stale 911 address.", `<span class="tag hot">Failure toggles</span>`)}
@@ -558,7 +524,10 @@ function renderLesson(track, lesson) {
       const good = Number(picked.value) === q.answer;
       why.textContent = `${good ? "Correct. " : "Not yet. "}${q.why}`;
       why.className = good ? "why ok" : "why bad";
-      if (good) audio.ok(); else audio.bad();
+      if (good) {
+        audio.ok();
+        window.dispatchEvent(new CustomEvent("f9-correct"));
+      } else audio.bad();
       const row = session.progress.lessons[key] || { quiz: 0, done: false };
       if (good) row.quiz = Math.max(row.quiz || 0, state.qi + 1);
       if (row.quiz >= lesson.quiz.length) row.done = true;
@@ -597,6 +566,7 @@ function renderLesson(track, lesson) {
       why.className = good ? "why ok" : "why bad";
       if (good) {
         audio.ok();
+        window.dispatchEvent(new CustomEvent("f9-correct"));
         session.progress.faults[key] = true;
         saveProgress();
       } else audio.bad();
@@ -880,27 +850,27 @@ async function route() {
     await getCatalog();
     renderRail();
     if (await tryUniversityRoute(bare, { view, setTitle, esc, getJson, getTrack, getCatalog, session, audio, on, motionReduced })) return;
-    if (bare === "#/" || bare === "") return renderHome();
+    if (bare === "#/" || bare === "") return await renderHome();
     if (bare === "#/tracks") return renderTracks();
     if (bare === "#/tools") return renderTools();
     if (bare === "#/progress") return renderProgress();
-    if (bare === "#/topology") return renderTopology();
-    if (bare === "#/ivr") return renderIvr();
-    if (bare === "#/pacing") return renderPacing();
-    if (bare === "#/ecosystem") return renderEcosystem();
-    if (bare === "#/certs") return renderCerts();
-    if (bare === "#/interview") return renderInterview();
+    if (bare === "#/topology") return await renderTopology();
+    if (bare === "#/ivr") return await renderIvr();
+    if (bare === "#/pacing") return await renderPacing();
+    if (bare === "#/ecosystem") return await renderEcosystem();
+    if (bare === "#/certs") return await renderCerts();
+    if (bare === "#/interview") return await renderInterview();
     if (bare === "#/search") {
       const params = new URLSearchParams(hash.split("?")[1] || "");
-      return renderSearch(params.get("q") || "");
+      return await renderSearch(params.get("q") || "");
     }
     let match = bare.match(/^#\/track\/([a-z0-9-]+)$/);
-    if (match) return renderTrack(match[1]);
+    if (match) return await renderTrack(match[1]);
     match = bare.match(/^#\/lesson\/([a-z0-9-]+)\/([a-z0-9-]+)$/);
-    if (match) return openLesson(match[1], match[2]);
+    if (match) return await openLesson(match[1], match[2]);
     match = bare.match(/^#\/boss\/([a-z0-9-]+)$/);
-    if (match) return renderBoss(match[1]);
-    if (bare === "#/boss") return renderBoss("");
+    if (match) return await renderBoss(match[1]);
+    if (bare === "#/boss") return await renderBoss("");
     return renderMissing("That page is not on this floor");
   } catch (err) {
     renderError("Check the network and reload. Track files stay out of the first download until you open them.");
@@ -936,11 +906,11 @@ function bindChrome() {
     saveSettings();
     audio.tick();
   });
-  document.querySelectorAll("[data-theme-pick]").forEach((button) => {
-    button.addEventListener("click", () => {
-      session.settings.theme = button.dataset.themePick;
-      saveSettings();
-    });
+  document.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-theme-pick]");
+    if (!button) return;
+    session.settings.theme = button.dataset.themePick;
+    saveSettings();
   });
   document.querySelector("#set-sound").addEventListener("change", (event) => {
     session.settings.sound = event.target.checked;

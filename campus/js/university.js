@@ -1,4 +1,5 @@
-import { diagram, diagramIds, diagramMeta } from "./diagrams.js";
+import { diagram, diagramIds, diagramMeta, flowIds } from "./diagrams.js";
+import { chartStrip } from "./charts.js";
 import { buildZip } from "./zipstore.js";
 
 const UNI_KEY = "f9lab-university";
@@ -203,8 +204,40 @@ function renderTrouble(ctx, data) {
 }
 
 function renderAtlas(ctx) {
-  ctx.setTitle("Architecture atlas", "Teaching drawings. The caption names the public page. None of these are captured Five9 traces.");
-  ctx.view.innerHTML = `<div class="snap">${diagramMeta.map(([id, title, source]) => `<figure class="figure float-card">${diagram(id)}<figcaption><strong>${esc(title)}</strong><br>${esc(source)}</figcaption></figure>`).join("")}</div><p class="note">${diagramIds.length} diagrams on this page. Reduced motion stops the dashes.</p>`;
+  ctx.setTitle("Diagrams", "Teaching drawings. The caption names the public page. None of these are captured Five9 traces.");
+  ctx.view.innerHTML = `<p class="note">${diagramIds.length} diagrams in this atlas. ${flowIds.length} of them are animated flows. Open <a href="#/flows">Flows</a> for the moving ones.</p><div class="snap">${diagramMeta.map(([id, title, source]) => `<figure class="figure float-card">${diagram(id)}<figcaption><strong>${esc(title)}</strong><br>${esc(source)}</figcaption></figure>`).join("")}</div>`;
+}
+
+function renderFlows(ctx) {
+  ctx.setTitle("Flows", `${flowIds.length} animated call, signal, and data flows. The dashes move until reduced motion is on.`);
+  const known = new Map(diagramMeta);
+  ctx.view.innerHTML = `<p class="note">Hand-built SVG. The SIP ladder is an RFC 3261 teaching drawing, not a capture. The forecast loop is textbook Erlang, not the Five9 WEM engine. Mermaid is not bundled.</p><div class="atlas-grid">${flowIds.map((id) => {
+    const row = known.get(id) ? diagramMeta.find((item) => item[0] === id) : null;
+    const title = row ? row[1] : id;
+    const source = row ? row[2] : "This lab";
+    return `<figure class="figure float-card">${diagram(id)}<figcaption><strong>${esc(title)}</strong><br>${esc(source)}</figcaption></figure>`;
+  }).join("")}</div>`;
+}
+
+async function renderCharts(ctx) {
+  const catalog = await ctx.getCatalog();
+  const data = await loadUni();
+  ctx.setTitle("Charts", "Six charts from this lab's catalog and the cited bandwidth and port tables.");
+  ctx.view.innerHTML = `${counterRow(catalog)}<div class="chart-grid">${chartStrip(catalog, data)}</div><h2>Study map</h2><svg id="study-map"></svg><p class="note">The mind map is a study outline for this lab. It is not a Five9 organization chart. It is drawn by the vendored markmap build and does not fetch a stylesheet.</p>`;
+  import("./effects.js").then((mod) => mod.mountMindmap(ctx.view.querySelector("#study-map"))).catch(() => {});
+}
+
+function renderPlay(ctx) {
+  ctx.setTitle("Play", "Benches that use the same public facts as the lessons.");
+  const tiles = [
+    ["#/ivr", "Call-flow sandbox", "IVR modules named in the administrator guide."],
+    ["#/pacing", "Dialer clock", "Preview through predictive, labeled as a teaching clock."],
+    ["#/topology", "3D floor", "Vendored Three.js. Reduced motion uses the flat map."],
+    ["#/ports", "Ports game", "The same rows as the firewall matrix."],
+    ["#/daily", "Daily challenge", "One real quiz item from the lesson bank."],
+    ["#/explorer", "Flow map", "Click a box. The note cites the page."]
+  ];
+  ctx.view.innerHTML = `<div class="grid">${tiles.map(([href, title, text]) => `<a class="card" href="${href}"><h2>${esc(title)}</h2><p>${esc(text)}</p></a>`).join("")}</div>`;
 }
 
 function renderPorts(ctx, data) {
@@ -336,17 +369,18 @@ function frameMap(body) {
   return `<svg class="diag" viewBox="0 0 680 380" role="img" aria-label="Five9 teaching map"><rect class="diag-bg" width="680" height="380" rx="16"></rect>${body}</svg>`;
 }
 
-async function renderDownloads(ctx) {
-  ctx.setTitle("Cheat codes", "One-page sheets, a flashcard deck, and the offline bundle. Generated in this repo.");
+async function renderDownloads(ctx, focusZip) {
+  ctx.setTitle(focusZip ? "Downloads" : "Cheat Codes", "One-page sheets, a flashcard deck, and the offline bundle. Generated in this repo.");
   const response = await fetch("downloads/manifest.json");
   const manifest = await response.json();
-  ctx.view.innerHTML = `<p>Each file carries the lab footer: cyphermonkeylabs.com, the Linktree, this repo, and the independent-study disclaimer. No address is printed.</p>
-    <div class="sheet-list">${manifest.files.map((file) => `<p><a class="btn" href="${esc(file.href)}" download>${esc(file.title)}</a> <span class="note">${esc(file.kind)}</span></p>`).join("")}</div>
-    <h2>Build a pack in the browser</h2>
-    <p>This walks the file list and stores an uncompressed zip. It does not call another host.</p>
-    <button type="button" class="btn primary" id="build-pack">Download offline zip</button>
-    <p id="pack-status" class="note" role="status"></p>`;
+  const sheets = manifest.files.map((file) => `<p><a class="btn" href="${esc(file.href)}" download>${esc(file.title)}</a> <span class="note">${esc(file.kind)}</span></p>`).join("");
+  const zip = `<section id="offline-bundle" class="panel"><h2>Offline bundle</h2><p>The prebuilt zip is in the list above. This button rebuilds an uncompressed zip in the browser from the file list. It does not call another host.</p><button type="button" class="btn primary" id="build-pack">Download offline zip</button><p id="pack-status" class="note" role="status"></p></section>`;
+  ctx.view.innerHTML = `<p>Each sheet carries cyphermonkeylabs.com, linktr.ee/cyphermonkey, this repo, and the independent-study disclaimer.</p>${focusZip ? zip : ""}<div class="sheet-list">${sheets}</div>${focusZip ? "" : zip}`;
   ctx.on(ctx.view.querySelector("#build-pack"), "click", () => downloadPack(ctx.view.querySelector("#pack-status")));
+  if (focusZip) {
+    const bundle = ctx.view.querySelector("#offline-bundle");
+    if (bundle) bundle.scrollIntoView({ block: "nearest" });
+  }
 }
 
 async function downloadPack(status) {
@@ -398,7 +432,10 @@ async function renderDaily(ctx) {
     const ok = Number(picked.value) === item.answer;
     why.textContent = ok ? item.why : `Not that one. ${item.why}`;
     why.className = ok ? "why ok" : "why bad";
-    if (ok) ctx.audio.ok(); else ctx.audio.bad();
+    if (ok) {
+      ctx.audio.ok();
+      window.dispatchEvent(new CustomEvent("f9-correct"));
+    } else ctx.audio.bad();
     const state = loadState();
     state.daily[day] = ok;
     saveState(state);
@@ -511,30 +548,93 @@ function lessonsDone() {
   }
 }
 
-async function mountHome(view) {
+function counterRow(catalog) {
+  const done = lessonsDone();
+  const items = [
+    [catalog.counts.tracks, "Tracks"],
+    [catalog.counts.lessons, "Lessons"],
+    [catalog.counts.quiz, "Quiz"],
+    [done, "Done"]
+  ];
+  return `<div class="live-counters" aria-label="Lab counts">${items.map(([value, label]) => `<div class="panel stat"><strong data-count="${value}">${value}</strong><span>${esc(label)}</span></div>`).join("")}</div>`;
+}
+
+function iconRow() {
+  const faces = ["Diagrams", "Flows", "Charts", "Codes"];
+  return `<div class="icon-row" aria-hidden="true">${faces.map((label) => `<span class="cube"><span class="cube-face">${label}</span></span>`).join("")}</div>`;
+}
+
+function miniMascots() {
+  const looks = ["dawn", "day", "dusk", "night"];
+  const face = `<svg class="mascot-svg" viewBox="0 0 72 72" aria-hidden="true"><path class="tail" d="M10 46c-6 2-8 10-4 14"></path><ellipse class="ear" cx="18" cy="18" rx="8" ry="10"></ellipse><ellipse class="ear" cx="54" cy="18" rx="8" ry="10"></ellipse><circle class="head" cx="36" cy="34" r="22"></circle><ellipse class="muzzle" cx="36" cy="42" rx="10" ry="7"></ellipse><ellipse class="eye" cx="28" cy="32" rx="3" ry="3.4"></ellipse><ellipse class="eye" cx="44" cy="32" rx="3" ry="3.4"></ellipse><path class="smile" d="M30 44c2 3 10 3 12 0"></path><g class="prop prop-day"><rect x="22" y="14" width="28" height="6" rx="2" fill="#5ce1ff"></rect></g><g class="prop prop-dawn"><circle cx="58" cy="14" r="4" fill="#ffb020"></circle></g><g class="prop prop-dusk"><circle cx="58" cy="16" r="5" fill="#ff7a45"></circle></g><g class="prop prop-night"><circle cx="60" cy="12" r="2" fill="#fff"></circle><circle cx="16" cy="12" r="1.4" fill="#fff"></circle></g></svg>`;
+  return `<div class="mini-row" aria-label="CypherMonkey at dawn, day, dusk, and night">${looks.map((look) => `<span class="mini" data-look="${look}">${face}<span class="mini-name">${look}</span></span>`).join("")}</div>`;
+}
+
+function heroFlow() {
+  return `<div class="fold-art">
+    <svg class="fold-svg" viewBox="0 0 640 200" role="img" aria-label="Animated path from the carrier through the domain to an agent">
+      <rect class="diag-bg" width="640" height="200" rx="16"></rect>
+      <text class="lane" x="36" y="28">PSTN</text>
+      <text class="lane" x="250" y="28">VCC</text>
+      <text class="lane" x="470" y="28">Agent</text>
+      <line class="flow-line" x1="70" y1="96" x2="210" y2="96"></line>
+      <line class="flow-line" x1="360" y1="96" x2="500" y2="96"></line>
+      <rect class="node-box" x="24" y="68" width="120" height="56" rx="12"></rect>
+      <rect class="node-box b" x="220" y="60" width="150" height="72" rx="12"></rect>
+      <rect class="node-box c" x="500" y="68" width="116" height="56" rx="12"></rect>
+      <text class="msg" x="84" y="100" text-anchor="middle">Carrier</text>
+      <text class="msg" x="295" y="102" text-anchor="middle">Domain</text>
+      <text class="msg" x="558" y="100" text-anchor="middle">Desktop</text>
+      <circle class="packet" cx="78" cy="96" r="6"></circle>
+      <circle class="packet" cx="250" cy="96" r="5"></circle>
+      <circle class="packet" cx="520" cy="96" r="5"></circle>
+    </svg>
+    <div class="fold-side">
+      <svg id="rough-mark" viewBox="0 0 120 48" aria-hidden="true"></svg>
+      <div id="home-stage" aria-hidden="true"></div>
+    </div>
+  </div>`;
+}
+
+function themeRow() {
+  const picks = [
+    ["futuristic", "Futuristic", "#061018"],
+    ["gaming", "Gaming", "#c6ff4a"],
+    ["neon", "Neon", "#ff2bd6"],
+    ["light", "Light", "#f6f1e6"]
+  ];
+  return `<div class="quick-themes fold-themes" role="group" aria-label="Theme">${picks.map(([id, label, color]) => `<button type="button" class="swatch" data-theme-pick="${id}" style="background:${color}" aria-label="${label}"></button>`).join("")}</div>`;
+}
+
+export async function homeFoldHtml() {
   const [catalog, data] = await Promise.all([
     fetch("data/catalog.json").then((res) => res.json()),
     loadUni()
   ]);
-  if ((location.hash || "#/") !== "#/" || !view.isConnected) return;
-  const done = lessonsDone();
-  const deck = document.createElement("div");
-  deck.id = "uni-home";
-  deck.className = "uni-hero";
+  const spots = [
+    ["#/atlas", "Diagrams", `${diagramIds.length} drawings`],
+    ["#/flows", "Flows", `${flowIds.length} moving`],
+    ["#/charts", "Charts", "6 cited charts"],
+    ["#/downloads", "Cheat Codes", "Sheets and cards"]
+  ];
+  return `<section id="fold" class="fold">
+    <div class="fold-head">
+      <p class="kicker">Signal university</p>
+      ${themeRow()}
+      ${miniMascots()}
+    </div>
+    ${heroFlow()}
+    ${counterRow(catalog)}
+    <div class="spot-row">${spots.map(([href, label, detail]) => `<a class="spotlight" href="${href}"><span>${esc(label)}</span><strong>${esc(detail)}</strong></a>`).join("")}</div>
+    <div class="fold-tools">${iconRow()}<div class="chart-snap">${chartStrip(catalog, data)}</div></div>
+    <p class="note">${esc(data.banner)}</p>
+  </section>`;
+}
+
+export function signalDeck(catalog) {
   const titles = Object.fromEntries(diagramMeta.map(([id, title]) => [id, title]));
   const featured = ["domain-stack", "sip-entries", "dialer-modes", "ivr-tree", "e911-path", "adapters"];
-  deck.innerHTML = `
-    <section class="panel">
-      <p class="kicker">Signal university</p>
-      <p>${esc(data.banner)}</p>
-      <p>${done} lessons marked done on this browser, out of ${catalog.counts.lessons}. Quiz bank: ${catalog.counts.quiz}. Flashcards: ${catalog.counts.cards}.</p>
-      <div class="row">
-        <a class="btn primary" href="#/atlas">Open the atlas</a>
-        <a class="btn" href="#/ports">Play the ports game</a>
-        <a class="btn" href="#/daily">Daily challenge</a>
-        <a class="btn" href="#/downloads">Cheat codes</a>
-      </div>
-    </section>
+  return `<div id="uni-home" class="uni-hero">
     <div class="snap">${featured.map((id) => `<figure class="figure float-card">${diagram(id)}<figcaption>${esc(titles[id] || id)}</figcaption></figure>`).join("")}</div>
     <section>
       <h2>Study path</h2>
@@ -544,13 +644,37 @@ async function mountHome(view) {
       <div class="path-row"><strong>Week 4</strong><span>Tracks 10–12. WEM, IVA, CRM.</span></div>
       <div class="path-row"><strong>Week 5</strong><span>Tracks 13–15. SIP, APIs, the Cisco bridge. <a href="#/migrate">Cutover card</a></span></div>
       <div class="path-row"><strong>Week 6</strong><span>Tracks 16–18. Safety, ecosystem, credentials you can cite.</span></div>
-      <p class="note">This pace is the lab's plan, not a Five9 University syllabus.</p>
+      <p class="note">This pace is the lab's plan, not a Five9 University syllabus. ${catalog.counts.lessons} lessons are in the catalog.</p>
     </section>
     <section>
       <h2>Floor plan</h2>
       <div class="grid">${NAV.map(([href, label]) => `<a class="card" href="${href}"><h2>${esc(label)}</h2><p>Open ${esc(label.toLowerCase())}.</p></a>`).join("")}</div>
-    </section>`;
-  view.insertBefore(deck, view.firstChild);
+    </section>
+  </div>`;
+}
+
+async function mountHome(view) {
+  if (!view || view.querySelector("#fold")) return;
+  const catalog = await fetch("data/catalog.json").then((res) => res.json());
+  if ((location.hash || "#/") !== "#/" || !view.isConnected || view.querySelector("#fold")) return;
+  const holder = document.createElement("div");
+  holder.innerHTML = await homeFoldHtml();
+  view.insertBefore(holder.firstElementChild, view.firstChild);
+}
+
+export async function decorateTrack(view) {
+  if (!view || view.querySelector("#track-band")) return;
+  const match = (location.hash || "").match(/^#\/track\/([a-z0-9-]+)/);
+  if (!match) return;
+  const [catalog, data] = await Promise.all([
+    fetch("data/catalog.json").then((res) => res.json()),
+    loadUni()
+  ]);
+  if (!view.isConnected || !location.hash.startsWith(`#/track/${match[1]}`)) return;
+  const band = document.createElement("section");
+  band.id = "track-band";
+  band.innerHTML = `${counterRow(catalog)}${miniMascots()}${iconRow()}<div class="chart-snap">${chartStrip(catalog, data)}</div><p class="note">${esc(data.banner)}</p>`;
+  view.insertBefore(band, view.firstChild);
 }
 
 function startSky() {
@@ -630,6 +754,10 @@ export async function tryUniversityRoute(bare, ctx) {
   }
   const pages = {
     "#/atlas": async () => renderAtlas(ctx),
+    "#/flows": async () => renderFlows(ctx),
+    "#/charts": async () => renderCharts(ctx),
+    "#/play": async () => renderPlay(ctx),
+    "#/offline": async () => renderDownloads(ctx, true),
     "#/ports": async () => renderPorts(ctx, await loadUni()),
     "#/trouble": async () => renderTrouble(ctx, await loadUni()),
     "#/explorer": async () => renderExplorer(ctx),
@@ -649,14 +777,72 @@ export async function tryUniversityRoute(bare, ctx) {
   return false;
 }
 
+const CRUMBS = {
+  "#/atlas": "Diagrams",
+  "#/flows": "Flows",
+  "#/charts": "Charts",
+  "#/downloads": "Cheat Codes",
+  "#/play": "Play",
+  "#/ecosystem": "Ecosystem",
+  "#/offline": "Downloads",
+  "#/career": "Careers",
+  "#/tracks": "Tracks",
+  "#/tools": "Tools",
+  "#/progress": "Progress",
+  "#/ports": "Ports game",
+  "#/daily": "Daily",
+  "#/badges": "Badges",
+  "#/ivr": "Call-flow sandbox",
+  "#/search": "Search"
+};
+
+function paintCrumbs(bare) {
+  const nav = document.querySelector("#crumbs");
+  if (!nav) return;
+  let label = CRUMBS[bare] || "";
+  if (bare.startsWith("#/track/")) label = "Track";
+  if (bare.startsWith("#/lesson/")) label = "Lesson";
+  if (!label) {
+    nav.innerHTML = `<a href="#/">Home</a>`;
+    return;
+  }
+  nav.innerHTML = `<a href="#/">Home</a> <span aria-hidden="true">/</span> <span aria-current="page">${esc(label)}</span>`;
+}
+
+function paintMenu(bare) {
+  document.querySelectorAll("#primary-menu a").forEach((link) => {
+    const href = link.getAttribute("href");
+    const on = href === bare || (href === "#/career" && bare === "#/career");
+    if (on) link.setAttribute("aria-current", "page");
+    else link.removeAttribute("aria-current");
+  });
+  document.querySelectorAll("[data-theme-pick]").forEach((button) => {
+    button.setAttribute("aria-pressed", button.dataset.themePick === document.documentElement.dataset.theme ? "true" : "false");
+  });
+}
+
 export function afterRoute() {
   updateMascot();
   updateReadbar();
   startSky();
   const view = document.querySelector("#view");
   const bare = (location.hash || "#/").split("?")[0];
-  if (view && (bare === "#/" || bare === "") && !view.querySelector("#uni-home")) {
+  document.body.dataset.route = bare || "#/";
+  paintCrumbs(bare);
+  paintMenu(bare);
+  if (view && (bare === "#/" || bare === "") && !view.querySelector("#fold")) {
     mountHome(view).catch(() => {});
+  }
+  if (view && bare.startsWith("#/track/")) {
+    decorateTrack(view).catch(() => {});
+  }
+  if (view && view.querySelector("#fold")) {
+    import("./effects.js").then((mod) => {
+      mod.stopStage();
+      return mod.dressFold(view.querySelector("#fold"));
+    }).catch(() => {});
+  } else {
+    import("./effects.js").then((mod) => mod.stopStage()).catch(() => {});
   }
 }
 
@@ -692,8 +878,21 @@ export function initUniversity() {
   }
   const offline = document.querySelector("#offline-pack");
   if (offline) {
-    offline.addEventListener("click", () => { location.hash = "#/downloads"; });
+    offline.addEventListener("click", () => { location.hash = "#/offline"; });
   }
+  const menu = document.querySelector("#primary-menu");
+  if (menu) {
+    menu.addEventListener("keydown", (event) => {
+      if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") return;
+      const links = [...menu.querySelectorAll("a")];
+      const index = links.indexOf(document.activeElement);
+      if (index < 0) return;
+      event.preventDefault();
+      const next = event.key === "ArrowRight" ? (index + 1) % links.length : (index - 1 + links.length) % links.length;
+      links[next].focus();
+    });
+  }
+  import("./effects.js").then((mod) => mod.armConfetti()).catch(() => {});
 }
 
 export { diagramIds };

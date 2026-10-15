@@ -237,6 +237,22 @@ export function diagram(id) {
 
 export const diagramIds = [...Object.keys(custom), ...Object.keys(flows), ...Object.keys(stacks)];
 
+const animatedCustom = [
+  "sip-ladder",
+  "sip-entries",
+  "ivr-tree",
+  "e911-path",
+  "firewall",
+  "cutover",
+  "forecast-loop",
+  "predictive-loop",
+  "pop-split",
+  "nat-path",
+  "uccx-bridge"
+];
+
+export const flowIds = [...animatedCustom, ...Object.keys(flows)];
+
 export const diagramMeta = [
   ["domain-stack", "What a domain holds", "Planning your implementation"],
   ["outbound-order", "Outbound build order", "Planning your implementation"],

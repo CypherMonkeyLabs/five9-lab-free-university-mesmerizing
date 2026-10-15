@@ -94,10 +94,21 @@
       <button type="button" class="btn ghost hide-sm" id="sound-toggle" aria-pressed="false">Sound off</button>
       <button type="button" class="btn" id="open-settings">Settings</button>
     </div>
+    <nav class="primary-menu" id="primary-menu" aria-label="University menu">
+      <a href="#/atlas">Diagrams</a>
+      <a href="#/flows">Flows</a>
+      <a href="#/charts">Charts</a>
+      <a href="#/downloads">Cheat Codes</a>
+      <a href="#/play">Play</a>
+      <a href="#/ecosystem">Ecosystem</a>
+      <a href="#/offline">Downloads</a>
+      <a href="#/career">Careers</a>
+    </nav>
   </header>
   <div class="shell">
     <nav class="rail" id="rail" aria-label="Lab sections"></nav>
     <main id="main">
+      <nav id="crumbs" class="crumbs" aria-label="Breadcrumb"><a href="#/">Home</a></nav>
       <h1 id="view-title">Five9 Lab</h1>
       <p id="lede" class="lede">Run the floor. Build an IVR, pace a dialer, and break a SIP path on purpose.</p>
       <div id="view" aria-live="polite">
@@ -166,14 +177,16 @@
       <div>
         <p class="kicker">Next lab</p>
         <div class="next-labs">
-          <a href="https://cypherwebex-canon-test.vercel.app">Webex Canon</a>
-          <a href="https://github.com/cipher0x9/uc-lab-free-university-mesmerizing">UC Lab</a>
-          <a href="https://github.com/cipher0x9/ai-lab-free-university-mesmerizing">AI Lab</a>
-          <a href="https://github.com/cipher0x9/five9-lab-free-university-mesmerizing">This repo</a>
+          <a href="https://cipher0x9.github.io/webex-lab-free-university-mesmerizing/">Webex Canon</a>
+          <a href="https://cipher0x9.github.io/uc-lab-free-university-mesmerizing/">UC Lab</a>
+          <a href="https://cipher0x9.github.io/ai-lab-free-university-mesmerizing/">AI Lab</a>
+          <a href="https://cipher0x9.github.io/five9-lab-free-university-mesmerizing/">Five9 Lab</a>
         </div>
       </div>
     </div>
   </footer>
+  <script src="vendor/d3/d3.min.js"></script>
+  <script src="vendor/markmap/view.js"></script>
   <script type="module" src="js/app.js"></script>
 </body>
 </html>
