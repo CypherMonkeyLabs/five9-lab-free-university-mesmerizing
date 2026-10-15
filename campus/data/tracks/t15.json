@@ -1,0 +1,1386 @@
+{
+  "id": "t15",
+  "title": "From UCCX and UCCE",
+  "short": "Migration",
+  "blurb": "A teaching bridge: skills, modules, modes, data, the gateway, and a go/no-go that can stop.",
+  "group": "Bridge",
+  "level": "Advanced",
+  "summary": "There is no import button. Rebuild the domain, then move a number.",
+  "lessons": [
+    {
+      "id": "l01",
+      "title": "There is no import button",
+      "level": "foundation",
+      "minutes": 12,
+      "objectives": [
+        "Call this track a teaching bridge",
+        "Start from the Five9 planning order"
+      ],
+      "paragraphs": [
+        "This track is a teaching bridge. Five9's public pages name Cisco as a SIP gateway type. They do not publish a wizard that reads a UCCX script or a UCCE dial plan and emits a domain.",
+        "The planning order still applies on the Five9 side: skills, users, lists, dispositions, profiles, then campaigns. A cutover that starts by 'moving the script' skips the objects the script will name."
+      ],
+      "cites": [
+        {
+          "label": "Planning your implementation",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm"
+        },
+        {
+          "label": "SIP trunk options chapter",
+          "url": "https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/SIP-trunk-options/_ch-five9-sip-trunk-options.htm"
+        },
+        {
+          "label": "Technical requirements PDF",
+          "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+          "note": "Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall."
+        }
+      ],
+      "uncertain": [
+        "Five9 publishes Cisco as a SIP gateway type. This lab did not find an official UCCX or UCCE migration wizard. Mappings below are instructional."
+      ],
+      "figure": {
+        "kind": "compare",
+        "title": "What you can cite",
+        "caption": "Keep the bridge in its own column.",
+        "leftTitle": "Five9 documents",
+        "rightTitle": "This lab's bridge",
+        "left": [
+          "Planning order",
+          "Cisco as a gateway type",
+          "Campaign types: inbound, outbound, autodial"
+        ],
+        "right": [
+          "No official UCCX importer found",
+          "Object names are a teaching map",
+          "Marked uncertain on purpose"
+        ]
+      },
+      "flow": {
+        "title": "A stakeholder wants a migration tool",
+        "lanes": [
+          "Search",
+          "Order",
+          "Say"
+        ],
+        "steps": [
+          {
+            "lane": "Search",
+            "title": "Docs",
+            "detail": "You look for an official importer and do not find one to cite.",
+            "frame": "search"
+          },
+          {
+            "lane": "Order",
+            "title": "Plan",
+            "detail": "The Five9 planning order is the build.",
+            "frame": "plan"
+          },
+          {
+            "lane": "Say",
+            "title": "Bridge",
+            "detail": "You call the mapping a teaching bridge.",
+            "frame": "bridge"
+          },
+          {
+            "lane": "Say",
+            "title": "Gateway",
+            "detail": "Cisco in the SIP chapter is a gateway.",
+            "frame": "gw"
+          },
+          {
+            "lane": "Admin",
+            "title": "Types",
+            "detail": "Campaign types stay inbound, outbound, and autodial.",
+            "frame": "types"
+          },
+          {
+            "lane": "Admin",
+            "title": "No",
+            "detail": "Blended is not introduced as a fourth campaign type.",
+            "frame": "blend"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "This lab found an official UCCX-to-VCC importer. True or false?",
+          "choices": [
+            "True",
+            "False",
+            "True for IVR only",
+            "True for lists only"
+          ],
+          "answer": 1,
+          "why": "No such wizard is cited here."
+        },
+        {
+          "q": "Cisco in the technical requirements is",
+          "choices": [
+            "A script importer",
+            "A gateway type, with Avaya and Asterisk",
+            "A report layout",
+            "A skill level"
+          ],
+          "answer": 1,
+          "why": "Gateway type."
+        },
+        {
+          "q": "The first Five9 objects are",
+          "choices": [
+            "The old UCCX script file",
+            "Skills, users, lists, dispositions, profiles",
+            "Equinix edges",
+            "Headsets"
+          ],
+          "answer": 1,
+          "why": "The planning topic."
+        },
+        {
+          "q": "Blended is",
+          "choices": [
+            "A fourth campaign type",
+            "Staffing language on the product pages",
+            "A SIP port",
+            "A retention clock"
+          ],
+          "answer": 1,
+          "why": "Campaign types remain three."
+        },
+        {
+          "q": "You should label the object map as",
+          "choices": [
+            "A Five9 SKU",
+            "A teaching bridge, uncertain where it is only ours",
+            "An RFC",
+            "A codec"
+          ],
+          "answer": 1,
+          "why": "Honesty is the point of this track."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Official importer?",
+          "back": "None cited here."
+        },
+        {
+          "front": "Cisco in the PDF?",
+          "back": "A gateway type."
+        },
+        {
+          "front": "Build order?",
+          "back": "Skills through profiles, then campaigns."
+        },
+        {
+          "front": "Blended?",
+          "back": "Not a fourth campaign type."
+        }
+      ],
+      "lab": {
+        "title": "Say what the project is",
+        "goal": "Write one sentence that refuses an importer and names the planning order.",
+        "steps": [
+          "No wizard",
+          "Six layers",
+          "Gateway versus script"
+        ],
+        "success": "The sentence would survive a documentation review.",
+        "href": ""
+      },
+      "fault": {
+        "title": "The plan says 'export the .aef and import it Friday'",
+        "symptom": "There is no cited importer, and the domain has no skills yet.",
+        "log": "PLAN import=aef skills=0",
+        "choices": [
+          "Build the Five9 objects, then recreate the call flow",
+          "Rename the file to .json",
+          "Point the CUBE at a partition",
+          "Skip dispositions"
+        ],
+        "answer": 0,
+        "cause": "The script names objects that do not exist yet.",
+        "fix": "Follow the planning order."
+      }
+    },
+    {
+      "id": "l02",
+      "title": "CSQs, skills, and the partition you will not find",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Map a CSQ to a skill group",
+        "Drop partitions from the design"
+      ],
+      "paragraphs": [
+        "In this teaching map, a UCCX contact service queue is closest to a Five9 skill group: the people who can take that work. A UCCE skill group is a similar idea with a different name. Precision queues and attributes do not have a one-field equivalent you should invent.",
+        "Five9 does not use CUCM partitions or calling search spaces. The boundary is the domain. If two businesses must not share lists, they are two domains, not two partitions."
+      ],
+      "cites": [
+        {
+          "label": "Skill groups",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm"
+        },
+        {
+          "label": "Planning your implementation",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm"
+        }
+      ],
+      "uncertain": [
+        "The CSQ-to-skill mapping is a teaching bridge, not a Five9 migration utility."
+      ],
+      "figure": {
+        "kind": "stack",
+        "title": "Teaching map, people and boundaries",
+        "caption": "Left side is Cisco vocabulary. Right side is what you configure.",
+        "rows": [
+          {
+            "label": "CSQ or skill group → Five9 skill group"
+          },
+          {
+            "label": "Agent team membership → user on that skill"
+          },
+          {
+            "label": "Partition → not present"
+          },
+          {
+            "label": "Separate tenants → separate domains"
+          }
+        ]
+      },
+      "flow": {
+        "title": "An agent never gets the queue",
+        "lanes": [
+          "UCCX",
+          "Five9",
+          "Boundary"
+        ],
+        "steps": [
+          {
+            "lane": "UCCX",
+            "title": "CSQ",
+            "detail": "The old queue name is written down.",
+            "frame": "csq"
+          },
+          {
+            "lane": "Five9",
+            "title": "Skill",
+            "detail": "A skill group with the same job is created.",
+            "frame": "skill"
+          },
+          {
+            "lane": "Five9",
+            "title": "User",
+            "detail": "The agent is on that skill.",
+            "frame": "user"
+          },
+          {
+            "lane": "Boundary",
+            "title": "Domain",
+            "detail": "The user is in the right domain.",
+            "frame": "dom"
+          },
+          {
+            "lane": "Boundary",
+            "title": "No CSS",
+            "detail": "Nobody hunts for a calling search space.",
+            "frame": "nocss"
+          },
+          {
+            "lane": "Admin",
+            "title": "Attributes",
+            "detail": "Precision attributes are redesigned, not pasted.",
+            "frame": "attr"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "The closest teaching map for a CSQ is",
+          "choices": [
+            "A campaign profile ANI",
+            "A skill group",
+            "A DID retention timer",
+            "A matrix report"
+          ],
+          "answer": 1,
+          "why": "People who can take the work."
+        },
+        {
+          "q": "CUCM partitions exist in Five9 admin as",
+          "choices": [
+            "A required tab",
+            "They do not. The domain is the boundary",
+            "Skill levels",
+            "IVR modules"
+          ],
+          "answer": 1,
+          "why": "Do not look for a partition table."
+        },
+        {
+          "q": "Two companies that must not share lists need",
+          "choices": [
+            "Two partitions in one domain",
+            "Two domains",
+            "Two ANIs only",
+            "Two headsets"
+          ],
+          "answer": 1,
+          "why": "Lists do not cross domains."
+        },
+        {
+          "q": "A precision-queue attribute string can be pasted into a skill name. True or false?",
+          "choices": [
+            "True",
+            "False. Redesign it. Do not invent a field",
+            "True for autodial",
+            "True in Studio"
+          ],
+          "answer": 1,
+          "why": "No one-field equivalent is cited."
+        },
+        {
+          "q": "A user may be on",
+          "choices": [
+            "Only one skill",
+            "More than one skill group",
+            "Skills only if they are reporting users",
+            "No skills, ever"
+          ],
+          "answer": 1,
+          "why": "The skill topic allows multiple skill groups."
+        }
+      ],
+      "cards": [
+        {
+          "front": "CSQ maps toward?",
+          "back": "A skill group, as a teaching map."
+        },
+        {
+          "front": "Partitions?",
+          "back": "Not in Five9. Use domains."
+        },
+        {
+          "front": "Two tenants?",
+          "back": "Two domains."
+        },
+        {
+          "front": "Precision attributes?",
+          "back": "Redesign, do not invent a paste field."
+        }
+      ],
+      "lab": {
+        "title": "Map three queues",
+        "goal": "Write three CSQ names and the skill groups you would create. Mark one attribute-based queue as a redesign.",
+        "steps": [
+          "Three skills",
+          "One redesign",
+          "The domain boundary"
+        ],
+        "success": "You did not draw a partition.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Calls hit Default because the CSQ name was typed into an ANI field",
+        "symptom": "The skill was never created.",
+        "log": "SKILL missing ANI=Billing",
+        "choices": [
+          "Create the skill and put the agents on it",
+          "Add a partition",
+          "Change G.711",
+          "Extend DID retention"
+        ],
+        "answer": 0,
+        "cause": "The people were never attached.",
+        "fix": "Create the skill group."
+      }
+    },
+    {
+      "id": "l03",
+      "title": "Scripts are rebuilt in modules",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Rebuild flows as named modules",
+        "Treat the builder export as a study file"
+      ],
+      "paragraphs": [
+        "A UCCX script is a document in Cisco's editor. A Five9 IVR script is a chain of modules from the IVR Administrator's Guide: Menu, Get Digits, If/Else, Skill Transfer, Play, and the rest of that chapter. The lab's builder speaks those names and exports a learning JSON that VCC will not import.",
+        "Time-of-day branches, a language prompt, and a transfer to a skill are the usual bones. Rebuild them. Do not hex-edit the old file."
+      ],
+      "cites": [
+        {
+          "label": "IVR modules",
+          "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm"
+        },
+        {
+          "label": "Inbound campaigns",
+          "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm"
+        }
+      ],
+      "uncertain": [
+        "Module mapping from UCCX steps is instructional. Validate every script in a domain."
+      ],
+      "figure": {
+        "kind": "path",
+        "title": "Rebuild, do not convert",
+        "caption": "Each Cisco step becomes a named module.",
+        "rows": [
+          {
+            "label": "Greeting → Play"
+          },
+          {
+            "label": "Menu → Menu or Get Digits"
+          },
+          {
+            "label": "Decision → If/Else or Case"
+          },
+          {
+            "label": "Queue → Skill Transfer"
+          }
+        ]
+      },
+      "flow": {
+        "title": "The old script has four boxes",
+        "lanes": [
+          "Read",
+          "Module",
+          "Test"
+        ],
+        "steps": [
+          {
+            "lane": "Read",
+            "title": "Boxes",
+            "detail": "The Cisco flow is listed in plain language.",
+            "frame": "read"
+          },
+          {
+            "lane": "Module",
+            "title": "Play",
+            "detail": "The greeting is a Play module.",
+            "frame": "play"
+          },
+          {
+            "lane": "Module",
+            "title": "Menu",
+            "detail": "The menu is a Menu.",
+            "frame": "menu"
+          },
+          {
+            "lane": "Module",
+            "title": "If",
+            "detail": "The hours check is If/Else or Case.",
+            "frame": "if"
+          },
+          {
+            "lane": "Module",
+            "title": "Skill",
+            "detail": "The queue is a Skill Transfer with one skill.",
+            "frame": "skill"
+          },
+          {
+            "lane": "Test",
+            "title": "Export",
+            "detail": "The learning export is labeled as not a VCC file.",
+            "frame": "export"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "A UCCX .aef opens in the Five9 IVR editor. True or false?",
+          "choices": [
+            "True",
+            "False",
+            "True if renamed",
+            "True for Menu only"
+          ],
+          "answer": 1,
+          "why": "Rebuild it."
+        },
+        {
+          "q": "A spoken greeting becomes",
+          "choices": [
+            "A skill group",
+            "A Play module",
+            "An ANI",
+            "A report layout"
+          ],
+          "answer": 1,
+          "why": "Play is the module."
+        },
+        {
+          "q": "A queue handoff becomes",
+          "choices": [
+            "Skill Transfer",
+            "Set DNC",
+            "A partition",
+            "Web2Campaign automatically"
+          ],
+          "answer": 0,
+          "why": "Skill Transfer."
+        },
+        {
+          "q": "The lab builder's JSON is",
+          "choices": [
+            "A VCC import file",
+            "A learning model",
+            "A SIP trunk",
+            "A retention export"
+          ],
+          "answer": 1,
+          "why": "The builder says so."
+        },
+        {
+          "q": "Hours of operation belong in",
+          "choices": [
+            "The headset",
+            "If/Else or Case, then the right branch",
+            "The abandon percentage",
+            "RFC 1918"
+          ],
+          "answer": 1,
+          "why": "A decision module."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Import the .aef?",
+          "back": "No."
+        },
+        {
+          "front": "Greeting?",
+          "back": "Play."
+        },
+        {
+          "front": "Queue?",
+          "back": "Skill Transfer."
+        },
+        {
+          "front": "Builder JSON?",
+          "back": "Learning model only."
+        }
+      ],
+      "lab": {
+        "title": "Rewrite four boxes",
+        "goal": "Turn a greeting, a menu, an hours check, and a queue into module names.",
+        "steps": [
+          "Play",
+          "Menu",
+          "If/Else",
+          "Skill Transfer"
+        ],
+        "success": "You can point at each module in the builder.",
+        "href": "#/ivr"
+      },
+      "fault": {
+        "title": "Cutover morning, the script field is empty",
+        "symptom": "The file was copied and never rebuilt.",
+        "log": "IVR script=empty file=old.aef",
+        "choices": [
+          "Build the module chain and assign it",
+          "Rename the extension",
+          "Increase lines per agent",
+          "Disable TLS"
+        ],
+        "answer": 0,
+        "cause": "The campaign has nothing to run.",
+        "fix": "Assign a real script."
+      }
+    },
+    {
+      "id": "l04",
+      "title": "Dialing modes do not survive the move by osmosis",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Choose a Five9 mode by its own definition",
+        "Keep the simulator in the classroom"
+      ],
+      "paragraphs": [
+        "UCCE outbound has its own pacing words. Five9's product pages talk about Preview, Progressive, Power, Predictive, and Manual Touch. The simulator in this lab is a classroom clock, not either vendor's algorithm.",
+        "Progressive on the outbound product page is one call per available agent. The dialer page also describes an adaptive pace and a smaller team. Quote the page you mean. Do not copy a Cisco lines-per-port number into Max Abandoned Call Percentage. This lab does not state a numeric default for that field."
+      ],
+      "cites": [
+        {
+          "label": "Dialer product page",
+          "url": "https://www.five9.com/products/capabilities/dialer-system"
+        },
+        {
+          "label": "Outbound product page",
+          "url": "https://www.five9.com/products/capabilities/outbound-contact-center"
+        }
+      ],
+      "uncertain": [
+        "The dialer product page and the outbound product page describe progressive pacing in different words. Quote the page you use."
+      ],
+      "figure": {
+        "kind": "compare",
+        "title": "Leave Cisco's ratio behind",
+        "caption": "Re-choose the mode in Five9's words.",
+        "leftTitle": "Do not copy",
+        "rightTitle": "Do choose",
+        "left": [
+          "A UCCE port ratio",
+          "A guessed abandon percent",
+          "This lab's simulator as production"
+        ],
+        "right": [
+          "A named Five9 mode",
+          "The campaign dialog as the record",
+          "TCPA manual touch when required"
+        ]
+      },
+      "flow": {
+        "title": "The old campaign was 'predictive'",
+        "lanes": [
+          "Name",
+          "Size",
+          "Record"
+        ],
+        "steps": [
+          {
+            "lane": "Name",
+            "title": "Mode",
+            "detail": "The Five9 mode is chosen by its product definition.",
+            "frame": "mode"
+          },
+          {
+            "lane": "Size",
+            "title": "Team",
+            "detail": "The team size is compared with the guidance you are quoting.",
+            "frame": "size"
+          },
+          {
+            "lane": "Record",
+            "title": "Dialog",
+            "detail": "The campaign dialog is the system of record.",
+            "frame": "dialog"
+          },
+          {
+            "lane": "Record",
+            "title": "Sim",
+            "detail": "The simulator is labeled a classroom.",
+            "frame": "sim"
+          },
+          {
+            "lane": "Admin",
+            "title": "Abandon",
+            "detail": "No numeric default is invented.",
+            "frame": "abd"
+          },
+          {
+            "lane": "Admin",
+            "title": "TCPA",
+            "detail": "Manual touch is selected only where that control is required.",
+            "frame": "tcpa"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Five9 mode names on the product pages include",
+          "choices": [
+            "CSQ, precision, partition",
+            "Preview, progressive, power, predictive, manual touch",
+            "Only blended",
+            "Only G.711"
+          ],
+          "answer": 1,
+          "why": "Those are the product words."
+        },
+        {
+          "q": "This lab's pacing simulator is",
+          "choices": [
+            "The Five9 source code",
+            "A teaching model",
+            "A UCCE port calculator",
+            "A report"
+          ],
+          "answer": 1,
+          "why": "It is labeled as a classroom."
+        },
+        {
+          "q": "A Cisco lines-per-port figure should be typed into Max Abandoned Call Percentage. True or false?",
+          "choices": [
+            "True",
+            "False",
+            "True if the team is under 10",
+            "True for preview"
+          ],
+          "answer": 1,
+          "why": "Different fields."
+        },
+        {
+          "q": "This lab states Five9's numeric abandon default. True or false?",
+          "choices": [
+            "True",
+            "False. It was not in the pages we quoted",
+            "True, it is 3",
+            "True, it is 0"
+          ],
+          "answer": 1,
+          "why": "Do not invent it."
+        },
+        {
+          "q": "Progressive wording differs across two Five9 pages. You should",
+          "choices": [
+            "Average them",
+            "Quote the page you mean and mark the tension",
+            "Ignore both",
+            "Use the simulator's math"
+          ],
+          "answer": 1,
+          "why": "The outbound page and the dialer page are not identical."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Mode names?",
+          "back": "Preview, progressive, power, predictive, manual touch."
+        },
+        {
+          "front": "Simulator?",
+          "back": "A teaching model."
+        },
+        {
+          "front": "Copy the Cisco ratio into abandon %?",
+          "back": "No."
+        },
+        {
+          "front": "Numeric default?",
+          "back": "Not stated here."
+        }
+      ],
+      "lab": {
+        "title": "Re-choose a mode",
+        "goal": "Pick a Five9 mode for a ten-agent team and write which page you are quoting.",
+        "steps": [
+          "Mode",
+          "Page",
+          "What you will not copy"
+        ],
+        "success": "You left the Cisco ratio out.",
+        "href": "#/pacing"
+      },
+      "fault": {
+        "title": "Abandon rate spikes because the old port ratio was pasted into lines per agent",
+        "symptom": "Power dialing is not a Cisco port group.",
+        "log": "MODE power lines=copied",
+        "choices": [
+          "Set the Five9 mode from its own definition and watch the abandon field",
+          "Paste a second ratio",
+          "Delete DNIS",
+          "Turn off recording notice"
+        ],
+        "answer": 0,
+        "cause": "The fields do not mean the same thing.",
+        "fix": "Reconfigure from the Five9 dialog."
+      }
+    },
+    {
+      "id": "l05",
+      "title": "Numbers, lists, and ANI are a data project",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Load lists, DNC, and dispositions as data",
+        "Assign the ANI profile"
+      ],
+      "paragraphs": [
+        "DNIS values, calling lists, dispositions, and do-not-call entries are domain data. They are not inside the Cisco script file. A cutover that moves only the IVR still has nothing to dial and nowhere legal to send a call.",
+        "Campaign profiles hold the ANI override. Local ANI is not the Certified Caller program. If the old system presented a specific caller ID, create the profile and assign it in Advanced mode, then ask separately whether attestation is in scope."
+      ],
+      "cites": [
+        {
+          "label": "Planning your implementation",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm"
+        },
+        {
+          "label": "Inbound campaigns",
+          "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm"
+        },
+        {
+          "label": "Data retention",
+          "url": "https://www.five9.com/legal/dataretention"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "path",
+        "title": "Data that must exist on cutover morning",
+        "caption": "The script cannot invent these.",
+        "rows": [
+          {
+            "label": "DNIS on a running inbound campaign"
+          },
+          {
+            "label": "Lists actually loaded"
+          },
+          {
+            "label": "Dispositions and DNC"
+          },
+          {
+            "label": "One profile, assigned"
+          }
+        ]
+      },
+      "flow": {
+        "title": "The first live hour",
+        "lanes": [
+          "Voice",
+          "Data",
+          "ID"
+        ],
+        "steps": [
+          {
+            "lane": "Voice",
+            "title": "Run",
+            "detail": "The inbound campaign is running.",
+            "frame": "run"
+          },
+          {
+            "lane": "Data",
+            "title": "List",
+            "detail": "The outbound list is loaded, not emailed.",
+            "frame": "list"
+          },
+          {
+            "lane": "Data",
+            "title": "DNC",
+            "detail": "Do-not-call entries were loaded.",
+            "frame": "dnc"
+          },
+          {
+            "lane": "ID",
+            "title": "Profile",
+            "detail": "The ANI profile is assigned.",
+            "frame": "ani"
+          },
+          {
+            "lane": "ID",
+            "title": "Attest",
+            "detail": "Certified Caller is a separate question.",
+            "frame": "attest"
+          },
+          {
+            "lane": "Admin",
+            "title": "Clock",
+            "detail": "Old domain DIDs follow the retention clock if a Five9 domain is closing.",
+            "frame": "clock"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "A UCCX script file contains the Five9 list. True or false?",
+          "choices": [
+            "True",
+            "False",
+            "True for DNC",
+            "True for ANI"
+          ],
+          "answer": 1,
+          "why": "Lists are domain data."
+        },
+        {
+          "q": "ANI override lives on",
+          "choices": [
+            "The headset",
+            "The campaign profile",
+            "The matrix layout",
+            "RFC 4733"
+          ],
+          "answer": 1,
+          "why": "Profiles override defaults such as ANI."
+        },
+        {
+          "q": "Local ANI and Certified Caller are",
+          "choices": [
+            "The same project",
+            "Different. Attestation is separate",
+            "Both a CSQ",
+            "Both a codec"
+          ],
+          "answer": 1,
+          "why": "Do not conflate them."
+        },
+        {
+          "q": "An inbound campaign that is not running",
+          "choices": [
+            "Plays the new script anyway",
+            "Does not answer. Callers can hear busy",
+            "Uses the old CUCM partition",
+            "Exports a CSV"
+          ],
+          "answer": 1,
+          "why": "Start it."
+        },
+        {
+          "q": "DIDs after a Five9 domain closes are kept",
+          "choices": [
+            "Forever",
+            "90 days, per the retention page",
+            "Until the Cisco license expires",
+            "60 days of agent data only"
+          ],
+          "answer": 1,
+          "why": "90 days."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Lists in the script file?",
+          "back": "No."
+        },
+        {
+          "front": "ANI lives on?",
+          "back": "The campaign profile."
+        },
+        {
+          "front": "Certified Caller?",
+          "back": "A separate project."
+        },
+        {
+          "front": "Stopped inbound?",
+          "back": "Does not answer."
+        }
+      ],
+      "lab": {
+        "title": "Pack the data",
+        "goal": "List the files you will load before the DNIS is pointed over.",
+        "steps": [
+          "Lists",
+          "DNC",
+          "Dispositions",
+          "ANI profile"
+        ],
+        "success": "The IVR is not the only artifact.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Outbound dials and the caller ID is the platform default",
+        "symptom": "The profile was created and never assigned.",
+        "log": "PROFILE built assigned=no",
+        "choices": [
+          "Assign it in Advanced mode",
+          "Import the .aef again",
+          "Add a partition",
+          "Change the report to matrix"
+        ],
+        "answer": 0,
+        "cause": "A profile that is not selected does nothing.",
+        "fix": "Assign it."
+      }
+    },
+    {
+      "id": "l06",
+      "title": "The gateway cut, without pretending to be the CUBE guide",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Keep Five9 requirements and gateway chores in two columns",
+        "Do not cite a Cisco example as a Five9 default"
+      ],
+      "paragraphs": [
+        "When the third SIP story is a Cisco gateway, the technical requirements are still the Five9 side: DNS SRV preferred, G.711 as the default codec, TLS 1.2, no double NAT. What the gateway itself must rewrite — number format, a normalization script, early media — lives in Cisco's documentation.",
+        "Practitioner notes often mention G.711 at 20 ms, NANP versus E.164, and 'do not send internal extensions.' Treat every one of those as uncertain until the trunk guide you and the carrier signed actually says them. RFC 3261 tells you what an INVITE is. It does not choose your dial plan."
+      ],
+      "cites": [
+        {
+          "label": "Technical requirements PDF",
+          "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+          "note": "Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall."
+        },
+        {
+          "label": "SIP trunk options chapter",
+          "url": "https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/SIP-trunk-options/_ch-five9-sip-trunk-options.htm"
+        },
+        {
+          "label": "RFC 3261",
+          "url": "https://www.rfc-editor.org/rfc/rfc3261"
+        }
+      ],
+      "uncertain": [
+        "NANP versus E.164, 20 ms ptime, and 'no internal extensions' are practitioner cautions. They are not quoted here as Five9 requirements."
+      ],
+      "figure": {
+        "kind": "compare",
+        "title": "Two vendors at the border",
+        "caption": "Do not let one document speak for the other.",
+        "leftTitle": "Five9 requirements",
+        "rightTitle": "Confirm on the gateway",
+        "left": [
+          "SRV",
+          "G.711 default",
+          "TLS 1.2",
+          "No double NAT"
+        ],
+        "right": [
+          "Number format",
+          "Packet time",
+          "Which numbers are allowed"
+        ]
+      },
+      "flow": {
+        "title": "The first INVITE fails",
+        "lanes": [
+          "Five9",
+          "Gateway",
+          "Plan"
+        ],
+        "steps": [
+          {
+            "lane": "Five9",
+            "title": "Story",
+            "detail": "The path is the Cisco gateway story, not the ITSP story.",
+            "frame": "story"
+          },
+          {
+            "lane": "Five9",
+            "title": "TLS",
+            "detail": "TLS 1.2 is offered.",
+            "frame": "tls"
+          },
+          {
+            "lane": "Gateway",
+            "title": "Format",
+            "detail": "The called number matches what the DNIS table expects.",
+            "frame": "fmt"
+          },
+          {
+            "lane": "Gateway",
+            "title": "Ext",
+            "detail": "Internal extensions are not assumed to be public DNIS.",
+            "frame": "ext"
+          },
+          {
+            "lane": "Plan",
+            "title": "Uncertain",
+            "detail": "20 ms and E.164 rules are marked until the guide says them.",
+            "frame": "unc"
+          },
+          {
+            "lane": "Admin",
+            "title": "RFC",
+            "detail": "You can name RFC 3261 without pretending it is a dial plan.",
+            "frame": "rfc"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "A failed INVITE is always a Five9 defect. True or false?",
+          "choices": [
+            "True",
+            "False. The gateway and the number plan are in the path",
+            "True if G.711 is on",
+            "True for preview"
+          ],
+          "answer": 1,
+          "why": "Both sides have a job."
+        },
+        {
+          "q": "Internal extensions should be assumed to be Five9 DNIS values. True or false?",
+          "choices": [
+            "True",
+            "False. Confirm the numbering plan",
+            "True for E911",
+            "True in a matrix report"
+          ],
+          "answer": 1,
+          "why": "That assumption is a common failure, and it is not a Five9 default this lab can cite."
+        },
+        {
+          "q": "20 ms ptime is",
+          "choices": [
+            "Quoted from the Five9 PDF here",
+            "A practitioner note, uncertain",
+            "The abandon window",
+            "Required by RFC 3261"
+          ],
+          "answer": 1,
+          "why": "Do not attribute it to the PDF."
+        },
+        {
+          "q": "DNS guidance on the Five9 side is",
+          "choices": [
+            "NetBIOS",
+            "SRV preferred",
+            "A hosts file on every phone",
+            "Optional and discouraged"
+          ],
+          "answer": 1,
+          "why": "SRV."
+        },
+        {
+          "q": "RFC 3261 replaces your dial plan. True or false?",
+          "choices": [
+            "True",
+            "False",
+            "True for UCCX",
+            "True for skills"
+          ],
+          "answer": 1,
+          "why": "It is the SIP specification."
+        }
+      ],
+      "cards": [
+        {
+          "front": "INVITE failures?",
+          "back": "Check both sides."
+        },
+        {
+          "front": "Extensions as DNIS?",
+          "back": "Do not assume it."
+        },
+        {
+          "front": "20 ms?",
+          "back": "Uncertain practitioner note."
+        },
+        {
+          "front": "SRV?",
+          "back": "Preferred on the Five9 side."
+        }
+      ],
+      "lab": {
+        "title": "Write the border",
+        "goal": "Two columns: what the Five9 PDF says, and what you still must confirm on the gateway.",
+        "steps": [
+          "Four PDF facts",
+          "Three open gateway questions"
+        ],
+        "success": "The second column is labeled unconfirmed.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Calls fail with a number that still has a site code prefix",
+        "symptom": "The gateway is sending a private plan the DNIS table does not contain.",
+        "log": "INVITE to=8-8005550101 dnis=8005550101",
+        "choices": [
+          "Normalize to the DNIS that exists, after the guide says how",
+          "Add the site code as a skill",
+          "Switch to matrix reports",
+          "Disable G.711"
+        ],
+        "answer": 0,
+        "cause": "The digits do not match.",
+        "fix": "Fix the called number, with the gateway guide open."
+      }
+    },
+    {
+      "id": "l07",
+      "title": "Cutover morning is a checklist, not a mood",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Run one DNIS, one dial, one pop, one location",
+        "Stop the repoint when any line fails"
+      ],
+      "paragraphs": [
+        "The morning the numbers move, the domain should already contain skills, a script, a running inbound campaign, loaded lists, dispositions, DNC, an assigned profile, and a desktop the agent has signed into. E911 addresses have to be dispatchable for the place the agent actually is. A stale office address is not a courtesy.",
+        "Keep a backout that does not depend on a disabled Five9 domain's DIDs surviving past their retention window. Test one DNIS, one outbound record, one pop, and one 911 procedure in the lab domain before the carrier repoints the range."
+      ],
+      "cites": [
+        {
+          "label": "Planning your implementation",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm"
+        },
+        {
+          "label": "Inbound campaigns",
+          "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm"
+        },
+        {
+          "label": "E911 data sheet",
+          "url": "https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF"
+        },
+        {
+          "label": "Data retention",
+          "url": "https://www.five9.com/legal/dataretention"
+        },
+        {
+          "label": "Technical requirements PDF",
+          "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+          "note": "Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall."
+        }
+      ],
+      "uncertain": [
+        "This checklist is a teaching bridge for cutover discipline. It is not an official Five9 UCCE runbook."
+      ],
+      "figure": {
+        "kind": "stack",
+        "title": "Before the carrier repoints",
+        "caption": "Each line is a go or a stop.",
+        "rows": [
+          {
+            "label": "Skills and users exist"
+          },
+          {
+            "label": "Script assigned"
+          },
+          {
+            "label": "Inbound campaign running"
+          },
+          {
+            "label": "Lists, DNC, dispositions loaded"
+          },
+          {
+            "label": "Profile assigned"
+          },
+          {
+            "label": "Desktop signed in"
+          },
+          {
+            "label": "E911 address is the real one"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Go or stop",
+        "lanes": [
+          "Voice",
+          "Data",
+          "Safety"
+        ],
+        "steps": [
+          {
+            "lane": "Voice",
+            "title": "DNIS",
+            "detail": "One test DNIS answers.",
+            "frame": "dnis"
+          },
+          {
+            "lane": "Data",
+            "title": "List",
+            "detail": "One outbound record dials under the chosen mode.",
+            "frame": "list"
+          },
+          {
+            "lane": "Data",
+            "title": "Pop",
+            "detail": "The adapter or connector you promised actually opens.",
+            "frame": "pop"
+          },
+          {
+            "lane": "Safety",
+            "title": "E911",
+            "detail": "The address is dispatchable for that agent.",
+            "frame": "e911"
+          },
+          {
+            "lane": "Safety",
+            "title": "Backout",
+            "detail": "The old path still works if this test fails.",
+            "frame": "back"
+          },
+          {
+            "lane": "Admin",
+            "title": "Stop",
+            "detail": "Any red line stops the repoint.",
+            "frame": "stop"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "A busy test DNIS on cutover morning most often means",
+          "choices": [
+            "Certified Caller failed",
+            "The inbound campaign is not running",
+            "The matrix will not export",
+            "Wireless headsets are ideal"
+          ],
+          "answer": 1,
+          "why": "Start the campaign."
+        },
+        {
+          "q": "E911 addresses should describe",
+          "choices": [
+            "The data center you like",
+            "The dispatchable location of the agent",
+            "The Equinix code",
+            "The ANI profile"
+          ],
+          "answer": 1,
+          "why": "The data sheet is about dispatchable location."
+        },
+        {
+          "q": "You should repoint every number before one test call. True or false?",
+          "choices": [
+            "True",
+            "False",
+            "True if the .aef copied",
+            "True at night only"
+          ],
+          "answer": 1,
+          "why": "Test one path first."
+        },
+        {
+          "q": "A backout that depends on a closed domain's DIDs ignores",
+          "choices": [
+            "The retention clock",
+            "RFC 4733 only",
+            "The theme",
+            "Skill tabs"
+          ],
+          "answer": 0,
+          "why": "Numbers do not wait forever."
+        },
+        {
+          "q": "The desktop pop is in the cutover test because",
+          "choices": [
+            "Voice implies the screen",
+            "Voice and the adapter fail separately",
+            "It sets G.711",
+            "It creates partitions"
+          ],
+          "answer": 1,
+          "why": "Test the screen."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Busy DNIS?",
+          "back": "Campaign not running."
+        },
+        {
+          "front": "E911 address?",
+          "back": "Where the agent is."
+        },
+        {
+          "front": "Test one path first?",
+          "back": "Yes."
+        },
+        {
+          "front": "Why test the pop?",
+          "back": "It is a separate channel."
+        }
+      ],
+      "lab": {
+        "title": "Write the go/no-go",
+        "goal": "Seven lines, each with a name who will check it.",
+        "steps": [
+          "Voice",
+          "Data",
+          "Screen",
+          "E911"
+        ],
+        "success": "A failed line is a stop.",
+        "href": ""
+      },
+      "fault": {
+        "title": "All numbers moved, then 911 would have shown the empty HQ",
+        "symptom": "Agents are at home and the location was never updated.",
+        "log": "E911 loc=HQ agents=home",
+        "choices": [
+          "Stop and register dispatchable locations",
+          "Increase predictive lines",
+          "Import the .aef",
+          "Change the report layout"
+        ],
+        "answer": 0,
+        "cause": "The data sheet and the EULA both treat a wrong address as a failed emergency call.",
+        "fix": "Fix locations before you call this done."
+      }
+    }
+  ]
+}

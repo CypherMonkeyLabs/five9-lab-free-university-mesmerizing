@@ -1,0 +1,1383 @@
+{
+  "id": "t17",
+  "title": "Ecosystem",
+  "short": "Ecosystem",
+  "blurb": "Neighbors, WEM, analytics pipes, AI handoffs, and a glossary that refuses uncited words.",
+  "group": "Ecosystem",
+  "level": "Practice",
+  "summary": "Every box needs a link. Every word needs a page or a local label.",
+  "lessons": [
+    {
+      "id": "l01",
+      "title": "The domain has neighbors",
+      "level": "foundation",
+      "minutes": 12,
+      "objectives": [
+        "Name the neighbors",
+        "Give each one its own failure"
+      ],
+      "paragraphs": [
+        "A Five9 domain does not live alone. Voice arrives on a SIP story. Agents sit in a desktop. WEM or a partner workforce suite watches the roster. A CRM pops. GenAI Studio may draft a summary. E911 carries a location. Reports leave through a role and an API.",
+        "The ecosystem page in this lab is a map of those neighbors with the same citations as the lessons. If a box has no link, it does not belong on the map."
+      ],
+      "cites": [
+        {
+          "label": "Agent Desktop",
+          "url": "https://www.five9.com/products/capabilities/agent-desktop"
+        },
+        {
+          "label": "Workforce engagement management",
+          "url": "https://www.five9.com/products/capabilities/workforce-optimization"
+        },
+        {
+          "label": "APIs and SDKs",
+          "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks"
+        },
+        {
+          "label": "E911 data sheet",
+          "url": "https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "stack",
+        "title": "Neighbors you should be able to name",
+        "caption": "Each one fails differently.",
+        "rows": [
+          {
+            "label": "SIP path"
+          },
+          {
+            "label": "IVR and skills"
+          },
+          {
+            "label": "Agent desktop"
+          },
+          {
+            "label": "WEM"
+          },
+          {
+            "label": "CRM"
+          },
+          {
+            "label": "GenAI Studio"
+          },
+          {
+            "label": "E911"
+          },
+          {
+            "label": "Reports and APIs"
+          }
+        ]
+      },
+      "flow": {
+        "title": "A call crosses the map",
+        "lanes": [
+          "Edge",
+          "Domain",
+          "After"
+        ],
+        "steps": [
+          {
+            "lane": "Edge",
+            "title": "SIP",
+            "detail": "The trunk story is named.",
+            "frame": "sip"
+          },
+          {
+            "lane": "Domain",
+            "title": "IVR",
+            "detail": "A script runs, or the campaign is direct to a skill.",
+            "frame": "ivr"
+          },
+          {
+            "lane": "Domain",
+            "title": "Skill",
+            "detail": "A skill has people.",
+            "frame": "skill"
+          },
+          {
+            "lane": "After",
+            "title": "Desk",
+            "detail": "The desktop shows the contact.",
+            "frame": "desk"
+          },
+          {
+            "lane": "After",
+            "title": "CRM",
+            "detail": "The adapter or connector is named.",
+            "frame": "crm"
+          },
+          {
+            "lane": "After",
+            "title": "Record",
+            "detail": "A report and a recording follow their own clocks.",
+            "frame": "rec"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "WEM is inside the dialer algorithm. True or false?",
+          "choices": [
+            "True",
+            "False. It is a neighbor that should feed who is supposed to be ready",
+            "True for predictive",
+            "True for TLS"
+          ],
+          "answer": 1,
+          "why": "Scheduling and dialing are different products."
+        },
+        {
+          "q": "E911 sits",
+          "choices": [
+            "In the campaign profile as ANI",
+            "Beside the domain, with its own location data",
+            "In the matrix layout",
+            "In a partition"
+          ],
+          "answer": 1,
+          "why": "Location is its own service."
+        },
+        {
+          "q": "A CRM pop is",
+          "choices": [
+            "Proof the SIP trunk is up",
+            "A separate neighbor",
+            "A codec",
+            "A retention clock"
+          ],
+          "answer": 1,
+          "why": "Voice can work while the pop does not."
+        },
+        {
+          "q": "GenAI Studio, on its product page, is",
+          "choices": [
+            "The dialer",
+            "The place prompts and knowledge are managed",
+            "A headset",
+            "An Equinix edge"
+          ],
+          "answer": 1,
+          "why": "It is its own product."
+        },
+        {
+          "q": "The map in this lab is allowed to include an uncited box. True or false?",
+          "choices": [
+            "True",
+            "False",
+            "True if it looks official",
+            "True for Cisco"
+          ],
+          "answer": 1,
+          "why": "No link, no box."
+        }
+      ],
+      "cards": [
+        {
+          "front": "WEM equals the dialer?",
+          "back": "No."
+        },
+        {
+          "front": "E911?",
+          "back": "Its own location service."
+        },
+        {
+          "front": "Pop equals trunk?",
+          "back": "No."
+        },
+        {
+          "front": "Uncited boxes?",
+          "back": "Leave them off."
+        }
+      ],
+      "lab": {
+        "title": "Draw eight boxes",
+        "goal": "Name the neighbor and one failure that does not indict the others.",
+        "steps": [
+          "SIP",
+          "Desktop",
+          "E911"
+        ],
+        "success": "You gave each a separate failure.",
+        "href": "#/ecosystem"
+      },
+      "fault": {
+        "title": "The bridge is blamed for a blank CRM card",
+        "symptom": "Voice is up. The adapter is down.",
+        "log": "SIP ok CRM timeout",
+        "choices": [
+          "Open the adapter path",
+          "Add SIP trunks",
+          "Change list penetration",
+          "Rewrite Kari's Law"
+        ],
+        "answer": 0,
+        "cause": "The neighbor that failed is the CRM.",
+        "fix": "Debug the adapter."
+      }
+    },
+    {
+      "id": "l02",
+      "title": "Workforce, quality, and the recording shelf",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Name native WEM or Verint",
+        "Keep quality scores out of the router unless an admin change says so"
+      ],
+      "paragraphs": [
+        "The WEM product page describes workforce management, quality, analytics, surveys, and recording, and it also describes a Verint partnership. Five9 says it manages install and upgrades for the solution it delivers. The data sheet is the short version of that claim.",
+        "Native WEM and a Verint deployment are not interchangeable words. Ask which one is in the contract. Quality scores do not change a skill assignment unless a process says they do."
+      ],
+      "cites": [
+        {
+          "label": "Workforce engagement management",
+          "url": "https://www.five9.com/products/capabilities/workforce-optimization"
+        },
+        {
+          "label": "WEM data sheet",
+          "url": "https://www.five9.com/resources/data-sheet/five9-wem"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "compare",
+        "title": "Say which WEM",
+        "caption": "The page describes both a native suite and a partnership.",
+        "leftTitle": "Ask",
+        "rightTitle": "Do not assume",
+        "left": [
+          "Native or Verint?",
+          "Who upgrades it?",
+          "Does a score move a skill?"
+        ],
+        "right": [
+          "Scores reroute calls",
+          "Surveys are the IVR",
+          "Recording retention is 120 days"
+        ]
+      },
+      "flow": {
+        "title": "A low score",
+        "lanes": [
+          "Who",
+          "Where",
+          "Effect"
+        ],
+        "steps": [
+          {
+            "lane": "Who",
+            "title": "Product",
+            "detail": "Native or Verint is named.",
+            "frame": "who"
+          },
+          {
+            "lane": "Where",
+            "title": "Eval",
+            "detail": "The evaluation lives in WEM.",
+            "frame": "eval"
+          },
+          {
+            "lane": "Effect",
+            "title": "Coach",
+            "detail": "Coaching is the default effect.",
+            "frame": "coach"
+          },
+          {
+            "lane": "Effect",
+            "title": "Skill",
+            "detail": "A skill change is a separate admin act.",
+            "frame": "skill"
+          },
+          {
+            "lane": "Shelf",
+            "title": "Audio",
+            "detail": "Recording retention is the retention page, not the WEM slogan.",
+            "frame": "audio"
+          },
+          {
+            "lane": "Admin",
+            "title": "Upgrade",
+            "detail": "Five9's upgrade claim is limited to the solution they deliver.",
+            "frame": "up"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "The WEM page mentions",
+          "choices": [
+            "Only a dialer",
+            "WFM, quality, analytics, surveys, recording, and Verint",
+            "Only E911",
+            "Only SOAP"
+          ],
+          "answer": 1,
+          "why": "That is the product scope."
+        },
+        {
+          "q": "A quality score automatically removes a skill. True or false?",
+          "choices": [
+            "True",
+            "False. Not unless your process does it in admin",
+            "True at night",
+            "True for TCPA"
+          ],
+          "answer": 1,
+          "why": "The products are neighbors."
+        },
+        {
+          "q": "Install and upgrades for the delivered solution are",
+          "choices": [
+            "Always the customer's Java admin",
+            "Described as managed by Five9",
+            "A Cisco gateway task",
+            "Optional and undocumented"
+          ],
+          "answer": 1,
+          "why": "The product page says Five9 manages them."
+        },
+        {
+          "q": "Recording shelf life is decided by",
+          "choices": [
+            "The WEM marketing sentence alone",
+            "The retention terms",
+            "The theme",
+            "RFC 3261"
+          ],
+          "answer": 1,
+          "why": "Use the retention page."
+        },
+        {
+          "q": "You should say Verint when the contract is native WEM. True or false?",
+          "choices": [
+            "True",
+            "False",
+            "True in the UK",
+            "True for surveys"
+          ],
+          "answer": 1,
+          "why": "Name the one you bought."
+        }
+      ],
+      "cards": [
+        {
+          "front": "What does the page include?",
+          "back": "WFM, QM, analytics, surveys, recording, Verint."
+        },
+        {
+          "front": "Scores move skills by themselves?",
+          "back": "No."
+        },
+        {
+          "front": "Who upgrades the delivered solution?",
+          "back": "Five9, per the page."
+        },
+        {
+          "front": "Which retention text?",
+          "back": "The retention page."
+        }
+      ],
+      "lab": {
+        "title": "Name the suite",
+        "goal": "Write native or Verint, and what a bad evaluation will not do by itself.",
+        "steps": [
+          "The product",
+          "The non-effect",
+          "The audio clock"
+        ],
+        "success": "You did not let a score edit a skill.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Agents lose a skill overnight and nobody filed a change",
+        "symptom": "Someone treated a score as a router.",
+        "log": "SKILL removed source=score",
+        "choices": [
+          "Restore the skill and separate coaching from routing",
+          "Add predictive lines",
+          "Delete recordings",
+          "Change ANI"
+        ],
+        "answer": 0,
+        "cause": "WEM did not get a silent write into the skill.",
+        "fix": "Put the skill back and fix the process."
+      }
+    },
+    {
+      "id": "l03",
+      "title": "Analytics and the report that is not a dashboard rumor",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Name the pipe that produced the number",
+        "Do not average a wallboard and a report"
+      ],
+      "paragraphs": [
+        "Analytics shows up on the WEM page and inside reporting. They are not one button. Standard reports need the Reporting role. Categories include ACD Queue, Campaign, Call Log, and the rest of that list. Layouts are tabular, summary, and matrix.",
+        "A wallboard that refreshes from Statistics Web Services is an integration. A scheduled summary email is a report. Say which one broke."
+      ],
+      "cites": [
+        {
+          "label": "Workforce engagement management",
+          "url": "https://www.five9.com/products/capabilities/workforce-optimization"
+        },
+        {
+          "label": "Generating standard reports",
+          "url": "https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports"
+        },
+        {
+          "label": "APIs and SDKs",
+          "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "path",
+        "title": "Three ways a number reaches a screen",
+        "caption": "Name the pipe.",
+        "rows": [
+          {
+            "label": "A standard report"
+          },
+          {
+            "label": "A WEM analytics view"
+          },
+          {
+            "label": "Statistics Web Services into a wallboard"
+          }
+        ]
+      },
+      "flow": {
+        "title": "The number disagrees",
+        "lanes": [
+          "Source",
+          "Role",
+          "Layout"
+        ],
+        "steps": [
+          {
+            "lane": "Source",
+            "title": "Which",
+            "detail": "Report, WEM, or statistics feed?",
+            "frame": "which"
+          },
+          {
+            "lane": "Role",
+            "title": "Reporting",
+            "detail": "The report user has the role.",
+            "frame": "role"
+          },
+          {
+            "lane": "Layout",
+            "title": "Kind",
+            "detail": "Tabular, summary, or matrix.",
+            "frame": "lay"
+          },
+          {
+            "lane": "Feed",
+            "title": "Name",
+            "detail": "Statistics Web Services is named if that is the pipe.",
+            "frame": "api"
+          },
+          {
+            "lane": "Admin",
+            "title": "Window",
+            "detail": "The call log window is not used for a queue snapshot.",
+            "frame": "win"
+          },
+          {
+            "lane": "Admin",
+            "title": "Stop",
+            "detail": "You do not 'average' two products into a third number.",
+            "frame": "stop"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "A wallboard feed and a standard report are",
+          "choices": [
+            "Always the same query",
+            "Different pipes. Name them",
+            "Both the IVR",
+            "Both E911"
+          ],
+          "answer": 1,
+          "why": "Say which one."
+        },
+        {
+          "q": "Statistics Web Services is",
+          "choices": [
+            "A headset",
+            "A named API family",
+            "A skill",
+            "A codec"
+          ],
+          "answer": 1,
+          "why": "The API page lists it."
+        },
+        {
+          "q": "The Reporting role gates",
+          "choices": [
+            "SIP",
+            "Standard reports",
+            "RedSky",
+            "G.711"
+          ],
+          "answer": 1,
+          "why": "Reports."
+        },
+        {
+          "q": "A matrix is the best CSV. True or false?",
+          "choices": [
+            "True",
+            "False",
+            "True for wallboards",
+            "True for WEM"
+          ],
+          "answer": 1,
+          "why": "Matrix is not a direct CSV."
+        },
+        {
+          "q": "WEM analytics replaces the Reporting role. True or false?",
+          "choices": [
+            "True",
+            "False",
+            "True for supervisors",
+            "True after offload"
+          ],
+          "answer": 1,
+          "why": "Different products."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Wallboard versus report?",
+          "back": "Different pipes."
+        },
+        {
+          "front": "Statistics API?",
+          "back": "A named family."
+        },
+        {
+          "front": "Reporting role?",
+          "back": "Gates standard reports."
+        },
+        {
+          "front": "Matrix as CSV?",
+          "back": "No."
+        }
+      ],
+      "lab": {
+        "title": "Label three numbers",
+        "goal": "For service level, a survey score, and a wallboard, name the product.",
+        "steps": [
+          "Report",
+          "WEM",
+          "Statistics feed"
+        ],
+        "success": "You used three labels.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Leadership averages the wallboard and the summary into a bonus",
+        "symptom": "The pipes were never the same query.",
+        "log": "SL wall=40 report=55",
+        "choices": [
+          "Pick the system of record and stop averaging",
+          "Change the abandon window",
+          "Reboot phones",
+          "Delete the skill"
+        ],
+        "answer": 0,
+        "cause": "Two products, two numbers.",
+        "fix": "Choose one source."
+      }
+    },
+    {
+      "id": "l04",
+      "title": "AI agents are a handoff with a name",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Give every bot a named exit",
+        "Do not invent a model name"
+      ],
+      "paragraphs": [
+        "Five9 Engage talks about self-service and the agent desktop together. Studio holds a digital IVA task. GenAI Studio is where knowledge and prompts are tested, and the product page says it powers Five9 AI applications, starting with Agent Assist summaries. This lab does not name a default model.",
+        "An AI agent that cannot transfer to a real skill is a dead end. The IVR module list includes IVA Transfer. Digital IVA uses a Studio task key placed into VCC. Those are the handoffs you can cite."
+      ],
+      "cites": [
+        {
+          "label": "Five9 Engage",
+          "url": "https://www.five9.com/platform/self-service-and-engagement"
+        },
+        {
+          "label": "GenAI Studio",
+          "url": "https://www.five9.com/products/capabilities/gen-ai-studio"
+        },
+        {
+          "label": "Agent Desktop",
+          "url": "https://www.five9.com/products/capabilities/agent-desktop"
+        }
+      ],
+      "uncertain": [
+        "GenAI Studio's product page describes an engine-agnostic studio and names Agent Assist summaries as an initial consumer. It does not name a default model for this lab to repeat."
+      ],
+      "figure": {
+        "kind": "stack",
+        "title": "A bot that can leave",
+        "caption": "Cite the handoff you mean.",
+        "rows": [
+          {
+            "label": "Studio task in the right region"
+          },
+          {
+            "label": "Task key in VCC"
+          },
+          {
+            "label": "IVA Transfer or a skill"
+          },
+          {
+            "label": "GenAI prompt tested before it is live"
+          }
+        ]
+      },
+      "flow": {
+        "title": "The bot keeps the caller",
+        "lanes": [
+          "Task",
+          "Key",
+          "Exit"
+        ],
+        "steps": [
+          {
+            "lane": "Task",
+            "title": "Region",
+            "detail": "The Studio region matches the domain.",
+            "frame": "region"
+          },
+          {
+            "lane": "Key",
+            "title": "VCC",
+            "detail": "The task key is in VCC.",
+            "frame": "key"
+          },
+          {
+            "lane": "Exit",
+            "title": "Module",
+            "detail": "IVA Transfer or Skill Transfer exists.",
+            "frame": "exit"
+          },
+          {
+            "lane": "Exit",
+            "title": "Skill",
+            "detail": "The destination skill has people.",
+            "frame": "skill"
+          },
+          {
+            "lane": "Prompt",
+            "title": "Test",
+            "detail": "A GenAI prompt was tested before production.",
+            "frame": "test"
+          },
+          {
+            "lane": "Prompt",
+            "title": "Model",
+            "detail": "No model name is invented.",
+            "frame": "model"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "This lab names GenAI Studio's default model. True or false?",
+          "choices": [
+            "True",
+            "False",
+            "True, it is a public rumor",
+            "True for Agent Assist only"
+          ],
+          "answer": 1,
+          "why": "The page does not give this lab a default to repeat."
+        },
+        {
+          "q": "IVA Transfer is",
+          "choices": [
+            "A rumor",
+            "An IVR module",
+            "A retention clock",
+            "A gateway"
+          ],
+          "answer": 1,
+          "why": "It is in the modules chapter."
+        },
+        {
+          "q": "A digital IVA reaches VCC with",
+          "choices": [
+            "A CUCM partition",
+            "A Studio task key",
+            "An ANI profile",
+            "A matrix"
+          ],
+          "answer": 1,
+          "why": "The Studio article."
+        },
+        {
+          "q": "Agent Assist summaries are",
+          "choices": [
+            "The dialer mode",
+            "Named as an early GenAI Studio consumer",
+            "A SIP port",
+            "E911"
+          ],
+          "answer": 1,
+          "why": "The GenAI page."
+        },
+        {
+          "q": "A bot with no transfer target is",
+          "choices": [
+            "A complete design",
+            "A dead end",
+            "Certified Caller",
+            "A report layout"
+          ],
+          "answer": 1,
+          "why": "Give it a skill."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Default model named here?",
+          "back": "No."
+        },
+        {
+          "front": "IVA Transfer?",
+          "back": "A real module."
+        },
+        {
+          "front": "Digital handoff?",
+          "back": "A Studio task key."
+        },
+        {
+          "front": "No exit?",
+          "back": "A dead end."
+        }
+      ],
+      "lab": {
+        "title": "Draw the exit",
+        "goal": "Name the task, the key, and the skill a bot must be able to reach.",
+        "steps": [
+          "Region",
+          "Key",
+          "Skill"
+        ],
+        "success": "You did not name a model.",
+        "href": ""
+      },
+      "fault": {
+        "title": "The bot apologizes forever",
+        "symptom": "IVA Transfer was never added.",
+        "log": "BOT exit=none",
+        "choices": [
+          "Add a transfer to a staffed skill",
+          "Add lines per agent",
+          "Change the abandon percent",
+          "Register a fake HQ address"
+        ],
+        "answer": 0,
+        "cause": "The caller cannot leave.",
+        "fix": "Add the handoff."
+      }
+    },
+    {
+      "id": "l05",
+      "title": "CRM, UC, and the desktop are three contracts",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Treat adapter, UC integration, and local UC app as three lines",
+        "Budget Assist and Teams separately"
+      ],
+      "paragraphs": [
+        "Plus adapters named in the technical requirements include Salesforce, ServiceNow, Dynamics 365, Zendesk, Oracle, NetSuite, Epic, and the Agent Desktop Toolkit. Zoom Phone and Teams show up as prebuilt paths on the API page. A UC app on the PC is also a bandwidth line, about 320 kbps.",
+        "The agent's screen can show a CRM card, a UC window, and Agent Assist at once. When one is blank, name which contract failed."
+      ],
+      "cites": [
+        {
+          "label": "Technical requirements PDF",
+          "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+          "note": "Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall."
+        },
+        {
+          "label": "APIs and SDKs",
+          "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks"
+        },
+        {
+          "label": "Agent Desktop",
+          "url": "https://www.five9.com/products/capabilities/agent-desktop"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "stack",
+        "title": "Three contracts on one desk",
+        "caption": "Blank is not one disease.",
+        "rows": [
+          {
+            "label": "Plus adapter or CRM SDK"
+          },
+          {
+            "label": "Prebuilt UC, if purchased"
+          },
+          {
+            "label": "UC app bandwidth, if installed"
+          },
+          {
+            "label": "Assist, if enabled"
+          }
+        ]
+      },
+      "flow": {
+        "title": "One pane is blank",
+        "lanes": [
+          "Voice",
+          "Card",
+          "UC"
+        ],
+        "steps": [
+          {
+            "lane": "Voice",
+            "title": "Ok",
+            "detail": "The caller is heard.",
+            "frame": "voice"
+          },
+          {
+            "lane": "Card",
+            "title": "Adapter",
+            "detail": "The adapter process is checked.",
+            "frame": "ad"
+          },
+          {
+            "lane": "UC",
+            "title": "App",
+            "detail": "The UC client is checked separately.",
+            "frame": "uc"
+          },
+          {
+            "lane": "UC",
+            "title": "Bw",
+            "detail": "320 kbps is in the budget if the app is local.",
+            "frame": "bw"
+          },
+          {
+            "lane": "Assist",
+            "title": "On",
+            "detail": "Assist is either enabled or it is not.",
+            "frame": "as"
+          },
+          {
+            "lane": "Admin",
+            "title": "Word",
+            "detail": "The ticket uses one product name.",
+            "frame": "word"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Epic is in the Plus adapter list. True or false?",
+          "choices": [
+            "False",
+            "True",
+            "Only as a codec",
+            "Only in the EULA"
+          ],
+          "answer": 1,
+          "why": "The PDF lists Epic."
+        },
+        {
+          "q": "A local Teams client is about",
+          "choices": [
+            "12 kbps",
+            "320 kbps",
+            "Zero",
+            "88 kbps"
+          ],
+          "answer": 1,
+          "why": "The workstation note."
+        },
+        {
+          "q": "Voice up and CRM blank means",
+          "choices": [
+            "G.711 failed",
+            "The adapter is its own incident",
+            "E911 failed",
+            "The list is vertical"
+          ],
+          "answer": 1,
+          "why": "Separate channels."
+        },
+        {
+          "q": "The CRM SDK is for",
+          "choices": [
+            "Replacing TLS",
+            "A CRM that is not a named adapter",
+            "Setting abandon rate",
+            "Headsets"
+          ],
+          "answer": 1,
+          "why": "Bring your own CRM."
+        },
+        {
+          "q": "Agent Assist bandwidth in the PDF is about",
+          "choices": [
+            "+12 kbps",
+            "+320 kbps",
+            "A trunk",
+            "A domain"
+          ],
+          "answer": 0,
+          "why": "About 12."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Epic listed?",
+          "back": "Yes."
+        },
+        {
+          "front": "Local Teams?",
+          "back": "About 320 kbps."
+        },
+        {
+          "front": "Blank card, live voice?",
+          "back": "Adapter incident."
+        },
+        {
+          "front": "SDK?",
+          "back": "Unlisted CRMs."
+        }
+      ],
+      "lab": {
+        "title": "Split a desk ticket",
+        "goal": "Write the three contracts and which one is failing.",
+        "steps": [
+          "Adapter",
+          "UC",
+          "Assist"
+        ],
+        "success": "Voice is marked up so you do not reboot the trunk.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Someone adds Teams 'because the integration was purchased' and the floor slows",
+        "symptom": "The app's bandwidth was never added.",
+        "log": "BW budget=voice teams=on",
+        "choices": [
+          "Budget 320 kbps or remove the client",
+          "Lower the abandon window",
+          "Change skills to Default",
+          "Disable SRV"
+        ],
+        "answer": 0,
+        "cause": "The client is traffic.",
+        "fix": "Fix the budget."
+      }
+    },
+    {
+      "id": "l06",
+      "title": "The glossary is the contract with yourself",
+      "level": "foundation",
+      "minutes": 12,
+      "objectives": [
+        "Cite a word or mark it local",
+        "Keep campaign profile and user profile apart"
+      ],
+      "paragraphs": [
+        "Teams lose hours to words that Five9 uses narrowly: domain, skill, campaign profile, DNIS, disposition, list penetration, vertical dialing, campaign, autodial, blended, manual touch. The ecosystem glossary in this lab defines the ones we could cite and marks the rest.",
+        "If you cannot point at a page, say 'we use this word locally' and keep it out of a design that claims to be vendor language."
+      ],
+      "cites": [
+        {
+          "label": "Generating standard reports",
+          "url": "https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports"
+        },
+        {
+          "label": "Technical requirements PDF",
+          "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+          "note": "Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall."
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "path",
+        "title": "A word earns its place",
+        "caption": "Citation or a local label.",
+        "rows": [
+          {
+            "label": "Say the word"
+          },
+          {
+            "label": "Open the page"
+          },
+          {
+            "label": "Quote it"
+          },
+          {
+            "label": "Or mark it local"
+          }
+        ]
+      },
+      "flow": {
+        "title": "A design review",
+        "lanes": [
+          "Word",
+          "Page",
+          "Label"
+        ],
+        "steps": [
+          {
+            "lane": "Word",
+            "title": "Hear",
+            "detail": "Someone says 'partition' or 'CSQ'.",
+            "frame": "hear"
+          },
+          {
+            "lane": "Page",
+            "title": "Find",
+            "detail": "You look for the Five9 page.",
+            "frame": "find"
+          },
+          {
+            "lane": "Label",
+            "title": "Local",
+            "detail": "If there is no page, the word is marked local.",
+            "frame": "local"
+          },
+          {
+            "lane": "Label",
+            "title": "Teach",
+            "detail": "The teaching bridge is named as a bridge.",
+            "frame": "bridge"
+          },
+          {
+            "lane": "Admin",
+            "title": "Profile",
+            "detail": "Profile is not used to mean user profile and campaign profile at once.",
+            "frame": "prof"
+          },
+          {
+            "lane": "Admin",
+            "title": "Blend",
+            "detail": "Blended is not written as a campaign type.",
+            "frame": "blend"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "A word with no Five9 page should be",
+          "choices": [
+            "Put in the admin guide as official",
+            "Marked local",
+            "Used as a cert code",
+            "Used as a port"
+          ],
+          "answer": 1,
+          "why": "Citation or a local label."
+        },
+        {
+          "q": "Campaign profile and user profile are",
+          "choices": [
+            "Synonyms",
+            "Different objects",
+            "Both ANIs",
+            "Both reports"
+          ],
+          "answer": 1,
+          "why": "Do not merge them."
+        },
+        {
+          "q": "Blended, on the product pages, is",
+          "choices": [
+            "A fourth campaign type",
+            "Staffing language",
+            "A SIP port",
+            "A retention row"
+          ],
+          "answer": 1,
+          "why": "Inbound, outbound, and autodial are the types."
+        },
+        {
+          "q": "'Partition' in a Five9 design is",
+          "choices": [
+            "Required",
+            "A visiting Cisco word. Mark it",
+            "A skill level",
+            "A layout"
+          ],
+          "answer": 1,
+          "why": "Five9's boundary is the domain."
+        },
+        {
+          "q": "The glossary on the ecosystem page is",
+          "choices": [
+            "Decorative",
+            "The same discipline as the lessons",
+            "A dialer",
+            "Optional fiction"
+          ],
+          "answer": 1,
+          "why": "It is cited."
+        }
+      ],
+      "cards": [
+        {
+          "front": "No page?",
+          "back": "Mark the word local."
+        },
+        {
+          "front": "Two profiles?",
+          "back": "Different objects."
+        },
+        {
+          "front": "Blended?",
+          "back": "Not a campaign type."
+        },
+        {
+          "front": "Partition?",
+          "back": "A visiting word."
+        }
+      ],
+      "lab": {
+        "title": "Audit ten words",
+        "goal": "Mark each cited or local. Include blended, profile, and DNIS.",
+        "steps": [
+          "Cited",
+          "Local",
+          "One you almost misused"
+        ],
+        "success": "The local ones are labeled.",
+        "href": "#/ecosystem"
+      },
+      "fault": {
+        "title": "A diagram says 'partition = skill'",
+        "symptom": "That erases both products.",
+        "log": "MAP partition-as-skill",
+        "choices": [
+          "Redraw domain and skill, and mark the old word as Cisco",
+          "Ship it",
+          "Add the word to a cert exam",
+          "Change the codec"
+        ],
+        "answer": 0,
+        "cause": "The map lied.",
+        "fix": "Separate the vocabularies."
+      }
+    },
+    {
+      "id": "l07",
+      "title": "Read the map before you add a box",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Check the integration row before you buy",
+        "Split logos that hide two products"
+      ],
+      "paragraphs": [
+        "Integration maps fail when a logo is enough. Salesforce in the IVR is a module. Salesforce on the desktop is an adapter. Certified Caller is not the ANI. RedSky is not the ITSP. Verint is not automatically your WEM. Studio regions are not Equinix edges.",
+        "Open the ecosystem page, filter the glossary, and check the integration table against whatever you are about to buy. If the row is missing, you do not yet have a citation."
+      ],
+      "cites": [
+        {
+          "label": "APIs and SDKs",
+          "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks"
+        },
+        {
+          "label": "E911 data sheet",
+          "url": "https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF"
+        },
+        {
+          "label": "Certified Caller",
+          "url": "https://www.five9.com/resources/five9_certified_caller"
+        },
+        {
+          "label": "Workforce engagement management",
+          "url": "https://www.five9.com/products/capabilities/workforce-optimization"
+        },
+        {
+          "label": "Technical requirements PDF",
+          "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+          "note": "Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall."
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "compare",
+        "title": "Logos that get confused",
+        "caption": "The row says how they meet.",
+        "leftTitle": "Often merged",
+        "rightTitle": "Keep split",
+        "left": [
+          "IVR module and adapter",
+          "ANI and attestation",
+          "ITSP and RedSky"
+        ],
+        "right": [
+          "Native WEM and Verint",
+          "Studio region and Equinix edge",
+          "Report and statistics feed"
+        ]
+      },
+      "flow": {
+        "title": "A vendor slide arrives",
+        "lanes": [
+          "Logo",
+          "Row",
+          "Gap"
+        ],
+        "steps": [
+          {
+            "lane": "Logo",
+            "title": "See",
+            "detail": "The slide has a logo and a verb.",
+            "frame": "logo"
+          },
+          {
+            "lane": "Row",
+            "title": "Find",
+            "detail": "You find the row in the map, or you do not.",
+            "frame": "row"
+          },
+          {
+            "lane": "Gap",
+            "title": "Write",
+            "detail": "A missing row is a question, not a yes.",
+            "frame": "gap"
+          },
+          {
+            "lane": "Split",
+            "title": "Two",
+            "detail": "If two products share a brand, you name both.",
+            "frame": "two"
+          },
+          {
+            "lane": "Admin",
+            "title": "Cite",
+            "detail": "The link is the one from the lesson.",
+            "frame": "cite"
+          },
+          {
+            "lane": "Admin",
+            "title": "Buy",
+            "detail": "The purchase waits on the row.",
+            "frame": "buy"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "A missing integration row means",
+          "choices": [
+            "Buy it",
+            "You do not have a citation yet",
+            "It is included in G.711",
+            "It is a skill"
+          ],
+          "answer": 1,
+          "why": "No row, no claim."
+        },
+        {
+          "q": "RedSky and the ITSP are",
+          "choices": [
+            "Always the same company",
+            "Different roles",
+            "Both report layouts",
+            "Both headsets"
+          ],
+          "answer": 1,
+          "why": "Location partner versus call path."
+        },
+        {
+          "q": "Studio region and an Equinix edge are",
+          "choices": [
+            "The same code",
+            "Different lists",
+            "Both DNIS",
+            "Both dispositions"
+          ],
+          "answer": 1,
+          "why": "Do not mix the lists."
+        },
+        {
+          "q": "Two uses of Salesforce should be",
+          "choices": [
+            "One SKU in the diagram",
+            "Module versus adapter",
+            "Both Certified Caller",
+            "Both partitions"
+          ],
+          "answer": 1,
+          "why": "Name which one."
+        },
+        {
+          "q": "The filter on the glossary is there so you can",
+          "choices": [
+            "Hide uncertainty",
+            "Find a term before you misuse it",
+            "Edit Five9's site",
+            "Change TLS"
+          ],
+          "answer": 1,
+          "why": "Use it."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Missing row?",
+          "back": "No citation yet."
+        },
+        {
+          "front": "RedSky versus ITSP?",
+          "back": "Different roles."
+        },
+        {
+          "front": "Studio versus Equinix?",
+          "back": "Different lists."
+        },
+        {
+          "front": "Two Salesforces?",
+          "back": "Module versus adapter."
+        }
+      ],
+      "lab": {
+        "title": "Check a slide",
+        "goal": "Take three logos and write the row, or write 'no citation'.",
+        "steps": [
+          "Open the ecosystem page",
+          "Filter one term",
+          "Reject one merged logo"
+        ],
+        "success": "You left with fewer boxes than you started.",
+        "href": "#/ecosystem"
+      },
+      "fault": {
+        "title": "A slide connects RedSky to the SIP trunk as if it were the carrier",
+        "symptom": "The data sheet names an emergency partner.",
+        "log": "SLIDE redsky=itsp",
+        "choices": [
+          "Split emergency calling from the SIP story",
+          "Order the edge as RedSky",
+          "Delete E911",
+          "Paste TCPA numbers"
+        ],
+        "answer": 0,
+        "cause": "The roles differ.",
+        "fix": "Redraw the two boxes."
+      }
+    }
+  ]
+}

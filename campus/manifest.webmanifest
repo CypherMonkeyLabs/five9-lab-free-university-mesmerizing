@@ -1,0 +1,9 @@
+{
+  "name": "Five9 Lab",
+  "short_name": "Five9 Lab",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#07111c",
+  "theme_color": "#07111c",
+  "lang": "en"
+}

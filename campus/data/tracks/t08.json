@@ -1,0 +1,1300 @@
+{
+  "id": "t08",
+  "title": "Skills routing",
+  "short": "Skills",
+  "blurb": "Queues, the awkward tab name, pools, levels, Default, and the scoreboard.",
+  "group": "Voice",
+  "level": "Practice",
+  "summary": "A skill is people plus a place on the campaign. Default is what you get when you forget.",
+  "lessons": [
+    {
+      "id": "l01",
+      "title": "A skill is a queue with people in it",
+      "level": "foundation",
+      "minutes": 12,
+      "objectives": [
+        "Staff the skill",
+        "Set a service level you can explain"
+      ],
+      "paragraphs": [
+        "A skill group holds users who have the agent or supervisor role. Campaigns point at one or more groups. The people, not the name, determine who can receive the contact.",
+        "Service level, voicemail, greetings, and a message to the group are all on the skill topic. A skill with no members is a label."
+      ],
+      "cites": [
+        {
+          "label": "Skill groups",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "stack",
+        "title": "Skill contents",
+        "caption": "From the skill group topic.",
+        "rows": [
+          {
+            "label": "Agent or supervisor users"
+          },
+          {
+            "label": "Campaign assignment"
+          },
+          {
+            "label": "Service level"
+          },
+          {
+            "label": "Voicemail and greeting"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Build Billing",
+        "lanes": [
+          "Admin",
+          "Agent"
+        ],
+        "steps": [
+          {
+            "lane": "Admin",
+            "title": "Create",
+            "detail": "The group exists.",
+            "frame": "create"
+          },
+          {
+            "lane": "Admin",
+            "title": "Add",
+            "detail": "Agents are members.",
+            "frame": "add"
+          },
+          {
+            "lane": "Admin",
+            "title": "Level",
+            "detail": "A service level is set.",
+            "frame": "sl"
+          },
+          {
+            "lane": "Admin",
+            "title": "Audio",
+            "detail": "A greeting is recorded.",
+            "frame": "audio"
+          },
+          {
+            "lane": "Agent",
+            "title": "Ready",
+            "detail": "A member is available.",
+            "frame": "ready"
+          },
+          {
+            "lane": "Admin",
+            "title": "Empty",
+            "detail": "A group with no members never answers.",
+            "frame": "empty"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Who can be in a skill group?",
+          "choices": [
+            "Reporting-only users",
+            "Agent or supervisor users",
+            "SIP trunks",
+            "Profiles by themselves"
+          ],
+          "answer": 1,
+          "why": "The topic names those roles."
+        },
+        {
+          "q": "A skill with no members",
+          "choices": [
+            "Answers faster",
+            "Cannot deliver a call",
+            "Sets ANI",
+            "Exports CSV"
+          ],
+          "answer": 1,
+          "why": "There is nobody to offer."
+        },
+        {
+          "q": "Service level lives",
+          "choices": [
+            "On the skill",
+            "On the codec",
+            "On the JRE",
+            "On the badge"
+          ],
+          "answer": 1,
+          "why": "The topic includes service levels."
+        },
+        {
+          "q": "One user, several skills?",
+          "choices": [
+            "Forbidden",
+            "Allowed",
+            "Only in UK domains",
+            "Only for IVA"
+          ],
+          "answer": 1,
+          "why": "Users can be in multiple groups."
+        },
+        {
+          "q": "Voicemail on a skill is",
+          "choices": [
+            "Undocumented",
+            "In the skill topic",
+            "A list mode",
+            "A dialer mode"
+          ],
+          "answer": 1,
+          "why": "Messages and greetings are part of the topic."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Membership?",
+          "back": "Agent or supervisor."
+        },
+        {
+          "front": "Empty skill?",
+          "back": "No delivery."
+        },
+        {
+          "front": "Service level?",
+          "back": "On the skill."
+        },
+        {
+          "front": "Several skills per user?",
+          "back": "Yes."
+        }
+      ],
+      "lab": {
+        "title": "Roster",
+        "goal": "Write a skill and three members.",
+        "steps": [
+          "Name the skill",
+          "Name who is excluded",
+          "Name the service level as a target, not a priority"
+        ],
+        "success": "The roster is not the campaign.",
+        "href": ""
+      },
+      "fault": {
+        "title": "The queue name exists and never rings",
+        "symptom": "Billing has zero users.",
+        "log": "SKILL Billing members=0",
+        "choices": [
+          "Add members",
+          "Change the codec",
+          "Enable paste",
+          "Reset Sale"
+        ],
+        "answer": 0,
+        "cause": "A name is not a person.",
+        "fix": "Add the agents."
+      }
+    },
+    {
+      "id": "l02",
+      "title": "The tab is named backwards on inbound",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Memorize the awkward tab name",
+        "Check it before the trunk"
+      ],
+      "paragraphs": [
+        "Outbound campaigns take skills on the Skills tab. Inbound and autodial take them on a tab named Outbound Skills. The skill topic says this in one paragraph. People miss it because the word outbound sits on an inbound campaign.",
+        "If the right people are Ready and the queue is still empty, look at the tab before you look at the carrier."
+      ],
+      "cites": [
+        {
+          "label": "Skill groups",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "compare",
+        "title": "Tab names",
+        "caption": "Read the words on the screen.",
+        "leftTitle": "Outbound campaign",
+        "rightTitle": "Inbound and autodial",
+        "left": [
+          "Skills"
+        ],
+        "right": [
+          "Outbound Skills"
+        ]
+      },
+      "flow": {
+        "title": "Attach the same group twice",
+        "lanes": [
+          "Admin",
+          "Campaign"
+        ],
+        "steps": [
+          {
+            "lane": "Admin",
+            "title": "Group",
+            "detail": "Support exists and has members.",
+            "frame": "group"
+          },
+          {
+            "lane": "Campaign",
+            "title": "Out",
+            "detail": "The outbound campaign uses Skills.",
+            "frame": "skills"
+          },
+          {
+            "lane": "Campaign",
+            "title": "In",
+            "detail": "The inbound campaign uses Outbound Skills.",
+            "frame": "outskills"
+          },
+          {
+            "lane": "Campaign",
+            "title": "Wrong",
+            "detail": "Using Skills on inbound leaves the queue empty.",
+            "frame": "wrong"
+          },
+          {
+            "lane": "Agent",
+            "title": "Ready",
+            "detail": "Ready does not fix the wrong tab.",
+            "frame": "ready"
+          },
+          {
+            "lane": "Admin",
+            "title": "Retest",
+            "detail": "A test call hits a member.",
+            "frame": "test"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Inbound skills tab is named",
+          "choices": [
+            "Inbound Skills",
+            "Outbound Skills",
+            "ANI",
+            "Pause"
+          ],
+          "answer": 1,
+          "why": "That is the published name."
+        },
+        {
+          "q": "Ready agents on the wrong tab",
+          "choices": [
+            "Still get the call",
+            "Do not",
+            "Get 911 instead",
+            "Change the list mode"
+          ],
+          "answer": 1,
+          "why": "The campaign is not pointing at them."
+        },
+        {
+          "q": "Autodial uses",
+          "choices": [
+            "The outbound campaign Skills tab",
+            "Outbound Skills",
+            "No skills ever",
+            "Only Default always"
+          ],
+          "answer": 1,
+          "why": "The topic groups autodial with inbound."
+        },
+        {
+          "q": "The fix is",
+          "choices": [
+            "A new codec",
+            "The other tab",
+            "A JRE update",
+            "A frame header"
+          ],
+          "answer": 1,
+          "why": "Move the assignment."
+        },
+        {
+          "q": "This is documented in",
+          "choices": [
+            "A rumor",
+            "The skill groups topic",
+            "RFC 3261",
+            "The Credly badge"
+          ],
+          "answer": 1,
+          "why": "It is one of the first facts on that page."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Inbound tab?",
+          "back": "Outbound Skills."
+        },
+        {
+          "front": "Ready but wrong tab?",
+          "back": "No offer."
+        },
+        {
+          "front": "Autodial?",
+          "back": "Same tab as inbound."
+        },
+        {
+          "front": "Where documented?",
+          "back": "Skill groups topic."
+        }
+      ],
+      "lab": {
+        "title": "Two campaigns",
+        "goal": "Write the tab name under each.",
+        "steps": [
+          "Inbound",
+          "Outbound",
+          "Autodial"
+        ],
+        "success": "Inbound and autodial match.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Support never rings on the new inbound line",
+        "symptom": "The skill is on the Skills tab.",
+        "log": "INBOUND tab=Skills outboundSkills=empty",
+        "choices": [
+          "Move Support to Outbound Skills",
+          "Add power lines",
+          "Delete the prompt",
+          "Enable IE"
+        ],
+        "answer": 0,
+        "cause": "Wrong tab.",
+        "fix": "Use Outbound Skills."
+      }
+    },
+    {
+      "id": "l03",
+      "title": "One module, one skill, when you need the truth",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Choose pool or precision out loud",
+        "Match the report to that choice"
+      ],
+      "paragraphs": [
+        "Skill Transfer may list several skills, and any agent who has one of them can take the call. The same article recommends a single skill in the module when you want reports that mean something.",
+        "A shared pool is a valid design. An accidental shared pool is how billing calls show up as a blob. Split modules if the work is different. Keep one module if the pool is the point."
+      ],
+      "cites": [
+        {
+          "label": "Skill Transfer functions",
+          "url": "https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "compare",
+        "title": "Pool or precision",
+        "caption": "Both are configurations. Only one is an accident.",
+        "leftTitle": "One skill in the module",
+        "rightTitle": "Several skills",
+        "left": [
+          "Clearer reports",
+          "A specific queue"
+        ],
+        "right": [
+          "Any matching agent",
+          "A deliberate pool"
+        ]
+      },
+      "flow": {
+        "title": "Choose",
+        "lanes": [
+          "Designer",
+          "Report"
+        ],
+        "steps": [
+          {
+            "lane": "Designer",
+            "title": "Ask",
+            "detail": "Is this one kind of work?",
+            "frame": "ask"
+          },
+          {
+            "lane": "Designer",
+            "title": "One",
+            "detail": "Then one skill.",
+            "frame": "one"
+          },
+          {
+            "lane": "Designer",
+            "title": "Pool",
+            "detail": "If any of three teams may take it, list them on purpose.",
+            "frame": "pool"
+          },
+          {
+            "lane": "Report",
+            "title": "Read",
+            "detail": "One skill keeps the column meaningful.",
+            "frame": "read"
+          },
+          {
+            "lane": "Designer",
+            "title": "Write",
+            "detail": "The design note says pool or not.",
+            "frame": "note"
+          },
+          {
+            "lane": "Report",
+            "title": "Check",
+            "detail": "A week later the report matches the note.",
+            "frame": "check"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Several skills in one module means",
+          "choices": [
+            "The agent must have all of them",
+            "Any one of them qualifies",
+            "The call fails",
+            "ANI changes"
+          ],
+          "answer": 1,
+          "why": "The article says any agent with one of the skills."
+        },
+        {
+          "q": "The report recommendation is",
+          "choices": [
+            "As many skills as possible",
+            "One",
+            "Zero",
+            "Default only"
+          ],
+          "answer": 1,
+          "why": "One skill per module for useful reports."
+        },
+        {
+          "q": "A deliberate pool is",
+          "choices": [
+            "Forbidden",
+            "Fine, if you meant it",
+            "A codec",
+            "A JRE"
+          ],
+          "answer": 1,
+          "why": "The software allows it. The accident is the problem."
+        },
+        {
+          "q": "Splitting modules means",
+          "choices": [
+            "Two queues you can see",
+            "One blob",
+            "No IVR",
+            "No agents"
+          ],
+          "answer": 1,
+          "why": "Each module names its skill."
+        },
+        {
+          "q": "Default queue is what you get when",
+          "choices": [
+            "You pick one skill",
+            "You select none",
+            "You set pause to 0",
+            "You upload a list"
+          ],
+          "answer": 1,
+          "why": "No selection routes to users without skills."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Any or all?",
+          "back": "Any one skill."
+        },
+        {
+          "front": "Report tip?",
+          "back": "One skill."
+        },
+        {
+          "front": "Deliberate pool?",
+          "back": "Allowed if intended."
+        },
+        {
+          "front": "No selection?",
+          "back": "Default."
+        }
+      ],
+      "lab": {
+        "title": "Split or pool",
+        "goal": "Take three call reasons and decide.",
+        "steps": [
+          "Billing alone",
+          "Sales alone",
+          "A true overflow pool"
+        ],
+        "success": "The pool is labeled on purpose.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Billing reports include password resets",
+        "symptom": "One module lists both skills.",
+        "log": "SKILLS Billing+Reset",
+        "choices": [
+          "Split the modules",
+          "Add a third skill",
+          "Stop the campaign nightly",
+          "Change ANI"
+        ],
+        "answer": 0,
+        "cause": "Either skill can take the call, so the report blends them.",
+        "fix": "One skill per module."
+      }
+    },
+    {
+      "id": "l04",
+      "title": "Skill level versus list order",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Pick list order or agent level",
+        "Do not assume they match"
+      ],
+      "paragraphs": [
+        "The skill transfer article describes an option to ignore the order of skills in the module and distribute by the agent's skill level instead. Order and level are different ideas. Order is the list you typed. Level is a property of the agent.",
+        "This lab does not quote the click-path for editing an agent's level. If you use the option, confirm in the editor which number wins. Do not assume the top of the list is the highest level."
+      ],
+      "cites": [
+        {
+          "label": "Skill Transfer functions",
+          "url": "https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features"
+        }
+      ],
+      "uncertain": [
+        "The article names the option. The exact screen where an agent's skill level is edited was not quoted in this lab."
+      ],
+      "figure": {
+        "kind": "compare",
+        "title": "Two orderings",
+        "caption": "The article gives you a switch.",
+        "leftTitle": "List order",
+        "rightTitle": "Agent skill level",
+        "left": [
+          "The sequence in the module"
+        ],
+        "right": [
+          "A property of the person",
+          "Used when you ignore list order"
+        ]
+      },
+      "flow": {
+        "title": "Two agents, one call",
+        "lanes": [
+          "Module",
+          "Agent A",
+          "Agent B"
+        ],
+        "steps": [
+          {
+            "lane": "Module",
+            "title": "Order",
+            "detail": "Billing is listed before Sales.",
+            "frame": "order"
+          },
+          {
+            "lane": "Agent A",
+            "title": "Level",
+            "detail": "A is a high level on Sales only.",
+            "frame": "a"
+          },
+          {
+            "lane": "Agent B",
+            "title": "Level",
+            "detail": "B is a low level on Billing.",
+            "frame": "b"
+          },
+          {
+            "lane": "Module",
+            "title": "Switch",
+            "detail": "Ignore-order is off, so the list matters.",
+            "frame": "off"
+          },
+          {
+            "lane": "Module",
+            "title": "On",
+            "detail": "Ignore-order uses level instead.",
+            "frame": "on"
+          },
+          {
+            "lane": "Admin",
+            "title": "Confirm",
+            "detail": "The editor is checked before go-live.",
+            "frame": "confirm"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "List order and skill level are",
+          "choices": [
+            "The same number",
+            "Different. The article describes a switch between them",
+            "Both ANIs",
+            "Both codecs"
+          ],
+          "answer": 1,
+          "why": "The option exists so they are not the same."
+        },
+        {
+          "q": "Ignore skills order means",
+          "choices": [
+            "Delete skills",
+            "Prefer agent skill level over the typed list",
+            "Stop the campaign",
+            "Enable paste"
+          ],
+          "answer": 1,
+          "why": "That is the article's description."
+        },
+        {
+          "q": "This lab's click-path for editing a level is",
+          "choices": [
+            "Fully quoted",
+            "Not quoted. Confirm in the editor",
+            "A SIP header",
+            "A Credly rule"
+          ],
+          "answer": 1,
+          "why": "Do not invent the dialog."
+        },
+        {
+          "q": "Leaving the switch off means",
+          "choices": [
+            "Level always wins",
+            "The list order is what you configured",
+            "911 fails",
+            "Java fails"
+          ],
+          "answer": 1,
+          "why": "The default behavior follows the list unless you enable the option."
+        },
+        {
+          "q": "A design note should say",
+          "choices": [
+            "Nothing",
+            "Which ordering is on",
+            "Only the logo",
+            "The JRE update"
+          ],
+          "answer": 1,
+          "why": "Otherwise the next admin flips it."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Same number?",
+          "back": "No."
+        },
+        {
+          "front": "What does ignore-order do?",
+          "back": "Uses agent skill level."
+        },
+        {
+          "front": "Click-path quoted here?",
+          "back": "No."
+        },
+        {
+          "front": "Switch off?",
+          "back": "List order stands."
+        }
+      ],
+      "lab": {
+        "title": "Write the rule",
+        "goal": "One sentence: list order or agent level.",
+        "steps": [
+          "Name the switch",
+          "Name who would receive a test call",
+          "Say what you did not assume"
+        ],
+        "success": "The sentence matches the switch.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Senior agents never get the call",
+        "symptom": "They are high level and the module is set to list order, which prefers a junior skill listed first.",
+        "log": "IGNORE_ORDER off LIST junior-first",
+        "choices": [
+          "Turn the option on, or reorder the list to match the intent",
+          "Delete seniors",
+          "Add predictive lines",
+          "Frame the visual IVR"
+        ],
+        "answer": 0,
+        "cause": "The switch does not match the intent.",
+        "fix": "Change the switch or the list, on purpose."
+      }
+    },
+    {
+      "id": "l05",
+      "title": "Default is a queue, not a compliment",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Treat Default as a catch-all",
+        "Name a skill on every transfer"
+      ],
+      "paragraphs": [
+        "If Skill Transfer has no skill selected, the article says calls go to users who are not assigned skills. That queue is labeled Default in the softphone. It is a catch-all, not a place you want billing calls.",
+        "Supervisors and agents with empty skill lists become the Default pool. An empty list is easy to create when a user profile is cloned and skills are forgotten."
+      ],
+      "cites": [
+        {
+          "label": "Skill Transfer functions",
+          "url": "https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features"
+        },
+        {
+          "label": "Skill groups",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "path",
+        "title": "The catch-all",
+        "caption": "No selection does not mean no route.",
+        "rows": [
+          {
+            "label": "No skill selected"
+          },
+          {
+            "label": "Default queue"
+          },
+          {
+            "label": "Users with no skills"
+          },
+          {
+            "label": "A report you did not expect"
+          }
+        ]
+      },
+      "flow": {
+        "title": "A cloned user",
+        "lanes": [
+          "Admin",
+          "VCC"
+        ],
+        "steps": [
+          {
+            "lane": "Admin",
+            "title": "Clone",
+            "detail": "A new user copies a login and no skills.",
+            "frame": "clone"
+          },
+          {
+            "lane": "VCC",
+            "title": "Default",
+            "detail": "They sit in Default.",
+            "frame": "def"
+          },
+          {
+            "lane": "Script",
+            "title": "Empty",
+            "detail": "A module with no skill selected finds them.",
+            "frame": "empty"
+          },
+          {
+            "lane": "Caller",
+            "title": "Reach",
+            "detail": "The caller gets whoever has no skill.",
+            "frame": "reach"
+          },
+          {
+            "lane": "Admin",
+            "title": "See",
+            "detail": "The softphone label is Default.",
+            "frame": "label"
+          },
+          {
+            "lane": "Admin",
+            "title": "Fix",
+            "detail": "Select a real skill. Give the user a real membership.",
+            "frame": "fix"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "No skill selected routes to",
+          "choices": [
+            "911",
+            "Default, users without skills",
+            "The ITSP only",
+            "Studio only"
+          ],
+          "answer": 1,
+          "why": "The article says so."
+        },
+        {
+          "q": "The softphone label is",
+          "choices": [
+            "Any",
+            "Default",
+            "ANI",
+            "TCPA"
+          ],
+          "answer": 1,
+          "why": "The article names Default."
+        },
+        {
+          "q": "A user with no skills is",
+          "choices": [
+            "Invisible",
+            "Eligible for that catch-all",
+            "A trunk",
+            "A prompt"
+          ],
+          "answer": 1,
+          "why": "Empty membership is membership in the catch-all story."
+        },
+        {
+          "q": "The safe module is",
+          "choices": [
+            "Skill list empty",
+            "A named skill",
+            "Hangup slang",
+            "A comment"
+          ],
+          "answer": 1,
+          "why": "Name the skill."
+        },
+        {
+          "q": "Cloning users without checking skills",
+          "choices": [
+            "Is the design",
+            "Creates Default agents by accident",
+            "Sets STIR",
+            "Sets pause"
+          ],
+          "answer": 1,
+          "why": "Check membership after every clone."
+        }
+      ],
+      "cards": [
+        {
+          "front": "No selection?",
+          "back": "Default queue."
+        },
+        {
+          "front": "Label?",
+          "back": "Default."
+        },
+        {
+          "front": "User with no skills?",
+          "back": "Catch-all eligible."
+        },
+        {
+          "front": "Safe pattern?",
+          "back": "Name the skill."
+        }
+      ],
+      "lab": {
+        "title": "Find Default",
+        "goal": "List who on your paper floor has no skill.",
+        "steps": [
+          "Clone a user on paper",
+          "Leave skills empty",
+          "Say which module would reach them"
+        ],
+        "success": "You would rather see a named skill.",
+        "href": ""
+      },
+      "fault": {
+        "title": "New hires answer VIP calls",
+        "symptom": "Their Skill Transfer for VIP has no skill selected, and the new hires have no skills yet.",
+        "log": "MODULE skills=[] USERS new skills=[]",
+        "choices": [
+          "Select VIP and add the real VIP agents",
+          "Add the new hires to nothing and hope",
+          "Enable cellular",
+          "Reset all dispositions"
+        ],
+        "answer": 0,
+        "cause": "Default is doing what it says.",
+        "fix": "Name VIP and staff it."
+      }
+    },
+    {
+      "id": "l06",
+      "title": "Service level is the scoreboard",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Set a service level you mean",
+        "Do not move it to hide a miss"
+      ],
+      "paragraphs": [
+        "The skill topic includes service levels. A service level answers 'how fast is acceptable,' usually as a percent of contacts answered inside a number of seconds. It does not, by itself, reorder the queue. Priority does the ordering. The scoreboard tells you if the ordering and the staffing worked.",
+        "A blend that steals agents will miss the inbound service level even when the skill is configured perfectly. The scoreboard is how you prove the steal rule."
+      ],
+      "cites": [
+        {
+          "label": "Skill groups",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm"
+        },
+        {
+          "label": "Inbound campaigns",
+          "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "compare",
+        "title": "Scoreboard versus steering",
+        "caption": "Do not turn the scoreboard to steer.",
+        "leftTitle": "Service level",
+        "rightTitle": "Priority",
+        "left": [
+          "Target",
+          "Measured later"
+        ],
+        "right": [
+          "Who is offered first",
+          "Set before the call waits"
+        ]
+      },
+      "flow": {
+        "title": "End of day",
+        "lanes": [
+          "Calls",
+          "Skill",
+          "Report"
+        ],
+        "steps": [
+          {
+            "lane": "Calls",
+            "title": "Arrive",
+            "detail": "Inbound hits the skill.",
+            "frame": "in"
+          },
+          {
+            "lane": "Skill",
+            "title": "Target",
+            "detail": "Eighty in twenty, or whatever you set.",
+            "frame": "target"
+          },
+          {
+            "lane": "Report",
+            "title": "Score",
+            "detail": "The day made it or it did not.",
+            "frame": "score"
+          },
+          {
+            "lane": "Report",
+            "title": "Cause",
+            "detail": "A missed score sends you to staffing or priority.",
+            "frame": "cause"
+          },
+          {
+            "lane": "Admin",
+            "title": "Avoid",
+            "detail": "Raising the target does not add agents.",
+            "frame": "avoid"
+          },
+          {
+            "lane": "Admin",
+            "title": "Staff",
+            "detail": "The steal rule changes, or the roster grows.",
+            "frame": "staff"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Service level without staff",
+          "choices": [
+            "Answers faster",
+            "Still misses",
+            "Changes ANI",
+            "Signs calls"
+          ],
+          "answer": 1,
+          "why": "A target is not a person."
+        },
+        {
+          "q": "Priority is",
+          "choices": [
+            "The scoreboard",
+            "The steering",
+            "The JRE",
+            "The frame header"
+          ],
+          "answer": 1,
+          "why": "It orders offers."
+        },
+        {
+          "q": "Where is service level configured?",
+          "choices": [
+            "On the skill group",
+            "On the headset",
+            "In Credly",
+            "In the CSV only"
+          ],
+          "answer": 1,
+          "why": "The skill topic."
+        },
+        {
+          "q": "A missed level after a blend change means",
+          "choices": [
+            "Look at who was stolen",
+            "Rewrite G.711",
+            "Enable IE",
+            "Delete prompts"
+          ],
+          "answer": 1,
+          "why": "The scoreboard is evidence."
+        },
+        {
+          "q": "Changing the target to be easier",
+          "choices": [
+            "Adds agents",
+            "Changes the definition of success, not the roster",
+            "Fixes busy",
+            "Fixes paste"
+          ],
+          "answer": 1,
+          "why": "Be honest about which one you did."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Target without people?",
+          "back": "Still misses."
+        },
+        {
+          "front": "What steers?",
+          "back": "Priority."
+        },
+        {
+          "front": "Where is the target?",
+          "back": "The skill."
+        },
+        {
+          "front": "Easier target?",
+          "back": "A new definition, not new staff."
+        }
+      ],
+      "lab": {
+        "title": "Pick a target",
+        "goal": "Write a service level and the staffing sentence that could meet it.",
+        "steps": [
+          "Name the seconds",
+          "Name the people",
+          "Name what you will not change to hide a miss"
+        ],
+        "success": "The sentence includes people.",
+        "href": ""
+      },
+      "fault": {
+        "title": "The target was edited from 20 seconds to 120 after a bad week",
+        "symptom": "No staff changed.",
+        "log": "SL was=20 now=120 ROSTER same",
+        "choices": [
+          "Report both definitions. Do not call it an improvement",
+          "Delete the old number",
+          "Add lines on predictive",
+          "Stop recording"
+        ],
+        "answer": 0,
+        "cause": "The scoreboard was moved.",
+        "fix": "Keep the original target or add people."
+      }
+    },
+    {
+      "id": "l07",
+      "title": "Skill voicemail is its own mailbox",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Give skill voicemail its own greeting",
+        "Give callbacks their own disposition"
+      ],
+      "paragraphs": [
+        "The skill topic covers routing voicemail to the group, greetings, messages, and audio files. That mailbox is not the campaign Play prompt and not an agent's personal phone mailbox unless you have built it that way.",
+        "Queue callback, on Skill Transfer, is yet another path, with its own disposition advice: the article says the default disposition is Abandon and tells you to create callback-specific codes."
+      ],
+      "cites": [
+        {
+          "label": "Skill groups",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm"
+        },
+        {
+          "label": "Skill Transfer functions",
+          "url": "https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "path",
+        "title": "Message, callback, or agent",
+        "caption": "Three endings.",
+        "rows": [
+          {
+            "label": "Live agent"
+          },
+          {
+            "label": "Skill voicemail"
+          },
+          {
+            "label": "Queue callback"
+          }
+        ]
+      },
+      "flow": {
+        "title": "After hours message",
+        "lanes": [
+          "Caller",
+          "Skill"
+        ],
+        "steps": [
+          {
+            "lane": "Caller",
+            "title": "Choose",
+            "detail": "The script offers voicemail.",
+            "frame": "choose"
+          },
+          {
+            "lane": "Skill",
+            "title": "Greet",
+            "detail": "The skill greeting plays.",
+            "frame": "greet"
+          },
+          {
+            "lane": "Skill",
+            "title": "Store",
+            "detail": "The message sits on the group.",
+            "frame": "store"
+          },
+          {
+            "lane": "Admin",
+            "title": "Work",
+            "detail": "Someone with access reviews it.",
+            "frame": "work"
+          },
+          {
+            "lane": "Script",
+            "title": "Callback",
+            "detail": "A callback path uses its own disposition.",
+            "frame": "cb"
+          },
+          {
+            "lane": "Admin",
+            "title": "Code",
+            "detail": "Abandon is a poor name for a promised callback.",
+            "frame": "code"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Skill voicemail greeting is",
+          "choices": [
+            "Always the campaign Play file",
+            "A skill audio object",
+            "A codec",
+            "A list"
+          ],
+          "answer": 1,
+          "why": "The skill topic has greetings."
+        },
+        {
+          "q": "Default callback disposition in the article is",
+          "choices": [
+            "Sale",
+            "Abandon",
+            "VIP",
+            "Java"
+          ],
+          "answer": 1,
+          "why": "Create a specific code."
+        },
+        {
+          "q": "A promised callback coded as Abandon",
+          "choices": [
+            "Is honest",
+            "Hides the promise in a drop statistic",
+            "Signs STIR",
+            "Sets ANI"
+          ],
+          "answer": 1,
+          "why": "The article warns you to create specific codes."
+        },
+        {
+          "q": "Reviewing skill messages is",
+          "choices": [
+            "A carrier task",
+            "An administrator or supervisor task on that object",
+            "Automatic IVA",
+            "A JRE task"
+          ],
+          "answer": 1,
+          "why": "The topic includes managing the messages."
+        },
+        {
+          "q": "Personal mobile voicemail is",
+          "choices": [
+            "The same object",
+            "Not what this topic is describing",
+            "Required",
+            "The Default queue"
+          ],
+          "answer": 1,
+          "why": "Do not assume the cell phone mailbox."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Greeting object?",
+          "back": "Skill audio."
+        },
+        {
+          "front": "Default callback code?",
+          "back": "Abandon. Replace it."
+        },
+        {
+          "front": "Why a specific code?",
+          "back": "So the promise is visible."
+        },
+        {
+          "front": "Cell mailbox?",
+          "back": "Not this object."
+        }
+      ],
+      "lab": {
+        "title": "Three endings",
+        "goal": "Label live, voicemail, and callback with the object and the disposition.",
+        "steps": [
+          "Live skill",
+          "Skill greeting",
+          "Callback code that is not Abandon"
+        ],
+        "success": "Abandon is not the callback code.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Callbacks look like abandons",
+        "symptom": "Queue callback is on and the disposition was left at the default.",
+        "log": "CALLBACK on DISP=Abandon",
+        "choices": [
+          "Create a callback disposition and use it",
+          "Turn off reports",
+          "Add skills at random",
+          "Use 5G"
+        ],
+        "answer": 0,
+        "cause": "The article predicted this.",
+        "fix": "Add a callback-specific code."
+      }
+    }
+  ]
+}

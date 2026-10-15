@@ -1,0 +1,1364 @@
+{
+  "id": "t06",
+  "title": "Blended operations and autodial",
+  "short": "Blended",
+  "blurb": "How agents move between inbound, autodial, and outbound without lying to the dialer.",
+  "group": "Voice",
+  "level": "Advanced",
+  "summary": "Blended is a staffing plan. Autodial is the scripted outbound. Predictive people should stay dedicated.",
+  "lessons": [
+    {
+      "id": "l01",
+      "title": "Blended is a staffing plan",
+      "level": "foundation",
+      "minutes": 12,
+      "objectives": [
+        "Define blended from the product page",
+        "Keep predictive agents dedicated"
+      ],
+      "paragraphs": [
+        "The outbound product page says outbound works with inbound digital channels and that blended behavior lets agents move between inbound and outbound as inbound rises and falls. It does not add a campaign type named Blended to the planning roadmap.",
+        "You blend by which skills an agent holds and which campaigns are running, not by a secret fourth object. If inbound and a predictive book share the same people, the dialer is predicting availability it does not have."
+      ],
+      "cites": [
+        {
+          "label": "Outbound product page",
+          "url": "https://www.five9.com/products/capabilities/outbound-contact-center"
+        },
+        {
+          "label": "Planning your implementation",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm"
+        },
+        {
+          "label": "Dialer product page",
+          "url": "https://www.five9.com/products/capabilities/dialer-system"
+        }
+      ],
+      "uncertain": [
+        "A community test note says predictive agents should not also be skilled for inbound. That is consistent with the product story and is still a field note, not a settings screenshot."
+      ],
+      "figure": {
+        "kind": "compare",
+        "title": "Words",
+        "caption": "Use the page that defines the word.",
+        "leftTitle": "Product page",
+        "rightTitle": "Planning roadmap",
+        "left": [
+          "Agents move between inbound and outbound"
+        ],
+        "right": [
+          "Inbound, outbound, and autodial campaigns"
+        ]
+      },
+      "flow": {
+        "title": "Inbound rises",
+        "lanes": [
+          "Inbound",
+          "Agent",
+          "Outbound"
+        ],
+        "steps": [
+          {
+            "lane": "Inbound",
+            "title": "Spike",
+            "detail": "The queue grows.",
+            "frame": "spike"
+          },
+          {
+            "lane": "Agent",
+            "title": "Skill",
+            "detail": "The same person holds the inbound skill.",
+            "frame": "skill"
+          },
+          {
+            "lane": "Agent",
+            "title": "Take",
+            "detail": "They take the inbound call.",
+            "frame": "take"
+          },
+          {
+            "lane": "Outbound",
+            "title": "Miss",
+            "detail": "A predictive book loses the agent it counted on.",
+            "frame": "miss"
+          },
+          {
+            "lane": "Outbound",
+            "title": "Drop",
+            "detail": "A live answer can abandon.",
+            "frame": "drop"
+          },
+          {
+            "lane": "Agent",
+            "title": "Plan",
+            "detail": "Dedicated pods avoid that surprise.",
+            "frame": "plan"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Blended, on the outbound product page, means",
+          "choices": [
+            "A campaign type",
+            "Agents moving between inbound and outbound",
+            "A codec",
+            "A report layout"
+          ],
+          "answer": 1,
+          "why": "That is the sentence on the page."
+        },
+        {
+          "q": "The planning roadmap's campaign types are",
+          "choices": [
+            "Blended only",
+            "Inbound, outbound, autodial",
+            "Preview and power",
+            "WEM and QM"
+          ],
+          "answer": 1,
+          "why": "Blended is not in that list."
+        },
+        {
+          "q": "Sharing agents with predictive is risky because",
+          "choices": [
+            "Skills are illegal",
+            "The dialer is guessing availability those agents may not have",
+            "ANI breaks",
+            "IVR cannot play"
+          ],
+          "answer": 1,
+          "why": "Prediction assumes the agents stay available to that book."
+        },
+        {
+          "q": "You implement a blend with",
+          "choices": [
+            "A new campaign type",
+            "Skill membership and running campaigns",
+            "A JRE flag",
+            "A matrix CSV"
+          ],
+          "answer": 1,
+          "why": "Skills and campaigns are the objects that exist."
+        },
+        {
+          "q": "Digital channels are mentioned with blend on",
+          "choices": [
+            "The outbound product page",
+            "RFC 4733 only",
+            "The headset section only",
+            "The Credly badge"
+          ],
+          "answer": 1,
+          "why": "The page ties outbound to inbound digital engagement."
+        }
+      ],
+      "cards": [
+        {
+          "front": "What is blended?",
+          "back": "Agents moving across inbound and outbound."
+        },
+        {
+          "front": "Is it a campaign type?",
+          "back": "Not in the planning list."
+        },
+        {
+          "front": "Predictive plus shared agents?",
+          "back": "Availability gets stolen."
+        },
+        {
+          "front": "How do you build it?",
+          "back": "Skills and running campaigns."
+        }
+      ],
+      "lab": {
+        "title": "Staff a blend",
+        "goal": "Name who may take inbound during a spike and who stays on the dialer.",
+        "steps": [
+          "A shared pod",
+          "A dedicated predictive pod",
+          "The reason they are split"
+        ],
+        "success": "Predictive people are not also the inbound overflow.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Abandon spikes at lunch",
+        "symptom": "The outbound book is predictive and the same skill takes the noon inbound rush.",
+        "log": "SKILL shared campaigns=[inbound,predictive]",
+        "choices": [
+          "Split the skills or change the mode",
+          "Add lines",
+          "Stop the inbound campaign as a habit",
+          "Disable monitoring"
+        ],
+        "answer": 0,
+        "cause": "Inbound is consuming the predicted agents.",
+        "fix": "Dedicate agents or move the book to progressive."
+      }
+    },
+    {
+      "id": "l02",
+      "title": "Autodial is the IVR's outbound",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Choose autodial for scripted outbound",
+        "Use the inbound-style skill tab"
+      ],
+      "paragraphs": [
+        "Autodial is the third campaign type. The planning topic groups it with inbound when it tells you to record prompts and build IVR scripts. It still uses lists, like outbound. Think of it as the dialer reaching a person and then handing them a script, not an agent, unless the script transfers.",
+        "Skill assignment for autodial uses the same oddly named tab as inbound: Outbound Skills. An autodial campaign that is not running will not place those calls."
+      ],
+      "cites": [
+        {
+          "label": "Planning your implementation",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm"
+        },
+        {
+          "label": "Skill groups",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm"
+        },
+        {
+          "label": "Inbound campaigns",
+          "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "path",
+        "title": "Autodial",
+        "caption": "List, then script, then maybe a skill.",
+        "rows": [
+          {
+            "label": "List"
+          },
+          {
+            "label": "Running autodial"
+          },
+          {
+            "label": "IVR"
+          },
+          {
+            "label": "Optional skill transfer"
+          }
+        ]
+      },
+      "flow": {
+        "title": "A reminder call",
+        "lanes": [
+          "Dialer",
+          "IVR",
+          "Person"
+        ],
+        "steps": [
+          {
+            "lane": "Dialer",
+            "title": "List",
+            "detail": "The next reminder row is dialed.",
+            "frame": "list"
+          },
+          {
+            "lane": "Dialer",
+            "title": "Run",
+            "detail": "The autodial campaign is running.",
+            "frame": "run"
+          },
+          {
+            "lane": "IVR",
+            "title": "Play",
+            "detail": "The prompt speaks the reminder.",
+            "frame": "play"
+          },
+          {
+            "lane": "Person",
+            "title": "Digit",
+            "detail": "A menu can offer an agent.",
+            "frame": "digit"
+          },
+          {
+            "lane": "IVR",
+            "title": "Skill",
+            "detail": "Skill Transfer uses the Outbound Skills list.",
+            "frame": "skill"
+          },
+          {
+            "lane": "Person",
+            "title": "Done",
+            "detail": "A final disposition or the script ends the row.",
+            "frame": "done"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Autodial is grouped with which build extras?",
+          "choices": [
+            "Headsets",
+            "Prompts and IVR scripts",
+            "STIR only",
+            "Java only"
+          ],
+          "answer": 1,
+          "why": "The planning topic says so."
+        },
+        {
+          "q": "Autodial still needs",
+          "choices": [
+            "No list",
+            "A list",
+            "Only a DNIS",
+            "Only a profile ANI"
+          ],
+          "answer": 1,
+          "why": "It dials contacts."
+        },
+        {
+          "q": "Its skill tab is named",
+          "choices": [
+            "Autodial Skills",
+            "Outbound Skills",
+            "ANI",
+            "JRE"
+          ],
+          "answer": 1,
+          "why": "The skill topic groups inbound and autodial on that tab."
+        },
+        {
+          "q": "A reminder with no agent is a fair autodial use. True or false?",
+          "choices": [
+            "False",
+            "True. The script can complete without a transfer",
+            "Only on TCPA domains",
+            "Only if paste works"
+          ],
+          "answer": 1,
+          "why": "The script can play and end."
+        },
+        {
+          "q": "If you wanted an agent to read the account first, you would pick",
+          "choices": [
+            "Autodial",
+            "Outbound preview",
+            "A stopped inbound",
+            "Set DNC"
+          ],
+          "answer": 1,
+          "why": "Preview is the read-first mode."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Planning extras?",
+          "back": "Prompts and IVR."
+        },
+        {
+          "front": "Needs a list?",
+          "back": "Yes."
+        },
+        {
+          "front": "Skill tab?",
+          "back": "Outbound Skills."
+        },
+        {
+          "front": "Read-first alternative?",
+          "back": "Outbound preview."
+        }
+      ],
+      "lab": {
+        "title": "Reminder or conversation",
+        "goal": "Label three call types as autodial or preview.",
+        "steps": [
+          "Appointment reminder",
+          "Collections with a note to read",
+          "Outage notification"
+        ],
+        "success": "The collections call is preview.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Autodial queue is empty",
+        "symptom": "The skill was added on the Skills tab used by agent outbound campaigns.",
+        "log": "CAMPAIGN type=AUTODIAL tab=Skills empty outboundSkills=empty",
+        "choices": [
+          "Put the skill on Outbound Skills",
+          "Enable paste",
+          "Change G.711",
+          "Delete the prompt"
+        ],
+        "answer": 0,
+        "cause": "Autodial does not read the outbound campaign's Skills tab.",
+        "fix": "Use Outbound Skills."
+      }
+    },
+    {
+      "id": "l03",
+      "title": "Priority and ratio are campaign settings",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Leave undocumented ratio fields unread-by-you",
+        "Write a steal rule anyway"
+      ],
+      "paragraphs": [
+        "The campaign admin tree includes a topic for campaign priority and ratio settings. This lab has not quoted that topic's fields, so it will not invent the numbers. What is safe to say is that inbound priority, Skill Transfer priority, and any campaign ratio are different screens until you have read them.",
+        "A blend fails when every campaign is 'the important one.' Write the order down: which campaign may steal an agent, and which may not."
+      ],
+      "cites": [
+        {
+          "label": "Inbound campaigns",
+          "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm"
+        },
+        {
+          "label": "Skill groups",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm"
+        }
+      ],
+      "uncertain": [
+        "The numeric behavior of campaign priority and ratio settings is in a guide topic this lab did not quote. Do not copy a ratio from the simulator into that dialog."
+      ],
+      "figure": {
+        "kind": "stack",
+        "title": "Write the steal rules",
+        "caption": "Priority without a sentence is a guess.",
+        "rows": [
+          {
+            "label": "Who may interrupt"
+          },
+          {
+            "label": "Who is dedicated"
+          },
+          {
+            "label": "Which screen you changed"
+          },
+          {
+            "label": "What the report will show"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Two campaigns want the same agent",
+        "lanes": [
+          "Inbound",
+          "Outbound",
+          "Admin"
+        ],
+        "steps": [
+          {
+            "lane": "Admin",
+            "title": "Write",
+            "detail": "Inbound may interrupt the shared pod.",
+            "frame": "rule"
+          },
+          {
+            "lane": "Admin",
+            "title": "Protect",
+            "detail": "Predictive agents are not in that pod.",
+            "frame": "protect"
+          },
+          {
+            "lane": "Inbound",
+            "title": "Priority",
+            "detail": "The Skill Transfer priority is set on purpose.",
+            "frame": "pri"
+          },
+          {
+            "lane": "Outbound",
+            "title": "Mode",
+            "detail": "The shared pod is progressive, not predictive.",
+            "frame": "mode"
+          },
+          {
+            "lane": "Admin",
+            "title": "Read",
+            "detail": "Open the priority and ratio topic before typing a number.",
+            "frame": "read"
+          },
+          {
+            "lane": "Admin",
+            "title": "Watch",
+            "detail": "Abandon and service level the next day.",
+            "frame": "watch"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "This lesson's numeric ratio is",
+          "choices": [
+            "2.5",
+            "Not stated. The ratio topic was not quoted field by field",
+            "10",
+            "0"
+          ],
+          "answer": 1,
+          "why": "Do not invent the dialog."
+        },
+        {
+          "q": "Skill Transfer priority and a campaign ratio are",
+          "choices": [
+            "Proven to be one field",
+            "Different names. Confirm in the guide before you treat them as one",
+            "Both headsets",
+            "Both ANIs"
+          ],
+          "answer": 1,
+          "why": "They come from different parts of the docs tree."
+        },
+        {
+          "q": "A blend needs a written steal rule because",
+          "choices": [
+            "Skills are optional",
+            "Otherwise every campaign is the important one",
+            "TCPA requires it",
+            "Java requires it"
+          ],
+          "answer": 1,
+          "why": "Someone has to lose the agent."
+        },
+        {
+          "q": "Predictive on the shared pod is",
+          "choices": [
+            "The safest blend",
+            "The mode most exposed to stolen availability",
+            "Required",
+            "Illegal"
+          ],
+          "answer": 1,
+          "why": "It plans on agents who may leave."
+        },
+        {
+          "q": "Service level tells you",
+          "choices": [
+            "Who to dial next",
+            "Whether the wait you allowed was acceptable",
+            "The ANI",
+            "The JRE"
+          ],
+          "answer": 1,
+          "why": "It is a measure, on the skill."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Numeric ratio in this lesson?",
+          "back": "None."
+        },
+        {
+          "front": "Steal rule?",
+          "back": "Write who may take the agent."
+        },
+        {
+          "front": "Predictive on a shared pod?",
+          "back": "Exposed."
+        },
+        {
+          "front": "Service level?",
+          "back": "A measure, not the dialer."
+        }
+      ],
+      "lab": {
+        "title": "Write three lines",
+        "goal": "Who may steal, who is dedicated, which mode the shared pod uses.",
+        "steps": [
+          "Shared pod is progressive",
+          "Predictive pod is dedicated",
+          "Inbound may interrupt only the shared pod"
+        ],
+        "success": "A stranger could staff from the note.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Every campaign priority is maxed",
+        "symptom": "Inbound, autodial, and outbound all claim the same agents.",
+        "log": "PRIORITY all=max AGENTS shared=20",
+        "choices": [
+          "Pick an order and dedicate the predictive book",
+          "Max them higher",
+          "Disable abandon monitoring",
+          "Use cellular"
+        ],
+        "answer": 0,
+        "cause": "Maximum on every campaign is no order.",
+        "fix": "Write a real order."
+      }
+    },
+    {
+      "id": "l04",
+      "title": "Not Ready is a real state",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Subtract Not Ready before you pace",
+        "Use agent reports"
+      ],
+      "paragraphs": [
+        "Agents are not always available. TCPA manual touch forces Not Ready when preview time runs out, and it does not dial. A blend that assumes every login is a dialer resource will over-predict.",
+        "Reason codes and Not Ready are how you explain the gap. They are not a carrier outage. Reports in the agent category are where you see the pattern before you add lines."
+      ],
+      "cites": [
+        {
+          "label": "TCPA manual touch",
+          "url": "https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US"
+        },
+        {
+          "label": "Generating standard reports",
+          "url": "https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "path",
+        "title": "Unavailable on purpose",
+        "caption": "The dialer must not count these people.",
+        "rows": [
+          {
+            "label": "Preview timeout"
+          },
+          {
+            "label": "Not Ready"
+          },
+          {
+            "label": "Reason"
+          },
+          {
+            "label": "Agent report"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Timeout",
+        "lanes": [
+          "Agent",
+          "Dialer",
+          "Report"
+        ],
+        "steps": [
+          {
+            "lane": "Agent",
+            "title": "Read",
+            "detail": "The TCPA record sits on screen.",
+            "frame": "read"
+          },
+          {
+            "lane": "Agent",
+            "title": "Stall",
+            "detail": "The preview timer ends.",
+            "frame": "stall"
+          },
+          {
+            "lane": "Dialer",
+            "title": "State",
+            "detail": "The agent becomes Not Ready.",
+            "frame": "nr"
+          },
+          {
+            "lane": "Dialer",
+            "title": "No",
+            "detail": "The external number is not auto-dialed.",
+            "frame": "no"
+          },
+          {
+            "lane": "Report",
+            "title": "See",
+            "detail": "Agent reports show the state.",
+            "frame": "report"
+          },
+          {
+            "lane": "Admin",
+            "title": "Staff",
+            "detail": "Do not count that login as a predictive resource.",
+            "frame": "staff"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "TCPA preview timeout sets",
+          "choices": [
+            "Ready and dials",
+            "Not Ready and does not dial",
+            "A new DNIS",
+            "A skill greeting"
+          ],
+          "answer": 1,
+          "why": "Published TCPA behavior."
+        },
+        {
+          "q": "Not Ready during a blend",
+          "choices": [
+            "Still counts as a free predictive agent",
+            "Should not be treated as available",
+            "Deletes the list",
+            "Signs STIR"
+          ],
+          "answer": 1,
+          "why": "Unavailable is unavailable."
+        },
+        {
+          "q": "Agent reports are a standard category. True or false?",
+          "choices": [
+            "False",
+            "True",
+            "Only in Studio",
+            "Only for 911"
+          ],
+          "answer": 1,
+          "why": "The reporting article lists Agent Reports."
+        },
+        {
+          "q": "A reason code explains",
+          "choices": [
+            "The codec",
+            "Why the agent is not taking contacts",
+            "The ANI",
+            "The JRE build"
+          ],
+          "answer": 1,
+          "why": "It is an agent state, not a trunk state."
+        },
+        {
+          "q": "Adding lines because people are Not Ready",
+          "choices": [
+            "Fixes the book",
+            "Dials more calls into fewer real agents",
+            "Is required by RFC 3261",
+            "Resets dispositions"
+          ],
+          "answer": 1,
+          "why": "You would raise abandon, not coverage."
+        }
+      ],
+      "cards": [
+        {
+          "front": "TCPA timeout?",
+          "back": "Not Ready, no dial."
+        },
+        {
+          "front": "Count them as free?",
+          "back": "No."
+        },
+        {
+          "front": "Which report category?",
+          "back": "Agent reports."
+        },
+        {
+          "front": "Adding lines?",
+          "back": "Makes abandon worse."
+        }
+      ],
+      "lab": {
+        "title": "Count the floor",
+        "goal": "From a sample of 20 logins, subtract Not Ready before you pick a mode.",
+        "steps": [
+          "Count Ready",
+          "Count Not Ready",
+          "Pick the mode from Ready"
+        ],
+        "success": "The mode uses the Ready number.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Predictive ratio was set from headcount",
+        "symptom": "Half the logins are in a meeting.",
+        "log": "LOGINS 40 READY 18 MODE predictive lines~40",
+        "choices": [
+          "Rebuild the ratio from Ready, or stop the mode",
+          "Use headcount anyway",
+          "Paste numbers",
+          "Stop recording"
+        ],
+        "answer": 0,
+        "cause": "Headcount is not availability.",
+        "fix": "Use the Ready count."
+      }
+    },
+    {
+      "id": "l05",
+      "title": "After-call work feeds the next dial",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Separate wrap, pause, and hold",
+        "Let dispositions decide the next dial"
+      ],
+      "paragraphs": [
+        "A disposition is what the dialer remembers. A final code stops the record. A retryable code brings it back after the redial rules. Wrap time, in the simulator, is the gap before the agent is free again. Five9's pause-before-transfer is a different gap, on the next inbound delivery, and it is not reported as hold.",
+        "If wrap is fiction and pause is zero, a blended agent finishes one call and is instantly eligible. That is how a progressive book and an inbound queue trade the same person every few seconds."
+      ],
+      "cites": [
+        {
+          "label": "Managing campaign dispositions",
+          "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dispositions/managing-dispositions.htm"
+        },
+        {
+          "label": "Pause before transfer",
+          "url": "https://community.five9.com/s/article/Administrator-Pause-Before-Transfer?language=en_US"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "compare",
+        "title": "Two gaps",
+        "caption": "Do not add them into one number.",
+        "leftTitle": "Disposition and wrap",
+        "rightTitle": "Pause before transfer",
+        "left": [
+          "Ends the outbound attempt",
+          "Decides if the row returns"
+        ],
+        "right": [
+          "Delays the next inbound delivery",
+          "Not shown as On Hold"
+        ]
+      },
+      "flow": {
+        "title": "The call ends",
+        "lanes": [
+          "Agent",
+          "Dialer",
+          "Queue"
+        ],
+        "steps": [
+          {
+            "lane": "Agent",
+            "title": "Code",
+            "detail": "A disposition is set.",
+            "frame": "code"
+          },
+          {
+            "lane": "Dialer",
+            "title": "Remember",
+            "detail": "Final or retry is now stored.",
+            "frame": "store"
+          },
+          {
+            "lane": "Agent",
+            "title": "Wrap",
+            "detail": "The agent is not free yet.",
+            "frame": "wrap"
+          },
+          {
+            "lane": "Queue",
+            "title": "Wait",
+            "detail": "Inbound pause may add a breath.",
+            "frame": "pause"
+          },
+          {
+            "lane": "Agent",
+            "title": "Free",
+            "detail": "Only then is the person predictable.",
+            "frame": "free"
+          },
+          {
+            "lane": "Dialer",
+            "title": "Next",
+            "detail": "The next outbound uses the stored code.",
+            "frame": "next"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "A final disposition",
+          "choices": [
+            "Dials number2 immediately",
+            "Stops the record for that campaign",
+            "Starts IVR",
+            "Changes ANI"
+          ],
+          "answer": 1,
+          "why": "List and disposition topics agree on this."
+        },
+        {
+          "q": "Pause before transfer is",
+          "choices": [
+            "Wrap time",
+            "A Skill Transfer delay, not an On Hold statistic",
+            "The abandon window",
+            "A profile filter"
+          ],
+          "answer": 1,
+          "why": "The pause article separates it from hold."
+        },
+        {
+          "q": "Zero pause and zero wrap on a blend",
+          "choices": [
+            "Is restful",
+            "Hands the agent back instantly",
+            "Is required",
+            "Signs the call"
+          ],
+          "answer": 1,
+          "why": "Both queues can grab them."
+        },
+        {
+          "q": "Redial count for many system codes, by default, is",
+          "choices": [
+            "Zero",
+            "Five, if the default count remains",
+            "Fifty",
+            "One hundred"
+          ],
+          "answer": 1,
+          "why": "The disposition topic says five."
+        },
+        {
+          "q": "The simulator's wrap slider is",
+          "choices": [
+            "Five9 source",
+            "A teaching delay",
+            "The 30-day window",
+            "A DNIS"
+          ],
+          "answer": 1,
+          "why": "It is labeled on the bench."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Final code?",
+          "back": "Stops the record."
+        },
+        {
+          "front": "Pause vs wrap?",
+          "back": "Different gaps."
+        },
+        {
+          "front": "Default system redials?",
+          "back": "Often five."
+        },
+        {
+          "front": "Simulator wrap?",
+          "back": "Teaching delay."
+        }
+      ],
+      "lab": {
+        "title": "Time the gap",
+        "goal": "In the bench, set wrap to 45 seconds and watch idle fall.",
+        "steps": [
+          "Run progressive",
+          "Add wrap",
+          "Say what pause would do on the inbound side"
+        ],
+        "success": "You did not call wrap 'hold'.",
+        "href": "#/pacing"
+      },
+      "fault": {
+        "title": "Agents plead for a breath and the hold report is empty",
+        "symptom": "Inbound pause is 0. Outbound wrap is a disposition timer of 0.",
+        "log": "PAUSE 0 WRAP 0",
+        "choices": [
+          "Set pause and a real wrap or disposition timer",
+          "Stare at the hold column",
+          "Add predictive lines",
+          "Delete the profile"
+        ],
+        "answer": 0,
+        "cause": "The breath was never configured, and pause would not have shown as hold anyway.",
+        "fix": "Set the controls that exist."
+      }
+    },
+    {
+      "id": "l06",
+      "title": "Digital and voice share the person",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Include digital in the blend",
+        "Check antivirus when text disappears"
+      ],
+      "paragraphs": [
+        "The outbound page says the dialer works with inbound digital engagement, and Agent Desktop Plus is the screen where voice, digital, and context are meant to meet. A blend that is only a voice story misses chat and email sitting on the same login.",
+        "Antivirus products can block digital text from loading. The technical requirements name that failure. A 'blend' that cannot show the chat is a desktop failure, not a skill failure."
+      ],
+      "cites": [
+        {
+          "label": "Outbound product page",
+          "url": "https://www.five9.com/products/capabilities/outbound-contact-center"
+        },
+        {
+          "label": "Agent Desktop",
+          "url": "https://www.five9.com/products/capabilities/agent-desktop"
+        },
+        {
+          "label": "Technical requirements PDF",
+          "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+          "note": "Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall."
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "path",
+        "title": "One login, more than voice",
+        "caption": "Digital still consumes the agent.",
+        "rows": [
+          {
+            "label": "Voice skill"
+          },
+          {
+            "label": "Digital item"
+          },
+          {
+            "label": "Same desktop"
+          },
+          {
+            "label": "Not available to the dialer"
+          }
+        ]
+      },
+      "flow": {
+        "title": "A chat arrives mid-dial",
+        "lanes": [
+          "Chat",
+          "Desktop",
+          "Dialer"
+        ],
+        "steps": [
+          {
+            "lane": "Chat",
+            "title": "Arrive",
+            "detail": "A digital item is offered.",
+            "frame": "chat"
+          },
+          {
+            "lane": "Desktop",
+            "title": "Show",
+            "detail": "Plus is supposed to show it with the voice context.",
+            "frame": "show"
+          },
+          {
+            "lane": "Desktop",
+            "title": "Block",
+            "detail": "An antivirus product can stop the text.",
+            "frame": "av"
+          },
+          {
+            "lane": "Agent",
+            "title": "Busy",
+            "detail": "The person is not a free voice resource.",
+            "frame": "busy"
+          },
+          {
+            "lane": "Dialer",
+            "title": "Wait",
+            "detail": "Predictive should not count them.",
+            "frame": "wait"
+          },
+          {
+            "lane": "Admin",
+            "title": "Skill",
+            "detail": "Digital and voice skills are an explicit choice.",
+            "frame": "skill"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "The outbound page ties blend to",
+          "choices": [
+            "Only PRI circuits",
+            "Inbound digital engagement as well as voice",
+            "Only 911",
+            "Only Java"
+          ],
+          "answer": 1,
+          "why": "Digital is part of the sentence."
+        },
+        {
+          "q": "Agent Desktop Plus is described as",
+          "choices": [
+            "Five separate products the agent alt-tabs",
+            "One screen for the job",
+            "A report layout",
+            "A trunk"
+          ],
+          "answer": 1,
+          "why": "The agent desktop page says one screen."
+        },
+        {
+          "q": "Chat text fails to load and voice still works. A named cause is",
+          "choices": [
+            "List penetration",
+            "Antivirus interfering with text media",
+            "A final disposition",
+            "Pause set to 2"
+          ],
+          "answer": 1,
+          "why": "The technical requirements name antivirus products such as Avast for this."
+        },
+        {
+          "q": "While the agent handles chat they are",
+          "choices": [
+            "A free predictive agent",
+            "Busy",
+            "A DNIS",
+            "A profile"
+          ],
+          "answer": 1,
+          "why": "Digital consumes the person."
+        },
+        {
+          "q": "Alt-tab as the design",
+          "choices": [
+            "Matches the Plus story",
+            "Is what Plus is trying to remove",
+            "Is required by Ofcom",
+            "Is a codec"
+          ],
+          "answer": 1,
+          "why": "The product page argues for one screen."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Blend includes digital?",
+          "back": "The outbound page says so."
+        },
+        {
+          "front": "Plus promise?",
+          "back": "One screen."
+        },
+        {
+          "front": "Text blocked?",
+          "back": "Antivirus is a documented suspect."
+        },
+        {
+          "front": "Chat and predictive?",
+          "back": "The agent is busy."
+        }
+      ],
+      "lab": {
+        "title": "Count digital",
+        "goal": "Add chat to the steal rule you wrote earlier.",
+        "steps": [
+          "Who takes chat",
+          "Whether they are also predictive",
+          "What you check if text does not load"
+        ],
+        "success": "Antivirus is on the list.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Agents keep a second browser for chat",
+        "symptom": "Plus is licensed and unused. The dialer sees them as voice-idle while they type.",
+        "log": "DESKTOP plus=unused CHAT other-browser",
+        "choices": [
+          "Move the work into Plus and stop counting them as idle voice",
+          "Add power lines",
+          "Delete IVR",
+          "Enable IE for everyone"
+        ],
+        "answer": 0,
+        "cause": "The blend is happening off to the side.",
+        "fix": "Use the desktop that was supposed to hold both, and staff from real availability."
+      }
+    },
+    {
+      "id": "l07",
+      "title": "A blend you can defend",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Defend a blend with six screens",
+        "Keep the simulator in the classroom"
+      ],
+      "paragraphs": [
+        "A defensible blend is a paragraph: which campaigns run, which skills overlap, which mode each outbound book uses, who may be stolen, what Not Ready does to the count, and which abandon window the domain uses. Every noun in that paragraph is a screen you can open.",
+        "If you cannot point at the screen, it is not a design. The simulator can illustrate it. It cannot be attached to the domain."
+      ],
+      "cites": [
+        {
+          "label": "Outbound product page",
+          "url": "https://www.five9.com/products/capabilities/outbound-contact-center"
+        },
+        {
+          "label": "Dialer product page",
+          "url": "https://www.five9.com/products/capabilities/dialer-system"
+        },
+        {
+          "label": "Default campaign settings",
+          "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm"
+        },
+        {
+          "label": "Planning your implementation",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "path",
+        "title": "The paragraph",
+        "caption": "Six nouns, six screens.",
+        "rows": [
+          {
+            "label": "Campaigns"
+          },
+          {
+            "label": "Skills"
+          },
+          {
+            "label": "Modes"
+          },
+          {
+            "label": "Steal rule"
+          },
+          {
+            "label": "Not Ready"
+          },
+          {
+            "label": "Abandon window"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Read it aloud",
+        "lanes": [
+          "Design",
+          "Floor"
+        ],
+        "steps": [
+          {
+            "lane": "Design",
+            "title": "Types",
+            "detail": "Inbound, one autodial, one outbound.",
+            "frame": "types"
+          },
+          {
+            "lane": "Design",
+            "title": "Skills",
+            "detail": "Overlap is only on the shared pod.",
+            "frame": "skills"
+          },
+          {
+            "lane": "Design",
+            "title": "Modes",
+            "detail": "Shared pod is progressive. The other book is preview.",
+            "frame": "modes"
+          },
+          {
+            "lane": "Design",
+            "title": "Steal",
+            "detail": "Inbound may take the shared pod.",
+            "frame": "steal"
+          },
+          {
+            "lane": "Floor",
+            "title": "Ready",
+            "detail": "Not Ready is subtracted.",
+            "frame": "ready"
+          },
+          {
+            "lane": "Floor",
+            "title": "Window",
+            "detail": "The domain is US, so 30 days.",
+            "frame": "window"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "A blend paragraph that names no screen is",
+          "choices": [
+            "Complete",
+            "Not a design",
+            "A report layout",
+            "A JRE"
+          ],
+          "answer": 1,
+          "why": "Each noun should be a screen."
+        },
+        {
+          "q": "The simulator attaches to the domain. True or false?",
+          "choices": [
+            "True",
+            "False. It is a classroom",
+            "True for TCPA paste",
+            "True on UK domains"
+          ],
+          "answer": 1,
+          "why": "The dialog in the domain is the system of record."
+        },
+        {
+          "q": "US abandon window to write in the paragraph is",
+          "choices": [
+            "24 hours",
+            "30 days",
+            "One chart minute",
+            "Seven years"
+          ],
+          "answer": 1,
+          "why": "That is the admin topic."
+        },
+        {
+          "q": "Autodial belongs in the paragraph when",
+          "choices": [
+            "You want a scripted outbound",
+            "You want preview reading",
+            "You want a DNIS",
+            "You want a headset"
+          ],
+          "answer": 1,
+          "why": "It is the scripted outbound type."
+        },
+        {
+          "q": "Dedicated predictive agents appear as",
+          "choices": [
+            "Also the inbound overflow",
+            "A pod the steal rule does not touch",
+            "A profile ANI",
+            "A prompt"
+          ],
+          "answer": 1,
+          "why": "Otherwise they are not dedicated."
+        }
+      ],
+      "cards": [
+        {
+          "front": "No screen, no design?",
+          "back": "Correct."
+        },
+        {
+          "front": "Simulator equals domain?",
+          "back": "No."
+        },
+        {
+          "front": "US window?",
+          "back": "30 days."
+        },
+        {
+          "front": "Dedicated pod?",
+          "back": "Outside the steal rule."
+        }
+      ],
+      "lab": {
+        "title": "Write the paragraph",
+        "goal": "Six sentences, one screen each.",
+        "steps": [
+          "Campaigns",
+          "Skills",
+          "Modes",
+          "Steal rule",
+          "Not Ready",
+          "Window"
+        ],
+        "success": "Someone else could configure Tuesday from it.",
+        "href": "#/pacing"
+      },
+      "fault": {
+        "title": "The design is a logo slide",
+        "symptom": "No skills, no modes, no window.",
+        "log": "SLIDE title=Blended AI",
+        "choices": [
+          "Reject it until the six nouns exist",
+          "Add more adjectives",
+          "Raise lines to 8",
+          "Stop the domain"
+        ],
+        "answer": 0,
+        "cause": "A logo is not a staffing plan.",
+        "fix": "Write the paragraph."
+      }
+    }
+  ]
+}

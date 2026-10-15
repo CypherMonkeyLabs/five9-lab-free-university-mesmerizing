@@ -1,0 +1,1356 @@
+{
+  "id": "t09",
+  "title": "Agent Desktop Plus",
+  "short": "Desktop",
+  "blurb": "One screen, WSS, assist, WEM on the desktop, and the desk the PDF will support.",
+  "group": "People",
+  "level": "Practice",
+  "summary": "Plus is the agent's instrument. Voice, pop, text, and the schedule fail in different ways.",
+  "lessons": [
+    {
+      "id": "l01",
+      "title": "One screen is the product",
+      "level": "foundation",
+      "minutes": 12,
+      "objectives": [
+        "Describe Plus as one screen",
+        "Count extra windows as a defect"
+      ],
+      "paragraphs": [
+        "Agent Desktop Plus is described as a single screen so the agent can stay with the customer. The Engage page adds real-time transcription, AI Agent Assist, and case context on that screen. The same underlying technology is what the desktop page says you get from Plus or from a pre-built CRM adapter.",
+        "A design that needs five browser tabs is the problem Plus is published to remove. If your floor still alt-tabs, you have not deployed the product you named."
+      ],
+      "cites": [
+        {
+          "label": "Agent Desktop",
+          "url": "https://www.five9.com/products/capabilities/agent-desktop"
+        },
+        {
+          "label": "Five9 Engage",
+          "url": "https://www.five9.com/platform/self-service-and-engagement"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "stack",
+        "title": "What the pages put on the screen",
+        "caption": "Product language, not a promise of every AI model.",
+        "rows": [
+          {
+            "label": "Voice"
+          },
+          {
+            "label": "Digital"
+          },
+          {
+            "label": "Transcription"
+          },
+          {
+            "label": "Agent Assist"
+          },
+          {
+            "label": "CRM context"
+          }
+        ]
+      },
+      "flow": {
+        "title": "A call arrives",
+        "lanes": [
+          "Caller",
+          "Desktop",
+          "Agent"
+        ],
+        "steps": [
+          {
+            "lane": "Caller",
+            "title": "Connect",
+            "detail": "Voice is on the desktop.",
+            "frame": "voice"
+          },
+          {
+            "lane": "Desktop",
+            "title": "Text",
+            "detail": "Transcription runs if that feature is on.",
+            "frame": "text"
+          },
+          {
+            "lane": "Desktop",
+            "title": "Assist",
+            "detail": "Suggestions appear in the same place.",
+            "frame": "assist"
+          },
+          {
+            "lane": "Desktop",
+            "title": "CRM",
+            "detail": "Context is the adapter or the SDK.",
+            "frame": "crm"
+          },
+          {
+            "lane": "Agent",
+            "title": "Stay",
+            "detail": "No second product is required for the basic story.",
+            "frame": "stay"
+          },
+          {
+            "lane": "Agent",
+            "title": "Tab",
+            "detail": "A leftover tab is a deployment gap.",
+            "frame": "tab"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Plus is published as",
+          "choices": [
+            "Five required apps",
+            "One screen",
+            "A report only",
+            "A trunk"
+          ],
+          "answer": 1,
+          "why": "The desktop page says a single screen."
+        },
+        {
+          "q": "Transcription is named on",
+          "choices": [
+            "The Engage page",
+            "The JRE page only",
+            "RFC 3261",
+            "The list-mode article only"
+          ],
+          "answer": 1,
+          "why": "Engage describes transcription and Agent Assist."
+        },
+        {
+          "q": "A pre-built CRM adapter, per the desktop page,",
+          "choices": [
+            "Uses a different voice stack",
+            "Uses the same underlying technology",
+            "Cannot pop a record",
+            "Requires analog headsets"
+          ],
+          "answer": 1,
+          "why": "The page says the same underlying technology."
+        },
+        {
+          "q": "Alt-tab as the daily path means",
+          "choices": [
+            "The design matches the page",
+            "The deployment missed the point of Plus",
+            "TCPA is on",
+            "ANI is local"
+          ],
+          "answer": 1,
+          "why": "One screen is the claim."
+        },
+        {
+          "q": "Agent Assist bandwidth in the PDF is",
+          "choices": [
+            "Included in nothing",
+            "An extra 12 kbps on top of the desktop",
+            "1 Mbps",
+            "Zero"
+          ],
+          "answer": 1,
+          "why": "The bandwidth table lists 12 kbps for Agent Assist."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Form factor?",
+          "back": "One screen."
+        },
+        {
+          "front": "Transcription source?",
+          "back": "Engage page."
+        },
+        {
+          "front": "Adapter voice stack?",
+          "back": "Same underlying technology, per the desktop page."
+        },
+        {
+          "front": "Assist bandwidth?",
+          "back": "12 kbps extra."
+        }
+      ],
+      "lab": {
+        "title": "Count the tabs",
+        "goal": "Watch one real or role-played call and count windows.",
+        "steps": [
+          "Voice",
+          "Context",
+          "Anything that should have been inside Plus"
+        ],
+        "success": "You can say what is still outside.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Agents keep a CRM in another window",
+        "symptom": "Plus is installed and the adapter was never turned on.",
+        "log": "PLUS installed ADAPTER off",
+        "choices": [
+          "Turn on the adapter or the SDK pop",
+          "Add a sixth window",
+          "Stop inbound",
+          "Change list mode"
+        ],
+        "answer": 0,
+        "cause": "The second window is the missed deployment.",
+        "fix": "Use the published desktop path."
+      }
+    },
+    {
+      "id": "l02",
+      "title": "Plus adapters speak HTTPS and WSS",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Separate voice from the pop channel",
+        "Require TLS 1.2 and WSS"
+      ],
+      "paragraphs": [
+        "The technical requirements say Plus adapters use HTTPS and Secure WebSocket. If a proxy is in the path, it must support WSS. The PDF also says Five9 does not support TLS 1.1, and that browsers need TLS 1.2. Unencrypted API connections are refused.",
+        "A screen pop that fails while voice still works is often this path: the media is fine and the websocket is not. Do not replace the headset first."
+      ],
+      "cites": [
+        {
+          "label": "Technical requirements PDF",
+          "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+          "note": "Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall."
+        },
+        {
+          "label": "Web adapter requirements",
+          "url": "https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/agent-integrations/web-based-adapters/application-requirements.htm"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "path",
+        "title": "Two channels",
+        "caption": "Voice can live while the pop dies.",
+        "rows": [
+          {
+            "label": "HTTPS"
+          },
+          {
+            "label": "WSS"
+          },
+          {
+            "label": "Proxy must allow WSS"
+          },
+          {
+            "label": "TLS 1.2"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Pop fails, voice works",
+        "lanes": [
+          "Phone",
+          "Adapter",
+          "Proxy"
+        ],
+        "steps": [
+          {
+            "lane": "Phone",
+            "title": "Audio",
+            "detail": "The caller is heard.",
+            "frame": "audio"
+          },
+          {
+            "lane": "Adapter",
+            "title": "WSS",
+            "detail": "The pop channel tries to open.",
+            "frame": "wss"
+          },
+          {
+            "lane": "Proxy",
+            "title": "Block",
+            "detail": "The proxy does not understand WSS.",
+            "frame": "block"
+          },
+          {
+            "lane": "Adapter",
+            "title": "Blank",
+            "detail": "The CRM pane stays empty.",
+            "frame": "blank"
+          },
+          {
+            "lane": "Admin",
+            "title": "TLS",
+            "detail": "TLS 1.1 will not be accepted.",
+            "frame": "tls"
+          },
+          {
+            "lane": "Admin",
+            "title": "Fix",
+            "detail": "Allow WSS and TLS 1.2.",
+            "frame": "fix"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Plus adapter security is",
+          "choices": [
+            "HTTP",
+            "HTTPS and Secure WebSocket",
+            "Telnet",
+            "FTP only"
+          ],
+          "answer": 1,
+          "why": "The PDF says so."
+        },
+        {
+          "q": "A proxy in front of the desktop must",
+          "choices": [
+            "Strip TLS",
+            "Support WSS",
+            "Block 443",
+            "Be double NAT"
+          ],
+          "answer": 1,
+          "why": "The PDF requires WSS-capable proxies."
+        },
+        {
+          "q": "TLS 1.1",
+          "choices": [
+            "Is preferred",
+            "Is not supported for inbound or outbound traffic",
+            "Is required for IVR",
+            "Is a codec"
+          ],
+          "answer": 1,
+          "why": "The PDF says Five9 does not support TLS 1.1."
+        },
+        {
+          "q": "Voice up, pop down, first suspect",
+          "choices": [
+            "The abandon cap",
+            "The websocket path",
+            "List penetration",
+            "A skill greeting"
+          ],
+          "answer": 1,
+          "why": "They are different channels."
+        },
+        {
+          "q": "Cleartext API calls are",
+          "choices": [
+            "Encouraged",
+            "Refused",
+            "Required for SOAP nostalgia",
+            "Fine on Saturday"
+          ],
+          "answer": 1,
+          "why": "The PDF says Five9 does not accept unencrypted API connections."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Adapter transport?",
+          "back": "HTTPS and WSS."
+        },
+        {
+          "front": "Proxy?",
+          "back": "Must support WSS."
+        },
+        {
+          "front": "TLS 1.1?",
+          "back": "Not supported."
+        },
+        {
+          "front": "Pop down, voice up?",
+          "back": "Look at WSS."
+        }
+      ],
+      "lab": {
+        "title": "Draw the proxy",
+        "goal": "Mark where WSS would be dropped.",
+        "steps": [
+          "Browser",
+          "Proxy",
+          "Five9",
+          "A note that voice is a different path"
+        ],
+        "success": "The note does not say 'replace the headset'.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Monday pop outage",
+        "symptom": "A new proxy was installed over the weekend. Calls still connect.",
+        "log": "PROXY new WSS=blocked VOICE=up",
+        "choices": [
+          "Allow WSS on the proxy",
+          "Replace every headset",
+          "Switch to vertical dialing",
+          "Disable recording"
+        ],
+        "answer": 0,
+        "cause": "The new proxy is the change.",
+        "fix": "Permit Secure WebSocket and retest the pop."
+      }
+    },
+    {
+      "id": "l03",
+      "title": "Transcription and assist are features you turn on",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Keep Assist on the one screen",
+        "Do not invent the model name"
+      ],
+      "paragraphs": [
+        "The Engage page describes transcription, sentiment language, and Agent Assist suggestions on the desktop. GenAI Studio's page says it powers Five9 AI applications and initially focuses on Agent Assist summaries, with control over the output.",
+        "None of those pages name a single model you can assume is the default in every domain. If a design says 'it uses model X,' mark that sentence uncertain until the domain's GenAI Studio screen says it."
+      ],
+      "cites": [
+        {
+          "label": "Five9 Engage",
+          "url": "https://www.five9.com/platform/self-service-and-engagement"
+        },
+        {
+          "label": "GenAI Studio",
+          "url": "https://www.five9.com/products/capabilities/gen-ai-studio"
+        }
+      ],
+      "uncertain": [
+        "GenAI Studio is described as engine-agnostic. This lab does not name the default model for a new domain."
+      ],
+      "figure": {
+        "kind": "stack",
+        "title": "What is public",
+        "caption": "Features, not a secret model name.",
+        "rows": [
+          {
+            "label": "Transcription"
+          },
+          {
+            "label": "Agent Assist"
+          },
+          {
+            "label": "Summaries via GenAI Studio"
+          },
+          {
+            "label": "Output control"
+          }
+        ]
+      },
+      "flow": {
+        "title": "A summary after the call",
+        "lanes": [
+          "Call",
+          "Desktop",
+          "Studio"
+        ],
+        "steps": [
+          {
+            "lane": "Call",
+            "title": "Talk",
+            "detail": "The conversation happens.",
+            "frame": "talk"
+          },
+          {
+            "lane": "Desktop",
+            "title": "Live",
+            "detail": "Assist can suggest during the call.",
+            "frame": "live"
+          },
+          {
+            "lane": "Studio",
+            "title": "Prompt",
+            "detail": "A managed prompt shapes the summary.",
+            "frame": "prompt"
+          },
+          {
+            "lane": "Studio",
+            "title": "Model",
+            "detail": "The model is chosen in that hub, not guessed here.",
+            "frame": "model"
+          },
+          {
+            "lane": "Desktop",
+            "title": "Show",
+            "detail": "The agent sees the result on the same screen.",
+            "frame": "show"
+          },
+          {
+            "lane": "Admin",
+            "title": "Check",
+            "detail": "The domain screen is the source of the model name.",
+            "frame": "check"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Agent Assist is named on",
+          "choices": [
+            "The Engage page",
+            "The list-penetration article only",
+            "The E911 data sheet only",
+            "RFC 4733"
+          ],
+          "answer": 1,
+          "why": "Engage describes it."
+        },
+        {
+          "q": "GenAI Studio's initial focus, on its page, includes",
+          "choices": [
+            "Replacing SIP",
+            "Agent Assist summaries",
+            "Building PBXs",
+            "Issuing DIDs"
+          ],
+          "answer": 1,
+          "why": "The page says summaries first, with customizable output."
+        },
+        {
+          "q": "The model name in this lab is",
+          "choices": [
+            "Published as a universal default",
+            "Not assumed. Read the domain",
+            "Always a single vendor",
+            "Illegal to ask"
+          ],
+          "answer": 1,
+          "why": "The page says engine-agnostic."
+        },
+        {
+          "q": "Transcription without a readable screen",
+          "choices": [
+            "Still helps the agent in the moment",
+            "Misses the point of putting it on the desktop",
+            "Sets ANI",
+            "Resets lists"
+          ],
+          "answer": 1,
+          "why": "The agent has to see it."
+        },
+        {
+          "q": "Output control is",
+          "choices": [
+            "Absent",
+            "Part of the GenAI Studio description",
+            "A codec",
+            "A skill tab"
+          ],
+          "answer": 1,
+          "why": "The page talks about control and responsible AI."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Where is Assist named?",
+          "back": "Engage."
+        },
+        {
+          "front": "Studio's first named app?",
+          "back": "Summaries, among Agent Assist."
+        },
+        {
+          "front": "Universal model name?",
+          "back": "Do not assume one."
+        },
+        {
+          "front": "Why the same screen?",
+          "back": "So the agent sees it."
+        }
+      ],
+      "lab": {
+        "title": "Write the uncertain sentence",
+        "goal": "Draft a design line that does not name a model.",
+        "steps": [
+          "Say Assist is on the desktop",
+          "Say the model is whatever Studio is set to",
+          "Refuse a fake default"
+        ],
+        "success": "The sentence has no invented model.",
+        "href": ""
+      },
+      "fault": {
+        "title": "A slide says the floor runs a specific third-party model",
+        "symptom": "Nobody has opened GenAI Studio.",
+        "log": "SLIDE model=invented STUDIO unchecked",
+        "choices": [
+          "Open Studio and correct the slide",
+          "Print the slide",
+          "Change the dialer mode",
+          "Delete skills"
+        ],
+        "answer": 0,
+        "cause": "The slide outran the product.",
+        "fix": "Use the engine the hub is actually set to."
+      }
+    },
+    {
+      "id": "l04",
+      "title": "WEM lives in the same desktop",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Show the schedule on the desktop",
+        "Do not dial a break"
+      ],
+      "paragraphs": [
+        "The desktop page says Plus can show schedules, adherence, time-off requests, and evaluations without another app. CRM connectors can surface the same WFO actions inside Salesforce and the other named CRMs.",
+        "That is the staffing blend meeting the person: the agent can see that they are supposed to be on a break. A dialer that ignores the schedule will call it idle time."
+      ],
+      "cites": [
+        {
+          "label": "Agent Desktop",
+          "url": "https://www.five9.com/products/capabilities/agent-desktop"
+        },
+        {
+          "label": "Workforce engagement management",
+          "url": "https://www.five9.com/products/capabilities/workforce-optimization"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "path",
+        "title": "Schedule on the desktop",
+        "caption": "The person can see the plan.",
+        "rows": [
+          {
+            "label": "WEM schedule"
+          },
+          {
+            "label": "Plus or CRM connector"
+          },
+          {
+            "label": "Adherence"
+          },
+          {
+            "label": "Dialer must not treat a break as idle"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Break starts",
+        "lanes": [
+          "WEM",
+          "Desktop",
+          "Dialer"
+        ],
+        "steps": [
+          {
+            "lane": "WEM",
+            "title": "Plan",
+            "detail": "The schedule says break.",
+            "frame": "plan"
+          },
+          {
+            "lane": "Desktop",
+            "title": "Show",
+            "detail": "Plus shows the schedule.",
+            "frame": "show"
+          },
+          {
+            "lane": "Agent",
+            "title": "Leave",
+            "detail": "They go Not Ready or the schedule pulls them.",
+            "frame": "leave"
+          },
+          {
+            "lane": "Dialer",
+            "title": "Count",
+            "detail": "They are not a free agent.",
+            "frame": "count"
+          },
+          {
+            "lane": "Supervisor",
+            "title": "Eval",
+            "detail": "An evaluation can be reviewed in the same place.",
+            "frame": "eval"
+          },
+          {
+            "lane": "Admin",
+            "title": "CRM",
+            "detail": "A connector can show the same actions in the CRM.",
+            "frame": "crm"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Schedules inside Plus are",
+          "choices": [
+            "Undocumented",
+            "Named on the desktop page",
+            "A SIP option",
+            "A list mode"
+          ],
+          "answer": 1,
+          "why": "The page lists schedules, adherence, time off, and evaluations."
+        },
+        {
+          "q": "A break is",
+          "choices": [
+            "Idle time to fill with predictive",
+            "Not a free agent",
+            "A DNIS",
+            "A prompt"
+          ],
+          "answer": 1,
+          "why": "Availability is the truth."
+        },
+        {
+          "q": "CRM connectors for WFO are",
+          "choices": [
+            "Absent",
+            "Named on the desktop page",
+            "Illegal",
+            "Java-only"
+          ],
+          "answer": 1,
+          "why": "The page lists them for the named CRMs."
+        },
+        {
+          "q": "Adherence is",
+          "choices": [
+            "A codec",
+            "Whether the person followed the schedule",
+            "An ANI",
+            "A frame header"
+          ],
+          "answer": 1,
+          "why": "That is the ordinary meaning, and the page uses the word."
+        },
+        {
+          "q": "Ignoring the schedule in the dialer",
+          "choices": [
+            "Improves service level honestly",
+            "Dials against people who are supposed to be away",
+            "Is required",
+            "Signs calls"
+          ],
+          "answer": 1,
+          "why": "The blend gets worse."
+        }
+      ],
+      "cards": [
+        {
+          "front": "What does Plus show from WEM?",
+          "back": "Schedules, adherence, time off, evaluations."
+        },
+        {
+          "front": "Break equals idle?",
+          "back": "No."
+        },
+        {
+          "front": "CRM path?",
+          "back": "WFO connectors, per the desktop page."
+        },
+        {
+          "front": "Adherence?",
+          "back": "Plan versus actual."
+        }
+      ],
+      "lab": {
+        "title": "Subtract the break",
+        "goal": "On a 20-person roster, remove the scheduled break before you set lines.",
+        "steps": [
+          "Read the schedule",
+          "Count who is actually there",
+          "Set the mode from that count"
+        ],
+        "success": "The line count uses the smaller number.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Predictive overdials every day at 10:15",
+        "symptom": "That is the scheduled break and the dialer still counts those logins.",
+        "log": "SCHEDULE break=10:15 MODE predictive uses=headcount",
+        "choices": [
+          "Remove break agents from the available count",
+          "Add lines at 10:15",
+          "Delete WEM",
+          "Stop IVR"
+        ],
+        "answer": 0,
+        "cause": "The schedule already knew.",
+        "fix": "Feed availability from the schedule, not from headcount."
+      }
+    },
+    {
+      "id": "l05",
+      "title": "Digital text can be blocked",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Match blank text to antivirus",
+        "Match dropped calls to power management"
+      ],
+      "paragraphs": [
+        "The technical requirements say some antivirus software, naming Avast as an example, can stop chat, social, or email text from loading. Voice can continue. The symptom is a blank digital pane, not a busy DNIS.",
+        "Efficiency Mode can also sleep a background tab and drop a live call. Digital and voice fail differently. Write the symptom before you pick the cause."
+      ],
+      "cites": [
+        {
+          "label": "Technical requirements PDF",
+          "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+          "note": "Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall."
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "compare",
+        "title": "Two desktop failures",
+        "caption": "Match the symptom.",
+        "leftTitle": "Blank chat text",
+        "rightTitle": "Dropped live call",
+        "left": [
+          "Antivirus is a documented suspect",
+          "Voice may still work"
+        ],
+        "right": [
+          "Efficiency Mode is a documented suspect",
+          "A sleeping tab"
+        ]
+      },
+      "flow": {
+        "title": "Blank chat",
+        "lanes": [
+          "Agent",
+          "AV",
+          "Voice"
+        ],
+        "steps": [
+          {
+            "lane": "Agent",
+            "title": "Open",
+            "detail": "The digital pane is empty.",
+            "frame": "empty"
+          },
+          {
+            "lane": "Voice",
+            "title": "Fine",
+            "detail": "The call audio still works.",
+            "frame": "audio"
+          },
+          {
+            "lane": "AV",
+            "title": "Block",
+            "detail": "Text media never loads.",
+            "frame": "block"
+          },
+          {
+            "lane": "Admin",
+            "title": "Test",
+            "detail": "A machine without that AV loads the text.",
+            "frame": "test"
+          },
+          {
+            "lane": "Admin",
+            "title": "Allow",
+            "detail": "The AV exception is the fix.",
+            "frame": "allow"
+          },
+          {
+            "lane": "Admin",
+            "title": "Separate",
+            "detail": "This is not the Efficiency Mode symptom.",
+            "frame": "sep"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Avast is named as",
+          "choices": [
+            "A supported headset",
+            "An example of antivirus that can block text media",
+            "A dialer mode",
+            "A skill"
+          ],
+          "answer": 1,
+          "why": "The PDF uses it as an example."
+        },
+        {
+          "q": "Voice works, chat text does not. First documented suspect?",
+          "choices": [
+            "List penetration",
+            "Antivirus",
+            "The 30-day abandon window",
+            "A final disposition"
+          ],
+          "answer": 1,
+          "why": "The PDF separates text media from the call."
+        },
+        {
+          "q": "Efficiency Mode's documented symptom is",
+          "choices": [
+            "Blank text only",
+            "Interrupted apps and dropped calls",
+            "A wrong ANI",
+            "A CSV error"
+          ],
+          "answer": 1,
+          "why": "Different symptom."
+        },
+        {
+          "q": "The fix for blocked text is",
+          "choices": [
+            "More predictive lines",
+            "An exception or a different AV posture, then a retest",
+            "Stopping the campaign",
+            "Vertical dialing"
+          ],
+          "answer": 1,
+          "why": "Restore the text path."
+        },
+        {
+          "q": "You should change both settings at once without a note. True or false?",
+          "choices": [
+            "True",
+            "False. One change, one retest",
+            "True on ARM Macs",
+            "True for TCPA"
+          ],
+          "answer": 1,
+          "why": "Otherwise you will not know which one mattered."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Avast example means?",
+          "back": "AV can block text."
+        },
+        {
+          "front": "Blank text suspect?",
+          "back": "Antivirus."
+        },
+        {
+          "front": "Dropped call suspect?",
+          "back": "Efficiency Mode, among others."
+        },
+        {
+          "front": "Change both at once?",
+          "back": "No."
+        }
+      ],
+      "lab": {
+        "title": "Write the symptom",
+        "goal": "One sentence for blank text and one for a dropped call.",
+        "steps": [
+          "Name the suspect for each",
+          "Name the retest"
+        ],
+        "success": "The sentences do not share a fix.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Chat has been blank since a security rollout",
+        "symptom": "A new AV suite landed on Monday. Voice is fine.",
+        "log": "AV deployed Monday TEXT empty",
+        "choices": [
+          "Pilot an exception on one PC",
+          "Replace the SBC",
+          "Reset all dispositions",
+          "Enable TLS 1.1"
+        ],
+        "answer": 0,
+        "cause": "The rollout matches the documented failure.",
+        "fix": "Get text loading on one PC, then widen the exception."
+      }
+    },
+    {
+      "id": "l06",
+      "title": "Headsets and the path under the desk",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Budget the kilobits",
+        "Refuse a cellular agent path"
+      ],
+      "paragraphs": [
+        "USB noise-canceling headsets are the recommendation. Analog is not supported. Wireless is discouraged above about ten active agents because of delay. Wired LAN is preferred. Wi-Fi is tolerated only when bandwidth holds. Satellite and cellular, including 5G, are not supported.",
+        "Agent Desktop Plus and the adapters are listed at 128 kbps for G.711, which the PDF says is the default codec. Agent Assist adds 12 kbps. CRM in the same session adds another 64 kbps in that table. A VPN adds 64 kbps. Latency to the data center should be under 150 ms one way."
+      ],
+      "cites": [
+        {
+          "label": "Technical requirements PDF",
+          "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+          "note": "Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall."
+        }
+      ],
+      "uncertain": [
+        "The iPad supervisor section says G711U and G711A are primary and that GSM or iLBC may be used but have not been tested. That sentence is about that app, not a blanket codec menu."
+      ],
+      "figure": {
+        "kind": "stack",
+        "title": "Desk budget from the PDF",
+        "caption": "Add the rows you actually use.",
+        "rows": [
+          {
+            "label": "ADP 128 kbps"
+          },
+          {
+            "label": "Assist +12"
+          },
+          {
+            "label": "CRM +64"
+          },
+          {
+            "label": "VPN +64"
+          },
+          {
+            "label": "Under 150 ms one way"
+          }
+        ]
+      },
+      "flow": {
+        "title": "A home agent",
+        "lanes": [
+          "Desk",
+          "Path",
+          "Five9"
+        ],
+        "steps": [
+          {
+            "lane": "Desk",
+            "title": "USB",
+            "detail": "The headset is USB.",
+            "frame": "usb"
+          },
+          {
+            "lane": "Path",
+            "title": "Wire",
+            "detail": "The LAN is wired, or Wi-Fi that meets the rate.",
+            "frame": "lan"
+          },
+          {
+            "lane": "Path",
+            "title": "No",
+            "detail": "The path is not a phone hotspot.",
+            "frame": "no"
+          },
+          {
+            "lane": "Five9",
+            "title": "Rate",
+            "detail": "The budget includes every extra row.",
+            "frame": "rate"
+          },
+          {
+            "lane": "Five9",
+            "title": "Time",
+            "detail": "One-way delay is under 150 ms.",
+            "frame": "rtt"
+          },
+          {
+            "lane": "Desk",
+            "title": "Power",
+            "detail": "Efficiency Mode is off.",
+            "frame": "power"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Analog headsets are",
+          "choices": [
+            "Preferred",
+            "Not supported",
+            "Required for preview",
+            "Required for IVR"
+          ],
+          "answer": 1,
+          "why": "The PDF says not supported."
+        },
+        {
+          "q": "Cellular or 5G as the agent path is",
+          "choices": [
+            "Supported",
+            "Not supported",
+            "Required",
+            "Fine if G.711 is on"
+          ],
+          "answer": 1,
+          "why": "The PDF excludes satellite and wireless internet such as 5G and cellular."
+        },
+        {
+          "q": "Default codec in the bandwidth section is",
+          "choices": [
+            "G.729",
+            "G.711",
+            "Opus only",
+            "GSM required"
+          ],
+          "answer": 1,
+          "why": "G.711 is the default in that section. GSM and iLBC are mentioned elsewhere as untested options on iPad supervisor."
+        },
+        {
+          "q": "150 ms is",
+          "choices": [
+            "A round trip suggestion",
+            "The one-way latency limit in the PDF",
+            "An abandon window",
+            "A pause timer"
+          ],
+          "answer": 1,
+          "why": "One way, to the data center."
+        },
+        {
+          "q": "CRM's extra row in the table is",
+          "choices": [
+            "0",
+            "64 kbps",
+            "320 kbps",
+            "12 kbps"
+          ],
+          "answer": 1,
+          "why": "64 kbps additional for business apps such as CRM. Assist is the 12 kbps row."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Analog?",
+          "back": "Not supported."
+        },
+        {
+          "front": "5G agent path?",
+          "back": "Not supported."
+        },
+        {
+          "front": "Default codec in that table?",
+          "back": "G.711."
+        },
+        {
+          "front": "One-way latency?",
+          "back": "Under 150 ms."
+        }
+      ],
+      "lab": {
+        "title": "Add the budget",
+        "goal": "Sum the rows for Plus, Assist, CRM, and VPN.",
+        "steps": [
+          "128",
+          "12",
+          "64",
+          "64"
+        ],
+        "success": "You did not forget Assist.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Agents on hotspots sound broken",
+        "symptom": "The office Wi-Fi died and everyone tethered.",
+        "log": "PATH cellular",
+        "choices": [
+          "Move them back to a supported path",
+          "Lower the bitrate in a myth",
+          "Switch to analog",
+          "Disable WSS"
+        ],
+        "answer": 0,
+        "cause": "Cellular is outside the published support list.",
+        "fix": "Restore wired or a Wi-Fi path that meets the table."
+      }
+    },
+    {
+      "id": "l07",
+      "title": "The desktop review",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Run the desktop review",
+        "Escalate one-way audio to the network track"
+      ],
+      "paragraphs": [
+        "A desktop review is short: one screen, WSS through the proxy, TLS 1.2, the schedule visible, text not blocked, USB headset, supported path, Efficiency Mode off, and the bandwidth rows added up. Each line is from the product page or the PDF.",
+        "If those pass and audio is still one-way, you are in NAT and firewall territory, which is the SIP track. The desktop is no longer the prime suspect."
+      ],
+      "cites": [
+        {
+          "label": "Agent Desktop",
+          "url": "https://www.five9.com/products/capabilities/agent-desktop"
+        },
+        {
+          "label": "Technical requirements PDF",
+          "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+          "note": "Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall."
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "path",
+        "title": "Desktop review",
+        "caption": "Then hand the ticket to the network track.",
+        "rows": [
+          {
+            "label": "One screen"
+          },
+          {
+            "label": "WSS"
+          },
+          {
+            "label": "TLS 1.2"
+          },
+          {
+            "label": "Schedule"
+          },
+          {
+            "label": "Text loads"
+          },
+          {
+            "label": "USB and path"
+          },
+          {
+            "label": "Budget"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Close or escalate",
+        "lanes": [
+          "Desk",
+          "Network"
+        ],
+        "steps": [
+          {
+            "lane": "Desk",
+            "title": "Screen",
+            "detail": "Plus holds the work.",
+            "frame": "screen"
+          },
+          {
+            "lane": "Desk",
+            "title": "Socket",
+            "detail": "WSS opens.",
+            "frame": "wss"
+          },
+          {
+            "lane": "Desk",
+            "title": "Text",
+            "detail": "Chat text loads.",
+            "frame": "text"
+          },
+          {
+            "lane": "Desk",
+            "title": "Path",
+            "detail": "Not cellular. Efficiency Mode off.",
+            "frame": "path"
+          },
+          {
+            "lane": "Network",
+            "title": "One way",
+            "detail": "Audio fails in one direction.",
+            "frame": "oneway"
+          },
+          {
+            "lane": "Network",
+            "title": "NAT",
+            "detail": "The SIP track owns double NAT and UDP timeouts.",
+            "frame": "nat"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "One-way audio after the desk checks pass belongs to",
+          "choices": [
+            "Another greeting file",
+            "The network and NAT notes",
+            "A flashcard",
+            "Credly"
+          ],
+          "answer": 1,
+          "why": "The PDF's NAT section is the next page."
+        },
+        {
+          "q": "Efficiency Mode belongs in",
+          "choices": [
+            "The dialer ratio",
+            "The desktop review",
+            "The list filter",
+            "The ANI"
+          ],
+          "answer": 1,
+          "why": "It drops calls."
+        },
+        {
+          "q": "WSS belongs in",
+          "choices": [
+            "The desktop review",
+            "The skill greeting",
+            "The disposition",
+            "The Credly exam"
+          ],
+          "answer": 1,
+          "why": "Pops depend on it."
+        },
+        {
+          "q": "A review that skips the schedule will",
+          "choices": [
+            "Still pace honestly",
+            "Count people who are on break",
+            "Fix 911",
+            "Sign calls"
+          ],
+          "answer": 1,
+          "why": "Breaks are on the desktop for a reason."
+        },
+        {
+          "q": "The PDF is",
+          "choices": [
+            "Optional folklore",
+            "The source for the bandwidth and TLS lines",
+            "A dialer mode",
+            "A campaign type"
+          ],
+          "answer": 1,
+          "why": "Re-read it. It moves."
+        }
+      ],
+      "cards": [
+        {
+          "front": "One-way audio next stop?",
+          "back": "NAT and SIP."
+        },
+        {
+          "front": "Efficiency Mode?",
+          "back": "Desktop review."
+        },
+        {
+          "front": "WSS?",
+          "back": "Desktop review."
+        },
+        {
+          "front": "Skip the schedule?",
+          "back": "You will mis-count people."
+        }
+      ],
+      "lab": {
+        "title": "Tick the review",
+        "goal": "Seven checks on one workstation.",
+        "steps": [
+          "Screen",
+          "WSS",
+          "TLS",
+          "Schedule",
+          "Text",
+          "Headset and path",
+          "Budget"
+        ],
+        "success": "Either the desk is clean or you have a named defect.",
+        "href": "#/topology"
+      },
+      "fault": {
+        "title": "The ticket says headset, the log says proxy",
+        "symptom": "Voice is fine, pop is empty, a proxy changed.",
+        "log": "WSS blocked HEADSET new",
+        "choices": [
+          "Fix the proxy. Leave the new headset",
+          "Buy another headset",
+          "Enable TLS 1.1",
+          "Stop the domain"
+        ],
+        "answer": 0,
+        "cause": "The symptom matches WSS, not the transducer.",
+        "fix": "Open WSS and retest the pop."
+      }
+    }
+  ]
+}

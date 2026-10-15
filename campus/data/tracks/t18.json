@@ -1,0 +1,1376 @@
+{
+  "id": "t18",
+  "title": "Certifications and practice",
+  "short": "Practice",
+  "blurb": "University formats, the one badge we could verify, dated versions, and answers that keep their gaps.",
+  "group": "Practice",
+  "level": "Foundation",
+  "summary": "No invented exam codes. The sales badge is a sales badge. Date every number.",
+  "lessons": [
+    {
+      "id": "l01",
+      "title": "University is a catalog, not a secret exam code",
+      "level": "foundation",
+      "minutes": 12,
+      "objectives": [
+        "Say that assessments exist without inventing a code",
+        "Date the curriculum brief"
+      ],
+      "paragraphs": [
+        "Five9 University is the public training front door: online classes, webinars, instructor-led classes, train-the-trainer, and custom programs. The curriculum brief this lab read is dated April 2023. Treat the mix of courses as a dated brochure.",
+        "Administrator classes exist, and the community article says administrator assessments exist. It does not publish an exam code this lab can repeat. If a study guide invents Five9-CA-100 or any cousin, close it."
+      ],
+      "cites": [
+        {
+          "label": "Five9 University",
+          "url": "https://www.five9.com/contact-center-services/training"
+        },
+        {
+          "label": "Administrator training classes",
+          "url": "https://community.five9.com/s/article/Five9-University-Five9-Administrator-Training-Classes?language=en_US"
+        },
+        {
+          "label": "University curriculum brief, April 2023",
+          "url": "https://www.five9.com/sites/default/files/2023-04/Five9_University_Curriculum_Brief_v5.pdf"
+        }
+      ],
+      "uncertain": [
+        "The curriculum brief is from April 2023. Course lists move. This lab found no public administrator exam code to quote."
+      ],
+      "figure": {
+        "kind": "stack",
+        "title": "Formats named in the 2023 brief",
+        "caption": "Re-check the live catalog.",
+        "rows": [
+          {
+            "label": "Online"
+          },
+          {
+            "label": "Webinars"
+          },
+          {
+            "label": "Instructor-led"
+          },
+          {
+            "label": "Train-the-trainer"
+          },
+          {
+            "label": "Custom"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Someone quotes an exam code",
+        "lanes": [
+          "Ask",
+          "Page",
+          "Refuse"
+        ],
+        "steps": [
+          {
+            "lane": "Ask",
+            "title": "Code",
+            "detail": "They name a code.",
+            "frame": "code"
+          },
+          {
+            "lane": "Page",
+            "title": "Search",
+            "detail": "You look for it on the University pages.",
+            "frame": "search"
+          },
+          {
+            "lane": "Refuse",
+            "title": "Blank",
+            "detail": "If it is not there, you do not memorize it.",
+            "frame": "blank"
+          },
+          {
+            "lane": "Refuse",
+            "title": "Assess",
+            "detail": "You can say assessments exist without a code.",
+            "frame": "assess"
+          },
+          {
+            "lane": "Admin",
+            "title": "Date",
+            "detail": "The April 2023 brief is dated when you cite it.",
+            "frame": "date"
+          },
+          {
+            "lane": "Admin",
+            "title": "Live",
+            "detail": "The live catalog wins over the PDF.",
+            "frame": "live"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "This lab publishes a Five9 administrator exam code. True or false?",
+          "choices": [
+            "True",
+            "False",
+            "True, Five9-CA-100",
+            "True for partners only"
+          ],
+          "answer": 1,
+          "why": "No public code was found to cite."
+        },
+        {
+          "q": "Formats in the April 2023 brief include",
+          "choices": [
+            "Only videos",
+            "Online, webinars, ILT, train-the-trainer, and custom",
+            "Only a lab",
+            "Only Credly"
+          ],
+          "answer": 1,
+          "why": "Those formats."
+        },
+        {
+          "q": "Administrator assessments",
+          "choices": [
+            "Do not exist",
+            "Are mentioned, without a code this lab can quote",
+            "Are RFC 3261",
+            "Are the abandon default"
+          ],
+          "answer": 1,
+          "why": "Mentioned, not coded."
+        },
+        {
+          "q": "A third-party code should be",
+          "choices": [
+            "Memorized",
+            "Ignored unless Five9 publishes it",
+            "Used as a skill name",
+            "Typed into ANI"
+          ],
+          "answer": 1,
+          "why": "Do not launder it."
+        },
+        {
+          "q": "The curriculum brief is",
+          "choices": [
+            "Eternal",
+            "Dated April 2023. Re-check",
+            "A SIP guide",
+            "The EULA"
+          ],
+          "answer": 1,
+          "why": "Date it."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Exam code in this lab?",
+          "back": "None."
+        },
+        {
+          "front": "Formats?",
+          "back": "Online, webinars, ILT, train-the-trainer, custom."
+        },
+        {
+          "front": "Assessments?",
+          "back": "Mentioned, no code quoted."
+        },
+        {
+          "front": "Invented codes?",
+          "back": "Ignore them."
+        }
+      ],
+      "lab": {
+        "title": "Refuse a fake code",
+        "goal": "Write what you can say about administrator training and what you will not say.",
+        "steps": [
+          "Assessments exist",
+          "No code",
+          "The brief's date"
+        ],
+        "success": "The fake code is absent.",
+        "href": ""
+      },
+      "fault": {
+        "title": "A flashcard deck uses Five9-CA-240 as the goal",
+        "symptom": "That code is not on the pages this lab cites.",
+        "log": "CARD code=invented",
+        "choices": [
+          "Delete the code and use the University catalog",
+          "Add it to the domain",
+          "Put it on a campaign",
+          "Print it on badges"
+        ],
+        "answer": 0,
+        "cause": "Invented credentials waste people's months.",
+        "fix": "Study the published catalog."
+      }
+    },
+    {
+      "id": "l02",
+      "title": "The badge we could verify is a sales badge",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Describe the sales badge accurately",
+        "Do not use it as an admin license"
+      ],
+      "paragraphs": [
+        "Five9 IVA Sales Certified is a Credly badge. The public badge says five modules and a 20-question final, with a passing mark of 80 percent. The partner blog describes it as a sales certification for partners.",
+        "It is not an engineering credential for VCC administration, IVR build, or dialer design. Passing it does not make someone the person who should change Max Abandoned Call Percentage."
+      ],
+      "cites": [
+        {
+          "label": "IVA Sales Certified badge",
+          "url": "https://www.credly.com/org/five9/badge/five9-iva-sales-certified"
+        },
+        {
+          "label": "Partner IVA sales certification",
+          "url": "https://www.five9.com/blog/five9-partners-can-now-become-sales-certified-five9-university-partners"
+        },
+        {
+          "label": "Five9 University",
+          "url": "https://www.five9.com/contact-center-services/training"
+        }
+      ],
+      "uncertain": [
+        "Badge details were read from the public Credly page and the partner blog. Confirm the current attempt rules before you depend on them."
+      ],
+      "figure": {
+        "kind": "compare",
+        "title": "What the badge is",
+        "caption": "Read the badge before you put it on a job description.",
+        "leftTitle": "Public badge",
+        "rightTitle": "What it is not",
+        "left": [
+          "IVA Sales Certified",
+          "5 modules",
+          "20 questions",
+          "80 percent"
+        ],
+        "right": [
+          "A VCC admin exam",
+          "An IVR engineer cert",
+          "A dialer license"
+        ]
+      },
+      "flow": {
+        "title": "A résumé arrives",
+        "lanes": [
+          "Read",
+          "Scope",
+          "Job"
+        ],
+        "steps": [
+          {
+            "lane": "Read",
+            "title": "Badge",
+            "detail": "The Credly page is opened.",
+            "frame": "badge"
+          },
+          {
+            "lane": "Scope",
+            "title": "Sales",
+            "detail": "The scope is partner sales.",
+            "frame": "sales"
+          },
+          {
+            "lane": "Job",
+            "title": "Match",
+            "detail": "The job is compared with that scope.",
+            "frame": "job"
+          },
+          {
+            "lane": "Job",
+            "title": "Admin",
+            "detail": "Admin work still needs the admin curriculum.",
+            "frame": "admin"
+          },
+          {
+            "lane": "Admin",
+            "title": "80",
+            "detail": "80 percent is the published passing mark, not a trunk setting.",
+            "frame": "80"
+          },
+          {
+            "lane": "Admin",
+            "title": "No",
+            "detail": "You do not promote the badge into an engineer cert.",
+            "frame": "no"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "IVA Sales Certified is",
+          "choices": [
+            "A public sales badge",
+            "The VCC administrator exam",
+            "A SIP certification",
+            "Required to dial"
+          ],
+          "answer": 0,
+          "why": "Sales, via Credly and the partner blog."
+        },
+        {
+          "q": "The final, as published, is",
+          "choices": [
+            "100 questions",
+            "20 questions",
+            "A lab only",
+            "Unstated"
+          ],
+          "answer": 1,
+          "why": "20 questions."
+        },
+        {
+          "q": "The published passing mark is",
+          "choices": [
+            "70 percent",
+            "80 percent",
+            "100 percent",
+            "A Five9 representative sets it per domain"
+          ],
+          "answer": 1,
+          "why": "80 percent."
+        },
+        {
+          "q": "Modules published for that badge",
+          "choices": [
+            "5",
+            "18",
+            "The whole University",
+            "None"
+          ],
+          "answer": 0,
+          "why": "Five."
+        },
+        {
+          "q": "You should require this badge for a dialer administrator. True or false?",
+          "choices": [
+            "True",
+            "False. It is a sales cert",
+            "True for TCPA",
+            "True for E911"
+          ],
+          "answer": 1,
+          "why": "Wrong scope."
+        }
+      ],
+      "cards": [
+        {
+          "front": "What is the badge?",
+          "back": "IVA sales, for partners."
+        },
+        {
+          "front": "Questions?",
+          "back": "20."
+        },
+        {
+          "front": "Pass mark?",
+          "back": "80 percent."
+        },
+        {
+          "front": "Admin substitute?",
+          "back": "No."
+        }
+      ],
+      "lab": {
+        "title": "Read a badge",
+        "goal": "Write the audience and one job it does not qualify.",
+        "steps": [
+          "Audience",
+          "Passing mark",
+          "The job you will not assign from it"
+        ],
+        "success": "You kept the word sales.",
+        "href": ""
+      },
+      "fault": {
+        "title": "A posting requires IVA Sales Certified for IVR engineers",
+        "symptom": "The badge does not say that.",
+        "log": "JOB req=sales-badge role=ivr",
+        "choices": [
+          "Rewrite the posting around the work and the admin curriculum",
+          "Keep it",
+          "Invent an engineer code",
+          "Remove IVR from the product"
+        ],
+        "answer": 0,
+        "cause": "The credential and the job disagree.",
+        "fix": "Fix the posting."
+      }
+    },
+    {
+      "id": "l03",
+      "title": "Practice is the domain, not the badge",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Practice the objects",
+        "Treat invented codes as a negative signal"
+      ],
+      "paragraphs": [
+        "The objects you must be able to touch are the ones in the planning topic and the IVR chapter: skill groups, users, lists, dispositions, profiles, campaigns, and modules. A certification that never had you start a stopped inbound campaign did not finish the job.",
+        "Use this lab's lessons as the drill. Each one ends in a lab and a fault. The fault log is synthetic. The failure mode is the one the cited page describes."
+      ],
+      "cites": [
+        {
+          "label": "Planning your implementation",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm"
+        },
+        {
+          "label": "IVR modules",
+          "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm"
+        },
+        {
+          "label": "Administrator training classes",
+          "url": "https://community.five9.com/s/article/Five9-University-Five9-Administrator-Training-Classes?language=en_US"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "path",
+        "title": "A drill that matches the job",
+        "caption": "Touch the object the page names.",
+        "rows": [
+          {
+            "label": "Build in the planning order"
+          },
+          {
+            "label": "Assign a script"
+          },
+          {
+            "label": "Start the campaign"
+          },
+          {
+            "label": "Read one report with the right role"
+          }
+        ]
+      },
+      "flow": {
+        "title": "An interview claims admin skill",
+        "lanes": [
+          "Ask",
+          "Watch",
+          "Stop"
+        ],
+        "steps": [
+          {
+            "lane": "Ask",
+            "title": "Order",
+            "detail": "They say what is built before a campaign.",
+            "frame": "order"
+          },
+          {
+            "lane": "Watch",
+            "title": "Start",
+            "detail": "They know a stopped inbound campaign does not answer.",
+            "frame": "start"
+          },
+          {
+            "lane": "Watch",
+            "title": "Module",
+            "detail": "They name a module from the chapter.",
+            "frame": "mod"
+          },
+          {
+            "lane": "Stop",
+            "title": "Code",
+            "detail": "They do not recite an invented exam code.",
+            "frame": "code"
+          },
+          {
+            "lane": "Stop",
+            "title": "Default",
+            "detail": "They do not invent an abandon percent.",
+            "frame": "abd"
+          },
+          {
+            "lane": "Admin",
+            "title": "Role",
+            "detail": "They know Reporting is its own role.",
+            "frame": "role"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "A finished admin practice includes",
+          "choices": [
+            "Only slides",
+            "Creating the objects and starting a campaign",
+            "Memorizing a fake code",
+            "Buying headsets only"
+          ],
+          "answer": 1,
+          "why": "The planning order is the practice."
+        },
+        {
+          "q": "A busy DNIS with a stopped campaign is",
+          "choices": [
+            "A carrier mystery first",
+            "The expected symptom",
+            "A Credly failure",
+            "A matrix bug"
+          ],
+          "answer": 1,
+          "why": "Start the campaign."
+        },
+        {
+          "q": "Naming Menu and Skill Transfer shows",
+          "choices": [
+            "They read the module chapter",
+            "They passed the sales badge",
+            "They configured BGP",
+            "They set retention"
+          ],
+          "answer": 0,
+          "why": "Those names are in the chapter."
+        },
+        {
+          "q": "Inventing an abandon percent in an interview is",
+          "choices": [
+            "A sign of confidence",
+            "A miss. The page warns, it does not give this lab a default",
+            "Required",
+            "The sales exam"
+          ],
+          "answer": 1,
+          "why": "Do not invent it."
+        },
+        {
+          "q": "The Reporting role is",
+          "choices": [
+            "Implied by admin",
+            "Separate",
+            "The sales badge",
+            "Optional for every user"
+          ],
+          "answer": 1,
+          "why": "Separate."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Practice equals the planning order?",
+          "back": "Yes."
+        },
+        {
+          "front": "Stopped campaign?",
+          "back": "Busy DNIS."
+        },
+        {
+          "front": "Invent a percent?",
+          "back": "No."
+        },
+        {
+          "front": "Reporting role?",
+          "back": "Separate."
+        }
+      ],
+      "lab": {
+        "title": "Run one drill",
+        "goal": "Say the build order, name two modules, and say why you will not guess the abandon default.",
+        "steps": [
+          "Order",
+          "Modules",
+          "The refusal"
+        ],
+        "success": "You sounded like the documents.",
+        "href": ""
+      },
+      "fault": {
+        "title": "A candidate's only evidence is the sales badge and a fake exam code",
+        "symptom": "Neither one is admin practice.",
+        "log": "RESUME badge=sales code=fake",
+        "choices": [
+          "Ask them to walk the planning order instead",
+          "Hire on the code",
+          "Skip skills",
+          "Hand them production"
+        ],
+        "answer": 0,
+        "cause": "The evidence does not match the job.",
+        "fix": "Interview the work."
+      }
+    },
+    {
+      "id": "l04",
+      "title": "Version timelines go stale on purpose",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Date every version you copy",
+        "Re-read the PDF before you freeze a standard"
+      ],
+      "paragraphs": [
+        "Numbers you copy from a PDF are dates, not laws. The technical requirements this lab read named Salesforce managed package 2.46, ServiceNow releases Australia, Zurich, and Yokohama, JRE 8 updates 421, 451, and 461, and macOS 15 Sequoia, 26 Tahoe, and 27 Golden Gate. All of that is an October 2026 reading.",
+        "A study plan that memorizes those numbers without a date will be wrong. Write 'as of' or do not write them."
+      ],
+      "cites": [
+        {
+          "label": "Technical requirements PDF",
+          "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+          "note": "October 2026 reading."
+        },
+        {
+          "label": "University curriculum brief, April 2023",
+          "url": "https://www.five9.com/sites/default/files/2023-04/Five9_University_Curriculum_Brief_v5.pdf"
+        }
+      ],
+      "uncertain": [
+        "Salesforce 2.46, ServiceNow Australia/Zurich/Yokohama, JRE 8 updates 421/451/461, and macOS Sequoia 15, Tahoe 26, and Golden Gate 27 are from the technical requirements read in October 2026."
+      ],
+      "figure": {
+        "kind": "stack",
+        "title": "Numbers that need a date",
+        "caption": "From the PDF this lab opened.",
+        "rows": [
+          {
+            "label": "Salesforce package 2.46"
+          },
+          {
+            "label": "ServiceNow Australia, Zurich, Yokohama"
+          },
+          {
+            "label": "JRE 8 updates 421, 451, 461"
+          },
+          {
+            "label": "macOS Sequoia 15, Tahoe 26, Golden Gate 27"
+          }
+        ]
+      },
+      "flow": {
+        "title": "A standard is being written",
+        "lanes": [
+          "Copy",
+          "Date",
+          "Recheck"
+        ],
+        "steps": [
+          {
+            "lane": "Copy",
+            "title": "PDF",
+            "detail": "The number comes from the current PDF.",
+            "frame": "pdf"
+          },
+          {
+            "lane": "Date",
+            "title": "As of",
+            "detail": "The sentence includes a date.",
+            "frame": "date"
+          },
+          {
+            "lane": "Recheck",
+            "title": "Next",
+            "detail": "Someone owns the next read.",
+            "frame": "next"
+          },
+          {
+            "lane": "Recheck",
+            "title": "Brief",
+            "detail": "The 2023 curriculum brief is not the version list.",
+            "frame": "brief"
+          },
+          {
+            "lane": "Admin",
+            "title": "Mac",
+            "detail": "Java admin is not the Mac ARM answer in that PDF.",
+            "frame": "mac"
+          },
+          {
+            "lane": "Admin",
+            "title": "JRE",
+            "detail": "The JRE updates are a list, not a vibe.",
+            "frame": "jre"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Package 2.46 should be taught as",
+          "choices": [
+            "Forever",
+            "The package in the PDF read in October 2026",
+            "A cert code",
+            "A skill"
+          ],
+          "answer": 1,
+          "why": "Date it."
+        },
+        {
+          "q": "ServiceNow release names in that reading were",
+          "choices": [
+            "London only",
+            "Australia, Zurich, and Yokohama",
+            "Any",
+            "None"
+          ],
+          "answer": 1,
+          "why": "Those three."
+        },
+        {
+          "q": "JRE 8 updates named were",
+          "choices": [
+            "421, 451, and 461",
+            "Any Java",
+            "Java 21 only",
+            "None"
+          ],
+          "answer": 0,
+          "why": "That list."
+        },
+        {
+          "q": "macOS names in that reading included",
+          "choices": [
+            "Only Catalina",
+            "Sequoia 15, Tahoe 26, Golden Gate 27",
+            "No Mac support at all",
+            "Windows only"
+          ],
+          "answer": 1,
+          "why": "Three latest non-beta, as that PDF listed them."
+        },
+        {
+          "q": "The April 2023 curriculum brief sets the JRE list. True or false?",
+          "choices": [
+            "True",
+            "False. Different documents",
+            "True for Mac",
+            "True for Salesforce"
+          ],
+          "answer": 1,
+          "why": "Do not cross the wires."
+        }
+      ],
+      "cards": [
+        {
+          "front": "2.46?",
+          "back": "Dated PDF fact."
+        },
+        {
+          "front": "ServiceNow names?",
+          "back": "Australia, Zurich, Yokohama, in that reading."
+        },
+        {
+          "front": "JRE updates?",
+          "back": "421, 451, 461."
+        },
+        {
+          "front": "Curriculum brief equals the JRE list?",
+          "back": "No."
+        }
+      ],
+      "lab": {
+        "title": "Date a standard",
+        "goal": "Copy one version number and the sentence you will put around it.",
+        "steps": [
+          "The number",
+          "The date",
+          "Who re-reads it"
+        ],
+        "success": "The sentence contains 'as of'.",
+        "href": ""
+      },
+      "fault": {
+        "title": "A runbook says Golden Gate is unsupported because the author remembers Catalina",
+        "symptom": "The PDF this lab read already moved on, and the next one might too.",
+        "log": "STD macos=old",
+        "choices": [
+          "Open the current PDF and date the line",
+          "Freeze Catalina",
+          "Disable web admin",
+          "Invent a cert code"
+        ],
+        "answer": 0,
+        "cause": "Memory is not the requirements.",
+        "fix": "Re-read and date it."
+      }
+    },
+    {
+      "id": "l05",
+      "title": "How to answer without inventing",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Use object, behavior, page, and gap",
+        "Prefer a marked unknown to a fake precision"
+      ],
+      "paragraphs": [
+        "An interview answer in this lab has four beats: the object, the behavior, the page, and the gap. 'A stopped inbound campaign does not answer. The inbound topic says callers hear busy. I have not memorized a numeric abandon default.' That is a complete answer.",
+        "The interview deck on this site uses the same links as the lessons. If you cannot say the page, say you do not know. Guessing a port, a percent, or a cert code is a worse answer than silence."
+      ],
+      "cites": [
+        {
+          "label": "Planning your implementation",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm"
+        },
+        {
+          "label": "Default campaign settings",
+          "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm"
+        },
+        {
+          "label": "IVR modules",
+          "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "path",
+        "title": "Four beats",
+        "caption": "Then stop talking.",
+        "rows": [
+          {
+            "label": "Object"
+          },
+          {
+            "label": "Behavior"
+          },
+          {
+            "label": "Page"
+          },
+          {
+            "label": "Gap"
+          }
+        ]
+      },
+      "flow": {
+        "title": "A panel asks a sharp question",
+        "lanes": [
+          "Object",
+          "Page",
+          "Gap"
+        ],
+        "steps": [
+          {
+            "lane": "Object",
+            "title": "Name",
+            "detail": "You name the Five9 object.",
+            "frame": "obj"
+          },
+          {
+            "lane": "Page",
+            "title": "Cite",
+            "detail": "You name the page a reviewer can open.",
+            "frame": "page"
+          },
+          {
+            "lane": "Gap",
+            "title": "Unknown",
+            "detail": "You say what you will not invent.",
+            "frame": "gap"
+          },
+          {
+            "lane": "Gap",
+            "title": "Date",
+            "detail": "Version numbers get a date.",
+            "frame": "date"
+          },
+          {
+            "lane": "Admin",
+            "title": "Bridge",
+            "detail": "Cisco mappings are called a teaching bridge.",
+            "frame": "bridge"
+          },
+          {
+            "lane": "Admin",
+            "title": "Stop",
+            "detail": "You stop. You do not fill the silence with a rumor.",
+            "frame": "stop"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "A strong answer includes",
+          "choices": [
+            "Only a product logo",
+            "Object, behavior, page, and the gap",
+            "A fake exam code",
+            "A 20 ms claim as fact"
+          ],
+          "answer": 1,
+          "why": "Four beats."
+        },
+        {
+          "q": "Silence is better than",
+          "choices": [
+            "A cited fact",
+            "An invented percent or port",
+            "Naming a skill",
+            "Saying you will look it up"
+          ],
+          "answer": 1,
+          "why": "Inventions are worse than gaps."
+        },
+        {
+          "q": "A Cisco comparison should be labeled",
+          "choices": [
+            "An official wizard",
+            "A teaching bridge",
+            "A cert",
+            "A codec"
+          ],
+          "answer": 1,
+          "why": "We did not find a wizard."
+        },
+        {
+          "q": "Version numbers in an answer need",
+          "choices": [
+            "Nothing",
+            "A date",
+            "A badge",
+            "A headset"
+          ],
+          "answer": 1,
+          "why": "They go stale."
+        },
+        {
+          "q": "The interview deck is allowed to disagree with the lessons. True or false?",
+          "choices": [
+            "True",
+            "False. Same citations",
+            "True for sales",
+            "True for ports"
+          ],
+          "answer": 1,
+          "why": "One set of sources."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Four beats?",
+          "back": "Object, behavior, page, gap."
+        },
+        {
+          "front": "Invent a port?",
+          "back": "No. Stop."
+        },
+        {
+          "front": "Cisco map?",
+          "back": "A teaching bridge."
+        },
+        {
+          "front": "Versions?",
+          "back": "Dated."
+        }
+      ],
+      "lab": {
+        "title": "Answer one question",
+        "goal": "Use the four beats on 'why is the DNIS busy?'",
+        "steps": [
+          "Object",
+          "Page",
+          "Gap"
+        ],
+        "success": "You did not blame the carrier first.",
+        "href": "#/interview"
+      },
+      "fault": {
+        "title": "A candidate fills every gap with a precise fake number",
+        "symptom": "Precision is not evidence.",
+        "log": "ANSWER abandon=3 source=none",
+        "choices": [
+          "Ask which page says 3",
+          "Hire them for confidence",
+          "Add 3 to the domain",
+          "Print the number in the glossary"
+        ],
+        "answer": 0,
+        "cause": "The page was the missing beat.",
+        "fix": "Keep the gap visible."
+      }
+    },
+    {
+      "id": "l06",
+      "title": "A study week that stays inside the documents",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "End each session on the cited page",
+        "Read the uncertain notes"
+      ],
+      "paragraphs": [
+        "Six sessions cover the floor without a fake exam. One: planning order and skills. Two: inbound, lists, and the three campaign types. Three: dial modes and the abandon warning, plus the pacing lab. Four: IVR modules and the builder. Five: desktop, CRM, and WEM as neighbors. Six: SIP stories, E911, retention, and one boss incident.",
+        "Each session ends by opening the page, not by highlighting this lab. The lab is a door."
+      ],
+      "cites": [
+        {
+          "label": "Five9 University",
+          "url": "https://www.five9.com/contact-center-services/training"
+        },
+        {
+          "label": "Planning your implementation",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm"
+        },
+        {
+          "label": "Default campaign settings",
+          "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "stack",
+        "title": "Six sessions",
+        "caption": "Open the page at the end of each.",
+        "rows": [
+          {
+            "label": "Planning and skills"
+          },
+          {
+            "label": "Campaign types and lists"
+          },
+          {
+            "label": "Modes and the warning"
+          },
+          {
+            "label": "IVR modules"
+          },
+          {
+            "label": "Desktop, CRM, WEM"
+          },
+          {
+            "label": "SIP, E911, retention"
+          }
+        ]
+      },
+      "flow": {
+        "title": "A study block",
+        "lanes": [
+          "Read",
+          "Touch",
+          "Cite"
+        ],
+        "steps": [
+          {
+            "lane": "Read",
+            "title": "Lesson",
+            "detail": "One lesson, including the fault.",
+            "frame": "lesson"
+          },
+          {
+            "lane": "Touch",
+            "title": "Tool",
+            "detail": "The builder, the simulator, or the topology, when the lesson names it.",
+            "frame": "tool"
+          },
+          {
+            "lane": "Cite",
+            "title": "Page",
+            "detail": "The cited page is opened.",
+            "frame": "page"
+          },
+          {
+            "lane": "Cite",
+            "title": "Gap",
+            "detail": "Uncertain notes are read, not skipped.",
+            "frame": "gap"
+          },
+          {
+            "lane": "Admin",
+            "title": "Card",
+            "detail": "Four flashcards are answered aloud.",
+            "frame": "card"
+          },
+          {
+            "lane": "Admin",
+            "title": "Stop",
+            "detail": "The session stops before a fake practice test.",
+            "frame": "stop"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "The point of a session is",
+          "choices": [
+            "To finish a fake exam",
+            "To touch the object and open the page",
+            "To memorize Equinix codes forever",
+            "To learn a prefix for 911"
+          ],
+          "answer": 1,
+          "why": "The page is the authority."
+        },
+        {
+          "q": "Uncertain notes are",
+          "choices": [
+            "Errors to ignore",
+            "Part of the lesson",
+            "Only for lawyers",
+            "Hidden"
+          ],
+          "answer": 1,
+          "why": "Read them."
+        },
+        {
+          "q": "Campaign types to practice are",
+          "choices": [
+            "Four, including blended",
+            "Inbound, outbound, autodial",
+            "Only predictive",
+            "Only skills"
+          ],
+          "answer": 1,
+          "why": "Three types."
+        },
+        {
+          "q": "A session that never opens a Five9 page",
+          "choices": [
+            "Is complete",
+            "Stopped early",
+            "Counts as the sales badge",
+            "Sets TLS"
+          ],
+          "answer": 1,
+          "why": "Open the page."
+        },
+        {
+          "q": "Boss incidents use",
+          "choices": [
+            "Live customer data",
+            "Synthetic logs of real failure modes",
+            "Exam codes",
+            "Analog headsets"
+          ],
+          "answer": 1,
+          "why": "Synthetic logs."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Session goal?",
+          "back": "Object plus the page."
+        },
+        {
+          "front": "Skip uncertain notes?",
+          "back": "No."
+        },
+        {
+          "front": "Campaign types?",
+          "back": "Three."
+        },
+        {
+          "front": "Boss logs?",
+          "back": "Synthetic."
+        }
+      ],
+      "lab": {
+        "title": "Plan six sittings",
+        "goal": "Assign one track group to each sitting and the page you will open.",
+        "steps": [
+          "Six titles",
+          "Six URLs",
+          "One tool"
+        ],
+        "success": "No sitting ends on this lab alone.",
+        "href": "#/boss"
+      },
+      "fault": {
+        "title": "A study group highlights the lab and never opens the inbound topic",
+        "symptom": "They can recite the lab and still mis-state the product.",
+        "log": "GROUP pages=0",
+        "choices": [
+          "Open the cited page before the next card",
+          "Add more highlights",
+          "Invent an exam",
+          "Skip faults"
+        ],
+        "answer": 0,
+        "cause": "The lab is not the source.",
+        "fix": "Open the page."
+      }
+    },
+    {
+      "id": "l07",
+      "title": "What this lab will not pretend to be",
+      "level": "foundation",
+      "minutes": 12,
+      "objectives": [
+        "Cite the vendor page",
+        "Keep this lab in the study column"
+      ],
+      "paragraphs": [
+        "Five9 Lab is an independent study floor. It is not Five9, not a partner portal, and not a place that can change your domain. The builder's JSON is not an import. The pacing chart is not the dialer. The 3D topology is a picture of failure, not a network map of your tenant.",
+        "When a fact might have moved, the lesson says uncertain. Your next step is the linked page, then Five9 University if you want an official class. That is the whole honesty policy."
+      ],
+      "cites": [
+        {
+          "label": "Five9 University",
+          "url": "https://www.five9.com/contact-center-services/training"
+        },
+        {
+          "label": "Planning your implementation",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "compare",
+        "title": "Use the lab for this",
+        "caption": "Then leave it.",
+        "leftTitle": "Here",
+        "rightTitle": "Not here",
+        "left": [
+          "Drills",
+          "Citations",
+          "Marked gaps",
+          "Three tools"
+        ],
+        "right": [
+          "A live domain",
+          "An official exam",
+          "Vendor support",
+          "A file VCC imports"
+        ]
+      },
+      "flow": {
+        "title": "You are about to cite the lab in a design",
+        "lanes": [
+          "Check",
+          "Link",
+          "Vendor"
+        ],
+        "steps": [
+          {
+            "lane": "Check",
+            "title": "Page",
+            "detail": "The Five9 page is the citation.",
+            "frame": "page"
+          },
+          {
+            "lane": "Link",
+            "title": "Lab",
+            "detail": "The lab is optional further reading.",
+            "frame": "lab"
+          },
+          {
+            "lane": "Vendor",
+            "title": "Open",
+            "detail": "A production change goes through your administrator and Five9's own guides.",
+            "frame": "prod"
+          },
+          {
+            "lane": "Vendor",
+            "title": "Support",
+            "detail": "An outage goes to Five9 support, not to a lesson.",
+            "frame": "sup"
+          },
+          {
+            "lane": "Admin",
+            "title": "Tool",
+            "detail": "You can still use the tools to think.",
+            "frame": "tool"
+          },
+          {
+            "lane": "Admin",
+            "title": "Mark",
+            "detail": "Anything you are unsure of stays marked.",
+            "frame": "mark"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "This lab can change a production domain. True or false?",
+          "choices": [
+            "True",
+            "False",
+            "True if you export JSON",
+            "True on the topology page"
+          ],
+          "answer": 1,
+          "why": "It is a study floor."
+        },
+        {
+          "q": "The IVR export is",
+          "choices": [
+            "Importable to VCC",
+            "A learning file",
+            "A SIP trunk",
+            "A badge"
+          ],
+          "answer": 1,
+          "why": "Not an import."
+        },
+        {
+          "q": "An outage should be reported to",
+          "choices": [
+            "This lesson",
+            "Five9 through your support path",
+            "The theme picker",
+            "A flashcard"
+          ],
+          "answer": 1,
+          "why": "The vendor."
+        },
+        {
+          "q": "Uncertain means",
+          "choices": [
+            "The sentence is decorative",
+            "Confirm it before you depend on it",
+            "Ignore the citation",
+            "The feature is illegal"
+          ],
+          "answer": 1,
+          "why": "Go check."
+        },
+        {
+          "q": "Official classes live at",
+          "choices": [
+            "A code we invented",
+            "Five9 University",
+            "The pacing simulator",
+            "Equinix"
+          ],
+          "answer": 1,
+          "why": "The University page."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Can the lab edit your domain?",
+          "back": "No."
+        },
+        {
+          "front": "IVR export?",
+          "back": "Learning file."
+        },
+        {
+          "front": "Outage?",
+          "back": "Five9 support."
+        },
+        {
+          "front": "Uncertain?",
+          "back": "Confirm before you depend on it."
+        }
+      ],
+      "lab": {
+        "title": "Write the disclaimer you will actually use",
+        "goal": "Three sentences: what the lab is, what the citation is, where an outage goes.",
+        "steps": [
+          "Independent study",
+          "The vendor page",
+          "Support"
+        ],
+        "success": "You did not call the lab official.",
+        "href": "#/certs"
+      },
+      "fault": {
+        "title": "A design's only footnote is this website",
+        "symptom": "The vendor page was skipped.",
+        "log": "DESIGN cite=lab-only",
+        "choices": [
+          "Add the Five9 or RFC link, and mark the lab as study notes",
+          "Ship it",
+          "Add a fake exam code",
+          "Remove the uncertain notes"
+        ],
+        "answer": 0,
+        "cause": "The lab is not the authority.",
+        "fix": "Cite the source."
+      }
+    }
+  ]
+}

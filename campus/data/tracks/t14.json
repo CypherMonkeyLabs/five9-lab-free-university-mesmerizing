@@ -1,0 +1,1371 @@
+{
+  "id": "t14",
+  "title": "APIs and reporting",
+  "short": "APIs",
+  "blurb": "Named web services, the Reporting role, layouts, call variables, and the clocks that delete evidence.",
+  "group": "Systems",
+  "level": "Advanced",
+  "summary": "Name the API family. Name the report layout. Name which clock you mean.",
+  "lessons": [
+    {
+      "id": "l01",
+      "title": "The API names on the product page",
+      "level": "foundation",
+      "minutes": 12,
+      "objectives": [
+        "Use the product names",
+        "Leave SOAP versus REST unmarked until you read that guide"
+      ],
+      "paragraphs": [
+        "The APIs and SDKs page names CTI Web Services, Configuration Web Services, Reporting Web Services, Statistics Web Services, Web2Campaign, the CRM SDK, and Web Connectors. The same page also says REST. It does not, in the text this lab relied on, give a one-line SOAP-versus-REST label for every family.",
+        "Call a family by its product name. If you have not opened that family's guide, write 'transport unconfirmed' instead of guessing SOAP or REST."
+      ],
+      "cites": [
+        {
+          "label": "APIs and SDKs",
+          "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks"
+        },
+        {
+          "label": "Technical requirements PDF",
+          "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+          "note": "Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall."
+        }
+      ],
+      "uncertain": [
+        "The overview page says REST and also lists Web Services families. This lab does not assign a transport to each family."
+      ],
+      "figure": {
+        "kind": "stack",
+        "title": "Names to use in a design",
+        "caption": "From the APIs and SDKs page.",
+        "rows": [
+          {
+            "label": "CTI Web Services"
+          },
+          {
+            "label": "Configuration Web Services"
+          },
+          {
+            "label": "Reporting Web Services"
+          },
+          {
+            "label": "Statistics Web Services"
+          },
+          {
+            "label": "Web2Campaign"
+          },
+          {
+            "label": "CRM SDK"
+          },
+          {
+            "label": "Web Connectors"
+          }
+        ]
+      },
+      "flow": {
+        "title": "A developer asks for 'the API'",
+        "lanes": [
+          "Ask",
+          "Name",
+          "Note"
+        ],
+        "steps": [
+          {
+            "lane": "Ask",
+            "title": "Which",
+            "detail": "Which job: control a call, configure, report, or pop a CRM?",
+            "frame": "job"
+          },
+          {
+            "lane": "Name",
+            "title": "Family",
+            "detail": "The matching product name is written.",
+            "frame": "name"
+          },
+          {
+            "lane": "Name",
+            "title": "REST",
+            "detail": "REST is acknowledged as a word on the page.",
+            "frame": "rest"
+          },
+          {
+            "lane": "Note",
+            "title": "Gap",
+            "detail": "SOAP versus REST stays blank until the family guide is open.",
+            "frame": "gap"
+          },
+          {
+            "lane": "Note",
+            "title": "SDK",
+            "detail": "A homegrown CRM is the CRM SDK, not a random family.",
+            "frame": "sdk"
+          },
+          {
+            "lane": "Admin",
+            "title": "TLS",
+            "detail": "The call still rides TLS. Cleartext APIs are not the design.",
+            "frame": "tls"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Web2Campaign is",
+          "choices": [
+            "A dialer mode",
+            "A named API on the product page",
+            "A headset",
+            "A list mode"
+          ],
+          "answer": 1,
+          "why": "It is one of the published names."
+        },
+        {
+          "q": "Statistics and Reporting are",
+          "choices": [
+            "The same sentence",
+            "Two different web-service names",
+            "Both WEM",
+            "Both codecs"
+          ],
+          "answer": 1,
+          "why": "The page lists both."
+        },
+        {
+          "q": "A homegrown CRM starts with",
+          "choices": [
+            "CTI only, always",
+            "The CRM SDK",
+            "FTP",
+            "The Menu module"
+          ],
+          "answer": 1,
+          "why": "The product pages point bring-your-own CRM at the SDK."
+        },
+        {
+          "q": "This lab's rule on SOAP versus REST per family is",
+          "choices": [
+            "REST for all, stated as fact",
+            "Unconfirmed until that family's guide is read",
+            "SOAP for all",
+            "Neither exists"
+          ],
+          "answer": 1,
+          "why": "The overview says REST and also uses Web Services names."
+        },
+        {
+          "q": "Unencrypted API calls are",
+          "choices": [
+            "Fine on a VPN",
+            "Not the design. TLS is required",
+            "Required for Web2Campaign",
+            "A campaign profile"
+          ],
+          "answer": 1,
+          "why": "The requirements reject unencrypted APIs."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Web2Campaign?",
+          "back": "A named API."
+        },
+        {
+          "front": "Reporting versus Statistics?",
+          "back": "Both named, not the same label."
+        },
+        {
+          "front": "Homegrown CRM?",
+          "back": "CRM SDK."
+        },
+        {
+          "front": "SOAP or REST?",
+          "back": "Do not guess per family."
+        }
+      ],
+      "lab": {
+        "title": "Name the family",
+        "goal": "Match three jobs to product names.",
+        "steps": [
+          "Click-to-call style control",
+          "A nightly report extract",
+          "A CRM that is not in the adapter list"
+        ],
+        "success": "You used three different names.",
+        "href": ""
+      },
+      "fault": {
+        "title": "The ticket says 'REST is down' for every integration",
+        "symptom": "Six different families were lumped into one word.",
+        "log": "ALARM rest=down families=all",
+        "choices": [
+          "Split the alarm by product name",
+          "Restart the dialer",
+          "Change ANI",
+          "Delete dispositions"
+        ],
+        "answer": 0,
+        "cause": "You cannot page one team for seven products.",
+        "fix": "Name the family that failed."
+      }
+    },
+    {
+      "id": "l02",
+      "title": "Reporting is a role",
+      "level": "foundation",
+      "minutes": 12,
+      "objectives": [
+        "Separate the Reporting role from administration",
+        "Pick the category that matches the question"
+      ],
+      "paragraphs": [
+        "Standard reports do not appear because you are an administrator. The community reporting article says you need the Reporting role and at least one reporting permission.",
+        "Categories named there include Agent, Call Log, IVR, ACD Queue, Campaign, List, Contact, Do Not Call, Worksheet, Digital Channel, Legacy Digital, and Operational Summary. If a category is missing, check the role before you check the carrier."
+      ],
+      "cites": [
+        {
+          "label": "Generating standard reports",
+          "url": "https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports"
+        },
+        {
+          "label": "Call log reports chapter",
+          "url": "https://documentation.five9.com/bundle/reports-dashboards/page/reports-dashboards/description-standard-and-social-reports/call-log-reports.htm"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "stack",
+        "title": "Report categories",
+        "caption": "You still need the Reporting role to see them.",
+        "rows": [
+          {
+            "label": "Agent"
+          },
+          {
+            "label": "Call Log"
+          },
+          {
+            "label": "IVR"
+          },
+          {
+            "label": "ACD Queue"
+          },
+          {
+            "label": "Campaign"
+          },
+          {
+            "label": "List and Contact"
+          },
+          {
+            "label": "Do Not Call"
+          },
+          {
+            "label": "Digital and operational"
+          }
+        ]
+      },
+      "flow": {
+        "title": "The report list is empty",
+        "lanes": [
+          "User",
+          "Role",
+          "Category"
+        ],
+        "steps": [
+          {
+            "lane": "User",
+            "title": "Login",
+            "detail": "The person is in the right domain.",
+            "frame": "login"
+          },
+          {
+            "lane": "Role",
+            "title": "Reporting",
+            "detail": "The Reporting role is on the user.",
+            "frame": "role"
+          },
+          {
+            "lane": "Role",
+            "title": "Permission",
+            "detail": "At least one reporting permission is on.",
+            "frame": "perm"
+          },
+          {
+            "lane": "Category",
+            "title": "Pick",
+            "detail": "The category matches the question.",
+            "frame": "cat"
+          },
+          {
+            "lane": "Category",
+            "title": "Empty",
+            "detail": "An empty category is not the same as a missing role.",
+            "frame": "empty"
+          },
+          {
+            "lane": "Admin",
+            "title": "Stop",
+            "detail": "The trunk is not the first guess.",
+            "frame": "stop"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Who can open standard reports?",
+          "choices": [
+            "Any agent",
+            "A user with the Reporting role and a reporting permission",
+            "Only the ITSP",
+            "Only Studio"
+          ],
+          "answer": 1,
+          "why": "The reporting article says so."
+        },
+        {
+          "q": "IVR is",
+          "choices": [
+            "Not a report category",
+            "A report category",
+            "A codec",
+            "A TLS version"
+          ],
+          "answer": 1,
+          "why": "IVR is in the category list."
+        },
+        {
+          "q": "Do Not Call reports live under",
+          "choices": [
+            "The headset",
+            "A named report category",
+            "Direct Connect",
+            "GenAI Studio only"
+          ],
+          "answer": 1,
+          "why": "Do Not Call is a category."
+        },
+        {
+          "q": "An administrator with no Reporting role should expect",
+          "choices": [
+            "Every report",
+            "Not to see standard reports",
+            "Only the call log for 120 days",
+            "E911 recordings"
+          ],
+          "answer": 1,
+          "why": "Admin and Reporting are different."
+        },
+        {
+          "q": "Legacy Digital and Digital Channel are",
+          "choices": [
+            "The same category",
+            "Both named, so do not merge them blindly",
+            "Removed",
+            "List modes"
+          ],
+          "answer": 1,
+          "why": "The article lists both."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Role?",
+          "back": "Reporting, plus a permission."
+        },
+        {
+          "front": "IVR category?",
+          "back": "Yes."
+        },
+        {
+          "front": "Admin without the role?",
+          "back": "No standard reports."
+        },
+        {
+          "front": "Digital versus Legacy Digital?",
+          "back": "Both named."
+        }
+      ],
+      "lab": {
+        "title": "Grant the role",
+        "goal": "Write the role and one category for a queue question and a DNC question.",
+        "steps": [
+          "Reporting role",
+          "ACD Queue",
+          "Do Not Call"
+        ],
+        "success": "You did not grant 'admin so they can see reports'.",
+        "href": ""
+      },
+      "fault": {
+        "title": "A new supervisor sees no reports",
+        "symptom": "The account is a supervisor and not a reporting user.",
+        "log": "USER role=supervisor reporting=no",
+        "choices": [
+          "Add the Reporting role and a permission",
+          "Restart the SBC",
+          "Change list penetration",
+          "Enable Efficiency Mode"
+        ],
+        "answer": 0,
+        "cause": "The menu is permissioned.",
+        "fix": "Add the role."
+      }
+    },
+    {
+      "id": "l03",
+      "title": "Layouts, and the matrix that will not export",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Match the layout to the question",
+        "Do not call a matrix a CSV"
+      ],
+      "paragraphs": [
+        "The same reporting guidance describes three layouts: Tabular, Summary, and Matrix. A matrix answers a cross-tab question. It is not the layout you hand to a spreadsheet as a direct CSV.",
+        "Pick the layout from the question. 'Every call' wants tabular. 'Averages by skill' wants summary. 'Skill by disposition' might want a matrix, and then a second export if someone needs rows."
+      ],
+      "cites": [
+        {
+          "label": "Generating standard reports",
+          "url": "https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "compare",
+        "title": "Layout versus file",
+        "caption": "Choose the picture, then the file.",
+        "leftTitle": "Layout",
+        "rightTitle": "Export habit",
+        "left": [
+          "Tabular",
+          "Summary",
+          "Matrix"
+        ],
+        "right": [
+          "Rows for a sheet",
+          "Totals for a review",
+          "Matrix is not a direct CSV"
+        ]
+      },
+      "flow": {
+        "title": "Someone asks for a spreadsheet",
+        "lanes": [
+          "Question",
+          "Layout",
+          "File"
+        ],
+        "steps": [
+          {
+            "lane": "Question",
+            "title": "Grain",
+            "detail": "Do they want calls, totals, or a cross-tab?",
+            "frame": "grain"
+          },
+          {
+            "lane": "Layout",
+            "title": "Tabular",
+            "detail": "Calls become tabular.",
+            "frame": "tab"
+          },
+          {
+            "lane": "Layout",
+            "title": "Summary",
+            "detail": "Totals become summary.",
+            "frame": "sum"
+          },
+          {
+            "lane": "Layout",
+            "title": "Matrix",
+            "detail": "A cross-tab can be a matrix.",
+            "frame": "mx"
+          },
+          {
+            "lane": "File",
+            "title": "CSV",
+            "detail": "The CSV comes from a layout that supports it.",
+            "frame": "csv"
+          },
+          {
+            "lane": "Admin",
+            "title": "Say",
+            "detail": "You tell them the matrix is the picture, not the file.",
+            "frame": "say"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "The three layouts are",
+          "choices": [
+            "Preview, power, predictive",
+            "Tabular, Summary, Matrix",
+            "ITSP, SBC, gateway",
+            "Only charts"
+          ],
+          "answer": 1,
+          "why": "Those three."
+        },
+        {
+          "q": "A matrix is",
+          "choices": [
+            "Always a CSV",
+            "A cross-tab, not a direct CSV export",
+            "A SIP method",
+            "A headset"
+          ],
+          "answer": 1,
+          "why": "Do not promise a direct CSV from the matrix."
+        },
+        {
+          "q": "Every call as a row suggests",
+          "choices": [
+            "Tabular",
+            "Matrix only",
+            "A WAV file",
+            "A profile"
+          ],
+          "answer": 0,
+          "why": "Tabular."
+        },
+        {
+          "q": "Averages by campaign suggest",
+          "choices": [
+            "Summary",
+            "A packet capture",
+            "Vertical dialing",
+            "TLS 1.1"
+          ],
+          "answer": 0,
+          "why": "Summary."
+        },
+        {
+          "q": "If the stakeholder needs rows from a matrix view, you",
+          "choices": [
+            "Email the matrix and call it CSV",
+            "Produce a layout that exports rows",
+            "Delete the report",
+            "Change the ANI"
+          ],
+          "answer": 1,
+          "why": "Separate the picture from the file."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Three layouts?",
+          "back": "Tabular, Summary, Matrix."
+        },
+        {
+          "front": "Matrix to CSV?",
+          "back": "Not directly."
+        },
+        {
+          "front": "Row-level?",
+          "back": "Tabular."
+        },
+        {
+          "front": "Totals?",
+          "back": "Summary."
+        }
+      ],
+      "lab": {
+        "title": "Pick a layout",
+        "goal": "For three questions, name the layout and whether a CSV is honest.",
+        "steps": [
+          "Every abandoned call",
+          "Average handle time by skill",
+          "Skill crossed with disposition"
+        ],
+        "success": "The third answer does not say 'just export the matrix'.",
+        "href": ""
+      },
+      "fault": {
+        "title": "A weekly email attaches a matrix and the sheet is empty of rows",
+        "symptom": "The layout was never the export.",
+        "log": "JOB layout=matrix file=csv rows=0",
+        "choices": [
+          "Run a tabular or summary export for the sheet",
+          "Raise the abandon cap",
+          "Reboot headsets",
+          "Disable the Reporting role"
+        ],
+        "answer": 0,
+        "cause": "The file type and the layout disagreed.",
+        "fix": "Export a layout that has rows."
+      }
+    },
+    {
+      "id": "l04",
+      "title": "The call log is a window, not an archive",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Separate the call log window from audio retention",
+        "Date the article you are quoting"
+      ],
+      "paragraphs": [
+        "The call log report is the place people look for one call. The community article on filters, dated 14 July 2026, describes a window of about 60 days unless retention has been extended.",
+        "Data-retention terms are a different clock: VCC audio is the sooner of 30 days, a successful SFTP or FTP offload, or the contract. A report row and a recording file do not expire on the same day. Say which one you mean."
+      ],
+      "cites": [
+        {
+          "label": "Call log filters",
+          "url": "https://community.five9.com/s/article/Reporting-Apply-Filter-s-in-the-Call-Log-Report",
+          "note": "Community article dated 14 July 2026."
+        },
+        {
+          "label": "Data retention",
+          "url": "https://www.five9.com/legal/dataretention"
+        },
+        {
+          "label": "Call log reports chapter",
+          "url": "https://documentation.five9.com/bundle/reports-dashboards/page/reports-dashboards/description-standard-and-social-reports/call-log-reports.htm"
+        }
+      ],
+      "uncertain": [
+        "The 60-day call log window is from a community article dated 14 July 2026. Confirm the current window before you promise it."
+      ],
+      "figure": {
+        "kind": "compare",
+        "title": "Two clocks",
+        "caption": "Do not use one number for both.",
+        "leftTitle": "Call log report",
+        "rightTitle": "Recording file",
+        "left": [
+          "About 60 days in that article",
+          "Unless retention is extended",
+          "Filters live here"
+        ],
+        "right": [
+          "Sooner of 30 days or successful offload",
+          "Or the contract",
+          "Not the same as the report row"
+        ]
+      },
+      "flow": {
+        "title": "A call from last quarter is missing",
+        "lanes": [
+          "Ask",
+          "Report",
+          "File"
+        ],
+        "steps": [
+          {
+            "lane": "Ask",
+            "title": "Which",
+            "detail": "Do they want the report row or the audio?",
+            "frame": "which"
+          },
+          {
+            "lane": "Report",
+            "title": "Age",
+            "detail": "The call log window is checked.",
+            "frame": "60"
+          },
+          {
+            "lane": "Report",
+            "title": "Extend",
+            "detail": "An extension is a configuration, not a hope.",
+            "frame": "ext"
+          },
+          {
+            "lane": "File",
+            "title": "Offload",
+            "detail": "Audio follows the retention terms.",
+            "frame": "off"
+          },
+          {
+            "lane": "File",
+            "title": "30",
+            "detail": "Thirty days is not sixty days.",
+            "frame": "30"
+          },
+          {
+            "lane": "Admin",
+            "title": "Say",
+            "detail": "The answer names the clock.",
+            "frame": "say"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "The July 2026 community article puts the call log around",
+          "choices": [
+            "7 days",
+            "60 days unless extended",
+            "10 years",
+            "24 hours"
+          ],
+          "answer": 1,
+          "why": "About 60 days unless retention is extended."
+        },
+        {
+          "q": "VCC audio retention is",
+          "choices": [
+            "Always 60 days",
+            "The sooner of 30 days, a successful offload, or the contract",
+            "Forever",
+            "120 days for every file"
+          ],
+          "answer": 1,
+          "why": "That is the retention page."
+        },
+        {
+          "q": "A missing recording at day 45 with a successful offload means",
+          "choices": [
+            "The report is also gone",
+            "Look at the offload, not only the live player",
+            "The carrier deleted SIP",
+            "TCPA hid it"
+          ],
+          "answer": 1,
+          "why": "Offload is one of the retention triggers."
+        },
+        {
+          "q": "You should quote 60 days as the audio law. True or false?",
+          "choices": [
+            "True",
+            "False. That number was about the call log window",
+            "True in the UK only",
+            "True for E911 only"
+          ],
+          "answer": 1,
+          "why": "Different clocks."
+        },
+        {
+          "q": "The article date matters because",
+          "choices": [
+            "Dates do not matter",
+            "Windows can change. Cite the article you read",
+            "It sets the codec",
+            "It sets the ANI"
+          ],
+          "answer": 1,
+          "why": "Re-read before you promise a window."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Call log window?",
+          "back": "About 60 days unless extended, per that article."
+        },
+        {
+          "front": "Audio?",
+          "back": "30 days, offload, or contract — whichever is sooner."
+        },
+        {
+          "front": "Same clock?",
+          "back": "No."
+        },
+        {
+          "front": "Why date the article?",
+          "back": "The window can change."
+        }
+      ],
+      "lab": {
+        "title": "Answer last quarter",
+        "goal": "Say whether the row and the file should still exist.",
+        "steps": [
+          "Call log window",
+          "Audio rule",
+          "What you would tell the stakeholder"
+        ],
+        "success": "You used two numbers.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Leadership wants a 90-day recording from the live player",
+        "symptom": "Offload succeeded at day 10. The live copy is gone.",
+        "log": "AUDIO offload=ok age=90 player=miss",
+        "choices": [
+          "Pull the offload archive",
+          "Rebuild the SIP trunk",
+          "Change predictive pacing",
+          "Delete the campaign"
+        ],
+        "answer": 0,
+        "cause": "The retention rule already moved the file.",
+        "fix": "Use the archive."
+      }
+    },
+    {
+      "id": "l05",
+      "title": "Call variables are not history",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Enable reporting before you need the column",
+        "Check custom dispositions one by one"
+      ],
+      "paragraphs": [
+        "Call variables can be reported when two things are true: the user has permission to edit them, and the variable is enabled for reporting. The community article is explicit that they are not historical. Turn the flag on today and yesterday's calls stay empty.",
+        "Apply to All Dispositions does not cover custom dispositions. If the variable should stick on a custom outcome, that disposition is a separate checkbox, not a wish."
+      ],
+      "cites": [
+        {
+          "label": "Call variables for reporting",
+          "url": "https://community.five9.com/s/article/Administrator-Enabling-Call-Variables-for-Reporting?language=en_US"
+        },
+        {
+          "label": "Generating standard reports",
+          "url": "https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "path",
+        "title": "A variable that shows up tomorrow",
+        "caption": "Yesterday is already gone.",
+        "rows": [
+          {
+            "label": "Permission: User Can Edit Call Variables"
+          },
+          {
+            "label": "Reporting enabled on the variable"
+          },
+          {
+            "label": "Custom dispositions checked one by one"
+          },
+          {
+            "label": "Only new calls"
+          }
+        ]
+      },
+      "flow": {
+        "title": "The column is blank",
+        "lanes": [
+          "Perm",
+          "Flag",
+          "Time"
+        ],
+        "steps": [
+          {
+            "lane": "Perm",
+            "title": "Edit",
+            "detail": "The editor permission is on.",
+            "frame": "perm"
+          },
+          {
+            "lane": "Flag",
+            "title": "Report",
+            "detail": "The variable is enabled for reporting.",
+            "frame": "flag"
+          },
+          {
+            "lane": "Time",
+            "title": "When",
+            "detail": "The flag's start date is written down.",
+            "frame": "when"
+          },
+          {
+            "lane": "Time",
+            "title": "Old",
+            "detail": "Older calls are not backfilled.",
+            "frame": "old"
+          },
+          {
+            "lane": "Disp",
+            "title": "Custom",
+            "detail": "Custom dispositions are checked individually.",
+            "frame": "custom"
+          },
+          {
+            "lane": "Admin",
+            "title": "Tell",
+            "detail": "The stakeholder hears 'from now on'.",
+            "frame": "tell"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Enabling a call variable today fills history. True or false?",
+          "choices": [
+            "True",
+            "False. They are not historical",
+            "True for inbound only",
+            "True after a reset"
+          ],
+          "answer": 1,
+          "why": "The article says they are not historical."
+        },
+        {
+          "q": "The edit permission is named",
+          "choices": [
+            "User Can Edit Call Variables",
+            "User Can Skip TCPA",
+            "Reporting role only",
+            "WEM admin"
+          ],
+          "answer": 0,
+          "why": "That is the permission in the article."
+        },
+        {
+          "q": "Apply to All Dispositions covers custom dispositions. True or false?",
+          "choices": [
+            "True",
+            "False",
+            "Only in the UK",
+            "Only for matrix reports"
+          ],
+          "answer": 1,
+          "why": "Custom dispositions are not included."
+        },
+        {
+          "q": "A blank column on last month's calls after today's change means",
+          "choices": [
+            "The trunk failed",
+            "The flag does not backfill",
+            "ANI was wrong",
+            "The list was vertical"
+          ],
+          "answer": 1,
+          "why": "No backfill."
+        },
+        {
+          "q": "You enable reporting on the variable in addition to",
+          "choices": [
+            "The dialer mode",
+            "The edit permission",
+            "G.711",
+            "A headset"
+          ],
+          "answer": 1,
+          "why": "Both are required."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Backfill?",
+          "back": "No."
+        },
+        {
+          "front": "Permission name?",
+          "back": "User Can Edit Call Variables."
+        },
+        {
+          "front": "All dispositions includes custom?",
+          "back": "No."
+        },
+        {
+          "front": "Both switches?",
+          "back": "Permission and the reporting flag."
+        }
+      ],
+      "lab": {
+        "title": "Turn on a variable",
+        "goal": "Write the permission, the flag, and the first call that can show it.",
+        "steps": [
+          "Permission",
+          "Flag",
+          "Start time"
+        ],
+        "success": "You promised no backfill.",
+        "href": ""
+      },
+      "fault": {
+        "title": "A custom disposition never stores the variable",
+        "symptom": "Apply to All was checked and the custom code was not.",
+        "log": "DISP custom=Sale variable=empty all=yes",
+        "choices": [
+          "Edit that custom disposition",
+          "Rebuild reports from last year",
+          "Change the codec",
+          "Disable TLS"
+        ],
+        "answer": 0,
+        "cause": "The bulk switch skipped it.",
+        "fix": "Set the custom disposition."
+      }
+    },
+    {
+      "id": "l06",
+      "title": "Prebuilt UC and the connector that is not an adapter",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Name prebuilt UC separately from the desktop app",
+        "Budget about 320 kbps when the UC client runs locally"
+      ],
+      "paragraphs": [
+        "The product material names prebuilt connections for Zoom Phone and Microsoft Teams. A prebuilt path is a product. A Web Connector that opens a URL is also a product. They are not the bandwidth line you add for a Teams client on the agent's PC.",
+        "The technical requirements treat a Teams, Zoom, Office@Hand, RingCentral, or Nextiva client on the workstation as about 320 kbps of extra traffic. Integrating the UC platform and running its app are two designs."
+      ],
+      "cites": [
+        {
+          "label": "APIs and SDKs",
+          "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks"
+        },
+        {
+          "label": "Technical requirements PDF",
+          "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+          "note": "Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall."
+        },
+        {
+          "label": "Agent Desktop",
+          "url": "https://www.five9.com/products/capabilities/agent-desktop"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "compare",
+        "title": "Two Teams stories",
+        "caption": "Say which one the project is.",
+        "leftTitle": "A prebuilt integration",
+        "rightTitle": "The app on the PC",
+        "left": [
+          "A named product path",
+          "Not a headset",
+          "Configured as that product"
+        ],
+        "right": [
+          "About 320 kbps",
+          "Shares the agent link",
+          "Can exist with no integration"
+        ]
+      },
+      "flow": {
+        "title": "Teams is in the design",
+        "lanes": [
+          "Word",
+          "Path",
+          "Seat"
+        ],
+        "steps": [
+          {
+            "lane": "Word",
+            "title": "Which",
+            "detail": "Prebuilt integration or local client?",
+            "frame": "which"
+          },
+          {
+            "lane": "Path",
+            "title": "Product",
+            "detail": "The prebuilt name is written if that is the project.",
+            "frame": "pre"
+          },
+          {
+            "lane": "Seat",
+            "title": "Kbps",
+            "detail": "320 kbps is added if the client runs on the PC.",
+            "frame": "bw"
+          },
+          {
+            "lane": "Seat",
+            "title": "Adapter",
+            "detail": "The CRM adapter is still its own line.",
+            "frame": "ad"
+          },
+          {
+            "lane": "Admin",
+            "title": "Connector",
+            "detail": "A URL pop is called a connector.",
+            "frame": "url"
+          },
+          {
+            "lane": "Admin",
+            "title": "Avoid",
+            "detail": "One slide does not say all three are the same.",
+            "frame": "avoid"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Zoom Phone and Teams appear as",
+          "choices": [
+            "Codecs",
+            "Prebuilt connections in the product material",
+            "List modes",
+            "E911 vendors"
+          ],
+          "answer": 1,
+          "why": "They are named prebuilt paths."
+        },
+        {
+          "q": "A Teams client on the agent PC is budgeted around",
+          "choices": [
+            "12 kbps",
+            "320 kbps",
+            "Zero, because of the integration",
+            "88 kbps"
+          ],
+          "answer": 1,
+          "why": "The requirements call out about 320 kbps."
+        },
+        {
+          "q": "A URL pop is",
+          "choices": [
+            "Always the Teams integration",
+            "A Web Connector until you say otherwise",
+            "A skill",
+            "A report layout"
+          ],
+          "answer": 1,
+          "why": "Connectors open URLs."
+        },
+        {
+          "q": "Buying the prebuilt path removes the bandwidth if the app still runs. True or false?",
+          "choices": [
+            "True",
+            "False",
+            "True on Mac",
+            "True for Java"
+          ],
+          "answer": 1,
+          "why": "The app still uses the link."
+        },
+        {
+          "q": "Office@Hand, RingCentral, and Nextiva are grouped with",
+          "choices": [
+            "Dispositions",
+            "The UC bandwidth note",
+            "IVR modules",
+            "Equinix only"
+          ],
+          "answer": 1,
+          "why": "They sit in that workstation note."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Prebuilt names?",
+          "back": "Zoom Phone and Teams, among the product lines."
+        },
+        {
+          "front": "Local Teams client?",
+          "back": "About 320 kbps."
+        },
+        {
+          "front": "URL pop?",
+          "back": "Web Connector."
+        },
+        {
+          "front": "Does prebuilt erase bandwidth?",
+          "back": "No."
+        }
+      ],
+      "lab": {
+        "title": "Split the Teams slide",
+        "goal": "Write the integration and the workstation as two lines.",
+        "steps": [
+          "Prebuilt or not",
+          "Bandwidth if the app is local",
+          "Connector if it is only a URL"
+        ],
+        "success": "A reader sees two projects.",
+        "href": ""
+      },
+      "fault": {
+        "title": "The link saturates after Teams is installed 'for free'",
+        "symptom": "The 320 kbps line was never added.",
+        "log": "BW teams=on budget=voice-only",
+        "choices": [
+          "Add the UC bandwidth or remove the client",
+          "Lower TLS",
+          "Change the matrix layout",
+          "Reset dispositions"
+        ],
+        "answer": 0,
+        "cause": "The client is traffic.",
+        "fix": "Budget it or remove it."
+      }
+    },
+    {
+      "id": "l07",
+      "title": "What an extract is allowed to remember",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Export before the clocks run out",
+        "Keep DID retention separate from domain retention"
+      ],
+      "paragraphs": [
+        "Reporting Web Services can move numbers out of the domain. Retention still applies to what Five9 keeps, not to the warehouse you built. Once a row is in your bucket, your policy owns it.",
+        "Disabled domains, campaign state, agent data, and numbers have their own retention lines: agent data 60 days, campaign state 120 days, a disabled domain 120 days after closure, DIDs and toll-free numbers 90 days after closure. Do not design a 'temporary' domain and expect the DIDs to wait forever."
+      ],
+      "cites": [
+        {
+          "label": "Data retention",
+          "url": "https://www.five9.com/legal/dataretention"
+        },
+        {
+          "label": "APIs and SDKs",
+          "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks"
+        },
+        {
+          "label": "Generating standard reports",
+          "url": "https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "stack",
+        "title": "Retention lines that surprise a migration",
+        "caption": "From the public retention terms.",
+        "rows": [
+          {
+            "label": "Agent data 60 days"
+          },
+          {
+            "label": "Campaign state 120 days"
+          },
+          {
+            "label": "Disabled domain 120 days after closure"
+          },
+          {
+            "label": "DIDs and TFNs 90 days after closure"
+          }
+        ]
+      },
+      "flow": {
+        "title": "A domain is closing",
+        "lanes": [
+          "Export",
+          "Clock",
+          "Numbers"
+        ],
+        "steps": [
+          {
+            "lane": "Export",
+            "title": "Now",
+            "detail": "The reports you need are pulled while the role still works.",
+            "frame": "now"
+          },
+          {
+            "lane": "Clock",
+            "title": "State",
+            "detail": "Campaign state is not a forever archive.",
+            "frame": "state"
+          },
+          {
+            "lane": "Clock",
+            "title": "Agent",
+            "detail": "Agent data follows its own line.",
+            "frame": "agent"
+          },
+          {
+            "lane": "Numbers",
+            "title": "90",
+            "detail": "DIDs and TFNs are planned inside 90 days of closure.",
+            "frame": "did"
+          },
+          {
+            "lane": "Numbers",
+            "title": "Domain",
+            "detail": "120 days after closure is the domain line, not the DID line.",
+            "frame": "dom"
+          },
+          {
+            "lane": "Admin",
+            "title": "Own",
+            "detail": "The warehouse copy is yours after export.",
+            "frame": "own"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Agent data retention on the public page is",
+          "choices": [
+            "60 days",
+            "Forever",
+            "7 days",
+            "The call log window"
+          ],
+          "answer": 0,
+          "why": "60 days."
+        },
+        {
+          "q": "Campaign state is",
+          "choices": [
+            "30 days",
+            "120 days",
+            "90 days",
+            "10 years"
+          ],
+          "answer": 1,
+          "why": "120 days."
+        },
+        {
+          "q": "DIDs and toll-free numbers after closure are",
+          "choices": [
+            "90 days",
+            "120 days",
+            "Kept while you remember them",
+            "30 days of audio"
+          ],
+          "answer": 0,
+          "why": "90 days."
+        },
+        {
+          "q": "A disabled domain's line is",
+          "choices": [
+            "90 days",
+            "120 days after closure",
+            "The same as a DID",
+            "24 hours"
+          ],
+          "answer": 1,
+          "why": "120 days after closure."
+        },
+        {
+          "q": "A row you already exported is governed by",
+          "choices": [
+            "Only Five9's page",
+            "Your own policy as well",
+            "The dialer mode",
+            "RFC 4733"
+          ],
+          "answer": 1,
+          "why": "Your copy is yours."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Agent data?",
+          "back": "60 days."
+        },
+        {
+          "front": "Campaign state?",
+          "back": "120 days."
+        },
+        {
+          "front": "DIDs after closure?",
+          "back": "90 days."
+        },
+        {
+          "front": "Disabled domain?",
+          "back": "120 days after closure."
+        }
+      ],
+      "lab": {
+        "title": "Close a domain on paper",
+        "goal": "List what you will export and which clock kills the rest.",
+        "steps": [
+          "Reports",
+          "DIDs",
+          "Your warehouse policy"
+        ],
+        "success": "You did not assume the DID waits 120 days.",
+        "href": ""
+      },
+      "fault": {
+        "title": "A number is reclaimed and the old domain cannot be reopened to read it",
+        "symptom": "Closure plus 90 days already passed.",
+        "log": "DID age=100d domain=closed",
+        "choices": [
+          "Treat the number as gone and use the export",
+          "Open a codec ticket",
+          "Change pacing",
+          "Add a skill"
+        ],
+        "answer": 0,
+        "cause": "The retention page described this.",
+        "fix": "Use the export you took while the domain was alive."
+      }
+    }
+  ]
+}

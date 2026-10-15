@@ -1,0 +1,45 @@
+{
+  "intro": "These are the training names this lab could verify on a public page. Empty exam codes are intentional.",
+  "items": [
+    {
+      "name": "Five9 University",
+      "status": "Verified",
+      "detail": "Public training front door for contact-center classes.",
+      "url": "https://www.five9.com/contact-center-services/training",
+      "source": "Five9 University"
+    },
+    {
+      "name": "Online, webinar, instructor-led, train-the-trainer, custom",
+      "status": "Verified",
+      "detail": "Formats named in the curriculum brief dated April 2023. The live catalog wins.",
+      "url": "https://www.five9.com/sites/default/files/2023-04/Five9_University_Curriculum_Brief_v5.pdf",
+      "source": "University curriculum brief, April 2023"
+    },
+    {
+      "name": "Administrator training and assessments",
+      "status": "Verified",
+      "detail": "Administrator classes and assessments are described publicly. No exam code is printed there for this lab to repeat.",
+      "url": "https://community.five9.com/s/article/Five9-University-Five9-Administrator-Training-Classes?language=en_US",
+      "source": "Administrator training classes"
+    },
+    {
+      "name": "Five9 IVA Sales Certified",
+      "status": "Verified",
+      "detail": "Credly badge: 5 modules, 20-question final, 80 percent. Partner sales certification, not a VCC engineering exam.",
+      "url": "https://www.credly.com/org/five9/badge/five9-iva-sales-certified",
+      "source": "IVA Sales Certified badge"
+    },
+    {
+      "name": "Five9-CA-xxx or any numbered admin exam",
+      "status": "Not found",
+      "detail": "This lab will not print a code it cannot cite. Treat third-party codes as unverified.",
+      "url": "https://www.five9.com/contact-center-services/training",
+      "source": "Five9 University"
+    }
+  ],
+  "uncertain": [
+    "The curriculum brief is from April 2023. Course names move.",
+    "Badge attempt rules should be re-read on Credly before you depend on them.",
+    "No public administrator exam code was found. Absence here is not proof a private assessment never exists."
+  ]
+}

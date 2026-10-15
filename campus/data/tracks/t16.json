@@ -1,0 +1,1344 @@
+{
+  "id": "t16",
+  "title": "Safety and compliance",
+  "short": "Safety",
+  "blurb": "E911, recording, retention clocks, attestation, abandon windows, and TCPA typing.",
+  "group": "Platform",
+  "level": "Advanced",
+  "summary": "Quote the document. Quote the clock. Do not invent a percent or a coverage map.",
+  "lessons": [
+    {
+      "id": "l01",
+      "title": "911 is a location, not a prefix",
+      "level": "foundation",
+      "minutes": 12,
+      "objectives": [
+        "Dial 911 with no prefix",
+        "Cite the data sheet and the EULA separately"
+      ],
+      "paragraphs": [
+        "The E911 data sheet says agents dial 911 directly, with no prefix, and that the service sends a dispatchable location. It names the United States and its territories, Kari's Law, and RAY BAUM'S Act. The partner named on that sheet is RedSky.",
+        "The end-user license also discusses emergency calling and names the United States or Canada. It says the call can fail if the address is wrong or unregistered, if power or internet is lost, if the service is suspended, during an outage, or with bad gear. The data sheet and the EULA do not draw the same map. Say which document you are quoting."
+      ],
+      "cites": [
+        {
+          "label": "E911 data sheet",
+          "url": "https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF"
+        },
+        {
+          "label": "End user license agreement",
+          "url": "https://www.five9.com/legal/end-user-license-agreement"
+        }
+      ],
+      "uncertain": [
+        "The 2022 data sheet says US and territories. The EULA text this lab read also says US or Canada. Re-read both before you publish a coverage map."
+      ],
+      "figure": {
+        "kind": "compare",
+        "title": "Two public texts",
+        "caption": "Do not average them.",
+        "leftTitle": "Data sheet",
+        "rightTitle": "EULA",
+        "left": [
+          "Direct 911, no prefix",
+          "Dispatchable location",
+          "US and territories",
+          "RedSky"
+        ],
+        "right": [
+          "Also says US or Canada",
+          "Wrong address fails",
+          "Power, internet, suspension, outage, gear"
+        ]
+      },
+      "flow": {
+        "title": "An agent asks how to dial",
+        "lanes": [
+          "Dial",
+          "Place",
+          "Doc"
+        ],
+        "steps": [
+          {
+            "lane": "Dial",
+            "title": "Digits",
+            "detail": "They dial 911, not a prefix plus 911.",
+            "frame": "911"
+          },
+          {
+            "lane": "Place",
+            "title": "Location",
+            "detail": "The registered location is where they are.",
+            "frame": "loc"
+          },
+          {
+            "lane": "Doc",
+            "title": "Sheet",
+            "detail": "The data sheet is cited for the partner and the Act names.",
+            "frame": "sheet"
+          },
+          {
+            "lane": "Doc",
+            "title": "EULA",
+            "detail": "The EULA is cited for failure cases and the Canada line.",
+            "frame": "eula"
+          },
+          {
+            "lane": "Admin",
+            "title": "Gap",
+            "detail": "The geography gap is written down, not smoothed over.",
+            "frame": "gap"
+          },
+          {
+            "lane": "Admin",
+            "title": "Test",
+            "detail": "A test is not a real emergency, and the history page is the audit.",
+            "frame": "test"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "The data sheet says agents dial 911",
+          "choices": [
+            "With a campaign prefix",
+            "Directly, with no prefix",
+            "Only through a skill",
+            "Only from HQ"
+          ],
+          "answer": 1,
+          "why": "No prefix."
+        },
+        {
+          "q": "The partner named on the data sheet is",
+          "choices": [
+            "A generic ITSP",
+            "RedSky",
+            "Equinix",
+            "Verint"
+          ],
+          "answer": 1,
+          "why": "RedSky."
+        },
+        {
+          "q": "A wrong or unregistered address, per the EULA,",
+          "choices": [
+            "Still routes",
+            "Can fail the emergency call",
+            "Only affects recordings",
+            "Changes the ANI profile"
+          ],
+          "answer": 1,
+          "why": "The EULA lists that failure."
+        },
+        {
+          "q": "The data sheet's geography and the EULA's geography are",
+          "choices": [
+            "Identical in this lab's reading",
+            "Not the same. Cite the one you mean",
+            "Both global",
+            "Both only Canada"
+          ],
+          "answer": 1,
+          "why": "US and territories versus US or Canada."
+        },
+        {
+          "q": "Kari's Law and RAY BAUM'S Act are named on",
+          "choices": [
+            "The dialer pacing page",
+            "The E911 data sheet",
+            "The IVR module list",
+            "The call-log article"
+          ],
+          "answer": 1,
+          "why": "The data sheet."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Prefix?",
+          "back": "None. Dial 911."
+        },
+        {
+          "front": "Partner on the sheet?",
+          "back": "RedSky."
+        },
+        {
+          "front": "Wrong address?",
+          "back": "The EULA says the call can fail."
+        },
+        {
+          "front": "Same map on both docs?",
+          "back": "No. Cite which one."
+        }
+      ],
+      "lab": {
+        "title": "Quote the right page",
+        "goal": "Write the dialing rule, the partner, and the geography gap.",
+        "steps": [
+          "No prefix",
+          "RedSky",
+          "Which document says Canada"
+        ],
+        "success": "You did not merge the two maps.",
+        "href": ""
+      },
+      "fault": {
+        "title": "A wallboard says 'dial 9-911'",
+        "symptom": "That prefix fights the data sheet.",
+        "log": "SIGN prefix=9",
+        "choices": [
+          "Change the sign to 911 and confirm the location",
+          "Add the 9 in the IVR",
+          "Raise abandon rate",
+          "Disable TLS"
+        ],
+        "answer": 0,
+        "cause": "Direct 911 is the published behavior.",
+        "fix": "Fix the sign and the address."
+      }
+    },
+    {
+      "id": "l02",
+      "title": "The address has to be the room they are in",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Register where the agent is",
+        "Use MyE911 history as the audit"
+      ],
+      "paragraphs": [
+        "A dispatchable location is the place responders can find a person. A headquarters address while the agent is at home is the failure the EULA describes. Remote and hybrid floors have to register the location the agent is actually using.",
+        "MyE911 call history, for an organization admin, shows time, user, number, location, recording, and the SIP invite. That is the audit after a test or a real call. It is not a substitute for registering the address first."
+      ],
+      "cites": [
+        {
+          "label": "E911 data sheet",
+          "url": "https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF"
+        },
+        {
+          "label": "End user license agreement",
+          "url": "https://www.five9.com/legal/end-user-license-agreement"
+        },
+        {
+          "label": "MyE911 call history",
+          "url": "https://community.five9.com/s/article/MyE911-Call-History?language=en_US"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "path",
+        "title": "Location before the call",
+        "caption": "History only helps after.",
+        "rows": [
+          {
+            "label": "Register the real place"
+          },
+          {
+            "label": "Agent dials 911"
+          },
+          {
+            "label": "History shows user, place, invite"
+          }
+        ]
+      },
+      "flow": {
+        "title": "A home agent",
+        "lanes": [
+          "Where",
+          "Register",
+          "Audit"
+        ],
+        "steps": [
+          {
+            "lane": "Where",
+            "title": "Ask",
+            "detail": "The agent is not in the HQ building.",
+            "frame": "ask"
+          },
+          {
+            "lane": "Register",
+            "title": "Home",
+            "detail": "The home location is registered if that is the workplace.",
+            "frame": "reg"
+          },
+          {
+            "lane": "Register",
+            "title": "Move",
+            "detail": "A move means a new registration.",
+            "frame": "move"
+          },
+          {
+            "lane": "Audit",
+            "title": "History",
+            "detail": "After a test, history shows the location that was sent.",
+            "frame": "hist"
+          },
+          {
+            "lane": "Audit",
+            "title": "Invite",
+            "detail": "The SIP invite is part of that history.",
+            "frame": "sip"
+          },
+          {
+            "lane": "Admin",
+            "title": "Stop",
+            "detail": "A stale HQ row stops a remote rollout.",
+            "frame": "stop"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Dispatchable location means",
+          "choices": [
+            "The data center",
+            "A place responders can find the caller",
+            "The ANI",
+            "The skill name"
+          ],
+          "answer": 1,
+          "why": "The data sheet's point."
+        },
+        {
+          "q": "An org admin's MyE911 history includes",
+          "choices": [
+            "Only the theme",
+            "Time, user, number, location, recording, and SIP invite",
+            "The dialer algorithm",
+            "WEM schedules"
+          ],
+          "answer": 1,
+          "why": "That is the community article."
+        },
+        {
+          "q": "History replaces registration. True or false?",
+          "choices": [
+            "True",
+            "False",
+            "True for Canada only",
+            "True if the prefix is 9"
+          ],
+          "answer": 1,
+          "why": "Register first."
+        },
+        {
+          "q": "A move to a new apartment requires",
+          "choices": [
+            "Nothing until the next contract",
+            "A new registered location",
+            "A new codec",
+            "A matrix report"
+          ],
+          "answer": 1,
+          "why": "The old address would be wrong."
+        },
+        {
+          "q": "Power loss or internet loss, per the EULA,",
+          "choices": [
+            "Improves location",
+            "Can prevent the emergency call",
+            "Only hides reports",
+            "Is unsupported advice"
+          ],
+          "answer": 1,
+          "why": "The EULA lists both."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Dispatchable?",
+          "back": "Where responders can find the person."
+        },
+        {
+          "front": "History fields?",
+          "back": "Time, user, number, location, recording, SIP invite."
+        },
+        {
+          "front": "History instead of registration?",
+          "back": "No."
+        },
+        {
+          "front": "A move?",
+          "back": "Register again."
+        }
+      ],
+      "lab": {
+        "title": "Write a home-agent rule",
+        "goal": "Say what gets registered and what you will look up after a test.",
+        "steps": [
+          "The place",
+          "The history fields",
+          "What you will not use as a location"
+        ],
+        "success": "HQ is not the default for a home agent.",
+        "href": ""
+      },
+      "fault": {
+        "title": "History shows the downtown office for an agent who was at home",
+        "symptom": "The registered address was never updated.",
+        "log": "E911 user=sam loc=HQ",
+        "choices": [
+          "Register the home location and retest",
+          "Change predictive pacing",
+          "Add a Menu module",
+          "Shorten the call log"
+        ],
+        "answer": 0,
+        "cause": "The invite carried the stale place.",
+        "fix": "Fix the registration."
+      }
+    },
+    {
+      "id": "l03",
+      "title": "Recording is the customer's duty too",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Play the notice counsel wrote",
+        "Assume hold and transfer can be recorded"
+      ],
+      "paragraphs": [
+        "The EULA treats recordings as customer data. It says calls can be recorded while the caller is on hold and after a transfer. It puts notice and consent on the customer, who has to follow the laws that apply to their calls.",
+        "This lab will not invent a script that 'covers every state.' Play the notice your counsel wrote. Put it in the IVR before the surprise, and do not assume hold music erases the recorder."
+      ],
+      "cites": [
+        {
+          "label": "End user license agreement",
+          "url": "https://www.five9.com/legal/end-user-license-agreement"
+        },
+        {
+          "label": "Data retention",
+          "url": "https://www.five9.com/legal/dataretention"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "stack",
+        "title": "What the EULA puts on you",
+        "caption": "The platform records. You own the duty.",
+        "rows": [
+          {
+            "label": "Recordings are customer data"
+          },
+          {
+            "label": "Hold can be recorded"
+          },
+          {
+            "label": "After transfer can be recorded"
+          },
+          {
+            "label": "Notice and consent are yours"
+          }
+        ]
+      },
+      "flow": {
+        "title": "A new IVR",
+        "lanes": [
+          "Counsel",
+          "Script",
+          "Hold"
+        ],
+        "steps": [
+          {
+            "lane": "Counsel",
+            "title": "Words",
+            "detail": "The notice is the one counsel approved.",
+            "frame": "words"
+          },
+          {
+            "lane": "Script",
+            "title": "Play",
+            "detail": "Play runs before the recording would surprise someone.",
+            "frame": "play"
+          },
+          {
+            "lane": "Hold",
+            "title": "Still",
+            "detail": "Hold is not assumed to be a gap.",
+            "frame": "hold"
+          },
+          {
+            "lane": "Transfer",
+            "title": "Still",
+            "detail": "A transfer does not assumed to stop the recorder.",
+            "frame": "xfer"
+          },
+          {
+            "lane": "Admin",
+            "title": "Laws",
+            "detail": "The campaign's jurisdictions are listed.",
+            "frame": "laws"
+          },
+          {
+            "lane": "Admin",
+            "title": "No",
+            "detail": "A generic sentence is not substituted for counsel.",
+            "frame": "no"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Who must meet notice and consent laws?",
+          "choices": [
+            "The ITSP alone",
+            "The customer, per the EULA",
+            "The headset vendor",
+            "Nobody"
+          ],
+          "answer": 1,
+          "why": "The EULA places that duty on the customer."
+        },
+        {
+          "q": "Recording on hold is",
+          "choices": [
+            "Impossible",
+            "Described by the EULA as something that happens",
+            "Only in Studio",
+            "Only for E911"
+          ],
+          "answer": 1,
+          "why": "Hold is not a silent gap."
+        },
+        {
+          "q": "A transfer",
+          "choices": [
+            "Deletes the recording",
+            "Can still be recorded",
+            "Changes TLS",
+            "Ends the domain"
+          ],
+          "answer": 1,
+          "why": "The EULA says so."
+        },
+        {
+          "q": "This lab supplies a notice that covers every region. True or false?",
+          "choices": [
+            "True",
+            "False",
+            "True for the US",
+            "True for preview dialing"
+          ],
+          "answer": 1,
+          "why": "Counsel writes the notice."
+        },
+        {
+          "q": "Recordings in the EULA are",
+          "choices": [
+            "Five9's marketing assets",
+            "Customer data",
+            "A skill group",
+            "A report layout"
+          ],
+          "answer": 1,
+          "why": "Customer data."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Who owns notice?",
+          "back": "The customer."
+        },
+        {
+          "front": "Hold recorded?",
+          "back": "The EULA says it can be."
+        },
+        {
+          "front": "Transfer?",
+          "back": "Can still be recorded."
+        },
+        {
+          "front": "Universal script?",
+          "back": "No."
+        }
+      ],
+      "lab": {
+        "title": "Place the notice",
+        "goal": "Say where Play sits relative to the rest of a fictional inbound script.",
+        "steps": [
+          "Counsel's words",
+          "Before the surprise",
+          "Hold is still in scope"
+        ],
+        "success": "You did not write legal advice of your own.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Agents tell callers 'hold is private'",
+        "symptom": "The EULA disagrees.",
+        "log": "SCRIPT notice=none hold=promised-private",
+        "choices": [
+          "Play the approved notice and correct the agents",
+          "Disable all recording and ignore counsel",
+          "Change the codec",
+          "Delete DNC"
+        ],
+        "answer": 0,
+        "cause": "The promise is false.",
+        "fix": "Fix the script and the coaching."
+      }
+    },
+    {
+      "id": "l04",
+      "title": "Retention is several clocks",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Quote the clock for the object",
+        "Offload audio you must keep"
+      ],
+      "paragraphs": [
+        "The public retention page splits the clocks. VCC audio is the sooner of 30 days, a successful SFTP or FTP offload, or the contract. E911 recordings are 30 days. Agent data is 60 days. Campaign state is 120 days. A disabled domain is 120 days after closure. DIDs and toll-free numbers are 90 days after closure.",
+        "Quote the line that matches the object. 'We keep everything 30 days' is already wrong."
+      ],
+      "cites": [
+        {
+          "label": "Data retention",
+          "url": "https://www.five9.com/legal/dataretention"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "stack",
+        "title": "Clocks on the retention page",
+        "caption": "Pick the row before you promise a date.",
+        "rows": [
+          {
+            "label": "VCC audio: 30 days, offload, or contract"
+          },
+          {
+            "label": "E911 recordings: 30 days"
+          },
+          {
+            "label": "Agent data: 60 days"
+          },
+          {
+            "label": "Campaign state: 120 days"
+          },
+          {
+            "label": "Disabled domain: 120 days after closure"
+          },
+          {
+            "label": "DIDs and TFNs: 90 days after closure"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Legal asks for a hold",
+        "lanes": [
+          "Object",
+          "Clock",
+          "Copy"
+        ],
+        "steps": [
+          {
+            "lane": "Object",
+            "title": "Name",
+            "detail": "Audio, E911 recording, agent data, or a number?",
+            "frame": "name"
+          },
+          {
+            "lane": "Clock",
+            "title": "Row",
+            "detail": "The matching row is read.",
+            "frame": "row"
+          },
+          {
+            "lane": "Copy",
+            "title": "Offload",
+            "detail": "If audio must outlive the platform, offload is the design.",
+            "frame": "off"
+          },
+          {
+            "lane": "Copy",
+            "title": "Own",
+            "detail": "The offloaded copy follows your policy.",
+            "frame": "own"
+          },
+          {
+            "lane": "Admin",
+            "title": "DID",
+            "detail": "Numbers are not given the domain's 120 days.",
+            "frame": "did"
+          },
+          {
+            "lane": "Admin",
+            "title": "E911",
+            "detail": "E911 recordings are not given the campaign-state clock.",
+            "frame": "e911"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "E911 recordings on the retention page are kept",
+          "choices": [
+            "120 days",
+            "30 days",
+            "90 days",
+            "Forever"
+          ],
+          "answer": 1,
+          "why": "30 days."
+        },
+        {
+          "q": "Agent data is",
+          "choices": [
+            "30 days",
+            "60 days",
+            "The same as DIDs",
+            "10 years"
+          ],
+          "answer": 1,
+          "why": "60 days."
+        },
+        {
+          "q": "DIDs after closure are",
+          "choices": [
+            "90 days",
+            "120 days",
+            "30 days",
+            "Until you notice"
+          ],
+          "answer": 0,
+          "why": "90 days."
+        },
+        {
+          "q": "Successful offload can end the platform's audio copy",
+          "choices": [
+            "Never",
+            "Yes. Sooner of 30 days, offload, or contract",
+            "Only for E911",
+            "Only for lists"
+          ],
+          "answer": 1,
+          "why": "That is the audio line."
+        },
+        {
+          "q": "Campaign state is",
+          "choices": [
+            "120 days",
+            "30 days",
+            "The call log window",
+            "A SIP timer"
+          ],
+          "answer": 0,
+          "why": "120 days."
+        }
+      ],
+      "cards": [
+        {
+          "front": "E911 recordings?",
+          "back": "30 days."
+        },
+        {
+          "front": "Agent data?",
+          "back": "60 days."
+        },
+        {
+          "front": "DIDs?",
+          "back": "90 days after closure."
+        },
+        {
+          "front": "Audio?",
+          "back": "Sooner of 30 days, offload, or contract."
+        }
+      ],
+      "lab": {
+        "title": "Match four objects",
+        "goal": "Write the clock next to audio, E911 recording, agent data, and a DID.",
+        "steps": [
+          "Four clocks",
+          "Which one offload changes"
+        ],
+        "success": "You did not use one number for all four.",
+        "href": ""
+      },
+      "fault": {
+        "title": "A litigation hold assumed the platform keeps audio for 120 days",
+        "symptom": "That number is campaign state, not audio.",
+        "log": "HOLD assumed=120 object=audio",
+        "choices": [
+          "Offload under your own hold, and correct the assumption",
+          "Extend the DID timer",
+          "Delete the domain today",
+          "Change pacing"
+        ],
+        "answer": 0,
+        "cause": "The wrong row was quoted.",
+        "fix": "Take a copy and cite the audio line."
+      }
+    },
+    {
+      "id": "l05",
+      "title": "Attestation is not an ANI field",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Keep ANI and attestation in separate sentences",
+        "Cite Certified Caller before you say signed"
+      ],
+      "paragraphs": [
+        "Certified Caller is Five9's published STIR/SHAKEN program, tied to FCC and CRTC expectations. A campaign profile that overrides ANI changes what you present. It does not, by itself, mean the call is attested.",
+        "Say 'we set local ANI' or 'we are in Certified Caller.' If you cannot point at the Certified Caller page for the second sentence, do not say it."
+      ],
+      "cites": [
+        {
+          "label": "Certified Caller",
+          "url": "https://www.five9.com/resources/five9_certified_caller"
+        },
+        {
+          "label": "Default campaign settings",
+          "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "compare",
+        "title": "Two caller-ID projects",
+        "caption": "A profile is not an attestation product.",
+        "leftTitle": "Campaign profile",
+        "rightTitle": "Certified Caller",
+        "left": [
+          "Overrides ANI",
+          "One profile on the campaign",
+          "Assigned in Advanced mode"
+        ],
+        "right": [
+          "STIR/SHAKEN program",
+          "FCC and CRTC",
+          "A separate project"
+        ]
+      },
+      "flow": {
+        "title": "The caller ID looks right and the call is still labeled spam",
+        "lanes": [
+          "ANI",
+          "Trust",
+          "Words"
+        ],
+        "steps": [
+          {
+            "lane": "ANI",
+            "title": "Profile",
+            "detail": "The profile is assigned and the number is intended.",
+            "frame": "ani"
+          },
+          {
+            "lane": "Trust",
+            "title": "Page",
+            "detail": "Certified Caller is checked as its own project.",
+            "frame": "page"
+          },
+          {
+            "lane": "Trust",
+            "title": "Gap",
+            "detail": "If it is not in scope, the deck says so.",
+            "frame": "gap"
+          },
+          {
+            "lane": "Words",
+            "title": "Precise",
+            "detail": "People stop saying the profile 'signs' the call.",
+            "frame": "words"
+          },
+          {
+            "lane": "Admin",
+            "title": "Laws",
+            "detail": "The abandon and dialing rules are a third project.",
+            "frame": "abd"
+          },
+          {
+            "lane": "Admin",
+            "title": "Report",
+            "detail": "Spam labels are not fixed from the matrix layout.",
+            "frame": "rep"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Certified Caller is about",
+          "choices": [
+            "List penetration",
+            "STIR/SHAKEN attestation",
+            "Headset choice",
+            "Report layouts"
+          ],
+          "answer": 1,
+          "why": "The product page."
+        },
+        {
+          "q": "A local ANI on a profile",
+          "choices": [
+            "Is Certified Caller",
+            "Presents a number. Attestation is separate",
+            "Sets TLS 1.3",
+            "Registers E911"
+          ],
+          "answer": 1,
+          "why": "Do not merge them."
+        },
+        {
+          "q": "Regulators named on the Certified Caller page include",
+          "choices": [
+            "Only a state PUC",
+            "FCC and CRTC",
+            "Ofcom only",
+            "None"
+          ],
+          "answer": 1,
+          "why": "FCC and CRTC."
+        },
+        {
+          "q": "You may say a profile signs the call. True or false?",
+          "choices": [
+            "True",
+            "False",
+            "True if ANI is 10 digits",
+            "True for predictive"
+          ],
+          "answer": 1,
+          "why": "Signing is the attestation program."
+        },
+        {
+          "q": "Spam labeling with a correct ANI means",
+          "choices": [
+            "G.711 is off",
+            "You still have to ask whether attestation is in place",
+            "The skill is Default",
+            "The call log expired"
+          ],
+          "answer": 1,
+          "why": "Presentation and trust differ."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Certified Caller?",
+          "back": "STIR/SHAKEN program."
+        },
+        {
+          "front": "Profile ANI equals attestation?",
+          "back": "No."
+        },
+        {
+          "front": "Regulators named?",
+          "back": "FCC and CRTC."
+        },
+        {
+          "front": "Can you say the profile signs calls?",
+          "back": "No."
+        }
+      ],
+      "lab": {
+        "title": "Split the slide",
+        "goal": "One box for ANI, one box for attestation, one box for what you have not bought.",
+        "steps": [
+          "Profile",
+          "Certified Caller",
+          "The gap"
+        ],
+        "success": "The gap box is allowed to say 'not in scope'.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Marketing says the new ANI is 'SHAKEN signed' because the profile saved",
+        "symptom": "Nobody enrolled the attestation program.",
+        "log": "ANI=set ATTEST=unknown",
+        "choices": [
+          "Stop the claim until Certified Caller is actually in place",
+          "Add a prefix to 911",
+          "Change the theme",
+          "Export a matrix"
+        ],
+        "answer": 0,
+        "cause": "The profile is not the program.",
+        "fix": "Correct the claim."
+      }
+    },
+    {
+      "id": "l06",
+      "title": "Abandon rate is a regulated posture",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Read the abandon warning",
+        "Keep the US 30-day and UK 24-hour windows straight"
+      ],
+      "paragraphs": [
+        "Default campaign settings call out a warning if you change Max Abandoned Call Percentage. Other fields on that page include Max Queue Time, Show Out of Numbers Alert, Monitor Abandoned Call Percentage, Call Analysis, Voice Detection level, and Action on Max Queue Time Expiration.",
+        "The measurement window is not a number you type for fun. The page describes a US rolling 30 days and a UK window of 24 hours, set with a Five9 representative. This lab does not invent the numeric default inside Max Abandoned Call Percentage. TCPA manual touch is a different control: type the number, no paste, Dial enables only on a match."
+      ],
+      "cites": [
+        {
+          "label": "Default campaign settings",
+          "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm"
+        },
+        {
+          "label": "TCPA manual touch",
+          "url": "https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US"
+        }
+      ],
+      "uncertain": [
+        "This lab does not publish a numeric default for Max Abandoned Call Percentage. The defaults page describes the windows and the warning, not a percent we are willing to repeat."
+      ],
+      "figure": {
+        "kind": "path",
+        "title": "Before you touch the abandon field",
+        "caption": "The warning is the point.",
+        "rows": [
+          {
+            "label": "Read the warning"
+          },
+          {
+            "label": "Know which window: 30 days or 24 hours"
+          },
+          {
+            "label": "Do not invent the default percent"
+          },
+          {
+            "label": "Manual touch is a different mode"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Someone wants more lines",
+        "lanes": [
+          "Warn",
+          "Window",
+          "Mode"
+        ],
+        "steps": [
+          {
+            "lane": "Warn",
+            "title": "Read",
+            "detail": "The warning on Max Abandoned Call Percentage is read.",
+            "frame": "warn"
+          },
+          {
+            "lane": "Window",
+            "title": "US",
+            "detail": "US is described as a rolling 30 days.",
+            "frame": "us"
+          },
+          {
+            "lane": "Window",
+            "title": "UK",
+            "detail": "UK is described as 24 hours.",
+            "frame": "uk"
+          },
+          {
+            "lane": "Window",
+            "title": "Who",
+            "detail": "A Five9 representative sets that window.",
+            "frame": "rep"
+          },
+          {
+            "lane": "Mode",
+            "title": "TCPA",
+            "detail": "Manual touch is chosen when retyping is the control.",
+            "frame": "tcpa"
+          },
+          {
+            "lane": "Admin",
+            "title": "No",
+            "detail": "A guessed percent is not typed.",
+            "frame": "no"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Changing Max Abandoned Call Percentage",
+          "choices": [
+            "Is silent",
+            "Raises a warning",
+            "Deletes the list",
+            "Sets the codec"
+          ],
+          "answer": 1,
+          "why": "The defaults page warns you."
+        },
+        {
+          "q": "The US window described is",
+          "choices": [
+            "24 hours",
+            "A rolling 30 days",
+            "120 days",
+            "90 days"
+          ],
+          "answer": 1,
+          "why": "Rolling 30 days."
+        },
+        {
+          "q": "The UK window described is",
+          "choices": [
+            "30 days",
+            "24 hours",
+            "60 days",
+            "7 days"
+          ],
+          "answer": 1,
+          "why": "24 hours."
+        },
+        {
+          "q": "Who sets that window, per the page?",
+          "choices": [
+            "The agent",
+            "A Five9 representative",
+            "The IVR Menu",
+            "RedSky"
+          ],
+          "answer": 1,
+          "why": "A Five9 representative."
+        },
+        {
+          "q": "This lab's numeric default for max abandon is",
+          "choices": [
+            "3 percent",
+            "Not stated. It was not in the quoted page",
+            "0",
+            "10"
+          ],
+          "answer": 1,
+          "why": "Do not invent it."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Warning?",
+          "back": "Yes, if you change the max abandon percentage."
+        },
+        {
+          "front": "US window?",
+          "back": "Rolling 30 days."
+        },
+        {
+          "front": "UK window?",
+          "back": "24 hours."
+        },
+        {
+          "front": "Who sets the window?",
+          "back": "A Five9 representative."
+        }
+      ],
+      "lab": {
+        "title": "Write the warning",
+        "goal": "Say what you will not change, and which country's window applies to a fictional US campaign.",
+        "steps": [
+          "The warning",
+          "30 days",
+          "No invented percent"
+        ],
+        "success": "Manual touch is not used as a synonym.",
+        "href": ""
+      },
+      "fault": {
+        "title": "A admin types 20 into Max Abandoned Call Percentage to 'clear the list'",
+        "symptom": "The warning existed and the window is a legal posture.",
+        "log": "ABANDON set=20 by=guess",
+        "choices": [
+          "Put the field back and talk to the representative before any change",
+          "Also disable call analysis",
+          "Paste numbers in TCPA mode",
+          "Hide the warning"
+        ],
+        "answer": 0,
+        "cause": "Guessing a percent is the fault.",
+        "fix": "Restore it and get the real guidance."
+      }
+    },
+    {
+      "id": "l07",
+      "title": "TCPA manual touch is a physical control",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Type external numbers in manual touch",
+        "Treat a grey Dial button as the control working"
+      ],
+      "paragraphs": [
+        "On domains where TCPA manual touch is enabled, other dialing modes are not available. Agents type the external number. Paste and drag are blocked. Dial enables only when the typed number matches. If preview times out, the agent goes Not Ready and nothing auto-dials.",
+        "The community article says this covers click-to-dial, previews, queue callbacks, and voicemail callbacks. Internal speed dial and a third-party transfer do not make you retype. The permission User Can Skip Contact Records in TCPA Manual Touch is how skipping is allowed. The pacing lab includes this drill so your hands learn the rule."
+      ],
+      "cites": [
+        {
+          "label": "TCPA manual touch",
+          "url": "https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US"
+        },
+        {
+          "label": "Default campaign settings",
+          "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "path",
+        "title": "A number that is allowed to dial",
+        "caption": "Typing is the control.",
+        "rows": [
+          {
+            "label": "Mode is manual touch only"
+          },
+          {
+            "label": "Type the external number"
+          },
+          {
+            "label": "Dial lights on a match"
+          },
+          {
+            "label": "Timeout means Not Ready, no auto dial"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Dial stays grey",
+        "lanes": [
+          "Mode",
+          "Hands",
+          "Timeout"
+        ],
+        "steps": [
+          {
+            "lane": "Mode",
+            "title": "Only",
+            "detail": "No other mode is on.",
+            "frame": "mode"
+          },
+          {
+            "lane": "Hands",
+            "title": "Type",
+            "detail": "The agent types. Paste is refused.",
+            "frame": "type"
+          },
+          {
+            "lane": "Hands",
+            "title": "Match",
+            "detail": "Dial enables when the digits match.",
+            "frame": "match"
+          },
+          {
+            "lane": "Timeout",
+            "title": "NR",
+            "detail": "A preview timeout sets Not Ready.",
+            "frame": "nr"
+          },
+          {
+            "lane": "Timeout",
+            "title": "No",
+            "detail": "Nothing dials itself.",
+            "frame": "no"
+          },
+          {
+            "lane": "Admin",
+            "title": "Skip",
+            "detail": "Skipping requires the named permission.",
+            "frame": "skip"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Paste in TCPA manual touch",
+          "choices": [
+            "Is the fastest compliant path",
+            "Is blocked",
+            "Works for external numbers",
+            "Sets the ANI"
+          ],
+          "answer": 1,
+          "why": "The article says paste and drag are blocked."
+        },
+        {
+          "q": "Dial enables when",
+          "choices": [
+            "The campaign is predictive",
+            "The typed number matches",
+            "Any key is pressed",
+            "The agent is Not Ready"
+          ],
+          "answer": 1,
+          "why": "Match."
+        },
+        {
+          "q": "Preview timeout",
+          "choices": [
+            "Auto-dials",
+            "Sets Not Ready and does not auto-dial",
+            "Deletes the contact",
+            "Opens a report"
+          ],
+          "answer": 1,
+          "why": "Not Ready, no auto dial."
+        },
+        {
+          "q": "Internal speed dial requires retyping. True or false?",
+          "choices": [
+            "True",
+            "False",
+            "True for Canada",
+            "True for E911"
+          ],
+          "answer": 1,
+          "why": "The article exempts internal speed dial and third-party transfer."
+        },
+        {
+          "q": "Skipping records requires",
+          "choices": [
+            "The Reporting role",
+            "User Can Skip Contact Records in TCPA Manual Touch",
+            "A matrix layout",
+            "RedSky"
+          ],
+          "answer": 1,
+          "why": "That permission."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Paste?",
+          "back": "Blocked."
+        },
+        {
+          "front": "When does Dial enable?",
+          "back": "When the typed number matches."
+        },
+        {
+          "front": "Timeout?",
+          "back": "Not Ready, no auto dial."
+        },
+        {
+          "front": "Skip permission?",
+          "back": "User Can Skip Contact Records in TCPA Manual Touch."
+        }
+      ],
+      "lab": {
+        "title": "Do the drill",
+        "goal": "In the pacing lab, type the sample number. Do not paste.",
+        "steps": [
+          "Select TCPA",
+          "Type",
+          "Watch Dial"
+        ],
+        "success": "Dial stayed disabled until the digits matched.",
+        "href": "#/pacing"
+      },
+      "fault": {
+        "title": "Agents paste from the CRM and Dial never lights",
+        "symptom": "Paste is the block, not a bug in the skill.",
+        "log": "TCPA paste=blocked dial=disabled",
+        "choices": [
+          "Type the number",
+          "Switch the campaign to predictive to save time",
+          "Disable the permission and paste anyway",
+          "Change G.711"
+        ],
+        "answer": 0,
+        "cause": "The control is working.",
+        "fix": "Type it. Do not turn the mode off to dodge it."
+      }
+    }
+  ]
+}

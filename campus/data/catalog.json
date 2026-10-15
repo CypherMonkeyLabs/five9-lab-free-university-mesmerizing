@@ -1,0 +1,733 @@
+{
+  "tracks": [
+    {
+      "id": "t01",
+      "file": "tracks/t01.json",
+      "title": "Foundations and the domain",
+      "short": "Foundations",
+      "blurb": "What a Five9 domain contains before anyone dials.",
+      "group": "Platform",
+      "level": "Foundation",
+      "summary": "A domain is the tenant. Campaigns come after skills, users, lists, dispositions, and a profile.",
+      "lessons": [
+        {
+          "id": "l01",
+          "title": "A contact center is not a phone system"
+        },
+        {
+          "id": "l02",
+          "title": "The domain is the tenant"
+        },
+        {
+          "id": "l03",
+          "title": "Roles on the floor"
+        },
+        {
+          "id": "l04",
+          "title": "Three campaign types"
+        },
+        {
+          "id": "l05",
+          "title": "Contacts, fields, and lists"
+        },
+        {
+          "id": "l06",
+          "title": "Dispositions are the dialer's memory"
+        },
+        {
+          "id": "l07",
+          "title": "One profile, many campaigns"
+        }
+      ]
+    },
+    {
+      "id": "t02",
+      "file": "tracks/t02.json",
+      "title": "VCC administration",
+      "short": "VCC admin",
+      "blurb": "Clients, permissions, skills, prompts, DNC, and the PCs that drop calls.",
+      "group": "Platform",
+      "level": "Foundation",
+      "summary": "The administrator console is where the domain becomes a floor people can work.",
+      "lessons": [
+        {
+          "id": "l01",
+          "title": "Two administrator applications"
+        },
+        {
+          "id": "l02",
+          "title": "User profiles before user accounts"
+        },
+        {
+          "id": "l03",
+          "title": "Skill groups are the queues"
+        },
+        {
+          "id": "l04",
+          "title": "Prompts before the script"
+        },
+        {
+          "id": "l05",
+          "title": "Do-not-call is a list, and a module"
+        },
+        {
+          "id": "l06",
+          "title": "Workstations that drop live calls"
+        },
+        {
+          "id": "l07",
+          "title": "Reason codes, voicemail, and what admin is not"
+        }
+      ]
+    },
+    {
+      "id": "t03",
+      "file": "tracks/t03.json",
+      "title": "Inbound campaigns",
+      "short": "Inbound",
+      "blurb": "DNIS, run state, scripts, overflow, schedules, and the pause between calls.",
+      "group": "Voice",
+      "level": "Practice",
+      "summary": "Inbound is a running campaign plus a script. Busy means the campaign is not in the call.",
+      "lessons": [
+        {
+          "id": "l01",
+          "title": "A DNIS answers only while the campaign runs"
+        },
+        {
+          "id": "l02",
+          "title": "The script is the inbound product"
+        },
+        {
+          "id": "l03",
+          "title": "Queue treatment is a choice, not a hope"
+        },
+        {
+          "id": "l04",
+          "title": "Priority and service level"
+        },
+        {
+          "id": "l05",
+          "title": "Schedules, not a stopped campaign"
+        },
+        {
+          "id": "l06",
+          "title": "Pause before the next call"
+        },
+        {
+          "id": "l07",
+          "title": "Inbound design review"
+        }
+      ]
+    },
+    {
+      "id": "t04",
+      "file": "tracks/t04.json",
+      "title": "Outbound lists",
+      "short": "Outbound",
+      "blurb": "Lists, profiles, penetration versus vertical, resets, and the guardrails around time and detection.",
+      "group": "Voice",
+      "level": "Practice",
+      "summary": "Outbound dials a loaded list under a mode. Resets and ANI changes are explicit.",
+      "lessons": [
+        {
+          "id": "l01",
+          "title": "A list is not a campaign"
+        },
+        {
+          "id": "l02",
+          "title": "Profiles filter the list the agent sees"
+        },
+        {
+          "id": "l03",
+          "title": "List penetration and vertical dialing"
+        },
+        {
+          "id": "l04",
+          "title": "Reset is a loaded gun"
+        },
+        {
+          "id": "l05",
+          "title": "Time zone and call analysis are guarded defaults"
+        },
+        {
+          "id": "l06",
+          "title": "Call analysis is not a guarantee"
+        },
+        {
+          "id": "l07",
+          "title": "Local caller ID is a profile choice"
+        }
+      ]
+    },
+    {
+      "id": "t05",
+      "file": "tracks/t05.json",
+      "title": "Dialer modes and pacing",
+      "short": "Dialer",
+      "blurb": "Preview, progressive, power, predictive, and TCPA manual touch, with the abandon window kept honest.",
+      "group": "Voice",
+      "level": "Advanced",
+      "summary": "Five modes. The simulator is a classroom. The campaign dialog is the system of record.",
+      "lessons": [
+        {
+          "id": "l01",
+          "title": "Preview lets the agent read first"
+        },
+        {
+          "id": "l02",
+          "title": "Progressive keeps one call per free agent"
+        },
+        {
+          "id": "l03",
+          "title": "Power dials a ratio you chose"
+        },
+        {
+          "id": "l04",
+          "title": "Predictive fills idle time, and it can drop calls"
+        },
+        {
+          "id": "l05",
+          "title": "TCPA manual touch is a typed number"
+        },
+        {
+          "id": "l06",
+          "title": "The defaults are the compliance posture"
+        },
+        {
+          "id": "l07",
+          "title": "Pick a mode in one page"
+        }
+      ]
+    },
+    {
+      "id": "t06",
+      "file": "tracks/t06.json",
+      "title": "Blended operations and autodial",
+      "short": "Blended",
+      "blurb": "How agents move between inbound, autodial, and outbound without lying to the dialer.",
+      "group": "Voice",
+      "level": "Advanced",
+      "summary": "Blended is a staffing plan. Autodial is the scripted outbound. Predictive people should stay dedicated.",
+      "lessons": [
+        {
+          "id": "l01",
+          "title": "Blended is a staffing plan"
+        },
+        {
+          "id": "l02",
+          "title": "Autodial is the IVR's outbound"
+        },
+        {
+          "id": "l03",
+          "title": "Priority and ratio are campaign settings"
+        },
+        {
+          "id": "l04",
+          "title": "Not Ready is a real state"
+        },
+        {
+          "id": "l05",
+          "title": "After-call work feeds the next dial"
+        },
+        {
+          "id": "l06",
+          "title": "Digital and voice share the person"
+        },
+        {
+          "id": "l07",
+          "title": "A blend you can defend"
+        }
+      ]
+    },
+    {
+      "id": "t07",
+      "file": "tracks/t07.json",
+      "title": "IVR scripts",
+      "short": "IVR",
+      "blurb": "The module vocabulary, branches, Skill Transfer, queries, and visual framing.",
+      "group": "Voice",
+      "level": "Practice",
+      "summary": "Scripts are named modules. The builder speaks that vocabulary and does not pretend to export a VCC file.",
+      "lessons": [
+        {
+          "id": "l01",
+          "title": "The module list is the vocabulary"
+        },
+        {
+          "id": "l02",
+          "title": "Play, Menu, digits, and voice"
+        },
+        {
+          "id": "l03",
+          "title": "If/Else is two ways. Case is more"
+        },
+        {
+          "id": "l04",
+          "title": "Skill Transfer has more than a skill name"
+        },
+        {
+          "id": "l05",
+          "title": "Variables, lookup, and query"
+        },
+        {
+          "id": "l06",
+          "title": "IVA, foreign scripts, DNC, and leaving the platform"
+        },
+        {
+          "id": "l07",
+          "title": "Visual IVR and frames"
+        }
+      ]
+    },
+    {
+      "id": "t08",
+      "file": "tracks/t08.json",
+      "title": "Skills routing",
+      "short": "Skills",
+      "blurb": "Queues, the awkward tab name, pools, levels, Default, and the scoreboard.",
+      "group": "Voice",
+      "level": "Practice",
+      "summary": "A skill is people plus a place on the campaign. Default is what you get when you forget.",
+      "lessons": [
+        {
+          "id": "l01",
+          "title": "A skill is a queue with people in it"
+        },
+        {
+          "id": "l02",
+          "title": "The tab is named backwards on inbound"
+        },
+        {
+          "id": "l03",
+          "title": "One module, one skill, when you need the truth"
+        },
+        {
+          "id": "l04",
+          "title": "Skill level versus list order"
+        },
+        {
+          "id": "l05",
+          "title": "Default is a queue, not a compliment"
+        },
+        {
+          "id": "l06",
+          "title": "Service level is the scoreboard"
+        },
+        {
+          "id": "l07",
+          "title": "Skill voicemail is its own mailbox"
+        }
+      ]
+    },
+    {
+      "id": "t09",
+      "file": "tracks/t09.json",
+      "title": "Agent Desktop Plus",
+      "short": "Desktop",
+      "blurb": "One screen, WSS, assist, WEM on the desktop, and the desk the PDF will support.",
+      "group": "People",
+      "level": "Practice",
+      "summary": "Plus is the agent's instrument. Voice, pop, text, and the schedule fail in different ways.",
+      "lessons": [
+        {
+          "id": "l01",
+          "title": "One screen is the product"
+        },
+        {
+          "id": "l02",
+          "title": "Plus adapters speak HTTPS and WSS"
+        },
+        {
+          "id": "l03",
+          "title": "Transcription and assist are features you turn on"
+        },
+        {
+          "id": "l04",
+          "title": "WEM lives in the same desktop"
+        },
+        {
+          "id": "l05",
+          "title": "Digital text can be blocked"
+        },
+        {
+          "id": "l06",
+          "title": "Headsets and the path under the desk"
+        },
+        {
+          "id": "l07",
+          "title": "The desktop review"
+        }
+      ]
+    },
+    {
+      "id": "t10",
+      "file": "tracks/t10.json",
+      "title": "Workforce engagement",
+      "short": "WEM",
+      "blurb": "Native WEM and Verint, the roster, quality, surveys, and the recording clock.",
+      "group": "People",
+      "level": "Practice",
+      "summary": "WEM tells you who should be there. The dialer should believe the schedule. Recordings do not last by hope.",
+      "lessons": [
+        {
+          "id": "l01",
+          "title": "Five9 WEM and a Verint path both exist"
+        },
+        {
+          "id": "l02",
+          "title": "Workforce management is the roster"
+        },
+        {
+          "id": "l03",
+          "title": "Quality management listens on purpose"
+        },
+        {
+          "id": "l04",
+          "title": "Analytics and surveys sit beside the call"
+        },
+        {
+          "id": "l05",
+          "title": "Recordings expire"
+        },
+        {
+          "id": "l06",
+          "title": "The agent should not need a second login"
+        },
+        {
+          "id": "l07",
+          "title": "What this lab will not pretend to run"
+        }
+      ]
+    },
+    {
+      "id": "t11",
+      "file": "tracks/t11.json",
+      "title": "IVA and GenAI",
+      "short": "IVA",
+      "blurb": "Studio regions, task keys, handoffs, and prompts that are production changes.",
+      "group": "Intelligence",
+      "level": "Advanced",
+      "summary": "A bot is a task in the right region, with a way back to a named skill, and a prompt that was tested.",
+      "lessons": [
+        {
+          "id": "l01",
+          "title": "Studio has regions"
+        },
+        {
+          "id": "l02",
+          "title": "A task key is not a vibe"
+        },
+        {
+          "id": "l03",
+          "title": "Contain, or hand back with context"
+        },
+        {
+          "id": "l04",
+          "title": "GenAI Studio is a hub, not a slogan"
+        },
+        {
+          "id": "l05",
+          "title": "NLP in the IVR is not the same as Studio"
+        },
+        {
+          "id": "l06",
+          "title": "Prompts are a production change"
+        },
+        {
+          "id": "l07",
+          "title": "A bot review you can finish"
+        }
+      ]
+    },
+    {
+      "id": "t12",
+      "file": "tracks/t12.json",
+      "title": "CRM integrations",
+      "short": "CRM",
+      "blurb": "Plus adapters, version lists that age, the SDK, and Salesforce inside the IVR.",
+      "group": "Systems",
+      "level": "Practice",
+      "summary": "Name the adapter. Date the version. A blank screen with live voice is a different channel.",
+      "lessons": [
+        {
+          "id": "l01",
+          "title": "The adapter family"
+        },
+        {
+          "id": "l02",
+          "title": "Salesforce versions move"
+        },
+        {
+          "id": "l03",
+          "title": "ServiceNow releases are named"
+        },
+        {
+          "id": "l04",
+          "title": "The rest of the named CRMs"
+        },
+        {
+          "id": "l05",
+          "title": "SDK and connectors when there is no adapter"
+        },
+        {
+          "id": "l06",
+          "title": "Screen pop down, voice up"
+        },
+        {
+          "id": "l07",
+          "title": "Salesforce modules inside the IVR"
+        }
+      ]
+    },
+    {
+      "id": "t13",
+      "file": "tracks/t13.json",
+      "title": "SIP and carriers",
+      "short": "SIP",
+      "blurb": "ITSP trunks, your SBC, gateways, bandwidth, NAT, and the ports that belong only to Studio.",
+      "group": "Systems",
+      "level": "Advanced",
+      "summary": "Name the path. G.711 is the default you can cite. Studio ports are not every trunk.",
+      "lessons": [
+        {
+          "id": "l01",
+          "title": "Three ways a call can enter"
+        },
+        {
+          "id": "l02",
+          "title": "DNS, codecs, and the default voice"
+        },
+        {
+          "id": "l03",
+          "title": "How much bandwidth a seat costs"
+        },
+        {
+          "id": "l04",
+          "title": "NAT, idle timers, and split tunnels"
+        },
+        {
+          "id": "l05",
+          "title": "Direct Connect and the edges"
+        },
+        {
+          "id": "l06",
+          "title": "TLS, and ports that are not universal"
+        },
+        {
+          "id": "l07",
+          "title": "Headsets, and the call that only fails one way"
+        }
+      ]
+    },
+    {
+      "id": "t14",
+      "file": "tracks/t14.json",
+      "title": "APIs and reporting",
+      "short": "APIs",
+      "blurb": "Named web services, the Reporting role, layouts, call variables, and the clocks that delete evidence.",
+      "group": "Systems",
+      "level": "Advanced",
+      "summary": "Name the API family. Name the report layout. Name which clock you mean.",
+      "lessons": [
+        {
+          "id": "l01",
+          "title": "The API names on the product page"
+        },
+        {
+          "id": "l02",
+          "title": "Reporting is a role"
+        },
+        {
+          "id": "l03",
+          "title": "Layouts, and the matrix that will not export"
+        },
+        {
+          "id": "l04",
+          "title": "The call log is a window, not an archive"
+        },
+        {
+          "id": "l05",
+          "title": "Call variables are not history"
+        },
+        {
+          "id": "l06",
+          "title": "Prebuilt UC and the connector that is not an adapter"
+        },
+        {
+          "id": "l07",
+          "title": "What an extract is allowed to remember"
+        }
+      ]
+    },
+    {
+      "id": "t15",
+      "file": "tracks/t15.json",
+      "title": "From UCCX and UCCE",
+      "short": "Migration",
+      "blurb": "A teaching bridge: skills, modules, modes, data, the gateway, and a go/no-go that can stop.",
+      "group": "Bridge",
+      "level": "Advanced",
+      "summary": "There is no import button. Rebuild the domain, then move a number.",
+      "lessons": [
+        {
+          "id": "l01",
+          "title": "There is no import button"
+        },
+        {
+          "id": "l02",
+          "title": "CSQs, skills, and the partition you will not find"
+        },
+        {
+          "id": "l03",
+          "title": "Scripts are rebuilt in modules"
+        },
+        {
+          "id": "l04",
+          "title": "Dialing modes do not survive the move by osmosis"
+        },
+        {
+          "id": "l05",
+          "title": "Numbers, lists, and ANI are a data project"
+        },
+        {
+          "id": "l06",
+          "title": "The gateway cut, without pretending to be the CUBE guide"
+        },
+        {
+          "id": "l07",
+          "title": "Cutover morning is a checklist, not a mood"
+        }
+      ]
+    },
+    {
+      "id": "t16",
+      "file": "tracks/t16.json",
+      "title": "Safety and compliance",
+      "short": "Safety",
+      "blurb": "E911, recording, retention clocks, attestation, abandon windows, and TCPA typing.",
+      "group": "Platform",
+      "level": "Advanced",
+      "summary": "Quote the document. Quote the clock. Do not invent a percent or a coverage map.",
+      "lessons": [
+        {
+          "id": "l01",
+          "title": "911 is a location, not a prefix"
+        },
+        {
+          "id": "l02",
+          "title": "The address has to be the room they are in"
+        },
+        {
+          "id": "l03",
+          "title": "Recording is the customer's duty too"
+        },
+        {
+          "id": "l04",
+          "title": "Retention is several clocks"
+        },
+        {
+          "id": "l05",
+          "title": "Attestation is not an ANI field"
+        },
+        {
+          "id": "l06",
+          "title": "Abandon rate is a regulated posture"
+        },
+        {
+          "id": "l07",
+          "title": "TCPA manual touch is a physical control"
+        }
+      ]
+    },
+    {
+      "id": "t17",
+      "file": "tracks/t17.json",
+      "title": "Ecosystem",
+      "short": "Ecosystem",
+      "blurb": "Neighbors, WEM, analytics pipes, AI handoffs, and a glossary that refuses uncited words.",
+      "group": "Ecosystem",
+      "level": "Practice",
+      "summary": "Every box needs a link. Every word needs a page or a local label.",
+      "lessons": [
+        {
+          "id": "l01",
+          "title": "The domain has neighbors"
+        },
+        {
+          "id": "l02",
+          "title": "Workforce, quality, and the recording shelf"
+        },
+        {
+          "id": "l03",
+          "title": "Analytics and the report that is not a dashboard rumor"
+        },
+        {
+          "id": "l04",
+          "title": "AI agents are a handoff with a name"
+        },
+        {
+          "id": "l05",
+          "title": "CRM, UC, and the desktop are three contracts"
+        },
+        {
+          "id": "l06",
+          "title": "The glossary is the contract with yourself"
+        },
+        {
+          "id": "l07",
+          "title": "Read the map before you add a box"
+        }
+      ]
+    },
+    {
+      "id": "t18",
+      "file": "tracks/t18.json",
+      "title": "Certifications and practice",
+      "short": "Practice",
+      "blurb": "University formats, the one badge we could verify, dated versions, and answers that keep their gaps.",
+      "group": "Practice",
+      "level": "Foundation",
+      "summary": "No invented exam codes. The sales badge is a sales badge. Date every number.",
+      "lessons": [
+        {
+          "id": "l01",
+          "title": "University is a catalog, not a secret exam code"
+        },
+        {
+          "id": "l02",
+          "title": "The badge we could verify is a sales badge"
+        },
+        {
+          "id": "l03",
+          "title": "Practice is the domain, not the badge"
+        },
+        {
+          "id": "l04",
+          "title": "Version timelines go stale on purpose"
+        },
+        {
+          "id": "l05",
+          "title": "How to answer without inventing"
+        },
+        {
+          "id": "l06",
+          "title": "A study week that stays inside the documents"
+        },
+        {
+          "id": "l07",
+          "title": "What this lab will not pretend to be"
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "tracks": 18,
+    "lessons": 126,
+    "quiz": 630,
+    "cards": 504,
+    "labs": 126,
+    "faults": 126,
+    "cites": 288
+  }
+}

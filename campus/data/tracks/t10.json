@@ -1,0 +1,1340 @@
+{
+  "id": "t10",
+  "title": "Workforce engagement",
+  "short": "WEM",
+  "blurb": "Native WEM and Verint, the roster, quality, surveys, and the recording clock.",
+  "group": "People",
+  "level": "Practice",
+  "summary": "WEM tells you who should be there. The dialer should believe the schedule. Recordings do not last by hope.",
+  "lessons": [
+    {
+      "id": "l01",
+      "title": "Five9 WEM and a Verint path both exist",
+      "level": "foundation",
+      "minutes": 12,
+      "objectives": [
+        "Ask which WEM",
+        "List the pieces in the contract"
+      ],
+      "paragraphs": [
+        "The workforce page says Five9 offers WEM natively and also partners with vendors such as Verint so a customer can fit the suite they already run. It says Five9 manages installation, configuration, maintenance, and upgrades for the WEM solution they deliver.",
+        "Do not tell a floor they are 'on Verint' or 'on native WEM' without looking. The page says both exist. Recording, QM, analytics, WFM, surveys, and CRM connectors are the pieces the data sheet says you integrate."
+      ],
+      "cites": [
+        {
+          "label": "Workforce engagement management",
+          "url": "https://www.five9.com/products/capabilities/workforce-optimization"
+        },
+        {
+          "label": "WEM data sheet",
+          "url": "https://www.five9.com/resources/data-sheet/five9-wem"
+        }
+      ],
+      "uncertain": [
+        "This lab does not know which suite a given customer bought. The product page says both native WEM and partners such as Verint are offered."
+      ],
+      "figure": {
+        "kind": "compare",
+        "title": "Two public statements",
+        "caption": "Ask which one this domain uses.",
+        "leftTitle": "Native Five9 WEM",
+        "rightTitle": "Partner suite",
+        "left": [
+          "Offered on the product page"
+        ],
+        "right": [
+          "Verint is named as an example"
+        ]
+      },
+      "flow": {
+        "title": "Ask which suite",
+        "lanes": [
+          "Admin",
+          "Suite"
+        ],
+        "steps": [
+          {
+            "lane": "Admin",
+            "title": "Ask",
+            "detail": "Which WEM is in the contract?",
+            "frame": "ask"
+          },
+          {
+            "lane": "Suite",
+            "title": "Native",
+            "detail": "Schedules may be the Five9 suite.",
+            "frame": "native"
+          },
+          {
+            "lane": "Suite",
+            "title": "Partner",
+            "detail": "Or a named partner suite.",
+            "frame": "partner"
+          },
+          {
+            "lane": "Suite",
+            "title": "Pieces",
+            "detail": "QM, WFM, analytics, surveys, recording.",
+            "frame": "pieces"
+          },
+          {
+            "lane": "Desktop",
+            "title": "Show",
+            "detail": "Plus can surface schedules either way the page describes.",
+            "frame": "show"
+          },
+          {
+            "lane": "Admin",
+            "title": "Own",
+            "detail": "Five9 says they run the maintenance.",
+            "frame": "own"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Verint is",
+          "choices": [
+            "The only WEM Five9 allows",
+            "Named as a partner path beside native WEM",
+            "A codec",
+            "A campaign type"
+          ],
+          "answer": 1,
+          "why": "The product page says both."
+        },
+        {
+          "q": "The data sheet pieces include",
+          "choices": [
+            "Only dialer modes",
+            "Recording, QM, analytics, WFM, surveys, CRM connectors",
+            "Only SIP",
+            "Only Java"
+          ],
+          "answer": 1,
+          "why": "That is the data sheet's list of integrations."
+        },
+        {
+          "q": "Who does the WEM upgrades, per the product page?",
+          "choices": [
+            "The agent's headset vendor",
+            "Five9, for the solution they deliver",
+            "The caller",
+            "The ITSP only"
+          ],
+          "answer": 1,
+          "why": "The page says Five9 manages upgrades."
+        },
+        {
+          "q": "You should guess native versus Verint. True or false?",
+          "choices": [
+            "True",
+            "False. Look at the contract or the app",
+            "True in UK domains",
+            "True for TCPA"
+          ],
+          "answer": 1,
+          "why": "The page refuses a single answer."
+        },
+        {
+          "q": "Plus showing a schedule proves which vendor. True or false?",
+          "choices": [
+            "True",
+            "False. The desktop page says the function can appear there either way",
+            "True if ANI is local",
+            "True if Java is gone"
+          ],
+          "answer": 1,
+          "why": "The screen is not the vendor name."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Verint?",
+          "back": "A named partner path, not the only path."
+        },
+        {
+          "front": "Data sheet pieces?",
+          "back": "Recording, QM, WFM, analytics, surveys, connectors."
+        },
+        {
+          "front": "Who upgrades?",
+          "back": "Five9, per the page."
+        },
+        {
+          "front": "Guess the vendor?",
+          "back": "No."
+        }
+      ],
+      "lab": {
+        "title": "Write the question",
+        "goal": "The first WEM question on a new floor.",
+        "steps": [
+          "Which suite",
+          "Which pieces are in the contract",
+          "Where the agent sees the schedule"
+        ],
+        "success": "You did not assume Verint.",
+        "href": ""
+      },
+      "fault": {
+        "title": "A runbook says to open Verint. The floor is native.",
+        "symptom": "Agents cannot find the URL.",
+        "log": "RUNBOOK verint APP native",
+        "choices": [
+          "Open the suite that is actually installed",
+          "Keep the wrong URL",
+          "Delete skills",
+          "Enable TLS 1.1"
+        ],
+        "answer": 0,
+        "cause": "The runbook guessed.",
+        "fix": "Point it at the native app."
+      }
+    },
+    {
+      "id": "l02",
+      "title": "Workforce management is the roster",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Feed the dialer from the schedule",
+        "Treat adherence as evidence"
+      ],
+      "paragraphs": [
+        "WFM, in the product language, is how you staff to the work: schedules, intraday changes, adherence. It is not the dialer mode and not the service level target, though it exists so those can be met.",
+        "A predictive book that uses headcount instead of the schedule will overdial at every planned break. The roster is an input to the mode you already chose."
+      ],
+      "cites": [
+        {
+          "label": "Workforce engagement management",
+          "url": "https://www.five9.com/products/capabilities/workforce-optimization"
+        },
+        {
+          "label": "Agent Desktop",
+          "url": "https://www.five9.com/products/capabilities/agent-desktop"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "path",
+        "title": "From forecast to Ready",
+        "caption": "The dialer should see the second number.",
+        "rows": [
+          {
+            "label": "Forecast"
+          },
+          {
+            "label": "Schedule"
+          },
+          {
+            "label": "Who is Ready"
+          },
+          {
+            "label": "Mode uses that count"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Tuesday at 10",
+        "lanes": [
+          "WFM",
+          "Floor",
+          "Dialer"
+        ],
+        "steps": [
+          {
+            "lane": "WFM",
+            "title": "Forecast",
+            "detail": "The expected inbound volume is written.",
+            "frame": "fcst"
+          },
+          {
+            "lane": "WFM",
+            "title": "Schedule",
+            "detail": "People are placed against it.",
+            "frame": "sched"
+          },
+          {
+            "lane": "Floor",
+            "title": "Break",
+            "detail": "A break removes people.",
+            "frame": "break"
+          },
+          {
+            "lane": "Floor",
+            "title": "Ready",
+            "detail": "The remainder can take contacts.",
+            "frame": "ready"
+          },
+          {
+            "lane": "Dialer",
+            "title": "Use",
+            "detail": "Lines are based on Ready.",
+            "frame": "use"
+          },
+          {
+            "lane": "Report",
+            "title": "Adhere",
+            "detail": "Adherence says who ignored the plan.",
+            "frame": "adh"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "WFM replaces the dialing mode. True or false?",
+          "choices": [
+            "True",
+            "False. It supplies the people the mode needs",
+            "True for autodial only",
+            "True for ANI"
+          ],
+          "answer": 1,
+          "why": "Modes and rosters are different objects."
+        },
+        {
+          "q": "A scheduled break is",
+          "choices": [
+            "Idle opportunity",
+            "A person the dialer should not count",
+            "A DNIS",
+            "A prompt"
+          ],
+          "answer": 1,
+          "why": "They are not available."
+        },
+        {
+          "q": "Adherence measures",
+          "choices": [
+            "Codec quality",
+            "Whether people followed the schedule",
+            "STIR attestation",
+            "Frame headers"
+          ],
+          "answer": 1,
+          "why": "Plan versus actual."
+        },
+        {
+          "q": "Service level is met by",
+          "choices": [
+            "Renaming the target only",
+            "Having the people the schedule promised",
+            "A louder greeting",
+            "Paste"
+          ],
+          "answer": 1,
+          "why": "The roster is the supply."
+        },
+        {
+          "q": "Intraday change is",
+          "choices": [
+            "Forbidden",
+            "Part of a living schedule when volume moves",
+            "A JRE flag",
+            "A list mode"
+          ],
+          "answer": 1,
+          "why": "The product page discusses intraday adjustment in its WFM description."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Does WFM pick preview vs power?",
+          "back": "No. It staffs."
+        },
+        {
+          "front": "Break?",
+          "back": "Not available."
+        },
+        {
+          "front": "Adherence?",
+          "back": "Plan versus actual."
+        },
+        {
+          "front": "Service level needs?",
+          "back": "The people."
+        }
+      ],
+      "lab": {
+        "title": "Staff from the schedule",
+        "goal": "Given 30 scheduled and 6 on break, set the agent count in the simulator.",
+        "steps": [
+          "Subtract 6",
+          "Run progressive",
+          "Note occupancy"
+        ],
+        "success": "You did not type 30.",
+        "href": "#/pacing"
+      },
+      "fault": {
+        "title": "The dialer was built from the org chart",
+        "symptom": "Breaks are real and abandon alarms fire on the hour.",
+        "log": "COUNT orgchart=80 schedule=54",
+        "choices": [
+          "Use the schedule",
+          "Use the org chart harder",
+          "Disable monitoring",
+          "Stop IVR"
+        ],
+        "answer": 0,
+        "cause": "The org chart is not the roster.",
+        "fix": "Pace from the schedule."
+      }
+    },
+    {
+      "id": "l03",
+      "title": "Quality management listens on purpose",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Match the form to the queue",
+        "Remember hold is in the recording"
+      ],
+      "paragraphs": [
+        "The product page describes multi-channel evaluations, desktop monitoring, and automated scoring. The desktop page says agents can review evaluations without leaving Plus. That is QM: a sample of work, a score, a conversation with the person.",
+        "A 100 percent score on a form nobody respects is not quality. The form has to match the call the customer had. Recording is the evidence. The EULA says recordings include hold and what happens after a transfer, and that the customer must meet notice and consent laws."
+      ],
+      "cites": [
+        {
+          "label": "Workforce engagement management",
+          "url": "https://www.five9.com/products/capabilities/workforce-optimization"
+        },
+        {
+          "label": "Agent Desktop",
+          "url": "https://www.five9.com/products/capabilities/agent-desktop"
+        },
+        {
+          "label": "End user license agreement",
+          "url": "https://www.five9.com/legal/end-user-license-agreement"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "stack",
+        "title": "A fair evaluation",
+        "caption": "Evidence, form, conversation.",
+        "rows": [
+          {
+            "label": "Recording"
+          },
+          {
+            "label": "Form that matches the work"
+          },
+          {
+            "label": "Score"
+          },
+          {
+            "label": "Review on the desktop"
+          }
+        ]
+      },
+      "flow": {
+        "title": "One evaluation",
+        "lanes": [
+          "Record",
+          "Form",
+          "Agent"
+        ],
+        "steps": [
+          {
+            "lane": "Record",
+            "title": "Exist",
+            "detail": "The call was recorded, including hold, per the EULA.",
+            "frame": "rec"
+          },
+          {
+            "lane": "Form",
+            "title": "Fit",
+            "detail": "The form matches that kind of call.",
+            "frame": "form"
+          },
+          {
+            "lane": "QM",
+            "title": "Score",
+            "detail": "A person or a rule scores it.",
+            "frame": "score"
+          },
+          {
+            "lane": "Agent",
+            "title": "See",
+            "detail": "Plus can show the evaluation.",
+            "frame": "see"
+          },
+          {
+            "lane": "Law",
+            "title": "Notice",
+            "detail": "Consent and notice are the customer's duty.",
+            "frame": "law"
+          },
+          {
+            "lane": "QM",
+            "title": "Coach",
+            "detail": "The score starts a conversation.",
+            "frame": "coach"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Evaluations in Plus are",
+          "choices": [
+            "Hidden from agents",
+            "Named on the desktop page",
+            "A trunk feature",
+            "A list mode"
+          ],
+          "answer": 1,
+          "why": "Agents can review them there."
+        },
+        {
+          "q": "The EULA says recordings include",
+          "choices": [
+            "Only the first second",
+            "Hold and the call after transfer",
+            "Only IVR",
+            "Only 911"
+          ],
+          "answer": 1,
+          "why": "Hold and post-transfer are in the EULA."
+        },
+        {
+          "q": "Notice and consent are",
+          "choices": [
+            "Five9's problem alone, in the EULA",
+            "The customer's duty when they use recording",
+            "Optional",
+            "A codec"
+          ],
+          "answer": 1,
+          "why": "The EULA assigns that compliance to the customer."
+        },
+        {
+          "q": "A form that scores the wrong behavior",
+          "choices": [
+            "Is efficient",
+            "Teaches the wrong call",
+            "Sets ANI",
+            "Fixes abandon"
+          ],
+          "answer": 1,
+          "why": "The form is the definition of good."
+        },
+        {
+          "q": "Automated scoring, on the product page, is",
+          "choices": [
+            "Absent",
+            "Part of the QM description",
+            "Illegal",
+            "A JRE feature"
+          ],
+          "answer": 1,
+          "why": "The page mentions automated scoring and evaluation selection."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Where do agents read evaluations?",
+          "back": "Plus, per the desktop page."
+        },
+        {
+          "front": "Hold recorded?",
+          "back": "Yes, per the EULA."
+        },
+        {
+          "front": "Who handles consent?",
+          "back": "The customer, per the EULA."
+        },
+        {
+          "front": "Wrong form?",
+          "back": "Teaches the wrong work."
+        }
+      ],
+      "lab": {
+        "title": "Score one behavior",
+        "goal": "Write a single evaluation line a stranger could apply to a recording.",
+        "steps": [
+          "Name the behavior",
+          "Name the evidence",
+          "Say it is not a vibe"
+        ],
+        "success": "The line points at something audible.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Agents are scored on a sales form for a complaint queue",
+        "symptom": "The form was copied from another campaign.",
+        "log": "FORM sales QUEUE complaints",
+        "choices": [
+          "Use a form that matches complaints",
+          "Keep the sales form for speed",
+          "Delete recordings",
+          "Enable TLS 1.1"
+        ],
+        "answer": 0,
+        "cause": "The form is the wrong definition.",
+        "fix": "Score the work they were asked to do."
+      }
+    },
+    {
+      "id": "l04",
+      "title": "Analytics and surveys sit beside the call",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Keep survey, abandon, and topics apart",
+        "Give every topic an owner"
+      ],
+      "paragraphs": [
+        "The data sheet and the product page put interaction analytics and customer surveys next to QM and WFM. Analytics is how you see topics across many calls. A survey is how the customer scores the one call. They are not the abandon rate and they are not a disposition, unless you deliberately map them.",
+        "This lab does not claim a specific analytics vendor screen. Native WEM and a partner suite will not look identical. The question to ask is which topics you will act on."
+      ],
+      "cites": [
+        {
+          "label": "Workforce engagement management",
+          "url": "https://www.five9.com/products/capabilities/workforce-optimization"
+        },
+        {
+          "label": "WEM data sheet",
+          "url": "https://www.five9.com/resources/data-sheet/five9-wem"
+        }
+      ],
+      "uncertain": [
+        "Screen names inside a partner analytics tool are not copied here."
+      ],
+      "figure": {
+        "kind": "compare",
+        "title": "Three scores",
+        "caption": "Do not average them into one vanity number.",
+        "leftTitle": "Abandon",
+        "rightTitle": "Survey and analytics",
+        "left": [
+          "A dialer outcome",
+          "Not a survey"
+        ],
+        "right": [
+          "The customer's score",
+          "A pattern across calls"
+        ]
+      },
+      "flow": {
+        "title": "A topic spikes",
+        "lanes": [
+          "Calls",
+          "Analytics",
+          "Action"
+        ],
+        "steps": [
+          {
+            "lane": "Calls",
+            "title": "Happen",
+            "detail": "Many contacts mention a fee.",
+            "frame": "fee"
+          },
+          {
+            "lane": "Analytics",
+            "title": "Cluster",
+            "detail": "The topic is visible.",
+            "frame": "topic"
+          },
+          {
+            "lane": "Survey",
+            "title": "Drop",
+            "detail": "Scores fall on those calls.",
+            "frame": "score"
+          },
+          {
+            "lane": "Action",
+            "title": "Script",
+            "detail": "The IVR or the agent form changes.",
+            "frame": "change"
+          },
+          {
+            "lane": "Action",
+            "title": "Avoid",
+            "detail": "Nobody averages this with abandon and calls it 'health'.",
+            "frame": "avoid"
+          },
+          {
+            "lane": "Admin",
+            "title": "Suite",
+            "detail": "The screen depends on which WEM you bought.",
+            "frame": "suite"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "A survey and an abandon rate are",
+          "choices": [
+            "The same metric",
+            "Different",
+            "Both codecs",
+            "Both ANIs"
+          ],
+          "answer": 1,
+          "why": "One is the customer. One is the dialer."
+        },
+        {
+          "q": "Analytics is useful when",
+          "choices": [
+            "It changes a script or a coach plan",
+            "It is a slide with no owner",
+            "It replaces TLS",
+            "It replaces skills"
+          ],
+          "answer": 1,
+          "why": "A topic without an action is a poster."
+        },
+        {
+          "q": "Partner and native analytics screens are",
+          "choices": [
+            "Guaranteed identical",
+            "Not assumed identical here",
+            "Illegal",
+            "Both Java"
+          ],
+          "answer": 1,
+          "why": "Ask which suite."
+        },
+        {
+          "q": "Mapping a survey onto a disposition is",
+          "choices": [
+            "Automatic in every domain",
+            "A design you must choose",
+            "A SIP header",
+            "A JRE update"
+          ],
+          "answer": 1,
+          "why": "Do not assume the map."
+        },
+        {
+          "q": "The data sheet includes surveys among",
+          "choices": [
+            "Headset SKUs",
+            "The WEM pieces to integrate",
+            "Dialer modes only",
+            "Equinix cities"
+          ],
+          "answer": 1,
+          "why": "Surveys are in that list."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Survey versus abandon?",
+          "back": "Different."
+        },
+        {
+          "front": "A topic without an owner?",
+          "back": "A poster."
+        },
+        {
+          "front": "Screens identical?",
+          "back": "Do not assume."
+        },
+        {
+          "front": "Surveys in the data sheet?",
+          "back": "Yes."
+        }
+      ],
+      "lab": {
+        "title": "Name one topic",
+        "goal": "Pick a topic you would change a prompt for.",
+        "steps": [
+          "Name the topic",
+          "Name the prompt",
+          "Say you will not average it with abandon"
+        ],
+        "success": "The prompt change is specific.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Leadership wants one health number",
+        "symptom": "They add abandon, survey, and handle time with equal weight.",
+        "log": "INDEX made-up",
+        "choices": [
+          "Refuse the index. Show the three series",
+          "Publish the index",
+          "Delete QM",
+          "Stop recording"
+        ],
+        "answer": 0,
+        "cause": "The series mean different things.",
+        "fix": "Show them separately."
+      }
+    },
+    {
+      "id": "l05",
+      "title": "Recordings expire",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Plan the offload",
+        "Do not promise a recording past the clock"
+      ],
+      "paragraphs": [
+        "The retention page says VCC audio recordings are kept for the sooner of 30 days or a successful SFTP or FTP offload, or as the contract says. E911 call recordings are listed at 30 days. Agent data is 60 days. Campaign state is 120 days. Disabled domains are listed at 120 days after closure. DIDs and toll-free numbers are listed at 90 days after closure.",
+        "If you need a call from last quarter, the offload had to succeed. A failed SFTP job is a silent deletion clock. QM cannot score what is already gone."
+      ],
+      "cites": [
+        {
+          "label": "Data retention",
+          "url": "https://www.five9.com/legal/dataretention"
+        }
+      ],
+      "uncertain": [
+        "Contracts can override the published table. Read the agreement for the domain you are in."
+      ],
+      "figure": {
+        "kind": "stack",
+        "title": "Clocks from the retention page",
+        "caption": "Confirm the live page. Contracts can override.",
+        "rows": [
+          {
+            "label": "VCC audio: 30 days or offload"
+          },
+          {
+            "label": "E911 audio: 30 days"
+          },
+          {
+            "label": "Agent data: 60 days"
+          },
+          {
+            "label": "Campaign state: 120 days"
+          }
+        ]
+      },
+      "flow": {
+        "title": "The offload fails",
+        "lanes": [
+          "Recorder",
+          "SFTP",
+          "Clock"
+        ],
+        "steps": [
+          {
+            "lane": "Recorder",
+            "title": "Store",
+            "detail": "The audio exists today.",
+            "frame": "store"
+          },
+          {
+            "lane": "SFTP",
+            "title": "Fail",
+            "detail": "The nightly copy fails.",
+            "frame": "fail"
+          },
+          {
+            "lane": "Clock",
+            "title": "Run",
+            "detail": "The retention clock is still running.",
+            "frame": "clock"
+          },
+          {
+            "lane": "QM",
+            "title": "Miss",
+            "detail": "Next month the file is gone.",
+            "frame": "miss"
+          },
+          {
+            "lane": "Admin",
+            "title": "Alarm",
+            "detail": "A failed copy needs a human.",
+            "frame": "alarm"
+          },
+          {
+            "lane": "Contract",
+            "title": "Read",
+            "detail": "The contract can say something else.",
+            "frame": "contract"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "VCC audio, on the retention page, lasts",
+          "choices": [
+            "Forever",
+            "The sooner of 30 days or a successful offload, unless the contract says otherwise",
+            "7 years always",
+            "1 day"
+          ],
+          "answer": 1,
+          "why": "That is the published line."
+        },
+        {
+          "q": "A failed SFTP job",
+          "choices": [
+            "Extends retention automatically",
+            "Leaves you with the clock",
+            "Deletes the domain today",
+            "Changes ANI"
+          ],
+          "answer": 1,
+          "why": "Success is the offload condition."
+        },
+        {
+          "q": "E911 recordings on that page are",
+          "choices": [
+            "10 years",
+            "30 days",
+            "The same as campaign state",
+            "Not listed"
+          ],
+          "answer": 1,
+          "why": "30 days."
+        },
+        {
+          "q": "Agent data on that page is",
+          "choices": [
+            "30 days",
+            "60 days",
+            "120 days",
+            "90 days"
+          ],
+          "answer": 1,
+          "why": "60 days. Campaign state is 120. DIDs after closure are 90."
+        },
+        {
+          "q": "QM next quarter",
+          "choices": [
+            "Can always replay",
+            "Needs the offload to have worked",
+            "Needs TLS 1.1",
+            "Needs vertical dialing"
+          ],
+          "answer": 1,
+          "why": "You cannot score a deleted file."
+        }
+      ],
+      "cards": [
+        {
+          "front": "VCC audio rule?",
+          "back": "30 days or successful offload, or the contract."
+        },
+        {
+          "front": "Failed copy?",
+          "back": "The clock continues."
+        },
+        {
+          "front": "E911 audio?",
+          "back": "30 days on that page."
+        },
+        {
+          "front": "Agent data?",
+          "back": "60 days on that page."
+        }
+      ],
+      "lab": {
+        "title": "Name the clock",
+        "goal": "For one complaint you may need in 45 days, say where the file must be.",
+        "steps": [
+          "Not only in VCC",
+          "On the offload",
+          "Checked for success"
+        ],
+        "success": "The plan does not say 'it will still be there'.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Legal asks for a call from March in June",
+        "symptom": "Offload has been failing since February.",
+        "log": "SFTP fail since=Feb REQUEST June",
+        "choices": [
+          "The file is likely gone. Fix the copy for the next one",
+          "Reboot to restore it",
+          "Change the dialer",
+          "Edit the retention page"
+        ],
+        "answer": 0,
+        "cause": "The clock won.",
+        "fix": "Restore the offload and tell legal the truth."
+      }
+    },
+    {
+      "id": "l06",
+      "title": "The agent should not need a second login",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Put WEM actions where the agent already works",
+        "Make the result a schedule"
+      ],
+      "paragraphs": [
+        "The desktop page's point is that schedules, adherence, time off, shift bidding, and evaluations are reachable in Plus and, through connectors, in the CRM. A second password for WEM is a design smell if the connector was in the contract.",
+        "Shift bidding is named on that page. This lab does not reproduce the bidding rules. If bidding exists, the result still has to become the schedule the dialer respects."
+      ],
+      "cites": [
+        {
+          "label": "Agent Desktop",
+          "url": "https://www.five9.com/products/capabilities/agent-desktop"
+        },
+        {
+          "label": "Workforce engagement management",
+          "url": "https://www.five9.com/products/capabilities/workforce-optimization"
+        }
+      ],
+      "uncertain": [
+        "Bidding rules are suite-specific and were not copied from a manual."
+      ],
+      "figure": {
+        "kind": "path",
+        "title": "One place to look",
+        "caption": "Then the schedule has to be real.",
+        "rows": [
+          {
+            "label": "Plus or CRM"
+          },
+          {
+            "label": "Schedule"
+          },
+          {
+            "label": "Bid result"
+          },
+          {
+            "label": "Dialer count"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Time off",
+        "lanes": [
+          "Agent",
+          "WEM",
+          "Dialer"
+        ],
+        "steps": [
+          {
+            "lane": "Agent",
+            "title": "Request",
+            "detail": "Time off is requested in Plus.",
+            "frame": "req"
+          },
+          {
+            "lane": "WEM",
+            "title": "Approve",
+            "detail": "The schedule changes.",
+            "frame": "ok"
+          },
+          {
+            "lane": "Dialer",
+            "title": "See",
+            "detail": "Tomorrow's count drops.",
+            "frame": "count"
+          },
+          {
+            "lane": "Agent",
+            "title": "Eval",
+            "detail": "An evaluation opens in the same desktop.",
+            "frame": "eval"
+          },
+          {
+            "lane": "CRM",
+            "title": "Same",
+            "detail": "A connector can show the same actions.",
+            "frame": "crm"
+          },
+          {
+            "lane": "Admin",
+            "title": "Gap",
+            "detail": "A second URL means the connector is unused.",
+            "frame": "gap"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Time off in Plus is",
+          "choices": [
+            "Undocumented",
+            "Named on the desktop page",
+            "A codec",
+            "A list mode"
+          ],
+          "answer": 1,
+          "why": "The page lists it."
+        },
+        {
+          "q": "Shift bidding is",
+          "choices": [
+            "Invented here",
+            "Named on the desktop page",
+            "A SIP verb",
+            "A JRE"
+          ],
+          "answer": 1,
+          "why": "The page lists shift bidding among WFO actions."
+        },
+        {
+          "q": "A bid that does not change the schedule",
+          "choices": [
+            "Still staffs the dialer",
+            "Does not",
+            "Sets ANI",
+            "Records hold"
+          ],
+          "answer": 1,
+          "why": "The dialer needs the resulting roster."
+        },
+        {
+          "q": "A second WEM login for every agent means",
+          "choices": [
+            "The connector story is in use",
+            "The connector story is probably not",
+            "TCPA is on",
+            "IVR is done"
+          ],
+          "answer": 1,
+          "why": "Plus was supposed to hold it."
+        },
+        {
+          "q": "This lab's bidding rules are",
+          "choices": [
+            "Complete",
+            "Not reproduced. Read the suite you own",
+            "The abandon window",
+            "The module list"
+          ],
+          "answer": 1,
+          "why": "Rules differ by suite."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Time off in Plus?",
+          "back": "Named."
+        },
+        {
+          "front": "Shift bidding?",
+          "back": "Named, rules not copied here."
+        },
+        {
+          "front": "Bid without a schedule change?",
+          "back": "The dialer never sees it."
+        },
+        {
+          "front": "Second login?",
+          "back": "Connector probably unused."
+        }
+      ],
+      "lab": {
+        "title": "One path",
+        "goal": "Say where an agent requests time off on your paper floor.",
+        "steps": [
+          "Plus or the CRM",
+          "The schedule updates",
+          "The dialer count updates"
+        ],
+        "success": "There is no mystery URL.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Bids are a spreadsheet",
+        "symptom": "Plus can do it. The spreadsheet is the real roster and it is wrong by Thursday.",
+        "log": "BID sheet PLUS unused",
+        "choices": [
+          "Move bidding into the suite and publish one schedule",
+          "Keep both forever",
+          "Delete QM",
+          "Stop SFTP"
+        ],
+        "answer": 0,
+        "cause": "Two rosters is how you overdial.",
+        "fix": "One schedule."
+      }
+    },
+    {
+      "id": "l07",
+      "title": "What this lab will not pretend to run",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Keep the lab and the tenant apart",
+        "Name the system of record"
+      ],
+      "paragraphs": [
+        "This lab has no live WEM tenant. You cannot approve a real time-off request here. You can say which product page promised the button, which retention clock will delete the evidence, and which dialer mistake a bad roster causes.",
+        "That is the useful line between a simulator and a system of record. The pacing bench is a classroom. The schedule in the customer's suite is the roster. The campaign dialog is the mode."
+      ],
+      "cites": [
+        {
+          "label": "Workforce engagement management",
+          "url": "https://www.five9.com/products/capabilities/workforce-optimization"
+        },
+        {
+          "label": "Data retention",
+          "url": "https://www.five9.com/legal/dataretention"
+        },
+        {
+          "label": "Agent Desktop",
+          "url": "https://www.five9.com/products/capabilities/agent-desktop"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "compare",
+        "title": "Classroom versus record",
+        "caption": "Say which one you are touching.",
+        "leftTitle": "This lab",
+        "rightTitle": "The customer",
+        "left": [
+          "Pacing model",
+          "IVR learning JSON",
+          "Cited explanations"
+        ],
+        "right": [
+          "WEM suite",
+          "Campaign dialog",
+          "Offload server"
+        ]
+      },
+      "flow": {
+        "title": "A question arrives",
+        "lanes": [
+          "Person",
+          "Lab",
+          "Suite"
+        ],
+        "steps": [
+          {
+            "lane": "Person",
+            "title": "Ask",
+            "detail": "How many people are on break?",
+            "frame": "ask"
+          },
+          {
+            "lane": "Lab",
+            "title": "Refuse",
+            "detail": "This lab does not know.",
+            "frame": "no"
+          },
+          {
+            "lane": "Suite",
+            "title": "Answer",
+            "detail": "The schedule knows.",
+            "frame": "yes"
+          },
+          {
+            "lane": "Lab",
+            "title": "Teach",
+            "detail": "The lab can say what to subtract.",
+            "frame": "teach"
+          },
+          {
+            "lane": "Suite",
+            "title": "Offload",
+            "detail": "Recordings live or die on the copy job.",
+            "frame": "copy"
+          },
+          {
+            "lane": "Person",
+            "title": "Write",
+            "detail": "The answer names the system.",
+            "frame": "write"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "This lab can approve time off. True or false?",
+          "choices": [
+            "True",
+            "False",
+            "True on Tuesdays",
+            "True if you export JSON"
+          ],
+          "answer": 1,
+          "why": "There is no tenant."
+        },
+        {
+          "q": "The pacing bench is",
+          "choices": [
+            "The dialer",
+            "A classroom model",
+            "The schedule",
+            "The offload"
+          ],
+          "answer": 1,
+          "why": "It is labeled that way."
+        },
+        {
+          "q": "The roster of record is",
+          "choices": [
+            "A flashcard",
+            "The WEM schedule in the suite you bought",
+            "The hero animation",
+            "Chrome 46"
+          ],
+          "answer": 1,
+          "why": "Look there."
+        },
+        {
+          "q": "A recording of record after 30 days is",
+          "choices": [
+            "Always in VCC",
+            "Wherever the offload put it, if the job worked",
+            "In the quiz",
+            "In the theme"
+          ],
+          "answer": 1,
+          "why": "The retention page."
+        },
+        {
+          "q": "Saying 'the AI will staff it' is",
+          "choices": [
+            "A design",
+            "Not a screen",
+            "A module",
+            "A codec"
+          ],
+          "answer": 1,
+          "why": "Name the suite."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Approve time off here?",
+          "back": "No."
+        },
+        {
+          "front": "Pacing bench?",
+          "back": "A model."
+        },
+        {
+          "front": "Roster of record?",
+          "back": "The suite."
+        },
+        {
+          "front": "Recording after the clock?",
+          "back": "The offload."
+        }
+      ],
+      "lab": {
+        "title": "Name the system",
+        "goal": "For schedule, mode, and recording, name the system of record.",
+        "steps": [
+          "WEM suite",
+          "Campaign dialog",
+          "Offload"
+        ],
+        "success": "None of the three is this website.",
+        "href": "#/pacing"
+      },
+      "fault": {
+        "title": "Someone configured production inside the simulator",
+        "symptom": "They set lines per agent here and told the floor it was live.",
+        "log": "BENCH saved as production",
+        "choices": [
+          "Redo it in the campaign dialog",
+          "Trust the browser",
+          "Delete the schedule",
+          "Disable TLS"
+        ],
+        "answer": 0,
+        "cause": "The bench does not dial.",
+        "fix": "Set the mode in the domain."
+      }
+    }
+  ]
+}

@@ -1,0 +1,364 @@
+{
+  "items": [
+    {
+      "id": "busy-dnis",
+      "severity": "Sev 2",
+      "title": "The new DNIS is busy",
+      "symptom": "Callers hear busy. No agent phone rings.",
+      "log": "CAMPAIGN Retail type=inbound state=NOT_RUNNING dnis=8005550101 script=hours agents_ready=6",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm",
+      "source": "Inbound campaigns",
+      "resolution": "Start the inbound campaign. A stopped campaign does not answer, even when agents are Ready and a script exists.",
+      "steps": [
+        {
+          "q": "What do you check first?",
+          "choices": [
+            "The Equinix edge",
+            "Whether the inbound campaign is running",
+            "The sales badge",
+            "The theme"
+          ],
+          "answer": 1,
+          "why": "The inbound topic: a campaign that is not running does not answer."
+        },
+        {
+          "q": "Agents are Ready. Does that answer the DNIS?",
+          "choices": [
+            "Yes",
+            "No. The campaign still has to be running",
+            "Only if the codec is G.729",
+            "Only on a matrix report"
+          ],
+          "answer": 1,
+          "why": "Ready agents do not help a stopped campaign."
+        },
+        {
+          "q": "After it is started, what else must be true?",
+          "choices": [
+            "A fake exam code",
+            "The script and the DNIS belong to that running campaign",
+            "TLS 1.1",
+            "Analog headsets"
+          ],
+          "answer": 1,
+          "why": "The campaign needs its script and its number."
+        }
+      ]
+    },
+    {
+      "id": "blend-abandon",
+      "severity": "Sev 1",
+      "title": "Predictive lines and an inbound queue",
+      "symptom": "Abandon rate climbs after inbound agents were told to 'also take outbound'.",
+      "log": "MODE predictive agents_outbound=4 agents_also_inbound=4 ABANDON climbing WINDOW=US-30d",
+      "url": "https://www.five9.com/products/capabilities/dialer-system",
+      "source": "Dialer product page",
+      "resolution": "Stop treating blended bodies as dedicated predictive agents. The dialer page's guidance is a larger dedicated team. Do not invent a new abandon percent.",
+      "steps": [
+        {
+          "q": "What is wrong with the staffing?",
+          "choices": [
+            "Nothing, blended is a fourth campaign type",
+            "Predictive guidance wants a dedicated team, and these agents are also on inbound",
+            "G.711 is uncompressed",
+            "The profile has an ANI"
+          ],
+          "answer": 1,
+          "why": "Blended is staffing. Predictive product guidance is about team size and dedication."
+        },
+        {
+          "q": "Do you type a new Max Abandoned Call Percentage from memory?",
+          "choices": [
+            "Yes, 3",
+            "No. The page warns, and this lab does not cite a default percent",
+            "Yes, 20",
+            "Yes, 0"
+          ],
+          "answer": 1,
+          "why": "Do not invent the number."
+        },
+        {
+          "q": "Who is involved if the measurement window itself must change?",
+          "choices": [
+            "The theme picker",
+            "A Five9 representative. US is described as a rolling 30 days",
+            "RedSky",
+            "The Menu module"
+          ],
+          "answer": 1,
+          "why": "The defaults page says a representative sets the window."
+        }
+      ]
+    },
+    {
+      "id": "tcpa-paste",
+      "severity": "Sev 3",
+      "title": "Dial stays grey",
+      "symptom": "Agents paste from the CRM. Dial never enables.",
+      "log": "MODE tcpa_manual_touch paste=blocked typed= dial=disabled preview_timeout=not_ready",
+      "url": "https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US",
+      "source": "TCPA manual touch",
+      "resolution": "The control is working. Type the external number. Dial enables on a match. Do not flip the campaign to another mode to get around it.",
+      "steps": [
+        {
+          "q": "Why is Dial disabled?",
+          "choices": [
+            "The skill is empty",
+            "Paste is blocked and nothing was typed",
+            "The call log expired",
+            "SRV failed"
+          ],
+          "answer": 1,
+          "why": "TCPA manual touch requires typing."
+        },
+        {
+          "q": "A preview times out. What happens?",
+          "choices": [
+            "The record auto-dials",
+            "The agent goes Not Ready and nothing auto-dials",
+            "The DID is released",
+            "A matrix exports"
+          ],
+          "answer": 1,
+          "why": "That is the article."
+        },
+        {
+          "q": "Which permission is about skipping, not pasting?",
+          "choices": [
+            "User Can Edit Call Variables",
+            "User Can Skip Contact Records in TCPA Manual Touch",
+            "Reporting",
+            "WEM admin"
+          ],
+          "answer": 1,
+          "why": "Skipping is its own permission."
+        }
+      ]
+    },
+    {
+      "id": "default-queue",
+      "severity": "Sev 2",
+      "title": "Everyone lands on Default",
+      "symptom": "The IVR sounds right. The Billing skill never sees the call.",
+      "log": "MODULE SkillTransfer skills=[] queue=Default disp_default=Abandon",
+      "url": "https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features",
+      "source": "Skill Transfer functions",
+      "resolution": "Select the Billing skill on the Skill Transfer. The community article says no skill routes to Default.",
+      "steps": [
+        {
+          "q": "Why Default?",
+          "choices": [
+            "The campaign is stopped",
+            "The module has no skill selected",
+            "Paste was used",
+            "The ANI is local"
+          ],
+          "answer": 1,
+          "why": "No skill selected goes to Default."
+        },
+        {
+          "q": "How many skills should you put on the module if you want a clean report?",
+          "choices": [
+            "As many as possible",
+            "The community article recommends one skill per module",
+            "Zero",
+            "Only Default"
+          ],
+          "answer": 1,
+          "why": "One skill keeps the report readable."
+        },
+        {
+          "q": "What is the default disposition named for that module?",
+          "choices": [
+            "Sale",
+            "Abandon",
+            "Final",
+            "Busy"
+          ],
+          "answer": 1,
+          "why": "The article says Abandon."
+        }
+      ]
+    },
+    {
+      "id": "variables-late",
+      "severity": "Sev 3",
+      "title": "Last month's column is empty",
+      "symptom": "A call variable was enabled this morning. Historical rows are blank.",
+      "log": "CAV name=CustomerType reporting=on since=today custom_disp=Sale checked=no",
+      "url": "https://community.five9.com/s/article/Administrator-Enabling-Call-Variables-for-Reporting?language=en_US",
+      "source": "Call variables for reporting",
+      "resolution": "Call variables are not historical. New calls can populate. Also check the custom disposition; Apply to All does not cover it.",
+      "steps": [
+        {
+          "q": "Will yesterday backfill?",
+          "choices": [
+            "Yes",
+            "No",
+            "Only for inbound",
+            "Only as a CSV"
+          ],
+          "answer": 1,
+          "why": "The article says they are not historical."
+        },
+        {
+          "q": "The Sale disposition is custom and still empty. Why?",
+          "choices": [
+            "Apply to All skipped custom dispositions",
+            "G.711",
+            "The domain closed",
+            "RedSky"
+          ],
+          "answer": 0,
+          "why": "Custom dispositions need their own check."
+        },
+        {
+          "q": "Which permission edits the variables?",
+          "choices": [
+            "User Can Edit Call Variables",
+            "User Can Skip Contact Records in TCPA Manual Touch",
+            "A sales badge",
+            "Java on Mac ARM"
+          ],
+          "answer": 0,
+          "why": "That is the permission name."
+        }
+      ]
+    },
+    {
+      "id": "wss-pop",
+      "severity": "Sev 2",
+      "title": "Voice is up, Salesforce is blank",
+      "symptom": "Agents hear the caller. The Lightning adapter never pops.",
+      "log": "VOICE rtp=ok ADAPTER=salesforce WSS=blocked proxy=corporate package_pdf=2.46",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "source": "Technical requirements PDF",
+      "resolution": "The proxy must pass Secure WebSocket. Voice and the adapter are different channels. Recheck the package version against the current PDF before you freeze 2.46.",
+      "steps": [
+        {
+          "q": "What does a live call prove about the adapter?",
+          "choices": [
+            "That WSS works",
+            "Nothing. The adapter is a separate path",
+            "That the package is current",
+            "That E911 is registered"
+          ],
+          "answer": 1,
+          "why": "Plus adapters use HTTPS and WSS."
+        },
+        {
+          "q": "The corporate proxy drops WebSocket. What do you change?",
+          "choices": [
+            "The abandon percent",
+            "The proxy, so it supports WSS",
+            "The skill name",
+            "List penetration"
+          ],
+          "answer": 1,
+          "why": "The requirements say the proxy must support WSS."
+        },
+        {
+          "q": "How should 2.46 appear in the ticket?",
+          "choices": [
+            "As a permanent law",
+            "As the number in the PDF you read, with a date",
+            "As an exam code",
+            "As the ANI"
+          ],
+          "answer": 1,
+          "why": "Versions move."
+        }
+      ]
+    },
+    {
+      "id": "stale-e911",
+      "severity": "Sev 1",
+      "title": "Home agents would send the HQ address",
+      "symptom": "A test shows the downtown office for an agent who works from home.",
+      "log": "E911 user=sam loc=HQ actual=home history=invite_contains_HQ",
+      "url": "https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF",
+      "source": "E911 data sheet",
+      "resolution": "Register the dispatchable home location and retest. MyE911 history should then show that place. Do not add a dialing prefix.",
+      "steps": [
+        {
+          "q": "What is wrong?",
+          "choices": [
+            "The codec",
+            "The registered location is not where the agent is",
+            "The sales badge",
+            "The matrix layout"
+          ],
+          "answer": 1,
+          "why": "Dispatchable location has to be real."
+        },
+        {
+          "q": "How should the agent dial?",
+          "choices": [
+            "9-911",
+            "911, no prefix",
+            "A skill number",
+            "The ANI"
+          ],
+          "answer": 1,
+          "why": "The data sheet says direct 911."
+        },
+        {
+          "q": "What confirms the fix?",
+          "choices": [
+            "A green theme",
+            "MyE911 history shows the home location and the invite",
+            "A shorter call log",
+            "Vertical dialing"
+          ],
+          "answer": 1,
+          "why": "History includes location and the SIP invite."
+        }
+      ]
+    },
+    {
+      "id": "one-way-audio",
+      "severity": "Sev 2",
+      "title": "The caller hears silence after a pause",
+      "symptom": "Audio works for a few seconds, then the caller hears nothing.",
+      "log": "NAT layers=1 UDP_idle=15s keepalive=off codec=G.711 path=vpn split_tunnel_excludes=five9",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "source": "Technical requirements PDF",
+      "resolution": "Lengthen the UDP binding toward 30 seconds or add keepalives, and stop excluding Five9 from the split tunnel. Keep G.711. Do not treat a 20 ms ptime rumor as the PDF.",
+      "steps": [
+        {
+          "q": "Which timer matches the symptom?",
+          "choices": [
+            "The 60-day call log",
+            "UDP idle shorter than 30 seconds with no keepalive",
+            "DID retention",
+            "The UK 24-hour abandon window"
+          ],
+          "answer": 1,
+          "why": "The requirements use 30 seconds as the UDP idle planning number."
+        },
+        {
+          "q": "The VPN excludes Five9 names. Is that correct?",
+          "choices": [
+            "Yes",
+            "No. Do not exclude them from the split tunnel",
+            "Only for Studio ports",
+            "Only for analog headsets"
+          ],
+          "answer": 1,
+          "why": "Keep Five9 inside the tunnel."
+        },
+        {
+          "q": "What do you refuse to claim?",
+          "choices": [
+            "G.711 is the default",
+            "That 20 ms ptime is a Five9 requirement",
+            "TLS 1.2 is required",
+            "Double NAT is rejected"
+          ],
+          "answer": 1,
+          "why": "20 ms is a practitioner note, not a figure this lab quotes from the PDF."
+        }
+      ]
+    }
+  ]
+}

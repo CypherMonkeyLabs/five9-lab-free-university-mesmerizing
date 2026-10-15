@@ -1,0 +1,338 @@
+{
+  "map": "<svg viewBox=\"0 0 720 420\" role=\"img\" aria-label=\"Neighbors of a Five9 domain\">\n<rect width=\"720\" height=\"420\" fill=\"#041018\"></rect>\n<rect x=\"250\" y=\"160\" width=\"220\" height=\"90\" rx=\"14\" fill=\"#102033\" stroke=\"#3ee0ff\"></rect>\n<text x=\"360\" y=\"198\" text-anchor=\"middle\" fill=\"#e7eef8\" font-size=\"16\">Five9 domain</text>\n<text x=\"360\" y=\"220\" text-anchor=\"middle\" fill=\"#9aefff\" font-size=\"12\">skills, campaigns, IVR</text>\n<g fill=\"#102033\" stroke=\"#f5b942\" font-size=\"12\">\n<rect x=\"40\" y=\"40\" width=\"160\" height=\"52\" rx=\"10\"></rect>\n<rect x=\"280\" y=\"36\" width=\"160\" height=\"52\" rx=\"10\"></rect>\n<rect x=\"520\" y=\"40\" width=\"160\" height=\"52\" rx=\"10\"></rect>\n<rect x=\"40\" y=\"300\" width=\"160\" height=\"52\" rx=\"10\"></rect>\n<rect x=\"250\" y=\"310\" width=\"220\" height=\"52\" rx=\"10\"></rect>\n<rect x=\"520\" y=\"300\" width=\"160\" height=\"52\" rx=\"10\"></rect>\n</g>\n<g fill=\"#e7eef8\" font-size=\"13\">\n<text x=\"120\" y=\"70\" text-anchor=\"middle\">SIP path</text>\n<text x=\"360\" y=\"66\" text-anchor=\"middle\">Agent desktop</text>\n<text x=\"600\" y=\"70\" text-anchor=\"middle\">CRM adapter</text>\n<text x=\"120\" y=\"330\" text-anchor=\"middle\">E911 / RedSky</text>\n<text x=\"360\" y=\"340\" text-anchor=\"middle\">WEM and reports</text>\n<text x=\"600\" y=\"330\" text-anchor=\"middle\">IVA and GenAI</text>\n</g>\n</svg>",
+  "mapCaption": "A teaching map. Each box fails on its own. SIP up does not prove the adapter, the location, or the bot.",
+  "glossary": [
+    {
+      "term": "Domain",
+      "meaning": "The VCC tenant. Skills, users, lists, and campaigns stay inside it.",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "source": "Planning your implementation"
+    },
+    {
+      "term": "Skill group",
+      "meaning": "Agents or supervisors who can take a campaign's work. A user and a campaign can have more than one.",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm",
+      "source": "Skill groups"
+    },
+    {
+      "term": "User profile",
+      "meaning": "The permission template for a person. Not a campaign profile.",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "source": "Planning your implementation"
+    },
+    {
+      "term": "Campaign profile",
+      "meaning": "Overrides defaults such as ANI. One profile is assigned to a campaign. The same profile can be reused.",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/campaign-profiles/_ch-campaign-profiles.htm",
+      "source": "Campaign profiles"
+    },
+    {
+      "term": "Campaign",
+      "meaning": "Inbound, outbound, or autodial. Blended is staffing language, not a fourth type.",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm",
+      "source": "Inbound campaigns"
+    },
+    {
+      "term": "DNIS",
+      "meaning": "The number an inbound campaign answers. A stopped campaign does not answer.",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm",
+      "source": "Inbound campaigns"
+    },
+    {
+      "term": "Disposition",
+      "meaning": "The outcome code on a call. Final disposition stops the other numbers on that record for the campaign.",
+      "url": "https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US",
+      "source": "List dialing modes"
+    },
+    {
+      "term": "List penetration",
+      "meaning": "The default list walk: first number on every record, then the next number.",
+      "url": "https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US",
+      "source": "List dialing modes"
+    },
+    {
+      "term": "Vertical dialing",
+      "meaning": "Finishes the numbers on one record before moving on. Community notes say the compass wording is easy to misread.",
+      "url": "https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US",
+      "source": "List dialing modes"
+    },
+    {
+      "term": "Preview",
+      "meaning": "The agent sees CRM history before the dial.",
+      "url": "https://www.five9.com/products/capabilities/dialer-system",
+      "source": "Dialer product page"
+    },
+    {
+      "term": "Progressive",
+      "meaning": "The outbound page describes one customer call per available agent. The dialer page also says adaptive pace. Quote the page you mean.",
+      "url": "https://www.five9.com/products/capabilities/outbound-contact-center",
+      "source": "Outbound product page"
+    },
+    {
+      "term": "Power",
+      "meaning": "A configured number of calls per agent, with an abandon throttle.",
+      "url": "https://www.five9.com/products/capabilities/dialer-system",
+      "source": "Dialer product page"
+    },
+    {
+      "term": "Predictive",
+      "meaning": "Algorithmic pacing. Product guidance talks about teams larger than about ten agents.",
+      "url": "https://www.five9.com/products/capabilities/dialer-system",
+      "source": "Dialer product page"
+    },
+    {
+      "term": "Manual touch",
+      "meaning": "No automatic dial. TCPA manual touch adds typing, blocks paste, and enables Dial on a match.",
+      "url": "https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US",
+      "source": "TCPA manual touch"
+    },
+    {
+      "term": "Max Abandoned Call Percentage",
+      "meaning": "A campaign field with a warning if you change it. This lab does not state a numeric default.",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm",
+      "source": "Default campaign settings"
+    },
+    {
+      "term": "IVR module",
+      "meaning": "A named block in the IVR Administrator's Guide, such as Menu, Play, If/Else, or Skill Transfer.",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm",
+      "source": "IVR modules"
+    },
+    {
+      "term": "Skill Transfer",
+      "meaning": "Sends the call toward one or more skills. No skill selected means the Default queue in the community write-up.",
+      "url": "https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features",
+      "source": "Skill Transfer functions"
+    },
+    {
+      "term": "Default queue",
+      "meaning": "Where a Skill Transfer with no skill goes, per the community article.",
+      "url": "https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features",
+      "source": "Skill Transfer functions"
+    },
+    {
+      "term": "Call variable",
+      "meaning": "Reportable only after the edit permission and the reporting flag. Not historical.",
+      "url": "https://community.five9.com/s/article/Administrator-Enabling-Call-Variables-for-Reporting?language=en_US",
+      "source": "Call variables for reporting"
+    },
+    {
+      "term": "Reporting role",
+      "meaning": "Required, with a reporting permission, before standard reports appear.",
+      "url": "https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports",
+      "source": "Generating standard reports"
+    },
+    {
+      "term": "Call log",
+      "meaning": "A report with filters. A July 2026 community article describes about 60 days unless retention is extended.",
+      "url": "https://community.five9.com/s/article/Reporting-Apply-Filter-s-in-the-Call-Log-Report",
+      "source": "Call log filters"
+    },
+    {
+      "term": "Web2Campaign",
+      "meaning": "One of the API names on the APIs and SDKs page.",
+      "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks",
+      "source": "APIs and SDKs"
+    },
+    {
+      "term": "CRM SDK",
+      "meaning": "The path for a CRM that is not a named Plus adapter.",
+      "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks",
+      "source": "APIs and SDKs"
+    },
+    {
+      "term": "Web Connector",
+      "meaning": "Opens a URL. Not the same object as a Plus adapter.",
+      "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks",
+      "source": "APIs and SDKs"
+    },
+    {
+      "term": "Plus adapter",
+      "meaning": "The listed CRM integrations, using HTTPS and Secure WebSocket.",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "source": "Technical requirements PDF"
+    },
+    {
+      "term": "G.711",
+      "meaning": "The default codec in the technical requirements, described as uncompressed.",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "source": "Technical requirements PDF"
+    },
+    {
+      "term": "DNS SRV",
+      "meaning": "The preferred lookup for SIP targets in the technical requirements.",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "source": "Technical requirements PDF"
+    },
+    {
+      "term": "TLS 1.2",
+      "meaning": "The required TLS version. TLS 1.1 is not supported.",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "source": "Technical requirements PDF"
+    },
+    {
+      "term": "Direct Connect",
+      "meaning": "Layer-3 handoff, full duplex, BGP failover, in the technical requirements.",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "source": "Technical requirements PDF"
+    },
+    {
+      "term": "Certified Caller",
+      "meaning": "Five9's STIR/SHAKEN program. Not the same thing as a local ANI on a profile.",
+      "url": "https://www.five9.com/resources/five9_certified_caller",
+      "source": "Certified Caller"
+    },
+    {
+      "term": "E911",
+      "meaning": "Direct 911 with a dispatchable location. The data sheet names RedSky.",
+      "url": "https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF",
+      "source": "E911 data sheet"
+    },
+    {
+      "term": "Dispatchable location",
+      "meaning": "The place responders can find the caller. A stale HQ address fails that test.",
+      "url": "https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF",
+      "source": "E911 data sheet"
+    },
+    {
+      "term": "MyE911",
+      "meaning": "Org-admin history: time, user, number, location, recording, SIP invite.",
+      "url": "https://community.five9.com/s/article/MyE911-Call-History?language=en_US",
+      "source": "MyE911 call history"
+    },
+    {
+      "term": "WEM",
+      "meaning": "Workforce, quality, analytics, surveys, and recording. Native suite and a Verint partnership are both on the product page.",
+      "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+      "source": "Workforce engagement management"
+    },
+    {
+      "term": "GenAI Studio",
+      "meaning": "Knowledge and prompts for Five9 AI apps. This lab does not name a default model.",
+      "url": "https://www.five9.com/products/capabilities/gen-ai-studio",
+      "source": "GenAI Studio"
+    },
+    {
+      "term": "Studio task key",
+      "meaning": "The key copied from a ChatBot task into VCC for a digital IVA.",
+      "url": "https://community.five9.com/s/article/Studio-7-Integrate-Digital-IVA-in-Studio-with-VCC?language=en_US",
+      "source": "Studio digital IVA with VCC"
+    },
+    {
+      "term": "Agent Desktop Plus",
+      "meaning": "The single agent screen. Same underlying technology as the prebuilt CRM adapters, per the desktop page.",
+      "url": "https://www.five9.com/products/capabilities/agent-desktop",
+      "source": "Agent Desktop"
+    },
+    {
+      "term": "Retention",
+      "meaning": "Separate clocks for audio, E911 recordings, agent data, campaign state, domains, and DIDs.",
+      "url": "https://www.five9.com/legal/dataretention",
+      "source": "Data retention"
+    },
+    {
+      "term": "RFC 3261",
+      "meaning": "The SIP specification. It does not choose your dial plan.",
+      "url": "https://www.rfc-editor.org/rfc/rfc3261",
+      "source": "RFC 3261"
+    },
+    {
+      "term": "RFC 4733",
+      "meaning": "Telephone events, the usual way DTMF rides in the media.",
+      "url": "https://www.rfc-editor.org/rfc/rfc4733",
+      "source": "RFC 4733"
+    }
+  ],
+  "integrations": [
+    {
+      "system": "Salesforce Plus adapter",
+      "how": "Named in the technical requirements, with Lightning CTI. Package 2.46 is a dated PDF figure.",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "source": "Technical requirements PDF"
+    },
+    {
+      "system": "Salesforce IVR module",
+      "how": "A script module, including SFDC Einstein. Different from the desktop adapter.",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm",
+      "source": "IVR modules"
+    },
+    {
+      "system": "ServiceNow Plus adapter",
+      "how": "Service Operations and Configurable workspaces. Release names in the PDF this lab read: Australia, Zurich, Yokohama.",
+      "url": "https://documentation.five9.com/bundle/servicenowadmins/page/crm-admins/ServiceNow/introduction/_ch-configuring-the-five9-plus-adapter-for-servicenow.htm",
+      "source": "ServiceNow Plus adapter"
+    },
+    {
+      "system": "Dynamics 365, Zendesk, Oracle, NetSuite, Epic",
+      "how": "Each is a named Plus adapter. This lab does not copy a package number for them.",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "source": "Technical requirements PDF"
+    },
+    {
+      "system": "CRM SDK",
+      "how": "Bring-your-own CRM when no named adapter exists.",
+      "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks",
+      "source": "APIs and SDKs"
+    },
+    {
+      "system": "Zoom Phone and Microsoft Teams",
+      "how": "Named prebuilt connections. A local UC client is also about 320 kbps.",
+      "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks",
+      "source": "APIs and SDKs"
+    },
+    {
+      "system": "Verint",
+      "how": "Named on the WEM page as a partnership. Not a synonym for native WEM.",
+      "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+      "source": "Workforce engagement management"
+    },
+    {
+      "system": "RedSky",
+      "how": "Emergency-location partner on the E911 data sheet. Not the ITSP.",
+      "url": "https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF",
+      "source": "E911 data sheet"
+    },
+    {
+      "system": "Five9 ITSP",
+      "how": "One of three SIP stories. The others are your ITSP to Five9 SBCs, or a gateway.",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "source": "Technical requirements PDF"
+    },
+    {
+      "system": "Cisco, Avaya, or Asterisk gateway",
+      "how": "Gateway-to-gateway over internet, VPN, or Direct Connect. Not a UCCX importer.",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "source": "Technical requirements PDF"
+    },
+    {
+      "system": "Studio digital IVA",
+      "how": "A ChatBot task key from the matching regional Studio portal into VCC.",
+      "url": "https://community.five9.com/s/article/Studio-7-Integrate-Digital-IVA-in-Studio-with-VCC?language=en_US",
+      "source": "Studio digital IVA with VCC"
+    },
+    {
+      "system": "GenAI Studio",
+      "how": "Prompts and knowledge. Agent Assist summaries are the initial consumer the page names.",
+      "url": "https://www.five9.com/products/capabilities/gen-ai-studio",
+      "source": "GenAI Studio"
+    },
+    {
+      "system": "Statistics and Reporting web services",
+      "how": "Two different API names. A wallboard and a standard report are different pipes.",
+      "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks",
+      "source": "APIs and SDKs"
+    },
+    {
+      "system": "Certified Caller",
+      "how": "STIR/SHAKEN attestation for FCC and CRTC. Separate from profile ANI.",
+      "url": "https://www.five9.com/resources/five9_certified_caller",
+      "source": "Certified Caller"
+    }
+  ],
+  "uncertain": [
+    "Progressive pacing is worded differently on the dialer page and the outbound page. The glossary says so.",
+    "Salesforce package 2.46 and the ServiceNow release names are from the technical requirements read in October 2026.",
+    "The call-log window of about 60 days is from a community article dated 14 July 2026.",
+    "SOAP versus REST is not assigned per API family."
+  ]
+}

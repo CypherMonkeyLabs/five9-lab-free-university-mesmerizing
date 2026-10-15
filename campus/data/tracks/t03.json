@@ -1,0 +1,1359 @@
+{
+  "id": "t03",
+  "title": "Inbound campaigns",
+  "short": "Inbound",
+  "blurb": "DNIS, run state, scripts, overflow, schedules, and the pause between calls.",
+  "group": "Voice",
+  "level": "Practice",
+  "summary": "Inbound is a running campaign plus a script. Busy means the campaign is not in the call.",
+  "lessons": [
+    {
+      "id": "l01",
+      "title": "A DNIS answers only while the campaign runs",
+      "level": "foundation",
+      "minutes": 12,
+      "objectives": [
+        "Tie DNIS, run state, and IVR together",
+        "Check state before the carrier"
+      ],
+      "paragraphs": [
+        "An inbound campaign receives calls for a DNIS and processes them with that campaign's IVR script. The inbound topic is blunt about state: if the campaign is not running, callers hear a busy signal.",
+        "Greetings, skills, and hold music never get a chance to run in that state. The first check on a new number is the campaign state, not the carrier."
+      ],
+      "cites": [
+        {
+          "label": "Inbound campaigns",
+          "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "path",
+        "title": "Inbound answer",
+        "caption": "State comes before treatment.",
+        "rows": [
+          {
+            "label": "DNIS"
+          },
+          {
+            "label": "Campaign running"
+          },
+          {
+            "label": "IVR script"
+          },
+          {
+            "label": "Skill or treatment"
+          }
+        ]
+      },
+      "flow": {
+        "title": "A call hits a DNIS",
+        "lanes": [
+          "PSTN",
+          "VCC",
+          "Caller"
+        ],
+        "steps": [
+          {
+            "lane": "PSTN",
+            "title": "INVITE",
+            "detail": "The carrier delivers the DNIS.",
+            "frame": "DNIS"
+          },
+          {
+            "lane": "VCC",
+            "title": "State",
+            "detail": "The campaign must be running.",
+            "frame": "RUNNING"
+          },
+          {
+            "lane": "VCC",
+            "title": "Busy",
+            "detail": "If it is stopped, the caller hears busy.",
+            "frame": "busy"
+          },
+          {
+            "lane": "VCC",
+            "title": "IVR",
+            "detail": "The script starts only after the campaign answers.",
+            "frame": "script"
+          },
+          {
+            "lane": "Caller",
+            "title": "Prompt",
+            "detail": "Greetings and menus play from the script.",
+            "frame": "prompt"
+          },
+          {
+            "lane": "VCC",
+            "title": "Skill",
+            "detail": "Skill Transfer queues to agents.",
+            "frame": "skill"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "A stopped inbound campaign sounds like",
+          "choices": [
+            "Ringback forever",
+            "A busy signal",
+            "A Studio task",
+            "Silence required by law"
+          ],
+          "answer": 1,
+          "why": "The inbound topic says callers hear busy."
+        },
+        {
+          "q": "What processes the answered call?",
+          "choices": [
+            "The campaign IVR script",
+            "The agent's notepad",
+            "Only WEM",
+            "Only the ANI"
+          ],
+          "answer": 1,
+          "why": "Calls are processed according to the IVR script of the campaign."
+        },
+        {
+          "q": "DNIS means",
+          "choices": [
+            "The agent's skill level",
+            "The number the caller dialed, as presented to the campaign",
+            "The disposition",
+            "The abandon window"
+          ],
+          "answer": 1,
+          "why": "Inbound campaigns receive calls coming from a DNIS."
+        },
+        {
+          "q": "Hold music is configured where, relative to answer?",
+          "choices": [
+            "Before the campaign exists, on the carrier only",
+            "In the treatment after the campaign has answered",
+            "In the JRE",
+            "In MyE911"
+          ],
+          "answer": 1,
+          "why": "Prompts and hold are part of the running campaign's treatment."
+        },
+        {
+          "q": "First check when a new number is busy?",
+          "choices": [
+            "Rewrite the IVR",
+            "Campaign run state",
+            "Change G.711",
+            "Reset dispositions"
+          ],
+          "answer": 1,
+          "why": "State explains busy before the script does."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Stopped inbound?",
+          "back": "Busy."
+        },
+        {
+          "front": "What runs after answer?",
+          "back": "The campaign IVR."
+        },
+        {
+          "front": "What is DNIS?",
+          "back": "The called number presented to the campaign."
+        },
+        {
+          "front": "First busy check?",
+          "back": "Is the campaign running?"
+        }
+      ],
+      "lab": {
+        "title": "State drill",
+        "goal": "List three states you would check before a trunk ticket.",
+        "steps": [
+          "Campaign running",
+          "DNIS attached",
+          "Script assigned"
+        ],
+        "success": "Busy is explained or you have a real trunk symptom.",
+        "href": ""
+      },
+      "fault": {
+        "title": "New store number is busy",
+        "symptom": "The DID was purchased this morning.",
+        "log": "DNIS 8005550148 CAMPAIGN Stores state=NOT_RUNNING",
+        "choices": [
+          "Start the campaign",
+          "Enable TLS 1.1",
+          "Turn on Efficiency Mode",
+          "Delete the skill"
+        ],
+        "answer": 0,
+        "cause": "Not running means busy.",
+        "fix": "Start Stores."
+      }
+    },
+    {
+      "id": "l02",
+      "title": "The script is the inbound product",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "List inbound script jobs",
+        "Remember that connect ends the script"
+      ],
+      "paragraphs": [
+        "Once the campaign answers, the IVR script is the product the caller meets. The inbound topic lists custom greetings, loops and branching, collecting information, using contact data, voicemail when the queue is long, forward to a third party, and priority.",
+        "Skill Transfer is how that script hands the caller to a queue. The community article says that after an agent is connected, the IVR script is complete. A module after Skill Transfer is not a second conversation with the same caller."
+      ],
+      "cites": [
+        {
+          "label": "Inbound campaigns",
+          "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm"
+        },
+        {
+          "label": "Skill Transfer functions",
+          "url": "https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features"
+        }
+      ],
+      "uncertain": [
+        "A post-call survey exists as a campaign-admin topic title in the docs tree. This lesson does not describe its screens. Open that topic before you design one."
+      ],
+      "figure": {
+        "kind": "stack",
+        "title": "What an inbound script can do",
+        "caption": "From the inbound campaign topic.",
+        "rows": [
+          {
+            "label": "Greet and branch"
+          },
+          {
+            "label": "Collect digits"
+          },
+          {
+            "label": "Use contact data"
+          },
+          {
+            "label": "Queue with Skill Transfer"
+          },
+          {
+            "label": "Voicemail or third party"
+          }
+        ]
+      },
+      "flow": {
+        "title": "From greeting to agent",
+        "lanes": [
+          "Caller",
+          "IVR",
+          "Agent"
+        ],
+        "steps": [
+          {
+            "lane": "Caller",
+            "title": "Hello",
+            "detail": "The Play or Menu greeting runs.",
+            "frame": "greet"
+          },
+          {
+            "lane": "IVR",
+            "title": "Branch",
+            "detail": "Digits or speech pick a path.",
+            "frame": "branch"
+          },
+          {
+            "lane": "IVR",
+            "title": "Data",
+            "detail": "A lookup can read the contact.",
+            "frame": "data"
+          },
+          {
+            "lane": "IVR",
+            "title": "Queue",
+            "detail": "Skill Transfer places the caller.",
+            "frame": "queue"
+          },
+          {
+            "lane": "Agent",
+            "title": "Answer",
+            "detail": "The script is complete.",
+            "frame": "done"
+          },
+          {
+            "lane": "IVR",
+            "title": "Else",
+            "detail": "Voicemail or a third-party forward is the other exit.",
+            "frame": "else"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "After Skill Transfer connects an agent, the script",
+          "choices": [
+            "Keeps running forever",
+            "Is complete",
+            "Starts a second campaign",
+            "Hangs the carrier"
+          ],
+          "answer": 1,
+          "why": "The skill transfer article says the IVR script is complete."
+        },
+        {
+          "q": "Long queue options named in the inbound topic include",
+          "choices": [
+            "Deleting the domain",
+            "Voicemail and third-party forward",
+            "Changing the JRE",
+            "Only a busy tone"
+          ],
+          "answer": 1,
+          "why": "The topic lists voicemail and forward when agents are unavailable."
+        },
+        {
+          "q": "Priority of inbound traffic is",
+          "choices": [
+            "Impossible",
+            "Something the inbound topic says you can set",
+            "Only a WEM feature",
+            "Only an ANI"
+          ],
+          "answer": 1,
+          "why": "The topic says you can prioritize inbound call traffic."
+        },
+        {
+          "q": "Contact data in the IVR is",
+          "choices": [
+            "Forbidden",
+            "Listed as something the inbound campaign can use",
+            "Only for 911",
+            "Only in CSV exports"
+          ],
+          "answer": 1,
+          "why": "The topic says you can use contact data."
+        },
+        {
+          "q": "Loops and branching belong to",
+          "choices": [
+            "The headset",
+            "The IVR script",
+            "The bandwidth table",
+            "The license PDF only"
+          ],
+          "answer": 1,
+          "why": "The inbound topic says you can create loops and branching."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Script after agent connect?",
+          "back": "Complete."
+        },
+        {
+          "front": "Long queue options?",
+          "back": "Voicemail and third-party forward."
+        },
+        {
+          "front": "Priority?",
+          "back": "Supported in the inbound topic."
+        },
+        {
+          "front": "Branching?",
+          "back": "In the IVR script."
+        }
+      ],
+      "lab": {
+        "title": "One script, three exits",
+        "goal": "Sketch greet, skill, and voicemail.",
+        "steps": [
+          "Name the greeting",
+          "Name the skill",
+          "Name the overflow"
+        ],
+        "success": "There is no module pretending to run after the agent is connected.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Callers reach agents and then hear the main menu again",
+        "symptom": "The designer placed Play after Skill Transfer and expected it to run for the connected caller.",
+        "log": "MODULE SkillTransfer then Play prompt=survey",
+        "choices": [
+          "The script already completed on connect",
+          "DNIS was empty",
+          "The profile had no ANI",
+          "Efficiency Mode"
+        ],
+        "answer": 0,
+        "cause": "Post-connect treatment is not that later Play module.",
+        "fix": "Put surveys in a path that is actually reached, such as a callback or a separate process you have verified."
+      }
+    },
+    {
+      "id": "l03",
+      "title": "Queue treatment is a choice, not a hope",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Choose an overflow module",
+        "Do not use a stopped campaign as a prompt"
+      ],
+      "paragraphs": [
+        "The inbound topic allows custom prompts and hold music, a message when agents are unavailable, voicemail, and a forward to a third party. Those are different exits. Hold music is not voicemail. A forward leaves your agents entirely.",
+        "Third Party Transfer is an IVR module in the modules list. Voicemail Transfer is another. Picking the wrong one is a routing bug, not a carrier bug."
+      ],
+      "cites": [
+        {
+          "label": "Inbound campaigns",
+          "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm"
+        },
+        {
+          "label": "IVR modules",
+          "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "compare",
+        "title": "Overflow",
+        "caption": "Name the exit before the queue melts.",
+        "leftTitle": "Stay in Five9",
+        "rightTitle": "Leave the queue",
+        "left": [
+          "Hold prompt",
+          "Voicemail Transfer",
+          "Queue callback on Skill Transfer"
+        ],
+        "right": [
+          "Third Party Transfer",
+          "A stopped campaign's busy",
+          "A DNIS with no campaign"
+        ]
+      },
+      "flow": {
+        "title": "The queue is full",
+        "lanes": [
+          "Caller",
+          "IVR"
+        ],
+        "steps": [
+          {
+            "lane": "Caller",
+            "title": "Wait",
+            "detail": "Hold music and announcements play.",
+            "frame": "hold"
+          },
+          {
+            "lane": "IVR",
+            "title": "Time",
+            "detail": "Max queue time can expire.",
+            "frame": "timer"
+          },
+          {
+            "lane": "IVR",
+            "title": "Voice",
+            "detail": "Voicemail Transfer takes a message.",
+            "frame": "vm"
+          },
+          {
+            "lane": "IVR",
+            "title": "Out",
+            "detail": "Third Party Transfer forwards away.",
+            "frame": "3p"
+          },
+          {
+            "lane": "IVR",
+            "title": "Back",
+            "detail": "Queue callback is a Skill Transfer option.",
+            "frame": "callback"
+          },
+          {
+            "lane": "Caller",
+            "title": "Hear",
+            "detail": "The path you drew is the path they hear.",
+            "frame": "hear"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Hold music and voicemail are",
+          "choices": [
+            "The same module",
+            "Different treatments",
+            "Both SIP trunks",
+            "Both profiles"
+          ],
+          "answer": 1,
+          "why": "The inbound topic lists them as separate options."
+        },
+        {
+          "q": "Third Party Transfer",
+          "choices": [
+            "Dials an agent skill",
+            "Forwards to a third party",
+            "Sets a disposition to Sale",
+            "Edits the JRE"
+          ],
+          "answer": 1,
+          "why": "The modules list names Third Party Transfer for that job."
+        },
+        {
+          "q": "Voicemail Transfer",
+          "choices": [
+            "Is the third-party module",
+            "Sends the caller to voicemail",
+            "Starts predictive dialing",
+            "Opens Salesforce"
+          ],
+          "answer": 1,
+          "why": "Voicemail Transfer is its own module."
+        },
+        {
+          "q": "A stopped campaign is a poor overflow because",
+          "choices": [
+            "It plays your branded prompt",
+            "Callers hear busy instead of your treatment",
+            "It sends Certified Caller",
+            "It resets lists"
+          ],
+          "answer": 1,
+          "why": "Busy is not a designed overflow."
+        },
+        {
+          "q": "Queue callback is discussed with",
+          "choices": [
+            "The JRE",
+            "The Skill Transfer module",
+            "Equinix Fabric",
+            "Headset SKUs"
+          ],
+          "answer": 1,
+          "why": "The skill transfer article includes a Queue Callback tab."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Hold vs voicemail?",
+          "back": "Different."
+        },
+        {
+          "front": "Third party module?",
+          "back": "Third Party Transfer."
+        },
+        {
+          "front": "Voicemail module?",
+          "back": "Voicemail Transfer."
+        },
+        {
+          "front": "Stopped campaign as overflow?",
+          "back": "No. Callers hear busy."
+        }
+      ],
+      "lab": {
+        "title": "Draw overflow",
+        "goal": "Pick one branded exit for a 10-minute queue.",
+        "steps": [
+          "Choose voicemail or third party",
+          "Name the module",
+          "Say what busy would sound like instead"
+        ],
+        "success": "The exit is a module, not a stopped campaign.",
+        "href": ""
+      },
+      "fault": {
+        "title": "After-hours callers hear busy",
+        "symptom": "The campaign is stopped at night instead of playing a closed message.",
+        "log": "SCHEDULE none CAMPAIGN state=NOT_RUNNING",
+        "choices": [
+          "The campaign is not running, so there is no script",
+          "Skill level is too high",
+          "ANI is local",
+          "Matrix reports cannot export"
+        ],
+        "answer": 0,
+        "cause": "Stopped means busy, not your closed prompt.",
+        "fix": "Keep a running campaign whose script plays the closed treatment, or use the IVR schedule the admin guide describes."
+      }
+    },
+    {
+      "id": "l04",
+      "title": "Priority and service level",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Separate priority from service level",
+        "Point at the screen for each"
+      ],
+      "paragraphs": [
+        "The inbound topic says you can prioritize inbound traffic. Skill Transfer has a Priority tab in the community write-up. Skill groups themselves have service-level settings in the basic admin topic.",
+        "Priority is not the same number as a service-level target. One decides who gets the next agent when several calls wait. The other is how you measure whether the wait was acceptable. The public pages name both. They do not, in the text this lab read, give you a formula that mixes them."
+      ],
+      "cites": [
+        {
+          "label": "Inbound campaigns",
+          "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm"
+        },
+        {
+          "label": "Skill Transfer functions",
+          "url": "https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features"
+        },
+        {
+          "label": "Skill groups",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm"
+        }
+      ],
+      "uncertain": [
+        "The exact numeric interaction between skill service level and Skill Transfer priority is not stated in the pages this lab quoted."
+      ],
+      "figure": {
+        "kind": "compare",
+        "title": "Two different numbers",
+        "caption": "Do not add them together.",
+        "leftTitle": "Priority",
+        "rightTitle": "Service level",
+        "left": [
+          "Who is offered first",
+          "Skill Transfer priority tab",
+          "Inbound topic says you can prioritize"
+        ],
+        "right": [
+          "How long is acceptable",
+          "Set on the skill group",
+          "A report, not a queue jump"
+        ]
+      },
+      "flow": {
+        "title": "Two queues, one idle agent",
+        "lanes": [
+          "Queue A",
+          "Queue B",
+          "VCC"
+        ],
+        "steps": [
+          {
+            "lane": "Queue A",
+            "title": "Wait",
+            "detail": "A caller has waited 30 seconds at low priority.",
+            "frame": "low"
+          },
+          {
+            "lane": "Queue B",
+            "title": "Wait",
+            "detail": "A caller has waited 5 seconds at high priority.",
+            "frame": "high"
+          },
+          {
+            "lane": "VCC",
+            "title": "Offer",
+            "detail": "Priority is the ordering input you configured.",
+            "frame": "offer"
+          },
+          {
+            "lane": "VCC",
+            "title": "SL",
+            "detail": "Service level scores the wait afterward.",
+            "frame": "score"
+          },
+          {
+            "lane": "Queue A",
+            "title": "Report",
+            "detail": "A missed service level does not by itself reorder the queue.",
+            "frame": "report"
+          },
+          {
+            "lane": "VCC",
+            "title": "Check",
+            "detail": "Read both screens before you change either.",
+            "frame": "check"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Service level is configured with",
+          "choices": [
+            "The SIP cipher",
+            "The skill group",
+            "The JRE",
+            "The call-log matrix"
+          ],
+          "answer": 1,
+          "why": "The skill topic includes service levels."
+        },
+        {
+          "q": "Priority in an IVR queue is a",
+          "choices": [
+            "Skill Transfer concern",
+            "Headset concern",
+            "License PDF concern",
+            "MAC address"
+          ],
+          "answer": 1,
+          "why": "The skill transfer article lists a Priority tab."
+        },
+        {
+          "q": "A missed service level automatically jumps the queue. True or false?",
+          "choices": [
+            "True",
+            "False. This lab did not find a page that says the service-level target reorders calls",
+            "True at 30 days",
+            "True for TCPA"
+          ],
+          "answer": 1,
+          "why": "Treat them as different controls until a current page ties them together."
+        },
+        {
+          "q": "Inbound prioritization is",
+          "choices": [
+            "Undocumented",
+            "Named in the inbound campaign topic",
+            "Illegal",
+            "Only for autodial"
+          ],
+          "answer": 1,
+          "why": "The inbound topic says you can prioritize inbound traffic."
+        },
+        {
+          "q": "Changing priority without reading service level",
+          "choices": [
+            "Is the whole design",
+            "Can make the report and the caller experience disagree",
+            "Deletes recordings",
+            "Fixes busy signals"
+          ],
+          "answer": 1,
+          "why": "One orders calls. The other measures them."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Where is service level?",
+          "back": "On the skill group."
+        },
+        {
+          "front": "Where is IVR priority?",
+          "back": "Skill Transfer's priority tab."
+        },
+        {
+          "front": "Are they the same knob?",
+          "back": "No."
+        },
+        {
+          "front": "Who says inbound can be prioritized?",
+          "back": "The inbound campaign topic."
+        }
+      ],
+      "lab": {
+        "title": "Label the knobs",
+        "goal": "Write one sentence for priority and one for service level.",
+        "steps": [
+          "Priority orders the offer",
+          "Service level measures the wait",
+          "You will not add the numbers"
+        ],
+        "success": "The sentences do not reuse the same verb.",
+        "href": ""
+      },
+      "fault": {
+        "title": "VIP callers wait behind password resets",
+        "symptom": "Both skills share one small team and the VIP Skill Transfer priority was left at the default.",
+        "log": "SKILL VIP priority=default SKILL Reset priority=default",
+        "choices": [
+          "Set VIP higher on its Skill Transfer",
+          "Stop the campaign",
+          "Disable G.711",
+          "Turn on cellular"
+        ],
+        "answer": 0,
+        "cause": "Nothing is ordering VIP first.",
+        "fix": "Raise VIP priority and staff the skill."
+      }
+    },
+    {
+      "id": "l05",
+      "title": "Schedules, not a stopped campaign",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Prefer a schedule to a stopped campaign",
+        "Keep state running"
+      ],
+      "paragraphs": [
+        "The campaign admin tree includes IVR script schedules for autodial and inbound campaigns. The planning topic tells you to set the campaign IVR schedule after the script exists. A schedule swaps treatment by time. Stopping the campaign does not. Stopping it returns busy.",
+        "This lab does not reproduce the schedule dialog field by field. Use the schedule when you need a night path, and confirm the campaign stays running."
+      ],
+      "cites": [
+        {
+          "label": "Planning your implementation",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm"
+        },
+        {
+          "label": "Inbound campaigns",
+          "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "path",
+        "title": "Day and night",
+        "caption": "The campaign stays running.",
+        "rows": [
+          {
+            "label": "Day script"
+          },
+          {
+            "label": "Schedule"
+          },
+          {
+            "label": "Night script"
+          },
+          {
+            "label": "Campaign still running"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Clock changes the script",
+        "lanes": [
+          "Clock",
+          "VCC",
+          "Caller"
+        ],
+        "steps": [
+          {
+            "lane": "Clock",
+            "title": "Open",
+            "detail": "Day schedule selects the day script.",
+            "frame": "day"
+          },
+          {
+            "lane": "Caller",
+            "title": "Call",
+            "detail": "The running campaign answers.",
+            "frame": "answer"
+          },
+          {
+            "lane": "Clock",
+            "title": "Close",
+            "detail": "The schedule selects the closed script.",
+            "frame": "night"
+          },
+          {
+            "lane": "VCC",
+            "title": "Run",
+            "detail": "State stays running.",
+            "frame": "running"
+          },
+          {
+            "lane": "Caller",
+            "title": "Hear",
+            "detail": "The closed prompt plays.",
+            "frame": "prompt"
+          },
+          {
+            "lane": "VCC",
+            "title": "Avoid",
+            "detail": "Nobody stops the campaign at 18:00.",
+            "frame": "avoid"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "The planning topic says to set the IVR schedule",
+          "choices": [
+            "Before skills exist",
+            "After the IVR scripts exist",
+            "Instead of a DNIS",
+            "Only for outbound preview"
+          ],
+          "answer": 1,
+          "why": "The roadmap sets the campaign IVR schedule after scripts."
+        },
+        {
+          "q": "Stopping the campaign at night",
+          "choices": [
+            "Plays the closed prompt",
+            "Makes callers hear busy",
+            "Starts TCPA",
+            "Exports a matrix report"
+          ],
+          "answer": 1,
+          "why": "Busy is the stopped behavior."
+        },
+        {
+          "q": "Schedules apply to which types, by the admin tree label?",
+          "choices": [
+            "Outbound preview only",
+            "Autodial and inbound",
+            "E911 only",
+            "WEM only"
+          ],
+          "answer": 1,
+          "why": "The tree title is IVR script schedules for autodial and inbound."
+        },
+        {
+          "q": "A schedule is a reason to keep the campaign",
+          "choices": [
+            "Stopped",
+            "Running",
+            "Deleted",
+            "In a JRE"
+          ],
+          "answer": 1,
+          "why": "The script only runs if the campaign answers."
+        },
+        {
+          "q": "This lab's schedule screens are",
+          "choices": [
+            "A full copy of the dialog",
+            "A pointer. Open the current admin topic for the fields",
+            "Illegal to describe",
+            "The dialer source"
+          ],
+          "answer": 1,
+          "why": "Field-level schedule options were not quoted here."
+        }
+      ],
+      "cards": [
+        {
+          "front": "When is the schedule set?",
+          "back": "After scripts exist."
+        },
+        {
+          "front": "Nightly stop?",
+          "back": "Causes busy, not a closed prompt."
+        },
+        {
+          "front": "Which types have the schedule topic?",
+          "back": "Autodial and inbound."
+        },
+        {
+          "front": "Campaign state at night?",
+          "back": "Running, with a different script."
+        }
+      ],
+      "lab": {
+        "title": "Write the night rule",
+        "goal": "One sentence that forbids stopping the campaign at close of business.",
+        "steps": [
+          "Name the day script",
+          "Name the night script",
+          "State remains running"
+        ],
+        "success": "The sentence uses the word running.",
+        "href": ""
+      },
+      "fault": {
+        "title": "17:55 change window",
+        "symptom": "Someone's runbook says to stop Inbound at 18:00.",
+        "log": "RUNBOOK 18:00 set NOT_RUNNING",
+        "choices": [
+          "Replace that step with a script schedule",
+          "Also disable TLS",
+          "Reset all dispositions",
+          "Pin one SBC IP"
+        ],
+        "answer": 0,
+        "cause": "The runbook recreates the busy failure.",
+        "fix": "Schedule the closed script and leave the campaign running."
+      }
+    },
+    {
+      "id": "l06",
+      "title": "Pause before the next call",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Set pause on purpose",
+        "Do not expect it in the hold column"
+      ],
+      "paragraphs": [
+        "Skill Transfer has Pause Before Transfer, in seconds, on the General tab. The default is 0. A value above 0 waits that long after an agent is selected before the call is delivered, so a queue does not slap the next call down instantly.",
+        "The community article says those seconds do not show as On Hold in a report. On Plus applications the caller can sit in a Connecting state. Setting the pause to 0 removes that connecting bar. Do not 'fix' a report by deleting the pause if agents asked for the breath."
+      ],
+      "cites": [
+        {
+          "label": "Pause before transfer",
+          "url": "https://community.five9.com/s/article/Administrator-Pause-Before-Transfer?language=en_US"
+        },
+        {
+          "label": "Skill Transfer functions",
+          "url": "https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "stack",
+        "title": "Pause before transfer",
+        "caption": "A breath for the agent, not an On Hold statistic.",
+        "rows": [
+          {
+            "label": "Agent selected"
+          },
+          {
+            "label": "Pause seconds"
+          },
+          {
+            "label": "Call delivered"
+          },
+          {
+            "label": "Report does not call it hold"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Back-to-back calls",
+        "lanes": [
+          "Queue",
+          "VCC",
+          "Agent"
+        ],
+        "steps": [
+          {
+            "lane": "Queue",
+            "title": "Next",
+            "detail": "Another caller is already waiting.",
+            "frame": "waiting"
+          },
+          {
+            "lane": "VCC",
+            "title": "Select",
+            "detail": "An agent becomes free and is selected.",
+            "frame": "select"
+          },
+          {
+            "lane": "VCC",
+            "title": "Pause",
+            "detail": "The configured seconds elapse.",
+            "frame": "pause"
+          },
+          {
+            "lane": "Agent",
+            "title": "Offer",
+            "detail": "The call arrives after the pause.",
+            "frame": "offer"
+          },
+          {
+            "lane": "VCC",
+            "title": "Report",
+            "detail": "Those seconds are not On Hold.",
+            "frame": "report"
+          },
+          {
+            "lane": "Agent",
+            "title": "Zero",
+            "detail": "A 0 value removes the connecting bar.",
+            "frame": "zero"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Where is Pause Before Transfer?",
+          "choices": [
+            "Campaign profile ANI",
+            "Skill Transfer, General tab",
+            "The JRE",
+            "MyE911"
+          ],
+          "answer": 1,
+          "why": "The article places it on the General tab."
+        },
+        {
+          "q": "Default value?",
+          "choices": [
+            "30 seconds",
+            "0",
+            "The abandon cap",
+            "128 kbps"
+          ],
+          "answer": 1,
+          "why": "The article says the default is 0."
+        },
+        {
+          "q": "Do the pause seconds appear as On Hold?",
+          "choices": [
+            "Yes",
+            "No. The article says they do not",
+            "Only in UK domains",
+            "Only for matrix layouts"
+          ],
+          "answer": 1,
+          "why": "The article is explicit."
+        },
+        {
+          "q": "A connecting bar on Plus apps can be removed by",
+          "choices": [
+            "Stopping the campaign",
+            "Setting pause to 0",
+            "Deleting the skill",
+            "Using analog headsets"
+          ],
+          "answer": 1,
+          "why": "The article says 0 removes the connecting bar."
+        },
+        {
+          "q": "The pause exists to",
+          "choices": [
+            "Increase abandon rate",
+            "Give agents a gap before the next queued call",
+            "Change ANI",
+            "Disable TCPA"
+          ],
+          "answer": 1,
+          "why": "The article describes a short pause when calls are queued."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Where?",
+          "back": "Skill Transfer General tab."
+        },
+        {
+          "front": "Default?",
+          "back": "0."
+        },
+        {
+          "front": "On Hold in reports?",
+          "back": "No."
+        },
+        {
+          "front": "Why set it above 0?",
+          "back": "A gap before the next call."
+        }
+      ],
+      "lab": {
+        "title": "Set a breath",
+        "goal": "Choose a pause for a team that takes calls with no gap.",
+        "steps": [
+          "Open General",
+          "Set a small number of seconds",
+          "Tell the team it will not show as hold"
+        ],
+        "success": "The team knows why the report looks unchanged.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Agents say they have no wrap, reports say hold is zero",
+        "symptom": "Pause is 0 and the queue is deep.",
+        "log": "SKILL Support pause=0 queue=12",
+        "choices": [
+          "Set Pause Before Transfer above 0",
+          "Stop the campaign at lunch",
+          "Switch to analog headsets",
+          "Delete call variables"
+        ],
+        "answer": 0,
+        "cause": "Zero pause delivers the next call immediately, and it was never going to show as hold.",
+        "fix": "Set a few seconds of pause and give them a real disposition timer if they need wrap."
+      }
+    },
+    {
+      "id": "l07",
+      "title": "Inbound design review",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Run a seven-point inbound review",
+        "Escalate to the trunk only after they pass"
+      ],
+      "paragraphs": [
+        "A review you can finish in one sitting: DNIS, running campaign, script, skill on the Outbound Skills tab, overflow module, schedule, and pause. Each one has a public page. None of them is a trunk setting.",
+        "If all seven are right and the caller still hears silence or reorder, then you have a carrier or SBC symptom. The topology bench is the next tool, not another copy of the greeting."
+      ],
+      "cites": [
+        {
+          "label": "Inbound campaigns",
+          "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm"
+        },
+        {
+          "label": "Skill groups",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm"
+        },
+        {
+          "label": "Planning your implementation",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "path",
+        "title": "Inbound review",
+        "caption": "Seven checks before the carrier.",
+        "rows": [
+          {
+            "label": "DNIS"
+          },
+          {
+            "label": "Running"
+          },
+          {
+            "label": "Script"
+          },
+          {
+            "label": "Skill tab"
+          },
+          {
+            "label": "Overflow"
+          },
+          {
+            "label": "Schedule"
+          },
+          {
+            "label": "Pause"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Review a new line",
+        "lanes": [
+          "Reviewer",
+          "VCC"
+        ],
+        "steps": [
+          {
+            "lane": "Reviewer",
+            "title": "Number",
+            "detail": "DNIS matches the number in the advertisement.",
+            "frame": "dnis"
+          },
+          {
+            "lane": "Reviewer",
+            "title": "State",
+            "detail": "Campaign is running.",
+            "frame": "run"
+          },
+          {
+            "lane": "Reviewer",
+            "title": "Script",
+            "detail": "The IVR assigned is the one you tested.",
+            "frame": "script"
+          },
+          {
+            "lane": "Reviewer",
+            "title": "Skill",
+            "detail": "Outbound Skills lists the right group.",
+            "frame": "skill"
+          },
+          {
+            "lane": "Reviewer",
+            "title": "Exit",
+            "detail": "Voicemail or third party is explicit.",
+            "frame": "exit"
+          },
+          {
+            "lane": "Reviewer",
+            "title": "Clock",
+            "detail": "Night uses a schedule, and pause is intentional.",
+            "frame": "clock"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "How many of these checks are trunk settings?",
+          "choices": [
+            "All seven",
+            "None. They are campaign and script settings",
+            "Three",
+            "Only pause"
+          ],
+          "answer": 1,
+          "why": "The carrier is what you check after these."
+        },
+        {
+          "q": "Wrong tab for inbound skills means",
+          "choices": [
+            "A busy signal always",
+            "Agents never enter that queue",
+            "TLS 1.3 fails",
+            "Reports export as CSV"
+          ],
+          "answer": 1,
+          "why": "The skill is on the wrong tab, so the queue is empty."
+        },
+        {
+          "q": "Night busy with a perfect daytime script usually means",
+          "choices": [
+            "G.711",
+            "The campaign was stopped, or the night script was never scheduled",
+            "Too many flashcards",
+            "A matrix layout"
+          ],
+          "answer": 1,
+          "why": "State or schedule."
+        },
+        {
+          "q": "Overflow should be",
+          "choices": [
+            "A stopped campaign",
+            "A named module",
+            "A JRE update",
+            "A wireless headset"
+          ],
+          "answer": 1,
+          "why": "Voicemail Transfer or Third Party Transfer."
+        },
+        {
+          "q": "After the seven checks pass, open",
+          "choices": [
+            "Another greeting file",
+            "The topology and the trunk path",
+            "The Credly badge",
+            "Efficiency Mode"
+          ],
+          "answer": 1,
+          "why": "The remaining failures are path failures."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Are the seven checks trunk settings?",
+          "back": "No."
+        },
+        {
+          "front": "Wrong skill tab?",
+          "back": "Empty queue."
+        },
+        {
+          "front": "Night busy?",
+          "back": "State or schedule."
+        },
+        {
+          "front": "Then what?",
+          "back": "Trunk and topology."
+        }
+      ],
+      "lab": {
+        "title": "Run the seven",
+        "goal": "Use a real or sample campaign and tick the seven.",
+        "steps": [
+          "DNIS",
+          "State",
+          "Script",
+          "Skill tab",
+          "Overflow",
+          "Schedule",
+          "Pause"
+        ],
+        "success": "Each tick names a screen.",
+        "href": "#/topology"
+      },
+      "fault": {
+        "title": "Ticket opened to the carrier first",
+        "symptom": "The DID is busy and nobody looked at campaign state.",
+        "log": "TICKET carrier CAMPAIGN state=NOT_RUNNING",
+        "choices": [
+          "Close the carrier ticket and start the campaign",
+          "Order a new codec",
+          "Enable IE",
+          "Reset Sale dispositions"
+        ],
+        "answer": 0,
+        "cause": "The log already shows the cause.",
+        "fix": "Start the campaign, then retest."
+      }
+    }
+  ]
+}

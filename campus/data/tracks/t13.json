@@ -1,0 +1,1372 @@
+{
+  "id": "t13",
+  "title": "SIP and carriers",
+  "short": "SIP",
+  "blurb": "ITSP trunks, your SBC, gateways, bandwidth, NAT, and the ports that belong only to Studio.",
+  "group": "Systems",
+  "level": "Advanced",
+  "summary": "Name the path. G.711 is the default you can cite. Studio ports are not every trunk.",
+  "lessons": [
+    {
+      "id": "l01",
+      "title": "Three ways a call can enter",
+      "level": "foundation",
+      "minutes": 12,
+      "objectives": [
+        "Name the three SIP stories",
+        "Refuse to treat a Cisco gateway as a UCCX import"
+      ],
+      "paragraphs": [
+        "The technical requirements describe three SIP stories. Five9 can provide ITSP trunks. Your ITSP can connect to Five9 session border controllers, and there is a checklist for that. Or a gateway you already own — Avaya, Cisco, or Asterisk — can talk to Five9 over the internet, a VPN, or Direct Connect.",
+        "Cisco in that sentence is a gateway type, not a promise that a UCCX script will import. Pick the story before you draw a codec or a DNIS."
+      ],
+      "cites": [
+        {
+          "label": "Technical requirements PDF",
+          "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+          "note": "Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall."
+        },
+        {
+          "label": "SIP trunk options chapter",
+          "url": "https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/SIP-trunk-options/_ch-five9-sip-trunk-options.htm"
+        },
+        {
+          "label": "RFC 3261",
+          "url": "https://www.rfc-editor.org/rfc/rfc3261"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "stack",
+        "title": "SIP stories in the requirements",
+        "caption": "Name one before you open a firewall ticket.",
+        "rows": [
+          {
+            "label": "Five9 ITSP trunks"
+          },
+          {
+            "label": "Your ITSP to Five9 SBCs"
+          },
+          {
+            "label": "Gateway to gateway: Avaya, Cisco, or Asterisk"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Choose the path",
+        "lanes": [
+          "Buyer",
+          "Carrier",
+          "Gateway"
+        ],
+        "steps": [
+          {
+            "lane": "Buyer",
+            "title": "Ask",
+            "detail": "Who provides the trunk?",
+            "frame": "who"
+          },
+          {
+            "lane": "Carrier",
+            "title": "Five9",
+            "detail": "Five9 ITSP is the first story.",
+            "frame": "itsp"
+          },
+          {
+            "lane": "Carrier",
+            "title": "Yours",
+            "detail": "Your ITSP to Five9 SBCs is the second.",
+            "frame": "sbc"
+          },
+          {
+            "lane": "Gateway",
+            "title": "Owned",
+            "detail": "Avaya, Cisco, or Asterisk is the third.",
+            "frame": "gw"
+          },
+          {
+            "lane": "Gateway",
+            "title": "Link",
+            "detail": "Internet, VPN, or Direct Connect is the transport.",
+            "frame": "link"
+          },
+          {
+            "lane": "Admin",
+            "title": "Write",
+            "detail": "The design names one story.",
+            "frame": "named"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Five9 can provide the ITSP trunks. True or false?",
+          "choices": [
+            "False",
+            "True",
+            "Only for Studio",
+            "Only for E911"
+          ],
+          "answer": 1,
+          "why": "The requirements list Five9 ITSP trunks as an option."
+        },
+        {
+          "q": "A customer ITSP connects toward",
+          "choices": [
+            "Agent headsets",
+            "Five9 SBCs, with a checklist",
+            "The campaign profile",
+            "WEM"
+          ],
+          "answer": 1,
+          "why": "That is the second story."
+        },
+        {
+          "q": "Named gateway types include",
+          "choices": [
+            "Only a cell phone",
+            "Avaya, Cisco, or Asterisk",
+            "Only CUCM partitions",
+            "Only RedSky"
+          ],
+          "answer": 1,
+          "why": "Those three names are in the requirements."
+        },
+        {
+          "q": "Transports named for gateway-to-gateway are",
+          "choices": [
+            "Satellite only",
+            "Internet, VPN, or Direct Connect",
+            "Analog only",
+            "Fax only"
+          ],
+          "answer": 1,
+          "why": "Those three."
+        },
+        {
+          "q": "A Cisco gateway option means UCCX scripts import. True or false?",
+          "choices": [
+            "True",
+            "False. It is a SIP gateway type",
+            "True for predictive",
+            "True on Mac"
+          ],
+          "answer": 1,
+          "why": "The requirements name a gateway, not a script importer."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Five9 ITSP?",
+          "back": "One of the three stories."
+        },
+        {
+          "front": "Customer ITSP lands on?",
+          "back": "Five9 SBCs."
+        },
+        {
+          "front": "Gateway names?",
+          "back": "Avaya, Cisco, Asterisk."
+        },
+        {
+          "front": "Does Cisco here import UCCX?",
+          "back": "No."
+        }
+      ],
+      "lab": {
+        "title": "Name the story",
+        "goal": "Write which of the three paths a fictional site will use.",
+        "steps": [
+          "Who owns the trunk",
+          "Which gateway, if any",
+          "Which transport"
+        ],
+        "success": "The sentence uses one of the published names.",
+        "href": ""
+      },
+      "fault": {
+        "title": "The diagram says 'SIP' and nothing else",
+        "symptom": "Nobody can say whose trunk it is.",
+        "log": "PATH unlabeled",
+        "choices": [
+          "Pick ITSP, SBC, or gateway before the firewall ticket",
+          "Add predictive lines",
+          "Reset the list",
+          "Change the theme"
+        ],
+        "answer": 0,
+        "cause": "The requirements split the work into three stories.",
+        "fix": "Label the path."
+      }
+    },
+    {
+      "id": "l02",
+      "title": "DNS, codecs, and the default voice",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Prefer DNS SRV",
+        "Keep G.711 as the default you can cite"
+      ],
+      "paragraphs": [
+        "The requirements prefer DNS SRV for the SIP targets. G.711 is the default codec, and the PDF describes it as uncompressed. Do not invent a packetization time. A 20 millisecond ptime shows up in practitioner notes about Cisco gateways. It is not a number this lab will attribute to the Five9 PDF.",
+        "RFC 3261 is the SIP signaling baseline. RFC 4733 is the telephone-event way digits often ride once the call is up. DTMF design is a separate sentence from the codec."
+      ],
+      "cites": [
+        {
+          "label": "Technical requirements PDF",
+          "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+          "note": "Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall."
+        },
+        {
+          "label": "SIP trunk options chapter",
+          "url": "https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/SIP-trunk-options/_ch-five9-sip-trunk-options.htm"
+        },
+        {
+          "label": "RFC 3261",
+          "url": "https://www.rfc-editor.org/rfc/rfc3261"
+        },
+        {
+          "label": "RFC 4733",
+          "url": "https://www.rfc-editor.org/rfc/rfc4733"
+        }
+      ],
+      "uncertain": [
+        "A 20 ms packet time is a practitioner note about Cisco gateways, not a figure quoted from the Five9 technical requirements in this lab."
+      ],
+      "figure": {
+        "kind": "compare",
+        "title": "What the PDF states",
+        "caption": "Keep practitioner numbers in their own column.",
+        "leftTitle": "In the requirements",
+        "rightTitle": "Not in that sentence",
+        "left": [
+          "DNS SRV preferred",
+          "G.711 default",
+          "Uncompressed voice"
+        ],
+        "right": [
+          "20 ms ptime",
+          "A numeric abandon default",
+          "A UCCX import"
+        ]
+      },
+      "flow": {
+        "title": "A one-way-audio rumor",
+        "lanes": [
+          "PDF",
+          "Gateway",
+          "Design"
+        ],
+        "steps": [
+          {
+            "lane": "PDF",
+            "title": "SRV",
+            "detail": "DNS SRV is the preferred lookup.",
+            "frame": "srv"
+          },
+          {
+            "lane": "PDF",
+            "title": "Codec",
+            "detail": "G.711 is the default.",
+            "frame": "g711"
+          },
+          {
+            "lane": "Gateway",
+            "title": "Ptime",
+            "detail": "20 ms is written as a practitioner note, marked uncertain.",
+            "frame": "ptime"
+          },
+          {
+            "lane": "Design",
+            "title": "DTMF",
+            "detail": "RFC 4733 is named if digits must survive.",
+            "frame": "dtmf"
+          },
+          {
+            "lane": "Design",
+            "title": "Signaling",
+            "detail": "RFC 3261 is the signaling reference.",
+            "frame": "sip"
+          },
+          {
+            "lane": "Admin",
+            "title": "Split",
+            "detail": "The two columns stay split in the ticket.",
+            "frame": "split"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Preferred DNS for SIP targets is",
+          "choices": [
+            "A single A record only, always",
+            "SRV, per the requirements",
+            "A hosts file",
+            "NetBIOS"
+          ],
+          "answer": 1,
+          "why": "The PDF prefers DNS SRV."
+        },
+        {
+          "q": "The default codec named is",
+          "choices": [
+            "G.729 only",
+            "G.711",
+            "Opus only",
+            "Fax"
+          ],
+          "answer": 1,
+          "why": "G.711 is the default."
+        },
+        {
+          "q": "A 20 ms ptime is",
+          "choices": [
+            "The Five9 abandon default",
+            "A practitioner note. Do not attribute it to the PDF",
+            "Required by TCPA",
+            "A skill level"
+          ],
+          "answer": 1,
+          "why": "This lab did not find that number in the requirements text it used."
+        },
+        {
+          "q": "Telephone-event digits are discussed in",
+          "choices": [
+            "RFC 4733",
+            "The disposition list",
+            "WEM bidding",
+            "The theme picker"
+          ],
+          "answer": 0,
+          "why": "RFC 4733 covers telephone events."
+        },
+        {
+          "q": "SIP itself is",
+          "choices": [
+            "RFC 3261",
+            "A campaign profile",
+            "A list mode",
+            "A headset brand"
+          ],
+          "answer": 0,
+          "why": "RFC 3261 is the SIP specification."
+        }
+      ],
+      "cards": [
+        {
+          "front": "DNS?",
+          "back": "SRV preferred."
+        },
+        {
+          "front": "Default codec?",
+          "back": "G.711."
+        },
+        {
+          "front": "20 ms?",
+          "back": "Practitioner, uncertain, not a PDF quote here."
+        },
+        {
+          "front": "Digit RFC?",
+          "back": "4733."
+        }
+      ],
+      "lab": {
+        "title": "Split the ticket",
+        "goal": "Write the PDF facts and the practitioner note on two lines.",
+        "steps": [
+          "SRV and G.711",
+          "ptime as uncertain",
+          "RFC 4733 if DTMF matters"
+        ],
+        "success": "A reader can see which line is official.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Someone 'fixed' audio by forcing an unstated ptime",
+        "symptom": "The PDF was never opened.",
+        "log": "CHANGE ptime=20 source=chat",
+        "choices": [
+          "Revert to the documented default and test G.711",
+          "Also change the abandon percentage",
+          "Delete DNIS",
+          "Disable SRV and hope"
+        ],
+        "answer": 0,
+        "cause": "Start from the codec the requirements name.",
+        "fix": "Test G.711. Treat 20 ms as an unproven extra."
+      }
+    },
+    {
+      "id": "l03",
+      "title": "How much bandwidth a seat costs",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Add the published per-seat numbers",
+        "Reject satellite and cellular"
+      ],
+      "paragraphs": [
+        "The requirements give planning numbers. Agent Desktop Plus and the Plus adapters are 128 kbps. The Java agent is 88 kbps. Agent Assist adds about 12 kbps. A VPN adds about 64. CRM or other business apps add about 64. A UC client such as Teams, Zoom, Office@Hand, RingCentral, or Nextiva is called out around 320 kbps.",
+        "One-way latency should stay under 150 ms. Wi-Fi is acceptable when the bandwidth is actually there. Wired is preferred. Satellite is not supported. Cellular and 5G are not supported. Those are support statements, not opinions."
+      ],
+      "cites": [
+        {
+          "label": "Technical requirements PDF",
+          "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+          "note": "Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall."
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "stack",
+        "title": "Add the seat, then the extras",
+        "caption": "Numbers from the technical requirements.",
+        "rows": [
+          {
+            "label": "Plus adapter 128 kbps"
+          },
+          {
+            "label": "Java agent 88 kbps"
+          },
+          {
+            "label": "Assist about +12"
+          },
+          {
+            "label": "VPN about +64"
+          },
+          {
+            "label": "CRM apps about +64"
+          },
+          {
+            "label": "UC client about 320"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Size a remote seat",
+        "lanes": [
+          "Seat",
+          "Path",
+          "Decision"
+        ],
+        "steps": [
+          {
+            "lane": "Seat",
+            "title": "Client",
+            "detail": "Plus or Java is chosen.",
+            "frame": "client"
+          },
+          {
+            "lane": "Seat",
+            "title": "Assist",
+            "detail": "Assist is added only if it is on.",
+            "frame": "assist"
+          },
+          {
+            "lane": "Path",
+            "title": "VPN",
+            "detail": "VPN overhead is added if the path is a VPN.",
+            "frame": "vpn"
+          },
+          {
+            "lane": "Path",
+            "title": "Apps",
+            "detail": "CRM and UC are added when they share the link.",
+            "frame": "apps"
+          },
+          {
+            "lane": "Decision",
+            "title": "Latency",
+            "detail": "The path is checked against 150 ms one way.",
+            "frame": "lat"
+          },
+          {
+            "lane": "Decision",
+            "title": "Medium",
+            "detail": "Satellite and cellular are rejected.",
+            "frame": "no"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Plus adapter bandwidth in the PDF is",
+          "choices": [
+            "8 kbps",
+            "128 kbps",
+            "1 Gbps",
+            "320 only"
+          ],
+          "answer": 1,
+          "why": "128 kbps."
+        },
+        {
+          "q": "The Java agent figure is",
+          "choices": [
+            "128 kbps",
+            "88 kbps",
+            "The same as Teams",
+            "Unstated"
+          ],
+          "answer": 1,
+          "why": "88 kbps."
+        },
+        {
+          "q": "Agent Assist adds about",
+          "choices": [
+            "12 kbps",
+            "320 kbps",
+            "Nothing, ever",
+            "A trunk"
+          ],
+          "answer": 0,
+          "why": "About 12 kbps."
+        },
+        {
+          "q": "One-way latency target is",
+          "choices": [
+            "Under 150 ms",
+            "Under 2 seconds",
+            "Any",
+            "150 minutes"
+          ],
+          "answer": 0,
+          "why": "Under 150 ms one way."
+        },
+        {
+          "q": "Satellite and cellular are",
+          "choices": [
+            "Preferred for agents",
+            "Not supported",
+            "Required for predictive",
+            "The E911 path"
+          ],
+          "answer": 1,
+          "why": "The requirements say they are not supported."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Plus?",
+          "back": "128 kbps."
+        },
+        {
+          "front": "Java agent?",
+          "back": "88 kbps."
+        },
+        {
+          "front": "Assist?",
+          "back": "About +12."
+        },
+        {
+          "front": "Satellite?",
+          "back": "Not supported."
+        }
+      ],
+      "lab": {
+        "title": "Add a seat",
+        "goal": "Total a Plus agent with VPN and a CRM app. Leave Teams off, then add it.",
+        "steps": [
+          "128 plus 64 plus 64",
+          "Say the latency cap",
+          "Reject cellular"
+        ],
+        "success": "You can show the arithmetic from the PDF.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Agents on hotel 5G sound broken",
+        "symptom": "The link is a medium the PDF does not support.",
+        "log": "PATH cellular latency=high",
+        "choices": [
+          "Move them to a supported wired or qualifying Wi-Fi path",
+          "Raise Max Abandoned",
+          "Change the skill name",
+          "Disable G.711"
+        ],
+        "answer": 0,
+        "cause": "Cellular is not a supported agent path.",
+        "fix": "Change the network, not the campaign."
+      }
+    },
+    {
+      "id": "l04",
+      "title": "NAT, idle timers, and split tunnels",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Reject double NAT",
+        "Keep Five9 inside the VPN"
+      ],
+      "paragraphs": [
+        "NAT and PAT are acceptable. Double NAT is not. UDP bindings that idle out cause one-way audio. The requirements use a 30 second UDP idle timeout as the planning number, and they tell you to send keepalives when the binding is shorter.",
+        "On a VPN, translate RFC 1918 space to a public address the far side can route. Do not exclude Five9 domains from a split tunnel and then wonder why signaling dies. Do not restrict SIP or RTP between sites."
+      ],
+      "cites": [
+        {
+          "label": "Technical requirements PDF",
+          "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+          "note": "Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall."
+        },
+        {
+          "label": "RFC 1918",
+          "url": "https://www.rfc-editor.org/rfc/rfc1918"
+        },
+        {
+          "label": "RFC 3261",
+          "url": "https://www.rfc-editor.org/rfc/rfc3261"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "path",
+        "title": "A call that can return",
+        "caption": "Each hop has to pass media, not just the invite.",
+        "rows": [
+          {
+            "label": "Single NAT or PAT"
+          },
+          {
+            "label": "UDP idle at least 30 seconds"
+          },
+          {
+            "label": "Keepalives if shorter"
+          },
+          {
+            "label": "Five9 domains inside the tunnel"
+          }
+        ]
+      },
+      "flow": {
+        "title": "One-way audio",
+        "lanes": [
+          "Phone",
+          "Firewall",
+          "VPN"
+        ],
+        "steps": [
+          {
+            "lane": "Phone",
+            "title": "Symptom",
+            "detail": "The agent hears the caller. The caller hears nothing.",
+            "frame": "oneway"
+          },
+          {
+            "lane": "Firewall",
+            "title": "NAT",
+            "detail": "Count the NAT layers. Two is too many.",
+            "frame": "nat"
+          },
+          {
+            "lane": "Firewall",
+            "title": "UDP",
+            "detail": "The idle timer is compared with 30 seconds.",
+            "frame": "udp"
+          },
+          {
+            "lane": "VPN",
+            "title": "Split",
+            "detail": "Five9 names are not excluded.",
+            "frame": "split"
+          },
+          {
+            "lane": "VPN",
+            "title": "RFC1918",
+            "detail": "Private addresses are translated.",
+            "frame": "nat64"
+          },
+          {
+            "lane": "Admin",
+            "title": "RTP",
+            "detail": "SIP and RTP are both allowed between the sites.",
+            "frame": "rtp"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Double NAT is",
+          "choices": [
+            "Recommended",
+            "Not acceptable",
+            "Required for TLS 1.3",
+            "A list mode"
+          ],
+          "answer": 1,
+          "why": "The requirements reject double NAT."
+        },
+        {
+          "q": "UDP idle planning number is",
+          "choices": [
+            "30 seconds",
+            "30 minutes",
+            "24 hours",
+            "120 days"
+          ],
+          "answer": 0,
+          "why": "30 seconds."
+        },
+        {
+          "q": "A shorter binding needs",
+          "choices": [
+            "A new campaign",
+            "Keepalives",
+            "Predictive mode",
+            "A longer ANI"
+          ],
+          "answer": 1,
+          "why": "Keepalives."
+        },
+        {
+          "q": "Split tunnel advice is",
+          "choices": [
+            "Exclude every Five9 name",
+            "Do not exclude Five9 domains",
+            "Disable RTP",
+            "Use satellite"
+          ],
+          "answer": 1,
+          "why": "Keep Five9 inside the tunnel."
+        },
+        {
+          "q": "RFC 1918 addresses on a VPN should be",
+          "choices": [
+            "Left as-is toward Five9",
+            "Translated to a public address",
+            "Used as the ANI",
+            "Put in the skill name"
+          ],
+          "answer": 1,
+          "why": "NAT them to public space."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Double NAT?",
+          "back": "No."
+        },
+        {
+          "front": "UDP idle?",
+          "back": "30 seconds."
+        },
+        {
+          "front": "Shorter timer?",
+          "back": "Keepalives."
+        },
+        {
+          "front": "Split tunnel?",
+          "back": "Do not exclude Five9."
+        }
+      ],
+      "lab": {
+        "title": "Trace one-way audio",
+        "goal": "List NAT count, UDP timer, and whether Five9 is inside the tunnel.",
+        "steps": [
+          "NAT layers",
+          "Idle timer",
+          "Split-tunnel check"
+        ],
+        "success": "You did not start with the dialer mode.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Audio dies after half a minute of silence",
+        "symptom": "The firewall drops UDP before 30 seconds and nothing keepalive is sent.",
+        "log": "UDP idle=15s keepalive=off",
+        "choices": [
+          "Lengthen the binding or add keepalives",
+          "Switch to vertical dialing",
+          "Delete the profile",
+          "Turn off SRV"
+        ],
+        "answer": 0,
+        "cause": "The timer matches the symptom.",
+        "fix": "Fix the binding."
+      }
+    },
+    {
+      "id": "l05",
+      "title": "Direct Connect and the edges",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Order Layer 3 with BGP",
+        "Date the Equinix edge list"
+      ],
+      "paragraphs": [
+        "Direct Connect in the requirements is a Layer-3 handoff. There is no Layer-2 requirement. The port is 10, 100, or 1000 full duplex, and failover uses BGP. Equinix Fabric edges named in the PDF this lab read are Chicago CH3, Washington DC10, London LD5, Amsterdam AM4, Frankfurt FR8, São Paulo SP4, Tokyo TY11, and Sydney SY5.",
+        "Those city codes are a snapshot. A new PDF can add or retire an edge. Write the date next to the list before a circuit is ordered."
+      ],
+      "cites": [
+        {
+          "label": "Technical requirements PDF",
+          "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+          "note": "Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall."
+        }
+      ],
+      "uncertain": [
+        "CH3, DC10, LD5, AM4, FR8, SP4, TY11, and SY5 are the Equinix Fabric edges in the technical requirements read in October 2026."
+      ],
+      "figure": {
+        "kind": "stack",
+        "title": "Edges named in the PDF we read",
+        "caption": "Confirm before you order. October 2026 snapshot.",
+        "rows": [
+          {
+            "label": "Chicago CH3"
+          },
+          {
+            "label": "Washington DC10"
+          },
+          {
+            "label": "London LD5"
+          },
+          {
+            "label": "Amsterdam AM4"
+          },
+          {
+            "label": "Frankfurt FR8"
+          },
+          {
+            "label": "São Paulo SP4"
+          },
+          {
+            "label": "Tokyo TY11"
+          },
+          {
+            "label": "Sydney SY5"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Order a circuit",
+        "lanes": [
+          "PDF",
+          "Order",
+          "Routing"
+        ],
+        "steps": [
+          {
+            "lane": "PDF",
+            "title": "Date",
+            "detail": "The edge list is copied with a date.",
+            "frame": "date"
+          },
+          {
+            "lane": "Order",
+            "title": "Metro",
+            "detail": "The metro is on that list.",
+            "frame": "metro"
+          },
+          {
+            "lane": "Order",
+            "title": "Handoff",
+            "detail": "The handoff is Layer 3.",
+            "frame": "l3"
+          },
+          {
+            "lane": "Order",
+            "title": "Speed",
+            "detail": "The port is 10, 100, or 1000 full duplex.",
+            "frame": "speed"
+          },
+          {
+            "lane": "Routing",
+            "title": "BGP",
+            "detail": "Failover is BGP.",
+            "frame": "bgp"
+          },
+          {
+            "lane": "Admin",
+            "title": "No L2",
+            "detail": "Nobody asks the provider for a Layer-2 LAN extension.",
+            "frame": "nol2"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Direct Connect handoff is",
+          "choices": [
+            "Layer 2 required",
+            "Layer 3",
+            "Analog",
+            "Wi-Fi"
+          ],
+          "answer": 1,
+          "why": "Layer 3."
+        },
+        {
+          "q": "Failover protocol named is",
+          "choices": [
+            "RIP",
+            "BGP",
+            "Static only",
+            "NetBIOS"
+          ],
+          "answer": 1,
+          "why": "BGP."
+        },
+        {
+          "q": "A port speed in the list is",
+          "choices": [
+            "10/100/1000 full duplex",
+            "Only 100 Gbps",
+            "Satellite",
+            "5G"
+          ],
+          "answer": 0,
+          "why": "Those three, full duplex."
+        },
+        {
+          "q": "London's code in that PDF is",
+          "choices": [
+            "LD5",
+            "LHR1",
+            "UK-SIP",
+            "AM4"
+          ],
+          "answer": 0,
+          "why": "LD5."
+        },
+        {
+          "q": "You should treat the city list as permanent. True or false?",
+          "choices": [
+            "True",
+            "False. Date it and re-read",
+            "True outside the US",
+            "True for Java only"
+          ],
+          "answer": 1,
+          "why": "Edges move."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Handoff?",
+          "back": "Layer 3."
+        },
+        {
+          "front": "Failover?",
+          "back": "BGP."
+        },
+        {
+          "front": "London?",
+          "back": "LD5 in that PDF."
+        },
+        {
+          "front": "Is the list forever?",
+          "back": "No."
+        }
+      ],
+      "lab": {
+        "title": "Date an edge",
+        "goal": "Copy one metro code and write why you will re-check it.",
+        "steps": [
+          "Open the current PDF",
+          "Copy the code with a date",
+          "Name BGP and full duplex"
+        ],
+        "success": "The order form has a date.",
+        "href": ""
+      },
+      "fault": {
+        "title": "The order asks for a Layer-2 extension to a city code from memory",
+        "symptom": "The PDF was not opened, and Layer 2 is the wrong handoff.",
+        "log": "ORDER l2=yes metro=remembered",
+        "choices": [
+          "Re-read the PDF and order Layer 3 with BGP",
+          "Ship it",
+          "Use cellular failover as the design",
+          "Disable TLS"
+        ],
+        "answer": 0,
+        "cause": "Both the layer and the metro need the current document.",
+        "fix": "Correct the order."
+      }
+    },
+    {
+      "id": "l06",
+      "title": "TLS, and ports that are not universal",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Require TLS 1.2",
+        "Keep Studio ports in the Studio box"
+      ],
+      "paragraphs": [
+        "Unencrypted APIs are not the story. TLS 1.2 is required. TLS 1.1 is not supported. The requirements also list TLS 1.3 inbound ciphers: AES-128-GCM, AES-256-GCM, and CHACHA20.",
+        "Studio portal hosts and Studio SIP ports live in the Studio section of that PDF: UDP 5060, TCP 5061 described as beta, proxy UDP 5189 and TCP 5161, a legacy UDP 5188, plus RTP ranges. Do not paste those Studio numbers onto every VCC ITSP trunk. If the trunk guide does not say them, they are not the trunk."
+      ],
+      "cites": [
+        {
+          "label": "Technical requirements PDF",
+          "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+          "note": "Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall."
+        },
+        {
+          "label": "SIP trunk options chapter",
+          "url": "https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/SIP-trunk-options/_ch-five9-sip-trunk-options.htm"
+        }
+      ],
+      "uncertain": [
+        "Studio TCP 5061 is described as beta in the PDF read for this lab. Confirm before you depend on it."
+      ],
+      "figure": {
+        "kind": "compare",
+        "title": "Two port lists",
+        "caption": "Studio media is not every VCC trunk.",
+        "leftTitle": "Domain requirements",
+        "rightTitle": "Studio section only",
+        "left": [
+          "TLS 1.2 required",
+          "TLS 1.1 unsupported",
+          "TLS 1.3 ciphers listed"
+        ],
+        "right": [
+          "UDP 5060",
+          "TCP 5061 beta",
+          "Proxy 5189 / 5161"
+        ]
+      },
+      "flow": {
+        "title": "A firewall request arrives",
+        "lanes": [
+          "Ask",
+          "TLS",
+          "Ports"
+        ],
+        "steps": [
+          {
+            "lane": "Ask",
+            "title": "Which",
+            "detail": "Is this VCC voice or Studio?",
+            "frame": "which"
+          },
+          {
+            "lane": "TLS",
+            "title": "Floor",
+            "detail": "TLS 1.2 is the floor.",
+            "frame": "12"
+          },
+          {
+            "lane": "TLS",
+            "title": "Drop",
+            "detail": "TLS 1.1 is removed.",
+            "frame": "11"
+          },
+          {
+            "lane": "Ports",
+            "title": "Studio",
+            "detail": "Studio ports are copied only for Studio.",
+            "frame": "studio"
+          },
+          {
+            "lane": "Ports",
+            "title": "Trunk",
+            "detail": "The trunk uses its own guide.",
+            "frame": "trunk"
+          },
+          {
+            "lane": "Admin",
+            "title": "Label",
+            "detail": "The rule is labeled so the next person does not merge them.",
+            "frame": "label"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Required TLS version is",
+          "choices": [
+            "1.0",
+            "1.2",
+            "Any",
+            "None"
+          ],
+          "answer": 1,
+          "why": "TLS 1.2."
+        },
+        {
+          "q": "TLS 1.1 is",
+          "choices": [
+            "Preferred",
+            "Not supported",
+            "Required for Java",
+            "The E911 cipher"
+          ],
+          "answer": 1,
+          "why": "Not supported."
+        },
+        {
+          "q": "A TLS 1.3 inbound cipher named is",
+          "choices": [
+            "AES-256-GCM",
+            "DES",
+            "RC4",
+            "Null"
+          ],
+          "answer": 0,
+          "why": "AES-128-GCM, AES-256-GCM, and CHACHA20 are listed."
+        },
+        {
+          "q": "Studio UDP 5060 should be applied to",
+          "choices": [
+            "Every VCC ITSP trunk automatically",
+            "Studio, when that section applies",
+            "Headsets",
+            "Lists"
+          ],
+          "answer": 1,
+          "why": "Do not smear Studio ports across every trunk."
+        },
+        {
+          "q": "TCP 5061 in that Studio note is",
+          "choices": [
+            "Called generally available with no caveat",
+            "Described as beta in the PDF this lab read",
+            "A disposition",
+            "A skill"
+          ],
+          "answer": 1,
+          "why": "The note says beta. Re-read before you rely on it."
+        }
+      ],
+      "cards": [
+        {
+          "front": "TLS floor?",
+          "back": "1.2."
+        },
+        {
+          "front": "TLS 1.1?",
+          "back": "Not supported."
+        },
+        {
+          "front": "Studio 5060 on every trunk?",
+          "back": "No."
+        },
+        {
+          "front": "5061 caveat?",
+          "back": "Beta in that PDF."
+        }
+      ],
+      "lab": {
+        "title": "Label the rule",
+        "goal": "Write one firewall line for TLS and one for Studio, and refuse to merge them.",
+        "steps": [
+          "TLS 1.2",
+          "Studio ports marked Studio",
+          "A note that the trunk guide is separate"
+        ],
+        "success": "The two rules have different names.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Voice fails after a 'cleanup' that left TLS 1.1",
+        "symptom": "The floor is 1.2.",
+        "log": "TLS offered=1.1 result=fail",
+        "choices": [
+          "Offer TLS 1.2 or the listed 1.3 ciphers",
+          "Drop to cleartext",
+          "Open 5060 on the ITSP because Studio uses it",
+          "Disable NAT"
+        ],
+        "answer": 0,
+        "cause": "Cleartext is also out. Studio ports are a different box.",
+        "fix": "Restore a supported TLS version."
+      }
+    },
+    {
+      "id": "l07",
+      "title": "Headsets, and the call that only fails one way",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Specify USB headsets",
+        "Check Efficiency Mode before you blame the trunk"
+      ],
+      "paragraphs": [
+        "USB noise-canceling headsets are the recommendation. Analog headsets are not supported. Wireless is not recommended once you are above roughly ten agents. Windows 11 Efficiency Mode can drop live calls. Java admin is not the Mac ARM path; use the web admin there. None of that is a SIP trunk, and all of it still stops a call.",
+        "When audio fails, walk the stack this track just built: path type, codec, bandwidth medium, NAT, TLS, then the headset. The topology tool lets you pull the ITSP or the SBC and hear the symptom described. It is a model."
+      ],
+      "cites": [
+        {
+          "label": "Technical requirements PDF",
+          "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+          "note": "Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall."
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "path",
+        "title": "Debug order for dead audio",
+        "caption": "Leave the dialer mode alone until the path is honest.",
+        "rows": [
+          {
+            "label": "Which SIP story"
+          },
+          {
+            "label": "G.711 and bandwidth"
+          },
+          {
+            "label": "NAT and UDP timer"
+          },
+          {
+            "label": "TLS version"
+          },
+          {
+            "label": "Headset and PC power mode"
+          }
+        ]
+      },
+      "flow": {
+        "title": "A silent agent",
+        "lanes": [
+          "PC",
+          "Path",
+          "Headset"
+        ],
+        "steps": [
+          {
+            "lane": "PC",
+            "title": "Power",
+            "detail": "Efficiency Mode is checked on Windows 11.",
+            "frame": "eff"
+          },
+          {
+            "lane": "Path",
+            "title": "Medium",
+            "detail": "The link is not cellular or satellite.",
+            "frame": "med"
+          },
+          {
+            "lane": "Path",
+            "title": "TLS",
+            "detail": "The offer is TLS 1.2 or better.",
+            "frame": "tls"
+          },
+          {
+            "lane": "Headset",
+            "title": "USB",
+            "detail": "The headset is USB, not analog.",
+            "frame": "usb"
+          },
+          {
+            "lane": "Headset",
+            "title": "Wireless",
+            "detail": "A large floor is not all on wireless.",
+            "frame": "wifi"
+          },
+          {
+            "lane": "Admin",
+            "title": "Model",
+            "detail": "The topology toggle is used as a picture, not as proof.",
+            "frame": "topo"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Recommended headset style is",
+          "choices": [
+            "Analog",
+            "USB noise-canceling",
+            "Speakerphone only",
+            "None"
+          ],
+          "answer": 1,
+          "why": "USB noise-canceling."
+        },
+        {
+          "q": "Analog headsets are",
+          "choices": [
+            "Required",
+            "Not supported",
+            "The TLS 1.3 cipher",
+            "Fine above 10 agents"
+          ],
+          "answer": 1,
+          "why": "Not supported."
+        },
+        {
+          "q": "Wireless headsets above about ten agents are",
+          "choices": [
+            "Mandatory",
+            "Not recommended",
+            "The only supported option",
+            "A campaign type"
+          ],
+          "answer": 1,
+          "why": "Not recommended at that scale."
+        },
+        {
+          "q": "Windows 11 Efficiency Mode can",
+          "choices": [
+            "Improve abandon rate",
+            "Drop live calls",
+            "Replace DNS SRV",
+            "Sign recordings"
+          ],
+          "answer": 1,
+          "why": "The PDF warns it can drop live calls."
+        },
+        {
+          "q": "Java admin on Mac ARM is",
+          "choices": [
+            "The required console",
+            "Not the path. Use web admin",
+            "The ITSP",
+            "E911"
+          ],
+          "answer": 1,
+          "why": "The PDF says Java admin is not for Mac ARM."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Headset?",
+          "back": "USB noise-canceling."
+        },
+        {
+          "front": "Analog?",
+          "back": "Not supported."
+        },
+        {
+          "front": "Wireless at scale?",
+          "back": "Not recommended."
+        },
+        {
+          "front": "Efficiency Mode?",
+          "back": "Can drop live calls."
+        }
+      ],
+      "lab": {
+        "title": "Walk a silent seat",
+        "goal": "Use the debug order on a fictional one-way call.",
+        "steps": [
+          "Path",
+          "NAT",
+          "Headset"
+        ],
+        "success": "You named a layer before you named a vendor ticket.",
+        "href": "#/topology"
+      },
+      "fault": {
+        "title": "Every agent on a 40-person team uses a wireless headset and analog adapters",
+        "symptom": "The PDF already argued with that cart.",
+        "log": "HEADSET wireless=40 analog=yes",
+        "choices": [
+          "Move to wired USB noise-canceling sets",
+          "Add lines per agent",
+          "Change list penetration",
+          "Disable SRV"
+        ],
+        "answer": 0,
+        "cause": "The scale and the analog adapters are both outside the recommendation.",
+        "fix": "Replace the sets."
+      }
+    }
+  ]
+}

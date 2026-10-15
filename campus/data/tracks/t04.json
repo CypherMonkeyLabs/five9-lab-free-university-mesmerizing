@@ -1,0 +1,1336 @@
+{
+  "id": "t04",
+  "title": "Outbound lists",
+  "short": "Outbound",
+  "blurb": "Lists, profiles, penetration versus vertical, resets, and the guardrails around time and detection.",
+  "group": "Voice",
+  "level": "Practice",
+  "summary": "Outbound dials a loaded list under a mode. Resets and ANI changes are explicit.",
+  "lessons": [
+    {
+      "id": "l01",
+      "title": "A list is not a campaign",
+      "level": "foundation",
+      "minutes": 12,
+      "objectives": [
+        "Separate file, list, and running campaign",
+        "Map number1"
+      ],
+      "paragraphs": [
+        "Outbound and autodial campaigns dial lists of contact records. The list has an order. The campaign has a run state and a dialing mode. Uploading a CSV does neither of those.",
+        "The disposition topic says you reset list position and dispositions on the lists currently loaded in that campaign. A list sitting in the library and a list loaded in the campaign are not the same moment."
+      ],
+      "cites": [
+        {
+          "label": "List dialing modes",
+          "url": "https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US"
+        },
+        {
+          "label": "Managing campaign dispositions",
+          "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dispositions/managing-dispositions.htm"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "path",
+        "title": "List lifecycle",
+        "caption": "Upload, load, run, then dial.",
+        "rows": [
+          {
+            "label": "CSV"
+          },
+          {
+            "label": "List object"
+          },
+          {
+            "label": "Loaded on campaign"
+          },
+          {
+            "label": "Running mode"
+          }
+        ]
+      },
+      "flow": {
+        "title": "From file to dial",
+        "lanes": [
+          "Admin",
+          "Campaign"
+        ],
+        "steps": [
+          {
+            "lane": "Admin",
+            "title": "Upload",
+            "detail": "The CSV becomes a list.",
+            "frame": "csv"
+          },
+          {
+            "lane": "Admin",
+            "title": "Fields",
+            "detail": "number1 maps to a phone field.",
+            "frame": "map"
+          },
+          {
+            "lane": "Campaign",
+            "title": "Load",
+            "detail": "The list is loaded on the campaign.",
+            "frame": "load"
+          },
+          {
+            "lane": "Campaign",
+            "title": "Mode",
+            "detail": "A dialing mode is selected.",
+            "frame": "mode"
+          },
+          {
+            "lane": "Campaign",
+            "title": "Run",
+            "detail": "The campaign is running.",
+            "frame": "run"
+          },
+          {
+            "lane": "Campaign",
+            "title": "Dial",
+            "detail": "Records leave the top of the order.",
+            "frame": "dial"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Uploading a CSV starts dialing. True or false?",
+          "choices": [
+            "True",
+            "False. The campaign must load it, have a mode, and run",
+            "True for inbound",
+            "True if the file is xlsx only"
+          ],
+          "answer": 1,
+          "why": "The list is an input."
+        },
+        {
+          "q": "Reset list position affects",
+          "choices": [
+            "Every list in the domain",
+            "Lists currently loaded in that campaign",
+            "Only IVR prompts",
+            "Only 911 recordings"
+          ],
+          "answer": 1,
+          "why": "The disposition topic limits the reset to loaded lists."
+        },
+        {
+          "q": "number1 is",
+          "choices": [
+            "The DNIS",
+            "A phone field on the contact",
+            "The agent extension",
+            "The pause timer"
+          ],
+          "answer": 1,
+          "why": "List examples walk number1, number2, number3."
+        },
+        {
+          "q": "An inbound campaign is the right place for a sales list. True or false?",
+          "choices": [
+            "True",
+            "False. Lists belong on outbound or autodial",
+            "True at night",
+            "True if the DNIS is 800"
+          ],
+          "answer": 1,
+          "why": "Inbound answers a DNIS."
+        },
+        {
+          "q": "A reconciled list is on which roadmap?",
+          "choices": [
+            "The headset page",
+            "The planning roadmap, before campaigns",
+            "Only Studio",
+            "Only WEM"
+          ],
+          "answer": 1,
+          "why": "Planning says to define and reconcile call lists before campaigns."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Does upload dial?",
+          "back": "No."
+        },
+        {
+          "front": "Which lists does reset touch?",
+          "back": "Lists loaded in the campaign."
+        },
+        {
+          "front": "number1?",
+          "back": "A phone field."
+        },
+        {
+          "front": "Sales list campaign type?",
+          "back": "Outbound or autodial."
+        }
+      ],
+      "lab": {
+        "title": "Map a file",
+        "goal": "Name the column that becomes number1.",
+        "steps": [
+          "Pick the phone column",
+          "Say the campaign type",
+          "Say the state required before dialing"
+        ],
+        "success": "You did not attach the file to an inbound campaign.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Forty thousand rows and no calls",
+        "symptom": "Import succeeded yesterday.",
+        "log": "LIST rows=40000 CAMPAIGN loaded=no state=NOT_RUNNING",
+        "choices": [
+          "Load the list and start a dialing mode",
+          "Change the greeting WAV",
+          "Enable IE",
+          "Set pause to 0"
+        ],
+        "answer": 0,
+        "cause": "The list is not loaded on a running campaign.",
+        "fix": "Load it, set the mode, start the campaign."
+      }
+    },
+    {
+      "id": "l02",
+      "title": "Profiles filter the list the agent sees",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Filter with a profile",
+        "Keep dialing mode on the campaign"
+      ],
+      "paragraphs": [
+        "Campaign profiles filter and sort lists, control agent pop-ups, and manage disposition counts. They also override defaults such as the ANI. One campaign, one profile. Workflow rules can swap the profile.",
+        "A filter on the profile changes which rows are eligible. It does not change list penetration versus vertical. That choice is the list dialing mode on the campaign."
+      ],
+      "cites": [
+        {
+          "label": "Campaign profiles",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/campaign-profiles/_ch-campaign-profiles.htm"
+        },
+        {
+          "label": "List dialing modes",
+          "url": "https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "compare",
+        "title": "Profile versus list mode",
+        "caption": "Both touch the list. They do different jobs.",
+        "leftTitle": "Profile",
+        "rightTitle": "List dialing mode",
+        "left": [
+          "Filter",
+          "Sort",
+          "ANI",
+          "Pop-ups"
+        ],
+        "right": [
+          "Penetration",
+          "Vertical",
+          "Which number next"
+        ]
+      },
+      "flow": {
+        "title": "A filtered morning list",
+        "lanes": [
+          "Admin",
+          "Dialer"
+        ],
+        "steps": [
+          {
+            "lane": "Admin",
+            "title": "Filter",
+            "detail": "The profile keeps today's time zone or segment.",
+            "frame": "filter"
+          },
+          {
+            "lane": "Admin",
+            "title": "Assign",
+            "detail": "Advanced mode attaches that one profile.",
+            "frame": "assign"
+          },
+          {
+            "lane": "Dialer",
+            "title": "Mode",
+            "detail": "Penetration walks number1 across the filtered rows.",
+            "frame": "pen"
+          },
+          {
+            "lane": "Dialer",
+            "title": "Skip",
+            "detail": "Rows the filter excluded never dial.",
+            "frame": "skip"
+          },
+          {
+            "lane": "Admin",
+            "title": "Swap",
+            "detail": "A workflow can change the profile at noon.",
+            "frame": "swap"
+          },
+          {
+            "lane": "Dialer",
+            "title": "ANI",
+            "detail": "The caller ID follows the profile override.",
+            "frame": "ani"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "A profile filter and vertical dialing are",
+          "choices": [
+            "The same setting",
+            "Different settings",
+            "Both TLS ciphers",
+            "Both headsets"
+          ],
+          "answer": 1,
+          "why": "Filter selects rows. Vertical selects which phone on a row."
+        },
+        {
+          "q": "How many profiles on one campaign?",
+          "choices": [
+            "One",
+            "One per skill",
+            "Unlimited simultaneous",
+            "Zero"
+          ],
+          "answer": 1,
+          "why": "Only one profile is associated."
+        },
+        {
+          "q": "Caller ID override lives on",
+          "choices": [
+            "The skill greeting",
+            "The campaign profile",
+            "The JRE",
+            "The flashcard"
+          ],
+          "answer": 1,
+          "why": "Profiles override defaults such as ANI."
+        },
+        {
+          "q": "A workflow rule can",
+          "choices": [
+            "Delete Five9",
+            "Change which profile the campaign uses",
+            "Disable RFC 3261",
+            "Replace a DNIS with a skill"
+          ],
+          "answer": 1,
+          "why": "The profile topic includes workflow rules."
+        },
+        {
+          "q": "Pop-up windows in the agent UI are",
+          "choices": [
+            "Uncontrollable",
+            "Something a profile can control",
+            "A carrier option",
+            "A matrix export"
+          ],
+          "answer": 1,
+          "why": "The profile topic lists pop-up control."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Filter vs vertical?",
+          "back": "Different."
+        },
+        {
+          "front": "Profiles at once?",
+          "back": "One."
+        },
+        {
+          "front": "ANI override?",
+          "back": "On the profile."
+        },
+        {
+          "front": "Pop-ups?",
+          "back": "A profile can control them."
+        }
+      ],
+      "lab": {
+        "title": "Two mornings",
+        "goal": "Write a profile that would dial only one segment.",
+        "steps": [
+          "Name the filter",
+          "Assign it in Advanced mode",
+          "Leave the dialing mode on the campaign"
+        ],
+        "success": "The mode and the filter are on different objects.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Noon calls use the morning ANI",
+        "symptom": "A workflow was supposed to swap profiles.",
+        "log": "PROFILE now=morning RULE noon=missing",
+        "choices": [
+          "The workflow rule never changed the profile",
+          "G.711 ptime",
+          "Pause is 0",
+          "The menu has three digits"
+        ],
+        "answer": 0,
+        "cause": "The campaign is still on the morning profile.",
+        "fix": "Add the workflow or assign the afternoon profile in Advanced mode."
+      }
+    },
+    {
+      "id": "l03",
+      "title": "List penetration and vertical dialing",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Walk both list modes on paper",
+        "Respect a final disposition"
+      ],
+      "paragraphs": [
+        "List penetration is the default. The dialer tries the first phone on every record, then the next phone on a later pass. Vertical dialing stays with one contact and moves across that contact's numbers before it moves on.",
+        "The community article's wording is easy to twist: it says the physical direction of list penetration is vertical, while the industry phrase vertical dialing means walking numbers across a record. Use the article's definitions, not the compass words. A final disposition stops every number on the record in either mode."
+      ],
+      "cites": [
+        {
+          "label": "List dialing modes",
+          "url": "https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US"
+        },
+        {
+          "label": "Vertical list dialing chapter",
+          "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-list-dialing-mode/using-vertical-list-dialing.htm"
+        }
+      ],
+      "uncertain": [
+        "The documentation portal has a vertical-dialing chapter. This lesson follows the community article's definitions because that page returned readable text. Confirm the portal chapter in your own admin guide."
+      ],
+      "figure": {
+        "kind": "compare",
+        "title": "Two walks",
+        "caption": "Same list, different next number.",
+        "leftTitle": "List penetration (default)",
+        "rightTitle": "Vertical",
+        "left": [
+          "All number1 values first",
+          "Then number2",
+          "Next pass waits until the record comes around"
+        ],
+        "right": [
+          "All numbers for one record",
+          "Then the next record",
+          "Retry timing follows minimum duration"
+        ]
+      },
+      "flow": {
+        "title": "Three people, three numbers",
+        "lanes": [
+          "Dialer",
+          "List"
+        ],
+        "steps": [
+          {
+            "lane": "List",
+            "title": "Pen pass 1",
+            "detail": "Ada number1, Bo number1, Cia number1.",
+            "frame": "n1"
+          },
+          {
+            "lane": "List",
+            "title": "Pen pass 2",
+            "detail": "Ada number2, and so on.",
+            "frame": "n2"
+          },
+          {
+            "lane": "List",
+            "title": "Vertical",
+            "detail": "Ada number1, Ada number2, Ada number3, then Bo.",
+            "frame": "vert"
+          },
+          {
+            "lane": "Dialer",
+            "title": "Final",
+            "detail": "A final code stops Ada's remaining numbers.",
+            "frame": "final"
+          },
+          {
+            "lane": "Dialer",
+            "title": "Wait",
+            "detail": "Minimum duration before a number is retried.",
+            "frame": "min"
+          },
+          {
+            "lane": "Dialer",
+            "title": "Default",
+            "detail": "If you never chose, penetration is the default.",
+            "frame": "default"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Which mode is the default?",
+          "choices": [
+            "Vertical",
+            "List penetration",
+            "Predictive",
+            "TCPA"
+          ],
+          "answer": 1,
+          "why": "The list-mode article says list penetration is the default."
+        },
+        {
+          "q": "Vertical dialing tries to",
+          "choices": [
+            "Call every record's first number before any second number",
+            "Finish the numbers on one record before moving on",
+            "Ignore final dispositions",
+            "Dial only DNIS"
+          ],
+          "answer": 1,
+          "why": "That is the contrast the article draws."
+        },
+        {
+          "q": "The article says list penetration's physical direction looks vertical. That means",
+          "choices": [
+            "Penetration and vertical are the same mode",
+            "Do not trust the compass word. Read the definition",
+            "You must use vertical",
+            "ANI changes"
+          ],
+          "answer": 1,
+          "why": "The article itself warns about the industry phrase."
+        },
+        {
+          "q": "A final disposition in either mode",
+          "choices": [
+            "Dials the next number",
+            "Stops the record's remaining numbers for that campaign",
+            "Starts the IVR",
+            "Resets the profile"
+          ],
+          "answer": 1,
+          "why": "The article says no further attempts on any number for that record."
+        },
+        {
+          "q": "Minimum duration before redial is",
+          "choices": [
+            "A headset setting",
+            "A campaign dialing option the article tells you not to skip",
+            "A JRE flag",
+            "Always zero"
+          ],
+          "answer": 1,
+          "why": "The article refers to Minimum Duration Before Redialing Number on Dialing Options."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Default list mode?",
+          "back": "List penetration."
+        },
+        {
+          "front": "Vertical in one sentence?",
+          "back": "Finish one record's numbers, then move on."
+        },
+        {
+          "front": "Compass words?",
+          "back": "Use the definitions, not 'vertical' as a direction."
+        },
+        {
+          "front": "Final disposition?",
+          "back": "Stops the whole record."
+        }
+      ],
+      "lab": {
+        "title": "Walk six calls",
+        "goal": "Write the first six dials for penetration and for vertical on three records.",
+        "steps": [
+          "Penetration: three number1 dials",
+          "Vertical: one record's numbers",
+          "Mark a final code and stop"
+        ],
+        "success": "The two lists of six are not the same.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Second phones never dial",
+        "symptom": "The list is in vertical mode and the first number on each hot record is a final no-contact that was mis-coded as final.",
+        "log": "MODE vertical DISP final on number1",
+        "choices": [
+          "The final flag stopped the rest of the record",
+          "TLS failed",
+          "The DNIS is busy",
+          "Pause is 30"
+        ],
+        "answer": 0,
+        "cause": "Final stops every number on the record.",
+        "fix": "Use a retryable code when other numbers should still be tried."
+      }
+    },
+    {
+      "id": "l04",
+      "title": "Reset is a loaded gun",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Reset codes on purpose",
+        "Prove it with list details"
+      ],
+      "paragraphs": [
+        "Reset list position sends the dialer back to the top. Reset Disposition clears selected outcomes so those rows can dial again. Both act on lists currently loaded. The disposition topic says to reset only codes you know are safe.",
+        "A scheduled disposition update from CSV can also stamp codes, using a key field such as the phone column. The list details report is how you prove the stamp landed, for outbound."
+      ],
+      "cites": [
+        {
+          "label": "Managing campaign dispositions",
+          "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dispositions/managing-dispositions.htm"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "stack",
+        "title": "Two resets",
+        "caption": "They are not the same button.",
+        "rows": [
+          {
+            "label": "Reset list position"
+          },
+          {
+            "label": "Reset selected dispositions"
+          },
+          {
+            "label": "CSV disposition update"
+          },
+          {
+            "label": "List details report"
+          }
+        ]
+      },
+      "flow": {
+        "title": "After a bad week",
+        "lanes": [
+          "Admin",
+          "List"
+        ],
+        "steps": [
+          {
+            "lane": "Admin",
+            "title": "Choose",
+            "detail": "Only No Answer, not Sale.",
+            "frame": "choose"
+          },
+          {
+            "lane": "Admin",
+            "title": "Range",
+            "detail": "Pick the date window.",
+            "frame": "range"
+          },
+          {
+            "lane": "List",
+            "title": "Loaded",
+            "detail": "The reset hits lists in the campaign.",
+            "frame": "loaded"
+          },
+          {
+            "lane": "List",
+            "title": "Dial",
+            "detail": "Those rows are eligible again.",
+            "frame": "dial"
+          },
+          {
+            "lane": "Admin",
+            "title": "CSV",
+            "detail": "A key column updates other rows later.",
+            "frame": "csv"
+          },
+          {
+            "lane": "Admin",
+            "title": "Proof",
+            "detail": "List details shows last disposition.",
+            "frame": "proof"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Reset Disposition should include Sale. True or false?",
+          "choices": [
+            "True, every Friday",
+            "False, unless you intend to call buyers again",
+            "True in vertical mode",
+            "True for inbound DNIS"
+          ],
+          "answer": 1,
+          "why": "Reset only codes that are safe to redial."
+        },
+        {
+          "q": "The reset applies to",
+          "choices": [
+            "Unloaded library lists only",
+            "Lists currently loaded in the campaign",
+            "Every domain",
+            "Voicemail greetings"
+          ],
+          "answer": 1,
+          "why": "The topic says currently loaded lists."
+        },
+        {
+          "q": "List position reset",
+          "choices": [
+            "Changes ANI",
+            "Sends the dialer back toward the top of the list",
+            "Deletes skills",
+            "Stops inbound"
+          ],
+          "answer": 1,
+          "why": "Position and disposition resets are different."
+        },
+        {
+          "q": "A CSV disposition update needs",
+          "choices": [
+            "A key field to find the record",
+            "A new JRE",
+            "An Equinix port",
+            "A matrix layout"
+          ],
+          "answer": 1,
+          "why": "The update flow asks for key fields."
+        },
+        {
+          "q": "Proof for outbound is",
+          "choices": [
+            "MyE911",
+            "A list details report",
+            "The headset LED",
+            "A SIP INVITE"
+          ],
+          "answer": 1,
+          "why": "The update article points at list details."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Reset Sale?",
+          "back": "Only if you mean to call them again."
+        },
+        {
+          "front": "Which lists?",
+          "back": "Currently loaded."
+        },
+        {
+          "front": "Position reset?",
+          "back": "Back toward the top."
+        },
+        {
+          "front": "Proof?",
+          "back": "List details."
+        }
+      ],
+      "lab": {
+        "title": "Write the reset ticket",
+        "goal": "Name the codes, the dates, and the list.",
+        "steps": [
+          "Exclude Sale",
+          "Include No Answer",
+          "Name the campaign"
+        ],
+        "success": "Sale is not in the ticket.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Buyers called the morning after a cleanup",
+        "symptom": "The night operator reset every code.",
+        "log": "RESET codes=ALL including Sale",
+        "choices": [
+          "Sale was reset",
+          "The codec list changed",
+          "IVR Menu lost a digit",
+          "WEM scheduled a break"
+        ],
+        "answer": 0,
+        "cause": "All-codes reset redials finals.",
+        "fix": "Reset only the retryable codes and apologize from the list details proof."
+      }
+    },
+    {
+      "id": "l05",
+      "title": "Time zone and call analysis are guarded defaults",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Name the 30-day and 24-hour windows",
+        "Refuse to invent the legal dialing hours"
+      ],
+      "paragraphs": [
+        "The campaign admin tree includes time zone dialing options, and the default-settings topic says call analysis and voice detection level ship with vendor defaults. Changing defaults can raise a compliance warning. The same topic says US domains watch abandon rate for 30 rolling days and UK domains for 24 hours, and that a Five9 representative sets which kind of domain you have.",
+        "This lab will not invent the legal calling window or the numeric abandon default. Both move, and both are jurisdiction-specific. Open the current page and the current rule before you widen either one."
+      ],
+      "cites": [
+        {
+          "label": "Default campaign settings",
+          "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm"
+        }
+      ],
+      "uncertain": [
+        "The exact hour-by-hour time zone matrix is in the campaign guide and was not copied here. Local telemarketing law is not Five9's default screen."
+      ],
+      "figure": {
+        "kind": "stack",
+        "title": "Leave the guardrails until you have read them",
+        "caption": "The warning exists because the defaults are the vendor's compliance posture.",
+        "rows": [
+          {
+            "label": "Time zone options"
+          },
+          {
+            "label": "Call analysis"
+          },
+          {
+            "label": "Voice detection"
+          },
+          {
+            "label": "Abandon window"
+          },
+          {
+            "label": "US 30 days or UK 24 hours"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Someone wants to dial later",
+        "lanes": [
+          "Admin",
+          "Policy"
+        ],
+        "steps": [
+          {
+            "lane": "Admin",
+            "title": "Find",
+            "detail": "Open time zone dialing options.",
+            "frame": "tz"
+          },
+          {
+            "lane": "Policy",
+            "title": "Read",
+            "detail": "Read the current rule for that country.",
+            "frame": "rule"
+          },
+          {
+            "lane": "Admin",
+            "title": "Default",
+            "detail": "Notice the warning if a default changes.",
+            "frame": "warn"
+          },
+          {
+            "lane": "Admin",
+            "title": "Domain",
+            "detail": "Confirm US versus UK abandon window.",
+            "frame": "window"
+          },
+          {
+            "lane": "Admin",
+            "title": "Analysis",
+            "detail": "Call analysis stays at the default unless you know why.",
+            "frame": "amd"
+          },
+          {
+            "lane": "Policy",
+            "title": "Write",
+            "detail": "Record the page you read, not a rumor.",
+            "frame": "cite"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "US abandon monitoring, per the default-settings topic, uses",
+          "choices": [
+            "24 hours",
+            "A rolling 30 days",
+            "7 days",
+            "The agent's shift"
+          ],
+          "answer": 1,
+          "why": "US domains use 30 days. UK domains use 24 hours."
+        },
+        {
+          "q": "Who sets a domain to US or UK behavior?",
+          "choices": [
+            "Any agent",
+            "A Five9 business representative, according to that topic",
+            "The IVR Menu",
+            "The headset vendor"
+          ],
+          "answer": 1,
+          "why": "The topic says customers request a Five9 representative."
+        },
+        {
+          "q": "Changing Max Abandoned Call Percentage",
+          "choices": [
+            "Is silent",
+            "Can show a warning that you may leave compliance",
+            "Deletes the list",
+            "Switches codecs"
+          ],
+          "answer": 1,
+          "why": "The topic uses that field as the example warning."
+        },
+        {
+          "q": "This lab states the numeric default abandon percent as",
+          "choices": [
+            "3",
+            "2",
+            "It does not. Read the live default in your domain",
+            "10"
+          ],
+          "answer": 2,
+          "why": "The page says there is a preset. It does not need this lab to repeat a number that can change."
+        },
+        {
+          "q": "Call analysis is",
+          "choices": [
+            "A campaign field with a vendor default",
+            "A CUCM partition",
+            "A Credly exam",
+            "A Wi-Fi SSID"
+          ],
+          "answer": 1,
+          "why": "Default settings list Call Analysis and Voice Detection level."
+        }
+      ],
+      "cards": [
+        {
+          "front": "US abandon window?",
+          "back": "Rolling 30 days."
+        },
+        {
+          "front": "UK window?",
+          "back": "24 hours."
+        },
+        {
+          "front": "Who sets US vs UK?",
+          "back": "A Five9 representative, per the topic."
+        },
+        {
+          "front": "Numeric default in this lab?",
+          "back": "Not stated. Read the domain."
+        }
+      ],
+      "lab": {
+        "title": "Read, don't copy",
+        "goal": "Open the default-settings section in your own guide and write down the warning text you see.",
+        "steps": [
+          "Find Max Abandoned Call Percentage",
+          "Do not change it in production",
+          "Note US or UK"
+        ],
+        "success": "You left the live value alone.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Night calls to the wrong coast",
+        "symptom": "An admin turned time zone controls off to 'finish the list'.",
+        "log": "TZ disabled CALLS 22:10 local-east",
+        "choices": [
+          "Turn the time-zone control back on and read the current rule",
+          "Raise predictive pace",
+          "Stop inbound so agents are free",
+          "Use analog headsets"
+        ],
+        "answer": 0,
+        "cause": "Finishing the list is not a reason to ignore the guardrail.",
+        "fix": "Restore the option and confirm the domain's rule set."
+      }
+    },
+    {
+      "id": "l06",
+      "title": "Call analysis is not a guarantee",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Treat detection as a tuned field",
+        "Do not quote a fake accuracy"
+      ],
+      "paragraphs": [
+        "Call analysis and voice detection level are defaulted campaign fields. Product pages also list answering-machine detection and automatic voicemail as agent-efficiency tools. None of those pages give you a percent accuracy you can put in a contract.",
+        "A live person marked as a machine is a silent failure: the agent never hears them, or a voicemail template talks to a human. Treat detection as a tuned setting with a monitoring report, not as a fact about the callee."
+      ],
+      "cites": [
+        {
+          "label": "Default campaign settings",
+          "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm"
+        },
+        {
+          "label": "Outbound product page",
+          "url": "https://www.five9.com/products/capabilities/outbound-contact-center"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "stack",
+        "title": "What the pages actually name",
+        "caption": "Capability names, not accuracy claims.",
+        "rows": [
+          {
+            "label": "Call analysis"
+          },
+          {
+            "label": "Voice detection level"
+          },
+          {
+            "label": "Answering machine detection"
+          },
+          {
+            "label": "Automatic voicemail"
+          }
+        ]
+      },
+      "flow": {
+        "title": "A machine and a person",
+        "lanes": [
+          "Dialer",
+          "Detect",
+          "Agent"
+        ],
+        "steps": [
+          {
+            "lane": "Dialer",
+            "title": "Place",
+            "detail": "The outbound call is analyzed.",
+            "frame": "place"
+          },
+          {
+            "lane": "Detect",
+            "title": "Live",
+            "detail": "A live detection can connect an agent.",
+            "frame": "live"
+          },
+          {
+            "lane": "Detect",
+            "title": "Machine",
+            "detail": "A machine detection can take the voicemail path.",
+            "frame": "amd"
+          },
+          {
+            "lane": "Agent",
+            "title": "Miss",
+            "detail": "A wrong machine label means no agent.",
+            "frame": "miss"
+          },
+          {
+            "lane": "Admin",
+            "title": "Level",
+            "detail": "Voice detection level is the documented knob.",
+            "frame": "level"
+          },
+          {
+            "lane": "Admin",
+            "title": "Report",
+            "detail": "Listen to samples before you trust the week.",
+            "frame": "qa"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Voice detection level is",
+          "choices": [
+            "A SIP port",
+            "A defaulted campaign field",
+            "A Credly score",
+            "A headset model"
+          ],
+          "answer": 1,
+          "why": "It is listed with the default campaign settings."
+        },
+        {
+          "q": "This lab's accuracy number for answering-machine detection is",
+          "choices": [
+            "99 percent",
+            "95 percent",
+            "Not published here, because the cited pages do not give one",
+            "50 percent"
+          ],
+          "answer": 2,
+          "why": "Do not invent an accuracy."
+        },
+        {
+          "q": "Automatic voicemail is listed on",
+          "choices": [
+            "The outbound product page as an agent-efficiency tool",
+            "The JRE page",
+            "The E911 data sheet only",
+            "RFC 3261"
+          ],
+          "answer": 1,
+          "why": "The outbound product page names it."
+        },
+        {
+          "q": "A false machine detection",
+          "choices": [
+            "Improves occupancy honestly",
+            "Can drop a live person out of the agent path",
+            "Starts inbound",
+            "Resets Sale"
+          ],
+          "answer": 1,
+          "why": "The person never reaches an agent."
+        },
+        {
+          "q": "The right operational habit is",
+          "choices": [
+            "Max the detection and walk away",
+            "Sample the results and keep the default until you know why you moved it",
+            "Disable reports",
+            "Use cellular agents"
+          ],
+          "answer": 1,
+          "why": "Defaults exist for a reason, and detection can be wrong."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Where is voice detection level?",
+          "back": "Campaign dialing defaults."
+        },
+        {
+          "front": "Published accuracy?",
+          "back": "Not in this lab."
+        },
+        {
+          "front": "Automatic voicemail?",
+          "back": "Named on the outbound product page."
+        },
+        {
+          "front": "False machine?",
+          "back": "A live person misses the agent."
+        }
+      ],
+      "lab": {
+        "title": "Sample ten calls",
+        "goal": "Describe how you would audit detection without a fake accuracy number.",
+        "steps": [
+          "Pull a small set of recordings",
+          "Mark live versus machine by ear",
+          "Compare to the disposition"
+        ],
+        "success": "You refused to write '99 percent'.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Customers say an agent never came on the line",
+        "symptom": "Detection is aggressive and voicemail templates are on.",
+        "log": "VOICE detection=aggressive VM=on COMPLAINT=live-person",
+        "choices": [
+          "Relax detection and sample recordings",
+          "Stop the inbound campaign",
+          "Delete all skills",
+          "Enable TLS 1.1"
+        ],
+        "answer": 0,
+        "cause": "Live people are being treated as machines.",
+        "fix": "Restore a conservative level and listen before the next list pass."
+      }
+    },
+    {
+      "id": "l07",
+      "title": "Local caller ID is a profile choice",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Override ANI with a profile",
+        "Keep STIR/SHAKEN as its own project"
+      ],
+      "paragraphs": [
+        "The outbound product page lists local caller ID as a business-efficiency tool, and campaign profiles are the documented place to override the default ANI. Showing a local number is a profile and number-plan problem, not a skill-group problem.",
+        "Certified Caller, on its own page, is the STIR/SHAKEN story. A local ANI does not by itself mean the call is signed. Keep those projects separate."
+      ],
+      "cites": [
+        {
+          "label": "Outbound product page",
+          "url": "https://www.five9.com/products/capabilities/outbound-contact-center"
+        },
+        {
+          "label": "Campaign profiles",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/campaign-profiles/_ch-campaign-profiles.htm"
+        },
+        {
+          "label": "Certified Caller",
+          "url": "https://www.five9.com/resources/five9_certified_caller"
+        },
+        {
+          "label": "Call log filters",
+          "url": "https://community.five9.com/s/article/Reporting-Apply-Filter-s-in-the-Call-Log-Report",
+          "note": "Community article dated 14 July 2026."
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "compare",
+        "title": "Two caller-ID projects",
+        "caption": "Both affect trust. They are different products.",
+        "leftTitle": "Local ANI",
+        "rightTitle": "Certified Caller",
+        "left": [
+          "Profile override",
+          "Which number you present"
+        ],
+        "right": [
+          "STIR/SHAKEN",
+          "Attestation, not the profile filter"
+        ]
+      },
+      "flow": {
+        "title": "A west-coast list",
+        "lanes": [
+          "Admin",
+          "PSTN"
+        ],
+        "steps": [
+          {
+            "lane": "Admin",
+            "title": "Numbers",
+            "detail": "You have ANIs in the list's region.",
+            "frame": "stock"
+          },
+          {
+            "lane": "Admin",
+            "title": "Profile",
+            "detail": "The profile overrides the default ANI.",
+            "frame": "profile"
+          },
+          {
+            "lane": "Admin",
+            "title": "Assign",
+            "detail": "Advanced mode binds it to the campaign.",
+            "frame": "bind"
+          },
+          {
+            "lane": "PSTN",
+            "title": "Show",
+            "detail": "The callee sees that ANI.",
+            "frame": "show"
+          },
+          {
+            "lane": "Admin",
+            "title": "Sign",
+            "detail": "STIR/SHAKEN is a separate feature.",
+            "frame": "stir"
+          },
+          {
+            "lane": "Admin",
+            "title": "Report",
+            "detail": "Call log can filter on ANI.",
+            "frame": "report"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Local caller ID is listed as",
+          "choices": [
+            "A skill greeting",
+            "A business-efficiency tool on the outbound product page",
+            "A JRE update",
+            "An IVR Menu digit"
+          ],
+          "answer": 1,
+          "why": "The outbound page lists it."
+        },
+        {
+          "q": "The admin object that overrides ANI is",
+          "choices": [
+            "The skill group",
+            "The campaign profile",
+            "The pause timer",
+            "The reporting role"
+          ],
+          "answer": 1,
+          "why": "Profiles override the default ANI."
+        },
+        {
+          "q": "STIR/SHAKEN signing is",
+          "choices": [
+            "Automatic if the ANI is local",
+            "Certified Caller, a separate published feature",
+            "The Set DNC module",
+            "List penetration"
+          ],
+          "answer": 1,
+          "why": "Do not collapse the two projects."
+        },
+        {
+          "q": "A profile that is not assigned",
+          "choices": [
+            "Still changes the live ANI",
+            "Does not change the campaign",
+            "Deletes the list",
+            "Stops inbound"
+          ],
+          "answer": 1,
+          "why": "Assignment is a separate step."
+        },
+        {
+          "q": "Call log criteria can include ANI. True or false?",
+          "choices": [
+            "False",
+            "True. The call-log articles include ANI as a filter",
+            "Only for matrix exports to CSV",
+            "Only in Studio"
+          ],
+          "answer": 1,
+          "why": "Call log filters include ANI and DNIS."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Where is local caller ID marketed?",
+          "back": "Outbound product page."
+        },
+        {
+          "front": "Which object overrides ANI?",
+          "back": "Campaign profile."
+        },
+        {
+          "front": "Is that STIR/SHAKEN?",
+          "back": "No. Certified Caller is separate."
+        },
+        {
+          "front": "Unassigned profile?",
+          "back": "No effect."
+        }
+      ],
+      "lab": {
+        "title": "Pick an ANI",
+        "goal": "Name the profile field and the assignment click.",
+        "steps": [
+          "Choose the ANI",
+          "Assign in Advanced mode",
+          "Say what you did not configure"
+        ],
+        "success": "You did not call it a skill.",
+        "href": "#/pacing"
+      },
+      "fault": {
+        "title": "Calls show the corporate toll-free",
+        "symptom": "The local profile was built and left unassigned.",
+        "log": "PROFILE local-ani assigned=no",
+        "choices": [
+          "Assign the profile",
+          "Enable Efficiency Mode",
+          "Switch to vertical and hope",
+          "Delete reporting"
+        ],
+        "answer": 0,
+        "cause": "An unused profile does not present its ANI.",
+        "fix": "Assign it in Advanced mode."
+      }
+    }
+  ]
+}

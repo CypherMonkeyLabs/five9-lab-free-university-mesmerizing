@@ -1,0 +1,1365 @@
+{
+  "id": "t05",
+  "title": "Dialer modes and pacing",
+  "short": "Dialer",
+  "blurb": "Preview, progressive, power, predictive, and TCPA manual touch, with the abandon window kept honest.",
+  "group": "Voice",
+  "level": "Advanced",
+  "summary": "Five modes. The simulator is a classroom. The campaign dialog is the system of record.",
+  "lessons": [
+    {
+      "id": "l01",
+      "title": "Preview lets the agent read first",
+      "level": "foundation",
+      "minutes": 12,
+      "objectives": [
+        "Choose preview for context",
+        "Separate it from TCPA"
+      ],
+      "paragraphs": [
+        "Preview delivers the contact and, on the product page, CRM history before the call is placed. It is the mode for conversations that need context. It does not overdial, so abandon from extra ringing lines is not the design.",
+        "The product page's Manual Touch mode goes further and removes automated dialing. Preview itself can still place the call after the agent has seen the record. Do not describe preview and TCPA manual touch as the same switch."
+      ],
+      "cites": [
+        {
+          "label": "Dialer product page",
+          "url": "https://www.five9.com/products/capabilities/dialer-system"
+        },
+        {
+          "label": "Outbound product page",
+          "url": "https://www.five9.com/products/capabilities/outbound-contact-center"
+        },
+        {
+          "label": "TCPA manual touch",
+          "url": "https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "path",
+        "title": "Preview",
+        "caption": "See the record, then one call.",
+        "rows": [
+          {
+            "label": "Record pops"
+          },
+          {
+            "label": "Agent reads"
+          },
+          {
+            "label": "One dial"
+          },
+          {
+            "label": "Talk or disposition"
+          }
+        ]
+      },
+      "flow": {
+        "title": "One preview cycle",
+        "lanes": [
+          "Dialer",
+          "Agent"
+        ],
+        "steps": [
+          {
+            "lane": "Dialer",
+            "title": "Offer",
+            "detail": "The next record is delivered.",
+            "frame": "record"
+          },
+          {
+            "lane": "Agent",
+            "title": "Read",
+            "detail": "History is on screen before dial.",
+            "frame": "read"
+          },
+          {
+            "lane": "Agent",
+            "title": "Dial",
+            "detail": "One call goes out for that agent.",
+            "frame": "one"
+          },
+          {
+            "lane": "Dialer",
+            "title": "Connect",
+            "detail": "A live answer reaches that agent.",
+            "frame": "live"
+          },
+          {
+            "lane": "Agent",
+            "title": "Code",
+            "detail": "A disposition decides the next try.",
+            "frame": "code"
+          },
+          {
+            "lane": "Dialer",
+            "title": "Next",
+            "detail": "Another record waits until an agent is free.",
+            "frame": "next"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Preview is aimed at",
+          "choices": [
+            "Maximum overdial",
+            "Reading the relationship before the call",
+            "911 location",
+            "Matrix exports"
+          ],
+          "answer": 1,
+          "why": "The product page says agents get customer history before dialing."
+        },
+        {
+          "q": "Preview and TCPA manual touch are",
+          "choices": [
+            "Identical",
+            "Related, but manual touch removes automatic dialing",
+            "Both inbound types",
+            "Both codecs"
+          ],
+          "answer": 1,
+          "why": "Manual touch is the stricter mode."
+        },
+        {
+          "q": "Abandon caused by extra lines is",
+          "choices": [
+            "The point of preview",
+            "Not the preview design, because you do not stack lines per agent",
+            "Required by the FTC page in this lab",
+            "A skill setting"
+          ],
+          "answer": 1,
+          "why": "Preview is one record in front of an agent."
+        },
+        {
+          "q": "CRM history on the product page is",
+          "choices": [
+            "Hidden until wrap",
+            "Part of why you pick preview",
+            "Illegal",
+            "A JRE feature"
+          ],
+          "answer": 1,
+          "why": "The dialer page says preview provides CRM history before dialing."
+        },
+        {
+          "q": "A preview campaign still needs",
+          "choices": [
+            "No list",
+            "A list, a running campaign, and agents",
+            "Only a DNIS",
+            "Only WEM"
+          ],
+          "answer": 1,
+          "why": "It is an outbound mode."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Why preview?",
+          "back": "Context before the dial."
+        },
+        {
+          "front": "Same as TCPA?",
+          "back": "No. TCPA removes automatic dialing."
+        },
+        {
+          "front": "Overdial?",
+          "back": "Not the design."
+        },
+        {
+          "front": "Still needs a list?",
+          "back": "Yes."
+        }
+      ],
+      "lab": {
+        "title": "When to pick it",
+        "goal": "Name two campaigns that should be preview and one that should not.",
+        "steps": [
+          "A retention save",
+          "A complaint callback",
+          "A huge identical reminder"
+        ],
+        "success": "The reminder is not preview.",
+        "href": "#/pacing"
+      },
+      "fault": {
+        "title": "Agents dial blind",
+        "symptom": "The mode is power and the CRM pop never arrives before the beep.",
+        "log": "MODE power POP after-connect",
+        "choices": [
+          "Move that book to preview if they must read first",
+          "Raise lines per agent",
+          "Stop inbound",
+          "Disable reports"
+        ],
+        "answer": 0,
+        "cause": "Power will not wait for a reading.",
+        "fix": "Use preview for that book."
+      }
+    },
+    {
+      "id": "l02",
+      "title": "Progressive keeps one call per free agent",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Quote the one-call sentence",
+        "Check the other sentence in the UI"
+      ],
+      "paragraphs": [
+        "The outbound product page says progressive dialing automatically dials one customer per available agent and is what centers use when they want to avoid dropped outbound calls. The dialer product page also says progressive is appropriate when fewer than 10 agents are active, and that it adapts pace to campaign performance.",
+        "Those two sentences are both public and they are not the same sentence. One says one call per available agent. The other says the pace adapts. Reconcile them in the admin UI of your domain. This lab's simulator uses the one-call reservation so you can see abandon stay near zero."
+      ],
+      "cites": [
+        {
+          "label": "Outbound product page",
+          "url": "https://www.five9.com/products/capabilities/outbound-contact-center"
+        },
+        {
+          "label": "Dialer product page",
+          "url": "https://www.five9.com/products/capabilities/dialer-system"
+        }
+      ],
+      "uncertain": [
+        "Five9 publishes both 'one customer per available agent' and 'adaptively control dialing pace' for progressive. This lab does not know which sentence the current build implements."
+      ],
+      "figure": {
+        "kind": "compare",
+        "title": "Two public sentences",
+        "caption": "Read both before you argue.",
+        "leftTitle": "Outbound page",
+        "rightTitle": "Dialer page",
+        "left": [
+          "One customer per available agent",
+          "Used to avoid dropped calls"
+        ],
+        "right": [
+          "Adapts pace",
+          "Fewer than 10 active agents as guidance"
+        ]
+      },
+      "flow": {
+        "title": "A free agent",
+        "lanes": [
+          "Agent",
+          "Dialer"
+        ],
+        "steps": [
+          {
+            "lane": "Agent",
+            "title": "Free",
+            "detail": "The agent is available.",
+            "frame": "free"
+          },
+          {
+            "lane": "Dialer",
+            "title": "One",
+            "detail": "One number is placed for that agent.",
+            "frame": "one"
+          },
+          {
+            "lane": "Dialer",
+            "title": "Reserve",
+            "detail": "The agent is not offered a second line.",
+            "frame": "reserve"
+          },
+          {
+            "lane": "Dialer",
+            "title": "Miss",
+            "detail": "No answer releases the agent.",
+            "frame": "miss"
+          },
+          {
+            "lane": "Dialer",
+            "title": "Hit",
+            "detail": "A live person is connected.",
+            "frame": "hit"
+          },
+          {
+            "lane": "Agent",
+            "title": "Talk",
+            "detail": "Occupancy rises without an abandon pile.",
+            "frame": "talk"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "The outbound page's progressive rule of thumb is",
+          "choices": [
+            "As many lines as possible",
+            "One customer per available agent",
+            "TCPA typing",
+            "A stopped campaign"
+          ],
+          "answer": 1,
+          "why": "That page says one customer per available agent."
+        },
+        {
+          "q": "The dialer page's staffing hint is",
+          "choices": [
+            "More than 100 agents",
+            "Fewer than 10 active agents",
+            "Zero agents",
+            "Only supervisors"
+          ],
+          "answer": 1,
+          "why": "It says progressive is appropriate when fewer than 10 are active. Treat it as guidance, not a hard block."
+        },
+        {
+          "q": "Why abandon stays low in the one-call design",
+          "choices": [
+            "Lines are stacked",
+            "A live answer has the agent who was reserved",
+            "Calls are inbound",
+            "ANI is local"
+          ],
+          "answer": 1,
+          "why": "You do not create an extra live answer with nobody to take it."
+        },
+        {
+          "q": "The two product sentences",
+          "choices": [
+            "Contradict in a way you should notice and then check in the UI",
+            "Are a SIP spec",
+            "Replace the admin guide",
+            "Set the JRE"
+          ],
+          "answer": 1,
+          "why": "One-call and adaptive pace need a look in the domain."
+        },
+        {
+          "q": "This lab's pacing chart for progressive is",
+          "choices": [
+            "Five9 source code",
+            "A teaching model of the one-call description",
+            "A legal opinion",
+            "A report export"
+          ],
+          "answer": 1,
+          "why": "The simulator is labeled as a lab model."
+        }
+      ],
+      "cards": [
+        {
+          "front": "One per agent?",
+          "back": "That is the outbound page."
+        },
+        {
+          "front": "Ten-agent hint?",
+          "back": "Dialer page guidance, not a proven hard limit."
+        },
+        {
+          "front": "Why low abandon?",
+          "back": "The agent is reserved."
+        },
+        {
+          "front": "Simulator?",
+          "back": "Teaching model."
+        }
+      ],
+      "lab": {
+        "title": "Run progressive",
+        "goal": "Open the pacing bench, pick Progressive, and watch abandon.",
+        "steps": [
+          "Set 8 agents",
+          "Set a 30 percent live rate",
+          "Note abandon versus predictive"
+        ],
+        "success": "Abandon stays near zero while predictive can climb.",
+        "href": "#/pacing"
+      },
+      "fault": {
+        "title": "Dropped calls on a 'progressive' campaign",
+        "symptom": "The campaign is actually power with three lines per agent.",
+        "log": "MODE power lines=3 LABEL on-whiteboard=progressive",
+        "choices": [
+          "Change the campaign mode. The whiteboard was wrong",
+          "Add more lines",
+          "Stop all inbound forever",
+          "Delete ANI"
+        ],
+        "answer": 0,
+        "cause": "The mode in the campaign is the mode that dials.",
+        "fix": "Set progressive if one call per agent is the requirement."
+      }
+    },
+    {
+      "id": "l03",
+      "title": "Power dials a ratio you chose",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Set a power ratio on purpose",
+        "Treat the abandon warning as a brake"
+      ],
+      "paragraphs": [
+        "The dialer page says power dials a user-configured number of calls per available agent and adjusts from abandon rates. It points that mode at a small group with a large list. The outbound page says the same shape: a small sales team and a large prospect list.",
+        "Because you choose the lines, you can create live answers with no agent. The abandon cap and the warning on the default-settings page are the brakes. The simulator lets you move lines per agent and watch the amber abandon line."
+      ],
+      "cites": [
+        {
+          "label": "Dialer product page",
+          "url": "https://www.five9.com/products/capabilities/dialer-system"
+        },
+        {
+          "label": "Outbound product page",
+          "url": "https://www.five9.com/products/capabilities/outbound-contact-center"
+        },
+        {
+          "label": "Default campaign settings",
+          "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "stack",
+        "title": "Power",
+        "caption": "You set the ratio. The abandon monitor is the brake.",
+        "rows": [
+          {
+            "label": "Lines per free agent"
+          },
+          {
+            "label": "Live answers"
+          },
+          {
+            "label": "Idle agents"
+          },
+          {
+            "label": "Abandon versus cap"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Three lines, two agents",
+        "lanes": [
+          "Dialer",
+          "Caller",
+          "Agent"
+        ],
+        "steps": [
+          {
+            "lane": "Dialer",
+            "title": "Place",
+            "detail": "Several calls go out per free agent.",
+            "frame": "place"
+          },
+          {
+            "lane": "Caller",
+            "title": "Live",
+            "detail": "Two people answer.",
+            "frame": "live"
+          },
+          {
+            "lane": "Agent",
+            "title": "One",
+            "detail": "Only one agent is free.",
+            "frame": "one"
+          },
+          {
+            "lane": "Caller",
+            "title": "Drop",
+            "detail": "The extra live answer is an abandon.",
+            "frame": "drop"
+          },
+          {
+            "lane": "Dialer",
+            "title": "Brake",
+            "detail": "The abandon monitor pulls the ratio down.",
+            "frame": "brake"
+          },
+          {
+            "lane": "Admin",
+            "title": "Cap",
+            "detail": "The cap is a campaign default with a warning if you move it.",
+            "frame": "cap"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Who configures the power ratio?",
+          "choices": [
+            "The carrier",
+            "The administrator, as calls per available agent",
+            "The IVR Menu",
+            "RedSky"
+          ],
+          "answer": 1,
+          "why": "The dialer page says user-configured."
+        },
+        {
+          "q": "Power is marketed for",
+          "choices": [
+            "A hundred agents and a tiny list",
+            "A small team and a large list",
+            "Inbound only",
+            "E911 only"
+          ],
+          "answer": 1,
+          "why": "Both product pages describe a small team and a large volume."
+        },
+        {
+          "q": "An extra live answer with no agent is",
+          "choices": [
+            "A connect",
+            "An abandon",
+            "A skill greeting",
+            "A profile filter"
+          ],
+          "answer": 1,
+          "why": "That is the drop you are trading for speed."
+        },
+        {
+          "q": "The abandon brake is documented as",
+          "choices": [
+            "A secret",
+            "Monitor and max abandoned call percentage, with a warning if you change the max",
+            "A JRE flag",
+            "A headset button"
+          ],
+          "answer": 1,
+          "why": "Default settings name those fields."
+        },
+        {
+          "q": "This lab prints the vendor's numeric default cap as",
+          "choices": [
+            "3 percent",
+            "It does not. Read your domain",
+            "0 percent",
+            "50 percent"
+          ],
+          "answer": 1,
+          "why": "The preset is real and it can differ. Do not copy a number from memory."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Who sets the ratio?",
+          "back": "The administrator."
+        },
+        {
+          "front": "Who is it for?",
+          "back": "Small team, large list."
+        },
+        {
+          "front": "Extra live answer?",
+          "back": "An abandon."
+        },
+        {
+          "front": "Where is the brake?",
+          "back": "Abandon monitor and max percent."
+        }
+      ],
+      "lab": {
+        "title": "Move the ratio",
+        "goal": "In the simulator, compare 1.0 and 3.0 lines.",
+        "steps": [
+          "Watch abandon",
+          "Watch occupancy",
+          "Write which one you would sign"
+        ],
+        "success": "You can explain the trade.",
+        "href": "#/pacing"
+      },
+      "fault": {
+        "title": "Abandon alarm on a five-person sales pod",
+        "symptom": "Power is set to four lines and the cap warning was clicked through.",
+        "log": "MODE power lines=4 WARN=dismissed",
+        "choices": [
+          "Lower the lines and read the warning",
+          "Add lines",
+          "Switch the list to inbound",
+          "Disable call analysis by habit"
+        ],
+        "answer": 0,
+        "cause": "The ratio is above what the pod can answer.",
+        "fix": "Drop the lines or move to progressive."
+      }
+    },
+    {
+      "id": "l04",
+      "title": "Predictive fills idle time, and it can drop calls",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Explain predictive without claiming the source code",
+        "Quote the 30-day and 24-hour windows"
+      ],
+      "paragraphs": [
+        "The dialer page says predictive mode uses algorithms to predict agent availability and is suited to more than 10 active agents. The outbound page says it increases time spent talking to people instead of dialing. Both are marketing descriptions of an overdial.",
+        "The default-settings topic is the control room: monitor abandoned call percentage, a max percentage, a warning if you change the max, 30 rolling days on US domains, and 24 hours on UK domains. A community test article says predictive throttles and does not necessarily lock to one-to-one, while other lines in that same article talk about dropping to one-to-one. Use the settings page as the control. Treat the test article as a field note with mixed wording."
+      ],
+      "cites": [
+        {
+          "label": "Dialer product page",
+          "url": "https://www.five9.com/products/capabilities/dialer-system"
+        },
+        {
+          "label": "Outbound product page",
+          "url": "https://www.five9.com/products/capabilities/outbound-contact-center"
+        },
+        {
+          "label": "Default campaign settings",
+          "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm"
+        },
+        {
+          "label": "Dialing modes live testing",
+          "url": "https://community.five9.com/s/article/Administrator-Campaign-Dialing-Modes-and-Live-Testing-Results",
+          "note": "Community test notes. Wording inside the article is not uniform."
+        }
+      ],
+      "uncertain": [
+        "The exact throttle curve is not specified on the default-settings page. The community test article disagrees with itself about an instant drop to 1:1."
+      ],
+      "figure": {
+        "kind": "stack",
+        "title": "Predictive controls you can cite",
+        "caption": "The algorithm itself is not public source.",
+        "rows": [
+          {
+            "label": "More than 10 agents, as guidance"
+          },
+          {
+            "label": "Abandon monitor"
+          },
+          {
+            "label": "Max percent with a warning"
+          },
+          {
+            "label": "30 days US or 24 hours UK"
+          }
+        ]
+      },
+      "flow": {
+        "title": "The pacer overdials",
+        "lanes": [
+          "Dialer",
+          "Agent",
+          "Caller"
+        ],
+        "steps": [
+          {
+            "lane": "Dialer",
+            "title": "Predict",
+            "detail": "It estimates who will be free.",
+            "frame": "predict"
+          },
+          {
+            "lane": "Dialer",
+            "title": "Extra",
+            "detail": "It places more calls than idle agents.",
+            "frame": "extra"
+          },
+          {
+            "lane": "Caller",
+            "title": "Answer",
+            "detail": "A live answer arrives.",
+            "frame": "answer"
+          },
+          {
+            "lane": "Agent",
+            "title": "Busy",
+            "detail": "Nobody is free.",
+            "frame": "busy"
+          },
+          {
+            "lane": "Caller",
+            "title": "Drop",
+            "detail": "That answer counts as an abandon.",
+            "frame": "drop"
+          },
+          {
+            "lane": "Dialer",
+            "title": "Window",
+            "detail": "The US window is 30 days, not this chart's minute.",
+            "frame": "window"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Predictive staffing guidance on the dialer page is",
+          "choices": [
+            "Fewer than 2 agents",
+            "More than 10 active agents",
+            "Zero agents",
+            "Only TCPA"
+          ],
+          "answer": 1,
+          "why": "The page says best when more than 10 are active. It reads as guidance."
+        },
+        {
+          "q": "US abandon window in the admin topic is",
+          "choices": [
+            "24 hours",
+            "Rolling 30 days",
+            "1 hour",
+            "A single call"
+          ],
+          "answer": 1,
+          "why": "UK domains use 24 hours."
+        },
+        {
+          "q": "The community test article is",
+          "choices": [
+            "The source code",
+            "A field note whose own wording is not uniform about one-to-one",
+            "The E911 guide",
+            "A Credly exam"
+          ],
+          "answer": 1,
+          "why": "Do not treat one sentence in it as the algorithm."
+        },
+        {
+          "q": "This simulator's short window",
+          "choices": [
+            "Is the US legal window",
+            "Is a classroom clock so you can see a throttle. Five9's US window is 30 days",
+            "Replaces the warning",
+            "Disables preview"
+          ],
+          "answer": 1,
+          "why": "The bench says so on the page."
+        },
+        {
+          "q": "Changing the max abandon percent",
+          "choices": [
+            "Cannot warn you",
+            "Can warn that you may leave compliance",
+            "Deletes recordings",
+            "Changes DNIS"
+          ],
+          "answer": 1,
+          "why": "The default-settings topic shows that warning."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Ten-agent line?",
+          "back": "Dialer page guidance."
+        },
+        {
+          "front": "US window?",
+          "back": "30 days."
+        },
+        {
+          "front": "Test article?",
+          "back": "Mixed field note."
+        },
+        {
+          "front": "Simulator window?",
+          "back": "Not Five9's 30 days."
+        }
+      ],
+      "lab": {
+        "title": "Watch a throttle",
+        "goal": "Run Predictive in the bench with 12 agents and a low live rate, then a high one.",
+        "steps": [
+          "Note abandon",
+          "Note pace falling when abandon is high",
+          "Write the real window next to the chart"
+        ],
+        "success": "You wrote 30 days, not the chart's minute.",
+        "href": "#/pacing"
+      },
+      "fault": {
+        "title": "A 12-person pod is in predictive and inbound at once",
+        "symptom": "Abandon climbs whenever inbound takes the same agents.",
+        "log": "MODE predictive SKILLS also=inbound ABANDON rising",
+        "choices": [
+          "Give predictive its own agents or expect the drops",
+          "Ignore the 30-day window",
+          "Type numbers faster",
+          "Stop call recording"
+        ],
+        "answer": 0,
+        "cause": "The dialer page wants agents available to predict. Shared inbound steals them.",
+        "fix": "Dedicate agents or move the book to progressive."
+      }
+    },
+    {
+      "id": "l05",
+      "title": "TCPA manual touch is a typed number",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Enforce typed external dials",
+        "Include callbacks in the rule"
+      ],
+      "paragraphs": [
+        "TCPA manual touch exists only on domains enabled for it. The community article says those domains are generally for telemarketing to cell phones without express consent, and that no other dialing mode is available. Contacts are shown and not dialed. The agent must type the external number. Paste and drag-and-drop are not allowed. The Dial button enables when the typed number matches.",
+        "Preview time still exists. If it expires, the agent goes Not Ready and nothing auto-dials. Dial Immediately and Dial Number are removed. The rule also covers click-to-dial, previews, and queue or voicemail callbacks. Internal speed dial and a third-party transfer do not make you retype. There is a permission to skip records."
+      ],
+      "cites": [
+        {
+          "label": "TCPA manual touch",
+          "url": "https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "stack",
+        "title": "What the agent must do",
+        "caption": "From the TCPA manual-touch article.",
+        "rows": [
+          {
+            "label": "See the record"
+          },
+          {
+            "label": "Type the external number"
+          },
+          {
+            "label": "No paste"
+          },
+          {
+            "label": "Dial enables"
+          },
+          {
+            "label": "Timeout means Not Ready"
+          }
+        ]
+      },
+      "flow": {
+        "title": "A cell number without consent",
+        "lanes": [
+          "Record",
+          "Agent",
+          "Dialer"
+        ],
+        "steps": [
+          {
+            "lane": "Record",
+            "title": "Show",
+            "detail": "The number is visible and not dialed.",
+            "frame": "show"
+          },
+          {
+            "lane": "Agent",
+            "title": "Type",
+            "detail": "Every digit is entered.",
+            "frame": "type"
+          },
+          {
+            "lane": "Agent",
+            "title": "Paste",
+            "detail": "Paste is refused.",
+            "frame": "paste"
+          },
+          {
+            "lane": "Dialer",
+            "title": "Arm",
+            "detail": "Dial enables on a match.",
+            "frame": "arm"
+          },
+          {
+            "lane": "Agent",
+            "title": "Wait",
+            "detail": "Timeout sets Not Ready.",
+            "frame": "timeout"
+          },
+          {
+            "lane": "Dialer",
+            "title": "Still",
+            "detail": "No external auto-dial on that timeout.",
+            "frame": "still"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "TCPA manual touch is available",
+          "choices": [
+            "On every domain",
+            "Only on domains enabled for it",
+            "Only for inbound DNIS",
+            "Only in Studio"
+          ],
+          "answer": 1,
+          "why": "The article says the domain must be enabled, and other modes are not offered there."
+        },
+        {
+          "q": "Paste into the number field?",
+          "choices": [
+            "Allowed",
+            "Not allowed",
+            "Allowed for internal numbers only on external fields",
+            "Allowed if the ANI is local"
+          ],
+          "answer": 1,
+          "why": "The article forbids cut, paste, and drag-and-drop for the external number."
+        },
+        {
+          "q": "When does Dial enable?",
+          "choices": [
+            "Immediately",
+            "After the external number is typed correctly",
+            "After 30 days",
+            "After a skill change"
+          ],
+          "answer": 1,
+          "why": "The article says the button activates after a correct entry."
+        },
+        {
+          "q": "Preview timeout does what?",
+          "choices": [
+            "Auto-dials",
+            "Sets Not Ready and does not auto-dial the external number",
+            "Deletes the list",
+            "Starts predictive"
+          ],
+          "answer": 1,
+          "why": "That is the published timeout behavior."
+        },
+        {
+          "q": "Queue callbacks in this mode",
+          "choices": [
+            "Auto-dial",
+            "Do not auto-dial",
+            "Skip TCPA",
+            "Require a JRE"
+          ],
+          "answer": 1,
+          "why": "The article includes queue callbacks."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Where does the mode exist?",
+          "back": "Domains enabled for it, with no other mode."
+        },
+        {
+          "front": "Paste?",
+          "back": "Blocked."
+        },
+        {
+          "front": "Dial enables when?",
+          "back": "The typed number matches."
+        },
+        {
+          "front": "Timeout?",
+          "back": "Not Ready, no auto-dial."
+        }
+      ],
+      "lab": {
+        "title": "Type it",
+        "goal": "On the pacing bench, type 8005550142. Try to paste.",
+        "steps": [
+          "Paste is blocked",
+          "Dial stays disabled until the digits match",
+          "You can say why"
+        ],
+        "success": "Dial armed only after typing.",
+        "href": "#/pacing"
+      },
+      "fault": {
+        "title": "Dial stays grey",
+        "symptom": "The agent pasted the number from the CRM screen.",
+        "log": "EVENT paste blocked BUTTON dial=disabled",
+        "choices": [
+          "Type the digits. Paste will not arm Dial",
+          "Switch the domain to predictive quietly",
+          "Lower abandon to zero",
+          "Delete the skill"
+        ],
+        "answer": 0,
+        "cause": "Paste is refused on purpose.",
+        "fix": "Type the number."
+      }
+    },
+    {
+      "id": "l06",
+      "title": "The defaults are the compliance posture",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Name the defaulted fields",
+        "Treat the warning as part of the design"
+      ],
+      "paragraphs": [
+        "For every dialing mode, the default-settings topic says options start at values Five9 recommends for FCC, FTC, and UK Ofcom telemarketing rules. If you change them you can see a warning. The example field is Max Abandoned Call Percentage.",
+        "Other defaulted fields on that page include max queue time, the out-of-numbers alert, whether abandon percentage is monitored, call analysis, voice detection level, and the action when max queue time expires. Calculations differ for US and European domains. The topic tells you to refer to the current agency rules."
+      ],
+      "cites": [
+        {
+          "label": "Default campaign settings",
+          "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "stack",
+        "title": "Defaulted fields you can name",
+        "caption": "From the default campaign settings topic.",
+        "rows": [
+          {
+            "label": "Max queue time"
+          },
+          {
+            "label": "Out-of-numbers alert"
+          },
+          {
+            "label": "Abandon monitor and max"
+          },
+          {
+            "label": "Call analysis"
+          },
+          {
+            "label": "Voice detection"
+          },
+          {
+            "label": "Queue-time action"
+          }
+        ]
+      },
+      "flow": {
+        "title": "A warning appears",
+        "lanes": [
+          "Admin",
+          "Campaign"
+        ],
+        "steps": [
+          {
+            "lane": "Admin",
+            "title": "Open",
+            "detail": "Dialing options show the presets.",
+            "frame": "open"
+          },
+          {
+            "lane": "Admin",
+            "title": "Edit",
+            "detail": "Max abandon is changed.",
+            "frame": "edit"
+          },
+          {
+            "lane": "Campaign",
+            "title": "Warn",
+            "detail": "A compliance warning appears.",
+            "frame": "warn"
+          },
+          {
+            "lane": "Admin",
+            "title": "Read",
+            "detail": "The warning is the point, not a nuisance dialog.",
+            "frame": "read"
+          },
+          {
+            "lane": "Admin",
+            "title": "Rule",
+            "detail": "The agency text is outside the dialog.",
+            "frame": "rule"
+          },
+          {
+            "lane": "Admin",
+            "title": "Domain",
+            "detail": "US 30 days versus UK 24 hours still applies.",
+            "frame": "window"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Defaults are there for",
+          "choices": [
+            "Headset color",
+            "FCC, FTC, and Ofcom posture, per the topic",
+            "Faster IVR",
+            "Equinix SLAs"
+          ],
+          "answer": 1,
+          "why": "The topic names those regulators."
+        },
+        {
+          "q": "The example warning field is",
+          "choices": [
+            "ANI",
+            "Max Abandoned Call Percentage",
+            "Skill name",
+            "Prompt file"
+          ],
+          "answer": 1,
+          "why": "That is the example in the topic."
+        },
+        {
+          "q": "Out of numbers alert is",
+          "choices": [
+            "Not a setting",
+            "One of the defaulted fields",
+            "A codec",
+            "A Credly item"
+          ],
+          "answer": 1,
+          "why": "It is in the list."
+        },
+        {
+          "q": "European versus US math",
+          "choices": [
+            "Is identical",
+            "Differs. The topic says so, and names 30 days versus 24 hours for abandon",
+            "Is illegal to mention",
+            "Depends on the headset"
+          ],
+          "answer": 1,
+          "why": "Do not assume one window worldwide."
+        },
+        {
+          "q": "This lab's job when you want a new cap is",
+          "choices": [
+            "Invent 3 percent",
+            "Send you to the live default and the current rule",
+            "Disable monitoring",
+            "Switch to TCPA without a reason"
+          ],
+          "answer": 1,
+          "why": "The number in the domain wins."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Why defaults?",
+          "back": "A stated compliance posture."
+        },
+        {
+          "front": "Example warning?",
+          "back": "Max abandon percent."
+        },
+        {
+          "front": "US vs UK?",
+          "back": "30 days vs 24 hours."
+        },
+        {
+          "front": "Where is the legal text?",
+          "back": "The agency rule, not this lab."
+        }
+      ],
+      "lab": {
+        "title": "Screenshot the warning",
+        "goal": "In a lab domain, start to change the max and read the dialog. Cancel.",
+        "steps": [
+          "Open dialing options",
+          "Invoke the warning",
+          "Cancel"
+        ],
+        "success": "Production is unchanged.",
+        "href": ""
+      },
+      "fault": {
+        "title": "The warning was clicked through on every campaign",
+        "symptom": "Abandon monitor is off and nobody wrote down the rule they think they are meeting.",
+        "log": "MONITOR off MAX changed NOTE none",
+        "choices": [
+          "Turn monitoring back on and write the rule you rely on",
+          "Hide the dialog in CSS",
+          "Delete lists",
+          "Use 5G agents"
+        ],
+        "answer": 0,
+        "cause": "The warning is the control.",
+        "fix": "Restore the preset or document the current legal basis."
+      }
+    },
+    {
+      "id": "l07",
+      "title": "Pick a mode in one page",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Match five constraints to five modes",
+        "Keep TCPA domains pure"
+      ],
+      "paragraphs": [
+        "Use the person's job, not the logo. Context before the call is preview. A promise of no dropped calls and a small team is progressive. A small team and a huge list, with eyes on abandon, is power. A large team whose idle time is the enemy is predictive, with dedicated agents. A cell book without consent is TCPA manual touch, and only if the domain is enabled.",
+        "The ten-agent lines on the dialer page are guidance from a product page. The abandon windows are admin-guide facts. The simulator is a classroom. Your domain's dialog is the system of record."
+      ],
+      "cites": [
+        {
+          "label": "Dialer product page",
+          "url": "https://www.five9.com/products/capabilities/dialer-system"
+        },
+        {
+          "label": "Outbound product page",
+          "url": "https://www.five9.com/products/capabilities/outbound-contact-center"
+        },
+        {
+          "label": "Default campaign settings",
+          "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm"
+        },
+        {
+          "label": "TCPA manual touch",
+          "url": "https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "compare",
+        "title": "Mode picker",
+        "caption": "Match the constraint.",
+        "leftTitle": "Constraint",
+        "rightTitle": "Mode",
+        "left": [
+          "Must read first",
+          "Must not drop",
+          "Small team, huge list",
+          "Large team, fill idle",
+          "No consent on cells"
+        ],
+        "right": [
+          "Preview",
+          "Progressive",
+          "Power",
+          "Predictive",
+          "TCPA manual touch"
+        ]
+      },
+      "flow": {
+        "title": "Five requests",
+        "lanes": [
+          "Request",
+          "Mode"
+        ],
+        "steps": [
+          {
+            "lane": "Request",
+            "title": "Save",
+            "detail": "A banker must read the note.",
+            "frame": "preview"
+          },
+          {
+            "lane": "Request",
+            "title": "Careful",
+            "detail": "Eight agents, no drops.",
+            "frame": "progressive"
+          },
+          {
+            "lane": "Request",
+            "title": "Blitz",
+            "detail": "Four sellers, fifty thousand rows, watch abandon.",
+            "frame": "power"
+          },
+          {
+            "lane": "Request",
+            "title": "Floor",
+            "detail": "Forty agents, outbound only.",
+            "frame": "predictive"
+          },
+          {
+            "lane": "Request",
+            "title": "Cell",
+            "detail": "No express consent.",
+            "frame": "tcpa"
+          },
+          {
+            "lane": "Mode",
+            "title": "Write",
+            "detail": "The abandon window goes in the design note.",
+            "frame": "window"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "No express consent on cell phones points to",
+          "choices": [
+            "Predictive",
+            "TCPA manual touch, on an enabled domain",
+            "Inbound DNIS",
+            "Vertical list mode"
+          ],
+          "answer": 1,
+          "why": "That is the article's setting."
+        },
+        {
+          "q": "Forty dedicated agents and a goal of talk time point to",
+          "choices": [
+            "Preview for every row",
+            "Predictive, with the abandon window understood",
+            "A stopped campaign",
+            "Voicemail Transfer"
+          ],
+          "answer": 1,
+          "why": "That matches the product description, as guidance."
+        },
+        {
+          "q": "Eight agents who must not drop calls point to",
+          "choices": [
+            "Power at four lines",
+            "Progressive",
+            "TCPA paste",
+            "Inbound busy"
+          ],
+          "answer": 1,
+          "why": "The outbound page ties progressive to avoiding drops."
+        },
+        {
+          "q": "The system of record for the cap is",
+          "choices": [
+            "This simulator",
+            "The campaign dialog in the domain",
+            "A whiteboard",
+            "A flashcard"
+          ],
+          "answer": 1,
+          "why": "The bench is a teaching clock."
+        },
+        {
+          "q": "Dedicated agents matter for predictive because",
+          "choices": [
+            "Skills are optional",
+            "The product story assumes it can predict their availability",
+            "ANI changes",
+            "Java requires it"
+          ],
+          "answer": 1,
+          "why": "If inbound steals them, the prediction is wrong."
+        }
+      ],
+      "cards": [
+        {
+          "front": "No consent?",
+          "back": "TCPA manual touch on an enabled domain."
+        },
+        {
+          "front": "Forty agents?",
+          "back": "Predictive, eyes open."
+        },
+        {
+          "front": "No drops, small team?",
+          "back": "Progressive."
+        },
+        {
+          "front": "System of record?",
+          "back": "The domain dialog."
+        }
+      ],
+      "lab": {
+        "title": "Five sticky notes",
+        "goal": "Write the mode next to five real books your floor might run.",
+        "steps": [
+          "One preview",
+          "One progressive",
+          "One power or predictive with a reason"
+        ],
+        "success": "Each note names a constraint.",
+        "href": "#/pacing"
+      },
+      "fault": {
+        "title": "One mode for the whole domain",
+        "symptom": "A TCPA domain was asked to run predictive on a second campaign.",
+        "log": "DOMAIN tcpa MODES available=manual-touch only",
+        "choices": [
+          "Keep predictive off that domain",
+          "Paste harder",
+          "Rename the skill",
+          "Stop reports"
+        ],
+        "answer": 0,
+        "cause": "The article says no other mode is available there.",
+        "fix": "Use a domain that is allowed to predict, or stay on manual touch."
+      }
+    }
+  ]
+}

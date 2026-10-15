@@ -1,0 +1,1381 @@
+{
+  "id": "t07",
+  "title": "IVR scripts",
+  "short": "IVR",
+  "blurb": "The module vocabulary, branches, Skill Transfer, queries, and visual framing.",
+  "group": "Voice",
+  "level": "Practice",
+  "summary": "Scripts are named modules. The builder speaks that vocabulary and does not pretend to export a VCC file.",
+  "lessons": [
+    {
+      "id": "l01",
+      "title": "The module list is the vocabulary",
+      "level": "foundation",
+      "minutes": 12,
+      "objectives": [
+        "Use published module names",
+        "Treat the bench file as a model"
+      ],
+      "paragraphs": [
+        "The IVR modules chapter names the blocks you may place. The list includes Play, Menu, Get Digits, Input, Voice Input, If/Else, Case, Set Variable, Lookup Contact Record, Query, Skill Transfer, IVA Transfer, Voicemail Transfer, Set DNC, Third Party Transfer, Foreign Script, Language, and others such as Conference, Iterator, and the Salesforce modules.",
+        "This lab's builder uses those names. It does not contain a module called Hangup, because that name is not in the chapter list this lab read. A transfer that completes the script is the ending the skill article describes."
+      ],
+      "cites": [
+        {
+          "label": "IVR modules",
+          "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm"
+        },
+        {
+          "label": "Skill Transfer functions",
+          "url": "https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features"
+        }
+      ],
+      "uncertain": [
+        "Some third-party notes mention a hangup behavior. It is not in the modules chapter quoted here."
+      ],
+      "figure": {
+        "kind": "stack",
+        "title": "A small legal vocabulary",
+        "caption": "Use a name from the chapter.",
+        "rows": [
+          {
+            "label": "Play"
+          },
+          {
+            "label": "Menu"
+          },
+          {
+            "label": "If/Else or Case"
+          },
+          {
+            "label": "Skill Transfer"
+          },
+          {
+            "label": "IVA Transfer"
+          },
+          {
+            "label": "Set DNC"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Open the script folder",
+        "lanes": [
+          "Admin",
+          "Script"
+        ],
+        "steps": [
+          {
+            "lane": "Admin",
+            "title": "Folder",
+            "detail": "IVR scripts live in the administrator tree.",
+            "frame": "folder"
+          },
+          {
+            "lane": "Script",
+            "title": "Edit",
+            "detail": "Open the script.",
+            "frame": "edit"
+          },
+          {
+            "lane": "Script",
+            "title": "Add",
+            "detail": "Add a module by its published name.",
+            "frame": "add"
+          },
+          {
+            "lane": "Script",
+            "title": "Connect",
+            "detail": "Branches leave Menu, If/Else, or Case.",
+            "frame": "branch"
+          },
+          {
+            "lane": "Script",
+            "title": "End",
+            "detail": "Skill Transfer completes when an agent answers.",
+            "frame": "end"
+          },
+          {
+            "lane": "Script",
+            "title": "Export",
+            "detail": "This bench's JSON is not a VCC import file.",
+            "frame": "json"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Hangup, as a named module in the chapter this lab read, is",
+          "choices": [
+            "The first module",
+            "Not in that list",
+            "Required",
+            "The same as Play"
+          ],
+          "answer": 1,
+          "why": "The chapter list does not include a Hangup module."
+        },
+        {
+          "q": "Skill Transfer ends the script when",
+          "choices": [
+            "The prompt finishes",
+            "An agent is connected",
+            "The CSV uploads",
+            "Java starts"
+          ],
+          "answer": 1,
+          "why": "The skill article says the script is complete."
+        },
+        {
+          "q": "The bench export is",
+          "choices": [
+            "An official VCC script file",
+            "A learning model, labeled as not importable",
+            "A report",
+            "A SIP trunk"
+          ],
+          "answer": 1,
+          "why": "The builder says so on the page."
+        },
+        {
+          "q": "Menu is in the modules chapter. True or false?",
+          "choices": [
+            "False",
+            "True",
+            "Only in Studio",
+            "Only in WEM"
+          ],
+          "answer": 1,
+          "why": "Menu is named."
+        },
+        {
+          "q": "You should invent module names for local slang. True or false?",
+          "choices": [
+            "True",
+            "False. Use the chapter names so the design matches the product",
+            "True for TCPA",
+            "True on UK domains"
+          ],
+          "answer": 1,
+          "why": "Slang does not appear in the editor."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Is Hangup in the chapter list?",
+          "back": "Not in the list this lab read."
+        },
+        {
+          "front": "When does Skill Transfer finish the script?",
+          "back": "When an agent connects."
+        },
+        {
+          "front": "Bench JSON?",
+          "back": "Not a VCC import."
+        },
+        {
+          "front": "Menu exists?",
+          "back": "Yes."
+        }
+      ],
+      "lab": {
+        "title": "Place five blocks",
+        "goal": "In the IVR builder, build Play, Menu, Skill Transfer.",
+        "steps": [
+          "Use published names",
+          "Export the JSON",
+          "Read the warning on the file"
+        ],
+        "success": "The file says it is a learning model.",
+        "href": "#/ivr"
+      },
+      "fault": {
+        "title": "The design says Hangup",
+        "symptom": "A diagram ends every branch with a box that does not exist in the editor.",
+        "log": "BOX Hangup",
+        "choices": [
+          "Replace the box with the module that actually ends the path",
+          "Ship the diagram",
+          "Add lines",
+          "Disable TLS"
+        ],
+        "answer": 0,
+        "cause": "Agents will not find Hangup in the chapter list this lab read.",
+        "fix": "End on Skill Transfer, Voicemail Transfer, or Third Party Transfer."
+      }
+    },
+    {
+      "id": "l02",
+      "title": "Play, Menu, digits, and voice",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Draw the failure exit",
+        "Store digits in a named variable"
+      ],
+      "paragraphs": [
+        "Play speaks a prompt or TTS. Menu takes a choice and has an exit per option. Get Digits and Input collect what the caller types. Voice Input and the Natural Language Processing module are the speech-side blocks in the same chapter. Input is what the ZIP-code web-service example uses, storing ZIP as a variable.",
+        "A menu that has no No Match path strands people who press the wrong key. Draw that exit before you draw option 1."
+      ],
+      "cites": [
+        {
+          "label": "IVR modules",
+          "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm"
+        },
+        {
+          "label": "Menu module",
+          "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/menu-module.htm"
+        },
+        {
+          "label": "XML web service IVR example",
+          "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/examples/creating-ivr-script-xml-web-service-query.htm"
+        },
+        {
+          "label": "RFC 4733",
+          "url": "https://www.rfc-editor.org/rfc/rfc4733"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "path",
+        "title": "A menu that fails cleanly",
+        "caption": "The failure exit is part of the design.",
+        "rows": [
+          {
+            "label": "Play greeting"
+          },
+          {
+            "label": "Menu"
+          },
+          {
+            "label": "Matched digit"
+          },
+          {
+            "label": "No match"
+          },
+          {
+            "label": "Get Digits or Input"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Press 2",
+        "lanes": [
+          "Caller",
+          "Menu",
+          "Next"
+        ],
+        "steps": [
+          {
+            "lane": "Caller",
+            "title": "Hear",
+            "detail": "Play or the menu prompt speaks.",
+            "frame": "hear"
+          },
+          {
+            "lane": "Menu",
+            "title": "Wait",
+            "detail": "The module waits for a digit or speech.",
+            "frame": "wait"
+          },
+          {
+            "lane": "Caller",
+            "title": "Press",
+            "detail": "Digit 2 arrives.",
+            "frame": "dtmf"
+          },
+          {
+            "lane": "Menu",
+            "title": "Take",
+            "detail": "Branch 2 runs.",
+            "frame": "take"
+          },
+          {
+            "lane": "Menu",
+            "title": "Miss",
+            "detail": "Any other digit uses No Match.",
+            "frame": "miss"
+          },
+          {
+            "lane": "Next",
+            "title": "Store",
+            "detail": "Input can keep a ZIP in a variable.",
+            "frame": "zip"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "The ZIP example stores the code with",
+          "choices": [
+            "Skill Transfer",
+            "The Input module",
+            "Set DNC",
+            "Conference"
+          ],
+          "answer": 1,
+          "why": "The example chooses ZIP as an Input variable."
+        },
+        {
+          "q": "Menu needs a failure exit because",
+          "choices": [
+            "DTMF is illegal",
+            "Wrong or missing input must go somewhere",
+            "Profiles require it",
+            "Java requires it"
+          ],
+          "answer": 1,
+          "why": "Otherwise the caller is stuck."
+        },
+        {
+          "q": "Voice Input and NLP are",
+          "choices": [
+            "Not in the chapter",
+            "Named modules in the chapter",
+            "Report layouts",
+            "Trunk types"
+          ],
+          "answer": 1,
+          "why": "Both names are in the modules list."
+        },
+        {
+          "q": "Play can speak TTS. True or false?",
+          "choices": [
+            "False",
+            "True, in the web-service example",
+            "Only English legal text",
+            "Only on SIP UDP"
+          ],
+          "answer": 1,
+          "why": "The example adds a TTS prompt."
+        },
+        {
+          "q": "DTMF on a SIP gateway is specified by",
+          "choices": [
+            "A Five9 blog only",
+            "RFC 4733 telephone events, when the gateway uses them",
+            "The JRE",
+            "WEM"
+          ],
+          "answer": 1,
+          "why": "RFC 4733 is the telephone-event specification. A gateway may or may not offer it."
+        }
+      ],
+      "cards": [
+        {
+          "front": "ZIP module?",
+          "back": "Input."
+        },
+        {
+          "front": "Why No Match?",
+          "back": "Wrong input needs an exit."
+        },
+        {
+          "front": "Speech modules?",
+          "back": "Voice Input and Natural Language Processing."
+        },
+        {
+          "front": "TTS?",
+          "back": "Yes, in the example."
+        }
+      ],
+      "lab": {
+        "title": "Build the hours menu",
+        "goal": "Use the Hours preset in the builder and press a digit.",
+        "steps": [
+          "Play the greeting",
+          "Take branch 2",
+          "Land on Skill Transfer"
+        ],
+        "success": "You can narrate the path.",
+        "href": "#/ivr"
+      },
+      "fault": {
+        "title": "Callers who press 9 hear silence",
+        "symptom": "The menu has options 1 and 2 and no failure exit.",
+        "log": "MENU options=1,2 noMatch=unset",
+        "choices": [
+          "Add the No Match path",
+          "Add a Hangup module from slang",
+          "Raise abandon",
+          "Change ANI"
+        ],
+        "answer": 0,
+        "cause": "9 is not a drawn branch.",
+        "fix": "Send No Match to a replay or an agent."
+      }
+    },
+    {
+      "id": "l03",
+      "title": "If/Else is two ways. Case is more",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Match branch count to the module",
+        "Keep conditions readable"
+      ],
+      "paragraphs": [
+        "If/Else has two branches. The modules chapter includes both If/Else and Case. When you need three or more outcomes, Case is the block that exists for that. Nesting If/Else until the drawing looks like a hedge is how scripts become unreviewable.",
+        "The condition is your expression: open hours, a variable, a lookup result. The module does not know your business. It evaluates what you typed."
+      ],
+      "cites": [
+        {
+          "label": "If/Else module",
+          "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/ifelse-module.htm"
+        },
+        {
+          "label": "IVR modules",
+          "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "compare",
+        "title": "Branch count",
+        "caption": "Pick the module that matches the count.",
+        "leftTitle": "Two outcomes",
+        "rightTitle": "Three or more",
+        "left": [
+          "If/Else"
+        ],
+        "right": [
+          "Case",
+          "Menu, if the caller chooses"
+        ]
+      },
+      "flow": {
+        "title": "Open or closed",
+        "lanes": [
+          "Clock",
+          "If/Else",
+          "Script"
+        ],
+        "steps": [
+          {
+            "lane": "Clock",
+            "title": "Value",
+            "detail": "A variable says whether you are open.",
+            "frame": "var"
+          },
+          {
+            "lane": "If/Else",
+            "title": "True",
+            "detail": "The open path plays.",
+            "frame": "true"
+          },
+          {
+            "lane": "If/Else",
+            "title": "False",
+            "detail": "The closed path plays.",
+            "frame": "false"
+          },
+          {
+            "lane": "Script",
+            "title": "Third",
+            "detail": "A holiday path does not fit in two branches.",
+            "frame": "third"
+          },
+          {
+            "lane": "Script",
+            "title": "Case",
+            "detail": "Case carries the third path.",
+            "frame": "case"
+          },
+          {
+            "lane": "Script",
+            "title": "Review",
+            "detail": "Someone else can read it.",
+            "frame": "review"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Two branches means",
+          "choices": [
+            "Case only",
+            "If/Else",
+            "Set DNC",
+            "Query"
+          ],
+          "answer": 1,
+          "why": "If/Else is the two-way module."
+        },
+        {
+          "q": "A holiday, plus open, plus closed, means",
+          "choices": [
+            "One If/Else",
+            "Case, or a structure you can still read",
+            "Play only",
+            "A trunk"
+          ],
+          "answer": 1,
+          "why": "Three outcomes do not fit one If/Else."
+        },
+        {
+          "q": "The module invents your hours. True or false?",
+          "choices": [
+            "True",
+            "False. You supply the expression or variable",
+            "True in Studio only",
+            "True for ANI"
+          ],
+          "answer": 1,
+          "why": "The condition is yours."
+        },
+        {
+          "q": "Menu is still right when",
+          "choices": [
+            "The clock decides",
+            "The caller decides",
+            "The JRE decides",
+            "The abandon cap decides"
+          ],
+          "answer": 1,
+          "why": "Menu is a caller choice. If/Else is a test."
+        },
+        {
+          "q": "Deeply nested If/Else is",
+          "choices": [
+            "Required",
+            "A review problem. Case or a cleaner test is usually kinder",
+            "A codec",
+            "A list mode"
+          ],
+          "answer": 1,
+          "why": "Readability is part of running the floor."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Two ways?",
+          "back": "If/Else."
+        },
+        {
+          "front": "Three ways?",
+          "back": "Case."
+        },
+        {
+          "front": "Who writes the condition?",
+          "back": "You do."
+        },
+        {
+          "front": "Caller choice?",
+          "back": "Menu, not If/Else."
+        }
+      ],
+      "lab": {
+        "title": "Convert a nest",
+        "goal": "Replace three nested If/Else blocks with one Case in the builder.",
+        "steps": [
+          "Add Case",
+          "Name three labels",
+          "Delete the nest"
+        ],
+        "success": "One block, three labels.",
+        "href": "#/ivr"
+      },
+      "fault": {
+        "title": "Holiday callers hear the open greeting",
+        "symptom": "Open and closed are an If/Else. Holiday was drawn as a comment.",
+        "log": "IF open/closed HOLIDAY comment-only",
+        "choices": [
+          "Add a Case that includes holiday",
+          "Hope",
+          "Stop the campaign",
+          "Switch to power"
+        ],
+        "answer": 0,
+        "cause": "A comment is not a branch.",
+        "fix": "Put holiday on a real branch."
+      }
+    },
+    {
+      "id": "l04",
+      "title": "Skill Transfer has more than a skill name",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Count the tabs in the editor",
+        "Prefer one skill when you need the report"
+      ],
+      "paragraphs": [
+        "The community article lists General, Skills, Announcement, Priority, Connectors, Queue Callback, and Disposition. It also says 'six tabs' and then names more than six. Count the tabs in your editor. Do not trust the word six.",
+        "Multiple skills mean any agent who has one of them may get the call. The article says Five9 recommends one skill in the module if you want useful reports. No skill selected sends calls toward users with no skills, labeled Default. Pause Before Transfer defaults to 0 and is not On Hold in a report. The default disposition named in that article is Abandon."
+      ],
+      "cites": [
+        {
+          "label": "Skill Transfer functions",
+          "url": "https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features"
+        },
+        {
+          "label": "Skill Transfer module chapter",
+          "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/skill-transfer-module.htm"
+        },
+        {
+          "label": "Pause before transfer",
+          "url": "https://community.five9.com/s/article/Administrator-Pause-Before-Transfer?language=en_US"
+        }
+      ],
+      "uncertain": [
+        "The article says six tabs and then lists seven names. The editor is the count that matters."
+      ],
+      "figure": {
+        "kind": "stack",
+        "title": "Skill Transfer tabs to verify",
+        "caption": "Count them in the editor.",
+        "rows": [
+          {
+            "label": "General"
+          },
+          {
+            "label": "Skills"
+          },
+          {
+            "label": "Announcement"
+          },
+          {
+            "label": "Priority"
+          },
+          {
+            "label": "Connectors"
+          },
+          {
+            "label": "Queue Callback"
+          },
+          {
+            "label": "Disposition"
+          }
+        ]
+      },
+      "flow": {
+        "title": "One skill, on purpose",
+        "lanes": [
+          "Script",
+          "Queue",
+          "Report"
+        ],
+        "steps": [
+          {
+            "lane": "Script",
+            "title": "One",
+            "detail": "Only Billing is selected.",
+            "frame": "one"
+          },
+          {
+            "lane": "Queue",
+            "title": "Offer",
+            "detail": "Billing agents are eligible.",
+            "frame": "offer"
+          },
+          {
+            "lane": "Script",
+            "title": "Many",
+            "detail": "Adding Sales means either skill can take it.",
+            "frame": "many"
+          },
+          {
+            "lane": "Report",
+            "title": "Blur",
+            "detail": "The article says one skill keeps reports useful.",
+            "frame": "blur"
+          },
+          {
+            "lane": "Queue",
+            "title": "None",
+            "detail": "No selection uses the Default queue.",
+            "frame": "default"
+          },
+          {
+            "lane": "Report",
+            "title": "Pause",
+            "detail": "Pause seconds are not hold.",
+            "frame": "pause"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Two skills in one module means",
+          "choices": [
+            "Both are required on the agent",
+            "An agent with either skill may receive the call",
+            "The call fails",
+            "TCPA typing starts"
+          ],
+          "answer": 1,
+          "why": "The article says any agent who has one of the skills."
+        },
+        {
+          "q": "Recommended count for clean reports?",
+          "choices": [
+            "As many as possible",
+            "One skill in the module",
+            "Zero",
+            "Seven"
+          ],
+          "answer": 1,
+          "why": "That is the article's recommendation."
+        },
+        {
+          "q": "No skill selected routes toward",
+          "choices": [
+            "911",
+            "The Default queue of users without skills",
+            "The ITSP",
+            "Studio only"
+          ],
+          "answer": 1,
+          "why": "The article describes Default."
+        },
+        {
+          "q": "Default disposition named in the article?",
+          "choices": [
+            "Sale",
+            "Abandon",
+            "VIP",
+            "Java"
+          ],
+          "answer": 1,
+          "why": "Create real callback codes if you use callbacks. Do not leave Abandon as your only story."
+        },
+        {
+          "q": "The 'six tabs' sentence",
+          "choices": [
+            "Matches a careful count",
+            "Does not match the list in the same article. Count the editor",
+            "Is a codec",
+            "Is the abandon window"
+          ],
+          "answer": 1,
+          "why": "The list is longer than six."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Either skill or both?",
+          "back": "Either."
+        },
+        {
+          "front": "Report recommendation?",
+          "back": "One skill per module."
+        },
+        {
+          "front": "No skill?",
+          "back": "Default queue."
+        },
+        {
+          "front": "Article's default disposition?",
+          "back": "Abandon."
+        }
+      ],
+      "lab": {
+        "title": "One module, one skill",
+        "goal": "Build two Skill Transfer modules instead of one module with two skills.",
+        "steps": [
+          "Billing module",
+          "Sales module",
+          "Say why reports prefer this"
+        ],
+        "success": "You can tell which queue the caller entered.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Everyone gets every call",
+        "symptom": "One Skill Transfer lists Billing, Sales, and Password.",
+        "log": "MODULE skills=Billing,Sales,Password",
+        "choices": [
+          "Split them if the queues mean different work",
+          "Add a fourth skill",
+          "Stop reports",
+          "Enable paste"
+        ],
+        "answer": 0,
+        "cause": "Any of those skills can take the call.",
+        "fix": "One skill per module unless you truly want a shared pool."
+      }
+    },
+    {
+      "id": "l05",
+      "title": "Variables, lookup, and query",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Keep script variables and reporting variables apart",
+        "Do not expect a backfill"
+      ],
+      "paragraphs": [
+        "Set Variable writes a value. Lookup Contact Record reads the contact. Query calls out, and the published example is an XML web service POST whose response groups are mapped with regular expressions into variables. That example uses script variables, not call variables, because the caller is not connected to an agent.",
+        "Call variables are a different object, used when you need reporting later. Enabling them does not backfill history. A Query result you never store in a reporting call variable will not appear in a historical call log."
+      ],
+      "cites": [
+        {
+          "label": "XML web service IVR example",
+          "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/examples/creating-ivr-script-xml-web-service-query.htm"
+        },
+        {
+          "label": "IVR modules",
+          "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm"
+        },
+        {
+          "label": "Call variables for reporting",
+          "url": "https://community.five9.com/s/article/Administrator-Enabling-Call-Variables-for-Reporting?language=en_US"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "compare",
+        "title": "Two variable families",
+        "caption": "The example is careful about this.",
+        "leftTitle": "Script variable",
+        "rightTitle": "Reporting call variable",
+        "left": [
+          "IVR only",
+          "Used in the ZIP example",
+          "Caller may never reach an agent"
+        ],
+        "right": [
+          "Must be enabled",
+          "New calls only",
+          "Tied to dispositions"
+        ]
+      },
+      "flow": {
+        "title": "ZIP in, weather out",
+        "lanes": [
+          "Caller",
+          "Query",
+          "Play"
+        ],
+        "steps": [
+          {
+            "lane": "Caller",
+            "title": "Digits",
+            "detail": "Input stores ZIP.",
+            "frame": "zip"
+          },
+          {
+            "lane": "Query",
+            "title": "POST",
+            "detail": "The module posts to the service.",
+            "frame": "post"
+          },
+          {
+            "lane": "Query",
+            "title": "Map",
+            "detail": "A grouped regex fills variables.",
+            "frame": "regex"
+          },
+          {
+            "lane": "Play",
+            "title": "TTS",
+            "detail": "The answer is spoken.",
+            "frame": "tts"
+          },
+          {
+            "lane": "Script",
+            "title": "Keep",
+            "detail": "Script variables die with the script's needs.",
+            "frame": "script"
+          },
+          {
+            "lane": "Report",
+            "title": "Miss",
+            "detail": "Nothing was marked as a reporting call variable.",
+            "frame": "miss"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "The example's HTTP style is",
+          "choices": [
+            "A browser GET with cookies",
+            "XML web service POST",
+            "FTP",
+            "Telnet"
+          ],
+          "answer": 1,
+          "why": "The example says XML Web Service POST."
+        },
+        {
+          "q": "Why script variables in that example?",
+          "choices": [
+            "The caller is not connected to an agent",
+            "Java requires it",
+            "ANI requires it",
+            "Ofcom requires it"
+          ],
+          "answer": 1,
+          "why": "The example says so."
+        },
+        {
+          "q": "Regex groups in the response",
+          "choices": [
+            "Are ignored",
+            "Can be mapped to IVR variables",
+            "Set the abandon cap",
+            "Replace skills"
+          ],
+          "answer": 1,
+          "why": "The example describes RegExp groups."
+        },
+        {
+          "q": "Reporting call variables apply to",
+          "choices": [
+            "All history",
+            "New calls after you enable them",
+            "Only 911",
+            "Only lists"
+          ],
+          "answer": 1,
+          "why": "The call-variable article says data is not historical."
+        },
+        {
+          "q": "Lookup Contact Record is",
+          "choices": [
+            "A rumor",
+            "A named module",
+            "A trunk",
+            "A theme"
+          ],
+          "answer": 1,
+          "why": "It is in the modules chapter."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Example request?",
+          "back": "XML web service POST."
+        },
+        {
+          "front": "Why script variables?",
+          "back": "No agent on that call."
+        },
+        {
+          "front": "History backfill?",
+          "back": "No."
+        },
+        {
+          "front": "Lookup exists?",
+          "back": "Yes."
+        }
+      ],
+      "lab": {
+        "title": "Trace a ZIP",
+        "goal": "In the builder, place Input then Query then Play and name the variable.",
+        "steps": [
+          "Name ZIP",
+          "Say the variable is a script variable",
+          "Say what you would enable if reports must show it"
+        ],
+        "success": "You did not assume history backfills.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Last month's ZIP is missing from reports",
+        "symptom": "The variable was enabled today.",
+        "log": "CAV enabled=today CALLS last-month=empty",
+        "choices": [
+          "Accept that old calls will not grow the column",
+          "Reboot the SBC to backfill",
+          "Switch to vertical",
+          "Delete the script"
+        ],
+        "answer": 0,
+        "cause": "The article says the data is not historical.",
+        "fix": "Report from the enable date forward."
+      }
+    },
+    {
+      "id": "l06",
+      "title": "IVA, foreign scripts, DNC, and leaving the platform",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Name the exit module",
+        "Keep digital IVA and voice IVA in their own notes"
+      ],
+      "paragraphs": [
+        "IVA Transfer hands the call to a Studio task. Foreign Script jumps to another IVR script. Set DNC is the removal action. Third Party Transfer leaves your agents. Language switches prompt language. These are five different exits. A diagram that says 'send to bot' does not say which one.",
+        "Digital IVA integration, in the March 2026 Studio article, needs a Studio API key with Build permission and a ChatBot task key pasted into the VCC side. Voice IVA Transfer is not automatically that digital article. Confirm which channel you are wiring."
+      ],
+      "cites": [
+        {
+          "label": "IVR modules",
+          "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm"
+        },
+        {
+          "label": "Studio digital IVA with VCC",
+          "url": "https://community.five9.com/s/article/Studio-7-Integrate-Digital-IVA-in-Studio-with-VCC?language=en_US"
+        }
+      ],
+      "uncertain": [
+        "Public pages describe IVA Transfer and a digital ChatBot integration separately. This lab does not claim they share one property sheet."
+      ],
+      "figure": {
+        "kind": "path",
+        "title": "Five exits",
+        "caption": "Name the module.",
+        "rows": [
+          {
+            "label": "IVA Transfer"
+          },
+          {
+            "label": "Foreign Script"
+          },
+          {
+            "label": "Set DNC"
+          },
+          {
+            "label": "Third Party Transfer"
+          },
+          {
+            "label": "Language"
+          }
+        ]
+      },
+      "flow": {
+        "title": "A bot, then a person",
+        "lanes": [
+          "IVR",
+          "Studio",
+          "Agent"
+        ],
+        "steps": [
+          {
+            "lane": "IVR",
+            "title": "Language",
+            "detail": "The language module sets the prompts.",
+            "frame": "lang"
+          },
+          {
+            "lane": "IVR",
+            "title": "IVA",
+            "detail": "IVA Transfer calls the task.",
+            "frame": "iva"
+          },
+          {
+            "lane": "Studio",
+            "title": "Contain",
+            "detail": "The bot finishes, or it does not.",
+            "frame": "bot"
+          },
+          {
+            "lane": "IVR",
+            "title": "Skill",
+            "detail": "A later Skill Transfer is the human path.",
+            "frame": "skill"
+          },
+          {
+            "lane": "IVR",
+            "title": "DNC",
+            "detail": "A removal uses Set DNC, not the bot.",
+            "frame": "dnc"
+          },
+          {
+            "lane": "IVR",
+            "title": "Leave",
+            "detail": "Third party is a different exit.",
+            "frame": "leave"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "A second script is called with",
+          "choices": [
+            "Set Variable only",
+            "Foreign Script",
+            "The JRE",
+            "A list reset"
+          ],
+          "answer": 1,
+          "why": "Foreign Script is the module."
+        },
+        {
+          "q": "Removal from calling uses",
+          "choices": [
+            "Language",
+            "Set DNC",
+            "Conference",
+            "Iterator only"
+          ],
+          "answer": 1,
+          "why": "Set DNC is the named module."
+        },
+        {
+          "q": "Digital IVA setup in the 2026 article needs",
+          "choices": [
+            "Only an ANI",
+            "An API key with Build permission and a task key",
+            "A matrix report",
+            "IE 11"
+          ],
+          "answer": 1,
+          "why": "Those are the article's ingredients."
+        },
+        {
+          "q": "That digital article is automatically the voice IVA Transfer screen. True or false?",
+          "choices": [
+            "True",
+            "False. Confirm the channel",
+            "True for all domains",
+            "True if paste works"
+          ],
+          "answer": 1,
+          "why": "ChatBot task and voice transfer are different write-ups."
+        },
+        {
+          "q": "Third Party Transfer keeps the call on your skill. True or false?",
+          "choices": [
+            "True",
+            "False. It forwards outside",
+            "True at night",
+            "True for preview"
+          ],
+          "answer": 1,
+          "why": "It is the leave-the-queue module."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Jump to another script?",
+          "back": "Foreign Script."
+        },
+        {
+          "front": "Opt out?",
+          "back": "Set DNC."
+        },
+        {
+          "front": "Digital keys?",
+          "back": "Build permission plus a task key."
+        },
+        {
+          "front": "Third party stays on your skill?",
+          "back": "No."
+        }
+      ],
+      "lab": {
+        "title": "Label five arrows",
+        "goal": "On a sketch, name the module for each arrow.",
+        "steps": [
+          "Bot",
+          "Other script",
+          "Opt out",
+          "Outside number",
+          "Language"
+        ],
+        "success": "No arrow says 'stuff'.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Opt-out calls the bot",
+        "symptom": "The removal digit starts IVA Transfer.",
+        "log": "DIGIT 9 -> IVA Transfer",
+        "choices": [
+          "Point digit 9 at Set DNC",
+          "Add more bots",
+          "Raise power lines",
+          "Stop the domain"
+        ],
+        "answer": 0,
+        "cause": "A bot is not the DNC list.",
+        "fix": "Use Set DNC."
+      }
+    },
+    {
+      "id": "l07",
+      "title": "Visual IVR and frames",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Protect visual IVR from hostile frames",
+        "Retest browsers"
+      ],
+      "paragraphs": [
+        "The technical requirements say administrators can apply web page security so a Visual IVR script is not embedded in a frame where the user can be hijacked. The mechanism named is the X-Frame-Options header. The browser table in that PDF lists old versions and tells you to test others.",
+        "A visual script is still a script: prompts, branches, and a handoff. Framing is an extra threat. Do not treat a 2016-era browser row as the current support list. The PDF says to retest."
+      ],
+      "cites": [
+        {
+          "label": "Technical requirements PDF",
+          "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+          "note": "Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall."
+        },
+        {
+          "label": "IVR modules",
+          "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm"
+        }
+      ],
+      "uncertain": [
+        "The PDF's browser matrix is historical. Current browser behavior has to be tested."
+      ],
+      "figure": {
+        "kind": "stack",
+        "title": "Visual path plus a frame rule",
+        "caption": "The script and the frame are both real.",
+        "rows": [
+          {
+            "label": "Visual script"
+          },
+          {
+            "label": "X-Frame-Options"
+          },
+          {
+            "label": "Retest the browser"
+          },
+          {
+            "label": "Do not trust the old matrix"
+          }
+        ]
+      },
+      "flow": {
+        "title": "A page embeds the IVR",
+        "lanes": [
+          "Browser",
+          "Five9",
+          "Attacker"
+        ],
+        "steps": [
+          {
+            "lane": "Browser",
+            "title": "Load",
+            "detail": "Someone iframes the visual script.",
+            "frame": "iframe"
+          },
+          {
+            "lane": "Five9",
+            "title": "Header",
+            "detail": "X-Frame-Options can refuse the frame.",
+            "frame": "header"
+          },
+          {
+            "lane": "Attacker",
+            "title": "Click",
+            "detail": "Without the header, the user can be hijacked.",
+            "frame": "click"
+          },
+          {
+            "lane": "Admin",
+            "title": "Set",
+            "detail": "Web page security is an administrator option.",
+            "frame": "set"
+          },
+          {
+            "lane": "Admin",
+            "title": "Test",
+            "detail": "The PDF says to test browsers it does not list.",
+            "frame": "test"
+          },
+          {
+            "lane": "Caller",
+            "title": "Phone",
+            "detail": "The voice script is a different surface.",
+            "frame": "voice"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "The header named for visual IVR framing is",
+          "choices": [
+            "SIP-Route",
+            "X-Frame-Options",
+            "ANI",
+            "STIR"
+          ],
+          "answer": 1,
+          "why": "The PDF names X-Frame-Options."
+        },
+        {
+          "q": "The browser table in the PDF is",
+          "choices": [
+            "The 2026 support promise",
+            "Old, and the PDF says to test other versions",
+            "A dialer mode",
+            "A skill list"
+          ],
+          "answer": 1,
+          "why": "Chrome versions in the forties are not a current matrix."
+        },
+        {
+          "q": "Visual IVR security is",
+          "choices": [
+            "A carrier ticket",
+            "An administrator control on the script",
+            "A headset setting",
+            "A list mode"
+          ],
+          "answer": 1,
+          "why": "The PDF says VCC administrators apply it."
+        },
+        {
+          "q": "Voice IVR and visual IVR are",
+          "choices": [
+            "The same frame problem",
+            "Related products with different surfaces",
+            "Both illegal",
+            "Both JRE updates"
+          ],
+          "answer": 1,
+          "why": "Framing is a web problem."
+        },
+        {
+          "q": "You should copy the PDF's Chrome 46 row into a 2026 standard. True or false?",
+          "choices": [
+            "True",
+            "False. Retest",
+            "True for UK domains",
+            "True for TCPA"
+          ],
+          "answer": 1,
+          "why": "The PDF invites a test."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Which header?",
+          "back": "X-Frame-Options."
+        },
+        {
+          "front": "Trust the old browser table?",
+          "back": "No. Retest."
+        },
+        {
+          "front": "Who turns it on?",
+          "back": "A VCC administrator."
+        },
+        {
+          "front": "Voice versus visual?",
+          "back": "Different surfaces."
+        }
+      ],
+      "lab": {
+        "title": "Frame test",
+        "goal": "Write the header you expect and the browser you would actually test.",
+        "steps": [
+          "Name X-Frame-Options",
+          "Name a current browser",
+          "Say you will not cite Chrome 46 as current"
+        ],
+        "success": "The note does not treat 2016 as now.",
+        "href": "#/ivr"
+      },
+      "fault": {
+        "title": "The visual script is embedded on a partner site",
+        "symptom": "Web page security is off. Users report the page 'moved' under them.",
+        "log": "XFO unset HOST partner-iframe",
+        "choices": [
+          "Turn on web page security and retest",
+          "Add predictive lines",
+          "Reset Sale",
+          "Change list penetration"
+        ],
+        "answer": 0,
+        "cause": "The frame is allowed.",
+        "fix": "Set the option and confirm the header."
+      }
+    }
+  ]
+}

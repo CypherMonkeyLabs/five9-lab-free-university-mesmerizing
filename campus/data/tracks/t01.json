@@ -1,0 +1,1364 @@
+{
+  "id": "t01",
+  "title": "Foundations and the domain",
+  "short": "Foundations",
+  "blurb": "What a Five9 domain contains before anyone dials.",
+  "group": "Platform",
+  "level": "Foundation",
+  "summary": "A domain is the tenant. Campaigns come after skills, users, lists, dispositions, and a profile.",
+  "lessons": [
+    {
+      "id": "l01",
+      "title": "A contact center is not a phone system",
+      "level": "foundation",
+      "minutes": 12,
+      "objectives": [
+        "Name the outbound build order",
+        "Say where IVR enters an inbound build"
+      ],
+      "paragraphs": [
+        "A PBX connects extensions. A contact center adds queues, skills, lists, dispositions, and reports around those calls. Five9 Virtual Contact Center is that layer, hosted as a domain rather than as servers you rack.",
+        "The planning topic does not start with a trunk. An outbound build starts with skill groups, user profiles, users, contact fields, lists, dispositions, and campaign profiles, and only then the campaign. Inbound and autodial add prompts and IVR scripts on that path."
+      ],
+      "cites": [
+        {
+          "label": "Planning your implementation",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm"
+        },
+        {
+          "label": "Skill groups",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "stack",
+        "title": "Outbound build order",
+        "caption": "Published planning order, before the campaign exists.",
+        "rows": [
+          {
+            "label": "Skill groups"
+          },
+          {
+            "label": "User profiles and users"
+          },
+          {
+            "label": "Contact fields and lists"
+          },
+          {
+            "label": "Dispositions"
+          },
+          {
+            "label": "Campaign profiles"
+          },
+          {
+            "label": "Campaigns"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Outbound build order",
+        "lanes": [
+          "Admin",
+          "Domain"
+        ],
+        "steps": [
+          {
+            "lane": "Admin",
+            "title": "Skills",
+            "detail": "Create the queues agents will belong to.",
+            "frame": "skill groups"
+          },
+          {
+            "lane": "Admin",
+            "title": "Users",
+            "detail": "Profiles, then accounts.",
+            "frame": "users"
+          },
+          {
+            "lane": "Admin",
+            "title": "Lists",
+            "detail": "Fields, then reconciled lists.",
+            "frame": "lists"
+          },
+          {
+            "lane": "Admin",
+            "title": "Codes",
+            "detail": "Dispositions the dialer and the reports share.",
+            "frame": "dispositions"
+          },
+          {
+            "lane": "Admin",
+            "title": "Profile",
+            "detail": "ANI and list behavior sit on the profile.",
+            "frame": "profile"
+          },
+          {
+            "lane": "Domain",
+            "title": "Campaign",
+            "detail": "Create the campaign and attach one profile.",
+            "frame": "campaign"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "What is built before an outbound campaign?",
+          "choices": [
+            "Only a SIP trunk",
+            "Skills, users, lists, dispositions, and profiles",
+            "A Studio task",
+            "An E911 location"
+          ],
+          "answer": 1,
+          "why": "The planning topic lists those objects before campaigns."
+        },
+        {
+          "q": "Which roadmaps add IVR scripts?",
+          "choices": [
+            "Outbound only",
+            "Inbound and autodial",
+            "Reporting only",
+            "Headset setup only"
+          ],
+          "answer": 1,
+          "why": "Inbound and autodial add prompts and IVR scripts."
+        },
+        {
+          "q": "Where do agents get grouped for a queue?",
+          "choices": [
+            "In a CUCM partition",
+            "In a skill group",
+            "In an ANI field",
+            "In the call log"
+          ],
+          "answer": 1,
+          "why": "Skill groups hold agents and supervisors for campaign queues."
+        },
+        {
+          "q": "A Five9 domain is",
+          "choices": [
+            "One agent station",
+            "The tenant you configure",
+            "A single DNIS",
+            "A disposition code"
+          ],
+          "answer": 1,
+          "why": "Users, campaigns, and lists belong to the domain."
+        },
+        {
+          "q": "Why is the IVR not step one?",
+          "choices": [
+            "Scripts cannot play audio",
+            "The script names skills and dispositions that must already exist",
+            "IVR is outbound-only",
+            "Profiles replace scripts"
+          ],
+          "answer": 1,
+          "why": "The roadmap creates the objects the script will reference."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Outbound, what comes first?",
+          "back": "Skill groups, then users, lists, dispositions, profiles, campaigns."
+        },
+        {
+          "front": "Which builds add IVR?",
+          "back": "Inbound and autodial."
+        },
+        {
+          "front": "What is a skill group?",
+          "back": "Agents and supervisors for a campaign queue."
+        },
+        {
+          "front": "What is a domain?",
+          "back": "The VCC tenant."
+        }
+      ],
+      "lab": {
+        "title": "Order the build",
+        "goal": "Put the outbound objects in the published order.",
+        "steps": [
+          "List the six layers",
+          "Check them against the planning topic",
+          "Mark where IVR would insert for inbound"
+        ],
+        "success": "You can say why a campaign with no skill cannot route.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Busy test number on day one",
+        "symptom": "The new DNIS plays busy and no agent phone rings.",
+        "log": "CAMPAIGN Retail state=NOT_RUNNING dnis=8005550101",
+        "choices": [
+          "The inbound campaign is not running",
+          "G.711 was removed",
+          "TCPA blocked the caller",
+          "WEM deleted the DNIS"
+        ],
+        "answer": 0,
+        "cause": "A stopped inbound campaign does not answer.",
+        "fix": "Start the campaign. Callers otherwise hear busy."
+      },
+      "callout": {
+        "title": "First check",
+        "body": "A busy DNIS is often a campaign that was never started."
+      }
+    },
+    {
+      "id": "l02",
+      "title": "The domain is the tenant",
+      "level": "foundation",
+      "minutes": 12,
+      "objectives": [
+        "State the domain boundary",
+        "Say which roles join a skill group"
+      ],
+      "paragraphs": [
+        "You sign into one domain. Skill groups, users, lists, prompts, scripts, and campaigns live there. Another domain does not inherit them.",
+        "Five9 does not use CUCM-style partitions and calling search spaces. If you are coming from Unified Communications Manager, do not look for a partition table. Look for the domain, then skills and campaigns. That mapping is a teaching bridge, not a vendor migration wizard."
+      ],
+      "cites": [
+        {
+          "label": "Planning your implementation",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm"
+        },
+        {
+          "label": "Skill groups",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm"
+        }
+      ],
+      "uncertain": [
+        "This lesson's CUCM comparison is a teaching map. Five9 does not publish it as a migration product."
+      ],
+      "figure": {
+        "kind": "stack",
+        "title": "Inside one domain",
+        "caption": "Objects that do not leak into the next domain.",
+        "rows": [
+          {
+            "label": "Users and profiles"
+          },
+          {
+            "label": "Skill groups"
+          },
+          {
+            "label": "Lists and fields"
+          },
+          {
+            "label": "Dispositions"
+          },
+          {
+            "label": "IVR scripts"
+          },
+          {
+            "label": "Campaigns"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Sign in and name the boundary",
+        "lanes": [
+          "Admin",
+          "Domain"
+        ],
+        "steps": [
+          {
+            "lane": "Admin",
+            "title": "Login",
+            "detail": "The administrator opens one domain.",
+            "frame": "domain login"
+          },
+          {
+            "lane": "Domain",
+            "title": "Users",
+            "detail": "Accounts exist only here.",
+            "frame": "users"
+          },
+          {
+            "lane": "Domain",
+            "title": "Skills",
+            "detail": "Queues exist only here.",
+            "frame": "skills"
+          },
+          {
+            "lane": "Domain",
+            "title": "Lists",
+            "detail": "Contact rows exist only here.",
+            "frame": "lists"
+          },
+          {
+            "lane": "Admin",
+            "title": "Check",
+            "detail": "A second domain is a separate build.",
+            "frame": "no inheritance"
+          },
+          {
+            "lane": "Admin",
+            "title": "Bridge",
+            "detail": "Write 'no partitions' on the cutover notes.",
+            "frame": "teaching map"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Can campaign A in domain East use a list from domain West?",
+          "choices": [
+            "Yes, lists are global",
+            "No. Lists belong to the domain",
+            "Only on Tuesdays",
+            "Only if the ANI matches"
+          ],
+          "answer": 1,
+          "why": "The domain is the boundary."
+        },
+        {
+          "q": "What replaces a CUCM partition in this lab's map?",
+          "choices": [
+            "A calling search space",
+            "The domain, then skills and campaigns",
+            "A SIP 180",
+            "A disposition"
+          ],
+          "answer": 1,
+          "why": "Five9 public admin docs describe domains and skills, not CUCM partitions."
+        },
+        {
+          "q": "Who can sit in a skill group?",
+          "choices": [
+            "Only reporting users",
+            "Users with the agent or supervisor role",
+            "Only Studio API keys",
+            "Only the ITSP"
+          ],
+          "answer": 1,
+          "why": "The skill group topic says agent or supervisor roles."
+        },
+        {
+          "q": "A user can be in how many skill groups?",
+          "choices": [
+            "Exactly one",
+            "More than one",
+            "None, skills are on the trunk",
+            "Only three"
+          ],
+          "answer": 1,
+          "why": "Users can be assigned to multiple skill groups."
+        },
+        {
+          "q": "A campaign can have how many skill groups?",
+          "choices": [
+            "One only",
+            "More than one",
+            "Zero, always",
+            "Only the Default queue"
+          ],
+          "answer": 1,
+          "why": "Campaigns can have multiple skill groups."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Domain boundary?",
+          "back": "Users, lists, skills, and campaigns stay in that domain."
+        },
+        {
+          "front": "CUCM partition equivalent?",
+          "back": "There isn't one. Teach domain, skills, campaigns."
+        },
+        {
+          "front": "Skill membership?",
+          "back": "Agent or supervisor users, and a user may have several skills."
+        },
+        {
+          "front": "Multiple skills on a campaign?",
+          "back": "Yes."
+        }
+      ],
+      "lab": {
+        "title": "Draw the boundary",
+        "goal": "Sketch two domains and refuse to share a list between them.",
+        "steps": [
+          "Name three objects that stay inside a domain",
+          "Write the CUCM idea you will not look for",
+          "Say which roles can join a skill"
+        ],
+        "success": "A teammate can repeat the boundary without saying 'partition'.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Agent missing from the queue",
+        "symptom": "The agent is logged in and Ready, and the queue never offers the call.",
+        "log": "USER ada READY skills=[] CAMPAIGN Billing skills=[Billing]",
+        "choices": [
+          "The user has no skill assignment",
+          "The carrier revoked TLS",
+          "Paste is disabled",
+          "The profile has two ANIs"
+        ],
+        "answer": 0,
+        "cause": "A Ready agent with no matching skill is not in that queue.",
+        "fix": "Add the user to the Billing skill group."
+      }
+    },
+    {
+      "id": "l03",
+      "title": "Roles on the floor",
+      "level": "foundation",
+      "minutes": 12,
+      "objectives": [
+        "Separate agent, supervisor, admin, and reporting",
+        "Name one fine-grained admin permission"
+      ],
+      "paragraphs": [
+        "The same person is not every role. Agents take contacts. Supervisors can sit in skill groups with agents. Administrators configure the domain. Reporting is its own permission: standard reports do not appear without the Reporting role and at least one reporting permission.",
+        "Administrator permissions are finer than the job title. Editing call variables, for example, depends on 'User Can Edit Call Variables' on the administrator role. Skipping a permission looks like a missing feature."
+      ],
+      "cites": [
+        {
+          "label": "Skill groups",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm"
+        },
+        {
+          "label": "Generating standard reports",
+          "url": "https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "stack",
+        "title": "Roles",
+        "caption": "Separate the person from the permission.",
+        "rows": [
+          {
+            "label": "Agent"
+          },
+          {
+            "label": "Supervisor"
+          },
+          {
+            "label": "Administrator"
+          },
+          {
+            "label": "Reporting"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Who can do what",
+        "lanes": [
+          "User",
+          "VCC"
+        ],
+        "steps": [
+          {
+            "lane": "User",
+            "title": "Agent",
+            "detail": "Takes the contact from a skill.",
+            "frame": "agent"
+          },
+          {
+            "lane": "User",
+            "title": "Supervisor",
+            "detail": "May also belong to a skill group.",
+            "frame": "supervisor"
+          },
+          {
+            "lane": "User",
+            "title": "Admin",
+            "detail": "Builds campaigns, scripts, and users.",
+            "frame": "admin"
+          },
+          {
+            "lane": "VCC",
+            "title": "Deny",
+            "detail": "A report menu stays hidden without the Reporting role.",
+            "frame": "reporting role"
+          },
+          {
+            "lane": "User",
+            "title": "Permission",
+            "detail": "Call-variable edits need an explicit permission.",
+            "frame": "CAV permission"
+          },
+          {
+            "lane": "VCC",
+            "title": "Audit",
+            "detail": "Write the role next to every login in the design.",
+            "frame": "audit"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "A supervisor wants a call log and the menu is missing. First check?",
+          "choices": [
+            "The codec",
+            "The Reporting role and a reporting permission",
+            "TCPA mode",
+            "The Equinix port"
+          ],
+          "answer": 1,
+          "why": "Dashboard and reports require the Reporting role plus a permission."
+        },
+        {
+          "q": "Can a supervisor be placed in a skill group?",
+          "choices": [
+            "No",
+            "Yes. The skill topic includes the supervisor role",
+            "Only in UK domains",
+            "Only for autodial"
+          ],
+          "answer": 1,
+          "why": "Skill groups organize agent or supervisor users."
+        },
+        {
+          "q": "Editing call variables requires",
+          "choices": [
+            "The agent headset",
+            "User Can Edit Call Variables on the administrator role",
+            "A Studio Build key only",
+            "SAML for every user"
+          ],
+          "answer": 1,
+          "why": "The call-variable article names that permission."
+        },
+        {
+          "q": "Agents configure IVR scripts. True or false?",
+          "choices": [
+            "True",
+            "False. That is administrator work",
+            "True on Sundays",
+            "True in preview mode"
+          ],
+          "answer": 1,
+          "why": "Script editing is an administrator task in the IVR folders."
+        },
+        {
+          "q": "Reporting data the agent sees on a screen pop is the same as a standard report. True or false?",
+          "choices": [
+            "True, always",
+            "False. Reports are a separate application and role",
+            "True if the ANI matches",
+            "False because reports are illegal"
+          ],
+          "answer": 1,
+          "why": "Standard reports live in Dashboard and Reports."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Reporting menu missing?",
+          "back": "Check the Reporting role and a reporting permission."
+        },
+        {
+          "front": "Supervisor in a skill?",
+          "back": "Yes, the skill topic allows it."
+        },
+        {
+          "front": "Call variable permission?",
+          "back": "User Can Edit Call Variables."
+        },
+        {
+          "front": "Who edits IVR?",
+          "back": "An administrator."
+        }
+      ],
+      "lab": {
+        "title": "Role card",
+        "goal": "Write four logins and the one task each is allowed to do.",
+        "steps": [
+          "Name an agent task",
+          "Name an admin task",
+          "Name the reporting gate"
+        ],
+        "success": "You did not give the agent the IVR folder.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Hidden reports",
+        "symptom": "A supervisor says reporting is broken.",
+        "log": "LOGIN sam roles=[Supervisor] reportingPerm=none",
+        "choices": [
+          "The Reporting role or permission is absent",
+          "SBC A is down",
+          "The list is in vertical mode",
+          "Java is missing on a Mac"
+        ],
+        "answer": 0,
+        "cause": "The report catalog is permissioned.",
+        "fix": "Add the Reporting role and a reporting permission."
+      }
+    },
+    {
+      "id": "l04",
+      "title": "Three campaign types",
+      "level": "foundation",
+      "minutes": 14,
+      "objectives": [
+        "Name the three campaign types",
+        "Explain blended without inventing a fourth type"
+      ],
+      "paragraphs": [
+        "Public admin topics describe three campaign types: inbound, outbound, and autodial. Inbound answers a DNIS and runs the campaign IVR. Outbound uses the dialer and an agent. Autodial also dials a list, and the planning topic groups it with inbound when you add prompts and IVR.",
+        "Blended, on the product page, is agents moving between inbound and outbound. It is not a fourth campaign type in the planning roadmap. Do not create an object named Blended and expect the admin guide to define it."
+      ],
+      "cites": [
+        {
+          "label": "Planning your implementation",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm"
+        },
+        {
+          "label": "Inbound campaigns",
+          "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm"
+        },
+        {
+          "label": "Outbound product page",
+          "url": "https://www.five9.com/products/capabilities/outbound-contact-center"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "compare",
+        "title": "Campaign types",
+        "caption": "Three types in the admin roadmap. Blended is an operating description.",
+        "leftTitle": "Campaign type",
+        "rightTitle": "Not a type",
+        "left": [
+          "Inbound",
+          "Outbound",
+          "Autodial"
+        ],
+        "right": [
+          "Blended agent work",
+          "A CUCM partition",
+          "A report layout"
+        ]
+      },
+      "flow": {
+        "title": "Which object do you create?",
+        "lanes": [
+          "Designer",
+          "VCC"
+        ],
+        "steps": [
+          {
+            "lane": "Designer",
+            "title": "Inbound",
+            "detail": "A DNIS, a running campaign, an IVR script.",
+            "frame": "inbound"
+          },
+          {
+            "lane": "Designer",
+            "title": "Outbound",
+            "detail": "A list, a dialing mode, agents in skills.",
+            "frame": "outbound"
+          },
+          {
+            "lane": "Designer",
+            "title": "Autodial",
+            "detail": "A list plus prompts and an IVR path.",
+            "frame": "autodial"
+          },
+          {
+            "lane": "VCC",
+            "title": "Run",
+            "detail": "Inbound answers only while the campaign runs.",
+            "frame": "state"
+          },
+          {
+            "lane": "Designer",
+            "title": "Blend",
+            "detail": "Staff agents on both inbound and outbound skills.",
+            "frame": "blend"
+          },
+          {
+            "lane": "VCC",
+            "title": "Refuse",
+            "detail": "Do not look for a campaign type called Blended.",
+            "frame": "no fourth type"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Which type answers a DNIS?",
+          "choices": [
+            "Outbound",
+            "Inbound",
+            "Preview",
+            "TCPA"
+          ],
+          "answer": 1,
+          "why": "Inbound campaigns receive calls from a DNIS."
+        },
+        {
+          "q": "What happens if that inbound campaign is stopped?",
+          "choices": [
+            "Calls whisper",
+            "Callers hear busy",
+            "Calls go to Studio",
+            "Calls become emails"
+          ],
+          "answer": 1,
+          "why": "The inbound topic says callers hear a busy signal."
+        },
+        {
+          "q": "Autodial is grouped with which build steps?",
+          "choices": [
+            "Headset drivers",
+            "Prompts and IVR scripts",
+            "Equinix Fabric only",
+            "STIR/SHAKEN only"
+          ],
+          "answer": 1,
+          "why": "The planning topic adds prompts and IVR for autodial and inbound."
+        },
+        {
+          "q": "Blended is",
+          "choices": [
+            "A fourth campaign type in the planning list",
+            "A way of staffing agents across inbound and outbound",
+            "A TLS cipher",
+            "A report layout"
+          ],
+          "answer": 1,
+          "why": "The outbound product page describes blended agent work. The planning list has three campaign types."
+        },
+        {
+          "q": "Outbound campaigns are for",
+          "choices": [
+            "DNIS treatment only",
+            "Dialer calls to listed contacts",
+            "911 only",
+            "IVR with no list"
+          ],
+          "answer": 1,
+          "why": "Outbound uses lists and dialing modes."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Three types?",
+          "back": "Inbound, outbound, autodial."
+        },
+        {
+          "front": "Stopped inbound?",
+          "back": "Busy signal."
+        },
+        {
+          "front": "What is blended?",
+          "back": "Agents working inbound and outbound, not a fourth type."
+        },
+        {
+          "front": "Autodial needs?",
+          "back": "List plus prompts and IVR, per the planning topic."
+        }
+      ],
+      "lab": {
+        "title": "Pick the type",
+        "goal": "Match three requests to inbound, outbound, or autodial.",
+        "steps": [
+          "A support number that must answer",
+          "A list of renewals an agent should dial",
+          "A reminder the IVR speaks before any agent"
+        ],
+        "success": "Each request has one type, and none of them is named Blended.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Wrong type",
+        "symptom": "Renewal calls are placed by hand from a DID because someone built an inbound campaign.",
+        "log": "CAMPAIGN Renewals type=INBOUND list=none",
+        "choices": [
+          "The team needed an outbound campaign and a list",
+          "They needed a shorter TLS key",
+          "They needed vertical dialing on a DNIS",
+          "They needed to delete skills"
+        ],
+        "answer": 0,
+        "cause": "A list is dialed by outbound or autodial, not by an empty inbound campaign.",
+        "fix": "Create an outbound campaign, load the list, and choose a dialing mode."
+      }
+    },
+    {
+      "id": "l05",
+      "title": "Contacts, fields, and lists",
+      "level": "foundation",
+      "minutes": 12,
+      "objectives": [
+        "Describe a contact row",
+        "Explain a final disposition"
+      ],
+      "paragraphs": [
+        "A contact record is a row of fields. number1, number2, and number3 are the usual phone slots the dialer walks. Lists are sets of those rows attached to outbound and autodial campaigns.",
+        "The list-mode article says a final disposition stops every number on that record for that campaign. Resetting a disposition later is a separate, explicit action. Loading a list does not by itself start dialing."
+      ],
+      "cites": [
+        {
+          "label": "List dialing modes",
+          "url": "https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US"
+        },
+        {
+          "label": "Managing campaign dispositions",
+          "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dispositions/managing-dispositions.htm"
+        },
+        {
+          "label": "Planning your implementation",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "path",
+        "title": "From row to dial",
+        "caption": "The record is not the campaign.",
+        "rows": [
+          {
+            "label": "Fields"
+          },
+          {
+            "label": "Contact row"
+          },
+          {
+            "label": "List"
+          },
+          {
+            "label": "Campaign"
+          },
+          {
+            "label": "Dialer"
+          }
+        ]
+      },
+      "flow": {
+        "title": "A record joins a campaign",
+        "lanes": [
+          "List",
+          "Dialer"
+        ],
+        "steps": [
+          {
+            "lane": "List",
+            "title": "Fields",
+            "detail": "number1 is the first phone slot.",
+            "frame": "fields"
+          },
+          {
+            "lane": "List",
+            "title": "Row",
+            "detail": "One person, possibly three numbers.",
+            "frame": "record"
+          },
+          {
+            "lane": "List",
+            "title": "Load",
+            "detail": "The list is attached to the campaign.",
+            "frame": "attach"
+          },
+          {
+            "lane": "Dialer",
+            "title": "Mode",
+            "detail": "List penetration or vertical decides the walk.",
+            "frame": "mode"
+          },
+          {
+            "lane": "Dialer",
+            "title": "Final",
+            "detail": "A final disposition stops the whole record.",
+            "frame": "final"
+          },
+          {
+            "lane": "Dialer",
+            "title": "Reset",
+            "detail": "Reset Disposition is how you allow another try.",
+            "frame": "reset"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "What does a final disposition do to a record?",
+          "choices": [
+            "It dials number3 next",
+            "It stops further attempts on every number for that campaign",
+            "It deletes the domain",
+            "It starts the IVR"
+          ],
+          "answer": 1,
+          "why": "The list-mode article says no further attempts are made on any number for that record."
+        },
+        {
+          "q": "Which campaign types use lists?",
+          "choices": [
+            "Inbound only",
+            "Outbound and autodial",
+            "Reporting only",
+            "E911 only"
+          ],
+          "answer": 1,
+          "why": "The disposition and list topics talk about outbound and autodial lists."
+        },
+        {
+          "q": "number1 is",
+          "choices": [
+            "The agent's extension",
+            "A phone field on the contact",
+            "The DNIS",
+            "The abandon cap"
+          ],
+          "answer": 1,
+          "why": "List penetration examples walk number1, then number2, then number3."
+        },
+        {
+          "q": "Uploading a list starts the dialer. True or false?",
+          "choices": [
+            "True",
+            "False. The campaign still has to run, with a mode and agents or an IVR",
+            "True in TCPA domains",
+            "True if the file is CSV"
+          ],
+          "answer": 1,
+          "why": "A list is an input. Run state and dialing mode are separate."
+        },
+        {
+          "q": "Reset Disposition applies to",
+          "choices": [
+            "Every domain on the cluster",
+            "Lists currently loaded in that campaign",
+            "Only inbound DNIS",
+            "Only voicemail"
+          ],
+          "answer": 1,
+          "why": "The disposition topic says the reset applies to lists currently loaded in the campaign."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Final disposition?",
+          "back": "Stops all numbers on that record for the campaign."
+        },
+        {
+          "front": "Which types load lists?",
+          "back": "Outbound and autodial."
+        },
+        {
+          "front": "What is number1?",
+          "back": "The first phone field the dial order can use."
+        },
+        {
+          "front": "Does upload start dialing?",
+          "back": "No."
+        }
+      ],
+      "lab": {
+        "title": "Read a row",
+        "goal": "Given number1, number2, and a final disposition, say what the dialer will not do.",
+        "steps": [
+          "Mark the final outcome",
+          "State that number2 will not be tried",
+          "Name the action that would allow a later retry"
+        ],
+        "success": "You named Reset Disposition, not a second upload, as the retry tool.",
+        "href": ""
+      },
+      "fault": {
+        "title": "List loaded, nothing dials",
+        "symptom": "The CSV imported and the campaign stays silent.",
+        "log": "LIST renewals rows=40000 CAMPAIGN state=NOT_RUNNING mode=none",
+        "choices": [
+          "The campaign is not running and has no dialing mode",
+          "number1 must be an email",
+          "Final dispositions dial first",
+          "IVR Menu blocked CSV"
+        ],
+        "answer": 0,
+        "cause": "A list without a running outbound or autodial campaign does not dial.",
+        "fix": "Start the campaign and set the dialing mode."
+      }
+    },
+    {
+      "id": "l06",
+      "title": "Dispositions are the dialer's memory",
+      "level": "foundation",
+      "minutes": 12,
+      "objectives": [
+        "Explain redial count versus a final code",
+        "Say what a reset is allowed to touch"
+      ],
+      "paragraphs": [
+        "A disposition is the outcome stored on a record. System dispositions and custom dispositions both exist. The disposition topic says many system dispositions are redialed five times if you leave the default redial count, and you can reset that count.",
+        "You can update dispositions in a batch from the campaign menu, including a CSV through a scheduled upload. A list-details report shows the last disposition for outbound campaigns. Do not reset a disposition you are not willing to dial again."
+      ],
+      "cites": [
+        {
+          "label": "Managing campaign dispositions",
+          "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dispositions/managing-dispositions.htm"
+        },
+        {
+          "label": "List dialing modes",
+          "url": "https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "stack",
+        "title": "Disposition effects",
+        "caption": "The code decides whether the number is alive.",
+        "rows": [
+          {
+            "label": "System or custom code"
+          },
+          {
+            "label": "Redial count"
+          },
+          {
+            "label": "Final flag"
+          },
+          {
+            "label": "Reset window"
+          },
+          {
+            "label": "List details report"
+          }
+        ]
+      },
+      "flow": {
+        "title": "From outcome to next attempt",
+        "lanes": [
+          "Agent",
+          "Dialer"
+        ],
+        "steps": [
+          {
+            "lane": "Agent",
+            "title": "Code",
+            "detail": "The agent or the system sets a disposition.",
+            "frame": "set"
+          },
+          {
+            "lane": "Dialer",
+            "title": "Count",
+            "detail": "Default system redial is often five.",
+            "frame": "five"
+          },
+          {
+            "lane": "Dialer",
+            "title": "Stop",
+            "detail": "A final code ends the record.",
+            "frame": "final"
+          },
+          {
+            "lane": "Agent",
+            "title": "Reset",
+            "detail": "An admin resets a date range on purpose.",
+            "frame": "reset"
+          },
+          {
+            "lane": "Dialer",
+            "title": "Retry",
+            "detail": "Only the selected codes are eligible again.",
+            "frame": "eligible"
+          },
+          {
+            "lane": "Agent",
+            "title": "Report",
+            "detail": "List details shows the last disposition.",
+            "frame": "report"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Default redial behavior for many system dispositions is",
+          "choices": [
+            "Never",
+            "Five times, if the default redial count is in use",
+            "Fifty times",
+            "Only on inbound"
+          ],
+          "answer": 1,
+          "why": "The disposition topic says many system dispositions are redialed five times with the default count."
+        },
+        {
+          "q": "Reset Disposition redials",
+          "choices": [
+            "Every code you did not touch",
+            "The dispositions you select, on lists currently loaded",
+            "Only voicemail greetings",
+            "Only UK domains"
+          ],
+          "answer": 1,
+          "why": "You choose the codes and a date range. It applies to loaded lists."
+        },
+        {
+          "q": "A safe reset rule is",
+          "choices": [
+            "Reset all codes nightly",
+            "Reset only codes you know are safe to dial again",
+            "Reset final sales as a habit",
+            "Reset from the agent headset button"
+          ],
+          "answer": 1,
+          "why": "The topic says to reset only dispositions you know are safe to redial."
+        },
+        {
+          "q": "Batch disposition updates can come from",
+          "choices": [
+            "A headset mute button",
+            "A manual entry or a CSV, including a schedule",
+            "The SIP trunk alone",
+            "RedSky"
+          ],
+          "answer": 1,
+          "why": "Update Dispositions supports manual input and scheduled CSV."
+        },
+        {
+          "q": "Where do you confirm the last outbound disposition?",
+          "choices": [
+            "A list details report",
+            "The TLS cipher list",
+            "MyE911",
+            "The Equinix SLA"
+          ],
+          "answer": 1,
+          "why": "The update article points at the list details report for outbound."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Default system redials?",
+          "back": "Often five, if the default count is left in place."
+        },
+        {
+          "front": "What does reset change?",
+          "back": "Selected codes on lists currently loaded."
+        },
+        {
+          "front": "Safe reset rule?",
+          "back": "Only codes you are willing to dial."
+        },
+        {
+          "front": "Batch update?",
+          "back": "Manual rows or scheduled CSV."
+        }
+      ],
+      "lab": {
+        "title": "Mark final vs retry",
+        "goal": "Label five sample codes as final or retryable.",
+        "steps": [
+          "Sale as final",
+          "No answer as retryable",
+          "Say what Reset would do to No answer"
+        ],
+        "success": "You refused to reset Sale.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Sold customers called again",
+        "symptom": "Last week's sales are back in the hopper.",
+        "log": "ACTION ResetDisposition codes=[Sale,NoAnswer] range=7d",
+        "choices": [
+          "Sale was included in a reset",
+          "The codec changed",
+          "DNIS was busy",
+          "IVA contained the call"
+        ],
+        "answer": 0,
+        "cause": "Reset makes the selected codes dialable again.",
+        "fix": "Reset only No Answer. Leave Sale alone."
+      }
+    },
+    {
+      "id": "l07",
+      "title": "One profile, many campaigns",
+      "level": "foundation",
+      "minutes": 12,
+      "objectives": [
+        "Assign one profile",
+        "Name two things a profile is for"
+      ],
+      "paragraphs": [
+        "A campaign profile overrides campaign defaults such as the ANI. You may create many profiles. A campaign uses one profile at a time. The same profile can be on more than one campaign. You attach it in Advanced mode, and workflow rules can swap it.",
+        "Profiles also filter and sort lists, control pop-up windows in the agent interface, and manage disposition counts. They are not a second copy of the dialing mode."
+      ],
+      "cites": [
+        {
+          "label": "Campaign profiles",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/campaign-profiles/_ch-campaign-profiles.htm"
+        },
+        {
+          "label": "Assign a campaign profile",
+          "url": "https://community.five9.com/s/article/Administrator-How-to-Create-Add-a-Campaign-Profile-and-Assign-it-to-a-Campaign?language=en_US"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "compare",
+        "title": "Profile vs campaign",
+        "caption": "The profile decorates the campaign. It does not replace it.",
+        "leftTitle": "Profile",
+        "rightTitle": "Campaign",
+        "left": [
+          "ANI override",
+          "List filter and sort",
+          "Pop-up behavior",
+          "Disposition counts"
+        ],
+        "right": [
+          "Type",
+          "Run state",
+          "Dialing mode",
+          "Skill assignment"
+        ]
+      },
+      "flow": {
+        "title": "Attach a profile",
+        "lanes": [
+          "Admin",
+          "Campaign"
+        ],
+        "steps": [
+          {
+            "lane": "Admin",
+            "title": "Create",
+            "detail": "Add a profile from the Campaign Profile folder.",
+            "frame": "add"
+          },
+          {
+            "lane": "Admin",
+            "title": "ANI",
+            "detail": "Override the default ANI.",
+            "frame": "ani"
+          },
+          {
+            "lane": "Admin",
+            "title": "Filter",
+            "detail": "Filter and sort the list.",
+            "frame": "filter"
+          },
+          {
+            "lane": "Campaign",
+            "title": "Advanced",
+            "detail": "Choose the profile in Advanced mode.",
+            "frame": "assign"
+          },
+          {
+            "lane": "Campaign",
+            "title": "One",
+            "detail": "Only one profile is associated.",
+            "frame": "one"
+          },
+          {
+            "lane": "Campaign",
+            "title": "Swap",
+            "detail": "A workflow rule can change it later.",
+            "frame": "workflow"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "How many profiles can a campaign use at once?",
+          "choices": [
+            "As many as it has skills",
+            "One",
+            "Two, inbound and outbound",
+            "Zero, profiles are optional and ignored"
+          ],
+          "answer": 1,
+          "why": "You can associate only one profile per campaign."
+        },
+        {
+          "q": "Can two campaigns share a profile?",
+          "choices": [
+            "No",
+            "Yes. A profile can be used by more than one campaign",
+            "Only autodial",
+            "Only if ANI is blank"
+          ],
+          "answer": 1,
+          "why": "The profile topic says a profile can be used simultaneously by more than one campaign."
+        },
+        {
+          "q": "Where do you assign it?",
+          "choices": [
+            "On the SIP trunk",
+            "Advanced mode on the campaign",
+            "Inside a flashcard",
+            "On the agent headset"
+          ],
+          "answer": 1,
+          "why": "Assignment is in Advanced mode when you start or edit the campaign."
+        },
+        {
+          "q": "A profile can override",
+          "choices": [
+            "The laws of the FTC",
+            "Defaults such as the ANI",
+            "The Reporting role",
+            "TLS 1.2"
+          ],
+          "answer": 1,
+          "why": "Profiles override campaign defaults such as the default ANI."
+        },
+        {
+          "q": "Workflow rules can",
+          "choices": [
+            "Delete the domain",
+            "Change the profile on the campaign",
+            "Disable TCPA typing",
+            "Replace Five9 with a PBX"
+          ],
+          "answer": 1,
+          "why": "The profile topic says workflow rules can change the profile."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Profiles per campaign?",
+          "back": "One."
+        },
+        {
+          "front": "Can a profile be shared?",
+          "back": "Yes, across campaigns."
+        },
+        {
+          "front": "What can it override?",
+          "back": "Defaults such as the ANI."
+        },
+        {
+          "front": "How can it change later?",
+          "back": "Workflow rules."
+        }
+      ],
+      "lab": {
+        "title": "Pick an ANI",
+        "goal": "Write two profiles with two ANIs and assign one to a campaign.",
+        "steps": [
+          "Name the Advanced mode step",
+          "Say what the second campaign could reuse",
+          "Say what the profile does not set"
+        ],
+        "success": "You did not put the dialing mode on the profile.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Wrong caller ID",
+        "symptom": "Outbound calls show the default ANI after a morning change.",
+        "log": "PROFILE west-ani NOT ASSIGNED CAMPAIGN mode=BASIC",
+        "choices": [
+          "The new profile was never selected in Advanced mode",
+          "Predictive requires 10 agents to show ANI",
+          "Menu module erased ANI",
+          "RedSky replaced the caller ID"
+        ],
+        "answer": 0,
+        "cause": "A profile does nothing until the campaign uses it.",
+        "fix": "Assign it in Advanced mode."
+      }
+    }
+  ]
+}

@@ -1,0 +1,1375 @@
+{
+  "id": "t12",
+  "title": "CRM integrations",
+  "short": "CRM",
+  "blurb": "Plus adapters, version lists that age, the SDK, and Salesforce inside the IVR.",
+  "group": "Systems",
+  "level": "Practice",
+  "summary": "Name the adapter. Date the version. A blank screen with live voice is a different channel.",
+  "lessons": [
+    {
+      "id": "l01",
+      "title": "The adapter family",
+      "level": "foundation",
+      "minutes": 12,
+      "objectives": [
+        "Name the adapter, the SDK, or the connector",
+        "Keep WSS in the design"
+      ],
+      "paragraphs": [
+        "The technical requirements list Plus adapters for Agent Desktop Toolkit, Epic, Microsoft Dynamics 365, NetSuite, Oracle, Salesforce, ServiceNow, and Zendesk. They use HTTPS and Secure WebSocket. The desktop page says a pre-built adapter and Plus share the same underlying technology, and that a CRM SDK exists when you bring your own CRM.",
+        "The product API page also names Web Connectors. A connector that pops a URL is not the same object as a full Plus adapter. Say which one you deployed."
+      ],
+      "cites": [
+        {
+          "label": "Web adapter requirements",
+          "url": "https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/agent-integrations/web-based-adapters/application-requirements.htm"
+        },
+        {
+          "label": "Agent Desktop",
+          "url": "https://www.five9.com/products/capabilities/agent-desktop"
+        },
+        {
+          "label": "APIs and SDKs",
+          "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks"
+        },
+        {
+          "label": "Technical requirements PDF",
+          "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+          "note": "Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall."
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "stack",
+        "title": "Named Plus adapters",
+        "caption": "From the technical requirements list.",
+        "rows": [
+          {
+            "label": "Salesforce"
+          },
+          {
+            "label": "ServiceNow"
+          },
+          {
+            "label": "Dynamics 365"
+          },
+          {
+            "label": "Zendesk"
+          },
+          {
+            "label": "Oracle"
+          },
+          {
+            "label": "NetSuite"
+          },
+          {
+            "label": "Epic"
+          },
+          {
+            "label": "Desktop Toolkit"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Pick the integration",
+        "lanes": [
+          "CRM",
+          "Five9"
+        ],
+        "steps": [
+          {
+            "lane": "CRM",
+            "title": "Known",
+            "detail": "The CRM is one of the named products.",
+            "frame": "known"
+          },
+          {
+            "lane": "Five9",
+            "title": "Adapter",
+            "detail": "The matching Plus adapter is the first choice.",
+            "frame": "adapter"
+          },
+          {
+            "lane": "CRM",
+            "title": "Other",
+            "detail": "Anything else starts with the CRM SDK.",
+            "frame": "sdk"
+          },
+          {
+            "lane": "Five9",
+            "title": "Pop",
+            "detail": "A web connector can open a URL.",
+            "frame": "url"
+          },
+          {
+            "lane": "Five9",
+            "title": "WSS",
+            "detail": "The proxy must pass Secure WebSocket.",
+            "frame": "wss"
+          },
+          {
+            "lane": "Admin",
+            "title": "Say",
+            "detail": "The design names adapter, SDK, or connector.",
+            "frame": "say"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "ServiceNow is in the adapter list. True or false?",
+          "choices": [
+            "False",
+            "True",
+            "Only as a connector rumor",
+            "Only in Studio"
+          ],
+          "answer": 1,
+          "why": "The PDF lists the ServiceNow Plus adapter."
+        },
+        {
+          "q": "An unlisted homegrown CRM uses",
+          "choices": [
+            "A fictional adapter",
+            "The CRM SDK, per the product pages",
+            "Only FTP",
+            "Only Java admin"
+          ],
+          "answer": 1,
+          "why": "Bring your own CRM is the SDK line."
+        },
+        {
+          "q": "A URL pop is",
+          "choices": [
+            "Always a Plus adapter",
+            "Often a web connector. Say which",
+            "A skill",
+            "A list mode"
+          ],
+          "answer": 1,
+          "why": "Connectors and adapters are both real and different."
+        },
+        {
+          "q": "Proxy requirement is",
+          "choices": [
+            "Optional HTTP",
+            "WSS support",
+            "Double NAT",
+            "TLS 1.1"
+          ],
+          "answer": 1,
+          "why": "Plus adapters need a WSS-capable proxy if you have one."
+        },
+        {
+          "q": "Epic is",
+          "choices": [
+            "Not listed",
+            "In the Plus adapter list",
+            "A dialer mode",
+            "A codec"
+          ],
+          "answer": 1,
+          "why": "The PDF names Epic."
+        }
+      ],
+      "cards": [
+        {
+          "front": "ServiceNow listed?",
+          "back": "Yes."
+        },
+        {
+          "front": "Homegrown CRM?",
+          "back": "CRM SDK."
+        },
+        {
+          "front": "URL pop versus adapter?",
+          "back": "Name which one."
+        },
+        {
+          "front": "Proxy?",
+          "back": "Must support WSS."
+        }
+      ],
+      "lab": {
+        "title": "Name it",
+        "goal": "For three systems, write adapter, SDK, or connector.",
+        "steps": [
+          "Salesforce",
+          "An internal CRM",
+          "A simple URL pop"
+        ],
+        "success": "The three words are not interchangeable.",
+        "href": ""
+      },
+      "fault": {
+        "title": "The pop is a bookmark",
+        "symptom": "Leadership thinks they bought the Salesforce adapter. Agents click a bookmark.",
+        "log": "ADAPTER absent BOOKMARK yes",
+        "choices": [
+          "Deploy the adapter or call the bookmark a connector, honestly",
+          "Rename the bookmark",
+          "Add lines",
+          "Delete IVR"
+        ],
+        "answer": 0,
+        "cause": "The object in production is not the object in the slide.",
+        "fix": "Install the adapter or document the connector."
+      }
+    },
+    {
+      "id": "l02",
+      "title": "Salesforce versions move",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Date every Salesforce version you copy",
+        "Do not keep IE for Salesforce"
+      ],
+      "paragraphs": [
+        "The technical requirements fetched for this lab say the Salesforce managed package is 2.46, SAML 2.0 is supported, and Lightning CTI is supported on Sales Cloud and Service Cloud for Professional, Enterprise, Unlimited, and Performance. Lightning Experience is supported for the Plus adapter.",
+        "2.46 is a line in a PDF, not a law. The next PDF can move it. Write 'as of the PDF we read' on any design that copies the number. Internet Explorer is ended except IE 11 for the Oracle Service Cloud adapter only, which is a different CRM."
+      ],
+      "cites": [
+        {
+          "label": "Technical requirements PDF",
+          "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+          "note": "Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall."
+        },
+        {
+          "label": "Web adapter requirements",
+          "url": "https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/agent-integrations/web-based-adapters/application-requirements.htm"
+        }
+      ],
+      "uncertain": [
+        "Managed package 2.46 and the edition list came from the technical requirements read in October 2026. They will move."
+      ],
+      "figure": {
+        "kind": "stack",
+        "title": "Salesforce lines that age",
+        "caption": "Re-read before you freeze a standard.",
+        "rows": [
+          {
+            "label": "Package version in the PDF"
+          },
+          {
+            "label": "SAML 2.0"
+          },
+          {
+            "label": "Lightning CTI"
+          },
+          {
+            "label": "Those four editions"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Check the package",
+        "lanes": [
+          "PDF",
+          "Org"
+        ],
+        "steps": [
+          {
+            "lane": "PDF",
+            "title": "Read",
+            "detail": "The current technical requirements are opened.",
+            "frame": "pdf"
+          },
+          {
+            "lane": "PDF",
+            "title": "Version",
+            "detail": "The package number is copied with a date.",
+            "frame": "ver"
+          },
+          {
+            "lane": "Org",
+            "title": "Installed",
+            "detail": "The org's installed package is compared.",
+            "frame": "org"
+          },
+          {
+            "lane": "Org",
+            "title": "CTI",
+            "detail": "Lightning CTI is the mode in the note.",
+            "frame": "cti"
+          },
+          {
+            "lane": "Org",
+            "title": "Edition",
+            "detail": "The edition is one of the supported names, or it is not.",
+            "frame": "ed"
+          },
+          {
+            "lane": "Admin",
+            "title": "Stop",
+            "detail": "IE is not the Salesforce browser story.",
+            "frame": "ie"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "This lab treats package 2.46 as",
+          "choices": [
+            "Eternal",
+            "The number in the PDF it read. Recheck",
+            "A dialer mode",
+            "A skill"
+          ],
+          "answer": 1,
+          "why": "Versions move."
+        },
+        {
+          "q": "SAML version named for that adapter is",
+          "choices": [
+            "1.1",
+            "2.0",
+            "3.0",
+            "None"
+          ],
+          "answer": 1,
+          "why": "The PDF says 2.0."
+        },
+        {
+          "q": "Lightning CTI is",
+          "choices": [
+            "Unsupported",
+            "Supported, including Lightning Experience for the Plus adapter",
+            "Voice-only",
+            "Removed"
+          ],
+          "answer": 1,
+          "why": "The PDF says so."
+        },
+        {
+          "q": "Editions named include",
+          "choices": [
+            "Essentials only",
+            "Professional, Enterprise, Unlimited, and Performance",
+            "Free",
+            "Trial only"
+          ],
+          "answer": 1,
+          "why": "That is the list in the PDF."
+        },
+        {
+          "q": "IE 11 remains for",
+          "choices": [
+            "Salesforce",
+            "The Oracle Service Cloud adapter only",
+            "All adapters",
+            "Studio"
+          ],
+          "answer": 1,
+          "why": "The PDF carves out that one exception."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Is 2.46 forever?",
+          "back": "No. Recheck the PDF."
+        },
+        {
+          "front": "SAML?",
+          "back": "2.0 in that PDF."
+        },
+        {
+          "front": "Lightning?",
+          "back": "Supported."
+        },
+        {
+          "front": "IE 11 remains for Salesforce?",
+          "back": "No. The exception is Oracle Service Cloud."
+        }
+      ],
+      "lab": {
+        "title": "Date the number",
+        "goal": "Write the package version with the phrase 'as of'.",
+        "steps": [
+          "Open the current PDF",
+          "Write the number and the date",
+          "Compare to the org"
+        ],
+        "success": "The sentence includes a date.",
+        "href": ""
+      },
+      "fault": {
+        "title": "A standard says IE for Salesforce",
+        "symptom": "The PDF ended IE except for Oracle Service Cloud.",
+        "log": "STD browser=IE CRM=Salesforce",
+        "choices": [
+          "Change the standard to a supported browser",
+          "Keep IE",
+          "Disable WSS",
+          "Use analog headsets"
+        ],
+        "answer": 0,
+        "cause": "The standard contradicts the PDF.",
+        "fix": "Pick a supported browser."
+      }
+    },
+    {
+      "id": "l03",
+      "title": "ServiceNow releases are named",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Check the ServiceNow release list",
+        "Date it"
+      ],
+      "paragraphs": [
+        "The same PDF says the ServiceNow Plus adapter supports the Service Operations and Configurable workspaces, and names the Australia, Zurich, and Yokohama releases. Those names are a support list with a date on it, like the Salesforce package.",
+        "There is a portal chapter for configuring the Plus adapter for ServiceNow. Use it for the steps. Use the PDF for which release you are allowed to be on, and re-read both."
+      ],
+      "cites": [
+        {
+          "label": "Technical requirements PDF",
+          "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+          "note": "Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall."
+        },
+        {
+          "label": "ServiceNow Plus adapter",
+          "url": "https://documentation.five9.com/bundle/servicenowadmins/page/crm-admins/ServiceNow/introduction/_ch-configuring-the-five9-plus-adapter-for-servicenow.htm"
+        }
+      ],
+      "uncertain": [
+        "Australia, Zurich, and Yokohama were the names in the PDF read for this lab. Confirm the current list before an upgrade."
+      ],
+      "figure": {
+        "kind": "stack",
+        "title": "ServiceNow lines from the PDF",
+        "caption": "Re-read before an upgrade.",
+        "rows": [
+          {
+            "label": "Service Operations workspace"
+          },
+          {
+            "label": "Configurable workspace"
+          },
+          {
+            "label": "Australia"
+          },
+          {
+            "label": "Zurich"
+          },
+          {
+            "label": "Yokohama"
+          }
+        ]
+      },
+      "flow": {
+        "title": "An upgrade is proposed",
+        "lanes": [
+          "Now",
+          "Five9",
+          "Change"
+        ],
+        "steps": [
+          {
+            "lane": "Now",
+            "title": "Release",
+            "detail": "The instance is on a named release.",
+            "frame": "rel"
+          },
+          {
+            "lane": "Five9",
+            "title": "List",
+            "detail": "The PDF list is checked.",
+            "frame": "list"
+          },
+          {
+            "lane": "Change",
+            "title": "Match",
+            "detail": "The target is on the list, or the upgrade waits.",
+            "frame": "match"
+          },
+          {
+            "lane": "Change",
+            "title": "Workspace",
+            "detail": "The workspace is one of the two named.",
+            "frame": "ws"
+          },
+          {
+            "lane": "Admin",
+            "title": "Guide",
+            "detail": "The portal chapter is the click path.",
+            "frame": "guide"
+          },
+          {
+            "lane": "Admin",
+            "title": "Date",
+            "detail": "The decision records the PDF date.",
+            "frame": "date"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Workspaces named in the PDF are",
+          "choices": [
+            "Any",
+            "Service Operations and Configurable",
+            "Classic only",
+            "None"
+          ],
+          "answer": 1,
+          "why": "Those two."
+        },
+        {
+          "q": "Australia, Zurich, and Yokohama are",
+          "choices": [
+            "Cities you must dial",
+            "Release names in that PDF",
+            "Skill groups",
+            "Codecs"
+          ],
+          "answer": 1,
+          "why": "They are ServiceNow release names in the support list."
+        },
+        {
+          "q": "A release that is not on the current PDF is",
+          "choices": [
+            "Automatically supported",
+            "Not something this lab will call supported",
+            "Required",
+            "A list mode"
+          ],
+          "answer": 1,
+          "why": "The list is the boundary."
+        },
+        {
+          "q": "The click path lives",
+          "choices": [
+            "Only in this lesson",
+            "In the ServiceNow adapter chapter",
+            "In the dialer",
+            "In MyE911"
+          ],
+          "answer": 1,
+          "why": "Use the portal chapter."
+        },
+        {
+          "q": "You should freeze Yokohama as forever. True or false?",
+          "choices": [
+            "True",
+            "False. The next PDF can change the list",
+            "True for US domains",
+            "True for TCPA"
+          ],
+          "answer": 1,
+          "why": "Date the list."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Workspaces?",
+          "back": "Service Operations and Configurable."
+        },
+        {
+          "front": "Those three names?",
+          "back": "Releases in the PDF."
+        },
+        {
+          "front": "Off-list release?",
+          "back": "Do not call it supported."
+        },
+        {
+          "front": "Forever?",
+          "back": "No."
+        }
+      ],
+      "lab": {
+        "title": "Gate an upgrade",
+        "goal": "Write pass or wait for a fictional upgrade to a release not on the list.",
+        "steps": [
+          "Find the name",
+          "Compare",
+          "Wait if it is absent"
+        ],
+        "success": "You waited.",
+        "href": ""
+      },
+      "fault": {
+        "title": "The instance moved to a brand-new release overnight",
+        "symptom": "The PDF on the desk does not list it. Pops fail.",
+        "log": "RELEASE unlisted POP fail",
+        "choices": [
+          "Open the current PDF before you debug the skill",
+          "Add predictive lines",
+          "Reset lists",
+          "Change ANI"
+        ],
+        "answer": 0,
+        "cause": "Supportability is the first question.",
+        "fix": "Confirm the release, then the adapter."
+      }
+    },
+    {
+      "id": "l04",
+      "title": "The rest of the named CRMs",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Give each CRM its own chapter",
+        "Do not reuse another product's version"
+      ],
+      "paragraphs": [
+        "Dynamics 365, Zendesk, Oracle, NetSuite, and Epic are in the same Plus adapter list as Salesforce and ServiceNow. The PDF does not give this lab a package number for each of them. Absence of a number here is not absence of an adapter.",
+        "Treat each one as its own guide chapter. A Zendesk pop that fails is not fixed by a Salesforce package upgrade."
+      ],
+      "cites": [
+        {
+          "label": "Technical requirements PDF",
+          "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+          "note": "Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall."
+        },
+        {
+          "label": "Web adapter requirements",
+          "url": "https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/agent-integrations/web-based-adapters/application-requirements.htm"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "path",
+        "title": "One chapter each",
+        "caption": "Do not share a package number across CRMs.",
+        "rows": [
+          {
+            "label": "Dynamics 365"
+          },
+          {
+            "label": "Zendesk"
+          },
+          {
+            "label": "Oracle"
+          },
+          {
+            "label": "NetSuite"
+          },
+          {
+            "label": "Epic"
+          }
+        ]
+      },
+      "flow": {
+        "title": "A Zendesk ticket",
+        "lanes": [
+          "Agent",
+          "Adapter",
+          "Guide"
+        ],
+        "steps": [
+          {
+            "lane": "Agent",
+            "title": "Pop",
+            "detail": "The ticket should appear.",
+            "frame": "pop"
+          },
+          {
+            "lane": "Adapter",
+            "title": "Zendesk",
+            "detail": "The Zendesk adapter is the one installed.",
+            "frame": "ad"
+          },
+          {
+            "lane": "Guide",
+            "title": "Chapter",
+            "detail": "The Zendesk chapter is the one opened.",
+            "frame": "ch"
+          },
+          {
+            "lane": "Admin",
+            "title": "Avoid",
+            "detail": "The Salesforce package number is irrelevant.",
+            "frame": "no"
+          },
+          {
+            "lane": "Proxy",
+            "title": "WSS",
+            "detail": "The socket still has to pass.",
+            "frame": "wss"
+          },
+          {
+            "lane": "Agent",
+            "title": "Voice",
+            "detail": "Voice can work while the ticket does not.",
+            "frame": "voice"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Epic is listed as a Plus adapter. True or false?",
+          "choices": [
+            "False",
+            "True",
+            "Only in WEM",
+            "Only as a codec"
+          ],
+          "answer": 1,
+          "why": "The PDF includes Epic."
+        },
+        {
+          "q": "A Salesforce package number fixes Zendesk. True or false?",
+          "choices": [
+            "True",
+            "False",
+            "True if SAML matches",
+            "True on ARM Macs"
+          ],
+          "answer": 1,
+          "why": "Different adapters."
+        },
+        {
+          "q": "This lab's package number for NetSuite is",
+          "choices": [
+            "2.46",
+            "Not stated. 2.46 was the Salesforce line",
+            "1.0",
+            "10"
+          ],
+          "answer": 1,
+          "why": "Do not reuse the Salesforce number."
+        },
+        {
+          "q": "Oracle Service Cloud's IE exception applies to Zendesk. True or false?",
+          "choices": [
+            "True",
+            "False. The PDF limits that exception to Oracle Service Cloud",
+            "True for all Plus adapters",
+            "True for Studio"
+          ],
+          "answer": 1,
+          "why": "Keep the exception narrow."
+        },
+        {
+          "q": "Voice up, ticket down, still starts with",
+          "choices": [
+            "The skill greeting",
+            "Whether the adapter channel is up",
+            "List penetration",
+            "The abandon window"
+          ],
+          "answer": 1,
+          "why": "Same split as any pop."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Epic listed?",
+          "back": "Yes."
+        },
+        {
+          "front": "Salesforce package fixes Zendesk?",
+          "back": "No."
+        },
+        {
+          "front": "NetSuite package in this lab?",
+          "back": "Not stated."
+        },
+        {
+          "front": "IE exception scope?",
+          "back": "Oracle Service Cloud only."
+        }
+      ],
+      "lab": {
+        "title": "Separate the chapters",
+        "goal": "Write the guide you would open for Epic and for Zendesk.",
+        "steps": [
+          "Epic chapter",
+          "Zendesk chapter",
+          "Not the Salesforce package"
+        ],
+        "success": "Two chapters.",
+        "href": ""
+      },
+      "fault": {
+        "title": "NetSuite was upgraded using the Salesforce notes",
+        "symptom": "The pop broke and the notes never mentioned NetSuite.",
+        "log": "NOTES salesforce CRM netsuite",
+        "choices": [
+          "Open the NetSuite adapter chapter",
+          "Reinstall Salesforce",
+          "Change the dialer",
+          "Delete skills"
+        ],
+        "answer": 0,
+        "cause": "Wrong chapter.",
+        "fix": "Use the NetSuite guide."
+      }
+    },
+    {
+      "id": "l05",
+      "title": "SDK and connectors when there is no adapter",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Use the SDK or a connector on purpose",
+        "Own the retest"
+      ],
+      "paragraphs": [
+        "The API product page lists a CRM SDK and web connectors beside the CTI, configuration, reporting, and statistics web services, plus Web2Campaign. The desktop page says bring your own CRM with the SDK.",
+        "A connector is a lighter pop. An SDK integration is code. Neither is maintained as a managed package by the Salesforce story. You own the tests when Five9 or the CRM moves."
+      ],
+      "cites": [
+        {
+          "label": "APIs and SDKs",
+          "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks"
+        },
+        {
+          "label": "Agent Desktop",
+          "url": "https://www.five9.com/products/capabilities/agent-desktop"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "compare",
+        "title": "Build versus buy",
+        "caption": "Say who patches it.",
+        "leftTitle": "Plus adapter",
+        "rightTitle": "SDK or connector",
+        "left": [
+          "Named CRM",
+          "Vendor guide"
+        ],
+        "right": [
+          "Your code or your URL",
+          "You retest on change"
+        ]
+      },
+      "flow": {
+        "title": "A homegrown pop",
+        "lanes": [
+          "App",
+          "Five9",
+          "Test"
+        ],
+        "steps": [
+          {
+            "lane": "App",
+            "title": "Need",
+            "detail": "The CRM is not in the adapter list.",
+            "frame": "need"
+          },
+          {
+            "lane": "Five9",
+            "title": "SDK",
+            "detail": "The SDK is the documented extension point.",
+            "frame": "sdk"
+          },
+          {
+            "lane": "Five9",
+            "title": "URL",
+            "detail": "Or a connector opens a URL with call data.",
+            "frame": "url"
+          },
+          {
+            "lane": "Test",
+            "title": "Call",
+            "detail": "A test call pops the right record.",
+            "frame": "test"
+          },
+          {
+            "lane": "Test",
+            "title": "Fail",
+            "detail": "Voice still works. The pop is yours to fix.",
+            "frame": "fail"
+          },
+          {
+            "lane": "Change",
+            "title": "Retest",
+            "detail": "A platform upgrade reruns the test.",
+            "frame": "re"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "The CRM SDK is named on",
+          "choices": [
+            "The API product page and the desktop page",
+            "The headset page only",
+            "RFC 4733 only",
+            "The retention page only"
+          ],
+          "answer": 1,
+          "why": "Both pages mention it."
+        },
+        {
+          "q": "Web connectors are",
+          "choices": [
+            "Absent",
+            "Named on the API page",
+            "A dialer mode",
+            "A skill tab"
+          ],
+          "answer": 1,
+          "why": "The API page lists them."
+        },
+        {
+          "q": "You own retesting a homegrown pop. True or false?",
+          "choices": [
+            "False",
+            "True",
+            "Only if ANI is local",
+            "Only in UK domains"
+          ],
+          "answer": 1,
+          "why": "There is no managed package for it."
+        },
+        {
+          "q": "Web2Campaign is",
+          "choices": [
+            "A headset",
+            "One of the named APIs on that page",
+            "A skill",
+            "A theme"
+          ],
+          "answer": 1,
+          "why": "The API page lists it."
+        },
+        {
+          "q": "A connector that only opens a URL",
+          "choices": [
+            "Is a full adapter",
+            "Does less than a full adapter. Say so",
+            "Sets DNC",
+            "Schedules WEM"
+          ],
+          "answer": 1,
+          "why": "Scope the claim."
+        }
+      ],
+      "cards": [
+        {
+          "front": "SDK named?",
+          "back": "Yes."
+        },
+        {
+          "front": "Connectors named?",
+          "back": "Yes."
+        },
+        {
+          "front": "Who retests custom code?",
+          "back": "You."
+        },
+        {
+          "front": "URL pop scope?",
+          "back": "Smaller than a full adapter."
+        }
+      ],
+      "lab": {
+        "title": "Scope the pop",
+        "goal": "Write what the connector will and will not do.",
+        "steps": [
+          "Open the record",
+          "Not replicate every adapter button",
+          "Name the retest"
+        ],
+        "success": "The scope is short.",
+        "href": ""
+      },
+      "fault": {
+        "title": "The custom pop broke after a Five9 change",
+        "symptom": "Nobody owned a retest.",
+        "log": "SDK last-test=never",
+        "choices": [
+          "Add a retest to the change process",
+          "Blame the skill",
+          "Switch to analog",
+          "Disable TLS"
+        ],
+        "answer": 0,
+        "cause": "Custom code has an owner.",
+        "fix": "Retest and fix the SDK pop."
+      }
+    },
+    {
+      "id": "l06",
+      "title": "Screen pop down, voice up",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Split voice from the pop",
+        "Check the profile's pop-up control"
+      ],
+      "paragraphs": [
+        "This is the signature adapter incident. The caller is heard. The record is not on screen. Causes you can cite: WSS blocked, TLS 1.1, the wrong CRM chapter, an unassigned campaign profile that was supposed to control pop-up behavior, or a connector pointed at a dead URL.",
+        "Campaign profiles can control pop-up windows. That is a second place, besides the adapter, where a pop is configured. Check both."
+      ],
+      "cites": [
+        {
+          "label": "Technical requirements PDF",
+          "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+          "note": "Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall."
+        },
+        {
+          "label": "Campaign profiles",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/campaign-profiles/_ch-campaign-profiles.htm"
+        },
+        {
+          "label": "Web adapter requirements",
+          "url": "https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/agent-integrations/web-based-adapters/application-requirements.htm"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "path",
+        "title": "Voice up, screen down",
+        "caption": "Split the paths.",
+        "rows": [
+          {
+            "label": "Audio works"
+          },
+          {
+            "label": "WSS or URL fails"
+          },
+          {
+            "label": "Profile pop-up setting"
+          },
+          {
+            "label": "Right adapter chapter"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Isolate",
+        "lanes": [
+          "Voice",
+          "Pop",
+          "Fix"
+        ],
+        "steps": [
+          {
+            "lane": "Voice",
+            "title": "Ok",
+            "detail": "The agent hears the caller.",
+            "frame": "ok"
+          },
+          {
+            "lane": "Pop",
+            "title": "Blank",
+            "detail": "No record.",
+            "frame": "blank"
+          },
+          {
+            "lane": "Net",
+            "title": "WSS",
+            "detail": "The socket is tested.",
+            "frame": "wss"
+          },
+          {
+            "lane": "CRM",
+            "title": "Chapter",
+            "detail": "The right guide is open.",
+            "frame": "ch"
+          },
+          {
+            "lane": "Profile",
+            "title": "Popup",
+            "detail": "The profile's pop-up control is checked.",
+            "frame": "prof"
+          },
+          {
+            "lane": "Fix",
+            "title": "One",
+            "detail": "One change, then a test call.",
+            "frame": "one"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Voice working proves the pop path. True or false?",
+          "choices": [
+            "True",
+            "False",
+            "True for Salesforce only",
+            "True if G.711"
+          ],
+          "answer": 1,
+          "why": "They are different channels."
+        },
+        {
+          "q": "Profiles can control",
+          "choices": [
+            "Only ANI",
+            "Pop-up windows too",
+            "Only skills",
+            "Only JRE"
+          ],
+          "answer": 1,
+          "why": "The profile topic includes pop-ups."
+        },
+        {
+          "q": "TLS 1.1",
+          "choices": [
+            "Fixes pops",
+            "Is unsupported",
+            "Is required",
+            "Is a skill"
+          ],
+          "answer": 1,
+          "why": "The PDF rejects it."
+        },
+        {
+          "q": "One change at a time matters because",
+          "choices": [
+            "It is slower and therefore better evidence",
+            "It is a codec",
+            "It sets DNC",
+            "It is a list mode"
+          ],
+          "answer": 0,
+          "why": "You need to know what fixed it."
+        },
+        {
+          "q": "A dead connector URL",
+          "choices": [
+            "Still pops",
+            "Blanks the screen",
+            "Dials predictive",
+            "Changes region"
+          ],
+          "answer": 1,
+          "why": "The URL has to resolve."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Voice proves the pop?",
+          "back": "No."
+        },
+        {
+          "front": "Profiles and pop-ups?",
+          "back": "Yes, they can control them."
+        },
+        {
+          "front": "TLS 1.1?",
+          "back": "Unsupported."
+        },
+        {
+          "front": "Dead URL?",
+          "back": "Blank screen."
+        }
+      ],
+      "lab": {
+        "title": "Order the checks",
+        "goal": "Write WSS, TLS, chapter, profile, URL in the order you would test.",
+        "steps": [
+          "WSS",
+          "Right chapter",
+          "Profile pop-up",
+          "URL"
+        ],
+        "success": "Voice is not in the fix list.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Three changes were made at once",
+        "symptom": "The pop returned and nobody knows why.",
+        "log": "CHANGED proxy, profile, url",
+        "choices": [
+          "Back out to one change and retest",
+          "Celebrate",
+          "Delete recordings",
+          "Add lines"
+        ],
+        "answer": 0,
+        "cause": "The evidence was destroyed.",
+        "fix": "Retest one change at a time in a lab domain."
+      }
+    },
+    {
+      "id": "l07",
+      "title": "Salesforce modules inside the IVR",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Say whether you mean the IVR module or the adapter",
+        "Test both"
+      ],
+      "paragraphs": [
+        "The IVR modules chapter includes a Salesforce module and an SFDC Einstein module, plus Contact Update and Lookup Contact Record. Those run in the script, before an agent exists. They are not the Plus adapter the agent uses after connect.",
+        "A design that 'integrates Salesforce' must say which of those it means. The ZIP example used a generic Query, not the Salesforce module. Use the Salesforce module when the target is Salesforce. Use Query when the target is some other service."
+      ],
+      "cites": [
+        {
+          "label": "IVR modules",
+          "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm"
+        },
+        {
+          "label": "XML web service IVR example",
+          "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/examples/creating-ivr-script-xml-web-service-query.htm"
+        },
+        {
+          "label": "Agent Desktop",
+          "url": "https://www.five9.com/products/capabilities/agent-desktop"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "compare",
+        "title": "Script versus desktop",
+        "caption": "Both can say Salesforce.",
+        "leftTitle": "IVR Salesforce or Einstein module",
+        "rightTitle": "Plus adapter",
+        "left": [
+          "During the script",
+          "Before an agent"
+        ],
+        "right": [
+          "On the agent screen",
+          "After connect"
+        ]
+      },
+      "flow": {
+        "title": "Look up a balance before the agent",
+        "lanes": [
+          "Caller",
+          "IVR",
+          "Agent"
+        ],
+        "steps": [
+          {
+            "lane": "Caller",
+            "title": "ID",
+            "detail": "Digits identify the account.",
+            "frame": "id"
+          },
+          {
+            "lane": "IVR",
+            "title": "SF",
+            "detail": "The Salesforce module queries.",
+            "frame": "sf"
+          },
+          {
+            "lane": "IVR",
+            "title": "Var",
+            "detail": "A variable holds the result.",
+            "frame": "var"
+          },
+          {
+            "lane": "IVR",
+            "title": "Skill",
+            "detail": "Then the agent is offered.",
+            "frame": "skill"
+          },
+          {
+            "lane": "Agent",
+            "title": "Adapter",
+            "detail": "The Plus adapter shows the record again, live.",
+            "frame": "ad"
+          },
+          {
+            "lane": "Admin",
+            "title": "Two",
+            "detail": "Both were tested. They are not one config.",
+            "frame": "two"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "The Salesforce IVR module is",
+          "choices": [
+            "The Plus adapter",
+            "A script module",
+            "A dialer mode",
+            "A codec"
+          ],
+          "answer": 1,
+          "why": "It is in the modules chapter."
+        },
+        {
+          "q": "Einstein in the IVR is",
+          "choices": [
+            "A rumor",
+            "SFDC Einstein, a named module",
+            "A trunk",
+            "A theme"
+          ],
+          "answer": 1,
+          "why": "The chapter lists it."
+        },
+        {
+          "q": "The ZIP web-service example uses",
+          "choices": [
+            "The Salesforce module",
+            "Query",
+            "Set DNC",
+            "Conference"
+          ],
+          "answer": 1,
+          "why": "It is a generic XML web service."
+        },
+        {
+          "q": "After connect, the agent's screen is",
+          "choices": [
+            "Still the IVR module",
+            "The adapter or SDK",
+            "A WAV file",
+            "A list"
+          ],
+          "answer": 1,
+          "why": "The script has completed on Skill Transfer."
+        },
+        {
+          "q": "One sentence that says 'we integrate Salesforce' is",
+          "choices": [
+            "Enough",
+            "Not enough. Say script module or adapter",
+            "A service level",
+            "A roster"
+          ],
+          "answer": 1,
+          "why": "They are different projects."
+        }
+      ],
+      "cards": [
+        {
+          "front": "IVR Salesforce module?",
+          "back": "A script block."
+        },
+        {
+          "front": "Einstein module?",
+          "back": "Named in the chapter."
+        },
+        {
+          "front": "ZIP example?",
+          "back": "Query, not the Salesforce module."
+        },
+        {
+          "front": "After connect?",
+          "back": "The adapter."
+        }
+      ],
+      "lab": {
+        "title": "Two projects",
+        "goal": "Label a before-agent lookup and an after-connect screen.",
+        "steps": [
+          "Salesforce module",
+          "Plus adapter",
+          "A variable that connects the story"
+        ],
+        "success": "You used both names.",
+        "href": "#/ivr"
+      },
+      "fault": {
+        "title": "The IVR lookup works and the agent sees a blank screen",
+        "symptom": "Only the script module was built.",
+        "log": "IVR sf=yes ADAPTER=no",
+        "choices": [
+          "Build the adapter too",
+          "Add another IVR module and call it done",
+          "Change list mode",
+          "Disable recording"
+        ],
+        "answer": 0,
+        "cause": "The script already ended.",
+        "fix": "Deploy the adapter for the agent."
+      }
+    }
+  ]
+}

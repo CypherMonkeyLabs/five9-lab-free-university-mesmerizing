@@ -1,0 +1,1363 @@
+{
+  "id": "t11",
+  "title": "IVA and GenAI",
+  "short": "IVA",
+  "blurb": "Studio regions, task keys, handoffs, and prompts that are production changes.",
+  "group": "Intelligence",
+  "level": "Advanced",
+  "summary": "A bot is a task in the right region, with a way back to a named skill, and a prompt that was tested.",
+  "lessons": [
+    {
+      "id": "l01",
+      "title": "Studio has regions",
+      "level": "foundation",
+      "minutes": 12,
+      "objectives": [
+        "Match Studio region to the domain",
+        "Prefer DNS SRV over a pinned IP"
+      ],
+      "paragraphs": [
+        "The technical requirements publish Studio portal hosts by region: five9.us, five9.au, five9.ca, five9.uk, and five9.br studioportal.io, plus older inferencecommunications.com names. A task built in the wrong region will not be the task your VCC domain can call.",
+        "SIP notes in that same part of the PDF, including UDP 5060 and a beta TCP 5061, are labeled next to Studio SBC material. Do not paste those ports onto every VCC trunk without checking which SBC family the domain uses. DNS SRV is the preferred way to find Five9 SIP resources."
+      ],
+      "cites": [
+        {
+          "label": "Technical requirements PDF",
+          "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+          "note": "Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall."
+        }
+      ],
+      "uncertain": [
+        "Studio signaling ports in the PDF are easy to misread as universal VCC trunk ports. Confirm which SBC your domain uses."
+      ],
+      "figure": {
+        "kind": "stack",
+        "title": "Studio portals in the PDF",
+        "caption": "Pick the region that matches the domain.",
+        "rows": [
+          {
+            "label": "US"
+          },
+          {
+            "label": "Australia"
+          },
+          {
+            "label": "Canada"
+          },
+          {
+            "label": "UK"
+          },
+          {
+            "label": "Brazil"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Open the right portal",
+        "lanes": [
+          "Admin",
+          "Studio"
+        ],
+        "steps": [
+          {
+            "lane": "Admin",
+            "title": "Region",
+            "detail": "The VCC domain's region is known.",
+            "frame": "region"
+          },
+          {
+            "lane": "Studio",
+            "title": "Host",
+            "detail": "The matching studioportal host is opened.",
+            "frame": "host"
+          },
+          {
+            "lane": "Studio",
+            "title": "Task",
+            "detail": "The task is created there.",
+            "frame": "task"
+          },
+          {
+            "lane": "VCC",
+            "title": "Point",
+            "detail": "IVA Transfer or the digital key points at that task.",
+            "frame": "point"
+          },
+          {
+            "lane": "Net",
+            "title": "SRV",
+            "detail": "SIP targets prefer DNS SRV.",
+            "frame": "srv"
+          },
+          {
+            "lane": "Net",
+            "title": "Avoid",
+            "detail": "A copied IP from the PDF is not a forever allow-list.",
+            "frame": "ip"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "A US Studio task belongs on",
+          "choices": [
+            "Any portal",
+            "The US portal published for that region",
+            "The Brazil portal by default",
+            "A local HTML file"
+          ],
+          "answer": 1,
+          "why": "The PDF splits portals by region."
+        },
+        {
+          "q": "Old inferencecommunications.com hosts are",
+          "choices": [
+            "Invented",
+            "Also listed in that PDF table",
+            "Illegal",
+            "Codecs"
+          ],
+          "answer": 1,
+          "why": "They appear beside the studioportal names."
+        },
+        {
+          "q": "DNS SRV is",
+          "choices": [
+            "Discouraged",
+            "The preferred way to reach Five9 SIP resources, in that PDF",
+            "A dialer mode",
+            "A skill"
+          ],
+          "answer": 1,
+          "why": "The PDF says so, and tells you IPs can change."
+        },
+        {
+          "q": "Studio SIP ports in the PDF apply automatically to every VCC trunk. True or false?",
+          "choices": [
+            "True",
+            "False. Confirm the SBC family",
+            "True for analog headsets",
+            "True for lists"
+          ],
+          "answer": 1,
+          "why": "The notes sit with the Studio SBC section."
+        },
+        {
+          "q": "Pinning one IP forever is",
+          "choices": [
+            "The PDF's advice",
+            "The opposite of the DNS SRV note",
+            "Required for QM",
+            "Required for ANI"
+          ],
+          "answer": 1,
+          "why": "Addresses change."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Region matters?",
+          "back": "Yes. Use the matching portal."
+        },
+        {
+          "front": "Legacy hosts listed?",
+          "back": "Yes."
+        },
+        {
+          "front": "How to find SIP?",
+          "back": "DNS SRV."
+        },
+        {
+          "front": "Paste Studio ports onto every trunk?",
+          "back": "No. Confirm the family."
+        }
+      ],
+      "lab": {
+        "title": "Pick a host",
+        "goal": "For a Canadian domain, name the portal host from the PDF.",
+        "steps": [
+          "five9.ca.studioportal.io",
+          "Not the US host",
+          "SRV instead of a pinned IP"
+        ],
+        "success": "The host matches Canada.",
+        "href": ""
+      },
+      "fault": {
+        "title": "The bot works in test and fails in production",
+        "symptom": "The task was built in the US portal and the domain is in the UK.",
+        "log": "TASK us DOMAIN uk",
+        "choices": [
+          "Rebuild or reference the task in the UK portal",
+          "Add predictive lines",
+          "Change ANI",
+          "Disable WSS"
+        ],
+        "answer": 0,
+        "cause": "The regions do not match.",
+        "fix": "Use the UK Studio portal."
+      }
+    },
+    {
+      "id": "l02",
+      "title": "A task key is not a vibe",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Follow the digital key steps",
+        "Keep voice steps in their own note"
+      ],
+      "paragraphs": [
+        "IVA Transfer is a module. It needs a task to transfer to. The digital integration article, dated in the community as 26 March 2026, says you copy a ChatBot task key into the VCC IVA transfer side after the Studio task exists.",
+        "Voice and digital write-ups are separate. Use the article that matches the channel. A key with no Build permission, in that digital article, is not enough: the key is created with Build selected."
+      ],
+      "cites": [
+        {
+          "label": "Studio digital IVA with VCC",
+          "url": "https://community.five9.com/s/article/Studio-7-Integrate-Digital-IVA-in-Studio-with-VCC?language=en_US"
+        },
+        {
+          "label": "IVR modules",
+          "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm"
+        }
+      ],
+      "uncertain": [
+        "Voice IVA Transfer property names are not copied key-for-key from the digital article."
+      ],
+      "figure": {
+        "kind": "path",
+        "title": "Digital path from the 2026 article",
+        "caption": "Key, then task, then VCC.",
+        "rows": [
+          {
+            "label": "API key with Build"
+          },
+          {
+            "label": "ChatBot task"
+          },
+          {
+            "label": "Copy task key"
+          },
+          {
+            "label": "VCC side"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Wire a digital bot",
+        "lanes": [
+          "Studio",
+          "VCC"
+        ],
+        "steps": [
+          {
+            "lane": "Studio",
+            "title": "Key",
+            "detail": "Create an API key.",
+            "frame": "key"
+          },
+          {
+            "lane": "Studio",
+            "title": "Build",
+            "detail": "Grant Build on that key.",
+            "frame": "build"
+          },
+          {
+            "lane": "Studio",
+            "title": "Task",
+            "detail": "Create a ChatBot task.",
+            "frame": "task"
+          },
+          {
+            "lane": "Studio",
+            "title": "Copy",
+            "detail": "Copy the task key.",
+            "frame": "copy"
+          },
+          {
+            "lane": "VCC",
+            "title": "Paste",
+            "detail": "The VCC authentication and transfer use those values.",
+            "frame": "paste"
+          },
+          {
+            "lane": "VCC",
+            "title": "Test",
+            "detail": "A digital contact reaches the bot.",
+            "frame": "test"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "The March 2026 article requires which permission on the API key?",
+          "choices": [
+            "Reporting only",
+            "Build",
+            "Headset",
+            "ANI"
+          ],
+          "answer": 1,
+          "why": "It says select Build."
+        },
+        {
+          "q": "The task type in that article is",
+          "choices": [
+            "Predictive",
+            "ChatBot",
+            "Skill group",
+            "Campaign profile"
+          ],
+          "answer": 1,
+          "why": "Create ChatBot task."
+        },
+        {
+          "q": "The task key goes",
+          "choices": [
+            "Into a disposition comment",
+            "Into the VCC IVA transfer side",
+            "Into the JRE",
+            "Into MyE911"
+          ],
+          "answer": 1,
+          "why": "The article says to paste it there."
+        },
+        {
+          "q": "A voice IVA design can ignore that article. True or false?",
+          "choices": [
+            "Always true",
+            "You need the voice write-up. Do not assume the ChatBot steps are the voice screen",
+            "False, they are identical",
+            "True if you paste"
+          ],
+          "answer": 1,
+          "why": "Channel matters."
+        },
+        {
+          "q": "IVA Transfer without a task",
+          "choices": [
+            "Still contains the caller",
+            "Has nowhere real to send them",
+            "Sets DNC",
+            "Changes list mode"
+          ],
+          "answer": 1,
+          "why": "The module needs a target."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Digital key permission?",
+          "back": "Build."
+        },
+        {
+          "front": "Task type in that article?",
+          "back": "ChatBot."
+        },
+        {
+          "front": "Where does the key go?",
+          "back": "The VCC side."
+        },
+        {
+          "front": "Same as voice?",
+          "back": "Do not assume."
+        }
+      ],
+      "lab": {
+        "title": "Checklist",
+        "goal": "Order the four digital steps.",
+        "steps": [
+          "API key",
+          "Build permission",
+          "ChatBot task",
+          "Paste into VCC"
+        ],
+        "success": "The order matches the article.",
+        "href": ""
+      },
+      "fault": {
+        "title": "The bot returns 401",
+        "symptom": "The key exists and Build was never selected.",
+        "log": "KEY build=false",
+        "choices": [
+          "Edit the key and grant Build",
+          "Add skills",
+          "Lower abandon",
+          "Change codec"
+        ],
+        "answer": 0,
+        "cause": "The article makes Build required.",
+        "fix": "Grant Build and retest."
+      }
+    },
+    {
+      "id": "l03",
+      "title": "Contain, or hand back with context",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Design both endings",
+        "Pass a reason the agent can see"
+      ],
+      "paragraphs": [
+        "A useful bot either finishes the job or returns the caller to a skill with the reason intact. IVA Transfer that dead-ends, or a Skill Transfer with no skill, is how you manufacture the Default queue.",
+        "The Engage page describes sentiment and a handoff to a human with context. Treat that as the product story. The variables you actually pass are the ones you stored. A script variable the reporting side never enabled will not be in the historical report."
+      ],
+      "cites": [
+        {
+          "label": "Five9 Engage",
+          "url": "https://www.five9.com/platform/self-service-and-engagement"
+        },
+        {
+          "label": "IVR modules",
+          "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm"
+        },
+        {
+          "label": "Call variables for reporting",
+          "url": "https://community.five9.com/s/article/Administrator-Enabling-Call-Variables-for-Reporting?language=en_US"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "path",
+        "title": "Contain or return",
+        "caption": "Both endings are designed.",
+        "rows": [
+          {
+            "label": "IVA"
+          },
+          {
+            "label": "Contained"
+          },
+          {
+            "label": "Or skill"
+          },
+          {
+            "label": "With a variable the agent can see"
+          }
+        ]
+      },
+      "flow": {
+        "title": "The bot cannot refund",
+        "lanes": [
+          "Bot",
+          "IVR",
+          "Agent"
+        ],
+        "steps": [
+          {
+            "lane": "Bot",
+            "title": "Fail",
+            "detail": "The refund is out of scope.",
+            "frame": "fail"
+          },
+          {
+            "lane": "IVR",
+            "title": "Branch",
+            "detail": "The failure branch is drawn.",
+            "frame": "branch"
+          },
+          {
+            "lane": "IVR",
+            "title": "Set",
+            "detail": "A variable records the reason.",
+            "frame": "var"
+          },
+          {
+            "lane": "IVR",
+            "title": "Skill",
+            "detail": "Skill Transfer names Billing.",
+            "frame": "skill"
+          },
+          {
+            "lane": "Agent",
+            "title": "See",
+            "detail": "The desktop shows the reason.",
+            "frame": "see"
+          },
+          {
+            "lane": "Report",
+            "title": "Later",
+            "detail": "A reporting call variable was enabled if history matters.",
+            "frame": "cav"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "A bot with no failure branch",
+          "choices": [
+            "Is complete",
+            "Drops the caller when it cannot finish",
+            "Sets ANI",
+            "Is required"
+          ],
+          "answer": 1,
+          "why": "Draw the return path."
+        },
+        {
+          "q": "Default queue is what you get if",
+          "choices": [
+            "The skill is named",
+            "Skill Transfer has no skill",
+            "TLS 1.2 is on",
+            "The schedule is right"
+          ],
+          "answer": 1,
+          "why": "Select the skill."
+        },
+        {
+          "q": "Context the agent sees is",
+          "choices": [
+            "Automatic from any variable",
+            "What you passed and what the desktop integration shows",
+            "Always in last year's call log",
+            "A codec"
+          ],
+          "answer": 1,
+          "why": "Store it on purpose."
+        },
+        {
+          "q": "Historical reports of that variable require",
+          "choices": [
+            "Nothing",
+            "A reporting call variable, and only for new calls",
+            "A JRE",
+            "Paste"
+          ],
+          "answer": 1,
+          "why": "No backfill."
+        },
+        {
+          "q": "Engage's handoff story includes",
+          "choices": [
+            "Context to the human",
+            "Deleting the skill",
+            "Stopping recording",
+            "Analog headsets"
+          ],
+          "answer": 1,
+          "why": "The page describes a handoff with context."
+        }
+      ],
+      "cards": [
+        {
+          "front": "No failure branch?",
+          "back": "The caller is stranded."
+        },
+        {
+          "front": "No skill selected?",
+          "back": "Default."
+        },
+        {
+          "front": "History?",
+          "back": "Enable a reporting call variable. New calls only."
+        },
+        {
+          "front": "Engage handoff?",
+          "back": "With context."
+        }
+      ],
+      "lab": {
+        "title": "Draw both endings",
+        "goal": "Contained, and returned to Billing with a reason variable.",
+        "steps": [
+          "Name the variable",
+          "Name the skill",
+          "Say what Default would mean"
+        ],
+        "success": "Both endings are real modules.",
+        "href": "#/ivr"
+      },
+      "fault": {
+        "title": "Refund callers reach new hires",
+        "symptom": "The failure branch uses Skill Transfer with no skill, and new hires have none.",
+        "log": "SKILLS empty",
+        "choices": [
+          "Select Billing",
+          "Add more bots",
+          "Raise power",
+          "Disable reports"
+        ],
+        "answer": 0,
+        "cause": "Default caught them.",
+        "fix": "Name the skill."
+      }
+    },
+    {
+      "id": "l04",
+      "title": "GenAI Studio is a hub, not a slogan",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Ask to see model, prompt, and test",
+        "Do not ship an untested summary"
+      ],
+      "paragraphs": [
+        "The GenAI Studio page describes a low-code hub: choose among models, attach knowledge and customer data, test on real call data, keep a prompt library, and control output. It says the hub powers Five9 AI applications and initially focuses on Agent Assist summaries.",
+        "Engine-agnostic means you do not get to write a single model name into an architecture slide until the hub shows it. Responsible AI, on that page, is part of the claim. A prompt you cannot test is not a control."
+      ],
+      "cites": [
+        {
+          "label": "GenAI Studio",
+          "url": "https://www.five9.com/products/capabilities/gen-ai-studio"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "stack",
+        "title": "Studio controls you can ask to see",
+        "caption": "From the GenAI Studio page.",
+        "rows": [
+          {
+            "label": "Model choice"
+          },
+          {
+            "label": "Knowledge"
+          },
+          {
+            "label": "Prompt library"
+          },
+          {
+            "label": "Tests on call data"
+          },
+          {
+            "label": "Output control"
+          }
+        ]
+      },
+      "flow": {
+        "title": "A summary prompt changes",
+        "lanes": [
+          "Author",
+          "Hub",
+          "Call"
+        ],
+        "steps": [
+          {
+            "lane": "Author",
+            "title": "Write",
+            "detail": "The prompt is in the library.",
+            "frame": "prompt"
+          },
+          {
+            "lane": "Hub",
+            "title": "Model",
+            "detail": "A model is selected there.",
+            "frame": "model"
+          },
+          {
+            "lane": "Hub",
+            "title": "Test",
+            "detail": "Real call data is used to test.",
+            "frame": "test"
+          },
+          {
+            "lane": "Hub",
+            "title": "Bound",
+            "detail": "Output controls limit the shape.",
+            "frame": "bound"
+          },
+          {
+            "lane": "Call",
+            "title": "Summary",
+            "detail": "Agent Assist shows the result.",
+            "frame": "sum"
+          },
+          {
+            "lane": "Author",
+            "title": "Revise",
+            "detail": "A bad test changes the prompt, not the slide.",
+            "frame": "revise"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "GenAI Studio is described as",
+          "choices": [
+            "A single fixed model",
+            "Engine-agnostic",
+            "A dialer",
+            "A trunk"
+          ],
+          "answer": 1,
+          "why": "The page says you can choose models."
+        },
+        {
+          "q": "Initial application focus on that page includes",
+          "choices": [
+            "SIP trunks",
+            "Agent Assist summaries",
+            "Headset SKUs",
+            "Equinix"
+          ],
+          "answer": 1,
+          "why": "Summaries are the named start."
+        },
+        {
+          "q": "Testing is described with",
+          "choices": [
+            "Synthetic hopes only",
+            "Real call data",
+            "A JRE",
+            "A list reset"
+          ],
+          "answer": 1,
+          "why": "The page says real call data."
+        },
+        {
+          "q": "A prompt that was never tested",
+          "choices": [
+            "Is a control",
+            "Is not the testing story the page tells",
+            "Sets DNC",
+            "Is TLS"
+          ],
+          "answer": 1,
+          "why": "Test is part of the hub."
+        },
+        {
+          "q": "Knowledge and customer data are",
+          "choices": [
+            "Forbidden",
+            "Part of the page's personalization claim",
+            "A codec",
+            "A skill tab"
+          ],
+          "answer": 1,
+          "why": "The page includes them."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Engine-agnostic?",
+          "back": "Yes."
+        },
+        {
+          "front": "First named app?",
+          "back": "Agent Assist summaries."
+        },
+        {
+          "front": "Test data?",
+          "back": "Real calls, per the page."
+        },
+        {
+          "front": "Untested prompt?",
+          "back": "Not the control the page describes."
+        }
+      ],
+      "lab": {
+        "title": "Name the screen",
+        "goal": "List the five controls you would ask an admin to show you.",
+        "steps": [
+          "Model",
+          "Prompt",
+          "Knowledge",
+          "Test",
+          "Output control"
+        ],
+        "success": "You did not accept 'we use AI'.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Summaries invent a refund policy",
+        "symptom": "The prompt was edited in a slide and never tested on calls.",
+        "log": "PROMPT untested OUTPUT refunds-for-all",
+        "choices": [
+          "Test on real calls and constrain the output",
+          "Ship it",
+          "Delete QM",
+          "Change list mode"
+        ],
+        "answer": 0,
+        "cause": "The hub's own page says to test and control output.",
+        "fix": "Run the test before the prompt is live."
+      }
+    },
+    {
+      "id": "l05",
+      "title": "NLP in the IVR is not the same as Studio",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Use the module name you configured",
+        "Keep Studio for tasks with keys"
+      ],
+      "paragraphs": [
+        "The modules chapter includes a Natural Language Processing module and Voice Input, and it also includes IVA Transfer. They are different blocks. NLP inside a script is not automatically a Studio task, and a Studio task is not automatically the NLP module.",
+        "Pick the block that matches the design. If the work is a Studio bot with a task key, use IVA Transfer and the Studio article. If the work is a grammar in the IVR, use the IVR module and its own properties."
+      ],
+      "cites": [
+        {
+          "label": "IVR modules",
+          "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm"
+        },
+        {
+          "label": "Studio digital IVA with VCC",
+          "url": "https://community.five9.com/s/article/Studio-7-Integrate-Digital-IVA-in-Studio-with-VCC?language=en_US"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "compare",
+        "title": "Two language tools",
+        "caption": "Do not swap the names.",
+        "leftTitle": "IVR NLP or Voice Input",
+        "rightTitle": "Studio via IVA Transfer",
+        "left": [
+          "A module in the script"
+        ],
+        "right": [
+          "A task, a key, a region"
+        ]
+      },
+      "flow": {
+        "title": "Choose the block",
+        "lanes": [
+          "Need",
+          "Module"
+        ],
+        "steps": [
+          {
+            "lane": "Need",
+            "title": "Grammar",
+            "detail": "A small speech choice inside the script.",
+            "frame": "grammar"
+          },
+          {
+            "lane": "Module",
+            "title": "Voice",
+            "detail": "Voice Input or NLP.",
+            "frame": "voice"
+          },
+          {
+            "lane": "Need",
+            "title": "Bot",
+            "detail": "A Studio conversation.",
+            "frame": "bot"
+          },
+          {
+            "lane": "Module",
+            "title": "IVA",
+            "detail": "IVA Transfer plus a task.",
+            "frame": "iva"
+          },
+          {
+            "lane": "Admin",
+            "title": "Region",
+            "detail": "The task's portal matches the domain.",
+            "frame": "region"
+          },
+          {
+            "lane": "Admin",
+            "title": "Write",
+            "detail": "The design names the block.",
+            "frame": "write"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "NLP module and IVA Transfer are",
+          "choices": [
+            "The same block",
+            "Different modules",
+            "Both dialer modes",
+            "Both profiles"
+          ],
+          "answer": 1,
+          "why": "Both names are in the chapter, separately."
+        },
+        {
+          "q": "A Studio task is attached with",
+          "choices": [
+            "Set DNC",
+            "IVA Transfer and the task identity",
+            "List penetration",
+            "A headset"
+          ],
+          "answer": 1,
+          "why": "That is the handoff."
+        },
+        {
+          "q": "A short speech menu can stay",
+          "choices": [
+            "Only in Studio",
+            "In the IVR module",
+            "Only in WEM",
+            "Only in a CSV"
+          ],
+          "answer": 1,
+          "why": "Voice Input exists for that."
+        },
+        {
+          "q": "Region still matters for",
+          "choices": [
+            "A local If/Else",
+            "A Studio task",
+            "A disposition",
+            "A pause of zero"
+          ],
+          "answer": 1,
+          "why": "The portal is regional."
+        },
+        {
+          "q": "Naming the wrong block",
+          "choices": [
+            "Is fine if the slide is pretty",
+            "Sends the builder to the wrong system",
+            "Sets ANI",
+            "Fixes abandon"
+          ],
+          "answer": 1,
+          "why": "The editor will not guess."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Same block?",
+          "back": "No."
+        },
+        {
+          "front": "Studio handoff?",
+          "back": "IVA Transfer."
+        },
+        {
+          "front": "Short speech menu?",
+          "back": "An IVR module can do it."
+        },
+        {
+          "front": "Wrong name?",
+          "back": "Wrong system."
+        }
+      ],
+      "lab": {
+        "title": "Label the box",
+        "goal": "On two designs, write the module name.",
+        "steps": [
+          "A yes-or-no speech check",
+          "A Studio billing bot"
+        ],
+        "success": "The labels differ.",
+        "href": ""
+      },
+      "fault": {
+        "title": "The team built a grammar and called it Studio",
+        "symptom": "No task key exists. The module is Voice Input.",
+        "log": "MODULE VoiceInput DOC says Studio",
+        "choices": [
+          "Rename the design to the module you used",
+          "Invent a task key",
+          "Stop inbound",
+          "Enable IE"
+        ],
+        "answer": 0,
+        "cause": "The document lies.",
+        "fix": "Say Voice Input unless a Studio task is really there."
+      }
+    },
+    {
+      "id": "l06",
+      "title": "Prompts are a production change",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Treat prompt edits as releases",
+        "Test on calls before they go live"
+      ],
+      "paragraphs": [
+        "A prompt library in GenAI Studio is production configuration. Changing a summary prompt changes what agents and customers are told. The page says you can test with call data and control output. A change without a test is how a policy you do not have gets spoken.",
+        "IVR prompts are a different library. The planning topic has you record those before the script. Swapping a WAV and swapping a GenAI prompt are both releases. Neither belongs in an unreviewed chat message."
+      ],
+      "cites": [
+        {
+          "label": "GenAI Studio",
+          "url": "https://www.five9.com/products/capabilities/gen-ai-studio"
+        },
+        {
+          "label": "Planning your implementation",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "compare",
+        "title": "Two prompt libraries",
+        "caption": "Both are releases.",
+        "leftTitle": "IVR prompt",
+        "rightTitle": "GenAI prompt",
+        "left": [
+          "WAV or TTS in the script",
+          "Recorded before the script, per planning"
+        ],
+        "right": [
+          "In the hub",
+          "Tested on calls"
+        ]
+      },
+      "flow": {
+        "title": "A one-line edit",
+        "lanes": [
+          "Author",
+          "Test",
+          "Release"
+        ],
+        "steps": [
+          {
+            "lane": "Author",
+            "title": "Edit",
+            "detail": "The summary prompt changes.",
+            "frame": "edit"
+          },
+          {
+            "lane": "Test",
+            "title": "Calls",
+            "detail": "Real calls are run through it.",
+            "frame": "test"
+          },
+          {
+            "lane": "Test",
+            "title": "Fail",
+            "detail": "It invents a policy.",
+            "frame": "fail"
+          },
+          {
+            "lane": "Author",
+            "title": "Revert",
+            "detail": "The prompt goes back.",
+            "frame": "revert"
+          },
+          {
+            "lane": "Release",
+            "title": "Note",
+            "detail": "Someone writes what changed.",
+            "frame": "note"
+          },
+          {
+            "lane": "IVR",
+            "title": "Separate",
+            "detail": "The WAV library is a different change.",
+            "frame": "wav"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "A GenAI prompt change is",
+          "choices": [
+            "Cosmetic",
+            "A production change",
+            "A codec",
+            "A skill tab"
+          ],
+          "answer": 1,
+          "why": "It changes what is said."
+        },
+        {
+          "q": "The page's test material is",
+          "choices": [
+            "Optional folklore",
+            "Real call data",
+            "A JRE",
+            "A DNIS"
+          ],
+          "answer": 1,
+          "why": "Test on calls."
+        },
+        {
+          "q": "IVR WAV changes are",
+          "choices": [
+            "The same object as the GenAI prompt",
+            "A separate library",
+            "Automatic",
+            "A list mode"
+          ],
+          "answer": 1,
+          "why": "Do not confuse the two releases."
+        },
+        {
+          "q": "An invented refund in a summary means",
+          "choices": [
+            "The test failed and the prompt is not ready",
+            "Ship faster",
+            "Raise lines",
+            "Delete skills"
+          ],
+          "answer": 1,
+          "why": "Output control exists for this."
+        },
+        {
+          "q": "Planning says IVR prompts are recorded",
+          "choices": [
+            "After go-live",
+            "Before the scripts are built",
+            "Never",
+            "Only in Studio"
+          ],
+          "answer": 1,
+          "why": "That is the roadmap."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Prompt edit?",
+          "back": "A release."
+        },
+        {
+          "front": "Test on?",
+          "back": "Call data."
+        },
+        {
+          "front": "Same as a WAV?",
+          "back": "No."
+        },
+        {
+          "front": "Invented policy?",
+          "back": "Not ready."
+        }
+      ],
+      "lab": {
+        "title": "Write the release note",
+        "goal": "One GenAI prompt change, in three lines.",
+        "steps": [
+          "What changed",
+          "What the test showed",
+          "Who can roll it back"
+        ],
+        "success": "The note would stop a bad prompt.",
+        "href": ""
+      },
+      "fault": {
+        "title": "The summary started offering credits",
+        "symptom": "A prompt edit went out from a chat thread with no test.",
+        "log": "PROMPT live test=none",
+        "choices": [
+          "Roll back and test",
+          "Add more credit language",
+          "Switch to power dialing",
+          "Disable WSS"
+        ],
+        "answer": 0,
+        "cause": "There was no test.",
+        "fix": "Restore the last tested prompt."
+      }
+    },
+    {
+      "id": "l07",
+      "title": "A bot review you can finish",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Finish the eight checks",
+        "Refuse a slide that skips them"
+      ],
+      "paragraphs": [
+        "Region, key permission, task type, failure branch, named skill, variable the agent sees, prompt test, and the recording clock. Eight checks. Each one has a page. A bot project that cannot pass them is a slide.",
+        "The pacing bench and the IVR builder can illustrate the return path. They do not host Studio."
+      ],
+      "cites": [
+        {
+          "label": "Studio digital IVA with VCC",
+          "url": "https://community.five9.com/s/article/Studio-7-Integrate-Digital-IVA-in-Studio-with-VCC?language=en_US"
+        },
+        {
+          "label": "GenAI Studio",
+          "url": "https://www.five9.com/products/capabilities/gen-ai-studio"
+        },
+        {
+          "label": "Technical requirements PDF",
+          "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+          "note": "Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall."
+        },
+        {
+          "label": "Data retention",
+          "url": "https://www.five9.com/legal/dataretention"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "path",
+        "title": "Eight checks",
+        "caption": "Then the bot can be discussed.",
+        "rows": [
+          {
+            "label": "Region"
+          },
+          {
+            "label": "Build key"
+          },
+          {
+            "label": "Task"
+          },
+          {
+            "label": "Failure branch"
+          },
+          {
+            "label": "Skill"
+          },
+          {
+            "label": "Variable"
+          },
+          {
+            "label": "Prompt test"
+          },
+          {
+            "label": "Recording clock"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Review",
+        "lanes": [
+          "Reviewer",
+          "Studio",
+          "VCC"
+        ],
+        "steps": [
+          {
+            "lane": "Reviewer",
+            "title": "Region",
+            "detail": "Portal matches the domain.",
+            "frame": "region"
+          },
+          {
+            "lane": "Reviewer",
+            "title": "Key",
+            "detail": "Build is on.",
+            "frame": "key"
+          },
+          {
+            "lane": "Reviewer",
+            "title": "Fail",
+            "detail": "The failure branch names a skill.",
+            "frame": "fail"
+          },
+          {
+            "lane": "Reviewer",
+            "title": "Var",
+            "detail": "The agent can see the reason.",
+            "frame": "var"
+          },
+          {
+            "lane": "Reviewer",
+            "title": "Test",
+            "detail": "The prompt has a call-data test.",
+            "frame": "test"
+          },
+          {
+            "lane": "Reviewer",
+            "title": "Tape",
+            "detail": "The offload would keep the audio.",
+            "frame": "tape"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "A bot review without a region is",
+          "choices": [
+            "Fine",
+            "Incomplete",
+            "A codec",
+            "A list mode"
+          ],
+          "answer": 1,
+          "why": "The portal is regional."
+        },
+        {
+          "q": "Build permission is from",
+          "choices": [
+            "The March 2026 digital article",
+            "The headset page",
+            "RFC 3261",
+            "The retention page"
+          ],
+          "answer": 1,
+          "why": "That article requires it for the digital key."
+        },
+        {
+          "q": "The recording clock matters because",
+          "choices": [
+            "Bots are not recorded",
+            "You may need the audio after 30 days",
+            "ANI changes",
+            "Java changes"
+          ],
+          "answer": 1,
+          "why": "Retention still applies."
+        },
+        {
+          "q": "The IVR builder hosts Studio. True or false?",
+          "choices": [
+            "True",
+            "False",
+            "True if you export JSON",
+            "True on UK domains"
+          ],
+          "answer": 1,
+          "why": "The builder is a learning model."
+        },
+        {
+          "q": "Default as the failure skill is",
+          "choices": [
+            "A good VIP path",
+            "The catch-all you were warned about",
+            "STIR",
+            "A profile"
+          ],
+          "answer": 1,
+          "why": "Name a real skill."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Skip region?",
+          "back": "The review is incomplete."
+        },
+        {
+          "front": "Build permission source?",
+          "back": "The digital IVA article."
+        },
+        {
+          "front": "Why the clock?",
+          "back": "Audio expires."
+        },
+        {
+          "front": "Does this lab host Studio?",
+          "back": "No."
+        }
+      ],
+      "lab": {
+        "title": "Run the eight",
+        "goal": "Tick them on a paper bot.",
+        "steps": [
+          "Region",
+          "Key",
+          "Task",
+          "Branch",
+          "Skill",
+          "Variable",
+          "Test",
+          "Offload"
+        ],
+        "success": "Any blank tick stops the review.",
+        "href": "#/ivr"
+      },
+      "fault": {
+        "title": "The bot is 'done' with no failure skill",
+        "symptom": "Contained calls work. Everyone else hears Default.",
+        "log": "FAIL branch skill=empty",
+        "choices": [
+          "Name the skill before go-live",
+          "Call it done",
+          "Add lines",
+          "Disable recording"
+        ],
+        "answer": 0,
+        "cause": "The return path is the catch-all.",
+        "fix": "Select the skill."
+      }
+    }
+  ]
+}

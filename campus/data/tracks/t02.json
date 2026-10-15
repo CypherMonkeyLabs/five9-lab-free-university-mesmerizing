@@ -1,0 +1,1331 @@
+{
+  "id": "t02",
+  "title": "VCC administration",
+  "short": "VCC admin",
+  "blurb": "Clients, permissions, skills, prompts, DNC, and the PCs that drop calls.",
+  "group": "Platform",
+  "level": "Foundation",
+  "summary": "The administrator console is where the domain becomes a floor people can work.",
+  "lessons": [
+    {
+      "id": "l01",
+      "title": "Two administrator applications",
+      "level": "foundation",
+      "minutes": 12,
+      "objectives": [
+        "Choose Java or web admin",
+        "Remember the ARM exception"
+      ],
+      "paragraphs": [
+        "The technical requirements still describe a Java VCC Administrator and a web Administrator Console. Java is not supported on Mac workstations with ARM processors. On those machines the document says to use VCC Administrator via Web in Admin Console.",
+        "Because web applications do not need a Java SE subscription, the same document strongly recommends moving to the Five9 Plus applications. The Java client is still documented, with named JRE 8 update builds. Treat that list as dated and re-read the PDF before you image a PC."
+      ],
+      "cites": [
+        {
+          "label": "Technical requirements PDF",
+          "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+          "note": "Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall."
+        }
+      ],
+      "uncertain": [
+        "The fetched PDF names JRE 8 updates 421, 451, and 461, and macOS 15 Sequoia, 26 Tahoe, and 27 Golden Gate. Those lines are time-specific."
+      ],
+      "figure": {
+        "kind": "compare",
+        "title": "Admin clients",
+        "caption": "Pick the client the workstation can actually run.",
+        "leftTitle": "Java VCC Administrator",
+        "rightTitle": "Web admin and Plus",
+        "left": [
+          "Windows and supported Mac",
+          "Not on Mac ARM",
+          "Needs a JRE"
+        ],
+        "right": [
+          "No Java SE requirement",
+          "Recommended path",
+          "HTTPS and WSS"
+        ]
+      },
+      "flow": {
+        "title": "Choose a client",
+        "lanes": [
+          "Admin",
+          "Workstation"
+        ],
+        "steps": [
+          {
+            "lane": "Admin",
+            "title": "Java",
+            "detail": "Opens the classic administrator.",
+            "frame": "java"
+          },
+          {
+            "lane": "Workstation",
+            "title": "ARM Mac",
+            "detail": "Java admin is not supported.",
+            "frame": "arm"
+          },
+          {
+            "lane": "Admin",
+            "title": "Web",
+            "detail": "Use VCC Administrator via Web.",
+            "frame": "web"
+          },
+          {
+            "lane": "Admin",
+            "title": "Plus",
+            "detail": "Web apps avoid the Java subscription.",
+            "frame": "plus"
+          },
+          {
+            "lane": "Workstation",
+            "title": "JRE",
+            "detail": "The PDF names specific JRE 8 updates.",
+            "frame": "jre"
+          },
+          {
+            "lane": "Admin",
+            "title": "Recheck",
+            "detail": "Version lists move. Open the current PDF.",
+            "frame": "pdf"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Java VCC Administrator on a Mac with an ARM chip?",
+          "choices": [
+            "Supported",
+            "Not supported. Use the web administrator",
+            "Supported only for TCPA",
+            "Supported only for IVR"
+          ],
+          "answer": 1,
+          "why": "The technical requirements say Java admin is not supported on Mac ARM. Use the web administrator."
+        },
+        {
+          "q": "Why does Five9 recommend Plus applications in that PDF?",
+          "choices": [
+            "They use more Java",
+            "Web applications do not require Java SE",
+            "They remove skills",
+            "They disable recording"
+          ],
+          "answer": 1,
+          "why": "The PDF says web applications do not require Java SE and recommends Plus."
+        },
+        {
+          "q": "The JRE line in the PDF is",
+          "choices": [
+            "A permanent promise",
+            "A time-specific list you must re-read",
+            "Optional for browsers",
+            "The dialer algorithm"
+          ],
+          "answer": 1,
+          "why": "Update numbers change. The lab marks them as time-specific."
+        },
+        {
+          "q": "Plus adapters talk to Five9 with",
+          "choices": [
+            "Cleartext SIP only",
+            "HTTPS and Secure WebSocket",
+            "FTP only",
+            "RMI without TLS"
+          ],
+          "answer": 1,
+          "why": "The PDF says Plus adapters use HTTPS and Secure WebSocket."
+        },
+        {
+          "q": "Internet Explorer is",
+          "choices": [
+            "The primary browser",
+            "Ended, except IE 11 for the Oracle Service Cloud adapter only",
+            "Required for ADP",
+            "Required for IVR"
+          ],
+          "answer": 1,
+          "why": "The PDF says IE support ended, with that one adapter exception."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Mac ARM and Java admin?",
+          "back": "Not supported. Use the web administrator."
+        },
+        {
+          "front": "Why Plus?",
+          "back": "Web apps do not need Java SE."
+        },
+        {
+          "front": "Plus transport?",
+          "back": "HTTPS and WSS."
+        },
+        {
+          "front": "IE exception?",
+          "back": "IE 11 for Oracle Service Cloud only."
+        }
+      ],
+      "lab": {
+        "title": "Pick the client",
+        "goal": "For a Windows PC and an ARM Mac, name the administrator you would open.",
+        "steps": [
+          "Windows: Java or web",
+          "ARM Mac: web",
+          "Write down that the JRE list must be rechecked"
+        ],
+        "success": "You did not install Java on the ARM Mac.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Admin will not launch",
+        "symptom": "A new Mac laptop shows a Java error before the domain tree appears.",
+        "log": "HOST chip=ARM APP=VCC-Administrator-Java",
+        "choices": [
+          "Use VCC Administrator via Web",
+          "Lower the abandon cap",
+          "Switch the list to vertical",
+          "Disable WSS"
+        ],
+        "answer": 0,
+        "cause": "Java admin is unsupported on Mac ARM.",
+        "fix": "Open the web administrator."
+      },
+      "callout": {
+        "title": "Re-read",
+        "body": "Do not copy a JRE or macOS version out of this lab into a purchase order."
+      }
+    },
+    {
+      "id": "l02",
+      "title": "User profiles before user accounts",
+      "level": "foundation",
+      "minutes": 12,
+      "objectives": [
+        "Create a profile before accounts",
+        "Keep admin rights off the agent profile"
+      ],
+      "paragraphs": [
+        "The planning roadmap says to define user profiles before you add user accounts. A profile is the permission bundle. An account is the person. Creating people first and hoping the default permissions match the job is how reporting and call-variable edits go missing.",
+        "Skill groups then take users who already have the agent or supervisor role. An administrator account is not automatically a member of a queue."
+      ],
+      "cites": [
+        {
+          "label": "Planning your implementation",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm"
+        },
+        {
+          "label": "Skill groups",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "path",
+        "title": "Permission, then person, then queue",
+        "caption": "The roadmap order is the point.",
+        "rows": [
+          {
+            "label": "User profile"
+          },
+          {
+            "label": "User account"
+          },
+          {
+            "label": "Role"
+          },
+          {
+            "label": "Skill group"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Add a billing agent",
+        "lanes": [
+          "Admin",
+          "Domain"
+        ],
+        "steps": [
+          {
+            "lane": "Admin",
+            "title": "Profile",
+            "detail": "Define the agent permission bundle.",
+            "frame": "profile"
+          },
+          {
+            "lane": "Admin",
+            "title": "Account",
+            "detail": "Create the person and attach the profile.",
+            "frame": "account"
+          },
+          {
+            "lane": "Domain",
+            "title": "Role",
+            "detail": "The role must include agent.",
+            "frame": "role"
+          },
+          {
+            "lane": "Domain",
+            "title": "Skill",
+            "detail": "Add that user to Billing.",
+            "frame": "skill"
+          },
+          {
+            "lane": "Domain",
+            "title": "Ready",
+            "detail": "The agent can now be offered Billing calls.",
+            "frame": "ready"
+          },
+          {
+            "lane": "Admin",
+            "title": "Audit",
+            "detail": "A second user reuses the profile.",
+            "frame": "reuse"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "What is created first, the person or the profile?",
+          "choices": [
+            "The person",
+            "The user profile",
+            "The SIP trunk",
+            "The call log"
+          ],
+          "answer": 1,
+          "why": "The planning roadmap defines user profiles before accounts."
+        },
+        {
+          "q": "Does an administrator login receive queue calls?",
+          "choices": [
+            "Yes, always",
+            "No. Queue membership is a skill assignment on an agent or supervisor",
+            "Yes in predictive mode",
+            "Yes if ANI matches"
+          ],
+          "answer": 1,
+          "why": "Skill groups take agent or supervisor users."
+        },
+        {
+          "q": "A missing report permission looks like",
+          "choices": [
+            "A carrier outage",
+            "A feature that was never granted",
+            "A bad G.711 ptime",
+            "A final disposition"
+          ],
+          "answer": 1,
+          "why": "Check the profile before you open a trunk ticket."
+        },
+        {
+          "q": "One profile can be reused for many accounts. True or false?",
+          "choices": [
+            "False",
+            "True. That is why the profile exists before the accounts",
+            "Only for TCPA",
+            "Only for one day"
+          ],
+          "answer": 1,
+          "why": "The profile is the bundle. Accounts attach to it."
+        },
+        {
+          "q": "Where do you look when an admin cannot edit call variables?",
+          "choices": [
+            "The ITSP",
+            "The administrator role permission",
+            "The headset mute",
+            "The Equinix SLA"
+          ],
+          "answer": 1,
+          "why": "User Can Edit Call Variables is a role permission."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Profile or account first?",
+          "back": "Profile, then account."
+        },
+        {
+          "front": "Who joins a skill?",
+          "back": "Agent or supervisor users."
+        },
+        {
+          "front": "Missing permission symptom?",
+          "back": "It looks like a missing feature."
+        },
+        {
+          "front": "Call variable edits?",
+          "back": "A named permission on the administrator role."
+        }
+      ],
+      "lab": {
+        "title": "Write a profile",
+        "goal": "List the permissions for one agent profile and one admin profile.",
+        "steps": [
+          "Agent: no IVR folder",
+          "Admin: call variables if they need them",
+          "Neither profile includes every right"
+        ],
+        "success": "The two profiles are different.",
+        "href": ""
+      },
+      "fault": {
+        "title": "New hire cannot change Ready state reason codes",
+        "symptom": "The account exists and the skill is correct.",
+        "log": "USER nia profile=blank role=Agent",
+        "choices": [
+          "The account was created without the intended user profile",
+          "SBC B failed",
+          "The Menu module is full",
+          "ANI is empty"
+        ],
+        "answer": 0,
+        "cause": "A blank or wrong profile omits permissions.",
+        "fix": "Attach the agent profile the design named."
+      }
+    },
+    {
+      "id": "l03",
+      "title": "Skill groups are the queues",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Use the correct skills tab",
+        "Put one agent in two groups"
+      ],
+      "paragraphs": [
+        "Skill groups organize agent and supervisor users into the queues that belong to campaigns. A user can be in several groups. A campaign can list several groups.",
+        "The same help topic uses two different places for the assignment. Outbound campaigns take skills on the Skills tab. Inbound and autodial campaigns take them on a tab named Outbound Skills. Read that name twice before you decide the tab is missing."
+      ],
+      "cites": [
+        {
+          "label": "Skill groups",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "compare",
+        "title": "Where the skill is attached",
+        "caption": "The tab name is easy to misread.",
+        "leftTitle": "Outbound campaign",
+        "rightTitle": "Inbound and autodial",
+        "left": [
+          "Skills tab"
+        ],
+        "right": [
+          "Outbound Skills tab"
+        ]
+      },
+      "flow": {
+        "title": "Attach Billing",
+        "lanes": [
+          "Admin",
+          "Campaign"
+        ],
+        "steps": [
+          {
+            "lane": "Admin",
+            "title": "Create",
+            "detail": "Add a skill group named Billing.",
+            "frame": "create"
+          },
+          {
+            "lane": "Admin",
+            "title": "Members",
+            "detail": "Add agents who should take those calls.",
+            "frame": "members"
+          },
+          {
+            "lane": "Campaign",
+            "title": "Outbound",
+            "detail": "Open the Skills tab.",
+            "frame": "skills tab"
+          },
+          {
+            "lane": "Campaign",
+            "title": "Inbound",
+            "detail": "Open Outbound Skills instead.",
+            "frame": "outbound skills"
+          },
+          {
+            "lane": "Campaign",
+            "title": "Run",
+            "detail": "A running inbound campaign can now queue.",
+            "frame": "run"
+          },
+          {
+            "lane": "Admin",
+            "title": "Voicemail",
+            "detail": "Skill groups can also take voicemail.",
+            "frame": "vm"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Inbound skill assignment is on a tab named",
+          "choices": [
+            "Inbound Skills",
+            "Outbound Skills",
+            "TLS",
+            "ANI"
+          ],
+          "answer": 1,
+          "why": "The skill topic says inbound and autodial use the Outbound Skills tab."
+        },
+        {
+          "q": "Outbound skill assignment is on",
+          "choices": [
+            "The Skills tab",
+            "The IVR Menu",
+            "MyE911",
+            "The JRE"
+          ],
+          "answer": 1,
+          "why": "Outbound campaigns use the Skills tab."
+        },
+        {
+          "q": "A campaign may list",
+          "choices": [
+            "Only one skill",
+            "Multiple skill groups",
+            "No users ever",
+            "Only Default"
+          ],
+          "answer": 1,
+          "why": "Campaigns can have multiple skill groups."
+        },
+        {
+          "q": "An agent may belong to",
+          "choices": [
+            "One skill only",
+            "Multiple skill groups",
+            "Only the domain admin role",
+            "Only WEM"
+          ],
+          "answer": 1,
+          "why": "Users can be assigned to multiple skill groups."
+        },
+        {
+          "q": "Skill voicemail is",
+          "choices": [
+            "Undocumented",
+            "Part of the skill group topic, including greetings and messages",
+            "A SIP trunk feature only",
+            "Removed in Plus"
+          ],
+          "answer": 1,
+          "why": "The skill topic covers voicemail messages and greetings for the group."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Inbound tab name?",
+          "back": "Outbound Skills."
+        },
+        {
+          "front": "Outbound tab name?",
+          "back": "Skills."
+        },
+        {
+          "front": "Multiple skills per campaign?",
+          "back": "Yes."
+        },
+        {
+          "front": "Multiple skills per user?",
+          "back": "Yes."
+        }
+      ],
+      "lab": {
+        "title": "Name the tab",
+        "goal": "For one inbound and one outbound campaign, write the tab you would open.",
+        "steps": [
+          "Inbound: Outbound Skills",
+          "Outbound: Skills",
+          "Add the same agent to both groups"
+        ],
+        "success": "You did not hunt for a tab called Inbound Skills.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Inbound queue with no agents",
+        "symptom": "The skill exists and the agents are Ready. The inbound campaign never offers the call.",
+        "log": "CAMPAIGN inbound tab=Skills EMPTY otherTab=OutboundSkills has=Billing",
+        "choices": [
+          "The skill was added on the wrong tab",
+          "Predictive ratio is 1",
+          "The ANI is local",
+          "Java is current"
+        ],
+        "answer": 0,
+        "cause": "Inbound uses the Outbound Skills tab.",
+        "fix": "Move Billing onto Outbound Skills."
+      }
+    },
+    {
+      "id": "l04",
+      "title": "Prompts before the script",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Record prompts before scripts",
+        "Keep skill audio separate"
+      ],
+      "paragraphs": [
+        "The inbound and autodial roadmaps tell you to define and record prompts before you build the IVR. A Play or Menu module can only speak what the prompt library already holds, or what a text-to-speech entry supplies in that module.",
+        "Skill groups have their own audio: voicemail greetings and other skill audio. A campaign prompt and a skill greeting are different objects. Replacing one does not replace the other."
+      ],
+      "cites": [
+        {
+          "label": "Planning your implementation",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm"
+        },
+        {
+          "label": "Skill groups",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "path",
+        "title": "Audio objects",
+        "caption": "Record the file before the module names it.",
+        "rows": [
+          {
+            "label": "Record prompt"
+          },
+          {
+            "label": "Prompt library"
+          },
+          {
+            "label": "Play or Menu"
+          },
+          {
+            "label": "Skill greeting"
+          }
+        ]
+      },
+      "flow": {
+        "title": "A greeting reaches the caller",
+        "lanes": [
+          "Admin",
+          "IVR"
+        ],
+        "steps": [
+          {
+            "lane": "Admin",
+            "title": "Record",
+            "detail": "Add the prompt in the library.",
+            "frame": "library"
+          },
+          {
+            "lane": "IVR",
+            "title": "Play",
+            "detail": "The Play module points at it.",
+            "frame": "play"
+          },
+          {
+            "lane": "IVR",
+            "title": "Menu",
+            "detail": "The Menu module plays its own prompt.",
+            "frame": "menu"
+          },
+          {
+            "lane": "Admin",
+            "title": "Skill",
+            "detail": "A separate greeting can live on the skill.",
+            "frame": "skill audio"
+          },
+          {
+            "lane": "IVR",
+            "title": "Run",
+            "detail": "The campaign must be running or inbound callers hear busy.",
+            "frame": "run"
+          },
+          {
+            "lane": "Admin",
+            "title": "Check",
+            "detail": "Listen in the script, not only in the file list.",
+            "frame": "listen"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "When does the roadmap say to record prompts?",
+          "choices": [
+            "After the first live day",
+            "Before you create the IVR scripts",
+            "After you delete skills",
+            "Never"
+          ],
+          "answer": 1,
+          "why": "Planning says to define and record prompts, then create scripts."
+        },
+        {
+          "q": "A skill voicemail greeting is",
+          "choices": [
+            "The same object as a campaign Play prompt",
+            "A skill-group audio object",
+            "A SIP codec",
+            "A disposition"
+          ],
+          "answer": 1,
+          "why": "The skill topic has its own greeting and audio tasks."
+        },
+        {
+          "q": "If the inbound campaign is stopped, a perfect prompt",
+          "choices": [
+            "Still answers",
+            "Is never heard, because callers get busy",
+            "Plays twice",
+            "Becomes a list"
+          ],
+          "answer": 1,
+          "why": "The campaign must be running."
+        },
+        {
+          "q": "Play can use TTS in the web-service example. True or false?",
+          "choices": [
+            "False",
+            "True. The example adds a TTS prompt on the Play module",
+            "Only for Spanish",
+            "Only on Saturday"
+          ],
+          "answer": 1,
+          "why": "The XML query example plays a TTS prompt."
+        },
+        {
+          "q": "You should test the prompt",
+          "choices": [
+            "Only on the file's duration field",
+            "Inside the script path the caller will hit",
+            "By emailing it",
+            "In MyE911"
+          ],
+          "answer": 1,
+          "why": "A file that is not referenced is silent."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Prompts before scripts?",
+          "back": "Yes, on the inbound and autodial roadmap."
+        },
+        {
+          "front": "Skill greeting vs Play prompt?",
+          "back": "Different objects."
+        },
+        {
+          "front": "Stopped campaign?",
+          "back": "Busy, prompt unheard."
+        },
+        {
+          "front": "TTS?",
+          "back": "The query example uses a TTS prompt on Play."
+        }
+      ],
+      "lab": {
+        "title": "Library check",
+        "goal": "Name one campaign prompt and one skill greeting.",
+        "steps": [
+          "Record or import the campaign prompt",
+          "Point a Play module at it",
+          "Leave the skill greeting alone"
+        ],
+        "success": "You can point at which object the caller hears.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Silence after the greeting file was replaced",
+        "symptom": "The new WAV is in the library. Callers still hear the old sentence.",
+        "log": "IVR Play prompt=greeting-v1 FILE greeting-v2 unused",
+        "choices": [
+          "The script still points at version 1",
+          "TLS 1.1 is on",
+          "The list is empty",
+          "ANI changed"
+        ],
+        "answer": 0,
+        "cause": "Replacing a file does not retarget the module.",
+        "fix": "Point Play at greeting-v2."
+      }
+    },
+    {
+      "id": "l05",
+      "title": "Do-not-call is a list, and a module",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Use the Set DNC module",
+        "Do not confuse it with a disposition label"
+      ],
+      "paragraphs": [
+        "Outbound product material lists DNC list management with time-zone rules and Certified Caller as compliance tools. Inside the IVR, Set DNC is a real module in the modules chapter. A spoken 'remove me' path should hit that module, not a note in a disposition comment.",
+        "A disposition called DNC is not the same object as the Set DNC module. Use both only if you know which system each one updates. This lab does not pretend they are automatically the same switch."
+      ],
+      "cites": [
+        {
+          "label": "IVR modules",
+          "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm"
+        },
+        {
+          "label": "Outbound product page",
+          "url": "https://www.five9.com/products/capabilities/outbound-contact-center"
+        },
+        {
+          "label": "Generating standard reports",
+          "url": "https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports"
+        }
+      ],
+      "uncertain": [
+        "Public pages do not spell out, in one paragraph, whether a custom disposition named DNC writes the same list as the Set DNC module. Confirm in your domain."
+      ],
+      "figure": {
+        "kind": "stack",
+        "title": "Two different DNC actions",
+        "caption": "Do not assume a comment field updates the DNC list.",
+        "rows": [
+          {
+            "label": "Set DNC module"
+          },
+          {
+            "label": "DNC list management"
+          },
+          {
+            "label": "A disposition named DNC"
+          },
+          {
+            "label": "A report of DNC"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Caller says do not call",
+        "lanes": [
+          "Caller",
+          "IVR",
+          "List"
+        ],
+        "steps": [
+          {
+            "lane": "Caller",
+            "title": "Request",
+            "detail": "The caller asks to be removed.",
+            "frame": "speech"
+          },
+          {
+            "lane": "IVR",
+            "title": "Menu",
+            "detail": "A digit or speech branch catches it.",
+            "frame": "branch"
+          },
+          {
+            "lane": "IVR",
+            "title": "Set DNC",
+            "detail": "The module is the documented action.",
+            "frame": "module"
+          },
+          {
+            "lane": "List",
+            "title": "Stop",
+            "detail": "Further dialer attempts must honor the list.",
+            "frame": "list"
+          },
+          {
+            "lane": "IVR",
+            "title": "Disposition",
+            "detail": "A code alone is a label unless you know it writes the list.",
+            "frame": "code"
+          },
+          {
+            "lane": "List",
+            "title": "Report",
+            "detail": "Do Not Call is a standard report category.",
+            "frame": "report"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Which IVR module is named for this job?",
+          "choices": [
+            "Play",
+            "Set DNC",
+            "Language",
+            "Conference"
+          ],
+          "answer": 1,
+          "why": "Set DNC is in the modules chapter."
+        },
+        {
+          "q": "A disposition comment that says DNC",
+          "choices": [
+            "Always updates the DNC list",
+            "Is not documented as the same thing as Set DNC",
+            "Deletes the domain",
+            "Starts predictive mode"
+          ],
+          "answer": 1,
+          "why": "Treat them as separate until a current guide says otherwise."
+        },
+        {
+          "q": "Do Not Call reports are",
+          "choices": [
+            "Missing from the standard catalog",
+            "A named standard report category",
+            "Only in Studio",
+            "Only on paper"
+          ],
+          "answer": 1,
+          "why": "The reporting article lists Do Not Call Reports."
+        },
+        {
+          "q": "Product material groups DNC with",
+          "choices": [
+            "Headset SKUs",
+            "Time-zone rules and Certified Caller",
+            "Java updates",
+            "Equinix cities"
+          ],
+          "answer": 1,
+          "why": "The outbound product page lists those compliance tools together."
+        },
+        {
+          "q": "The safe design is",
+          "choices": [
+            "A free-text note",
+            "An explicit Set DNC step on the spoken path",
+            "A faster abandon cap",
+            "A second ANI"
+          ],
+          "answer": 1,
+          "why": "The module exists so the request is an action."
+        }
+      ],
+      "cards": [
+        {
+          "front": "IVR module?",
+          "back": "Set DNC."
+        },
+        {
+          "front": "Is a disposition the same?",
+          "back": "Not documented as the same object."
+        },
+        {
+          "front": "Report category?",
+          "back": "Do Not Call Reports."
+        },
+        {
+          "front": "Product grouping?",
+          "back": "With time-zone rules and Certified Caller."
+        }
+      ],
+      "lab": {
+        "title": "Draw the path",
+        "goal": "Sketch Menu to Set DNC for a removal request.",
+        "steps": [
+          "Add the branch",
+          "Name the module",
+          "Say what you will not trust a comment to do"
+        ],
+        "success": "The path hits Set DNC.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Removals keep dialing",
+        "symptom": "Agents type DNC in a note. The list still dials those numbers.",
+        "log": "DISPOSITION note=DNC MODULE SetDNC count=0",
+        "choices": [
+          "The script never called Set DNC",
+          "G.711 failed",
+          "The profile had two ANIs",
+          "SBC A rebooted"
+        ],
+        "answer": 0,
+        "cause": "A note is not the module.",
+        "fix": "Add Set DNC on that branch."
+      }
+    },
+    {
+      "id": "l06",
+      "title": "Workstations that drop live calls",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Apply the workstation rules",
+        "Quote the bandwidth table, not a guess"
+      ],
+      "paragraphs": [
+        "The technical requirements tell you to turn off Windows 11 Efficiency Mode on PCs that take live calls. Efficiency Mode can limit CPU and sleep inactive tabs, and the PDF says that can drop active Five9 calls. If you leave it on, use a high-performance power plan.",
+        "Headsets should be USB with noise canceling. Analog headsets are not supported. Wireless is discouraged when more than 10 agents are active, because of delay and quality. Wired LAN is recommended. Wi-Fi is allowed only if each user still meets the bandwidth numbers. Satellite and cellular, including 5G, are not supported."
+      ],
+      "cites": [
+        {
+          "label": "Technical requirements PDF",
+          "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+          "note": "Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall."
+        }
+      ],
+      "uncertain": [
+        "Headset model numbers are not listed in the section this lab read. The PDF points at a separate recommended-headsets note."
+      ],
+      "figure": {
+        "kind": "stack",
+        "title": "Workstation rules from the PDF",
+        "caption": "These are support boundaries, not suggestions from a blog.",
+        "rows": [
+          {
+            "label": "Efficiency Mode off"
+          },
+          {
+            "label": "USB headset"
+          },
+          {
+            "label": "Wired LAN preferred"
+          },
+          {
+            "label": "No satellite or cellular"
+          }
+        ]
+      },
+      "flow": {
+        "title": "A call survives the PC",
+        "lanes": [
+          "PC",
+          "Five9"
+        ],
+        "steps": [
+          {
+            "lane": "PC",
+            "title": "Power",
+            "detail": "Efficiency Mode is unchecked.",
+            "frame": "efficiency"
+          },
+          {
+            "lane": "PC",
+            "title": "Headset",
+            "detail": "USB, not analog.",
+            "frame": "usb"
+          },
+          {
+            "lane": "PC",
+            "title": "LAN",
+            "detail": "Wired link, or Wi-Fi that meets the rate.",
+            "frame": "lan"
+          },
+          {
+            "lane": "Five9",
+            "title": "Media",
+            "detail": "G.711 is the default codec in the bandwidth section.",
+            "frame": "g711"
+          },
+          {
+            "lane": "Five9",
+            "title": "Rate",
+            "detail": "Agent Desktop Plus and adapters are listed at 128 kbps.",
+            "frame": "128"
+          },
+          {
+            "lane": "PC",
+            "title": "Refuse",
+            "detail": "A 5G hotspot is outside the supported list.",
+            "frame": "cellular"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Windows 11 Efficiency Mode on a live agent PC?",
+          "choices": [
+            "Required",
+            "Turn it off. It can drop calls",
+            "Only for supervisors",
+            "Only in UK domains"
+          ],
+          "answer": 1,
+          "why": "The PDF says it can interrupt Five9 apps and drop active calls."
+        },
+        {
+          "q": "Analog headsets are",
+          "choices": [
+            "Preferred",
+            "Not supported",
+            "Required for TCPA",
+            "Required for IVR"
+          ],
+          "answer": 1,
+          "why": "The PDF says analog headsets are not supported."
+        },
+        {
+          "q": "Wireless headsets above about 10 active agents?",
+          "choices": [
+            "Recommended",
+            "Not recommended, because of delay and quality",
+            "Required",
+            "Illegal"
+          ],
+          "answer": 1,
+          "why": "The PDF does not recommend wireless when more than 10 agents are active."
+        },
+        {
+          "q": "Satellite or 5G as the agent path?",
+          "choices": [
+            "Supported",
+            "Not supported",
+            "Supported for inbound only",
+            "Supported if G.711 is on"
+          ],
+          "answer": 1,
+          "why": "Satellite and wireless internet such as 5G and cellular are not supported."
+        },
+        {
+          "q": "Listed bandwidth for Agent Desktop Plus and Plus adapters?",
+          "choices": [
+            "12 kbps",
+            "128 kbps minimum and recommended",
+            "1 Mbps required by law",
+            "320 kbps for every adapter"
+          ],
+          "answer": 1,
+          "why": "The bandwidth table lists 128 kbps for ADP and Plus adapters. Agent Assist is an extra 12 kbps."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Efficiency Mode?",
+          "back": "Off for live calls."
+        },
+        {
+          "front": "Analog headsets?",
+          "back": "Not supported."
+        },
+        {
+          "front": "5G?",
+          "back": "Not supported."
+        },
+        {
+          "front": "ADP bandwidth?",
+          "back": "128 kbps in the table, G.711 default."
+        }
+      ],
+      "lab": {
+        "title": "Desk audit",
+        "goal": "Check one agent PC against the PDF.",
+        "steps": [
+          "Efficiency Mode",
+          "USB headset",
+          "Path is not cellular"
+        ],
+        "success": "The desk matches the support boundary.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Calls drop when the agent opens a second tab",
+        "symptom": "The softphone falls over only on Windows 11.",
+        "log": "TASK efficiency=on SYMPTOM drop-on-background-tab",
+        "choices": [
+          "Turn Efficiency Mode off",
+          "Raise the abandon cap",
+          "Change list penetration",
+          "Delete the skill"
+        ],
+        "answer": 0,
+        "cause": "The PDF names this failure mode.",
+        "fix": "Disable Efficiency Mode and keep a high-performance power plan if you cannot."
+      }
+    },
+    {
+      "id": "l07",
+      "title": "Reason codes, voicemail, and what admin is not",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Treat voicemail as a skill object",
+        "Keep dialer math in the campaign"
+      ],
+      "paragraphs": [
+        "Not every silence is a carrier failure. Agents have Not Ready states. TCPA manual touch even forces Not Ready when preview time expires. Skill groups can hold voicemail, greetings, and messages. Those are administrator objects with their own reports.",
+        "Admin work does not include inventing a dialer ratio in a spreadsheet and calling it the Five9 algorithm. The dialer has documented modes and a documented abandon window. Configuration belongs in the campaign, not in a side file."
+      ],
+      "cites": [
+        {
+          "label": "Skill groups",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm"
+        },
+        {
+          "label": "TCPA manual touch",
+          "url": "https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "compare",
+        "title": "Admin objects vs guesses",
+        "caption": "Configure the object that exists.",
+        "leftTitle": "Real objects",
+        "rightTitle": "Not an admin object",
+        "left": [
+          "Skill voicemail",
+          "Not Ready",
+          "Profiles",
+          "Scripts"
+        ],
+        "right": [
+          "A homemade abandon formula",
+          "A CUCM partition",
+          "A pasted TCPA number"
+        ]
+      },
+      "flow": {
+        "title": "A message lands on a skill",
+        "lanes": [
+          "Caller",
+          "Skill",
+          "Supervisor"
+        ],
+        "steps": [
+          {
+            "lane": "Caller",
+            "title": "Queue",
+            "detail": "The caller chooses voicemail or times out.",
+            "frame": "queue"
+          },
+          {
+            "lane": "Skill",
+            "title": "Mailbox",
+            "detail": "The skill group receives the message.",
+            "frame": "box"
+          },
+          {
+            "lane": "Skill",
+            "title": "Greeting",
+            "detail": "The greeting is the skill audio, not the campaign prompt.",
+            "frame": "greeting"
+          },
+          {
+            "lane": "Supervisor",
+            "title": "Listen",
+            "detail": "Someone with access works the message.",
+            "frame": "listen"
+          },
+          {
+            "lane": "Agent",
+            "title": "Not Ready",
+            "detail": "A preview timeout can force this state.",
+            "frame": "not ready"
+          },
+          {
+            "lane": "Admin",
+            "title": "Report",
+            "detail": "Look at skill and agent reports before the trunk.",
+            "frame": "report"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Skill groups can receive",
+          "choices": [
+            "Only live calls",
+            "Voicemail as well, with greetings",
+            "Only emails",
+            "Only 911"
+          ],
+          "answer": 1,
+          "why": "The skill topic covers voicemail routing, messages, and greetings."
+        },
+        {
+          "q": "TCPA preview timeout sets the agent to",
+          "choices": [
+            "Ready",
+            "Not Ready, and does not auto-dial",
+            "On a SIP trunk",
+            "In a report only"
+          ],
+          "answer": 1,
+          "why": "The TCPA article says the status becomes Not Ready and no external number is auto-dialed."
+        },
+        {
+          "q": "A homemade pacing spreadsheet is",
+          "choices": [
+            "The Five9 dialer",
+            "Not the product. Modes and abandon windows are campaign settings",
+            "Required by RFC 3261",
+            "The campaign profile"
+          ],
+          "answer": 1,
+          "why": "Keep the dialer settings in the campaign."
+        },
+        {
+          "q": "Campaign profiles control pop-up windows. True or false?",
+          "choices": [
+            "False",
+            "True. The profile topic includes pop-up control",
+            "Only for Java",
+            "Only for 911"
+          ],
+          "answer": 1,
+          "why": "Profiles control pop-ups, list filter and sort, and disposition counts."
+        },
+        {
+          "q": "Service level targets for a skill are",
+          "choices": [
+            "Absent",
+            "Part of the skill group topic",
+            "A codec setting",
+            "A JRE setting"
+          ],
+          "answer": 1,
+          "why": "The skill topic includes service levels."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Skill voicemail?",
+          "back": "Yes, with its own greeting."
+        },
+        {
+          "front": "TCPA timeout state?",
+          "back": "Not Ready, no auto-dial."
+        },
+        {
+          "front": "Where do dialer settings live?",
+          "back": "On the campaign, not in a side spreadsheet."
+        },
+        {
+          "front": "Profiles and pop-ups?",
+          "back": "Profiles can control them."
+        }
+      ],
+      "lab": {
+        "title": "Separate the piles",
+        "goal": "List one voicemail task, one Not Ready cause, and one setting you will not fake.",
+        "steps": [
+          "Skill greeting",
+          "TCPA timeout",
+          "Abandon cap stays in the campaign"
+        ],
+        "success": "Three different piles.",
+        "href": "#/pacing"
+      },
+      "fault": {
+        "title": "Voicemail greeting is the campaign prompt",
+        "symptom": "After hours, callers hear the daytime IVR prompt on the skill mailbox.",
+        "log": "SKILL Billing greeting=unset PLAY prompt=daytime",
+        "choices": [
+          "The skill greeting was never recorded",
+          "The abandon window is 30 days",
+          "WSS failed",
+          "The list is vertical"
+        ],
+        "answer": 0,
+        "cause": "Skill audio is separate.",
+        "fix": "Record the skill greeting."
+      }
+    }
+  ]
+}
