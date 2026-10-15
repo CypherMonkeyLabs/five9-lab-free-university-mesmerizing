@@ -1,5 +1,6 @@
 import { loadTopology, loadIvr, loadPacing } from "./loaders.js";
-import { tryUniversityRoute, afterRoute, initUniversity, decorateRail, homeFoldHtml, signalDeck, paintHeroCopy, isoMarkup } from "./university.js";
+import { tryUniversityRoute, afterRoute, initUniversity, decorateRail, homeFoldHtml, signalDeck, paintHeroCopy } from "./university.js";
+import { glyphImg, glyphKey } from "./glyphs.js";
 import { applyI18n } from "./i18n.js";
 
 const SETTINGS_KEY = "f9lab-settings";
@@ -256,8 +257,7 @@ function doneCount() {
 }
 
 function card(href, kicker, heading, body, tags) {
-  const shape = [...String(heading)].reduce((sum, ch) => sum + ch.charCodeAt(0), 0);
-  return `<a class="card" href="${esc(href)}">${isoMarkup(shape)}<div class="card-copy"><p class="kicker">${esc(kicker)}</p><h2>${esc(heading)}</h2><p>${esc(body)}</p>${tags ? `<div class="tags">${tags}</div>` : ""}</div></a>`;
+  return `<a class="card" href="${esc(href)}">${glyphImg(glyphKey(href))}<div class="card-copy"><p class="kicker">${esc(kicker)}</p><h2>${esc(heading)}</h2><p>${esc(body)}</p>${tags ? `<div class="tags">${tags}</div>` : ""}</div></a>`;
 }
 
 function renderRail() {
@@ -907,11 +907,14 @@ function bindChrome() {
   });
   document.querySelector("#tab-settings").addEventListener("click", () => document.querySelector("#open-settings").click());
   document.querySelector("#settings-close").addEventListener("click", () => document.querySelector("#settings").close());
-  document.querySelector("#sound-toggle").addEventListener("click", () => {
-    session.settings.sound = !session.settings.sound;
-    saveSettings();
-    audio.tick();
-  });
+  const soundToggle = document.querySelector("#sound-toggle");
+  if (soundToggle) {
+    soundToggle.addEventListener("click", () => {
+      session.settings.sound = !session.settings.sound;
+      saveSettings();
+      audio.tick();
+    });
+  }
   document.addEventListener("click", (event) => {
     const button = event.target.closest("[data-theme-pick]");
     if (!button) return;

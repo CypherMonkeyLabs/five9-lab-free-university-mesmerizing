@@ -74,6 +74,7 @@
     "js/charts.js",
     "js/diagrams.js",
     "js/effects.js",
+    "js/glyphs.js",
     "js/i18n.js",
     "js/ivr.js",
     "js/loaders.js",

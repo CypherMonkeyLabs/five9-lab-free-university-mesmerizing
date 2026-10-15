@@ -2,6 +2,7 @@ import { diagram, diagramIds, diagramMeta, flowIds } from "./diagrams.js";
 import { chartStrip } from "./charts.js";
 import { buildZip } from "./zipstore.js";
 import { applyI18n } from "./i18n.js";
+import { glyphImg, warmGlyphs } from "./glyphs.js";
 
 const UNI_KEY = "f9lab-university";
 const REPO = "https://github.com/cipher0x9/five9-lab-free-university-mesmerizing";
@@ -264,7 +265,7 @@ function renderPlay(ctx) {
     ["#/daily", "Daily challenge", "One real quiz item from the lesson bank."],
     ["#/explorer", "Flow map", "Click a box. The note cites the page."]
   ];
-  ctx.view.innerHTML = `<div class="grid">${tiles.map(([href, title, text], index) => `<a class="card" href="${href}">${isoMarkup(index)}<div class="card-copy"><h2>${esc(title)}</h2><p>${esc(text)}</p></div></a>`).join("")}</div>`;
+  ctx.view.innerHTML = `<div class="grid">${tiles.map(([href, title, text]) => `<a class="card" href="${href}">${glyphImg(href.includes("topology") ? "t17" : href.includes("ivr") ? "t07" : href.includes("pacing") ? "t05" : href.includes("ports") ? "t13" : href.includes("daily") ? "t18" : "t14")}<div class="card-copy"><h2>${esc(title)}</h2><p>${esc(text)}</p></div></a>`).join("")}</div>`;
 }
 
 function renderPorts(ctx, data) {
@@ -650,24 +651,7 @@ export function paintHeroCopy(catalog) {
   const host = document.querySelector("#hero-copy");
   const slot = document.querySelector("#hero-slot");
   if (!host || !slot || !catalog) return;
-  const done = lessonsDone();
-  const total = catalog.counts.lessons || 1;
-  const pct = Math.round((done / total) * 100);
-  const dash = ((pct / 100) * 94).toFixed(1);
-  const spots = [
-    ["#/atlas", "diagrams", "Diagrams", `${diagramIds.length} drawings`],
-    ["#/flows", "flows", "Flows", `${flowIds.length} moving`],
-    ["#/charts", "charts", "Charts", "6 cited charts"],
-    ["#/downloads", "cheats", "Cheat Codes", "Sheets and cards"]
-  ];
-  host.innerHTML = `
-    <p class="hero-greet" data-i18n="greet">Signal university</p>
-    <div class="hero-mid" aria-hidden="true"></div>
-    <div class="hero-dock">
-      <div class="ring-wrap"><svg class="ring" viewBox="0 0 36 36" aria-hidden="true"><circle class="ring-bg" cx="18" cy="18" r="15"></circle><circle class="ring-val" cx="18" cy="18" r="15" stroke-dasharray="${dash} 94"></circle></svg><span>${pct}% of lessons finished here</span></div>
-      ${counterRow(catalog)}
-      <div class="spot-row">${spots.map(([href, key, label, detail]) => `<a class="spotlight" href="${href}"><span data-i18n="${key}">${esc(label)}</span><strong>${esc(detail)}</strong></a>`).join("")}</div>
-    </div>`;
+  host.innerHTML = `<p class="hero-greet" data-i18n="greet">Signal university</p>`;
   slot.hidden = false;
   applyI18n();
 }
@@ -677,9 +661,16 @@ export async function homeFoldHtml() {
     fetch("data/catalog.json").then((res) => res.json()),
     loadUni()
   ]);
+  const spots = [
+    ["#/atlas", "diagrams", "Diagrams", `${diagramIds.length} drawings`],
+    ["#/flows", "flows", "Flows", `${flowIds.length} moving`],
+    ["#/charts", "charts", "Charts", "6 cited charts"],
+    ["#/downloads", "cheats", "Cheat Codes", "Sheets and cards"]
+  ];
   return `<section id="fold" class="fold">
     ${counterRow(catalog)}
-    <div class="fold-tools"><div class="icon-row">${["Diagrams", "Flows", "Charts", "Codes"].map((label, index) => `<span class="iso-card">${isoMarkup(index)}<span>${label}</span></span>`).join("")}</div><div class="chart-snap">${chartStrip(catalog, data)}</div></div>
+    <div class="spot-row">${spots.map(([href, key, label, detail]) => `<a class="spotlight" href="${href}"><span data-i18n="${key}">${esc(label)}</span><strong>${esc(detail)}</strong></a>`).join("")}</div>
+    <div class="fold-tools"><div class="icon-row">${[["t03", "Headset"], ["t07", "IVR"], ["t05", "Dialer"], ["t10", "WEM"]].map(([key, label]) => `<span class="iso-card">${glyphImg(key)}<span>${label}</span></span>`).join("")}</div><div class="chart-snap">${chartStrip(catalog, data)}</div></div>
     <p class="note">${esc(data.banner)}</p>
   </section>`;
 }
@@ -726,7 +717,7 @@ export async function decorateTrack(view) {
   if (!view.isConnected || !location.hash.startsWith(`#/track/${match[1]}`)) return;
   const band = document.createElement("section");
   band.id = "track-band";
-  band.innerHTML = `${counterRow(catalog)}<div class="icon-row">${[0, 1, 2, 3].map((index) => isoMarkup(index)).join("")}</div><div class="chart-snap">${chartStrip(catalog, data)}</div><p class="note">${esc(data.banner)}</p>`;
+  band.innerHTML = `${counterRow(catalog)}<div class="icon-row">${glyphImg(match[1])}</div><div class="chart-snap">${chartStrip(catalog, data)}</div><p class="note">${esc(data.banner)}</p>`;
   view.insertBefore(band, view.firstChild);
 }
 
@@ -937,8 +928,13 @@ function syncHero(bare) {
   const home = bare === "#/" || bare === "";
   if (!slot) return;
   if (!home) {
-    slot.hidden = true;
-    import("./stage.js").then((mod) => mod.stopHero()).catch(() => {});
+    import("./stage.js").then(async (mod) => {
+      await mod.flyThrough();
+      const now = (location.hash || "#/").split("?")[0];
+      if (now === "#/" || now === "") return;
+      slot.hidden = true;
+      mod.stopHero();
+    }).catch(() => { slot.hidden = true; });
     return;
   }
   slot.hidden = false;
@@ -958,6 +954,8 @@ export function afterRoute() {
   document.body.dataset.route = bare || "#/";
   paintCrumbs(bare);
   paintMenu(bare);
+  const settings = document.querySelector("#settings");
+  if (settings && settings.open) settings.close();
   applyI18n();
   syncHero(bare);
   if (view && (bare === "#/" || bare === "") && !view.querySelector("#fold")) {
@@ -998,6 +996,8 @@ export function initUniversity() {
     search.addEventListener("submit", (event) => {
       event.preventDefault();
       const q = new FormData(search).get("q") || "";
+      const dialog = document.querySelector("#settings");
+      if (dialog && dialog.open) dialog.close();
       location.hash = `#/search?q=${encodeURIComponent(String(q))}`;
     });
   }
@@ -1081,9 +1081,11 @@ export function initUniversity() {
     });
   }
   document.addEventListener("f9-theme", () => {
+    warmGlyphs();
     const bare = (location.hash || "#/").split("?")[0];
     if (bare === "#/" || bare === "") syncHero(bare);
   });
+  warmGlyphs();
   applyI18n();
   import("./effects.js").then((mod) => mod.armConfetti()).catch(() => {});
 }

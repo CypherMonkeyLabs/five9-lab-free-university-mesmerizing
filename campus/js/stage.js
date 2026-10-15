@@ -44,12 +44,20 @@ function showFlat(host, on) {
 export function stopHero() {
   if (!live) return;
   cancelAnimationFrame(live.clock.raf);
+  if (live.fly) live.fly.resolve();
   live.host.removeEventListener("pointermove", live.onMove);
   window.removeEventListener("resize", live.onResize);
   live.renderer.dispose();
   live.renderer.forceContextLoss();
   live.canvas.remove();
   live = null;
+}
+
+export function flyThrough() {
+  if (!live || document.documentElement.dataset.motion === "reduce") return Promise.resolve();
+  return new Promise((resolve) => {
+    live.fly = { from: live.camera.position.z, to: 1.15, start: performance.now(), dur: 720, resolve };
+  });
 }
 
 export function recolorHero() {
@@ -96,7 +104,7 @@ export function mountHero(host) {
     mats.push(material);
     return material;
   };
-  const lightTheme = theme === "light" || theme === "paper" || theme === "aurora";
+  const lightTheme = theme === "light" || theme === "paper" || theme === "aurora" || theme === "holographic";
   const glowMat = (color) => {
     const material = new THREE.SpriteMaterial({
       map: glowTexture(),
@@ -110,11 +118,22 @@ export function mountHero(host) {
     return material;
   };
   const ico = new THREE.Mesh(new THREE.IcosahedronGeometry(2.05, 1), mat(colors.a));
+  const bloomIco = new THREE.Mesh(new THREE.IcosahedronGeometry(2.45, 1), new THREE.MeshBasicMaterial({
+    color: colors.b,
+    wireframe: true,
+    transparent: true,
+    opacity: lightTheme ? 0.28 : 0.45,
+    blending: lightTheme ? THREE.NormalBlending : THREE.AdditiveBlending,
+    depthWrite: false
+  }));
+  mats.push(bloomIco.material);
   const core = new THREE.Mesh(new THREE.IcosahedronGeometry(1.05, 0), mat(colors.c));
-  scene.add(ico, core);
+  scene.add(ico, bloomIco, core);
   const halo = new THREE.Sprite(glowMat(colors.b));
-  halo.scale.set(6.5, 6.5, 1);
-  scene.add(halo);
+  halo.scale.set(8.5, 8.5, 1);
+  const haloB = new THREE.Sprite(glowMat(colors.a));
+  haloB.scale.set(4.2, 4.2, 1);
+  scene.add(halo, haloB);
   const ringA = new THREE.Mesh(new THREE.TorusGeometry(3.1, 0.015, 8, 80), mat(colors.b));
   const ringB = new THREE.Mesh(new THREE.TorusGeometry(3.7, 0.012, 8, 80), mat(colors.c));
   ringB.rotation.x = Math.PI / 2.4;
@@ -128,7 +147,7 @@ export function mountHero(host) {
     const mesh = new THREE.Mesh(new THREE.SphereGeometry(0.16, 16, 16), new THREE.MeshBasicMaterial({ color }));
     mats.push(mesh.material);
     const sprite = new THREE.Sprite(glowMat(color));
-    sprite.scale.set(0.9, 0.9, 1);
+    sprite.scale.set(1.6, 1.6, 1);
     mesh.add(sprite);
     scene.add(mesh);
     nodes.push(mesh);
@@ -150,7 +169,15 @@ export function mountHero(host) {
   starGeom.setAttribute("position", new THREE.BufferAttribute(starPos, 3));
   const stars = new THREE.Points(
     starGeom,
-    new THREE.PointsMaterial({ color: colors.c, size: 0.045, transparent: true, opacity: 0.85 })
+    new THREE.PointsMaterial({
+      color: colors.c,
+      size: 0.12,
+      map: glowTexture(),
+      transparent: true,
+      opacity: 0.9,
+      blending: lightTheme ? THREE.NormalBlending : THREE.AdditiveBlending,
+      depthWrite: false
+    })
   );
   mats.push(stars.material);
   scene.add(stars);
@@ -193,14 +220,44 @@ export function mountHero(host) {
     lineGeom.attributes.position.needsUpdate = true;
     stars.rotation.y = t * 0.02;
     const scroll = Math.min(window.scrollY / 800, 1);
+    let z = 7.2 - scroll * 1.2;
+    if (live.intro) {
+      const u = Math.min(1, (now - live.intro.start) / live.intro.dur);
+      const ease = 1 - (1 - u) ** 3;
+      z = 12.5 + (7.2 - 12.5) * ease - scroll * 1.2;
+      if (u >= 1) live.intro = null;
+    }
+    if (live.fly) {
+      const u = Math.min(1, (now - live.fly.start) / live.fly.dur);
+      z = live.fly.from + (live.fly.to - live.fly.from) * u * u;
+      if (u >= 1) {
+        const done = live.fly.resolve;
+        live.fly = null;
+        done();
+      }
+    }
+    bloomIco.rotation.y = -t * 0.12;
+    haloB.scale.setScalar(4.2 + Math.sin(t * 1.4) * 0.35);
     camera.position.x = (pointer.x - 0.5) * 2.2;
     camera.position.y = 1.6 + (0.5 - pointer.y) * 1.1 - scroll * 0.6;
-    camera.position.z = 7.2 - scroll * 1.2;
+    camera.position.z = z;
     camera.lookAt(0, 0, 0);
     renderer.render(scene, camera);
-    live.clock.raf = requestAnimationFrame(tick);
+    if (live && live.renderer === renderer) live.clock.raf = requestAnimationFrame(tick);
   };
-  live = { host, renderer, canvas: renderer.domElement, mats, onMove, onResize, clock, theme };
+  live = {
+    host,
+    renderer,
+    camera,
+    canvas: renderer.domElement,
+    mats,
+    onMove,
+    onResize,
+    clock,
+    theme,
+    intro: document.documentElement.dataset.motion === "reduce" ? null : { start: performance.now(), dur: 1300 },
+    fly: null
+  };
   live.clock.raf = requestAnimationFrame(tick);
 }
 

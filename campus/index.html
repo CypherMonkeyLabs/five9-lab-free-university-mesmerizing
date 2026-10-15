@@ -81,34 +81,7 @@
         <g class="prop prop-egg"><polygon points="36,8 40,16 32,16" fill="#ff2bd6"></polygon></g>
       </svg>
     </a>
-    <form class="uni-search" id="uni-search" role="search">
-      <label class="skip" for="uni-q">Search</label>
-      <input id="uni-q" name="q" type="search" placeholder="Search lessons" enterkeyhint="search">
-    </form>
     <div class="top-actions">
-      <label class="lang"><span class="skip" data-i18n="lang">Language</span>
-        <select id="lang-pick" aria-label="Language">
-          <option value="en">English</option>
-          <option value="es">Español</option>
-          <option value="hi">हिन्दी</option>
-          <option value="te">తెలుగు</option>
-          <option value="fr">Français</option>
-          <option value="de">Deutsch</option>
-          <option value="ja">日本語</option>
-          <option value="ar">العربية</option>
-        </select>
-      </label>
-      <a class="btn ghost" href="#/regions" data-i18n="regions">Regions</a>
-      <button type="button" class="btn ghost" id="mode-toggle">Light</button>
-      <div class="quick-themes" role="group" aria-label="Theme">
-        <button type="button" class="swatch" data-theme-pick="holographic" style="background:linear-gradient(135deg,#7cf7ff,#ff4fd8)" aria-label="Holographic"></button>
-        <button type="button" class="swatch" data-theme-pick="neon" style="background:#ff2bd6" aria-label="Neon"></button>
-        <button type="button" class="swatch" data-theme-pick="cyberpunk" style="background:#d6ff00" aria-label="Cyberpunk"></button>
-        <button type="button" class="swatch" data-theme-pick="sunset" style="background:#ff8a3d" aria-label="Sunset"></button>
-        <button type="button" class="swatch" data-theme-pick="light" style="background:#f4f7ff" aria-label="Light"></button>
-      </div>
-      <button type="button" class="btn ghost" id="read-focus" aria-pressed="false">Reading focus</button>
-      <button type="button" class="btn ghost hide-sm" id="sound-toggle" aria-pressed="false">Sound off</button>
       <button type="button" class="btn" id="open-settings">Settings</button>
     </div>
   </header>
@@ -150,16 +123,36 @@
   <dialog id="settings" aria-labelledby="settings-title">
     <h2 id="settings-title">Floor settings</h2>
     <p class="note">Saved in this browser only.</p>
+    <form class="uni-search" id="uni-search" role="search">
+      <label for="uni-q">Search lessons</label>
+      <input id="uni-q" name="q" type="search" placeholder="Search lessons" enterkeyhint="search">
+    </form>
+    <div class="row">
+      <label class="lang"><span data-i18n="lang">Language</span>
+        <select id="lang-pick" aria-label="Language">
+          <option value="en">English</option>
+          <option value="es">Español</option>
+          <option value="hi">हिन्दी</option>
+          <option value="te">తెలుగు</option>
+          <option value="fr">Français</option>
+          <option value="de">Deutsch</option>
+          <option value="ja">日本語</option>
+          <option value="ar">العربية</option>
+        </select>
+      </label>
+      <a class="btn ghost" href="#/regions" data-i18n="regions">Regions</a>
+      <button type="button" class="btn ghost" id="mode-toggle">Light</button>
+    </div>
     <div class="field">
       <span class="lbl" id="theme-label">Theme</span>
       <div class="swatches" role="group" aria-labelledby="theme-label">
-        <button type="button" class="swatch" data-theme-pick="futuristic" style="background:#061018" aria-label="Futuristic"></button>
-        <button type="button" class="swatch" data-theme-pick="gaming" style="background:#c6ff4a" aria-label="Gaming"></button>
-        <button type="button" class="swatch" data-theme-pick="neon" style="background:#ff2bd6" aria-label="Neon"></button>
-        <button type="button" class="swatch" data-theme-pick="light" style="background:#f4f7ff" aria-label="Light"></button>
-        <button type="button" class="swatch" data-theme-pick="holographic" style="background:linear-gradient(135deg,#7cf7ff,#ff4fd8)" aria-label="Holographic"></button>
+        <button type="button" class="swatch" data-theme-pick="holographic" style="background:linear-gradient(135deg,#ffd6f2,#b8fff4,#ffe7a8)" aria-label="Holographic"></button>
+        <button type="button" class="swatch" data-theme-pick="neon" style="background:linear-gradient(135deg,#00fff0,#39ff14)" aria-label="Neon"></button>
         <button type="button" class="swatch" data-theme-pick="cyberpunk" style="background:#d6ff00" aria-label="Cyberpunk"></button>
         <button type="button" class="swatch" data-theme-pick="sunset" style="background:#ff8a3d" aria-label="Sunset"></button>
+        <button type="button" class="swatch" data-theme-pick="light" style="background:linear-gradient(135deg,#fb7185,#a78bfa,#22d3ee)" aria-label="Light"></button>
+        <button type="button" class="swatch" data-theme-pick="futuristic" style="background:#061018" aria-label="Futuristic"></button>
+        <button type="button" class="swatch" data-theme-pick="gaming" style="background:#c6ff4a" aria-label="Gaming"></button>
         <button type="button" class="swatch" data-theme-pick="signal" style="background:#07111c" aria-label="Signal night"></button>
         <button type="button" class="swatch" data-theme-pick="paper" style="background:#f3f6fb" aria-label="Paper floor"></button>
         <button type="button" class="swatch" data-theme-pick="contrast" style="background:#000;border-color:#ffe600" aria-label="High contrast"></button>
@@ -195,7 +188,7 @@
   </dialog>
   <aside class="audio-dock" id="audio-dock">
     <h2 data-i18n="audio">Architect conversation</h2>
-    <p class="note">Two short clips, generated offline with espeak-ng. They are a study dialogue, not a Five9 recording.</p>
+    <p class="note">The player stays on these paths so a later recording can replace the files. What is here now is a short espeak-ng study dialogue, not a Five9 recording.</p>
     <p><strong>How to use the floor</strong><br><audio id="lab-audio" controls preload="metadata" src="audio/architect-floor.mp3"></audio></p>
     <p><strong>How to share the lab</strong><br><audio id="lab-audio-share" controls preload="metadata" src="audio/architect-share.mp3"></audio></p>
     <label>Playback rate <select id="audio-rate" aria-label="Playback rate"><option value="0.85">0.85</option><option value="1" selected>1</option><option value="1.15">1.15</option><option value="1.3">1.3</option></select></label>
