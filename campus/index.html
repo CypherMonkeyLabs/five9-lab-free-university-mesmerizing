@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="futuristic" data-motion="full" data-font="16" data-look="day">
+<html lang="en" data-theme="holographic" data-motion="full" data-font="16" data-look="day">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,13 +7,14 @@
   <meta name="description" content="Independent study lab for Five9 Virtual Contact Center: campaigns, dialer modes, IVR, skills, Agent Desktop Plus, WEM, IVA, CRM, SIP, APIs, and Cisco migration.">
   <link rel="stylesheet" href="css/app.css">
   <link rel="stylesheet" href="css/university.css">
+  <link rel="stylesheet" href="css/wow.css">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect rx='8' width='32' height='32' fill='%2307111c'/%3E%3Cpath d='M8 20c4-8 12-8 16 0' stroke='%233ee0ff' fill='none' stroke-width='2'/%3E%3Ccircle cx='16' cy='14' r='2' fill='%23f5b942'/%3E%3C/svg%3E">
   <script>
     try {
       var saved = JSON.parse(localStorage.getItem("f9lab-settings") || "{}");
       if (saved.theme) document.documentElement.dataset.theme = saved.theme;
-      else document.documentElement.dataset.theme = "futuristic";
+      else document.documentElement.dataset.theme = "holographic";
       if (saved.font) document.documentElement.dataset.font = String(saved.font);
       if (saved.reduced === true) document.documentElement.dataset.motion = "reduce";
       if (saved.reduced === false) document.documentElement.dataset.motion = "full";
@@ -34,6 +35,7 @@
   <div id="readbar"></div>
   <canvas id="sky" aria-hidden="true"></canvas>
   <a class="skip" href="#main">Skip to content</a>
+  <div class="chrome" id="chrome">
   <div class="utilbar">
     <a href="https://cyphermonkeylabs.com">cyphermonkeylabs.com</a>
     <a href="https://linktr.ee/cyphermonkey">linktr.ee/cyphermonkey</a>
@@ -84,27 +86,48 @@
       <input id="uni-q" name="q" type="search" placeholder="Search lessons" enterkeyhint="search">
     </form>
     <div class="top-actions">
+      <label class="lang"><span class="skip" data-i18n="lang">Language</span>
+        <select id="lang-pick" aria-label="Language">
+          <option value="en">English</option>
+          <option value="es">Español</option>
+          <option value="hi">हिन्दी</option>
+          <option value="te">తెలుగు</option>
+          <option value="fr">Français</option>
+          <option value="de">Deutsch</option>
+          <option value="ja">日本語</option>
+          <option value="ar">العربية</option>
+        </select>
+      </label>
+      <a class="btn ghost" href="#/regions" data-i18n="regions">Regions</a>
+      <button type="button" class="btn ghost" id="mode-toggle">Light</button>
       <div class="quick-themes" role="group" aria-label="Theme">
-        <button type="button" class="swatch" data-theme-pick="futuristic" style="background:#061018" aria-label="Futuristic"></button>
-        <button type="button" class="swatch" data-theme-pick="gaming" style="background:#c6ff4a" aria-label="Gaming"></button>
+        <button type="button" class="swatch" data-theme-pick="holographic" style="background:linear-gradient(135deg,#7cf7ff,#ff4fd8)" aria-label="Holographic"></button>
         <button type="button" class="swatch" data-theme-pick="neon" style="background:#ff2bd6" aria-label="Neon"></button>
-        <button type="button" class="swatch" data-theme-pick="light" style="background:#f6f1e6" aria-label="Light"></button>
+        <button type="button" class="swatch" data-theme-pick="cyberpunk" style="background:#d6ff00" aria-label="Cyberpunk"></button>
+        <button type="button" class="swatch" data-theme-pick="sunset" style="background:#ff8a3d" aria-label="Sunset"></button>
+        <button type="button" class="swatch" data-theme-pick="light" style="background:#f4f7ff" aria-label="Light"></button>
       </div>
       <button type="button" class="btn ghost" id="read-focus" aria-pressed="false">Reading focus</button>
       <button type="button" class="btn ghost hide-sm" id="sound-toggle" aria-pressed="false">Sound off</button>
       <button type="button" class="btn" id="open-settings">Settings</button>
     </div>
-    <nav class="primary-menu" id="primary-menu" aria-label="University menu">
-      <a href="#/atlas">Diagrams</a>
-      <a href="#/flows">Flows</a>
-      <a href="#/charts">Charts</a>
-      <a href="#/downloads">Cheat Codes</a>
-      <a href="#/play">Play</a>
-      <a href="#/ecosystem">Ecosystem</a>
-      <a href="#/offline">Downloads</a>
-      <a href="#/career">Careers</a>
-    </nav>
   </header>
+  <nav class="primary-menu" id="primary-menu" aria-label="University menu">
+    <a href="#/atlas" data-i18n="diagrams">Diagrams</a>
+    <a href="#/flows" data-i18n="flows">Flows</a>
+    <a href="#/charts" data-i18n="charts">Charts</a>
+    <a href="#/downloads" data-i18n="cheats">Cheat Codes</a>
+    <a href="#/play" data-i18n="play">Play</a>
+    <a href="#/ecosystem" data-i18n="ecosystem">Ecosystem</a>
+    <a href="#/offline" data-i18n="downloads">Downloads</a>
+    <a href="#/career" data-i18n="careers">Careers</a>
+  </nav>
+  </div>
+  <div id="hero-slot" hidden>
+    <div class="hero-flat" id="hero-flat" hidden></div>
+    <div class="hero-hit" id="hero-hit"></div>
+    <div class="hero-copy" id="hero-copy"></div>
+  </div>
   <div class="shell">
     <nav class="rail" id="rail" aria-label="Lab sections"></nav>
     <main id="main">
@@ -133,7 +156,10 @@
         <button type="button" class="swatch" data-theme-pick="futuristic" style="background:#061018" aria-label="Futuristic"></button>
         <button type="button" class="swatch" data-theme-pick="gaming" style="background:#c6ff4a" aria-label="Gaming"></button>
         <button type="button" class="swatch" data-theme-pick="neon" style="background:#ff2bd6" aria-label="Neon"></button>
-        <button type="button" class="swatch" data-theme-pick="light" style="background:#f6f1e6" aria-label="Light"></button>
+        <button type="button" class="swatch" data-theme-pick="light" style="background:#f4f7ff" aria-label="Light"></button>
+        <button type="button" class="swatch" data-theme-pick="holographic" style="background:linear-gradient(135deg,#7cf7ff,#ff4fd8)" aria-label="Holographic"></button>
+        <button type="button" class="swatch" data-theme-pick="cyberpunk" style="background:#d6ff00" aria-label="Cyberpunk"></button>
+        <button type="button" class="swatch" data-theme-pick="sunset" style="background:#ff8a3d" aria-label="Sunset"></button>
         <button type="button" class="swatch" data-theme-pick="signal" style="background:#07111c" aria-label="Signal night"></button>
         <button type="button" class="swatch" data-theme-pick="paper" style="background:#f3f6fb" aria-label="Paper floor"></button>
         <button type="button" class="swatch" data-theme-pick="contrast" style="background:#000;border-color:#ffe600" aria-label="High contrast"></button>
@@ -166,6 +192,27 @@
       <button type="button" class="btn primary" id="settings-close">Close</button>
       <button type="button" class="btn ghost" id="narrate-sample">Play sample</button>
     </div>
+  </dialog>
+  <aside class="audio-dock" id="audio-dock">
+    <h2 data-i18n="audio">Architect conversation</h2>
+    <p class="note">Two short clips, generated offline with espeak-ng. They are a study dialogue, not a Five9 recording.</p>
+    <p><strong>How to use the floor</strong><br><audio id="lab-audio" controls preload="metadata" src="audio/architect-floor.mp3"></audio></p>
+    <p><strong>How to share the lab</strong><br><audio id="lab-audio-share" controls preload="metadata" src="audio/architect-share.mp3"></audio></p>
+    <label>Playback rate <select id="audio-rate" aria-label="Playback rate"><option value="0.85">0.85</option><option value="1" selected>1</option><option value="1.15">1.15</option><option value="1.3">1.3</option></select></label>
+    <p id="audio-fallback" class="note" hidden>The audio files did not load. The scripts are in audio/scripts/.</p>
+    <p><a href="https://github.com/cipher0x9/five9-lab-free-university-mesmerizing">Rate, comment, help</a> · <a href="https://cyphermonkeylabs.com">Share the lab</a> · <a href="https://linktr.ee/cyphermonkey">linktr.ee/cyphermonkey</a></p>
+  </aside>
+  <div id="tip" hidden></div>
+  <dialog id="lightbox" aria-labelledby="lb-title">
+    <div class="row">
+      <h2 id="lb-title">Diagram</h2>
+      <button type="button" class="btn" id="lb-play">Pause</button>
+      <button type="button" class="btn" id="lb-step">Step</button>
+      <button type="button" class="btn primary" id="lb-close">Close</button>
+    </div>
+    <div id="lb-stage"></div>
+    <p id="lb-why"></p>
+    <p id="lb-legend" class="note"></p>
   </dialog>
   <footer class="site-footer">
     <div class="foot-grid">

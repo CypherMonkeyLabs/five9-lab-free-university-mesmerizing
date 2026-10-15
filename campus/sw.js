@@ -1,11 +1,14 @@
-const CACHE = "f9lab-shell-v3";
+const CACHE = "f9lab-shell-v4";
 const SHELL = [
   "./",
   "./index.html",
   "./css/app.css",
   "./css/university.css",
+  "./css/wow.css",
   "./js/app.js",
   "./js/university.js",
+  "./js/stage.js",
+  "./js/i18n.js",
   "./js/diagrams.js",
   "./js/charts.js",
   "./js/effects.js",

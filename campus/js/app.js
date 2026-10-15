@@ -1,5 +1,6 @@
 import { loadTopology, loadIvr, loadPacing } from "./loaders.js";
-import { tryUniversityRoute, afterRoute, initUniversity, decorateRail, homeFoldHtml, signalDeck } from "./university.js";
+import { tryUniversityRoute, afterRoute, initUniversity, decorateRail, homeFoldHtml, signalDeck, paintHeroCopy, isoMarkup } from "./university.js";
+import { applyI18n } from "./i18n.js";
 
 const SETTINGS_KEY = "f9lab-settings";
 const PROGRESS_KEY = "f9lab-progress";
@@ -62,7 +63,8 @@ function esc(value) {
 
 function loadSettings() {
   const base = {
-    theme: "futuristic",
+    theme: "holographic",
+    lang: "en",
     sound: false,
     narration: false,
     voiceURI: "",
@@ -112,6 +114,8 @@ function applySettings() {
     soundBtn.setAttribute("aria-pressed", session.settings.sound ? "true" : "false");
   }
   paintSettingsForm();
+  document.dispatchEvent(new CustomEvent("f9-theme"));
+  applyI18n();
 }
 
 function roboticPenalty(name) {
@@ -252,7 +256,8 @@ function doneCount() {
 }
 
 function card(href, kicker, heading, body, tags) {
-  return `<a class="card" href="${esc(href)}"><p class="kicker">${esc(kicker)}</p><h2>${esc(heading)}</h2><p>${esc(body)}</p>${tags ? `<div class="tags">${tags}</div>` : ""}</a>`;
+  const shape = [...String(heading)].reduce((sum, ch) => sum + ch.charCodeAt(0), 0);
+  return `<a class="card" href="${esc(href)}">${isoMarkup(shape)}<div class="card-copy"><p class="kicker">${esc(kicker)}</p><h2>${esc(heading)}</h2><p>${esc(body)}</p>${tags ? `<div class="tags">${tags}</div>` : ""}</div></a>`;
 }
 
 function renderRail() {
@@ -324,6 +329,7 @@ async function renderHome() {
     <div class="grid">
       ${catalog.tracks.map((track) => card(`#/track/${track.id}`, track.group, track.title, track.blurb, `<span class="tag">${track.lessons.length} lessons</span>`)).join("")}
     </div>`;
+  paintHeroCopy(catalog);
 }
 
 function renderTracks() {
@@ -912,6 +918,21 @@ function bindChrome() {
     session.settings.theme = button.dataset.themePick;
     saveSettings();
   });
+  const lang = document.querySelector("#lang-pick");
+  if (lang) {
+    lang.value = session.settings.lang || "en";
+    lang.addEventListener("change", () => {
+      session.settings.lang = lang.value;
+      saveSettings();
+    });
+  }
+  const mode = document.querySelector("#mode-toggle");
+  if (mode) {
+    mode.addEventListener("click", () => {
+      session.settings.theme = session.settings.theme === "light" ? "holographic" : "light";
+      saveSettings();
+    });
+  }
   document.querySelector("#set-sound").addEventListener("change", (event) => {
     session.settings.sound = event.target.checked;
     saveSettings();

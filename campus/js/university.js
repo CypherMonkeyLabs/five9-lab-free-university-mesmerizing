@@ -1,6 +1,7 @@
 import { diagram, diagramIds, diagramMeta, flowIds } from "./diagrams.js";
 import { chartStrip } from "./charts.js";
 import { buildZip } from "./zipstore.js";
+import { applyI18n } from "./i18n.js";
 
 const UNI_KEY = "f9lab-university";
 const REPO = "https://github.com/cipher0x9/five9-lab-free-university-mesmerizing";
@@ -67,11 +68,8 @@ function lookFor(hash) {
   if (hash.startsWith("#/ivr") || hash.startsWith("#/sandbox")) return "ivr";
   if (hash.startsWith("#/pacing") || hash.startsWith("#/ports")) return "dial";
   if (hash.startsWith("#/boss") || hash.startsWith("#/trouble")) return "boss";
-  const hour = new Date().getHours();
-  if (hour < 5 || hour >= 21) return "night";
-  if (hour < 11) return "dawn";
-  if (hour < 17) return "day";
-  return "dusk";
+  const cycle = ["dawn", "day", "dusk", "night"];
+  return cycle[Math.floor(Date.now() / 180000) % cycle.length];
 }
 
 function updateMascot() {
@@ -203,9 +201,13 @@ function renderTrouble(ctx, data) {
   ctx.view.innerHTML = `<p class="note">${esc(data.banner)}</p>${figure("nat-path", "Signaling up does not prove media")}<div class="grid">${data.playbooks.map((book) => `<article class="panel"><h2>${esc(book.symptom)}</h2><ol>${book.tree.map((step) => `<li>${esc(step)}</li>`).join("")}</ol><p>${esc(book.meaning)}</p><p><a href="${esc(book.lesson)}">Open the lesson</a> · <a href="${esc(book.url)}" rel="noopener" target="_blank">${esc(book.source)}</a></p></article>`).join("")}</div>`;
 }
 
+function figureBlock(id, title, source) {
+  return `<figure class="figure float-card">${diagram(id)}<figcaption><strong>${esc(title)}</strong><br>${esc(source)}</figcaption><button type="button" class="btn enlarge" data-open-diagram="${esc(id)}">Enlarge</button></figure>`;
+}
+
 function renderAtlas(ctx) {
   ctx.setTitle("Diagrams", "Teaching drawings. The caption names the public page. None of these are captured Five9 traces.");
-  ctx.view.innerHTML = `<p class="note">${diagramIds.length} diagrams in this atlas. ${flowIds.length} of them are animated flows. Open <a href="#/flows">Flows</a> for the moving ones.</p><div class="snap">${diagramMeta.map(([id, title, source]) => `<figure class="figure float-card">${diagram(id)}<figcaption><strong>${esc(title)}</strong><br>${esc(source)}</figcaption></figure>`).join("")}</div>`;
+  ctx.view.innerHTML = `<p class="note">${diagramIds.length} diagrams in this atlas. ${flowIds.length} of them are animated flows. Open <a href="#/flows">Flows</a> for the moving ones. Enlarge a drawing to pause, step, and read why it matters.</p><div class="atlas-grid">${diagramMeta.map(([id, title, source]) => figureBlock(id, title, source)).join("")}</div>`;
 }
 
 function renderFlows(ctx) {
@@ -215,7 +217,7 @@ function renderFlows(ctx) {
     const row = known.get(id) ? diagramMeta.find((item) => item[0] === id) : null;
     const title = row ? row[1] : id;
     const source = row ? row[2] : "This lab";
-    return `<figure class="figure float-card">${diagram(id)}<figcaption><strong>${esc(title)}</strong><br>${esc(source)}</figcaption></figure>`;
+    return figureBlock(id, title, source);
   }).join("")}</div>`;
 }
 
@@ -225,6 +227,31 @@ async function renderCharts(ctx) {
   ctx.setTitle("Charts", "Six charts from this lab's catalog and the cited bandwidth and port tables.");
   ctx.view.innerHTML = `${counterRow(catalog)}<div class="chart-grid">${chartStrip(catalog, data)}</div><h2>Study map</h2><svg id="study-map"></svg><p class="note">The mind map is a study outline for this lab. It is not a Five9 organization chart. It is drawn by the vendored markmap build and does not fetch a stylesheet.</p>`;
   import("./effects.js").then((mod) => mod.mountMindmap(ctx.view.querySelector("#study-map"))).catch(() => {});
+}
+
+function renderRegions(ctx) {
+  ctx.setTitle("Regions", "Only the places a public Five9 page actually names. Anything else is marked as an example.");
+  ctx.view.innerHTML = `
+    <p class="note">Flags below the cited cards are symbols for the switcher. They are not a coverage map and not a carrier list.</p>
+    <div class="grid">
+      <article class="panel region-card">
+        <h2>United States, Canada, Europe</h2>
+        <p class="flag-row" aria-hidden="true">🇺🇸 🇨🇦 🇪🇺</p>
+        <p>The July 2026 technical-requirements change log says domains were added for US, Canadian, and European centers. This lab does not copy the IP lists. They move.</p>
+        <p><a href="https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf" rel="noopener" target="_blank">Technical requirements PDF</a></p>
+      </article>
+      <article class="panel region-card">
+        <h2>Studio portals</h2>
+        <p>3 names in the March 2026 change log: GCP, CHI, VIR. That line clarifies Studio 7 network text. It is not a promise that those three strings are the only portals.</p>
+        <p>The Studio 7 article says you copy a task key from the regional Studio portal into VCC. A key from the wrong portal is a different bot.</p>
+        <p><a href="https://community.five9.com/s/article/Studio-7-Integrate-Digital-IVA-in-Studio-with-VCC?language=en_US" rel="noopener" target="_blank">Studio digital IVA with VCC</a></p>
+      </article>
+      <article class="panel region-card">
+        <h2>Example symbols</h2>
+        <p class="flag-row" aria-label="Example flags, not coverage">🇮🇳 🇫🇷 🇩🇪 🇯🇵 🇲🇽 🇧🇷</p>
+        <p>Example only. This lab has no public page that lists PSTN coverage, carriers, or a regulation pack for these countries. Do not brief a customer from this row.</p>
+      </article>
+    </div>`;
 }
 
 function renderPlay(ctx) {
@@ -606,27 +633,50 @@ function themeRow() {
   return `<div class="quick-themes fold-themes" role="group" aria-label="Theme">${picks.map(([id, label, color]) => `<button type="button" class="swatch" data-theme-pick="${id}" style="background:${color}" aria-label="${label}"></button>`).join("")}</div>`;
 }
 
+const SOLIDS = [
+  `<svg class="iso" viewBox="0 0 88 72" aria-hidden="true"><polygon class="iso-top" points="44,8 76,24 44,40 12,24"></polygon><polygon class="iso-left" points="12,24 44,40 44,62 12,46"></polygon><polygon class="iso-right" points="76,24 44,40 44,62 76,46"></polygon></svg>`,
+  `<svg class="iso" viewBox="0 0 88 72" aria-hidden="true"><polygon class="iso-top" points="44,4 70,16 44,28 18,16"></polygon><polygon class="iso-left" points="18,16 44,28 44,66 18,54"></polygon><polygon class="iso-right" points="70,16 44,28 44,66 70,54"></polygon></svg>`,
+  `<svg class="iso" viewBox="0 0 88 72" aria-hidden="true"><polygon class="iso-top" points="44,18 80,32 44,46 8,32"></polygon><polygon class="iso-left" points="8,32 44,46 44,58 8,44"></polygon><polygon class="iso-right" points="80,32 44,46 44,58 80,44"></polygon></svg>`,
+  `<svg class="iso" viewBox="0 0 88 72" aria-hidden="true"><polygon class="iso-top" points="44,6 72,28 16,28"></polygon><polygon class="iso-left" points="16,28 44,40 44,66 16,50"></polygon><polygon class="iso-right" points="72,28 44,40 44,66 72,50"></polygon></svg>`,
+  `<svg class="iso" viewBox="0 0 88 72" aria-hidden="true"><polygon class="iso-top" points="44,10 62,20 44,30 26,20"></polygon><polygon class="iso-left" points="26,20 44,30 44,42 26,32"></polygon><polygon class="iso-right" points="62,20 44,30 44,42 62,32"></polygon><polygon class="iso-top" points="44,28 78,42 44,56 10,42" opacity="0.95"></polygon><polygon class="iso-left" points="10,42 44,56 44,68 10,54"></polygon><polygon class="iso-right" points="78,42 44,56 44,68 78,54"></polygon></svg>`
+];
+
+export function isoMarkup(index = 0) {
+  const n = Number.isFinite(index) ? index : [...String(index)].reduce((sum, ch) => sum + ch.charCodeAt(0), 0);
+  return SOLIDS[Math.abs(n) % SOLIDS.length];
+}
+
+export function paintHeroCopy(catalog) {
+  const host = document.querySelector("#hero-copy");
+  const slot = document.querySelector("#hero-slot");
+  if (!host || !slot || !catalog) return;
+  const done = lessonsDone();
+  const total = catalog.counts.lessons || 1;
+  const pct = Math.round((done / total) * 100);
+  const dash = ((pct / 100) * 94).toFixed(1);
+  const spots = [
+    ["#/atlas", "diagrams", "Diagrams", `${diagramIds.length} drawings`],
+    ["#/flows", "flows", "Flows", `${flowIds.length} moving`],
+    ["#/charts", "charts", "Charts", "6 cited charts"],
+    ["#/downloads", "cheats", "Cheat Codes", "Sheets and cards"]
+  ];
+  host.innerHTML = `
+    <p class="hero-greet" data-i18n="greet">Signal university</p>
+    <div class="ring-wrap"><svg class="ring" viewBox="0 0 36 36" aria-hidden="true"><circle class="ring-bg" cx="18" cy="18" r="15"></circle><circle class="ring-val" cx="18" cy="18" r="15" stroke-dasharray="${dash} 94"></circle></svg><span>${pct}% of lessons finished here</span></div>
+    ${counterRow(catalog)}
+    <div class="spot-row">${spots.map(([href, key, label, detail]) => `<a class="spotlight" href="${href}"><span data-i18n="${key}">${esc(label)}</span><strong>${esc(detail)}</strong></a>`).join("")}</div>`;
+  slot.hidden = false;
+  applyI18n();
+}
+
 export async function homeFoldHtml() {
   const [catalog, data] = await Promise.all([
     fetch("data/catalog.json").then((res) => res.json()),
     loadUni()
   ]);
-  const spots = [
-    ["#/atlas", "Diagrams", `${diagramIds.length} drawings`],
-    ["#/flows", "Flows", `${flowIds.length} moving`],
-    ["#/charts", "Charts", "6 cited charts"],
-    ["#/downloads", "Cheat Codes", "Sheets and cards"]
-  ];
   return `<section id="fold" class="fold">
-    <div class="fold-head">
-      <p class="kicker">Signal university</p>
-      ${themeRow()}
-      ${miniMascots()}
-    </div>
-    ${heroFlow()}
     ${counterRow(catalog)}
-    <div class="spot-row">${spots.map(([href, label, detail]) => `<a class="spotlight" href="${href}"><span>${esc(label)}</span><strong>${esc(detail)}</strong></a>`).join("")}</div>
-    <div class="fold-tools">${iconRow()}<div class="chart-snap">${chartStrip(catalog, data)}</div></div>
+    <div class="fold-tools"><div class="icon-row">${["Diagrams", "Flows", "Charts", "Codes"].map((label, index) => `<span class="iso-card">${isoMarkup(index)}<span>${label}</span></span>`).join("")}</div><div class="chart-snap">${chartStrip(catalog, data)}</div></div>
     <p class="note">${esc(data.banner)}</p>
   </section>`;
 }
@@ -673,7 +723,7 @@ export async function decorateTrack(view) {
   if (!view.isConnected || !location.hash.startsWith(`#/track/${match[1]}`)) return;
   const band = document.createElement("section");
   band.id = "track-band";
-  band.innerHTML = `${counterRow(catalog)}${miniMascots()}${iconRow()}<div class="chart-snap">${chartStrip(catalog, data)}</div><p class="note">${esc(data.banner)}</p>`;
+  band.innerHTML = `${counterRow(catalog)}<div class="icon-row">${[0, 1, 2, 3].map((index) => isoMarkup(index)).join("")}</div><div class="chart-snap">${chartStrip(catalog, data)}</div><p class="note">${esc(data.banner)}</p>`;
   view.insertBefore(band, view.firstChild);
 }
 
@@ -757,6 +807,7 @@ export async function tryUniversityRoute(bare, ctx) {
     "#/flows": async () => renderFlows(ctx),
     "#/charts": async () => renderCharts(ctx),
     "#/play": async () => renderPlay(ctx),
+    "#/regions": async () => renderRegions(ctx),
     "#/offline": async () => renderDownloads(ctx, true),
     "#/ports": async () => renderPorts(ctx, await loadUni()),
     "#/trouble": async () => renderTrouble(ctx, await loadUni()),
@@ -786,6 +837,7 @@ const CRUMBS = {
   "#/ecosystem": "Ecosystem",
   "#/offline": "Downloads",
   "#/career": "Careers",
+  "#/regions": "Regions",
   "#/tracks": "Tracks",
   "#/tools": "Tools",
   "#/progress": "Progress",
@@ -821,29 +873,98 @@ function paintMenu(bare) {
   });
 }
 
+function measureChrome() {
+  const chrome = document.querySelector("#chrome");
+  if (!chrome) return;
+  const height = Math.ceil(chrome.getBoundingClientRect().height);
+  if (height > 0) document.documentElement.style.setProperty("--chrome-h", `${height}px`);
+}
+
+function tickCounters(root) {
+  (root || document).querySelectorAll("[data-count]").forEach((node) => {
+    if (node.dataset.ticked === "1") return;
+    const target = Number(node.dataset.count);
+    if (!Number.isFinite(target)) return;
+    node.dataset.ticked = "1";
+    if (document.documentElement.dataset.motion === "reduce") {
+      node.textContent = String(target);
+      return;
+    }
+    const start = performance.now();
+    const step = (now) => {
+      const t = Math.min(1, (now - start) / 700);
+      node.textContent = String(Math.round(target * (1 - (1 - t) ** 3)));
+      if (t < 1) requestAnimationFrame(step);
+    };
+    node.textContent = "0";
+    requestAnimationFrame(step);
+  });
+}
+
+function whyFor(id, source) {
+  if (id === "sip-ladder" || id === "sip-entries") {
+    return "RFC 3261 teaching drawing. It is not a packet capture from a Five9 domain.";
+  }
+  if (id === "forecast-loop" || id.includes("erlang")) {
+    return "Textbook Erlang. Five9 has not published this formula as the WEM engine.";
+  }
+  return `Teaching model. ${source || "The caption names the public page."}`;
+}
+
+function openLightbox(id) {
+  const dialog = document.querySelector("#lightbox");
+  const stage = document.querySelector("#lb-stage");
+  if (!dialog || !stage) return;
+  const row = diagramMeta.find((item) => item[0] === id);
+  const title = row ? row[1] : id;
+  const source = row ? row[2] : "";
+  document.querySelector("#lb-title").textContent = title;
+  stage.classList.remove("is-paused");
+  stage.dataset.step = "0";
+  stage.innerHTML = diagram(id) || `<p>That drawing is not in this atlas.</p>`;
+  document.querySelector("#lb-why").textContent = whyFor(id, source);
+  document.querySelector("#lb-legend").textContent = source;
+  const play = document.querySelector("#lb-play");
+  if (play) play.textContent = "Pause";
+  if (!dialog.open) dialog.showModal();
+}
+
+function syncHero(bare) {
+  const slot = document.querySelector("#hero-slot");
+  const home = bare === "#/" || bare === "";
+  if (!slot) return;
+  if (!home) {
+    slot.hidden = true;
+    import("./stage.js").then((mod) => mod.stopHero()).catch(() => {});
+    return;
+  }
+  slot.hidden = false;
+  import("./stage.js").then((mod) => mod.mountHero(slot)).catch(() => {
+    const flat = slot.querySelector("#hero-flat");
+    if (flat) flat.hidden = false;
+  });
+}
+
 export function afterRoute() {
   updateMascot();
   updateReadbar();
   startSky();
+  measureChrome();
   const view = document.querySelector("#view");
   const bare = (location.hash || "#/").split("?")[0];
   document.body.dataset.route = bare || "#/";
   paintCrumbs(bare);
   paintMenu(bare);
+  applyI18n();
+  syncHero(bare);
   if (view && (bare === "#/" || bare === "") && !view.querySelector("#fold")) {
     mountHome(view).catch(() => {});
   }
   if (view && bare.startsWith("#/track/")) {
     decorateTrack(view).catch(() => {});
   }
-  if (view && view.querySelector("#fold")) {
-    import("./effects.js").then((mod) => {
-      mod.stopStage();
-      return mod.dressFold(view.querySelector("#fold"));
-    }).catch(() => {});
-  } else {
-    import("./effects.js").then((mod) => mod.stopStage()).catch(() => {});
-  }
+  tickCounters(document);
+  import("./effects.js").then((mod) => mod.stopStage()).catch(() => {});
 }
 
 export function initUniversity() {
@@ -853,7 +974,17 @@ export function initUniversity() {
   setInterval(updateMascot, 60000);
   armKonami();
   startSky();
-  window.addEventListener("resize", () => { cancelAnimationFrame(sky.raf); startSky(); });
+  measureChrome();
+  window.addEventListener("resize", () => {
+    cancelAnimationFrame(sky.raf);
+    startSky();
+    measureChrome();
+  });
+  const chrome = document.querySelector("#chrome");
+  if (chrome && "ResizeObserver" in window) {
+    const watcher = new ResizeObserver(() => measureChrome());
+    watcher.observe(chrome);
+  }
   window.addEventListener("pointermove", (event) => {
     sky.pointer.x = event.clientX / window.innerWidth;
     sky.pointer.y = event.clientY / window.innerHeight;
@@ -892,6 +1023,65 @@ export function initUniversity() {
       links[next].focus();
     });
   }
+  document.addEventListener("click", (event) => {
+    const opener = event.target.closest("[data-open-diagram]");
+    if (opener) openLightbox(opener.dataset.openDiagram);
+  });
+  const lightbox = document.querySelector("#lightbox");
+  const stage = document.querySelector("#lb-stage");
+  const play = document.querySelector("#lb-play");
+  const stepBtn = document.querySelector("#lb-step");
+  const close = document.querySelector("#lb-close");
+  if (close && lightbox) close.addEventListener("click", () => lightbox.close());
+  if (play && stage) {
+    play.addEventListener("click", () => {
+      const paused = stage.classList.toggle("is-paused");
+      play.textContent = paused ? "Play" : "Pause";
+    });
+  }
+  if (stepBtn && stage) {
+    stepBtn.addEventListener("click", () => {
+      const nodes = [...stage.querySelectorAll(".node, .node-box, .flow-line, .packet")];
+      nodes.forEach((node) => node.classList.remove("is-hot"));
+      if (!nodes.length) return;
+      const next = (Number(stage.dataset.step) || 0) % nodes.length;
+      nodes[next].classList.add("is-hot");
+      stage.dataset.step = String(next + 1);
+      stage.classList.add("is-paused");
+      if (play) play.textContent = "Play";
+    });
+  }
+  const tip = document.querySelector("#tip");
+  document.addEventListener("pointermove", (event) => {
+    if (!tip) return;
+    const node = event.target.closest ? event.target.closest("[data-tip]") : null;
+    if (!node) {
+      tip.hidden = true;
+      return;
+    }
+    tip.hidden = false;
+    tip.textContent = node.getAttribute("data-tip") || "";
+    tip.style.left = `${Math.min(event.clientX + 14, window.innerWidth - 240)}px`;
+    tip.style.top = `${Math.min(event.clientY + 16, window.innerHeight - 40)}px`;
+  });
+  document.querySelectorAll("#audio-dock audio").forEach((clip) => {
+    clip.addEventListener("error", () => {
+      const note = document.querySelector("#audio-fallback");
+      if (note) note.hidden = false;
+    });
+  });
+  const rate = document.querySelector("#audio-rate");
+  if (rate) {
+    rate.addEventListener("change", () => {
+      const speed = Number(rate.value) || 1;
+      document.querySelectorAll("#audio-dock audio").forEach((clip) => { clip.playbackRate = speed; });
+    });
+  }
+  document.addEventListener("f9-theme", () => {
+    const bare = (location.hash || "#/").split("?")[0];
+    if (bare === "#/" || bare === "") syncHero(bare);
+  });
+  applyI18n();
   import("./effects.js").then((mod) => mod.armConfetti()).catch(() => {});
 }
 
