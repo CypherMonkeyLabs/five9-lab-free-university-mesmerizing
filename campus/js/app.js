@@ -900,6 +900,14 @@ function paintSettingsForm() {
 }
 
 function bindChrome() {
+  const linksToggle = document.querySelector("#links-toggle");
+  const utilbar = document.querySelector("#utilbar");
+  if (linksToggle && utilbar) {
+    linksToggle.addEventListener("click", () => {
+      const open = utilbar.classList.toggle("is-open");
+      linksToggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  }
   document.querySelector("#open-settings").addEventListener("click", () => {
     fillVoices();
     paintSettingsForm();

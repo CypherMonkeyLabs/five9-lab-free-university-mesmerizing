@@ -36,7 +36,7 @@
   <canvas id="sky" aria-hidden="true"></canvas>
   <a class="skip" href="#main">Skip to content</a>
   <div class="chrome" id="chrome">
-  <div class="utilbar">
+  <div class="utilbar" id="utilbar">
     <a href="https://cyphermonkeylabs.com">cyphermonkeylabs.com</a>
     <a href="https://linktr.ee/cyphermonkey">linktr.ee/cyphermonkey</a>
     <a href="https://github.com/cipher0x9/five9-lab-free-university-mesmerizing">Rate, comment, help</a>
@@ -82,6 +82,7 @@
       </svg>
     </a>
     <div class="top-actions">
+      <button type="button" class="btn links-toggle" id="links-toggle" aria-expanded="false" aria-controls="utilbar">Links</button>
       <button type="button" class="btn" id="open-settings">Settings</button>
     </div>
   </header>
@@ -100,6 +101,11 @@
     <div class="hero-flat" id="hero-flat" hidden></div>
     <div class="hero-hit" id="hero-hit"></div>
     <div class="hero-copy" id="hero-copy"></div>
+    <div class="queue-meter" id="queue-meter">
+      <span>Queue</span>
+      <strong id="queue-count">6</strong>
+      <span class="qm-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+    </div>
   </div>
   <div class="shell">
     <nav class="rail" id="rail" aria-label="Lab sections"></nav>
