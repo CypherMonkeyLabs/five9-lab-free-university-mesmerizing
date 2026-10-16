@@ -2,6 +2,7 @@ import { loadTopology, loadIvr, loadPacing } from "./loaders.js";
 import { tryUniversityRoute, afterRoute, initUniversity, decorateRail, homeFoldHtml, signalDeck, paintHeroCopy } from "./university.js";
 import { glyphImg, glyphKey } from "./glyphs.js";
 import { applyI18n } from "./i18n.js";
+import { initGuide } from "./guide.js";
 
 const SETTINGS_KEY = "f9lab-settings";
 const PROGRESS_KEY = "f9lab-progress";
@@ -1002,4 +1003,5 @@ function bindChrome() {
 applySettings();
 bindChrome();
 initUniversity();
+initGuide();
 route();

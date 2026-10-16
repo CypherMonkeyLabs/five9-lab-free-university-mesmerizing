@@ -1,0 +1,301 @@
+{
+  "greeting": "I'm the Guide Bot for this lab. I'm a lifelong student and an AI enthusiast. I came up through systems, networking, voice, and the contact center, and I'm growing into AI omni-channel agents. I only answer from the pages in this lab. If these notes don't have it, I say so.",
+  "fallback": "I don't have that in this lab's guide notes, so I won't invent a Five9 fact. Try Search, or ask about Diagrams, Flows, Charts, Cheat Codes, or Ecosystem.",
+  "starters": ["Diagrams", "Flows", "Charts", "Cheat Codes", "Ecosystem", "Tour", "Quiz"],
+  "entries": [
+    {
+      "id": "identity",
+      "title": "Who is speaking",
+      "href": "#/",
+      "keywords": ["who are you", "about you", "identity", "student", "enthusiast"],
+      "synonyms": ["lucky", "voice background", "contact center", "networking", "omni-channel", "omnichannel", "cypher"],
+      "answer": "I'm a lifelong student and an AI enthusiast. I came up through systems, networking, voice, and the contact center, and I'm growing into AI omni-channel agents. This bot is scripted from this lab's pages. It is not Five9, and it does not invent product facts."
+    },
+    {
+      "id": "diagrams",
+      "title": "Diagrams",
+      "href": "#/atlas",
+      "keywords": ["diagram", "diagrams", "atlas", "drawing", "drawings"],
+      "synonyms": ["picture", "pictures", "schematic", "figure", "figures", "visual"],
+      "answer": "Diagrams is the atlas: {{diagrams}} teaching drawings. The page says the caption names the public page, and none of these are captured Five9 traces. {{flows}} of them are animated flows. Open Flows for the moving ones."
+    },
+    {
+      "id": "flows",
+      "title": "Flows",
+      "href": "#/flows",
+      "keywords": ["flow", "flows", "animated"],
+      "synonyms": ["moving", "animation", "call flow", "signal flow", "step diagram"],
+      "answer": "Flows lists {{flows}} animated call, signal, and data flows. The dashes move until reduced motion is on. The SIP ladder is an RFC 3261 teaching drawing, not a capture. The forecast loop is textbook Erlang, not the Five9 WEM engine."
+    },
+    {
+      "id": "charts",
+      "title": "Charts",
+      "href": "#/charts",
+      "keywords": ["chart", "charts", "graph"],
+      "synonyms": ["bar", "bars", "bandwidth chart", "catalog count"],
+      "answer": "This build draws {{charts}} charts ({{chartList}}) from the catalog and the cited bandwidth and port tables. The mind map under them is a study outline for this lab. It is not a Five9 organization chart."
+    },
+    {
+      "id": "cheats",
+      "title": "Cheat Codes",
+      "href": "#/downloads",
+      "keywords": ["cheat", "cheats", "cheat codes", "sheet", "sheets"],
+      "synonyms": ["cheat sheet", "cheatsheet", "flashcard", "flash card", "pdf", "png", "one-page"],
+      "answer": "Cheat Codes is the sheet desk: one-page sheets, a flashcard deck, and the offline bundle, generated in this repo. Downloads is the same desk with the zip in focus."
+    },
+    {
+      "id": "play",
+      "title": "Play",
+      "href": "#/play",
+      "keywords": ["play", "sandbox", "bench"],
+      "synonyms": ["game", "practice", "ports game", "daily"],
+      "answer": "Play is benches that use the same public facts as the lessons. The ports table is the community softphone list plus the WEM supervisor ports, and the game uses those same rows."
+    },
+    {
+      "id": "ecosystem",
+      "title": "Ecosystem",
+      "href": "#/ecosystem",
+      "keywords": ["ecosystem", "glossary", "integration"],
+      "synonyms": ["mind map", "neighbors", "systems", "terms"],
+      "answer": "Ecosystem is the glossary, a mind map, and the systems that sit next to a Five9 domain. Each glossary row keeps its source link. Rows the lab is not sure about stay under Uncertain."
+    },
+    {
+      "id": "downloads",
+      "title": "Downloads",
+      "href": "#/offline",
+      "keywords": ["download", "downloads", "offline"],
+      "synonyms": ["zip", "offline pack", "bundle"],
+      "answer": "Downloads opens the same generated sheets as Cheat Codes, with the offline bundle in focus. The pack is built in this repo and saved in this browser when you ask for it."
+    },
+    {
+      "id": "careers",
+      "title": "Careers",
+      "href": "#/career",
+      "keywords": ["career", "careers"],
+      "synonyms": ["job", "jobs", "study frame", "hiring"],
+      "answer": "Careers is a study frame in this lab, not a job requisition. The career drawings are labeled study frames, not job reqs. Interview and Certifications are linked from that page."
+    },
+    {
+      "id": "home",
+      "title": "Home",
+      "href": "#/",
+      "keywords": ["home", "floor", "start"],
+      "synonyms": ["landing", "front"],
+      "answer": "Home says: run the floor, build an IVR, pace a dialer, and break a SIP path on purpose. The spots under the hero jump to Diagrams, Flows, Charts, and Cheat Codes."
+    },
+    {
+      "id": "learn",
+      "title": "Learn",
+      "href": "#/tracks",
+      "keywords": ["learn", "track", "tracks", "lesson", "lessons"],
+      "synonyms": ["course", "courses", "catalog", "study"],
+      "answer": "Learn opens Tracks. The page says eighteen paths from the domain model to a Cisco cutover. Lesson text is the catalog in this repo, not a live Five9 tenant."
+    },
+    {
+      "id": "tools",
+      "title": "Tools",
+      "href": "#/tools",
+      "keywords": ["tool", "tools"],
+      "synonyms": ["simulator", "reference bench"],
+      "answer": "Tools are simulators and reference benches. They load only when you open them."
+    },
+    {
+      "id": "topology",
+      "title": "3D topology",
+      "href": "#/topology",
+      "keywords": ["topology", "3d"],
+      "synonyms": ["three", "map", "neighbors"],
+      "answer": "3D topology is a teaching map of a Five9 domain and its neighbors. Failure toggles describe symptoms. They are not a live network."
+    },
+    {
+      "id": "ivr",
+      "title": "IVR builder",
+      "href": "#/ivr",
+      "keywords": ["ivr", "script builder"],
+      "synonyms": ["ivr builder", "call flow builder", "modules"],
+      "answer": "The IVR script builder uses module names from the IVR Administrator's Guide. The export is a learning model, not a file VCC can import."
+    },
+    {
+      "id": "pacing",
+      "title": "Dialer pacing",
+      "href": "#/pacing",
+      "keywords": ["pacing", "dialer"],
+      "synonyms": ["predictive", "abandon", "pacing simulator"],
+      "answer": "Dialer pacing is a teaching clock for five dialing modes. It is not the Five9 dialer and it does not use the vendor's abandon window."
+    },
+    {
+      "id": "certs",
+      "title": "Certifications",
+      "href": "#/certs",
+      "keywords": ["cert", "certs", "certification", "certifications"],
+      "synonyms": ["exam", "course", "credential"],
+      "answer": "Certifications lists official names this lab could verify. Missing exam codes stay blank on purpose."
+    },
+    {
+      "id": "boss",
+      "title": "Boss incidents",
+      "href": "#/boss",
+      "keywords": ["boss", "incident", "incidents"],
+      "synonyms": ["synthetic log", "outage drill"],
+      "answer": "Boss incidents use synthetic logs. The failure modes are real; the phone numbers and names are not."
+    },
+    {
+      "id": "interview",
+      "title": "Interview",
+      "href": "#/interview",
+      "keywords": ["interview"],
+      "synonyms": ["q&a", "qa", "hiring panel"],
+      "answer": "Interview is short answers a hiring panel can check against the linked page."
+    },
+    {
+      "id": "progress",
+      "title": "Progress",
+      "href": "#/progress",
+      "keywords": ["progress"],
+      "synonyms": ["localstorage", "saved", "scoreboard"],
+      "answer": "Progress is stored in localStorage on this browser. Nothing is sent to a server."
+    },
+    {
+      "id": "regions",
+      "title": "Regions",
+      "href": "#/regions",
+      "keywords": ["region", "regions"],
+      "synonyms": ["country", "locale", "coverage"],
+      "answer": "Regions lists only the places a public Five9 page actually names. Anything else is marked as an example. Flags are symbols for the switcher, not a coverage map and not a carrier list."
+    },
+    {
+      "id": "badges",
+      "title": "Badges",
+      "href": "#/badges",
+      "keywords": ["badge", "badges"],
+      "synonyms": ["mascot", "earned"],
+      "answer": "Badges read real progress on this browser. They are not a counter that starts empty and stays empty."
+    },
+    {
+      "id": "search",
+      "title": "Search",
+      "href": "#/search",
+      "keywords": ["search"],
+      "synonyms": ["find", "lookup", "index"],
+      "answer": "Search covers lessons, glossary rows, and university pages. The index is built from the lesson text in this repo. The menu search box opens that same page."
+    },
+    {
+      "id": "sip",
+      "title": "SIP ladder",
+      "href": "#/flows",
+      "keywords": ["sip ladder", "rfc 3261", "sip"],
+      "synonyms": ["invite", "ladder", "signaling"],
+      "answer": "The SIP ladder on Flows is an RFC 3261 teaching drawing. It is not a packet capture from a Five9 domain."
+    },
+    {
+      "id": "erlang",
+      "title": "Forecast loop",
+      "href": "#/flows",
+      "keywords": ["erlang", "forecast"],
+      "synonyms": ["forecast loop", "wfm math", "workforce math"],
+      "answer": "The forecast loop is textbook Erlang. Five9 has not published this formula as the WEM engine, and the Flows page says it is not the Five9 WEM engine."
+    },
+    {
+      "id": "uccx",
+      "title": "UCCX bridge",
+      "href": "#/atlas",
+      "keywords": ["uccx", "cisco"],
+      "synonyms": ["import", "migration drawing", "csq"],
+      "answer": "The UCCX bridge drawing is a teaching bridge. Its caption says there is no import button: rebuild, then move one number."
+    },
+    {
+      "id": "listen",
+      "title": "Listen",
+      "href": "#/",
+      "keywords": ["listen", "audio"],
+      "synonyms": ["narration", "mp3", "architect"],
+      "answer": "Listen scrolls to the audio dock. What is there now is a short espeak-ng study dialogue, not a Five9 recording. The player paths stay so a later recording can replace the files."
+    }
+  ],
+  "tours": [
+    {
+      "id": "atlas",
+      "title": "Diagrams, flows, charts",
+      "steps": [
+        {
+          "href": "#/atlas",
+          "say": "Diagrams. Teaching drawings. The caption names the public page. None of these are captured Five9 traces. This atlas has {{diagrams}} drawings, and {{flows}} of them are animated."
+        },
+        {
+          "href": "#/flows",
+          "say": "Flows. {{flows}} animated call, signal, and data flows. The SIP ladder is an RFC 3261 teaching drawing, not a capture. The forecast loop is textbook Erlang, not the Five9 WEM engine."
+        },
+        {
+          "href": "#/charts",
+          "say": "Charts. This build draws {{charts}} charts from the catalog and the cited bandwidth and port tables. The mind map is a study outline, not a Five9 organization chart."
+        },
+        {
+          "href": "#/downloads",
+          "say": "Cheat Codes. One-page sheets, a flashcard deck, and the offline bundle. Generated in this repo."
+        },
+        {
+          "href": "#/ecosystem",
+          "say": "Ecosystem. Glossary, mind map, and the systems that sit next to a Five9 domain. Uncertain rows stay labeled uncertain."
+        }
+      ]
+    },
+    {
+      "id": "floor",
+      "title": "Learn and play",
+      "steps": [
+        {
+          "href": "#/tracks",
+          "say": "Tracks. Eighteen paths from the domain model to a Cisco cutover."
+        },
+        {
+          "href": "#/ivr",
+          "say": "IVR script builder. Modules use the names in the IVR Administrator's Guide. The export is a learning model, not a file VCC can import."
+        },
+        {
+          "href": "#/pacing",
+          "say": "Dialer pacing simulator. A teaching clock for five dialing modes. It is not the Five9 dialer and it does not use the vendor's abandon window."
+        },
+        {
+          "href": "#/play",
+          "say": "Play. Benches that use the same public facts as the lessons."
+        },
+        {
+          "href": "#/career",
+          "say": "Careers. A study frame in this lab, not a job requisition."
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "prompt": "Which page lists the animated call, signal, and data flows?",
+      "choices": ["Flows", "Careers", "Regions"],
+      "answer": 0,
+      "why": "The Flows page is the moving set. Diagrams tells you to open Flows for those."
+    },
+    {
+      "prompt": "What does this lab say the SIP ladder is?",
+      "choices": ["An RFC 3261 teaching drawing", "A captured Five9 trace", "A carrier invoice"],
+      "answer": 0,
+      "why": "The Flows note says the SIP ladder is an RFC 3261 teaching drawing, not a capture."
+    },
+    {
+      "prompt": "How is the forecast loop labeled?",
+      "choices": ["Textbook Erlang, not the Five9 WEM engine", "The Five9 WEM engine", "A live forecast export"],
+      "answer": 0,
+      "why": "The Flows page says the forecast loop is textbook Erlang, not the Five9 WEM engine."
+    },
+    {
+      "prompt": "Where are the glossary and the integration map?",
+      "choices": ["Ecosystem", "Cheat Codes", "Boss incidents"],
+      "answer": 0,
+      "why": "Ecosystem is the glossary, mind map, and the systems next to a Five9 domain."
+    },
+    {
+      "prompt": "What are the career drawings in this lab?",
+      "choices": ["Study frames, not job reqs", "Official Five9 job requisitions", "Exam vouchers"],
+      "answer": 0,
+      "why": "The career diagram caption says study frames, not job reqs."
+    }
+  ]
+}
