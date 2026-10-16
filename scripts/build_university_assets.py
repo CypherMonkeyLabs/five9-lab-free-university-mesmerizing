@@ -15,7 +15,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 CAMPUS = ROOT / "campus"
 DOWNLOADS = CAMPUS / "downloads"
-REPO = "https://github.com/cipher0x9/five9-lab-free-university-mesmerizing"
+REPO = "https://github.com/CypherMonkeyLabs/five9-lab-free-university-mesmerizing"
 FOOT = [
     "CYPHER0X9 Five9 Lab. Independent study. Not affiliated with Five9.",
     "https://cyphermonkeylabs.com",

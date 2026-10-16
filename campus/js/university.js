@@ -5,7 +5,7 @@ import { applyI18n } from "./i18n.js";
 import { glyphImg, warmGlyphs } from "./glyphs.js";
 
 const UNI_KEY = "f9lab-university";
-const REPO = "https://github.com/cipher0x9/five9-lab-free-university-mesmerizing";
+const REPO = "https://github.com/CypherMonkeyLabs/five9-lab-free-university-mesmerizing";
 const LABS = "https://cyphermonkeylabs.com";
 
 const NAV = [

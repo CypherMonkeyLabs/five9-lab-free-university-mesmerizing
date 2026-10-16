@@ -3,5 +3,5 @@ ES modules may not run from a file:// URL.
 CYPHER0X9 Five9 Lab. Independent study. Not affiliated with Five9.
 https://cyphermonkeylabs.com
 https://linktr.ee/cyphermonkey
-https://github.com/cipher0x9/five9-lab-free-university-mesmerizing
+https://github.com/CypherMonkeyLabs/five9-lab-free-university-mesmerizing
 MIT code, CC BY-NC-SA content. Trademarks belong to their owners.
