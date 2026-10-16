@@ -1,0 +1,1321 @@
+{
+  "id": "t20",
+  "title": "Workforce management",
+  "short": "Workforce",
+  "blurb": "Forecasts, schedules, intraday changes, and adherence from the public WFM and WEM pages.",
+  "group": "Workforce",
+  "level": "Practice",
+  "summary": "WFM is the roster. The pages name the tools and leave the formulas unnamed.",
+  "lessons": [
+    {
+      "id": "l01",
+      "title": "Workforce management staffs the work",
+      "level": "foundation",
+      "minutes": 12,
+      "objectives": [
+        "Call WFM the roster layer",
+        "Keep it off the campaign-type list"
+      ],
+      "paragraphs": [
+        "The Five9 workforce management page says WFM aligns agent resources with contact volumes through the day, so the right number of agents with the right skills are available. It describes volumes that sometimes exceed the people on hand, and times when more agents are on hand than the work needs.",
+        "The workforce engagement page puts the same idea in one line: accurate multi-skill, multi-channel forecasts and schedules, real-time adherence, intraday management, and more. WFM is that staffing layer. It is not a dialing mode and not a skill group."
+      ],
+      "cites": [
+        {
+          "label": "Workforce management",
+          "url": "https://www.five9.com/platform/insights-and-analytics/workforce-management"
+        },
+        {
+          "label": "Workforce engagement management",
+          "url": "https://www.five9.com/products/capabilities/workforce-optimization"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "stack",
+        "title": "What the pages put under WFM",
+        "caption": "Staffing, not the dialer.",
+        "rows": [
+          {
+            "label": "Forecasts"
+          },
+          {
+            "label": "Schedules"
+          },
+          {
+            "label": "Real-time adherence"
+          },
+          {
+            "label": "Intraday management"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Name the layer",
+        "lanes": [
+          "WFM",
+          "Dialer"
+        ],
+        "steps": [
+          {
+            "lane": "WFM",
+            "title": "Aim",
+            "detail": "Match people to the volume.",
+            "frame": "aim"
+          },
+          {
+            "lane": "WFM",
+            "title": "Skills",
+            "detail": "The page says the right skills.",
+            "frame": "skills"
+          },
+          {
+            "lane": "Dialer",
+            "title": "Separate",
+            "detail": "A mode is a different object.",
+            "frame": "mode"
+          },
+          {
+            "lane": "WEM",
+            "title": "Line",
+            "detail": "Forecasts, schedules, adherence, intraday.",
+            "frame": "line"
+          },
+          {
+            "lane": "Reader",
+            "title": "Stop",
+            "detail": "Do not rename WFM as a campaign type.",
+            "frame": "stop"
+          },
+          {
+            "lane": "Reader",
+            "title": "Cite",
+            "detail": "The sentence keeps the WFM page.",
+            "frame": "cite"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "The WFM page says the tool aligns",
+          "choices": [
+            "Codecs with trunks",
+            "Agent resources with contact volumes",
+            "ANI with STIR",
+            "Badges with exams"
+          ],
+          "answer": 1,
+          "why": "That is the page's sentence."
+        },
+        {
+          "q": "Right skills are",
+          "choices": [
+            "Ignored",
+            "Part of the same sentence",
+            "A SIP option",
+            "A list reset"
+          ],
+          "answer": 1,
+          "why": "The page says the right skills."
+        },
+        {
+          "q": "WFM replaces the dialing mode. True or false?",
+          "choices": [
+            "True",
+            "False. It is the staffing layer",
+            "True for autodial only",
+            "True for TLS"
+          ],
+          "answer": 1,
+          "why": "Modes and rosters are different objects."
+        },
+        {
+          "q": "The WEM page includes intraday management under",
+          "choices": [
+            "Quality only",
+            "The workforce management description",
+            "The codec list",
+            "The badge"
+          ],
+          "answer": 1,
+          "why": "The WEM line names it."
+        },
+        {
+          "q": "A skill group and a schedule are",
+          "choices": [
+            "The same object",
+            "Different. One is the queue, one is the roster",
+            "Both ANI",
+            "Both prompts"
+          ],
+          "answer": 1,
+          "why": "Do not collapse them."
+        }
+      ],
+      "cards": [
+        {
+          "front": "What does WFM align?",
+          "back": "People with volume."
+        },
+        {
+          "front": "Right skills?",
+          "back": "Named on the page."
+        },
+        {
+          "front": "Is it a dialing mode?",
+          "back": "No."
+        },
+        {
+          "front": "Intraday?",
+          "back": "On the WEM line."
+        }
+      ],
+      "lab": {
+        "title": "One sentence",
+        "goal": "Say what WFM is for, without naming a dialing mode.",
+        "steps": [
+          "Volumes",
+          "People",
+          "Skills"
+        ],
+        "success": "The sentence matches the page.",
+        "href": ""
+      },
+      "fault": {
+        "title": "A plan calls WFM a fourth campaign type",
+        "symptom": "The pages describe staffing.",
+        "log": "PLAN type=wfm",
+        "choices": [
+          "Call it staffing",
+          "Add the type in admin",
+          "Change the codec",
+          "Reset lists"
+        ],
+        "answer": 0,
+        "cause": "There is no such campaign type on these pages.",
+        "fix": "Rename the plan."
+      }
+    },
+    {
+      "id": "l02",
+      "title": "Forecasts are multiskill and multichannel",
+      "level": "foundation",
+      "minutes": 12,
+      "objectives": [
+        "Copy the forecast list",
+        "Leave the algorithm unnamed"
+      ],
+      "paragraphs": [
+        "The WFM page says accurate contact-volume forecasts are the base for staffing, and that you create multiskill, multichannel forecasts. The feature list names multiple forecasting algorithms, inbound, outbound, and blended environments, and what-if analysis.",
+        "The page says multiple algorithms. It does not name them. This lab will not label one of them Erlang C, and it will not invent an accuracy percent. What-if is on the list. The inputs to a what-if are not printed here."
+      ],
+      "cites": [
+        {
+          "label": "Workforce management",
+          "url": "https://www.five9.com/platform/insights-and-analytics/workforce-management"
+        }
+      ],
+      "uncertain": [
+        "The WFM page says multiple forecasting algorithms and does not name them. This lesson does not call the engine Erlang C."
+      ],
+      "figure": {
+        "kind": "stack",
+        "title": "Forecast list on the page",
+        "caption": "Names, not formulas.",
+        "rows": [
+          {
+            "label": "Multiple forecasting algorithms"
+          },
+          {
+            "label": "Multiskill and multichannel"
+          },
+          {
+            "label": "Inbound, outbound, and blended"
+          },
+          {
+            "label": "What-if analysis"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Read the list",
+        "lanes": [
+          "Page",
+          "Model"
+        ],
+        "steps": [
+          {
+            "lane": "Page",
+            "title": "List",
+            "detail": "The four forecast lines are copied.",
+            "frame": "list"
+          },
+          {
+            "lane": "Model",
+            "title": "Ask",
+            "detail": "Which algorithm is not named.",
+            "frame": "ask"
+          },
+          {
+            "lane": "Model",
+            "title": "Refuse",
+            "detail": "No formula is added.",
+            "frame": "refuse"
+          },
+          {
+            "lane": "Page",
+            "title": "Blend",
+            "detail": "Blended is an environment on this list.",
+            "frame": "blend"
+          },
+          {
+            "lane": "Reader",
+            "title": "Skill",
+            "detail": "Multiskill means the forecast can see more than one skill.",
+            "frame": "skill"
+          },
+          {
+            "lane": "Reader",
+            "title": "Stop",
+            "detail": "The percent stays off the slide.",
+            "frame": "stop"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "The page says forecasts can cover",
+          "choices": [
+            "Voice only, always",
+            "Multiple skills and multiple channels",
+            "Only SIP",
+            "Only 911"
+          ],
+          "answer": 1,
+          "why": "Multiskill and multichannel are the words."
+        },
+        {
+          "q": "How many algorithms does this lesson name?",
+          "choices": [
+            "Six, with formulas",
+            "None. The page says multiple and does not name them",
+            "One, Erlang C",
+            "Zero, forecasting is absent"
+          ],
+          "answer": 1,
+          "why": "Do not invent the names."
+        },
+        {
+          "q": "Inbound, outbound, and blended appear as",
+          "choices": [
+            "Campaign objects you create here",
+            "Environments on the forecast list",
+            "Codecs",
+            "Badges"
+          ],
+          "answer": 1,
+          "why": "That is the feature line."
+        },
+        {
+          "q": "What-if analysis is",
+          "choices": [
+            "Absent",
+            "On the forecast list",
+            "A dialer mode",
+            "A retention clock"
+          ],
+          "answer": 1,
+          "why": "The page lists it."
+        },
+        {
+          "q": "An accuracy percent in this lesson is",
+          "choices": [
+            "Quoted",
+            "Not quoted",
+            "93",
+            "100"
+          ],
+          "answer": 1,
+          "why": "The page did not give this lesson a percent to repeat."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Multiskill?",
+          "back": "Yes."
+        },
+        {
+          "front": "Algorithm names?",
+          "back": "Not printed."
+        },
+        {
+          "front": "Blended on this list?",
+          "back": "Yes, as an environment."
+        },
+        {
+          "front": "What-if?",
+          "back": "Listed."
+        }
+      ],
+      "lab": {
+        "title": "Copy the list",
+        "goal": "Write the four forecast lines and stop.",
+        "steps": [
+          "Algorithms unnamed",
+          "Multiskill",
+          "Channels",
+          "What-if"
+        ],
+        "success": "No formula was added.",
+        "href": ""
+      },
+      "fault": {
+        "title": "A worksheet says the Five9 forecast is Erlang C at 80 percent",
+        "symptom": "The page does not say that.",
+        "log": "MODEL erlang TARGET 80 SOURCE none",
+        "choices": [
+          "Remove the formula and the percent",
+          "Publish the worksheet",
+          "Add lines",
+          "Change ANI"
+        ],
+        "answer": 0,
+        "cause": "Unnamed algorithms stay unnamed.",
+        "fix": "Delete the formula."
+      }
+    },
+    {
+      "id": "l03",
+      "title": "Schedules can be built or bid",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Pick preference or bidding on purpose",
+        "Include the blocks the page lists"
+      ],
+      "paragraphs": [
+        "The WFM page says you can schedule agents automatically based on preferences, or let them bid on schedules, and that the plans are there to meet service goals and limit labor cost. The feature list adds flexible start and stop times, and optimization of lunch, break, meeting, and coaching.",
+        "Those are the schedule facts. The page does not print a maximum shift length or a break rule in minutes. Service goals are named. The numeric target still lives on the skill, and that child page did not open in the routing chapter."
+      ],
+      "cites": [
+        {
+          "label": "Workforce management",
+          "url": "https://www.five9.com/platform/insights-and-analytics/workforce-management"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "compare",
+        "title": "Two ways onto a schedule",
+        "caption": "The page allows both.",
+        "leftTitle": "Automatic from preferences",
+        "rightTitle": "Bidding",
+        "left": [
+          "The system builds the plan"
+        ],
+        "right": [
+          "Agents bid on schedules"
+        ]
+      },
+      "flow": {
+        "title": "Pick a method",
+        "lanes": [
+          "Planner",
+          "Agent"
+        ],
+        "steps": [
+          {
+            "lane": "Planner",
+            "title": "Choose",
+            "detail": "Preferences or bidding.",
+            "frame": "choose"
+          },
+          {
+            "lane": "Planner",
+            "title": "Times",
+            "detail": "Start and stop can flex.",
+            "frame": "times"
+          },
+          {
+            "lane": "Planner",
+            "title": "Blocks",
+            "detail": "Lunch, break, meeting, and coaching are on the list.",
+            "frame": "blocks"
+          },
+          {
+            "lane": "Agent",
+            "title": "Bid",
+            "detail": "Bidding is a published option.",
+            "frame": "bid"
+          },
+          {
+            "lane": "Planner",
+            "title": "Goal",
+            "detail": "Service goals are the aim, not a number copied here.",
+            "frame": "goal"
+          },
+          {
+            "lane": "Planner",
+            "title": "Stop",
+            "detail": "No minute value is invented.",
+            "frame": "stop"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Schedule bidding is",
+          "choices": [
+            "Forbidden",
+            "Named on the WFM page",
+            "A dialer mode",
+            "A codec"
+          ],
+          "answer": 1,
+          "why": "The page offers bidding."
+        },
+        {
+          "q": "Preference scheduling is",
+          "choices": [
+            "The only method",
+            "The other method the page names",
+            "Absent",
+            "A list reset"
+          ],
+          "answer": 1,
+          "why": "Automatic scheduling from preferences is the pair."
+        },
+        {
+          "q": "Lunch, break, meeting, and coaching are",
+          "choices": [
+            "Ignored by the scheduler, per the page",
+            "On the optimization list",
+            "SIP headers",
+            "Exam codes"
+          ],
+          "answer": 1,
+          "why": "The feature list includes them."
+        },
+        {
+          "q": "A break length in minutes in this lesson is",
+          "choices": [
+            "15",
+            "Not stated",
+            "30",
+            "60"
+          ],
+          "answer": 1,
+          "why": "The page does not give the number."
+        },
+        {
+          "q": "Flexible start and stop times are",
+          "choices": [
+            "Named",
+            "Denied",
+            "A TLS setting",
+            "A prompt"
+          ],
+          "answer": 1,
+          "why": "The list includes them."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Bid or assign?",
+          "back": "The page allows both."
+        },
+        {
+          "front": "Breaks on the list?",
+          "back": "Yes, without a minute count."
+        },
+        {
+          "front": "Start and stop?",
+          "back": "Flexible, as stated."
+        },
+        {
+          "front": "Numeric service goal here?",
+          "back": "Not copied."
+        }
+      ],
+      "lab": {
+        "title": "Choose one method",
+        "goal": "Say preference scheduling or bidding, and name one block the optimizer is told about.",
+        "steps": [
+          "Method",
+          "Lunch or break or meeting or coaching",
+          "No invented minutes"
+        ],
+        "success": "The choice is one of the two the page names.",
+        "href": ""
+      },
+      "fault": {
+        "title": "The schedule ignores breaks because they are not work",
+        "symptom": "The page lists break optimization.",
+        "log": "SCHEDULE breaks=ignored",
+        "choices": [
+          "Put breaks on the plan",
+          "Leave them off",
+          "Add power lines",
+          "Delete the skill"
+        ],
+        "answer": 0,
+        "cause": "A break is one of the blocks the page names.",
+        "fix": "Include it."
+      }
+    },
+    {
+      "id": "l04",
+      "title": "Intraday is a comparison, a reforecast, and a notice",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Use the intraday steps the card lists",
+        "Leave the six channels unnamed"
+      ],
+      "paragraphs": [
+        "The WEM page says intraday management and automated adjustment sit with workforce management. The WFM page's change card says you compare interval by interval to the plan, reforecast automatically, flex the schedule, and notify agents in a few clicks.",
+        "That card is titled for multiple change notification channels and says there are six. It does not name the six. This lesson will not invent email, SMS, or a chat product as the list."
+      ],
+      "cites": [
+        {
+          "label": "Workforce management",
+          "url": "https://www.five9.com/platform/insights-and-analytics/workforce-management"
+        },
+        {
+          "label": "Workforce engagement management",
+          "url": "https://www.five9.com/products/capabilities/workforce-optimization"
+        }
+      ],
+      "uncertain": [
+        "The WFM page says six change notification channels and does not name them."
+      ],
+      "figure": {
+        "kind": "path",
+        "title": "When the day moves",
+        "caption": "From the change card.",
+        "rows": [
+          {
+            "label": "Compare each interval to the plan"
+          },
+          {
+            "label": "Reforecast"
+          },
+          {
+            "label": "Flex the schedule"
+          },
+          {
+            "label": "Notify"
+          },
+          {
+            "label": "Six channels, unnamed"
+          }
+        ]
+      },
+      "flow": {
+        "title": "A volume spike",
+        "lanes": [
+          "Plan",
+          "Floor"
+        ],
+        "steps": [
+          {
+            "lane": "Plan",
+            "title": "Compare",
+            "detail": "The interval is off the plan.",
+            "frame": "cmp"
+          },
+          {
+            "lane": "Plan",
+            "title": "Reforecast",
+            "detail": "The page lists automatic reforecasting.",
+            "frame": "re"
+          },
+          {
+            "lane": "Plan",
+            "title": "Flex",
+            "detail": "The schedule can flex.",
+            "frame": "flex"
+          },
+          {
+            "lane": "Floor",
+            "title": "Notify",
+            "detail": "Agents are told.",
+            "frame": "notify"
+          },
+          {
+            "lane": "Plan",
+            "title": "Count",
+            "detail": "Six channels are claimed and not named.",
+            "frame": "six"
+          },
+          {
+            "lane": "Reader",
+            "title": "Stop",
+            "detail": "No channel brand is added.",
+            "frame": "stop"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Intraday management is named on",
+          "choices": [
+            "The dialer page only",
+            "The WEM workforce line and the WFM change card",
+            "The badge",
+            "The codec page"
+          ],
+          "answer": 1,
+          "why": "Both pages speak to it."
+        },
+        {
+          "q": "Interval-by-interval comparison is",
+          "choices": [
+            "Absent",
+            "On the change card",
+            "A list mode",
+            "A prompt"
+          ],
+          "answer": 1,
+          "why": "The card lists it."
+        },
+        {
+          "q": "The six notification channels are",
+          "choices": [
+            "Named in this lesson",
+            "Counted on the page and not named",
+            "Only email",
+            "Only the softphone"
+          ],
+          "answer": 1,
+          "why": "Do not invent the six."
+        },
+        {
+          "q": "Automatic reforecasting is",
+          "choices": [
+            "Forbidden",
+            "On the card",
+            "A SIP option",
+            "A retention rule"
+          ],
+          "answer": 1,
+          "why": "The card lists it."
+        },
+        {
+          "q": "Flex schedules means",
+          "choices": [
+            "The plan can change when the day moves",
+            "The plan is frozen at midnight",
+            "ANI changes",
+            "The domain closes"
+          ],
+          "answer": 1,
+          "why": "The card says flex schedules."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Intraday named?",
+          "back": "Yes."
+        },
+        {
+          "front": "Interval compare?",
+          "back": "Yes."
+        },
+        {
+          "front": "Six channels named?",
+          "back": "No."
+        },
+        {
+          "front": "Reforecast?",
+          "back": "Listed."
+        }
+      ],
+      "lab": {
+        "title": "Write the reaction",
+        "goal": "Four steps from the card, then the unnamed six.",
+        "steps": [
+          "Compare",
+          "Reforecast",
+          "Flex",
+          "Notify"
+        ],
+        "success": "The channel brands are blank.",
+        "href": ""
+      },
+      "fault": {
+        "title": "A runbook names six channels from a different vendor",
+        "symptom": "The Five9 page did not name them.",
+        "log": "CHANNELS guessed",
+        "choices": [
+          "Leave the six unnamed",
+          "Publish the other vendor's list as Five9",
+          "Add lines",
+          "Reset lists"
+        ],
+        "answer": 0,
+        "cause": "A count is not a catalog.",
+        "fix": "Delete the guessed names."
+      }
+    },
+    {
+      "id": "l05",
+      "title": "Adherence is plan versus what the person did",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Treat adherence as plan versus actual",
+        "Do not invent the alert threshold"
+      ],
+      "paragraphs": [
+        "The WFM page says adherence can be tracked over time or in real time. The feature list adds historical adherence, real-time monitoring, out-of-adherence alerts, and both an agent view and a supervisor view.",
+        "The same page's portal list says agents can see schedules and adherence. Adherence is evidence about the plan. It is not the service-level formula, and it is not a disposition."
+      ],
+      "cites": [
+        {
+          "label": "Workforce management",
+          "url": "https://www.five9.com/platform/insights-and-analytics/workforce-management"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "stack",
+        "title": "Adherence on the page",
+        "caption": "Plan versus actual.",
+        "rows": [
+          {
+            "label": "Historical"
+          },
+          {
+            "label": "Real time"
+          },
+          {
+            "label": "Out-of-adherence alerts"
+          },
+          {
+            "label": "Agent view and supervisor view"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Someone leaves the plan",
+        "lanes": [
+          "Schedule",
+          "Alert"
+        ],
+        "steps": [
+          {
+            "lane": "Schedule",
+            "title": "Exist",
+            "detail": "The person had a plan.",
+            "frame": "plan"
+          },
+          {
+            "lane": "Floor",
+            "title": "Leave",
+            "detail": "They are not on the planned activity.",
+            "frame": "leave"
+          },
+          {
+            "lane": "Alert",
+            "title": "Fire",
+            "detail": "The page lists an out-of-adherence alert.",
+            "frame": "alert"
+          },
+          {
+            "lane": "Agent",
+            "title": "See",
+            "detail": "The agent view is named.",
+            "frame": "agent"
+          },
+          {
+            "lane": "Supervisor",
+            "title": "See",
+            "detail": "The supervisor view is named.",
+            "frame": "sup"
+          },
+          {
+            "lane": "Reader",
+            "title": "Stop",
+            "detail": "No threshold minute is copied.",
+            "frame": "stop"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Real-time adherence is",
+          "choices": [
+            "Absent",
+            "Named",
+            "A codec",
+            "A campaign type"
+          ],
+          "answer": 1,
+          "why": "The page lists it."
+        },
+        {
+          "q": "Historical adherence is",
+          "choices": [
+            "The only view",
+            "Also named",
+            "Forbidden",
+            "A list mode"
+          ],
+          "answer": 1,
+          "why": "The list includes historical."
+        },
+        {
+          "q": "Who has a view, per the list?",
+          "choices": [
+            "Nobody",
+            "Agents and supervisors",
+            "Only the carrier",
+            "Only the IVR"
+          ],
+          "answer": 1,
+          "why": "Both views are named."
+        },
+        {
+          "q": "An out-of-adherence alert is",
+          "choices": [
+            "Named",
+            "Denied",
+            "A SIP 911 header",
+            "A badge"
+          ],
+          "answer": 1,
+          "why": "The list includes alerts."
+        },
+        {
+          "q": "A minute threshold for the alert in this lesson is",
+          "choices": [
+            "Stated as 5",
+            "Not stated",
+            "Stated as 15",
+            "Stated as 0"
+          ],
+          "answer": 1,
+          "why": "The page does not give the number."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Real time?",
+          "back": "Yes."
+        },
+        {
+          "front": "History?",
+          "back": "Yes."
+        },
+        {
+          "front": "Who can look?",
+          "back": "Agent and supervisor views."
+        },
+        {
+          "front": "Threshold minutes?",
+          "back": "Not stated."
+        }
+      ],
+      "lab": {
+        "title": "Define adherence",
+        "goal": "One sentence: plan versus actual, plus who can see it.",
+        "steps": [
+          "No minute threshold",
+          "Name both views"
+        ],
+        "success": "The sentence matches the list.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Adherence is graded as a call disposition",
+        "symptom": "The page describes a staffing view, not a disposition.",
+        "log": "ADHERENCE stored-as disposition",
+        "choices": [
+          "Keep it as a staffing view",
+          "Add a disposition named Adherence",
+          "Reset the list",
+          "Change ANI"
+        ],
+        "answer": 0,
+        "cause": "Different objects.",
+        "fix": "Leave dispositions alone."
+      }
+    },
+    {
+      "id": "l06",
+      "title": "The agent can see the plan, including on a phone",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Offer the portal, the phone, or Plus",
+        "Do not assume the connector is installed"
+      ],
+      "paragraphs": [
+        "The agent portal on the WFM page lists viewing schedules and adherence, bidding on shifts, requesting schedule changes, vacation, and voluntary overtime, plus notifications and alerts. The mobile card lists Android and iOS, self-service away from the desk, absentee and late check-in, and alerts.",
+        "The desktop page says Plus can show schedules and adherence, time-off requests, and evaluations without leaving the desktop. A second login is a design smell only if that connector was what you bought. The page does not say every contract includes it."
+      ],
+      "cites": [
+        {
+          "label": "Workforce management",
+          "url": "https://www.five9.com/platform/insights-and-analytics/workforce-management"
+        },
+        {
+          "label": "Agent Desktop",
+          "url": "https://www.five9.com/platform/self-service-and-engagement/agent-desktop"
+        },
+        {
+          "label": "Agent Desktop",
+          "url": "https://www.five9.com/products/capabilities/agent-desktop"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "compare",
+        "title": "Two places the plan can show up",
+        "caption": "Both pages name a view.",
+        "leftTitle": "WFM portal and mobile",
+        "rightTitle": "Agent Desktop Plus",
+        "left": [
+          "Schedules, bids, requests",
+          "Android and iOS"
+        ],
+        "right": [
+          "Schedules and adherence",
+          "Time off",
+          "Evaluations"
+        ]
+      },
+      "flow": {
+        "title": "Where will they look",
+        "lanes": [
+          "Portal",
+          "Desktop"
+        ],
+        "steps": [
+          {
+            "lane": "Portal",
+            "title": "List",
+            "detail": "Schedules, bids, and requests.",
+            "frame": "list"
+          },
+          {
+            "lane": "Mobile",
+            "title": "OS",
+            "detail": "Android and iOS are named.",
+            "frame": "os"
+          },
+          {
+            "lane": "Desktop",
+            "title": "Plus",
+            "detail": "Plus can show the plan.",
+            "frame": "plus"
+          },
+          {
+            "lane": "Contract",
+            "title": "Ask",
+            "detail": "The connector is not assumed.",
+            "frame": "ask"
+          },
+          {
+            "lane": "Agent",
+            "title": "Late",
+            "detail": "Late check-in is on the mobile card.",
+            "frame": "late"
+          },
+          {
+            "lane": "Reader",
+            "title": "Stop",
+            "detail": "No app-store version is copied.",
+            "frame": "stop"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Shift bidding on the portal is",
+          "choices": [
+            "Absent",
+            "Listed",
+            "A dialer mode",
+            "A prompt"
+          ],
+          "answer": 1,
+          "why": "The portal list includes it."
+        },
+        {
+          "q": "Voluntary overtime requests are",
+          "choices": [
+            "Named on the portal list",
+            "Forbidden",
+            "A codec",
+            "A badge"
+          ],
+          "answer": 1,
+          "why": "The list says voluntary overtime."
+        },
+        {
+          "q": "Mobile operating systems named are",
+          "choices": [
+            "None",
+            "Android and iOS",
+            "Only a desk phone",
+            "Only Java"
+          ],
+          "answer": 1,
+          "why": "The mobile card names them."
+        },
+        {
+          "q": "Plus shows schedules",
+          "choices": [
+            "On the desktop page",
+            "Never",
+            "Only in a PDF this lesson could not read",
+            "Only for supervisors"
+          ],
+          "answer": 1,
+          "why": "The desktop page says so."
+        },
+        {
+          "q": "Every customer already has the WFO connector. True or false?",
+          "choices": [
+            "True",
+            "False. The page describes the capability. The contract still matters",
+            "True in one country only",
+            "True if ANI is local"
+          ],
+          "answer": 1,
+          "why": "Do not assume the purchase."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Portal includes bidding?",
+          "back": "Yes."
+        },
+        {
+          "front": "Mobile OS?",
+          "back": "Android and iOS."
+        },
+        {
+          "front": "Plus?",
+          "back": "Schedules, adherence, time off, evaluations."
+        },
+        {
+          "front": "Assume the connector?",
+          "back": "No."
+        }
+      ],
+      "lab": {
+        "title": "Pick the surface",
+        "goal": "Say portal, mobile, or Plus, and one action from that list.",
+        "steps": [
+          "One surface",
+          "One action",
+          "No assumed contract"
+        ],
+        "success": "The action is on the page you named.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Agents are told to install a desktop app the page does not name",
+        "symptom": "The mobile card names Android and iOS, not a third-party brand.",
+        "log": "APP guessed",
+        "choices": [
+          "Stay with the named surfaces",
+          "Mandate the extra app",
+          "Delete skills",
+          "Change TLS"
+        ],
+        "answer": 0,
+        "cause": "An extra brand is not the page.",
+        "fix": "Use the named surfaces."
+      }
+    },
+    {
+      "id": "l07",
+      "title": "Native WEM and a partner path both exist",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Ask which suite",
+        "Keep each CRM list on its own page"
+      ],
+      "paragraphs": [
+        "The workforce engagement page says Five9 offers WEM natively and also partners with vendors such as Verint. It says Five9 manages installation, configuration, maintenance, and upgrades for the WEM solution they deliver.",
+        "The WFM page is the native product story this chapter read. It does not say a given floor is native rather than Verint. Ask. The WFM card for pre-built CRM integrations names Oracle and ServiceNow on that page. A longer CRM list lives on the desktop and API pages, in the CRM chapter, and should not be pasted back as if the WFM card printed it."
+      ],
+      "cites": [
+        {
+          "label": "Workforce engagement management",
+          "url": "https://www.five9.com/products/capabilities/workforce-optimization"
+        },
+        {
+          "label": "Workforce management",
+          "url": "https://www.five9.com/platform/insights-and-analytics/workforce-management"
+        }
+      ],
+      "uncertain": [
+        "This lab does not know which WEM suite a given customer bought. The WFM CRM card read here names Oracle and ServiceNow, not the longer adapter list."
+      ],
+      "figure": {
+        "kind": "compare",
+        "title": "Two public statements",
+        "caption": "Ask which one this floor bought.",
+        "leftTitle": "Native WFM page",
+        "rightTitle": "Partner path",
+        "left": [
+          "Forecast, schedule, adhere, intraday"
+        ],
+        "right": [
+          "Verint is the example the WEM page names"
+        ]
+      },
+      "flow": {
+        "title": "Ask before you document",
+        "lanes": [
+          "Contract",
+          "Page"
+        ],
+        "steps": [
+          {
+            "lane": "Contract",
+            "title": "Ask",
+            "detail": "Native or a named partner.",
+            "frame": "ask"
+          },
+          {
+            "lane": "Page",
+            "title": "Native",
+            "detail": "The WFM page is the native story.",
+            "frame": "native"
+          },
+          {
+            "lane": "Page",
+            "title": "Verint",
+            "detail": "Verint is an example, not a synonym.",
+            "frame": "verint"
+          },
+          {
+            "lane": "Page",
+            "title": "CRM",
+            "detail": "The WFM card names Oracle and ServiceNow.",
+            "frame": "crm"
+          },
+          {
+            "lane": "Reader",
+            "title": "Split",
+            "detail": "The longer CRM list stays in the CRM chapter.",
+            "frame": "split"
+          },
+          {
+            "lane": "Reader",
+            "title": "Own",
+            "detail": "Upgrades, per the WEM page, are managed by Five9 for the solution they deliver.",
+            "frame": "own"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Verint is",
+          "choices": [
+            "The only WEM Five9 allows",
+            "Named as a partner example beside native WEM",
+            "A codec",
+            "A campaign type"
+          ],
+          "answer": 1,
+          "why": "The WEM page says both."
+        },
+        {
+          "q": "Who manages upgrades, per the WEM page?",
+          "choices": [
+            "The headset vendor",
+            "Five9, for the solution they deliver",
+            "The caller",
+            "The ITSP only"
+          ],
+          "answer": 1,
+          "why": "The page says Five9 manages them."
+        },
+        {
+          "q": "The WFM pre-built CRM card, as read here, names",
+          "choices": [
+            "Every CRM on earth",
+            "Oracle and ServiceNow",
+            "Only Zoom",
+            "Only a badge"
+          ],
+          "answer": 1,
+          "why": "Those are the two items on that card."
+        },
+        {
+          "q": "You should guess native versus Verint. True or false?",
+          "choices": [
+            "True",
+            "False. Look at the contract or the app",
+            "True for TCPA",
+            "True if Java is gone"
+          ],
+          "answer": 1,
+          "why": "The page refuses a single answer."
+        },
+        {
+          "q": "A longer adapter list belongs",
+          "choices": [
+            "Pasted onto the WFM card",
+            "On the pages that actually print it",
+            "In a rumor",
+            "On the codec page"
+          ],
+          "answer": 1,
+          "why": "Keep each list on its page."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Verint?",
+          "back": "A named partner example."
+        },
+        {
+          "front": "Who upgrades?",
+          "back": "Five9, for the solution they deliver."
+        },
+        {
+          "front": "WFM CRM card?",
+          "back": "Oracle and ServiceNow."
+        },
+        {
+          "front": "Guess the suite?",
+          "back": "No."
+        }
+      ],
+      "lab": {
+        "title": "Write the question",
+        "goal": "The first WFM question on a new floor.",
+        "steps": [
+          "Which suite",
+          "Which cards you actually read",
+          "Where the agent sees the schedule"
+        ],
+        "success": "You did not assume Verint, and you did not borrow the other CRM list.",
+        "href": ""
+      },
+      "fault": {
+        "title": "A runbook says to open Verint. The floor is native.",
+        "symptom": "Agents cannot find the URL.",
+        "log": "RUNBOOK verint APP native",
+        "choices": [
+          "Open the suite that is installed",
+          "Keep the wrong URL",
+          "Delete skills",
+          "Enable an old TLS"
+        ],
+        "answer": 0,
+        "cause": "The runbook guessed.",
+        "fix": "Point it at the installed suite."
+      }
+    }
+  ]
+}

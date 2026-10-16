@@ -1,0 +1,28 @@
+{
+  "id": "t22-l04-workforce-tools-can-show-up-inside-the-crm",
+  "title": "Workforce tools can show up inside the CRM",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Agent Desktop",
+      "url": "https://www.five9.com/platform/self-service-and-engagement/agent-desktop",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Workforce management",
+      "url": "https://www.five9.com/platform/insights-and-analytics/workforce-management",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Workforce engagement management",
+      "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

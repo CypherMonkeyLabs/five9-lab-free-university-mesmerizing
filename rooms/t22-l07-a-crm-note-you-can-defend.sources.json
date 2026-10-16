@@ -1,0 +1,28 @@
+{
+  "id": "t22-l07-a-crm-note-you-can-defend",
+  "title": "A CRM note you can defend",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "APIs and SDKs",
+      "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Agent Desktop",
+      "url": "https://www.five9.com/platform/self-service-and-engagement/agent-desktop",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Project size is not on the API page. Minimal coding is their phrase, not an estimate.",
+      "url": "",
+      "kind": "note",
+      "status": "confirm",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

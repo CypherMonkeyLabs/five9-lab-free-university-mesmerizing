@@ -241,6 +241,30 @@
       "meaning": "Telephone events, the usual way DTMF rides in the media.",
       "url": "https://www.rfc-editor.org/rfc/rfc4733",
       "source": "RFC 4733"
+    },
+    {
+      "term": "ACD",
+      "meaning": "Wikipedia's name for a device that answers and distributes incoming calls to a group of agents. Not a Five9 field by itself.",
+      "url": "https://en.wikipedia.org/wiki/Automatic_call_distributor",
+      "source": "Automatic call distributor"
+    },
+    {
+      "term": "Forecast",
+      "meaning": "The WFM page's base for staffing: multiskill, multichannel, several algorithms it does not name.",
+      "url": "https://www.five9.com/platform/insights-and-analytics/workforce-management",
+      "source": "Workforce management"
+    },
+    {
+      "term": "Adherence",
+      "meaning": "Plan versus what the person did. The WFM page lists historical and real-time views, plus alerts.",
+      "url": "https://www.five9.com/platform/insights-and-analytics/workforce-management",
+      "source": "Workforce management"
+    },
+    {
+      "term": "CTI Web Services API",
+      "meaning": "One name on the APIs page. Not a screen-pop field list.",
+      "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks",
+      "source": "APIs and SDKs"
     }
   ],
   "integrations": [

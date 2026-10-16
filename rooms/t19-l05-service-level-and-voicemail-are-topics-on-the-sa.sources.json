@@ -1,0 +1,21 @@
+{
+  "id": "t19-l05-service-level-and-voicemail-are-topics-on-the-sa",
+  "title": "Service level and voicemail are topics on the same chapter",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Skill groups",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "The service-level and skill-voicemail child pages did not return a body in this check. No threshold and no click-path is stated.",
+      "url": "",
+      "kind": "note",
+      "status": "confirm",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

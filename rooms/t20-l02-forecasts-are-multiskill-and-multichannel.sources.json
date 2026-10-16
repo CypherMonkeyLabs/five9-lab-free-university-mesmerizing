@@ -1,0 +1,28 @@
+{
+  "id": "t20-l02-forecasts-are-multiskill-and-multichannel",
+  "title": "Forecasts are multiskill and multichannel",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Workforce management",
+      "url": "https://www.five9.com/platform/insights-and-analytics/workforce-management",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Erlang (unit)",
+      "url": "https://en.wikipedia.org/wiki/Erlang_(unit)",
+      "kind": "wikipedia",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "The WFM page says multiple forecasting algorithms and does not name them. This lesson does not call the engine Erlang C.",
+      "url": "",
+      "kind": "note",
+      "status": "confirm",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

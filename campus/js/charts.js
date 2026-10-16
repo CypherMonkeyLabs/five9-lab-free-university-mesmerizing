@@ -94,7 +94,7 @@ export function chartList(catalog, uni) {
     { id: "bandwidth", title: "Cited bandwidth, kbps", note: "Recommended figures parsed from the technical-requirements table. Video uses the first number in that cell.", svg: hbars("Cited bandwidth in kbps", bandwidth) },
     { id: "protocols", title: "Port rows by protocol", note: "One bar per row in the lab port table, including the two TCP 443 rows.", svg: hbars("Port rows by protocol", [...protocols.entries()].map(([label, value]) => ({ label, value }))) },
     { id: "catalog", title: "Catalog counts", note: "Lessons, quiz items, flashcards, and citations stored with the tracks.", svg: hbars("Catalog counts", catalogRows) },
-    { id: "tracks", title: "Lessons in each track", note: "Eighteen tracks. The axis labels are the track ids.", svg: vbars("Lessons in each track", perTrack) }
+    { id: "tracks", title: "Lessons in each track", note: `${tracks.length} tracks. The axis labels are the track ids.`, svg: vbars("Lessons in each track", perTrack) }
   ];
 }
 

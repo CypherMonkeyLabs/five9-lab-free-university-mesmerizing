@@ -1,0 +1,14 @@
+{
+  "id": "t22-l03-plus-and-a-prebuilt-adapter-share-a-technology-s",
+  "title": "Plus and a prebuilt adapter share a technology story",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Agent Desktop",
+      "url": "https://www.five9.com/platform/self-service-and-engagement/agent-desktop",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

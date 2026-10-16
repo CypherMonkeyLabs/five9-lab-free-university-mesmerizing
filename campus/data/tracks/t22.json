@@ -1,0 +1,1320 @@
+{
+  "id": "t22",
+  "title": "CRM and CTI integrations",
+  "short": "CRM and CTI",
+  "blurb": "Named adapters, the CTI API, and the Salesforce and ServiceNow details this check would not guess.",
+  "group": "Integrations",
+  "level": "Practice",
+  "summary": "Public pages name the CRMs and the CTI API. Admin feature lists that did not open stay blank.",
+  "lessons": [
+    {
+      "id": "l01",
+      "title": "CTI is a named API, not a vibe",
+      "level": "foundation",
+      "minutes": 12,
+      "objectives": [
+        "Use the API name the page printed",
+        "Leave screen pop unspecified"
+      ],
+      "paragraphs": [
+        "The APIs and SDKs page lists a Computer Telephony Integration (CTI) Web Services API next to Configuration, Reporting, Statistics, Web2Campaign, the CRM SDK, and Web Connectors. CTI, on that page, is one of those names.",
+        "Wikipedia's ACD article says an advanced distributor may use computer telephony integration as an input to the route. That is the general word. Five9's page is the product name. A screen pop, a click-to-dial button, and a package version were not on the pages this chapter read."
+      ],
+      "cites": [
+        {
+          "label": "APIs and SDKs",
+          "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks"
+        }
+      ],
+      "uncertain": [
+        "Salesforce screen pop, click-to-dial, and package versions were not on the pages this chapter could read."
+      ],
+      "figure": {
+        "kind": "compare",
+        "title": "Two uses of the letters",
+        "caption": "Do not mix them.",
+        "leftTitle": "Wikipedia",
+        "rightTitle": "Five9 API page",
+        "left": [
+          "CTI as an input an advanced ACD may use"
+        ],
+        "right": [
+          "A web services API named CTI"
+        ]
+      },
+      "flow": {
+        "title": "Point at the name",
+        "lanes": [
+          "Page",
+          "Design"
+        ],
+        "steps": [
+          {
+            "lane": "Page",
+            "title": "List",
+            "detail": "CTI Web Services API is on the list.",
+            "frame": "list"
+          },
+          {
+            "lane": "Page",
+            "title": "Neighbors",
+            "detail": "Configuration, Reporting, and Statistics are different names.",
+            "frame": "near"
+          },
+          {
+            "lane": "Design",
+            "title": "Ask",
+            "detail": "Which API the integration actually calls.",
+            "frame": "ask"
+          },
+          {
+            "lane": "Design",
+            "title": "Refuse",
+            "detail": "No screen-pop field is invented.",
+            "frame": "refuse"
+          },
+          {
+            "lane": "Reader",
+            "title": "Wiki",
+            "detail": "The general word stays on Wikipedia.",
+            "frame": "wiki"
+          },
+          {
+            "lane": "Reader",
+            "title": "Cite",
+            "detail": "The note names the API page.",
+            "frame": "cite"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "The Five9 page names CTI as",
+          "choices": [
+            "A dialing mode",
+            "A web services API",
+            "A skill group",
+            "A badge"
+          ],
+          "answer": 1,
+          "why": "It is on the API list."
+        },
+        {
+          "q": "Reporting Web Services and CTI Web Services are",
+          "choices": [
+            "The same name",
+            "Both on the list, as different names",
+            "Both codecs",
+            "Both prompts"
+          ],
+          "answer": 1,
+          "why": "The list prints both."
+        },
+        {
+          "q": "Web2Campaign is",
+          "choices": [
+            "Absent",
+            "On the same list",
+            "A campaign type",
+            "A disposition"
+          ],
+          "answer": 1,
+          "why": "The list includes it."
+        },
+        {
+          "q": "A screen-pop field in this lesson is",
+          "choices": [
+            "Fully specified",
+            "Not specified. Those admin pages did not return a body",
+            "Always ANI",
+            "Always the case id"
+          ],
+          "answer": 1,
+          "why": "Do not invent the pop."
+        },
+        {
+          "q": "The Wikipedia sentence about CTI is",
+          "choices": [
+            "A Five9 dialog",
+            "A general definition",
+            "A package version",
+            "A port"
+          ],
+          "answer": 1,
+          "why": "Keep it on that article."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Five9's CTI name?",
+          "back": "CTI Web Services API."
+        },
+        {
+          "front": "Same as Reporting?",
+          "back": "No."
+        },
+        {
+          "front": "Web2Campaign?",
+          "back": "On the list."
+        },
+        {
+          "front": "Screen pop specified?",
+          "back": "No."
+        }
+      ],
+      "lab": {
+        "title": "Name three APIs",
+        "goal": "Pick three from the list and do not describe their payloads.",
+        "steps": [
+          "CTI",
+          "One neighbor",
+          "No invented field"
+        ],
+        "success": "The names match the page.",
+        "href": ""
+      },
+      "fault": {
+        "title": "A diagram shows the CTI API pushing a Salesforce field list",
+        "symptom": "The API page names the API. It does not print that field list.",
+        "log": "FIELDS guessed",
+        "choices": [
+          "Stop at the API name",
+          "Publish the fields",
+          "Add lines",
+          "Change ANI"
+        ],
+        "answer": 0,
+        "cause": "A name is not a schema.",
+        "fix": "Delete the fields."
+      }
+    },
+    {
+      "id": "l02",
+      "title": "The prebuilt CRM names are a list",
+      "level": "foundation",
+      "minutes": 12,
+      "objectives": [
+        "Spell the name the page spelled",
+        "Send unlisted CRMs to the SDK"
+      ],
+      "paragraphs": [
+        "The APIs page says it has pre-built integrations with Salesforce, ServiceNow, Microsoft Dynamics 365, Oracle Service Cloud, Oracle NetSuite, and Zendesk. A later line says robust pre-built integrations with Salesforce, ServiceNow, Microsoft, Oracle, and Zendesk.",
+        "The desktop page's out-of-the-box line is Salesforce, ServiceNow, Microsoft, Oracle, and Zendesk, and it adds bring-your-own with the CRM SDK. Microsoft on that line is not spelled Dynamics. Dynamics 365 is spelled on the API list. Quote the line you mean."
+      ],
+      "cites": [
+        {
+          "label": "APIs and SDKs",
+          "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks"
+        },
+        {
+          "label": "Agent Desktop",
+          "url": "https://www.five9.com/platform/self-service-and-engagement/agent-desktop"
+        }
+      ],
+      "uncertain": [
+        "This chapter does not restate Salesforce package numbers. The technical-requirements PDF was not the page quoted here."
+      ],
+      "figure": {
+        "kind": "stack",
+        "title": "Names on the API list",
+        "caption": "Copy the spelling.",
+        "rows": [
+          {
+            "label": "Salesforce"
+          },
+          {
+            "label": "ServiceNow"
+          },
+          {
+            "label": "Microsoft Dynamics 365"
+          },
+          {
+            "label": "Oracle Service Cloud"
+          },
+          {
+            "label": "Oracle NetSuite"
+          },
+          {
+            "label": "Zendesk"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Spell the CRM",
+        "lanes": [
+          "API list",
+          "Desktop line"
+        ],
+        "steps": [
+          {
+            "lane": "API",
+            "title": "Read",
+            "detail": "Dynamics 365 is spelled out.",
+            "frame": "dyn"
+          },
+          {
+            "lane": "Desktop",
+            "title": "Read",
+            "detail": "The shorter line says Microsoft.",
+            "frame": "ms"
+          },
+          {
+            "lane": "Reader",
+            "title": "Keep",
+            "detail": "Both lines are real.",
+            "frame": "keep"
+          },
+          {
+            "lane": "Reader",
+            "title": "SDK",
+            "detail": "Anything off the list starts at the CRM SDK.",
+            "frame": "sdk"
+          },
+          {
+            "lane": "Reader",
+            "title": "Stop",
+            "detail": "No package number is added.",
+            "frame": "stop"
+          },
+          {
+            "lane": "Reader",
+            "title": "Cite",
+            "detail": "The note says which line.",
+            "frame": "cite"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Dynamics 365 is spelled on",
+          "choices": [
+            "The short desktop line",
+            "The API pre-built list",
+            "The skill tab",
+            "The badge"
+          ],
+          "answer": 1,
+          "why": "The API list uses that name."
+        },
+        {
+          "q": "Zendesk is",
+          "choices": [
+            "Absent",
+            "On both the API list and the desktop line",
+            "A dialer mode",
+            "A codec"
+          ],
+          "answer": 1,
+          "why": "Both pages name it."
+        },
+        {
+          "q": "Oracle NetSuite and Oracle Service Cloud are",
+          "choices": [
+            "One product name",
+            "Two names on the API list",
+            "SIP trunks",
+            "Prompts"
+          ],
+          "answer": 1,
+          "why": "The list prints both."
+        },
+        {
+          "q": "A CRM that is not on the list uses",
+          "choices": [
+            "A fictional adapter",
+            "The CRM SDK, per the desktop page",
+            "Only FTP",
+            "Only a skill group"
+          ],
+          "answer": 1,
+          "why": "Bring your own CRM is the SDK line."
+        },
+        {
+          "q": "A package version in this lesson is",
+          "choices": [
+            "2.46, restated",
+            "Not stated. That PDF was not the page read for this chapter",
+            "Always 1.0",
+            "Always current"
+          ],
+          "answer": 1,
+          "why": "Do not copy a number from a file this chapter did not quote."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Dynamics spelling?",
+          "back": "On the API list."
+        },
+        {
+          "front": "Zendesk?",
+          "back": "Named."
+        },
+        {
+          "front": "Two Oracle names?",
+          "back": "Service Cloud and NetSuite."
+        },
+        {
+          "front": "Unlisted CRM?",
+          "back": "CRM SDK."
+        }
+      ],
+      "lab": {
+        "title": "Sort three systems",
+        "goal": "Adapter list, or SDK.",
+        "steps": [
+          "Salesforce",
+          "An internal CRM",
+          "Zendesk"
+        ],
+        "success": "The internal CRM is the SDK case.",
+        "href": ""
+      },
+      "fault": {
+        "title": "The design says Microsoft and Dynamics are different products because the lines differ",
+        "symptom": "They might be the same family. The pages use different words.",
+        "log": "NAMES microsoft dynamics",
+        "choices": [
+          "Quote each line as printed",
+          "Declare them unrelated",
+          "Delete Salesforce",
+          "Change ANI"
+        ],
+        "answer": 0,
+        "cause": "Different words are not proof of two products.",
+        "fix": "Cite the line."
+      }
+    },
+    {
+      "id": "l03",
+      "title": "Plus and a prebuilt adapter share a technology story",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Name Plus, the prebuilt integration, or the toolkit",
+        "Do not call a bookmark an adapter"
+      ],
+      "paragraphs": [
+        "The desktop page says that whether you deploy Agent Desktop Plus or a pre-built CRM integration, you get the same underlying technology. It also describes the Agent Desktop Toolkit as REST APIs, reference UIs, and other tools to embed agent functionality in a custom CRM or another CRM.",
+        "Same technology is not the same screen. Plus is the Five9 screen. A prebuilt integration is the CRM screen. The toolkit is how you embed. Say which of the three you are looking at."
+      ],
+      "cites": [
+        {
+          "label": "Agent Desktop",
+          "url": "https://www.five9.com/platform/self-service-and-engagement/agent-desktop"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "compare",
+        "title": "Three ways the desktop page talks",
+        "caption": "Pick one.",
+        "leftTitle": "Plus",
+        "rightTitle": "Prebuilt or toolkit",
+        "left": [
+          "The Five9 screen"
+        ],
+        "right": [
+          "The CRM screen",
+          "REST APIs and reference UIs to embed"
+        ]
+      },
+      "flow": {
+        "title": "Name the surface",
+        "lanes": [
+          "Agent",
+          "Builder"
+        ],
+        "steps": [
+          {
+            "lane": "Agent",
+            "title": "Plus",
+            "detail": "One Five9 screen.",
+            "frame": "plus"
+          },
+          {
+            "lane": "Agent",
+            "title": "CRM",
+            "detail": "Or the CRM's own screen.",
+            "frame": "crm"
+          },
+          {
+            "lane": "Builder",
+            "title": "Toolkit",
+            "detail": "REST APIs and reference UIs.",
+            "frame": "kit"
+          },
+          {
+            "lane": "Reader",
+            "title": "Same",
+            "detail": "The page says the underlying technology matches.",
+            "frame": "same"
+          },
+          {
+            "lane": "Reader",
+            "title": "Split",
+            "detail": "The screens are still different objects.",
+            "frame": "split"
+          },
+          {
+            "lane": "Reader",
+            "title": "Say",
+            "detail": "The design names which one.",
+            "frame": "say"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Plus and a prebuilt integration, per the desktop page,",
+          "choices": [
+            "Use unrelated technology",
+            "Share the same underlying technology",
+            "Are both dialer modes",
+            "Are both codecs"
+          ],
+          "answer": 1,
+          "why": "That is the page's sentence."
+        },
+        {
+          "q": "The toolkit includes",
+          "choices": [
+            "Only a wallpaper",
+            "REST APIs and reference UIs",
+            "Only SIP",
+            "Only a badge"
+          ],
+          "answer": 1,
+          "why": "The page says so."
+        },
+        {
+          "q": "Embedding into a custom CRM is",
+          "choices": [
+            "Named",
+            "Forbidden",
+            "A list mode",
+            "A prompt"
+          ],
+          "answer": 1,
+          "why": "The toolkit sentence includes custom or other CRM systems."
+        },
+        {
+          "q": "Same technology means the screens are identical. True or false?",
+          "choices": [
+            "True",
+            "False. The page says the technology. The screens are still different products",
+            "True if ANI matches",
+            "True for Zendesk only"
+          ],
+          "answer": 1,
+          "why": "Do not collapse the screens."
+        },
+        {
+          "q": "A URL bookmark is",
+          "choices": [
+            "Automatically the toolkit",
+            "Not what the toolkit sentence describes",
+            "A skill",
+            "A forecast"
+          ],
+          "answer": 1,
+          "why": "Name the object you actually deployed."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Same technology?",
+          "back": "Yes, per the page."
+        },
+        {
+          "front": "Toolkit contents?",
+          "back": "REST APIs and reference UIs."
+        },
+        {
+          "front": "Custom CRM?",
+          "back": "Named."
+        },
+        {
+          "front": "Screens identical?",
+          "back": "Not claimed."
+        }
+      ],
+      "lab": {
+        "title": "Label the desk",
+        "goal": "Write Plus, prebuilt, or toolkit under the picture.",
+        "steps": [
+          "One label",
+          "No bookmark called an adapter"
+        ],
+        "success": "The label matches the page's three stories.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Leadership calls a bookmark the Salesforce adapter",
+        "symptom": "Agents are clicking a saved URL.",
+        "log": "ADAPTER absent BOOKMARK yes",
+        "choices": [
+          "Say bookmark until an adapter is installed",
+          "Rename the bookmark",
+          "Add lines",
+          "Delete the IVR"
+        ],
+        "answer": 0,
+        "cause": "The object in production is not the slide.",
+        "fix": "Use the true name."
+      }
+    },
+    {
+      "id": "l04",
+      "title": "Workforce tools can show up inside the CRM",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Ask which connector was bought",
+        "Keep the three lists apart"
+      ],
+      "paragraphs": [
+        "The desktop page says WFO connectors reach schedules, adherence, time-off requests, shift bidding, and evaluation review from inside the CRM. The WFM page says you can embed WFM in the CRM and extend it to CRM digital channels, and its pre-built CRM card names Oracle and ServiceNow.",
+        "The WEM quality list names Salesforce, Zendesk, Oracle, and ServiceNow for that quality integration. Three lists, three pages. A floor can have the voice adapter and not the WFO connector. Ask which list you implemented."
+      ],
+      "cites": [
+        {
+          "label": "Agent Desktop",
+          "url": "https://www.five9.com/platform/self-service-and-engagement/agent-desktop"
+        },
+        {
+          "label": "Workforce management",
+          "url": "https://www.five9.com/platform/insights-and-analytics/workforce-management"
+        },
+        {
+          "label": "Workforce engagement management",
+          "url": "https://www.five9.com/products/capabilities/workforce-optimization"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "stack",
+        "title": "Three lists",
+        "caption": "Do not merge them.",
+        "rows": [
+          {
+            "label": "Desktop WFO connector actions"
+          },
+          {
+            "label": "WFM card: Oracle and ServiceNow"
+          },
+          {
+            "label": "Quality list: Salesforce, Zendesk, Oracle, ServiceNow"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Ask which connector",
+        "lanes": [
+          "Voice",
+          "WFO"
+        ],
+        "steps": [
+          {
+            "lane": "Voice",
+            "title": "Adapter",
+            "detail": "The CRM adapter is one purchase.",
+            "frame": "voice"
+          },
+          {
+            "lane": "WFO",
+            "title": "Connector",
+            "detail": "Schedules and evaluations are another line.",
+            "frame": "wfo"
+          },
+          {
+            "lane": "WFM",
+            "title": "Card",
+            "detail": "Oracle and ServiceNow on that card.",
+            "frame": "card"
+          },
+          {
+            "lane": "QM",
+            "title": "List",
+            "detail": "Four names on the quality list.",
+            "frame": "qm"
+          },
+          {
+            "lane": "Reader",
+            "title": "Ask",
+            "detail": "Which of these is in the contract.",
+            "frame": "ask"
+          },
+          {
+            "lane": "Reader",
+            "title": "Stop",
+            "detail": "Do not assume all three.",
+            "frame": "stop"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Shift bidding inside the CRM is named on",
+          "choices": [
+            "The skill tab",
+            "The desktop WFO connector line",
+            "The codec page",
+            "The badge"
+          ],
+          "answer": 1,
+          "why": "The desktop page includes it."
+        },
+        {
+          "q": "The WFM pre-built card read for this lesson names",
+          "choices": [
+            "Oracle and ServiceNow",
+            "Every CRM",
+            "Only Zoom",
+            "Only a bookmark"
+          ],
+          "answer": 1,
+          "why": "Those two items were on the card."
+        },
+        {
+          "q": "The quality CRM list adds",
+          "choices": [
+            "No names",
+            "Salesforce and Zendesk beside Oracle and ServiceNow",
+            "Only Epic",
+            "Only a gateway"
+          ],
+          "answer": 1,
+          "why": "That is the quality list."
+        },
+        {
+          "q": "Voice adapter present means the WFO connector is present. True or false?",
+          "choices": [
+            "True",
+            "False. They are different lines",
+            "True if the agent is Ready",
+            "True for one edition"
+          ],
+          "answer": 1,
+          "why": "Ask."
+        },
+        {
+          "q": "Embedding WFM in the CRM is",
+          "choices": [
+            "Named on the WFM page",
+            "Denied",
+            "A dialer mode",
+            "A prompt"
+          ],
+          "answer": 1,
+          "why": "The page says embed WFM in the CRM interface."
+        }
+      ],
+      "cards": [
+        {
+          "front": "WFO actions?",
+          "back": "Schedules, adherence, time off, bidding, evaluations."
+        },
+        {
+          "front": "WFM card?",
+          "back": "Oracle and ServiceNow."
+        },
+        {
+          "front": "Quality list?",
+          "back": "Salesforce, Zendesk, Oracle, ServiceNow."
+        },
+        {
+          "front": "One purchase covers all?",
+          "back": "Not claimed."
+        }
+      ],
+      "lab": {
+        "title": "Tick the lists",
+        "goal": "Mark voice, WFO, and the WFM card as bought or unknown.",
+        "steps": [
+          "Unknown is allowed"
+        ],
+        "success": "Nothing was assumed.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Agents have the voice adapter and no schedule inside the CRM",
+        "symptom": "Someone assumed the WFO connector came with it.",
+        "log": "VOICE yes WFO no",
+        "choices": [
+          "Treat the schedule path as not installed",
+          "Tell them to look harder in the CRM",
+          "Delete the adapter",
+          "Change ANI"
+        ],
+        "answer": 0,
+        "cause": "Different lines.",
+        "fix": "Document the missing connector or install it."
+      }
+    },
+    {
+      "id": "l05",
+      "title": "Zoom Phone and Teams are on the same API page",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Keep UC names off the CRM list",
+        "Quote over 55 as their count"
+      ],
+      "paragraphs": [
+        "The APIs page also lists pre-built integrations with Zoom Phone and Microsoft Teams. It says those connections are so agents can reach someone to resolve a question or consult an expert. That is a UC story, not a CRM adapter.",
+        "The same page says the partner app marketplace has over 55 partner solutions. Over 55 is the page's count. This lab did not open the marketplace and did not recount it. REST, on the same page, is how it describes access for agents, administrators, supervisors, and reporting users."
+      ],
+      "cites": [
+        {
+          "label": "APIs and SDKs",
+          "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks"
+        }
+      ],
+      "uncertain": [
+        "This lab did not open the partner marketplace, so over 55 is the API page's sentence and not a fresh count."
+      ],
+      "figure": {
+        "kind": "compare",
+        "title": "CRM list versus UC list",
+        "caption": "Both are prebuilt. They are not the same job.",
+        "leftTitle": "CRM names",
+        "rightTitle": "UC names",
+        "left": [
+          "Salesforce through Zendesk"
+        ],
+        "right": [
+          "Zoom Phone",
+          "Microsoft Teams"
+        ]
+      },
+      "flow": {
+        "title": "Classify the icon",
+        "lanes": [
+          "Page",
+          "Design"
+        ],
+        "steps": [
+          {
+            "lane": "Page",
+            "title": "CRM",
+            "detail": "A CRM name stays on the CRM list.",
+            "frame": "crm"
+          },
+          {
+            "lane": "Page",
+            "title": "UC",
+            "detail": "Zoom Phone or Teams stays on the UC list.",
+            "frame": "uc"
+          },
+          {
+            "lane": "Page",
+            "title": "Count",
+            "detail": "Over 55 is quoted as their count.",
+            "frame": "count"
+          },
+          {
+            "lane": "Reader",
+            "title": "Recount",
+            "detail": "This lab did not recount the marketplace.",
+            "frame": "recount"
+          },
+          {
+            "lane": "Page",
+            "title": "REST",
+            "detail": "REST is the access sentence.",
+            "frame": "rest"
+          },
+          {
+            "lane": "Design",
+            "title": "Say",
+            "detail": "The design says CRM or UC.",
+            "frame": "say"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Zoom Phone is listed as",
+          "choices": [
+            "A CRM adapter",
+            "A pre-built integration on the API page",
+            "A skill group",
+            "A forecast"
+          ],
+          "answer": 1,
+          "why": "The page puts it with Teams."
+        },
+        {
+          "q": "Microsoft Teams on that page is",
+          "choices": [
+            "A CRM",
+            "A pre-built integration for consult and resolve",
+            "A dialer mode",
+            "A codec"
+          ],
+          "answer": 1,
+          "why": "The page describes that use."
+        },
+        {
+          "q": "Over 55 partner solutions is",
+          "choices": [
+            "A count this lab audited",
+            "The API page's own sentence",
+            "A port",
+            "An exam score"
+          ],
+          "answer": 1,
+          "why": "Quote it as their sentence."
+        },
+        {
+          "q": "REST on that page is described for",
+          "choices": [
+            "Nobody",
+            "Agents, administrators, supervisors, and reporting users",
+            "Only trunks",
+            "Only the IVR"
+          ],
+          "answer": 1,
+          "why": "That is the sentence."
+        },
+        {
+          "q": "A Teams integration replaces a Salesforce adapter. True or false?",
+          "choices": [
+            "True",
+            "False. The page lists them for different jobs",
+            "True if WFM is native",
+            "True in one region"
+          ],
+          "answer": 1,
+          "why": "Do not swap the lists."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Zoom Phone?",
+          "back": "A prebuilt UC integration."
+        },
+        {
+          "front": "Teams?",
+          "back": "Same kind of line."
+        },
+        {
+          "front": "Over 55?",
+          "back": "Their count, not a recount."
+        },
+        {
+          "front": "REST users?",
+          "back": "Agents, administrators, supervisors, reporting users."
+        }
+      ],
+      "lab": {
+        "title": "Sort four icons",
+        "goal": "CRM or UC.",
+        "steps": [
+          "Salesforce",
+          "Zoom Phone",
+          "Teams",
+          "Zendesk"
+        ],
+        "success": "The UC pair is Zoom Phone and Teams.",
+        "href": ""
+      },
+      "fault": {
+        "title": "The design replaces Salesforce with Teams",
+        "symptom": "The page did not say they do the same job.",
+        "log": "SWAP teams salesforce",
+        "choices": [
+          "Put each name back on its list",
+          "Ship the swap",
+          "Delete IVR",
+          "Change ANI"
+        ],
+        "answer": 0,
+        "cause": "Different jobs.",
+        "fix": "Undo the swap."
+      }
+    },
+    {
+      "id": "l06",
+      "title": "Salesforce and ServiceNow are names until the admin page opens",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Stop at the published name",
+        "Mark unread admin pages confirm"
+      ],
+      "paragraphs": [
+        "Salesforce and ServiceNow are on the API list, the desktop line, and the quality list. ServiceNow is also on the WFM CRM card with Oracle. That is what this chapter can say about them.",
+        "The ServiceNow admin guide, the Salesforce install guide, and the community feature article did not return a feature body in this check. Workspace names, Lightning CTI editions, screen pop, click-to-dial, and campaign sync are confirm. Describe them only after you read the page."
+      ],
+      "cites": [
+        {
+          "label": "APIs and SDKs",
+          "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks"
+        },
+        {
+          "label": "Agent Desktop",
+          "url": "https://www.five9.com/platform/self-service-and-engagement/agent-desktop"
+        },
+        {
+          "label": "Workforce management",
+          "url": "https://www.five9.com/platform/insights-and-analytics/workforce-management"
+        }
+      ],
+      "uncertain": [
+        "ServiceNow workspace names, Salesforce Lightning editions, screen pop, and click-to-dial did not return a body in this check."
+      ],
+      "figure": {
+        "kind": "path",
+        "title": "How far the name goes",
+        "caption": "Then stop.",
+        "rows": [
+          {
+            "label": "The name is on a list"
+          },
+          {
+            "label": "The list is cited"
+          },
+          {
+            "label": "The admin body did not return"
+          },
+          {
+            "label": "Features of that body stay blank"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Stop at the name",
+        "lanes": [
+          "List",
+          "Guide"
+        ],
+        "steps": [
+          {
+            "lane": "List",
+            "title": "See",
+            "detail": "ServiceNow is on the API list.",
+            "frame": "see"
+          },
+          {
+            "lane": "List",
+            "title": "See2",
+            "detail": "Salesforce is on the API list.",
+            "frame": "sf"
+          },
+          {
+            "lane": "Guide",
+            "title": "Closed",
+            "detail": "The admin body did not return.",
+            "frame": "closed"
+          },
+          {
+            "lane": "Reader",
+            "title": "Blank",
+            "detail": "No workspace name is copied.",
+            "frame": "blank"
+          },
+          {
+            "lane": "Reader",
+            "title": "Blank2",
+            "detail": "No screen-pop rule is copied.",
+            "frame": "pop"
+          },
+          {
+            "lane": "Reader",
+            "title": "Mark",
+            "detail": "The gap is confirm.",
+            "frame": "mark"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "This chapter can say ServiceNow is",
+          "choices": [
+            "Configured in a named workspace",
+            "On the public lists that opened",
+            "A codec",
+            "A skill"
+          ],
+          "answer": 1,
+          "why": "The lists opened. The admin body did not."
+        },
+        {
+          "q": "Lightning CTI editions in this chapter are",
+          "choices": [
+            "Quoted",
+            "Not quoted",
+            "Professional only",
+            "Unlimited only"
+          ],
+          "answer": 1,
+          "why": "That page was not the source read here."
+        },
+        {
+          "q": "Click-to-dial is",
+          "choices": [
+            "Specified step by step",
+            "Confirm. The feature article body did not return",
+            "A forecast",
+            "A disposition"
+          ],
+          "answer": 1,
+          "why": "Do not invent the button."
+        },
+        {
+          "q": "Campaign sync from the CRM is",
+          "choices": [
+            "Described",
+            "Confirm, for the same reason",
+            "A list mode",
+            "A prompt"
+          ],
+          "answer": 1,
+          "why": "The body did not return."
+        },
+        {
+          "q": "Repeating a feature from memory is",
+          "choices": [
+            "Helpful",
+            "How this chapter gets a fact wrong",
+            "Required",
+            "A codec choice"
+          ],
+          "answer": 1,
+          "why": "Memory is not the page."
+        }
+      ],
+      "cards": [
+        {
+          "front": "ServiceNow on a list?",
+          "back": "Yes."
+        },
+        {
+          "front": "Admin body read?",
+          "back": "No."
+        },
+        {
+          "front": "Screen pop?",
+          "back": "Confirm."
+        },
+        {
+          "front": "Click-to-dial?",
+          "back": "Confirm."
+        }
+      ],
+      "lab": {
+        "title": "Write the Salesforce sentence you are allowed",
+        "goal": "It is a named pre-built integration. Stop.",
+        "steps": [
+          "No edition",
+          "No package number",
+          "No pop rule"
+        ],
+        "success": "The sentence matches the list.",
+        "href": ""
+      },
+      "fault": {
+        "title": "A worksheet lists ServiceNow Zurich as the supported release",
+        "symptom": "This chapter did not read that release table.",
+        "log": "RELEASE zurich SOURCE unread",
+        "choices": [
+          "Remove the release name",
+          "Publish it",
+          "Add a skill",
+          "Reset lists"
+        ],
+        "answer": 0,
+        "cause": "An unread table is not a source.",
+        "fix": "Delete the name."
+      }
+    },
+    {
+      "id": "l07",
+      "title": "A CRM note you can defend",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Name the surface and the list",
+        "Leave unread features blank"
+      ],
+      "paragraphs": [
+        "A defendable note names the surface, the list, and the gap. Surface: Plus, prebuilt, toolkit, or bookmark. List: the API CRM names, the UC names, or the WFO actions. Gap: anything from an admin guide that did not open, marked confirm, with no URL and no guessed field.",
+        "The API page says integrations can often be done with minimal coding. Often and minimal are the page's words. They are not a project estimate. The desktop page's single screen is the agent experience it describes, not a count of browser tabs this lab measured."
+      ],
+      "cites": [
+        {
+          "label": "APIs and SDKs",
+          "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks"
+        },
+        {
+          "label": "Agent Desktop",
+          "url": "https://www.five9.com/platform/self-service-and-engagement/agent-desktop"
+        }
+      ],
+      "uncertain": [
+        "Project size is not on the API page. Minimal coding is their phrase, not an estimate."
+      ],
+      "figure": {
+        "kind": "path",
+        "title": "The note",
+        "caption": "Three lines.",
+        "rows": [
+          {
+            "label": "Surface"
+          },
+          {
+            "label": "List you copied"
+          },
+          {
+            "label": "Confirm, with the feature left blank"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Sign it",
+        "lanes": [
+          "Note",
+          "Gap"
+        ],
+        "steps": [
+          {
+            "lane": "Note",
+            "title": "Surface",
+            "detail": "Plus, prebuilt, toolkit, or bookmark.",
+            "frame": "surface"
+          },
+          {
+            "lane": "Note",
+            "title": "List",
+            "detail": "Names copied from one page.",
+            "frame": "list"
+          },
+          {
+            "lane": "Note",
+            "title": "Often",
+            "detail": "Minimal coding stays in their words.",
+            "frame": "often"
+          },
+          {
+            "lane": "Gap",
+            "title": "Pop",
+            "detail": "Screen pop is blank.",
+            "frame": "pop"
+          },
+          {
+            "lane": "Gap",
+            "title": "Release",
+            "detail": "Release names are blank.",
+            "frame": "rel"
+          },
+          {
+            "lane": "Note",
+            "title": "Sign",
+            "detail": "A stranger can see what was not read.",
+            "frame": "sign"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "A defendable note includes",
+          "choices": [
+            "A guessed screen-pop field",
+            "The surface, the copied list, and the blank gap",
+            "A package version",
+            "An exam code"
+          ],
+          "answer": 1,
+          "why": "That is the review."
+        },
+        {
+          "q": "Minimal coding is",
+          "choices": [
+            "This lab's estimate",
+            "The API page's wording",
+            "A port",
+            "A skill level"
+          ],
+          "answer": 1,
+          "why": "Do not turn it into a schedule."
+        },
+        {
+          "q": "A bookmark labeled as an adapter fails the note because",
+          "choices": [
+            "Bookmarks are illegal",
+            "The surface name is wrong",
+            "Zendesk is absent",
+            "Teams is a CRM"
+          ],
+          "answer": 1,
+          "why": "Say what is actually installed."
+        },
+        {
+          "q": "Leaving screen pop blank is",
+          "choices": [
+            "Incomplete in a bad way",
+            "The honest end of this chapter",
+            "A codec choice",
+            "A forecast"
+          ],
+          "answer": 1,
+          "why": "The body did not return."
+        },
+        {
+          "q": "Mixing the WFM CRM card into the API list without saying so is",
+          "choices": [
+            "Fine",
+            "How a reader loses the source",
+            "Required",
+            "A prompt"
+          ],
+          "answer": 1,
+          "why": "Name the page."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Three parts of the note?",
+          "back": "Surface, list, gap."
+        },
+        {
+          "front": "Minimal coding?",
+          "back": "Their words."
+        },
+        {
+          "front": "Wrong surface name?",
+          "back": "Fails the note."
+        },
+        {
+          "front": "Blank screen pop?",
+          "back": "Honest."
+        }
+      ],
+      "lab": {
+        "title": "Write the note",
+        "goal": "One CRM, one surface, one confirm.",
+        "steps": [
+          "No guessed field"
+        ],
+        "success": "The gap has no URL and no invented feature.",
+        "href": ""
+      },
+      "fault": {
+        "title": "The note says minimal coding so the project is two days",
+        "symptom": "The page did not say two days.",
+        "log": "ESTIMATE 2d SOURCE often",
+        "choices": [
+          "Delete the estimate",
+          "Keep two days",
+          "Add agents",
+          "Change ANI"
+        ],
+        "answer": 0,
+        "cause": "Often is not a schedule.",
+        "fix": "Remove the date."
+      }
+    }
+  ]
+}

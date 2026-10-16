@@ -1,0 +1,148 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 3462 >>
+stream
+BT
+/F1 10 Tf
+48 740 Td
+14 TL
+(Ecosystem) Tj
+T*
+() Tj
+T*
+(A box needs a page. A line is teaching. A gap stays a gap until a body comes back. The) Tj
+T*
+(glossary is a contract with the page A glossary row in this lab is a term, a meaning, and) Tj
+T*
+(the page that printed the meaning. Domain, skill group, campaign, and the rest already) Tj
+T*
+(follow that rule. A new word with no page does not get a row. The mind map only holds boxes) Tj
+T*
+(you can cite A mind map of this floor can hold a domain, skill groups, the agent desktop,) Tj
+T*
+(WFM, quality, and the API list, because each of those has a page this lab read. The lines) Tj
+T*
+(between them are teaching lines. A line is not a protocol. Sister technologies are the names) Tj
+T*
+(on the neighboring pages Sister technologies, in this lab, means products the Five9 pages) Tj
+T*
+(name as living beside the domain. The WEM page names Verint as a partner example beside) Tj
+T*
+(native WEM. The API page names Zoom Phone and Microsoft Teams. The CRM lists name) Tj
+T*
+(Salesforce, ServiceNow, and the other CRMs on those lists. The integration map is the API) Tj
+T*
+(list, drawn An integration map for this chapter is the API list turned sideways: CTI,) Tj
+T*
+(Configuration, Reporting, Statistics, Web2Campaign, CRM SDK, and Web Connectors, plus the) Tj
+T*
+(prebuilt CRM names and the UC names. REST is the access sentence for agents, administrators,) Tj
+T*
+(supervisors, and reporting users. A bridge is a teaching map, not an import A cross-platform) Tj
+T*
+(bridge says how a person who knows another contact center might look for the same idea.) Tj
+T*
+(Skill group is the Five9 queue the admin chapter describes. It is not a claim that another) Tj
+T*
+(vendor&#x27;s queue object imports. Future hooks stay unset until a page exists A future) Tj
+T*
+(hook is a place the lab expects to grow and refuses to fake. The guide&#x27;s cloud endpoint) Tj
+T*
+(is unset. A product sentence that says often or up to is not a roadmap date. The API) Tj
+T*
+(page&#x27;s over 55 was not recounted. Read the map before you add a box The review is the) Tj
+T*
+(whole ecosystem section in one pass. Glossary: every new word has a page. Mind map: every) Tj
+T*
+(box has a page and every line is teaching. Sisters: Verint, Zoom Phone, Teams, and the CRM) Tj
+T*
+(names, each captioned. Integration map: the API list, unmerged. Bridges: teaching only.) Tj
+T*
+(Hooks: named gaps, no dates.) Tj
+T*
+() Tj
+T*
+(Sources and go deeper) Tj
+T*
+(Automatic call distributor. wikipedia.) Tj
+T*
+(https://en.wikipedia.org/wiki/Automatic_call_distributor. last checked 2026-10.) Tj
+T*
+(Skill groups. vendor.) Tj
+T*
+(https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm.) Tj
+T*
+(last checked 2026-10.) Tj
+T*
+(Agent Desktop. vendor.) Tj
+T*
+(https://www.five9.com/platform/self-service-and-engagement/agent-desktop. last checked) Tj
+T*
+(2026-10.) Tj
+T*
+(Workforce management. vendor.) Tj
+T*
+(https://www.five9.com/platform/insights-and-analytics/workforce-management. last checked) Tj
+T*
+(2026-10.) Tj
+T*
+(APIs and SDKs. vendor.) Tj
+T*
+(https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks. last checked) Tj
+T*
+(2026-10.) Tj
+T*
+(Workforce engagement management. vendor.) Tj
+T*
+(https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.) Tj
+T*
+(confirm. This chapter does not re-quote gateway vendors or a migration wizard. Those pages) Tj
+T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Length 251 >>
+stream
+BT
+/F1 10 Tf
+48 740 Td
+14 TL
+(were not the ones opened for these lessons. last checked 2026-10.) Tj
+T*
+(confirm. This lab's guide does not call a cloud endpoint. No product roadmap date is added) Tj
+T*
+(in this chapter. last checked 2026-10.) Tj
+T*
+ET
+endstream
+endobj
+4 0 obj
+<< /Type /Page /Parent 6 0 R /MediaBox [0 0 612 792] /Contents 2 0 R /Resources << /Font << /F1 1 0 R >> >> >>
+endobj
+5 0 obj
+<< /Type /Page /Parent 6 0 R /MediaBox [0 0 612 792] /Contents 3 0 R /Resources << /Font << /F1 1 0 R >> >> >>
+endobj
+6 0 obj
+<< /Type /Pages /Kids [4 0 R 5 0 R] /Count 2 >>
+endobj
+7 0 obj
+<< /Type /Catalog /Pages 6 0 R >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000003593 00000 n 
+0000003895 00000 n 
+0000004021 00000 n 
+0000004147 00000 n 
+0000004210 00000 n 
+trailer << /Size 8 /Root 7 0 R >>
+startxref
+4259
+%%EOF

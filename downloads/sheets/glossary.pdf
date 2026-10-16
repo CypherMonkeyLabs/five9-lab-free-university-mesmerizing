@@ -105,7 +105,7 @@ ET
 endstream
 endobj
 3 0 obj
-<< /Length 2992 >>
+<< /Length 3206 >>
 stream
 BT
 /F1 10 Tf
@@ -121,7 +121,19 @@ T*
 T*
 (Data retention RFC 3261 The SIP specification. It does not choose your dial plan. RFC 3261) Tj
 T*
-(RFC 4733 Telephone events, the usual way DTMF rides in the media. RFC 4733) Tj
+(RFC 4733 Telephone events, the usual way DTMF rides in the media. RFC 4733 ACD) Tj
+T*
+(Wikipedia&#x27;s name for a device that answers and distributes incoming calls to a group of) Tj
+T*
+(agents. Not a Five9 field by itself. Automatic call distributor Forecast The WFM page&#x27;s) Tj
+T*
+(base for staffing: multiskill, multichannel, several algorithms it does not name. Workforce) Tj
+T*
+(management Adherence Plan versus what the person did. The WFM page lists historical and) Tj
+T*
+(real-time views, plus alerts. Workforce management CTI Web Services API One name on the APIs) Tj
+T*
+(page. Not a screen-pop field list. APIs and SDKs) Tj
 T*
 () Tj
 T*
@@ -191,6 +203,16 @@ T*
 T*
 (Call variables for reporting. community.) Tj
 T*
+ET
+endstream
+endobj
+4 0 obj
+<< /Length 3019 >>
+stream
+BT
+/F1 10 Tf
+48 740 Td
+14 TL
 (https://community.five9.com/s/article/Administrator-Enabling-Call-Variables-for-Reporting?language=en_US.) Tj
 T*
 (last checked 2026-10.) Tj
@@ -203,16 +225,6 @@ T*
 T*
 (Call log filters. community.) Tj
 T*
-ET
-endstream
-endobj
-4 0 obj
-<< /Length 3070 >>
-stream
-BT
-/F1 10 Tf
-48 740 Td
-14 TL
 (https://community.five9.com/s/article/Reporting-Apply-Filter-s-in-the-Call-Log-Report. last) Tj
 T*
 (checked 2026-10.) Tj
@@ -269,6 +281,16 @@ T*
 T*
 (RFC 4733. rfc. https://www.rfc-editor.org/rfc/rfc4733. last checked 2026-10.) Tj
 T*
+(Automatic call distributor. wikipedia.) Tj
+T*
+(https://en.wikipedia.org/wiki/Automatic_call_distributor. last checked 2026-10.) Tj
+T*
+(Workforce management. vendor.) Tj
+T*
+(https://www.five9.com/platform/insights-and-analytics/workforce-management. last checked) Tj
+T*
+(2026-10.) Tj
+T*
 (RFC 3550, RTP. rfc. https://www.rfc-editor.org/rfc/rfc3550. last checked 2026-10.) Tj
 T*
 (RFC 3551, RTP profile for audio and video. rfc. https://www.rfc-editor.org/rfc/rfc3551. last) Tj
@@ -283,6 +305,16 @@ T*
 T*
 (RFC 2782, DNS SRV. rfc. https://www.rfc-editor.org/rfc/rfc2782. last checked 2026-10.) Tj
 T*
+ET
+endstream
+endobj
+5 0 obj
+<< /Length 850 >>
+stream
+BT
+/F1 10 Tf
+48 740 Td
+14 TL
 (RFC 6455, The WebSocket Protocol. rfc. https://www.rfc-editor.org/rfc/rfc6455. last checked) Tj
 T*
 (2026-10.) Tj
@@ -305,16 +337,6 @@ T*
 T*
 (2026-10.) Tj
 T*
-ET
-endstream
-endobj
-5 0 obj
-<< /Length 166 >>
-stream
-BT
-/F1 10 Tf
-48 740 Td
-14 TL
 (Interactive voice response. wikipedia.) Tj
 T*
 (https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.) Tj
@@ -346,15 +368,15 @@ xref
 0000000009 00000 n 
 0000000079 00000 n 
 0000004517 00000 n 
-0000007561 00000 n 
-0000010683 00000 n 
-0000010900 00000 n 
-0000011027 00000 n 
-0000011154 00000 n 
-0000011281 00000 n 
-0000011408 00000 n 
-0000011484 00000 n 
+0000007775 00000 n 
+0000010846 00000 n 
+0000011747 00000 n 
+0000011874 00000 n 
+0000012001 00000 n 
+0000012128 00000 n 
+0000012255 00000 n 
+0000012331 00000 n 
 trailer << /Size 12 /Root 11 0 R >>
 startxref
-11535
+12382
 %%EOF

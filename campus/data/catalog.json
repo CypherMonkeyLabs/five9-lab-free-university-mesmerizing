@@ -719,15 +719,215 @@
           "title": "What this lab will not pretend to be"
         }
       ]
+    },
+    {
+      "id": "t19",
+      "file": "tracks/t19.json",
+      "title": "Skills routing and ACD",
+      "short": "Skills and ACD",
+      "blurb": "How a Five9 skill group routes work, and which ACD details this check could not read.",
+      "group": "Routing",
+      "level": "Practice",
+      "summary": "A skill group is the queue the admin chapter describes. The general word ACD stays on its own page.",
+      "lessons": [
+        {
+          "id": "l01",
+          "title": "An ACD distributes. A skill group is the Five9 queue"
+        },
+        {
+          "id": "l02",
+          "title": "One person, several skills. One campaign, several groups"
+        },
+        {
+          "id": "l03",
+          "title": "Outbound uses Skills. Inbound and autodial use Outbound Skills"
+        },
+        {
+          "id": "l04",
+          "title": "You can add, change, remove, and message the group"
+        },
+        {
+          "id": "l05",
+          "title": "Service level and voicemail are topics on the same chapter"
+        },
+        {
+          "id": "l06",
+          "title": "Adding skills to a campaign points at another guide"
+        },
+        {
+          "id": "l07",
+          "title": "A routing review you can finish"
+        }
+      ]
+    },
+    {
+      "id": "t20",
+      "file": "tracks/t20.json",
+      "title": "Workforce management",
+      "short": "Workforce",
+      "blurb": "Forecasts, schedules, intraday changes, and adherence from the public WFM and WEM pages.",
+      "group": "Workforce",
+      "level": "Practice",
+      "summary": "WFM is the roster. The pages name the tools and leave the formulas unnamed.",
+      "lessons": [
+        {
+          "id": "l01",
+          "title": "Workforce management staffs the work"
+        },
+        {
+          "id": "l02",
+          "title": "Forecasts are multiskill and multichannel"
+        },
+        {
+          "id": "l03",
+          "title": "Schedules can be built or bid"
+        },
+        {
+          "id": "l04",
+          "title": "Intraday is a comparison, a reforecast, and a notice"
+        },
+        {
+          "id": "l05",
+          "title": "Adherence is plan versus what the person did"
+        },
+        {
+          "id": "l06",
+          "title": "The agent can see the plan, including on a phone"
+        },
+        {
+          "id": "l07",
+          "title": "Native WEM and a partner path both exist"
+        }
+      ]
+    },
+    {
+      "id": "t21",
+      "file": "tracks/t21.json",
+      "title": "Quality management and analytics",
+      "short": "Quality",
+      "blurb": "Evaluations, monitoring, analytics wording, and the claims this check would not upgrade.",
+      "group": "Quality",
+      "level": "Practice",
+      "summary": "Quality scores a recording against a form. Analytics sweeps interactions. The percents stay on the page that printed them.",
+      "lessons": [
+        {
+          "id": "l01",
+          "title": "Quality management scores the work on purpose"
+        },
+        {
+          "id": "l02",
+          "title": "The evaluation list is forms, queries, coaching, and assignment"
+        },
+        {
+          "id": "l03",
+          "title": "Monitoring and coaching are on the quality pages"
+        },
+        {
+          "id": "l04",
+          "title": "Analytics is a sweep across interactions"
+        },
+        {
+          "id": "l05",
+          "title": "Performance views are dashboards, wallboards, and KPIs"
+        },
+        {
+          "id": "l06",
+          "title": "Agents can read evaluations without a second story"
+        },
+        {
+          "id": "l07",
+          "title": "A quality review you can finish"
+        }
+      ]
+    },
+    {
+      "id": "t22",
+      "file": "tracks/t22.json",
+      "title": "CRM and CTI integrations",
+      "short": "CRM and CTI",
+      "blurb": "Named adapters, the CTI API, and the Salesforce and ServiceNow details this check would not guess.",
+      "group": "Integrations",
+      "level": "Practice",
+      "summary": "Public pages name the CRMs and the CTI API. Admin feature lists that did not open stay blank.",
+      "lessons": [
+        {
+          "id": "l01",
+          "title": "CTI is a named API, not a vibe"
+        },
+        {
+          "id": "l02",
+          "title": "The prebuilt CRM names are a list"
+        },
+        {
+          "id": "l03",
+          "title": "Plus and a prebuilt adapter share a technology story"
+        },
+        {
+          "id": "l04",
+          "title": "Workforce tools can show up inside the CRM"
+        },
+        {
+          "id": "l05",
+          "title": "Zoom Phone and Teams are on the same API page"
+        },
+        {
+          "id": "l06",
+          "title": "Salesforce and ServiceNow are names until the admin page opens"
+        },
+        {
+          "id": "l07",
+          "title": "A CRM note you can defend"
+        }
+      ]
+    },
+    {
+      "id": "t23",
+      "file": "tracks/t23.json",
+      "title": "Ecosystem",
+      "short": "Ecosystem",
+      "blurb": "Glossary, mind map, sister technologies, the integration list, teaching bridges, and hooks that stay blank.",
+      "group": "Ecosystem",
+      "level": "Practice",
+      "summary": "A box needs a page. A line is teaching. A gap stays a gap until a body comes back.",
+      "lessons": [
+        {
+          "id": "l01",
+          "title": "The glossary is a contract with the page"
+        },
+        {
+          "id": "l02",
+          "title": "The mind map only holds boxes you can cite"
+        },
+        {
+          "id": "l03",
+          "title": "Sister technologies are the names on the neighboring pages"
+        },
+        {
+          "id": "l04",
+          "title": "The integration map is the API list, drawn"
+        },
+        {
+          "id": "l05",
+          "title": "A bridge is a teaching map, not an import"
+        },
+        {
+          "id": "l06",
+          "title": "Future hooks stay unset until a page exists"
+        },
+        {
+          "id": "l07",
+          "title": "Read the map before you add a box"
+        }
+      ]
     }
   ],
   "counts": {
-    "tracks": 18,
-    "lessons": 126,
-    "quiz": 630,
-    "cards": 504,
-    "labs": 126,
-    "faults": 126,
-    "cites": 288
+    "tracks": 23,
+    "lessons": 161,
+    "quiz": 805,
+    "cards": 644,
+    "labs": 161,
+    "faults": 161,
+    "cites": 351
   }
 }

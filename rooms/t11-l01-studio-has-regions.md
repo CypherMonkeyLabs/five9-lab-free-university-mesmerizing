@@ -14,4 +14,4 @@
 - [RFC 2782, DNS SRV](https://www.rfc-editor.org/rfc/rfc2782). rfc. last checked 2026-10.
 - [RFC 9293, Transmission Control Protocol](https://www.rfc-editor.org/rfc/rfc9293). rfc. last checked 2026-10.
 - [RFC 768, User Datagram Protocol](https://www.rfc-editor.org/rfc/rfc768). rfc. last checked 2026-10.
-- confirm. Studio signaling ports in the PDF are easy to misread as universal VCC trunk ports. Confirm which SBC your domain uses.. last checked 2026-10.
+- confirm. Studio signaling ports in the PDF are easy to misread as universal VCC trunk ports. Confirm which SBC your domain uses. last checked 2026-10.

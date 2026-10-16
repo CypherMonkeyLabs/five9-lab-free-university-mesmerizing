@@ -16,4 +16,4 @@
 - [Technical requirements PDF](https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf). vendor. last checked 2026-10. Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall.
 - [ITU-T E.164, international public telecommunication numbering](https://www.itu.int/rec/T-REC-E.164). standard. last checked 2026-10.
 - [Enhanced 9-1-1](https://en.wikipedia.org/wiki/Enhanced_9-1-1). wikipedia. last checked 2026-10.
-- confirm. This checklist is a teaching bridge for cutover discipline. It is not an official Five9 UCCE runbook.. last checked 2026-10.
+- confirm. This checklist is a teaching bridge for cutover discipline. It is not an official Five9 UCCE runbook. last checked 2026-10.

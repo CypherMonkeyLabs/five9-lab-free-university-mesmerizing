@@ -1,0 +1,28 @@
+{
+  "id": "t21-l06-agents-can-read-evaluations-without-a-second-sto",
+  "title": "Agents can read evaluations without a second story",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Agent Desktop",
+      "url": "https://www.five9.com/platform/self-service-and-engagement/agent-desktop",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Workforce engagement management",
+      "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Notice and consent are not re-quoted in this chapter. The license page was not the source opened for these lessons.",
+      "url": "",
+      "kind": "note",
+      "status": "confirm",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

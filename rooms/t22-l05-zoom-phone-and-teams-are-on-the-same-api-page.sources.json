@@ -1,0 +1,21 @@
+{
+  "id": "t22-l05-zoom-phone-and-teams-are-on-the-same-api-page",
+  "title": "Zoom Phone and Teams are on the same API page",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "APIs and SDKs",
+      "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "This lab did not open the partner marketplace, so over 55 is the API page's sentence and not a fresh count.",
+      "url": "",
+      "kind": "note",
+      "status": "confirm",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

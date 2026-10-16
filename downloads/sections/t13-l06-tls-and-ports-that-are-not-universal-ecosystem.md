@@ -14,4 +14,4 @@
 - [RFC 8446, TLS 1.3](https://www.rfc-editor.org/rfc/rfc8446). rfc. last checked 2026-10.
 - [RFC 9293, Transmission Control Protocol](https://www.rfc-editor.org/rfc/rfc9293). rfc. last checked 2026-10.
 - [RFC 768, User Datagram Protocol](https://www.rfc-editor.org/rfc/rfc768). rfc. last checked 2026-10.
-- confirm. Studio TCP 5061 is described as beta in the PDF read for this lab. Confirm before you depend on it.. last checked 2026-10.
+- confirm. Studio TCP 5061 is described as beta in the PDF read for this lab. Confirm before you depend on it. last checked 2026-10.

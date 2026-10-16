@@ -39,14 +39,18 @@ REPO = "https://github.com/CypherMonkeyLabs/five9-lab-free-university-mesmerizin
 TREE = "https://linktr.ee/cypherMonkey"
 
 NAV = [
-    ("home", "Home", "index.html", "🏠", "The front door and the eighteen tracks."),
+    ("home", "Home", "index.html", "🏠", "The front door, the tracks, and the new chapters."),
     ("learn", "Learn", "start.html", "📚", "Ten minutes, or the full course."),
+    ("acd", "Skills and ACD", "tracks/t19.html", "☎️", "Skill groups as Five9 queues, and the ACD details this check could not read."),
+    ("wfm", "Workforce", "tracks/t20.html", "📅", "Forecasts, schedules, intraday changes, and adherence."),
+    ("quality", "Quality", "tracks/t21.html", "🎧", "Evaluations, analytics wording, and claims left as claims."),
+    ("crm", "CRM and CTI", "tracks/t22.html", "🔗", "Named adapters and the CTI API, from the pages that opened."),
     ("diagrams", "Diagrams", "diagrams.html", "🗺️", "Drawings you can save as SVG, PNG, and HTML."),
     ("flows", "Flows", "flows.html", "〰️", "Animated call, signal, and data paths."),
     ("play", "Play", "play.html", "🎮", "A port game, a daily question, and a badge in this browser."),
     ("listen", "Listen", "listen.html", "🎧", "Study audio and read-along."),
     ("downloads", "Downloads", "downloads.html", "⬇️", "Sheets, cards, templates, and one bundle."),
-    ("ecosystem", "Ecosystem", "ecosystem.html", "🌐", "Glossary, map, bridges, and future hooks."),
+    ("ecosystem", "Ecosystem", "ecosystem.html", "🌐", "Glossary, mind map, sisters, integration list, bridges, and hooks."),
     ("help", "Help", "help.html", "❓", "How the menu, course, bot, and downloads work."),
     ("legal", "Legal", "legal.html", "🛡️", "Copyright, licences, privacy, and removal."),
     ("careers", "Careers", "careers.html", "🎯", "Study frames. Not a job requisition."),
@@ -147,6 +151,7 @@ def disclaimer_block() -> str:
         f"<p>If anyone has a concern, the content will be removed or corrected promptly via the contact form at "
         f'<a href="{CONTACT}">{CONTACT}</a>. Nothing here is sold. Happy to volunteer for any organization.</p>'
         "<p>Confirm before relying on a number, a port, or a vendor case-study claim. Product behavior belongs to the cited page.</p>"
+        "<p>Chapters on skills, workforce, quality, CRM, and the ecosystem repeat only what a public page returned. A page that did not return a body is marked confirm and is not linked.</p>"
         "</div></aside>"
         '<p class="footer-brand">CypherMonkey Labs</p>'
         f'<nav class="brand-row" aria-label="Brand">{brand_icons()}</nav>'
@@ -260,6 +265,8 @@ def write_page(rel: str, title: str, desc: str, body: str, current: str) -> None
     prefix = "../" * depth
     path = ROOT / rel
     path.parent.mkdir(parents=True, exist_ok=True)
+    if "Sources and go deeper" not in body:
+        body = body + sources_html(sources_from_html(body))
     doc = head(title, prefix, desc) + chrome(prefix, current) + f'<main id="main">{body}</main>' + footer() + scripts(prefix)
     path.write_text(doc, encoding="utf-8")
 
@@ -796,7 +803,7 @@ def home_document(tracks, records, drawing_count: int):
             f'<strong>{esc(track["title"])}</strong><p>{esc(track.get("blurb") or "")}</p></a>'
         )
     overview_note = (
-        '<p class="lane-copy" data-sentence>126 drawings. Each SVG is the diagram and the flow, counted once. '
+        f'<p class="lane-copy" data-sentence>{drawing_count} drawings. Each SVG is the diagram and the flow, counted once. '
         'The practice atlas is a separate set.</p>'
     )
     l01 = find_record(records, "t01", "l01")
@@ -831,7 +838,7 @@ def home_document(tracks, records, drawing_count: int):
         '<div class="hero-copy">'
         '<p class="kicker">Five9 Virtual Contact Center</p>'
         '<h1 class="hero-title">Learn the floor without a live domain.</h1>'
-        '<p class="lede" data-sentence>Eighteen tracks, from the domain model to a teaching bridge off Cisco contact center. Citations stay on the page. Confirm before relying.</p>'
+        f'<p class="lede" data-sentence>{len(tracks)} tracks, from the domain model to skills, workforce, quality, CRM, and the ecosystem. Citations stay on the page. Confirm before relying.</p>'
         '<div class="actions"><a href="start.html#ten">Finish in 10 minutes</a><a href="start.html#full">Full course</a>'
         '<a href="downloads.html">Just download</a><a href="campus/index.html">Open app</a>'
         f'<a href="{REPO}">View repo</a></div>'
@@ -848,7 +855,7 @@ def page_bodies(tracks, records, uni, eco, certs, interview, manifest):
     door = front_sources("overview")
     emit_export("downloads/sections/home-primer.html", "Read this before you pick a track", primer, ["Domain, campaign types, and the outbound build order."], rows)
     emit_export("downloads/sections/home-sources.html", "Sources and go deeper", sources_html(rows), ["Sources and go deeper"], rows, html_ready=True)
-    emit_export("downloads/sections/home-overview.html", "Five9 Lab overview", stats + overview_note, ["126 drawings. Each SVG is the diagram and the flow, counted once."], door)
+    emit_export("downloads/sections/home-overview.html", "Five9 Lab overview", stats + overview_note, [f"{len(manifest)} drawings. Each SVG is the diagram and the flow, counted once."], door)
     emit_export("downloads/sections/home-tracks.html", "Tracks", f'<div class="card-grid">{"".join(track_cards)}</div>', [track["title"] for track in tracks], door)
     write_page("index.html", "Five9 Lab", "Independent study floor for Five9 Virtual Contact Center.", home, "index.html")
 
@@ -860,7 +867,7 @@ def page_bodies(tracks, records, uni, eco, certs, interview, manifest):
     start = (
         '<h1>Learn</h1>'
         + section("ten", "Finish in 10 minutes", f'<p data-sentence>Read these three rooms, then stop. They are the build order, the tenant, and the next object.</p><ol>{ten_links}</ol>', [("HTML", "downloads/sections/start-ten.html")])
-        + section("full", "Full course", f'<p data-sentence>The full course is the eighteen tracks. Each room has a five-minute read, a drawing, an example, a quiz, sources, and an ecosystem panel.</p><ol>{full}</ol>', [("HTML", "downloads/sections/start-full.html")])
+        + section("full", "Full course", f'<p data-sentence>The full course is the {len(tracks)} tracks. Each room has a five-minute read, a drawing, an example, a quiz, sources, and an ecosystem panel.</p><ol>{full}</ol>', [("HTML", "downloads/sections/start-full.html")])
     )
     emit_export("downloads/sections/start-ten.html", "Ten minutes", f"<ol>{ten_links}</ol>", ["Ten minutes"], door)
     emit_export("downloads/sections/start-full.html", "Full course", f"<ol>{full}</ol>", ["Full course"], door)
@@ -986,6 +993,8 @@ def page_bodies(tracks, records, uni, eco, certs, interview, manifest):
     roadmap = "".join(f'<li>{esc(row["when"])}: {esc(row["what"])}</li>' for row in uni.get("roadmap") or [])
     eco_body = (
         '<h1>Ecosystem</h1>'
+        + '<p data-sentence>This section is the glossary, the mind map, the sister technologies, the integration list, the teaching bridges, and the future hooks. The study track walks the same six parts.</p>'
+        + '<p class="actions"><a href="tracks/t23.html">Open the ecosystem track</a></p>'
         + section("glossary", "Glossary", f'<ul>{glossary}</ul>', [("HTML", "downloads/sheets/glossary.html")])
         + section("map", "Mind map", f'<div class="figure">{eco.get("map") or ""}</div><p>{esc(eco.get("mapCaption") or "")}</p>', [("HTML", "downloads/sheets/glossary.html")])
         + section("sisters", "Sister technologies and integrations", f'<ul>{integ}</ul>', [("HTML", "downloads/sheets/crm-adapters.html")])

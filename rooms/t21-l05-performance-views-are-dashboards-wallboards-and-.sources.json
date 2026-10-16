@@ -1,0 +1,21 @@
+{
+  "id": "t21-l05-performance-views-are-dashboards-wallboards-and-",
+  "title": "Performance views are dashboards, wallboards, and KPIs",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Workforce engagement management",
+      "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "A Five9 Analytics PDF downloaded in this check did not yield readable sentences. No retention period or visualization count is taken from it.",
+      "url": "",
+      "kind": "note",
+      "status": "confirm",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

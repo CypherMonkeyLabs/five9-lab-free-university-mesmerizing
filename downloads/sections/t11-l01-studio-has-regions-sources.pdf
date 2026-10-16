@@ -3,7 +3,7 @@
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
 endobj
 2 0 obj
-<< /Length 1246 >>
+<< /Length 1245 >>
 stream
 BT
 /F1 10 Tf
@@ -47,7 +47,7 @@ T*
 T*
 (confirm. Studio signaling ports in the PDF are easy to misread as universal VCC trunk ports.) Tj
 T*
-(Confirm which SBC your domain uses.. last checked 2026-10.) Tj
+(Confirm which SBC your domain uses. last checked 2026-10.) Tj
 T*
 ET
 endstream
@@ -66,10 +66,10 @@ xref
 0000000000 65535 f 
 0000000009 00000 n 
 0000000079 00000 n 
-0000001377 00000 n 
-0000001503 00000 n 
-0000001560 00000 n 
+0000001376 00000 n 
+0000001502 00000 n 
+0000001559 00000 n 
 trailer << /Size 6 /Root 5 0 R >>
 startxref
-1609
+1608
 %%EOF

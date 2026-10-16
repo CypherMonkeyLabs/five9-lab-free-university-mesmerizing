@@ -1,0 +1,21 @@
+{
+  "id": "t23-l01-the-glossary-is-a-contract-with-the-page",
+  "title": "The glossary is a contract with the page",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Automatic call distributor",
+      "url": "https://en.wikipedia.org/wiki/Automatic_call_distributor",
+      "kind": "wikipedia",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Skill groups",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

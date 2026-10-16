@@ -3,7 +3,7 @@
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
 endobj
 2 0 obj
-<< /Length 3691 >>
+<< /Length 3689 >>
 stream
 BT
 /F1 10 Tf
@@ -91,7 +91,7 @@ T*
 T*
 (confirm. Five9 publishes Cisco as a SIP gateway type. This lab did not find an official UCCX) Tj
 T*
-(or UCCE migration wizard. Mappings below are instructional.. last checked 2026-10.) Tj
+(or UCCE migration wizard. Mappings below are instructional. last checked 2026-10.) Tj
 T*
 (Skill groups. vendor.) Tj
 T*
@@ -99,13 +99,13 @@ T*
 T*
 (last checked 2026-10.) Tj
 T*
-(confirm. The CSQ-to-skill mapping is a teaching bridge, not a Five9 migration utility.. last) Tj
+(confirm. The CSQ-to-skill mapping is a teaching bridge, not a Five9 migration utility. last) Tj
 T*
 ET
 endstream
 endobj
 3 0 obj
-<< /Length 3138 >>
+<< /Length 3134 >>
 stream
 BT
 /F1 10 Tf
@@ -129,9 +129,9 @@ T*
 T*
 (https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.) Tj
 T*
-(confirm. Module mapping from UCCX steps is instructional. Validate every script in a) Tj
+(confirm. Module mapping from UCCX steps is instructional. Validate every script in a domain.) Tj
 T*
-(domain.. last checked 2026-10.) Tj
+(last checked 2026-10.) Tj
 T*
 (Dialer product page. vendor. https://www.five9.com/products/capabilities/dialer-system. last) Tj
 T*
@@ -149,7 +149,7 @@ T*
 T*
 (confirm. The dialer product page and the outbound product page describe progressive pacing) Tj
 T*
-(in different words. Quote the page you use.. last checked 2026-10.) Tj
+(in different words. Quote the page you use. last checked 2026-10.) Tj
 T*
 (Data retention. vendor. https://www.five9.com/legal/dataretention. last checked 2026-10.) Tj
 T*
@@ -185,7 +185,7 @@ T*
 T*
 (confirm. NANP versus E.164, 20 ms ptime, and 'no internal extensions' are practitioner) Tj
 T*
-(cautions. They are not quoted here as Five9 requirements.. last checked 2026-10.) Tj
+(cautions. They are not quoted here as Five9 requirements. last checked 2026-10.) Tj
 T*
 (E911 data sheet. vendor.) Tj
 T*
@@ -199,7 +199,7 @@ T*
 T*
 (confirm. This checklist is a teaching bridge for cutover discipline. It is not an official) Tj
 T*
-(Five9 UCCE runbook.. last checked 2026-10.) Tj
+(Five9 UCCE runbook. last checked 2026-10.) Tj
 T*
 ET
 endstream
@@ -221,12 +221,12 @@ xref
 0000000000 65535 f 
 0000000009 00000 n 
 0000000079 00000 n 
-0000003822 00000 n 
-0000007012 00000 n 
-0000007138 00000 n 
-0000007264 00000 n 
-0000007327 00000 n 
+0000003820 00000 n 
+0000007006 00000 n 
+0000007132 00000 n 
+0000007258 00000 n 
+0000007321 00000 n 
 trailer << /Size 8 /Root 7 0 R >>
 startxref
-7376
+7370
 %%EOF

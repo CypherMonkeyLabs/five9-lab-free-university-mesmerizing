@@ -3,7 +3,7 @@
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
 endobj
 2 0 obj
-<< /Length 703 >>
+<< /Length 702 >>
 stream
 BT
 /F1 10 Tf
@@ -31,7 +31,7 @@ T*
 T*
 (confirm. CH3, DC10, LD5, AM4, FR8, SP4, TY11, and SY5 are the Equinix Fabric edges in the) Tj
 T*
-(technical requirements read in October 2026.. last checked 2026-10.) Tj
+(technical requirements read in October 2026. last checked 2026-10.) Tj
 T*
 ET
 endstream
@@ -50,10 +50,10 @@ xref
 0000000000 65535 f 
 0000000009 00000 n 
 0000000079 00000 n 
-0000000833 00000 n 
-0000000959 00000 n 
-0000001016 00000 n 
+0000000832 00000 n 
+0000000958 00000 n 
+0000001015 00000 n 
 trailer << /Size 6 /Root 5 0 R >>
 startxref
-1065
+1064
 %%EOF

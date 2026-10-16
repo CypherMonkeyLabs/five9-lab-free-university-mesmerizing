@@ -147,3 +147,7 @@ MENU = cite("Menu module", "https://documentation.five9.com/bundle/ivr-admin/pag
 IFELSE = cite("If/Else module", "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/ifelse-module.htm")
 SKILLPAGE = cite("Skill Transfer module chapter", "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/skill-transfer-module.htm")
 WEMDS = cite("WEM data sheet", "https://www.five9.com/resources/data-sheet/five9-wem")
+WFM = cite("Workforce management", "https://www.five9.com/platform/insights-and-analytics/workforce-management")
+QM = cite("Quality management", "https://www.five9.com/products/capabilities/call-center-quality-management-monitoring-tools")
+DESK = cite("Agent Desktop", "https://www.five9.com/platform/self-service-and-engagement/agent-desktop")
+ACD = cite("Automatic call distributor", "https://en.wikipedia.org/wiki/Automatic_call_distributor")

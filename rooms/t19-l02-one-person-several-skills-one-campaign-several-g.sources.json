@@ -1,0 +1,21 @@
+{
+  "id": "t19-l02-one-person-several-skills-one-campaign-several-g",
+  "title": "One person, several skills. One campaign, several groups",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Skill groups",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Which skill wins when one agent is eligible for two ringing queues was not on the skill groups chapter this lab read.",
+      "url": "",
+      "kind": "note",
+      "status": "confirm",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

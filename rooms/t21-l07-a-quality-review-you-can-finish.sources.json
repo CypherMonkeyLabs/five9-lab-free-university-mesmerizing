@@ -1,0 +1,28 @@
+{
+  "id": "t21-l07-a-quality-review-you-can-finish",
+  "title": "A quality review you can finish",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Quality management",
+      "url": "https://www.five9.com/products/capabilities/call-center-quality-management-monitoring-tools",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Workforce engagement management",
+      "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "The quality page says routing, assistance, and coaching can be refined with zero human involvement. This lab did not test that claim.",
+      "url": "",
+      "kind": "note",
+      "status": "confirm",
+      "lastChecked": "2026-10"
+    }
+  ]
+}
