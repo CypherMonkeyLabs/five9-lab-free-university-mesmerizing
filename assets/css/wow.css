@@ -1,0 +1,146 @@
+/* Colour, depth, and motion. Bright multicolour is the default. Dark is optional.
+   Adapted from the Webex lab wow.css. Reduced motion drops loops. */
+
+html[data-theme="bloom"] {
+  --bg: #f6f3ff;
+  --card: #ffffff;
+  --ink: #142033;
+  --muted: #334155;
+  --line: rgba(76, 29, 149, 0.16);
+}
+html[data-theme="dark"] {
+  --bg: #0b1020;
+  --card: #141a2e;
+  --ink: #eef4ff;
+  --muted: #cbd5e1;
+  --line: rgba(226, 232, 240, 0.16);
+}
+html[data-theme="dark"] body {
+  background:
+    radial-gradient(800px 360px at 0% 0%, rgba(34, 211, 238, 0.18), transparent 55%),
+    radial-gradient(700px 320px at 100% 0%, rgba(244, 114, 182, 0.16), transparent 50%),
+    var(--bg);
+}
+html[data-theme="dark"] .canon-banner { filter: saturate(1.05); }
+html[data-theme="dark"] .callout { background: #3b2a12; color: #ffedd5; }
+
+html[data-motion="full"] .menu-btn { animation: glow-pulse 2.8s ease-in-out infinite; }
+@keyframes glow-pulse {
+  50% { box-shadow: 0 0 22px rgba(236, 72, 153, 0.85); }
+}
+html[data-motion="reduce"] .menu-btn { animation: none; }
+
+.hero-title {
+  margin: 0;
+  font-size: clamp(2rem, 6vw, 3.4rem);
+  line-height: 1.05;
+  color: #1e1b4b;
+  background: none;
+}
+html[data-theme="dark"] .hero-title { color: #f8fafc; }
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .room-card,
+html[data-theme="dark"] section.panel {
+  background:
+    linear-gradient(180deg, #141a2e, #1e1b4b) padding-box,
+    linear-gradient(135deg, #22d3ee, #a78bfa, #f472b6) border-box;
+}
+
+.hero-stage {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 340px;
+  margin: 0 0 18px;
+  padding: 36px 28px 32px;
+  border-radius: 28px;
+  color: #f8fafc;
+  background:
+    radial-gradient(circle at 12% 20%, rgba(34, 211, 238, 0.55), transparent 32%),
+    radial-gradient(circle at 88% 10%, rgba(244, 114, 182, 0.5), transparent 36%),
+    radial-gradient(circle at 70% 80%, rgba(250, 204, 21, 0.35), transparent 28%),
+    linear-gradient(145deg, #070b16 0%, #1e1b4b 52%, #4c1d95 100%);
+  box-shadow: 0 18px 40px rgba(49, 46, 129, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+.hero-stage .hero-title { color: #f8fafc; max-width: 16ch; text-shadow: 0 0 24px rgba(34, 211, 238, 0.45); }
+.hero-stage .kicker { color: #fde68a; }
+.hero-stage .lede { color: #e0f2fe; max-width: 62ch; }
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(125, 249, 255, 0.16) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(125, 249, 255, 0.16) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(circle at 30% 40%, #000 20%, transparent 75%);
+}
+.hero-copy { position: relative; z-index: 2; max-width: 760px; }
+.hero-orb, .hero-token {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  border-radius: 50%;
+}
+.hero-orb {
+  filter: blur(0);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.28), inset -12px -16px 0 rgba(15, 23, 42, 0.18), inset 10px 10px 0 rgba(255, 255, 255, 0.35);
+}
+.hero-orb-a { width: 150px; height: 150px; right: 8%; top: 28px; background: radial-gradient(circle at 32% 28%, #fff7ed, #fbbf24 36%, #f97316 70%, #7c2d12); }
+.hero-orb-b { width: 96px; height: 96px; right: 24%; bottom: 28px; background: radial-gradient(circle at 30% 30%, #ecfeff, #22d3ee 40%, #0e7490); }
+.hero-orb-c { width: 72px; height: 72px; right: 18%; top: 46%; background: radial-gradient(circle at 30% 28%, #fdf2f8, #f472b6 42%, #9d174d); }
+.hero-token {
+  width: 74px;
+  height: 74px;
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  background: linear-gradient(160deg, rgba(255,255,255,.28), rgba(255,255,255,.06));
+  border: 2px solid rgba(255,255,255,.45);
+  box-shadow: 0 16px 30px rgba(0,0,0,.3), 0 0 18px rgba(250, 204, 21, 0.45);
+  transform: perspective(240px) rotateY(-18deg) rotateX(12deg);
+}
+.hero-token-a { right: 31%; top: 36px; }
+.hero-token-b { right: 6%; bottom: 36px; }
+html[data-motion="full"] .hero-orb-a { animation: hero-float 7s ease-in-out infinite; }
+html[data-motion="full"] .hero-orb-b { animation: hero-float 5.5s ease-in-out infinite reverse; }
+html[data-motion="full"] .hero-orb-c { animation: hero-float 6.4s ease-in-out infinite; }
+html[data-motion="full"] .hero-token { animation: hero-float 8s ease-in-out infinite; }
+@keyframes hero-float { 50% { transform: perspective(240px) rotateY(-18deg) rotateX(12deg) translateY(-12px); } }
+html[data-motion="full"] .hero-orb { animation-name: hero-orb-float; }
+@keyframes hero-orb-float { 50% { transform: translateY(-14px); } }
+@media (max-height: 880px) and (min-width: 900px) {
+  .hero-stage { min-height: 0; padding: 18px 24px 14px; }
+  .hero-stage .hero-title { font-size: 2.35rem; }
+  .hero-stage .lede { margin: 8px 0; }
+  .hero-orb-a { width: 112px; height: 112px; top: 14px; }
+  .hero-orb-b { width: 70px; height: 70px; bottom: 16px; }
+  .hero-orb-c { width: 52px; height: 52px; }
+}
+@media (max-width: 720px) {
+  .hero-stage { min-height: 0; padding: 22px 16px 18px; }
+  .hero-orb-a { width: 72px; height: 72px; right: 8px; top: 12px; }
+  .hero-orb-b, .hero-orb-c, .hero-token-b { display: none; }
+  .hero-orb-c { width: 48px; height: 48px; }
+  .hero-token-a { width: 52px; height: 52px; font-size: 1.4rem; right: 12px; top: auto; bottom: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-orb, .hero-token { animation: none !important; }
+}
+
+.flow-line { stroke-dasharray: 8 6; }
+html[data-motion="full"] .flow-line { animation: flow-dash 2.4s linear infinite; }
+@keyframes flow-dash { to { stroke-dashoffset: -56; } }
+@media (prefers-reduced-motion: reduce) {
+  .flow-line { animation: none !important; }
+}
+
+.stat-row { display: flex; flex-wrap: wrap; gap: 10px; }
+.stat {
+  min-width: 120px; min-height: 72px; padding: 10px 12px; border-radius: 16px;
+  background: linear-gradient(160deg, #fff, #e0f2fe);
+  border: 2px solid #67e8f9;
+}
+html[data-theme="dark"] .stat { background: #111827; }
+.stat b { display: block; font-size: 1.4rem; }

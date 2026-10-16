@@ -65,7 +65,7 @@ function esc(value) {
 
 function loadSettings() {
   const base = {
-    theme: "neon",
+    theme: "light",
     lang: "en",
     sound: false,
     narration: false,
@@ -109,6 +109,7 @@ function applySettings() {
   const root = document.documentElement;
   root.dataset.theme = session.settings.theme || "signal";
   root.dataset.font = String(session.settings.font || 16);
+  if (session.settings.ink) root.style.setProperty("--ink", session.settings.ink);
   root.dataset.motion = motionReduced() ? "reduce" : "full";
   const soundBtn = document.querySelector("#sound-toggle");
   if (soundBtn) {
@@ -968,6 +969,14 @@ function bindChrome() {
     session.settings.font = Number(event.target.value);
     saveSettings();
   });
+  const ink = document.querySelector("#set-ink");
+  if (ink) {
+    ink.value = session.settings.ink || "#142033";
+    ink.addEventListener("input", (event) => {
+      session.settings.ink = event.target.value;
+      saveSettings();
+    });
+  }
   document.querySelector("#set-rate").addEventListener("input", (event) => {
     session.settings.rate = Number(event.target.value);
     document.querySelector("#rate-out").textContent = session.settings.rate.toFixed(2);
