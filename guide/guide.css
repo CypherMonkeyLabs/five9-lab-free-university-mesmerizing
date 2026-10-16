@@ -13,23 +13,26 @@
 
 .cg-monkey {
   position: relative;
-  width: 168px;
-  height: 196px;
+  width: 220px;
+  height: 256px;
   padding: 0;
   border: 0;
   background: transparent;
   cursor: grab;
   filter: none;
+  transform: perspective(520px) rotateY(-12deg) rotateX(6deg);
+  transform-origin: 70% 80%;
 }
 .cg-monkey svg { width: 100%; height: 100%; display: block; }
 .cg-halo {
   position: absolute;
-  left: 18%;
-  right: 18%;
-  top: 22%;
-  bottom: 8%;
+  left: 6%;
+  right: 6%;
+  top: 8%;
+  bottom: -6%;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(250, 204, 21, 0.55), rgba(244, 114, 182, 0) 72%);
+  background: radial-gradient(circle, rgba(250, 204, 21, 0.85), rgba(244, 114, 182, 0.35) 42%, rgba(34, 211, 238, 0) 72%);
+  filter: blur(2px);
   z-index: -1;
   pointer-events: none;
 }
@@ -41,12 +44,12 @@
 .cg-root[data-pose="speak"] .pose-speak,
 .cg-root[data-pose="idle"] .pose-idle { display: block; }
 html[data-motion="full"] .cg-monkey { animation: cg-bob 3.2s ease-in-out infinite; }
-@keyframes cg-bob { 50% { transform: translateY(-6px); } }
+@keyframes cg-bob { 50% { transform: perspective(520px) rotateY(-12deg) rotateX(6deg) translateY(-10px); } }
 
 .cg-panel {
   position: absolute;
   right: 0;
-  bottom: 208px;
+  bottom: 272px;
   width: min(260px, calc(100vw - 24px));
   max-height: min(60vh, 520px);
   overflow: auto;
@@ -151,7 +154,7 @@ html[data-motion="full"] .cg-monkey { animation: cg-bob 3.2s ease-in-out infinit
 .cg-nudge {
   position: absolute;
   right: 0;
-  bottom: 208px;
+  bottom: 272px;
   width: 260px;
   background: #fffbeb;
   color: #431407;

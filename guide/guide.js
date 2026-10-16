@@ -99,6 +99,7 @@
       '<ellipse cx="36" cy="86" rx="16" ry="22" fill="#fb7185"/>' +
       '<ellipse cx="184" cy="86" rx="16" ry="22" fill="#fb7185"/>' +
       '<circle cx="110" cy="98" r="64" fill="#f59e0b" stroke="#b45309" stroke-width="4"/>' +
+      '<ellipse cx="92" cy="72" rx="28" ry="14" fill="#fde68a" opacity=".8"/>' +
       '<ellipse cx="110" cy="118" rx="38" ry="28" fill="#ffedd5"/>' +
       '<ellipse cx="84" cy="90" rx="16" ry="18" fill="#ffffff" stroke="#1c1917" stroke-width="2"/>' +
       '<ellipse cx="136" cy="90" rx="16" ry="18" fill="#ffffff" stroke="#1c1917" stroke-width="2"/>' +

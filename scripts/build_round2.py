@@ -85,15 +85,22 @@ def shield() -> str:
 def brand_icons() -> str:
     monkey = (
         '<svg viewBox="0 0 64 64" aria-hidden="true">'
-        '<ellipse cx="16" cy="18" rx="8" ry="10" fill="#e8a15a"/>'
-        '<ellipse cx="48" cy="18" rx="8" ry="10" fill="#e8a15a"/>'
-        '<circle cx="32" cy="36" r="18" fill="#f6b26b"/>'
-        '<ellipse cx="32" cy="42" rx="8" ry="6" fill="#fde7c7"/>'
-        '<circle cx="26" cy="34" r="2" fill="#1b120c"/>'
-        '<circle cx="38" cy="34" r="2" fill="#1b120c"/>'
-        '<circle cx="26" cy="34" r="6" fill="none" stroke="#67e8f9" stroke-width="2"/>'
-        '<circle cx="38" cy="34" r="6" fill="none" stroke="#67e8f9" stroke-width="2"/>'
-        '<path d="M32 34h0M20 34H14M44 34h6" stroke="#67e8f9" stroke-width="2"/>'
+        '<ellipse cx="10" cy="26" rx="9" ry="12" fill="#c2410c"/>'
+        '<ellipse cx="54" cy="26" rx="9" ry="12" fill="#c2410c"/>'
+        '<ellipse cx="10" cy="26" rx="5" ry="7" fill="#fb7185"/>'
+        '<ellipse cx="54" cy="26" rx="5" ry="7" fill="#fb7185"/>'
+        '<circle cx="32" cy="34" r="22" fill="#f59e0b" stroke="#b45309" stroke-width="2"/>'
+        '<ellipse cx="24" cy="24" rx="10" ry="6" fill="#fde68a" opacity=".85"/>'
+        '<ellipse cx="32" cy="42" rx="13" ry="9" fill="#ffedd5"/>'
+        '<ellipse cx="23" cy="32" rx="6" ry="7" fill="#fff" stroke="#1c1917" stroke-width="1"/>'
+        '<ellipse cx="41" cy="32" rx="6" ry="7" fill="#fff" stroke="#1c1917" stroke-width="1"/>'
+        '<circle cx="24" cy="33" r="2.4" fill="#1c1917"/>'
+        '<circle cx="42" cy="33" r="2.4" fill="#1c1917"/>'
+        '<ellipse cx="32" cy="40" rx="3.2" ry="2.2" fill="#9a3412"/>'
+        '<path d="M25 46 Q32 52 39 46" fill="none" stroke="#9a3412" stroke-width="1.8" stroke-linecap="round"/>'
+        '<rect x="16" y="25" width="14" height="14" rx="5" fill="none" stroke="#67e8f9" stroke-width="2"/>'
+        '<rect x="34" y="25" width="14" height="14" rx="5" fill="none" stroke="#67e8f9" stroke-width="2"/>'
+        '<path d="M30 32 H34" stroke="#67e8f9" stroke-width="2"/>'
         "</svg>"
     )
     github = (
@@ -101,11 +108,10 @@ def brand_icons() -> str:
     )
     tree = (
         '<svg viewBox="0 0 64 64" aria-hidden="true">'
-        '<circle cx="32" cy="14" r="10" fill="#fff"/>'
-        '<circle cx="18" cy="26" r="9" fill="#fff"/>'
-        '<circle cx="46" cy="26" r="9" fill="#fff"/>'
-        '<circle cx="32" cy="24" r="8" fill="#fff"/>'
-        '<path d="M32 32v16" stroke="#fff" stroke-width="7" stroke-linecap="round"/>'
+        '<circle cx="32" cy="16" r="11" fill="#fff"/>'
+        '<circle cx="18" cy="28" r="10" fill="#fff"/>'
+        '<circle cx="46" cy="28" r="10" fill="#fff"/>'
+        '<path d="M32 34v14" stroke="#fff" stroke-width="7" stroke-linecap="round"/>'
         '<path d="M22 52h20" stroke="#fff" stroke-width="6" stroke-linecap="round"/>'
         "</svg>"
     )
@@ -667,8 +673,7 @@ def page_bodies(tracks, records, uni, eco, certs, interview, manifest):
     stats = (
         f'<div class="stat-row"><div class="stat"><b>{len(tracks)}</b> tracks</div>'
         f'<div class="stat"><b>{len(records)}</b> rooms</div>'
-        f'<div class="stat"><b>{len(manifest)}</b> diagrams</div>'
-        f'<div class="stat"><b>{sum(1 for item in manifest if item["flow"])}</b> flows</div></div>'
+        f'<div class="stat"><b>{len(manifest)}</b> drawings</div></div>'
     )
     track_cards = []
     for track in tracks:
@@ -676,17 +681,30 @@ def page_bodies(tracks, records, uni, eco, certs, interview, manifest):
             f'<a class="room-card" href="tracks/{esc(track["id"])}.html"><p class="kicker">{esc(track.get("level") or "")}</p>'
             f'<strong>{esc(track["title"])}</strong><p>{esc(track.get("blurb") or "")}</p></a>'
         )
+    overview_note = (
+        '<p class="lane-copy" data-sentence>126 drawings. Each SVG is the diagram and the flow, counted once. '
+        'The practice atlas is a separate set.</p>'
+    )
     home = (
+        '<section class="hero-stage">'
+        '<div class="hero-grid" aria-hidden="true"></div>'
+        '<div class="hero-orb hero-orb-a" aria-hidden="true"></div>'
+        '<div class="hero-orb hero-orb-b" aria-hidden="true"></div>'
+        '<div class="hero-orb hero-orb-c" aria-hidden="true"></div>'
+        '<div class="hero-token hero-token-a" aria-hidden="true">🎧</div>'
+        '<div class="hero-token hero-token-b" aria-hidden="true">📞</div>'
+        '<div class="hero-copy">'
         '<p class="kicker">Five9 Virtual Contact Center</p>'
         '<h1 class="hero-title">Learn the floor without a live domain.</h1>'
         f'<p class="lede" data-sentence>Eighteen tracks, from the domain model to a teaching bridge off Cisco contact center. Citations stay on the page. Confirm before relying.</p>'
         '<div class="actions"><a href="start.html#ten">Finish in 10 minutes</a><a href="start.html#full">Full course</a>'
         '<a href="downloads.html">Just download</a><a href="campus/index.html">Open app</a>'
         f'<a href="{REPO}">View repo</a></div>'
-        + section("overview", "Start here", stats + '<p data-sentence>Pick a track, or open the practice console for the IVR builder, the dialer clock, and the topology bench.</p>', [("HTML", "downloads/sections/home-overview.html")])
+        '</div></section>'
+        + section("overview", "Start here", stats + overview_note, [("HTML", "downloads/sections/home-overview.html")])
         + section("tracks", "Tracks", f'<div class="card-grid">{"".join(track_cards)}</div>', [("HTML", "downloads/sections/home-tracks.html")])
     )
-    standalone("downloads/sections/home-overview.html", "Five9 Lab overview", stats)
+    standalone("downloads/sections/home-overview.html", "Five9 Lab overview", stats + overview_note)
     standalone("downloads/sections/home-tracks.html", "Tracks", f'<div class="card-grid">{"".join(track_cards)}</div>')
     write_page("index.html", "Five9 Lab", "Independent study floor for Five9 Virtual Contact Center.", home, "index.html")
 
@@ -729,9 +747,9 @@ def page_bodies(tracks, records, uni, eco, certs, interview, manifest):
     for item in manifest[:8]:
         svg = (ROOT / item["svg"]).read_text(encoding="utf-8")
         sample.append(f'<article class="panel"><h2>{esc(item["title"])}</h2><div class="figure">{svg}</div></article>')
-    diagrams_body = f'<h1>Diagrams</h1><p data-sentence>{len(manifest)} drawings. Eight are on this page. Every drawing has SVG, PNG, and HTML.</p>{"".join(sample)}<div class="card-grid">{"".join(cards)}</div>'
+    diagrams_body = f'<h1>Diagrams</h1><p data-sentence>{len(manifest)} drawings. Eight are on this page. Every drawing has SVG, PNG, and HTML. The Flows page animates these same files. It is not a second library.</p>{"".join(sample)}<div class="card-grid">{"".join(cards)}</div>'
     write_page("diagrams.html", "Diagrams", "Five9 teaching diagrams.", section("gallery", "Gallery", diagrams_body, [("HTML", "downloads/sheets/t01.html")]), "diagrams.html")
-    flows_body = f'<h1>Flows</h1><p data-sentence>{len(manifest)} animated flows. The line between steps is the motion.</p>{"".join(sample)}'
+    flows_body = f'<h1>Flows</h1><p data-sentence>The same {len(manifest)} drawings. The dashed line between steps is the motion. Count them once.</p>{"".join(sample)}'
     write_page("flows.html", "Flows", "Animated Five9 flows.", section("flows", "Flows", flows_body, [("HTML", "downloads/sheets/t01.html")]), "flows.html")
 
     bars = []

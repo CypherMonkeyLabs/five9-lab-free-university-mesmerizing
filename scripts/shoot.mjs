@@ -75,6 +75,8 @@ const attached = await send("Target.attachToTarget", { targetId: created.result.
 const sessionId = attached.result.sessionId;
 await send("Page.enable", {}, sessionId);
 await send("Runtime.enable", {}, sessionId);
+await send("Network.enable", {}, sessionId);
+await send("Network.setCacheDisabled", { cacheDisabled: true }, sessionId);
 await send("Page.addScriptToEvaluateOnNewDocument", {
   source: "try{localStorage.setItem('f9-tour','1');localStorage.setItem('f9-greeted','1');localStorage.setItem('f9-offers-stop','1');}catch(e){}"
 }, sessionId);
@@ -123,6 +125,7 @@ async function shoot(name, width, height, path, expression) {
 }
 
 await shoot("home-desktop", 1440, 900, "index.html");
+await shoot("home-1280", 1280, 800, "index.html");
 await shoot("home-scrolled", 1440, 900, "index.html", "window.scrollTo(0, 900);");
 await shoot("menu-desktop", 1440, 900, "index.html", "document.querySelector('[data-open-menu]').click();");
 await shoot("room-desktop", 1440, 900, "rooms/t01-l01-a-contact-center-is-not-a-phone-system.html");
@@ -135,6 +138,7 @@ await shoot("room-phone", 390, 844, "rooms/t01-l01-a-contact-center-is-not-a-pho
 await shoot("bot-phone", 390, 844, "index.html", "document.querySelector('.cg-monkey').click();");
 await shoot("downloads-phone", 390, 844, "downloads.html");
 await shoot("footer-desktop", 1440, 900, "index.html", "window.scrollTo(0, document.body.scrollHeight);");
+await shoot("footer-1280", 1280, 800, "index.html", "window.scrollTo(0, document.body.scrollHeight);");
 await shoot("footer-phone", 390, 844, "index.html", "window.scrollTo(0, document.body.scrollHeight);");
 
 writeFileSync(`${out}/measures.json`, JSON.stringify(shots, null, 2));

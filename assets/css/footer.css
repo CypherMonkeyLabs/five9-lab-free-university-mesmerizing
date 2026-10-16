@@ -2,9 +2,9 @@
 
 .site-footer.lab-footer {
   display: block;
-  max-width: 1100px;
-  margin: 28px auto 0;
-  padding: 0 clamp(16px, 4vw, 48px) calc(28px + var(--dock-h));
+  max-width: none;
+  margin: 28px 0 0;
+  padding: 0 clamp(16px, 3vw, 36px) calc(28px + var(--dock-h));
   color: var(--ink, #142033);
   text-align: center;
   font-family: "Segoe UI", system-ui, sans-serif;
@@ -40,39 +40,51 @@
 .brand-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
+  gap: 18px;
   justify-content: center;
-  margin: 0 0 12px;
-  padding: 12px;
-  border-radius: 20px;
-  border: 2px solid transparent;
+  width: max-content;
+  max-width: 100%;
+  margin: 0 auto 12px;
+  padding: 16px 20px;
+  border-radius: 32px;
+  border: 3px solid transparent;
   background:
-    linear-gradient(var(--card, #fff), var(--card, #fff)) padding-box,
+    linear-gradient(160deg, rgba(15, 23, 42, 0.92), rgba(49, 46, 129, 0.88)) padding-box,
     linear-gradient(120deg, #22d3ee, #a78bfa, #f472b6, #facc15) border-box;
-  box-shadow: 0 0 22px rgba(167, 139, 250, 0.45);
+  box-shadow: 0 0 28px rgba(167, 139, 250, 0.75), 0 0 12px rgba(34, 211, 238, 0.55);
 }
 .brand-icon {
   display: grid;
   place-items: center;
-  width: 72px;
-  height: 72px;
-  border-radius: 20px;
+  width: 104px;
+  height: 104px;
+  border-radius: 28px;
   color: #fff;
   text-decoration: none;
-  box-shadow: 0 8px 18px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,.35), 0 0 16px rgba(250, 204, 21, 0.45);
+  box-shadow:
+    0 10px 0 rgba(15, 23, 42, 0.35),
+    inset 0 2px 0 rgba(255, 255, 255, 0.45),
+    0 0 22px rgba(250, 204, 21, 0.55);
+  transform: perspective(240px) rotateX(10deg);
 }
-.brand-icon svg { width: 44px; height: 44px; display: block; }
-.brand-web { background: radial-gradient(circle at 30% 25%, #7c3aed, #312e81 70%); }
-.brand-gh { background: #24292f; }
+.brand-icon svg { width: 72px; height: 72px; display: block; }
+.brand-web {
+  background: radial-gradient(circle at 30% 22%, #c4b5fd, #6d28d9 42%, #312e81 78%);
+  box-shadow: 0 10px 0 #1e1b4b, inset 0 2px 0 rgba(255,255,255,.45), 0 0 24px #c4b5fd;
+}
+.brand-gh {
+  background: radial-gradient(circle at 30% 22%, #6e7681, #24292f 70%);
+  box-shadow: 0 10px 0 #0d1117, inset 0 2px 0 rgba(255,255,255,.28), 0 0 20px rgba(255,255,255,.35);
+}
 .brand-tree {
-  background: linear-gradient(160deg, #34d399, #047857 72%);
-  box-shadow: 0 0 0 3px rgba(52, 211, 153, 0.7), 0 0 18px rgba(16, 185, 129, 0.95);
-  transform: perspective(120px) rotateX(8deg);
+  background: radial-gradient(circle at 30% 22%, #6ee7b7, #059669 55%, #064e3b 80%);
+  box-shadow: 0 10px 0 #022c22, inset 0 2px 0 rgba(255,255,255,.4), 0 0 24px #34d399;
 }
 .site-copy { margin: 0; font-weight: 800; }
 @media (max-width: 560px) {
   .disclaimer-panel { flex-direction: column; }
-  .brand-icon { width: 64px; height: 64px; }
+  .brand-icon { width: 84px; height: 84px; }
+  .brand-icon svg { width: 58px; height: 58px; }
 }
 @media print {
   .brand-row { display: none; }

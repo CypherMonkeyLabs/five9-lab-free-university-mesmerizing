@@ -201,20 +201,26 @@ html { scroll-padding-top: calc(var(--head-h) + var(--banner-h) + 12px); }
   color: #142033;
 }
 
-main { padding: 20px clamp(16px, 4vw, 48px) 32px; max-width: 1100px; margin: 0 auto; }
+main { padding: 20px clamp(16px, 3vw, 36px) 40px; max-width: none; margin: 0; }
 main h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.15; margin: 0 0 8px; }
 main h2 { font-size: 1.35rem; margin: 0 0 8px; }
 .lede { font-size: 1.1rem; max-width: 68ch; }
 .card, .room-card, section.panel {
-  background: color-mix(in srgb, var(--card) 92%, transparent);
-  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, #ffffff, #f5f3ff) padding-box,
+    linear-gradient(135deg, #22d3ee, #a78bfa 45%, #f472b6) border-box;
+  border: 2px solid transparent;
   border-radius: 18px;
   padding: 16px;
   margin: 14px 0;
+  box-shadow: 0 12px 28px rgba(76, 29, 149, 0.12), 0 0 18px rgba(34, 211, 238, 0.16);
 }
-.track-grid, .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
-.room-card { display: block; text-decoration: none; color: inherit; min-height: 120px; }
-.room-card:hover { box-shadow: 0 8px 24px rgba(124, 58, 237, 0.18); }
+.track-grid, .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; }
+.room-card { display: block; text-decoration: none; color: inherit; min-height: 120px; transition: transform .2s ease, box-shadow .2s ease; }
+.room-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 36px rgba(124, 58, 237, 0.22), 0 0 22px rgba(244, 114, 182, 0.45);
+}
 .kicker { font-size: 0.82rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; color: #7c3aed; margin: 0 0 4px; }
 .actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
 .actions a, .choice-card {
@@ -259,8 +265,10 @@ th, td { border-bottom: 1px solid var(--line); text-align: left; padding: 8px; v
 .phone-dock [data-open-menu] { background: linear-gradient(135deg, #5b21b6, #9d174d); color: #fff; }
 .phone-dock a[aria-current="page"] { color: #7c3aed; }
 
-@media (min-width: 960px) {
-  body { padding-right: 280px; }
+.lane-copy { max-width: 58ch; }
+@media (min-width: 1100px) {
+  .card-grid, .figure, .stat-row, .section-head { margin-right: 280px; }
+  .lane-copy { max-width: min(58ch, calc(100% - 300px)); }
 }
 @media (max-width: 720px) {
   :root { --dock-h: 64px; }

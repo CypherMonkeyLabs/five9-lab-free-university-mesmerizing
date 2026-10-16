@@ -11,6 +11,17 @@
     }
   },
   {
+    "name": "home-1280",
+    "measure": {
+      "panel": null,
+      "dockTop": 0,
+      "bannerH": 52,
+      "headH": 116,
+      "greetHidden": true,
+      "innerH": 800
+    }
+  },
+  {
     "name": "home-scrolled",
     "measure": {
       "panel": null,
@@ -58,8 +69,8 @@
     "name": "bot-desktop",
     "measure": {
       "panel": {
-        "top": 408,
-        "bottom": 680,
+        "top": 344,
+        "bottom": 616,
         "height": 272
       },
       "dockTop": 0,
@@ -148,6 +159,17 @@
       "headH": 116,
       "greetHidden": true,
       "innerH": 900
+    }
+  },
+  {
+    "name": "footer-1280",
+    "measure": {
+      "panel": null,
+      "dockTop": 0,
+      "bannerH": 52,
+      "headH": 116,
+      "greetHidden": true,
+      "innerH": 800
     }
   },
   {
