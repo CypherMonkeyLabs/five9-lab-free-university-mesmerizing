@@ -1,4 +1,4 @@
-const CACHE = "f9lab-shell-v5";
+const CACHE = "f9lab-shell-v7";
 const SHELL = [
   "./",
   "./index.html",
@@ -10,6 +10,8 @@ const SHELL = [
   "./js/stage.js",
   "./js/glyphs.js",
   "./js/i18n.js",
+  "./js/menu.js",
+  "./js/guide.js",
   "./js/diagrams.js",
   "./js/charts.js",
   "./js/effects.js",
@@ -18,9 +20,12 @@ const SHELL = [
   "./js/pacing.js",
   "./js/topology.js",
   "./manifest.webmanifest",
+  "./favicon.svg",
+  "./favicon.ico",
   "./data/catalog.json",
   "./data/university.json",
-  "./data/search-index.json"
+  "./data/search-index.json",
+  "./data/guide-kb.json"
 ];
 
 self.addEventListener("install", (event) => {

@@ -38,7 +38,7 @@ function hbars(title, rows) {
     const tip = `${row.label}: ${row.value}`;
     return `<text x="0" y="${y + 13}">${esc(shorten(row.label, 22))}</text><rect class="bar" data-tip="${esc(tip)}" x="${labelW}" y="${y}" width="${bar}" height="14" rx="3"><title>${esc(tip)}</title></rect><text x="${labelW + bar + 6}" y="${y + 13}">${esc(row.value)}</text>`;
   }).join("");
-  return `<svg class="chart h" viewBox="0 0 ${width} ${height}" role="img" aria-label="${esc(title)}">${body}</svg>`;
+  return `<svg class="chart h" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="${esc(title)}">${body}</svg>`;
 }
 
 function vbars(title, rows) {
@@ -53,7 +53,7 @@ function vbars(title, rows) {
     const tip = `${row.label}: ${row.value}`;
     return `<rect class="bar" data-tip="${esc(tip)}" x="${x}" y="${y}" width="18" height="${bar}" rx="3"><title>${esc(tip)}</title></rect><text x="${x + 9}" y="140" text-anchor="middle">${esc(row.label)}</text>`;
   }).join("");
-  return `<svg class="chart v" viewBox="0 0 ${width} ${height}" role="img" aria-label="${esc(title)}">${body}</svg>`;
+  return `<svg class="chart v" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="${esc(title)}">${body}</svg>`;
 }
 
 function tally(items, key) {

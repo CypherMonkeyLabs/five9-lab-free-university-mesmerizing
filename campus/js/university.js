@@ -3,6 +3,7 @@ import { chartStrip } from "./charts.js";
 import { buildZip } from "./zipstore.js";
 import { applyI18n } from "./i18n.js";
 import { glyphImg, warmGlyphs } from "./glyphs.js";
+import { paintMenuIcons } from "./menu.js";
 
 const UNI_KEY = "f9lab-university";
 const REPO = "https://github.com/CypherMonkeyLabs/five9-lab-free-university-mesmerizing";
@@ -226,7 +227,7 @@ async function renderCharts(ctx) {
   const catalog = await ctx.getCatalog();
   const data = await loadUni();
   ctx.setTitle("Charts", "Six charts from this lab's catalog and the cited bandwidth and port tables.");
-  ctx.view.innerHTML = `${counterRow(catalog)}<div class="chart-grid">${chartStrip(catalog, data)}</div><h2>Study map</h2><svg id="study-map" width="720" height="360"></svg><p class="note">The mind map is a study outline for this lab. It is not a Five9 organization chart. It is drawn by the vendored markmap build and does not fetch a stylesheet.</p>`;
+  ctx.view.innerHTML = `${counterRow(catalog)}<div class="chart-grid">${chartStrip(catalog, data)}</div><h2>Study map</h2><svg id="study-map" width="720" height="360" viewBox="0 0 720 360"></svg><p class="note">The mind map is a study outline for this lab. It is not a Five9 organization chart. It is drawn by the vendored markmap build and does not fetch a stylesheet.</p>`;
   import("./effects.js").then((mod) => mod.mountMindmap(ctx.view.querySelector("#study-map"))).catch(() => {});
 }
 
@@ -394,7 +395,7 @@ function renderExplorer(ctx) {
 }
 
 function frameMap(body) {
-  return `<svg class="diag" viewBox="0 0 680 380" role="img" aria-label="Five9 teaching map"><rect class="diag-bg" width="680" height="380" rx="16"></rect>${body}</svg>`;
+  return `<svg class="diag" width="680" height="380" viewBox="0 0 680 380" role="img" aria-label="Five9 teaching map"><rect class="diag-bg" width="680" height="380" rx="16"></rect>${body}</svg>`;
 }
 
 async function renderDownloads(ctx, focusZip) {
@@ -520,6 +521,7 @@ function renderBadges(ctx) {
 
 function shareCard(host, line) {
   const canvas = document.createElement("canvas");
+  canvas.className = "share-card";
   canvas.width = 1200;
   canvas.height = 630;
   const ctx = canvas.getContext("2d");
@@ -549,8 +551,6 @@ function shareCard(host, line) {
   host.appendChild(canvas);
   host.appendChild(document.createElement("br"));
   host.appendChild(link);
-  canvas.style.width = "100%";
-  canvas.style.height = "auto";
 }
 
 function wrapText(ctx, text, x, y, max, line) {
@@ -888,6 +888,41 @@ function closePhoneMenu(fromPop) {
   if (shouldBack) history.back();
 }
 
+function goFromMenu(href) {
+  const phoneMenu = document.querySelector("#phone-menu");
+  const pushed = menuPushed;
+  menuPushed = false;
+  setMenuExpanded(false);
+  if (phoneMenu && phoneMenu.open) phoneMenu.close();
+  if (!pushed) {
+    if ((location.hash || "#/") !== href) location.hash = href;
+    return;
+  }
+  const go = () => {
+    window.removeEventListener("popstate", go);
+    if ((location.hash || "#/") !== href) location.hash = href;
+  };
+  window.addEventListener("popstate", go);
+  history.back();
+}
+
+function bindMenuSearch(form) {
+  if (!form) return;
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const q = new FormData(form).get("q") || "";
+    const href = `#/search?q=${encodeURIComponent(String(q))}`;
+    const phoneMenu = document.querySelector("#phone-menu");
+    if (phoneMenu && phoneMenu.open) {
+      goFromMenu(href);
+      return;
+    }
+    const settings = document.querySelector("#settings");
+    if (settings && settings.open) settings.close();
+    if ((location.hash || "#/") !== href) location.hash = href;
+  });
+}
+
 function openPhoneMenu() {
   const dialog = document.querySelector("#phone-menu");
   if (!dialog || dialog.open) return;
@@ -1045,16 +1080,8 @@ export function initUniversity() {
     sky.pointer.y = event.clientY / window.innerHeight;
   });
   window.addEventListener("scroll", updateReadbar, { passive: true });
-  const search = document.querySelector("#uni-search");
-  if (search) {
-    search.addEventListener("submit", (event) => {
-      event.preventDefault();
-      const q = new FormData(search).get("q") || "";
-      const dialog = document.querySelector("#settings");
-      if (dialog && dialog.open) dialog.close();
-      location.hash = `#/search?q=${encodeURIComponent(String(q))}`;
-    });
-  }
+  paintMenuIcons(document);
+  ["#uni-search", "#menu-search", "#phone-search"].forEach((sel) => bindMenuSearch(document.querySelector(sel)));
   const focus = document.querySelector("#read-focus");
   if (focus) {
     focus.addEventListener("click", () => {
@@ -1100,21 +1127,7 @@ export function initUniversity() {
       const link = event.target.closest("#phone-nav a");
       if (!link) return;
       event.preventDefault();
-      const href = link.getAttribute("href") || "#/";
-      const pushed = menuPushed;
-      menuPushed = false;
-      setMenuExpanded(false);
-      if (phoneMenu.open) phoneMenu.close();
-      if (!pushed) {
-        if ((location.hash || "#/") !== href) location.hash = href;
-        return;
-      }
-      const go = () => {
-        window.removeEventListener("popstate", go);
-        if ((location.hash || "#/") !== href) location.hash = href;
-      };
-      window.addEventListener("popstate", go);
-      history.back();
+      goFromMenu(link.getAttribute("href") || "#/");
     });
   }
   window.addEventListener("popstate", () => {
@@ -1203,6 +1216,7 @@ export function initUniversity() {
   }
   document.addEventListener("f9-theme", () => {
     warmGlyphs();
+    startSky();
     const bare = (location.hash || "#/").split("?")[0];
     if (bare === "#/" || bare === "") syncHero(bare);
   });

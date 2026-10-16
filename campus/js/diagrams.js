@@ -9,7 +9,7 @@ let seq = 0;
 function frame(w, h, label, body) {
   const mid = `ah${seq += 1}`;
   const painted = body.replaceAll("url(#ah)", `url(#${mid})`);
-  return `<svg class="diag" viewBox="0 0 ${w} ${h}" role="img" aria-label="${esc(label)}"><title>${esc(label)}</title><defs><marker id="${mid}" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" class="arrow-head"></path></marker></defs><rect class="diag-bg" width="${w}" height="${h}" rx="16"></rect>${painted}</svg>`;
+  return `<svg class="diag" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-label="${esc(label)}"><title>${esc(label)}</title><defs><marker id="${mid}" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" class="arrow-head"></path></marker></defs><rect class="diag-bg" width="${w}" height="${h}" rx="16"></rect>${painted}</svg>`;
 }
 
 function box(x, y, w, h, text, tone) {
