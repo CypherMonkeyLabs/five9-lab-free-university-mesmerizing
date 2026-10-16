@@ -131,6 +131,12 @@ const roomName = readdirSync(join(root, "rooms")).find((file) => file.endsWith("
 const roomText = readFileSync(join(root, "rooms", roomName), "utf8");
 if (!roomText.includes("data-export") || !roomText.includes(".png") || !roomText.includes("disclaimer-panel")) problems.push("room-download");
 if (!roomText.includes("Sources and go deeper") || !roomText.includes("last checked 2026-10")) problems.push("sources-block");
+const downloadsPage = readFileSync(join(root, "downloads.html"), "utf8");
+if (!rootPage.includes("Sources and go deeper") || !rootPage.includes("last checked 2026-10")) problems.push("home-sources");
+if (!downloadsPage.includes("Sources and go deeper") || !downloadsPage.includes("last checked 2026-10")) problems.push("downloads-sources");
+if (!rootPage.includes("Read this before you pick a track")) problems.push("home-primer");
+const guideCss = readFileSync(join(root, "guide/guide.css"), "utf8");
+if (!guideCss.includes("pointer-events: none") || !guideJs.includes("placeCallout")) problems.push("tour-card");
 const sourceName = roomName.replace(/\.html$/, ".sources.json");
 if (!existsSync(join(root, "rooms", sourceName))) problems.push("sources-json");
 const newSheet = readFileSync(join(sheetDir, sheetHtml[0]), "utf8");

@@ -1,0 +1,282 @@
+[
+  {
+    "name": "home-tour-1440",
+    "value": {
+      "vw": 1440,
+      "vh": 900,
+      "card": {
+        "left": 550,
+        "top": 660,
+        "right": 890,
+        "bottom": 836,
+        "w": 340,
+        "h": 176
+      },
+      "title": {
+        "top": 193.6875,
+        "bottom": 365.0625,
+        "left": 60,
+        "right": 557.78125
+      },
+      "heroBottom": 581.03125,
+      "overlapTitle": 0,
+      "overlapHero": 0,
+      "cardInside": true,
+      "tourPointer": "none",
+      "sources": 406,
+      "h1": "Learn the floor without a live domain."
+    }
+  },
+  {
+    "name": "home-tour-390",
+    "value": {
+      "vw": 390,
+      "vh": 844,
+      "card": {
+        "left": 25,
+        "top": 604,
+        "right": 365,
+        "bottom": 780,
+        "w": 340,
+        "h": 176
+      },
+      "title": {
+        "top": 183.6875,
+        "bottom": 261.78125,
+        "left": 30,
+        "right": 256.9375
+      },
+      "heroBottom": 493.65625,
+      "overlapTitle": 0,
+      "overlapHero": 0,
+      "cardInside": true,
+      "tourPointer": "none",
+      "sources": 1000,
+      "h1": "Learn the floor without a live domain."
+    }
+  },
+  {
+    "name": "home-sources-1440",
+    "value": {
+      "vw": 1440,
+      "vh": 900,
+      "card": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "w": 0,
+        "h": 0
+      },
+      "title": {
+        "top": -1582.032470703125,
+        "bottom": -1410.657470703125,
+        "left": 60,
+        "right": 557.78125
+      },
+      "heroBottom": -1163.96875,
+      "overlapTitle": 0,
+      "overlapHero": 0,
+      "cardInside": true,
+      "tourPointer": "none",
+      "sources": 406,
+      "h1": "Learn the floor without a live domain."
+    }
+  },
+  {
+    "name": "home-sources-390",
+    "value": {
+      "vw": 390,
+      "vh": 844,
+      "card": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "w": 0,
+        "h": 0
+      },
+      "title": {
+        "top": -3712.672607421875,
+        "bottom": -3634.578857421875,
+        "left": 30,
+        "right": 256.9375
+      },
+      "heroBottom": -3335.34375,
+      "overlapTitle": 0,
+      "overlapHero": 0,
+      "cardInside": true,
+      "tourPointer": "none",
+      "sources": 1000,
+      "h1": "Learn the floor without a live domain."
+    }
+  },
+  {
+    "name": "room-sources-1440",
+    "value": {
+      "vw": 1440,
+      "vh": 900,
+      "card": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "w": 0,
+        "h": 0
+      },
+      "title": {
+        "top": -2037.3125,
+        "bottom": -1989.484375,
+        "left": 36,
+        "right": 1389
+      },
+      "heroBottom": null,
+      "overlapTitle": 0,
+      "overlapHero": 0,
+      "cardInside": true,
+      "tourPointer": "none",
+      "sources": 196,
+      "h1": "A contact center is not a phone system"
+    }
+  },
+  {
+    "name": "room-sources-390",
+    "value": {
+      "vw": 390,
+      "vh": 844,
+      "card": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "w": 0,
+        "h": 0
+      },
+      "title": {
+        "top": -3019.3125,
+        "bottom": -2953.09375,
+        "left": 16,
+        "right": 374
+      },
+      "heroBottom": null,
+      "overlapTitle": 0,
+      "overlapHero": 0,
+      "cardInside": true,
+      "tourPointer": "none",
+      "sources": 385,
+      "h1": "A contact center is not a phone system"
+    }
+  },
+  {
+    "name": "downloads-1440",
+    "value": {
+      "vw": 1440,
+      "vh": 900,
+      "card": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "w": 0,
+        "h": 0
+      },
+      "title": {
+        "top": 224.390625,
+        "bottom": 272.21875,
+        "left": 54,
+        "right": 1371
+      },
+      "heroBottom": null,
+      "overlapTitle": 0,
+      "overlapHero": 0,
+      "cardInside": true,
+      "tourPointer": "none",
+      "sources": 263.390625,
+      "h1": "Downloads"
+    }
+  },
+  {
+    "name": "downloads-390",
+    "value": {
+      "vw": 390,
+      "vh": 844,
+      "card": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "w": 0,
+        "h": 0
+      },
+      "title": {
+        "top": 27.390625,
+        "bottom": 60.5,
+        "left": 34,
+        "right": 356
+      },
+      "heroBottom": null,
+      "overlapTitle": 0,
+      "overlapHero": 0,
+      "cardInside": true,
+      "tourPointer": "none",
+      "sources": 533.390625,
+      "h1": "Downloads"
+    }
+  },
+  {
+    "name": "home-clean-1440",
+    "value": {
+      "vw": 1440,
+      "vh": 900,
+      "card": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "w": 0,
+        "h": 0
+      },
+      "title": {
+        "top": 193.6875,
+        "bottom": 365.0625,
+        "left": 60,
+        "right": 557.78125
+      },
+      "heroBottom": 581.03125,
+      "overlapTitle": 0,
+      "overlapHero": 0,
+      "cardInside": true,
+      "tourPointer": "none",
+      "sources": 406,
+      "h1": "Learn the floor without a live domain."
+    }
+  },
+  {
+    "name": "home-clean-390",
+    "value": {
+      "vw": 390,
+      "vh": 844,
+      "card": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "w": 0,
+        "h": 0
+      },
+      "title": {
+        "top": 183.6875,
+        "bottom": 261.78125,
+        "left": 30,
+        "right": 256.9375
+      },
+      "heroBottom": 493.65625,
+      "overlapTitle": 0,
+      "overlapHero": 0,
+      "cardInside": true,
+      "tourPointer": "none",
+      "sources": 1000,
+      "h1": "Learn the floor without a live domain."
+    }
+  }
+]

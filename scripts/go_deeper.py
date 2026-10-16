@@ -276,12 +276,19 @@ def sources_from_html(body: str) -> list[dict]:
     return assemble(plain, cites_in_html(body))
 
 
+def opened_url(row: dict) -> str:
+    """A link is published only when the page opened. Confirm rows keep the label and drop the URL."""
+    if row.get("status") == "confirm":
+        return ""
+    return row.get("url") or ""
+
+
 def _line(row: dict) -> str:
     checked = f"last checked {row['lastChecked']}"
-    mark = " confirm" if row.get("status") == "confirm" else ""
-    if row.get("url"):
-        return f"{row['label']}. {row['kind']}. {row['url']}. {checked}.{mark}".rstrip()
-    return f"confirm. {row['label']}. {checked}."
+    url = opened_url(row)
+    if url:
+        return f"{row['label']}. {row['kind']}. {url}. {checked}."
+    return f"confirm. {str(row['label']).rstrip(' .')}. {checked}."
 
 
 def sources_lines(rows: list[dict]) -> list[str]:
@@ -298,17 +305,17 @@ def sources_html(rows: list[dict], heading: bool = True) -> str:
     for row in rows:
         checked = f"last checked {html.escape(row['lastChecked'])}"
         kind = html.escape(row.get("kind") or "")
-        if row.get("url"):
+        url = opened_url(row)
+        if url:
             label = html.escape(row["label"])
-            url = html.escape(row["url"], quote=True)
+            href = html.escape(url, quote=True)
             tail = f' <span class="source-kind">{kind}</span>. {checked}.'
-            if row.get("status") == "confirm":
-                tail += " <strong>confirm</strong>"
             if row.get("note"):
                 tail += f" {html.escape(row['note'])}"
-            items.append(f'<li><a href="{url}">{label}</a>.{tail}</li>')
+            items.append(f'<li><a href="{href}">{label}</a>.{tail}</li>')
         else:
-            items.append(f"<li><strong>confirm</strong>. {html.escape(row['label'])}. {checked}.</li>")
+            label = html.escape(str(row["label"]).rstrip(" ."))
+            items.append(f"<li><strong>confirm</strong>. {label}. {checked}.</li>")
     if not items:
         items.append(f"<li><strong>confirm</strong>. No page was opened for this export. last checked {html.escape(CHECKED)}.</li>")
     head = "<h2>Sources and go deeper</h2>" if heading else ""
@@ -322,12 +329,12 @@ def sources_md(rows: list[dict]) -> str:
         return "\n".join(lines) + "\n"
     for row in rows:
         checked = f"last checked {row['lastChecked']}"
-        mark = " confirm" if row.get("status") == "confirm" else ""
-        if row.get("url"):
+        url = opened_url(row)
+        if url:
             note = f" {row['note']}" if row.get("note") else ""
-            lines.append(f"- [{row['label']}]({row['url']}). {row['kind']}. {checked}.{mark}{note}")
+            lines.append(f"- [{row['label']}]({url}). {row['kind']}. {checked}.{note}")
         else:
-            lines.append(f"- confirm. {row['label']}. {checked}.")
+            lines.append(f"- confirm. {str(row['label']).rstrip(' .')}. {checked}.")
     return "\n".join(lines) + "\n"
 
 
@@ -341,7 +348,7 @@ def pack_record(record_id: str, title: str, rows: list[dict]) -> dict:
     for row in rows:
         item = {
             "label": row["label"],
-            "url": row.get("url") or "",
+            "url": opened_url(row),
             "kind": row.get("kind") or "",
             "status": row.get("status") or "confirm",
             "lastChecked": row.get("lastChecked") or CHECKED,
