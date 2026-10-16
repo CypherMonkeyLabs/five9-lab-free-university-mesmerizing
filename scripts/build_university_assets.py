@@ -130,6 +130,8 @@ def sheet_html(title: str, lines: list[str], sources: list[tuple[str, str]]) -> 
 <head>
   <meta charset="utf-8">
   <title>{html.escape(title)}</title>
+  <link rel="icon" href="../favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <style>
     @page {{ size: letter; margin: 0.6in; }}
     body {{ font: 13px/1.35 "Segoe UI", sans-serif; color: #142033; margin: 24px; }}
@@ -398,6 +400,8 @@ def main() -> None:
     )
     (DOWNLOADS / "flashcards.html").write_text(
         f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Five9 Lab flashcards</title>
+        <link rel="icon" href="../favicon.ico" sizes="16x16 32x32 48x48">
+        <link rel="icon" href="../favicon.svg" type="image/svg+xml">
         <style>body{{font:15px/1.4 sans-serif;margin:24px}} .card{{break-inside:avoid;border:1px solid #ccc;padding:12px;margin:8px 0}} footer{{font-size:12px}}</style></head>
         <body><h1>Flashcards ({len(cards)})</h1>{card_items}<footer>{" · ".join(html.escape(x) for x in FOOT)}</footer></body></html>""",
         encoding="utf-8",

@@ -1,7 +1,7 @@
 /* Round 4 visual layer. Chrome stacking, hero, glass, themes. */
 
 html {
-  --chrome-h: 54px;
+  --chrome-h: 84px;
   --tab-h: 64px;
   --scene-a: #00f0ff;
   --scene-b: #ff2bd6;
@@ -37,16 +37,20 @@ body > #tabbar {
 .topbar { flex: 0 1 auto; flex-wrap: nowrap; overflow: visible; align-items: center; padding: 0 8px; background: transparent; border: 0; min-height: 0; position: static; top: auto; z-index: auto; }
 .utilbar {
   flex: 1 0 100%;
-  padding: 0 12px;
-  min-height: 0;
-  max-height: 18px;
+  padding: 4px 12px;
+  min-height: 44px;
+  max-height: 44px;
   background: transparent;
   border: 0;
-  gap: 12px;
+  gap: 8px;
   position: static;
   top: auto;
+  flex-wrap: nowrap;
+  overflow: hidden;
 }
-.utilbar a, .utilbar button.linkish { min-height: 18px; font-size: 0.68rem; }
+.utilbar .brand-links { flex: 1 1 auto; flex-wrap: nowrap; overflow-x: auto; }
+.utilbar a, .utilbar button.linkish { min-height: 32px; font-size: 0.78rem; }
+.utilbar .brand-link { min-height: 32px; font-size: 0.78rem; }
 .brand-name { font-size: 0.95rem; }
 .brand-sub { display: none; }
 .mark { width: 18px; height: 18px; }
@@ -202,7 +206,7 @@ html[data-theme="neon"] #hero-slot::after {
   pointer-events: none;
   opacity: 0;
 }
-.glyph { width: 168px; height: 168px; object-fit: contain; filter: drop-shadow(0 28px 16px rgba(0, 0, 0, 0.55)) drop-shadow(0 0 16px color-mix(in srgb, var(--scene-a) 45%, transparent)); }
+.glyph { width: 168px; height: 168px; aspect-ratio: 1; display: block; object-fit: contain; filter: drop-shadow(0 28px 16px rgba(0, 0, 0, 0.55)) drop-shadow(0 0 16px color-mix(in srgb, var(--scene-a) 45%, transparent)); }
 a.card:has(.glyph) {
   grid-template-columns: 168px minmax(0, 1fr);
   min-height: 188px;
@@ -576,7 +580,10 @@ html[data-motion="reduce"] a.card::after,
 html[data-motion="reduce"] .hero-flat::before,
 html[data-motion="reduce"] .chart .bar { animation: none; }
 
-#study-map { display: block; width: min(100%, 720px); height: 360px; max-width: 100%; }
+#study-map { display: block; width: min(100%, 720px); height: 360px; max-width: 100%; aspect-ratio: 2 / 1; }
+#phone-menu .brand-links { flex-direction: column; align-items: stretch; padding: 4px 12px 8px; }
+#phone-menu .brand-link { min-height: 48px; width: 100%; justify-content: flex-start; font-size: 0.95rem; }
+.site-footer .brand-links { margin-bottom: 4px; }
 :focus-visible {
   outline: 3px solid var(--scene-a);
   outline-offset: 3px;

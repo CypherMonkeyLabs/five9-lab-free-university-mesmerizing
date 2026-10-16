@@ -1,6 +1,8 @@
 // Offline motion. anime.js, rough.js, canvas-confetti, three.js, and markmap
 // are vendored. Nothing here loads a CDN. GSAP is not used.
 
+import { cappedPixelRatio } from "./pixel.js";
+
 let stageStop = 0;
 
 export function armConfetti() {
@@ -72,8 +74,8 @@ async function mountStage(host) {
   host.dataset.live = "1";
   const THREE = await import("three");
   const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
-  renderer.setSize(140, 140);
+  renderer.setPixelRatio(cappedPixelRatio());
+  renderer.setSize(108, 108, false);
   host.replaceChildren(renderer.domElement);
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(42, 1, 0.1, 20);
@@ -88,6 +90,10 @@ async function mountStage(host) {
   const tick = () => {
     if (stageStop !== token || !host.isConnected) {
       renderer.dispose();
+      return;
+    }
+    if (document.documentElement.dataset.motion === "reduce") {
+      renderer.render(scene, camera);
       return;
     }
     mesh.rotation.y += 0.012;

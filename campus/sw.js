@@ -1,4 +1,4 @@
-const CACHE = "f9lab-shell-v5";
+const CACHE = "f9lab-shell-v6";
 const SHELL = [
   "./",
   "./index.html",
@@ -18,6 +18,8 @@ const SHELL = [
   "./js/pacing.js",
   "./js/topology.js",
   "./manifest.webmanifest",
+  "./favicon.svg",
+  "./favicon.ico",
   "./data/catalog.json",
   "./data/university.json",
   "./data/search-index.json"

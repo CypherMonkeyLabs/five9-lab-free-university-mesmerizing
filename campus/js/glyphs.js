@@ -139,11 +139,11 @@ export function warmGlyphs() {
     return Promise.resolve();
   }
   if (warming) return warming.then(paintImages);
-  if (document.documentElement.dataset.motion === "reduce") return Promise.resolve();
   colorKey = nextKey;
   const keys = Array.from({ length: 18 }, (_, i) => `t${String(i + 1).padStart(2, "0")}`);
   warming = (async () => {
     const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, preserveDrawingBuffer: true });
+    renderer.setPixelRatio(1);
     renderer.setSize(256, 256, false);
     renderer.setClearColor(0x000000, 0);
     const camera = new THREE.PerspectiveCamera(32, 1, 0.1, 20);

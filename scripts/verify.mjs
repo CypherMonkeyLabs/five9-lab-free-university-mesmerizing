@@ -64,6 +64,7 @@ for (const file of htmlSheets) {
   if (!text.includes("https://linktr.ee/cyphermonkey")) problems.push(`sheet-tree ${file.href}`);
   if (!text.includes("https://github.com/CypherMonkeyLabs/five9-lab-free-university-mesmerizing")) problems.push(`sheet-repo ${file.href}`);
   if (!text.includes("CC BY-NC-SA")) problems.push(`sheet-license ${file.href}`);
+  if (!text.includes('rel="icon"') || !text.includes("favicon.svg") || !text.includes("favicon.ico")) problems.push(`sheet-icon ${file.href}`);
   if (/linkedin/i.test(text)) problems.push(`sheet-linkedin ${file.href}`);
   if (/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i.test(text)) problems.push(`sheet-email ${file.href}`);
 }
@@ -86,6 +87,31 @@ for (const href of [
 }
 if (!license.includes("MIT") || !license.includes("CC BY-NC-SA")) problems.push("license");
 if (!page.includes("MIT code, CC BY-NC-SA content")) problems.push("footer-license");
+const brandHrefs = [
+  "https://github.com/cipher0x9",
+  "https://github.com/CypherMonkeyLabs",
+  "https://cyphermonkeylabs.com",
+  "https://x.com/Cypher0x9",
+  "https://huggingface.co/Cypher0x9"
+];
+const brandLabels = ["Visit my GitHub", "Visit the Labs org", "Visit Cypher Monkey Labs", ">X<", "Hugging Face"];
+for (const href of brandHrefs) {
+  if (!page.includes(href) || !rootPage.includes(href)) problems.push(`brand ${href}`);
+}
+for (const label of brandLabels) {
+  if (!page.includes(label) || !rootPage.includes(label)) problems.push(`brand-label ${label}`);
+}
+if (!page.includes("© 2026 CypherMonkeyLabs 🐒") || !rootPage.includes("© 2026 CypherMonkeyLabs 🐒")) problems.push("copyright");
+for (const file of [page, rootPage]) {
+  if (!file.includes('rel="icon"') || !file.includes("favicon.svg") || !file.includes("favicon.ico")) problems.push("favicon");
+  if (/linktr\.ee/i.test(file)) problems.push("linktree");
+  if (/linkedin/i.test(file)) problems.push("linkedin");
+  if (/mailto:/i.test(file)) problems.push("mailto");
+}
+for (const file of pdfSheets) {
+  const text = readFileSync(join(root, "campus", file.href), "latin1");
+  if (text.includes("github.com/cipher0x9/") || text.includes("cipher0x9.github.io")) problems.push(`old-pdf ${file.href}`);
+}
 const vendorOk = ["anime", "rough", "d3", "confetti", "markmap", "three"].every((name) => (
   readdirSync(join(root, "campus/vendor", name)).some((file) => file.toLowerCase().startsWith("license"))
 ));

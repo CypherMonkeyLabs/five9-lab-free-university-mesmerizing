@@ -1,5 +1,6 @@
 import * as THREE from "three";
 import { OrbitControls } from "../vendor/three/OrbitControls.js";
+import { cappedPixelRatio } from "./pixel.js";
 
 const NODES = [
   { id: "pstn", name: "PSTN", pos: [-6.2, 0.4, -1.2], color: 0xf5b942 },
@@ -148,7 +149,7 @@ export function mountTopology(root, opts) {
   scene.background = new THREE.Color(0x041018);
   const camera = new THREE.PerspectiveCamera(50, 1, 0.1, 100);
   camera.position.set(8.5, 6.2, 9.5);
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  renderer.setPixelRatio(cappedPixelRatio());
   const wrap = document.createElement("div");
   wrap.className = "canvas-wrap";
   wrap.append(renderer.domElement);
@@ -220,18 +221,34 @@ export function mountTopology(root, opts) {
     const height = 420;
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
+    renderer.setPixelRatio(cappedPixelRatio());
     renderer.setSize(width, height, false);
   };
   resize();
   window.addEventListener("resize", resize);
   const loop = () => {
+    if (document.documentElement.dataset.motion === "reduce") {
+      renderer.render(scene, camera);
+      raf = 0;
+      return;
+    }
     controls.update();
     renderer.render(scene, camera);
     raf = requestAnimationFrame(loop);
   };
+  const onTheme = () => {
+    if (document.documentElement.dataset.motion === "reduce") {
+      cancelAnimationFrame(raf);
+      raf = 0;
+      return;
+    }
+    if (!raf) loop();
+  };
+  document.addEventListener("f9-theme", onTheme);
   loop();
   return function destroy() {
     cancelAnimationFrame(raf);
+    document.removeEventListener("f9-theme", onTheme);
     window.removeEventListener("resize", resize);
     controls.dispose();
     renderer.dispose();

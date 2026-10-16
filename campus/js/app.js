@@ -383,14 +383,14 @@ function figureSvg(figure) {
     const n = Math.max(left.length, right.length);
     const h = 56 + n * 36;
     const col = (items, x, color) => items.map((item, i) => `<rect x="${x}" y="${48 + i * 36}" width="200" height="28" rx="6" fill="#102033" stroke="${color}"></rect><text x="${x + 10}" y="${67 + i * 36}" fill="#e7eef8" font-size="13">${esc(item)}</text>`).join("");
-    return `<svg viewBox="0 0 460 ${h}" role="img" aria-label="${esc(figure.title)}"><rect width="460" height="${h}" fill="#041018"></rect><text x="16" y="28" fill="#9aefff" font-size="14">${esc(figure.leftTitle || "A")}</text><text x="244" y="28" fill="#f5b942" font-size="14">${esc(figure.rightTitle || "B")}</text>${col(left, 16, "#3ee0ff")}${col(right, 244, "#f5b942")}</svg>`;
+    return `<svg class="figure-svg" width="460" height="${h}" viewBox="0 0 460 ${h}" role="img" aria-label="${esc(figure.title)}"><rect width="460" height="${h}" fill="#041018"></rect><text x="16" y="28" fill="#9aefff" font-size="14">${esc(figure.leftTitle || "A")}</text><text x="244" y="28" fill="#f5b942" font-size="14">${esc(figure.rightTitle || "B")}</text>${col(left, 16, "#3ee0ff")}${col(right, 244, "#f5b942")}</svg>`;
   }
   if (figure.kind === "path") {
     const w = Math.max(460, rows.length * 120);
-    return `<svg viewBox="0 0 ${w} 140" role="img" aria-label="${esc(figure.title)}"><rect width="${w}" height="140" fill="#041018"></rect>${rows.map((row, i) => `<line x1="${70 + i * 120}" y1="70" x2="${i === rows.length - 1 ? 70 + i * 120 : 130 + i * 120}" y2="70" stroke="#3ee0ff"></line><rect x="${20 + i * 120}" y="48" width="100" height="44" rx="8" fill="#102033" stroke="#3ddc97"></rect><text x="${70 + i * 120}" y="74" text-anchor="middle" fill="#e7eef8" font-size="12">${esc(row.label)}</text>`).join("")}</svg>`;
+    return `<svg class="figure-svg" width="${w}" height="140" viewBox="0 0 ${w} 140" role="img" aria-label="${esc(figure.title)}"><rect width="${w}" height="140" fill="#041018"></rect>${rows.map((row, i) => `<line x1="${70 + i * 120}" y1="70" x2="${i === rows.length - 1 ? 70 + i * 120 : 130 + i * 120}" y2="70" stroke="#3ee0ff"></line><rect x="${20 + i * 120}" y="48" width="100" height="44" rx="8" fill="#102033" stroke="#3ddc97"></rect><text x="${70 + i * 120}" y="74" text-anchor="middle" fill="#e7eef8" font-size="12">${esc(row.label)}</text>`).join("")}</svg>`;
   }
   const h = 48 + rows.length * 52;
-  return `<svg viewBox="0 0 460 ${h}" role="img" aria-label="${esc(figure.title)}"><rect width="460" height="${h}" fill="#041018"></rect>${rows.map((row, i) => `<rect x="24" y="${24 + i * 52}" width="${412 - i * 18}" height="40" rx="8" fill="#102033" stroke="${i % 2 ? "#f5b942" : "#3ee0ff"}"></rect><text x="36" y="${48 + i * 52}" fill="#e7eef8" font-size="14">${esc(row.label)}</text>`).join("")}</svg>`;
+  return `<svg class="figure-svg" width="460" height="${h}" viewBox="0 0 460 ${h}" role="img" aria-label="${esc(figure.title)}"><rect width="460" height="${h}" fill="#041018"></rect>${rows.map((row, i) => `<rect x="24" y="${24 + i * 52}" width="${412 - i * 18}" height="40" rx="8" fill="#102033" stroke="${i % 2 ? "#f5b942" : "#3ee0ff"}"></rect><text x="36" y="${48 + i * 52}" fill="#e7eef8" font-size="14">${esc(row.label)}</text>`).join("")}</svg>`;
 }
 
 function flowSvg(flow, index) {
@@ -407,7 +407,7 @@ function flowSvg(flow, index) {
     const on = i === index;
     return `<rect x="${x}" y="${y}" width="${colW - 24}" height="46" rx="8" fill="${on ? "#173049" : "#102033"}" stroke="${on ? "#f5b942" : "#3ee0ff"}"></rect><text x="${x + 8}" y="${y + 28}" fill="#e7eef8" font-size="12">${esc(step.title)}</text>`;
   }).join("");
-  return `<svg class="flow-svg" viewBox="0 0 ${width} ${height}" role="img" aria-label="${esc(flow.title)}">${heads}${bodies}</svg>`;
+  return `<svg class="flow-svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="${esc(flow.title)}">${heads}${bodies}</svg>`;
 }
 
 function renderLesson(track, lesson) {
@@ -985,6 +985,13 @@ function bindChrome() {
   if (window.speechSynthesis) {
     window.speechSynthesis.addEventListener("voiceschanged", fillVoices);
     fillVoices();
+  }
+  const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const onMotionPreference = () => {
+    if (session.settings.reduced == null) applySettings();
+  };
+  if (typeof motionQuery.addEventListener === "function") {
+    motionQuery.addEventListener("change", onMotionPreference);
   }
   window.addEventListener("hashchange", route);
   if ("serviceWorker" in navigator) {

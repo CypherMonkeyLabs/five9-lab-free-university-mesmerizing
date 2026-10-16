@@ -5,15 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Five9 Lab</title>
   <meta name="description" content="Five9 Lab, an independent study floor for Virtual Contact Center.">
+  <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="canonical" href="campus/">
   <meta http-equiv="refresh" content="0; url=campus/">
   <script>location.replace("campus/");</script>
+  <style>
+    @font-face {
+      font-family: "Lab UI";
+      src: local("Segoe UI"), local("Liberation Sans"), local("Nimbus Sans");
+      font-display: swap;
+      size-adjust: 100%;
+      ascent-override: 95%;
+      descent-override: 22%;
+      line-gap-override: 0%;
+    }
+    body { font: 16px/1.45 "Lab UI", "Segoe UI", sans-serif; margin: 24px; color: #142033; }
+    .brand-links { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+    .brand-link { display: inline-flex; align-items: center; gap: 6px; min-height: 36px; padding: 4px 10px; border: 1px solid #9bb; border-radius: 999px; text-decoration: none; color: #123; }
+    .brand-icon { width: 16px; height: 16px; flex: none; }
+  </style>
 </head>
 <body>
-  <p><a href="https://cyphermonkeylabs.com">cyphermonkeylabs.com</a> · <a href="https://linktr.ee/cyphermonkey">linktr.ee/cyphermonkey</a> · <a href="https://github.com/CypherMonkeyLabs/five9-lab-free-university-mesmerizing">This repo</a> · <a href="https://dev.to/cyphermonkey">dev.to</a> · <a href="https://huggingface.co/Cypher0x9">Hugging Face</a> · <a href="https://x.com/Cypher0x9">X</a></p>
+  <nav class="brand-links" aria-label="Site links">
+    <a class="brand-link" href="https://github.com/cipher0x9"><svg class="brand-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>Visit my GitHub</a>
+    <a class="brand-link" href="https://github.com/CypherMonkeyLabs"><svg class="brand-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>Visit the Labs org</a>
+    <a class="brand-link" href="https://cyphermonkeylabs.com"><svg class="brand-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><ellipse cx="6" cy="8" rx="3" ry="3.5" fill="#a8653a"/><ellipse cx="18" cy="8" rx="3" ry="3.5" fill="#a8653a"/><circle cx="12" cy="13" r="7" fill="#c9844a"/><ellipse cx="12" cy="15.5" rx="3.2" ry="2.2" fill="#f0c9a0"/><circle cx="9.6" cy="12" r="1" fill="#1b120c"/><circle cx="14.4" cy="12" r="1" fill="#1b120c"/></svg>Visit Cypher Monkey Labs</a>
+    <a class="brand-link" href="https://x.com/Cypher0x9"><svg class="brand-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></svg>X</a>
+    <a class="brand-link" href="https://huggingface.co/Cypher0x9"><svg class="brand-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#FFD21E"/><circle cx="8.5" cy="10" r="1.3" fill="#111"/><circle cx="15.5" cy="10" r="1.3" fill="#111"/><path d="M8 14.5c1.2 1.6 6.8 1.6 8 0" fill="none" stroke="#111" stroke-width="1.4" stroke-linecap="round"/></svg>Hugging Face</a>
+  </nav>
   <p><a href="campus/">Enter the Five9 Lab</a></p>
   <p>Independent educational project, not affiliated with or endorsed by any vendor. Trademarks belong to their owners. MIT code, CC BY-NC-SA content.</p>
   <p>Next lab: <a href="https://cyphermonkeylabs.com/webex-lab-free-university-mesmerizing/">Webex Canon</a> · <a href="https://cyphermonkeylabs.com/uc-lab-free-university-mesmerizing/">UC Lab</a> · <a href="https://cyphermonkeylabs.com/ai-lab-free-university-mesmerizing/">AI Lab</a> · <a href="https://cyphermonkeylabs.com/five9-lab-free-university-mesmerizing/">Five9 Lab</a></p>
   <p><a href="https://cyphermonkeylabs.com/#contact">Report a concern or takedown</a> · <a href="https://cyphermonkeylabs.com/#contact">Work with us</a></p>
+  <p class="copyright">© 2026 CypherMonkeyLabs 🐒</p>
 </body>
 </html>

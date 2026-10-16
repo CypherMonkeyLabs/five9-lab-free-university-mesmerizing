@@ -1,4 +1,5 @@
 import * as THREE from "three";
+import { cappedPixelRatio } from "./pixel.js";
 
 let live = null;
 
@@ -117,6 +118,7 @@ export function mountHero(host) {
   if (live && live.host === host && live.theme === theme) {
     recolorHero();
     showFlat(host, false);
+    if (live.kick) live.kick();
     return;
   }
   stopHero();
@@ -124,7 +126,7 @@ export function mountHero(host) {
   const colors = sceneColors();
   if (theme === "neon") colors.bg = 0x05010c;
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false, powerPreference: "high-performance" });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  renderer.setPixelRatio(cappedPixelRatio());
   renderer.setClearColor(colors.bg, 1);
   renderer.domElement.className = "hero-gl";
   host.insertBefore(renderer.domElement, host.firstChild);
@@ -332,6 +334,7 @@ export function mountHero(host) {
     const box = host.getBoundingClientRect();
     const w = Math.max(1, box.width);
     const h = Math.max(1, box.height);
+    renderer.setPixelRatio(cappedPixelRatio());
     renderer.setSize(w, h, false);
     camera.aspect = w / h;
     camera.updateProjectionMatrix();
@@ -342,6 +345,12 @@ export function mountHero(host) {
   const clock = { raf: 0 };
   const tick = (now) => {
     if (!live || live.renderer !== renderer) return;
+    if (document.documentElement.dataset.motion === "reduce") {
+      renderer.render(scene, camera);
+      live.paused = true;
+      live.clock.raf = 0;
+      return;
+    }
     const t = now * 0.001;
     nodes.forEach((node, index) => {
       const anchor = anchors[index];
@@ -410,6 +419,7 @@ export function mountHero(host) {
       return;
     }
     if (live.held) {
+      if (document.documentElement.dataset.motion === "reduce") return;
       live.held = false;
       live.clock.raf = requestAnimationFrame(tick);
     }
@@ -422,6 +432,19 @@ export function mountHero(host) {
     hold();
   }, { threshold: 0.05 });
   watch.observe(host);
+  const kick = () => {
+    if (!live || live.renderer !== renderer) return;
+    if (document.documentElement.dataset.motion === "reduce") {
+      if (live.clock.raf) cancelAnimationFrame(live.clock.raf);
+      live.clock.raf = 0;
+      live.paused = true;
+      return;
+    }
+    if (!live.clock.raf) {
+      live.paused = false;
+      live.clock.raf = requestAnimationFrame(tick);
+    }
+  };
   live = {
     host,
     renderer,
@@ -438,7 +461,9 @@ export function mountHero(host) {
     held: false,
     offscreen: false,
     onVis,
-    watch
+    watch,
+    kick,
+    paused: false
   };
   live.clock.raf = requestAnimationFrame((now) => {
     tick(now);

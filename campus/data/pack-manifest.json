@@ -1,5 +1,6 @@
 {
   "files": [
+    "audio/README.md",
     "audio/architect-floor.mp3",
     "audio/architect-share.mp3",
     "audio/scripts/architect-floor.md",
@@ -69,6 +70,8 @@
     "downloads/troubleshooting.html",
     "downloads/troubleshooting.pdf",
     "downloads/troubleshooting.png",
+    "favicon.ico",
+    "favicon.svg",
     "index.html",
     "js/app.js",
     "js/charts.js",
@@ -79,6 +82,7 @@
     "js/ivr.js",
     "js/loaders.js",
     "js/pacing.js",
+    "js/pixel.js",
     "js/stage.js",
     "js/topology.js",
     "js/university.js",
