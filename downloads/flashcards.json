@@ -1,0 +1,3532 @@
+{
+  "cards": [
+    {
+      "front": "Outbound, what comes first?",
+      "back": "Skill groups, then users, lists, dispositions, profiles, campaigns.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t01-l01-a-contact-center-is-not-a-phone-system.html"
+    },
+    {
+      "front": "Which builds add IVR?",
+      "back": "Inbound and autodial.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t01-l01-a-contact-center-is-not-a-phone-system.html"
+    },
+    {
+      "front": "What is a skill group?",
+      "back": "Agents and supervisors for a campaign queue.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t01-l01-a-contact-center-is-not-a-phone-system.html"
+    },
+    {
+      "front": "What is a domain?",
+      "back": "The VCC tenant.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t01-l01-a-contact-center-is-not-a-phone-system.html"
+    },
+    {
+      "front": "Domain boundary?",
+      "back": "Users, lists, skills, and campaigns stay in that domain.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t01-l02-the-domain-is-the-tenant.html"
+    },
+    {
+      "front": "CUCM partition equivalent?",
+      "back": "There isn't one. Teach domain, skills, campaigns.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t01-l02-the-domain-is-the-tenant.html"
+    },
+    {
+      "front": "Skill membership?",
+      "back": "Agent or supervisor users, and a user may have several skills.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t01-l02-the-domain-is-the-tenant.html"
+    },
+    {
+      "front": "Multiple skills on a campaign?",
+      "back": "Yes.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t01-l02-the-domain-is-the-tenant.html"
+    },
+    {
+      "front": "Reporting menu missing?",
+      "back": "Check the Reporting role and a reporting permission.",
+      "source": "Skill groups",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm",
+      "room": "rooms/t01-l03-roles-on-the-floor.html"
+    },
+    {
+      "front": "Supervisor in a skill?",
+      "back": "Yes, the skill topic allows it.",
+      "source": "Skill groups",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm",
+      "room": "rooms/t01-l03-roles-on-the-floor.html"
+    },
+    {
+      "front": "Call variable permission?",
+      "back": "User Can Edit Call Variables.",
+      "source": "Skill groups",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm",
+      "room": "rooms/t01-l03-roles-on-the-floor.html"
+    },
+    {
+      "front": "Who edits IVR?",
+      "back": "An administrator.",
+      "source": "Skill groups",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm",
+      "room": "rooms/t01-l03-roles-on-the-floor.html"
+    },
+    {
+      "front": "Three types?",
+      "back": "Inbound, outbound, autodial.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t01-l04-three-campaign-types.html"
+    },
+    {
+      "front": "Stopped inbound?",
+      "back": "Busy signal.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t01-l04-three-campaign-types.html"
+    },
+    {
+      "front": "What is blended?",
+      "back": "Agents working inbound and outbound, not a fourth type.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t01-l04-three-campaign-types.html"
+    },
+    {
+      "front": "Autodial needs?",
+      "back": "List plus prompts and IVR, per the planning topic.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t01-l04-three-campaign-types.html"
+    },
+    {
+      "front": "Final disposition?",
+      "back": "Stops all numbers on that record for the campaign.",
+      "source": "List dialing modes",
+      "url": "https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US",
+      "room": "rooms/t01-l05-contacts-fields-and-lists.html"
+    },
+    {
+      "front": "Which types load lists?",
+      "back": "Outbound and autodial.",
+      "source": "List dialing modes",
+      "url": "https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US",
+      "room": "rooms/t01-l05-contacts-fields-and-lists.html"
+    },
+    {
+      "front": "What is number1?",
+      "back": "The first phone field the dial order can use.",
+      "source": "List dialing modes",
+      "url": "https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US",
+      "room": "rooms/t01-l05-contacts-fields-and-lists.html"
+    },
+    {
+      "front": "Does upload start dialing?",
+      "back": "No.",
+      "source": "List dialing modes",
+      "url": "https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US",
+      "room": "rooms/t01-l05-contacts-fields-and-lists.html"
+    },
+    {
+      "front": "Default system redials?",
+      "back": "Often five, if the default count is left in place.",
+      "source": "Managing campaign dispositions",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dispositions/managing-dispositions.htm",
+      "room": "rooms/t01-l06-dispositions-are-the-dialer-s-memory.html"
+    },
+    {
+      "front": "What does reset change?",
+      "back": "Selected codes on lists currently loaded.",
+      "source": "Managing campaign dispositions",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dispositions/managing-dispositions.htm",
+      "room": "rooms/t01-l06-dispositions-are-the-dialer-s-memory.html"
+    },
+    {
+      "front": "Safe reset rule?",
+      "back": "Only codes you are willing to dial.",
+      "source": "Managing campaign dispositions",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dispositions/managing-dispositions.htm",
+      "room": "rooms/t01-l06-dispositions-are-the-dialer-s-memory.html"
+    },
+    {
+      "front": "Batch update?",
+      "back": "Manual rows or scheduled CSV.",
+      "source": "Managing campaign dispositions",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dispositions/managing-dispositions.htm",
+      "room": "rooms/t01-l06-dispositions-are-the-dialer-s-memory.html"
+    },
+    {
+      "front": "Profiles per campaign?",
+      "back": "One.",
+      "source": "Campaign profiles",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/campaign-profiles/_ch-campaign-profiles.htm",
+      "room": "rooms/t01-l07-one-profile-many-campaigns.html"
+    },
+    {
+      "front": "Can a profile be shared?",
+      "back": "Yes, across campaigns.",
+      "source": "Campaign profiles",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/campaign-profiles/_ch-campaign-profiles.htm",
+      "room": "rooms/t01-l07-one-profile-many-campaigns.html"
+    },
+    {
+      "front": "What can it override?",
+      "back": "Defaults such as the ANI.",
+      "source": "Campaign profiles",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/campaign-profiles/_ch-campaign-profiles.htm",
+      "room": "rooms/t01-l07-one-profile-many-campaigns.html"
+    },
+    {
+      "front": "How can it change later?",
+      "back": "Workflow rules.",
+      "source": "Campaign profiles",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/campaign-profiles/_ch-campaign-profiles.htm",
+      "room": "rooms/t01-l07-one-profile-many-campaigns.html"
+    },
+    {
+      "front": "Mac ARM and Java admin?",
+      "back": "Not supported. Use the web administrator.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t02-l01-two-administrator-applications.html"
+    },
+    {
+      "front": "Why Plus?",
+      "back": "Web apps do not need Java SE.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t02-l01-two-administrator-applications.html"
+    },
+    {
+      "front": "Plus transport?",
+      "back": "HTTPS and WSS.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t02-l01-two-administrator-applications.html"
+    },
+    {
+      "front": "IE exception?",
+      "back": "IE 11 for Oracle Service Cloud only.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t02-l01-two-administrator-applications.html"
+    },
+    {
+      "front": "Profile or account first?",
+      "back": "Profile, then account.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t02-l02-user-profiles-before-user-accounts.html"
+    },
+    {
+      "front": "Who joins a skill?",
+      "back": "Agent or supervisor users.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t02-l02-user-profiles-before-user-accounts.html"
+    },
+    {
+      "front": "Missing permission symptom?",
+      "back": "It looks like a missing feature.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t02-l02-user-profiles-before-user-accounts.html"
+    },
+    {
+      "front": "Call variable edits?",
+      "back": "A named permission on the administrator role.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t02-l02-user-profiles-before-user-accounts.html"
+    },
+    {
+      "front": "Inbound tab name?",
+      "back": "Outbound Skills.",
+      "source": "Skill groups",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm",
+      "room": "rooms/t02-l03-skill-groups-are-the-queues.html"
+    },
+    {
+      "front": "Outbound tab name?",
+      "back": "Skills.",
+      "source": "Skill groups",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm",
+      "room": "rooms/t02-l03-skill-groups-are-the-queues.html"
+    },
+    {
+      "front": "Multiple skills per campaign?",
+      "back": "Yes.",
+      "source": "Skill groups",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm",
+      "room": "rooms/t02-l03-skill-groups-are-the-queues.html"
+    },
+    {
+      "front": "Multiple skills per user?",
+      "back": "Yes.",
+      "source": "Skill groups",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm",
+      "room": "rooms/t02-l03-skill-groups-are-the-queues.html"
+    },
+    {
+      "front": "Prompts before scripts?",
+      "back": "Yes, on the inbound and autodial roadmap.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t02-l04-prompts-before-the-script.html"
+    },
+    {
+      "front": "Skill greeting vs Play prompt?",
+      "back": "Different objects.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t02-l04-prompts-before-the-script.html"
+    },
+    {
+      "front": "Stopped campaign?",
+      "back": "Busy, prompt unheard.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t02-l04-prompts-before-the-script.html"
+    },
+    {
+      "front": "TTS?",
+      "back": "The query example uses a TTS prompt on Play.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t02-l04-prompts-before-the-script.html"
+    },
+    {
+      "front": "IVR module?",
+      "back": "Set DNC.",
+      "source": "IVR modules",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm",
+      "room": "rooms/t02-l05-do-not-call-is-a-list-and-a-module.html"
+    },
+    {
+      "front": "Is a disposition the same?",
+      "back": "Not documented as the same object.",
+      "source": "IVR modules",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm",
+      "room": "rooms/t02-l05-do-not-call-is-a-list-and-a-module.html"
+    },
+    {
+      "front": "Report category?",
+      "back": "Do Not Call Reports.",
+      "source": "IVR modules",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm",
+      "room": "rooms/t02-l05-do-not-call-is-a-list-and-a-module.html"
+    },
+    {
+      "front": "Product grouping?",
+      "back": "With time-zone rules and Certified Caller.",
+      "source": "IVR modules",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm",
+      "room": "rooms/t02-l05-do-not-call-is-a-list-and-a-module.html"
+    },
+    {
+      "front": "Efficiency Mode?",
+      "back": "Off for live calls.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t02-l06-workstations-that-drop-live-calls.html"
+    },
+    {
+      "front": "Analog headsets?",
+      "back": "Not supported.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t02-l06-workstations-that-drop-live-calls.html"
+    },
+    {
+      "front": "5G?",
+      "back": "Not supported.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t02-l06-workstations-that-drop-live-calls.html"
+    },
+    {
+      "front": "ADP bandwidth?",
+      "back": "128 kbps in the table, G.711 default.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t02-l06-workstations-that-drop-live-calls.html"
+    },
+    {
+      "front": "Skill voicemail?",
+      "back": "Yes, with its own greeting.",
+      "source": "Skill groups",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm",
+      "room": "rooms/t02-l07-reason-codes-voicemail-and-what-admin-is-not.html"
+    },
+    {
+      "front": "TCPA timeout state?",
+      "back": "Not Ready, no auto-dial.",
+      "source": "Skill groups",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm",
+      "room": "rooms/t02-l07-reason-codes-voicemail-and-what-admin-is-not.html"
+    },
+    {
+      "front": "Where do dialer settings live?",
+      "back": "On the campaign, not in a side spreadsheet.",
+      "source": "Skill groups",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm",
+      "room": "rooms/t02-l07-reason-codes-voicemail-and-what-admin-is-not.html"
+    },
+    {
+      "front": "Profiles and pop-ups?",
+      "back": "Profiles can control them.",
+      "source": "Skill groups",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm",
+      "room": "rooms/t02-l07-reason-codes-voicemail-and-what-admin-is-not.html"
+    },
+    {
+      "front": "Stopped inbound?",
+      "back": "Busy.",
+      "source": "Inbound campaigns",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm",
+      "room": "rooms/t03-l01-a-dnis-answers-only-while-the-campaign-runs.html"
+    },
+    {
+      "front": "What runs after answer?",
+      "back": "The campaign IVR.",
+      "source": "Inbound campaigns",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm",
+      "room": "rooms/t03-l01-a-dnis-answers-only-while-the-campaign-runs.html"
+    },
+    {
+      "front": "What is DNIS?",
+      "back": "The called number presented to the campaign.",
+      "source": "Inbound campaigns",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm",
+      "room": "rooms/t03-l01-a-dnis-answers-only-while-the-campaign-runs.html"
+    },
+    {
+      "front": "First busy check?",
+      "back": "Is the campaign running?",
+      "source": "Inbound campaigns",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm",
+      "room": "rooms/t03-l01-a-dnis-answers-only-while-the-campaign-runs.html"
+    },
+    {
+      "front": "Script after agent connect?",
+      "back": "Complete.",
+      "source": "Inbound campaigns",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm",
+      "room": "rooms/t03-l02-the-script-is-the-inbound-product.html"
+    },
+    {
+      "front": "Long queue options?",
+      "back": "Voicemail and third-party forward.",
+      "source": "Inbound campaigns",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm",
+      "room": "rooms/t03-l02-the-script-is-the-inbound-product.html"
+    },
+    {
+      "front": "Priority?",
+      "back": "Supported in the inbound topic.",
+      "source": "Inbound campaigns",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm",
+      "room": "rooms/t03-l02-the-script-is-the-inbound-product.html"
+    },
+    {
+      "front": "Branching?",
+      "back": "In the IVR script.",
+      "source": "Inbound campaigns",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm",
+      "room": "rooms/t03-l02-the-script-is-the-inbound-product.html"
+    },
+    {
+      "front": "Hold vs voicemail?",
+      "back": "Different.",
+      "source": "Inbound campaigns",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm",
+      "room": "rooms/t03-l03-queue-treatment-is-a-choice-not-a-hope.html"
+    },
+    {
+      "front": "Third party module?",
+      "back": "Third Party Transfer.",
+      "source": "Inbound campaigns",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm",
+      "room": "rooms/t03-l03-queue-treatment-is-a-choice-not-a-hope.html"
+    },
+    {
+      "front": "Voicemail module?",
+      "back": "Voicemail Transfer.",
+      "source": "Inbound campaigns",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm",
+      "room": "rooms/t03-l03-queue-treatment-is-a-choice-not-a-hope.html"
+    },
+    {
+      "front": "Stopped campaign as overflow?",
+      "back": "No. Callers hear busy.",
+      "source": "Inbound campaigns",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm",
+      "room": "rooms/t03-l03-queue-treatment-is-a-choice-not-a-hope.html"
+    },
+    {
+      "front": "Where is service level?",
+      "back": "On the skill group.",
+      "source": "Inbound campaigns",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm",
+      "room": "rooms/t03-l04-priority-and-service-level.html"
+    },
+    {
+      "front": "Where is IVR priority?",
+      "back": "Skill Transfer's priority tab.",
+      "source": "Inbound campaigns",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm",
+      "room": "rooms/t03-l04-priority-and-service-level.html"
+    },
+    {
+      "front": "Are they the same knob?",
+      "back": "No.",
+      "source": "Inbound campaigns",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm",
+      "room": "rooms/t03-l04-priority-and-service-level.html"
+    },
+    {
+      "front": "Who says inbound can be prioritized?",
+      "back": "The inbound campaign topic.",
+      "source": "Inbound campaigns",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm",
+      "room": "rooms/t03-l04-priority-and-service-level.html"
+    },
+    {
+      "front": "When is the schedule set?",
+      "back": "After scripts exist.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t03-l05-schedules-not-a-stopped-campaign.html"
+    },
+    {
+      "front": "Nightly stop?",
+      "back": "Causes busy, not a closed prompt.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t03-l05-schedules-not-a-stopped-campaign.html"
+    },
+    {
+      "front": "Which types have the schedule topic?",
+      "back": "Autodial and inbound.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t03-l05-schedules-not-a-stopped-campaign.html"
+    },
+    {
+      "front": "Campaign state at night?",
+      "back": "Running, with a different script.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t03-l05-schedules-not-a-stopped-campaign.html"
+    },
+    {
+      "front": "Where?",
+      "back": "Skill Transfer General tab.",
+      "source": "Pause before transfer",
+      "url": "https://community.five9.com/s/article/Administrator-Pause-Before-Transfer?language=en_US",
+      "room": "rooms/t03-l06-pause-before-the-next-call.html"
+    },
+    {
+      "front": "Default?",
+      "back": "0.",
+      "source": "Pause before transfer",
+      "url": "https://community.five9.com/s/article/Administrator-Pause-Before-Transfer?language=en_US",
+      "room": "rooms/t03-l06-pause-before-the-next-call.html"
+    },
+    {
+      "front": "On Hold in reports?",
+      "back": "No.",
+      "source": "Pause before transfer",
+      "url": "https://community.five9.com/s/article/Administrator-Pause-Before-Transfer?language=en_US",
+      "room": "rooms/t03-l06-pause-before-the-next-call.html"
+    },
+    {
+      "front": "Why set it above 0?",
+      "back": "A gap before the next call.",
+      "source": "Pause before transfer",
+      "url": "https://community.five9.com/s/article/Administrator-Pause-Before-Transfer?language=en_US",
+      "room": "rooms/t03-l06-pause-before-the-next-call.html"
+    },
+    {
+      "front": "Are the seven checks trunk settings?",
+      "back": "No.",
+      "source": "Inbound campaigns",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm",
+      "room": "rooms/t03-l07-inbound-design-review.html"
+    },
+    {
+      "front": "Wrong skill tab?",
+      "back": "Empty queue.",
+      "source": "Inbound campaigns",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm",
+      "room": "rooms/t03-l07-inbound-design-review.html"
+    },
+    {
+      "front": "Night busy?",
+      "back": "State or schedule.",
+      "source": "Inbound campaigns",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm",
+      "room": "rooms/t03-l07-inbound-design-review.html"
+    },
+    {
+      "front": "Then what?",
+      "back": "Trunk and topology.",
+      "source": "Inbound campaigns",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm",
+      "room": "rooms/t03-l07-inbound-design-review.html"
+    },
+    {
+      "front": "Does upload dial?",
+      "back": "No.",
+      "source": "List dialing modes",
+      "url": "https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US",
+      "room": "rooms/t04-l01-a-list-is-not-a-campaign.html"
+    },
+    {
+      "front": "Which lists does reset touch?",
+      "back": "Lists loaded in the campaign.",
+      "source": "List dialing modes",
+      "url": "https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US",
+      "room": "rooms/t04-l01-a-list-is-not-a-campaign.html"
+    },
+    {
+      "front": "number1?",
+      "back": "A phone field.",
+      "source": "List dialing modes",
+      "url": "https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US",
+      "room": "rooms/t04-l01-a-list-is-not-a-campaign.html"
+    },
+    {
+      "front": "Sales list campaign type?",
+      "back": "Outbound or autodial.",
+      "source": "List dialing modes",
+      "url": "https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US",
+      "room": "rooms/t04-l01-a-list-is-not-a-campaign.html"
+    },
+    {
+      "front": "Filter vs vertical?",
+      "back": "Different.",
+      "source": "Campaign profiles",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/campaign-profiles/_ch-campaign-profiles.htm",
+      "room": "rooms/t04-l02-profiles-filter-the-list-the-agent-sees.html"
+    },
+    {
+      "front": "Profiles at once?",
+      "back": "One.",
+      "source": "Campaign profiles",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/campaign-profiles/_ch-campaign-profiles.htm",
+      "room": "rooms/t04-l02-profiles-filter-the-list-the-agent-sees.html"
+    },
+    {
+      "front": "ANI override?",
+      "back": "On the profile.",
+      "source": "Campaign profiles",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/campaign-profiles/_ch-campaign-profiles.htm",
+      "room": "rooms/t04-l02-profiles-filter-the-list-the-agent-sees.html"
+    },
+    {
+      "front": "Pop-ups?",
+      "back": "A profile can control them.",
+      "source": "Campaign profiles",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/campaign-profiles/_ch-campaign-profiles.htm",
+      "room": "rooms/t04-l02-profiles-filter-the-list-the-agent-sees.html"
+    },
+    {
+      "front": "Default list mode?",
+      "back": "List penetration.",
+      "source": "List dialing modes",
+      "url": "https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US",
+      "room": "rooms/t04-l03-list-penetration-and-vertical-dialing.html"
+    },
+    {
+      "front": "Vertical in one sentence?",
+      "back": "Finish one record's numbers, then move on.",
+      "source": "List dialing modes",
+      "url": "https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US",
+      "room": "rooms/t04-l03-list-penetration-and-vertical-dialing.html"
+    },
+    {
+      "front": "Compass words?",
+      "back": "Use the definitions, not 'vertical' as a direction.",
+      "source": "List dialing modes",
+      "url": "https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US",
+      "room": "rooms/t04-l03-list-penetration-and-vertical-dialing.html"
+    },
+    {
+      "front": "Final disposition?",
+      "back": "Stops the whole record.",
+      "source": "List dialing modes",
+      "url": "https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US",
+      "room": "rooms/t04-l03-list-penetration-and-vertical-dialing.html"
+    },
+    {
+      "front": "Reset Sale?",
+      "back": "Only if you mean to call them again.",
+      "source": "Managing campaign dispositions",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dispositions/managing-dispositions.htm",
+      "room": "rooms/t04-l04-reset-is-a-loaded-gun.html"
+    },
+    {
+      "front": "Which lists?",
+      "back": "Currently loaded.",
+      "source": "Managing campaign dispositions",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dispositions/managing-dispositions.htm",
+      "room": "rooms/t04-l04-reset-is-a-loaded-gun.html"
+    },
+    {
+      "front": "Position reset?",
+      "back": "Back toward the top.",
+      "source": "Managing campaign dispositions",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dispositions/managing-dispositions.htm",
+      "room": "rooms/t04-l04-reset-is-a-loaded-gun.html"
+    },
+    {
+      "front": "Proof?",
+      "back": "List details.",
+      "source": "Managing campaign dispositions",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dispositions/managing-dispositions.htm",
+      "room": "rooms/t04-l04-reset-is-a-loaded-gun.html"
+    },
+    {
+      "front": "US abandon window?",
+      "back": "Rolling 30 days.",
+      "source": "Default campaign settings",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm",
+      "room": "rooms/t04-l05-time-zone-and-call-analysis-are-guarded-defaults.html"
+    },
+    {
+      "front": "UK window?",
+      "back": "24 hours.",
+      "source": "Default campaign settings",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm",
+      "room": "rooms/t04-l05-time-zone-and-call-analysis-are-guarded-defaults.html"
+    },
+    {
+      "front": "Who sets US vs UK?",
+      "back": "A Five9 representative, per the topic.",
+      "source": "Default campaign settings",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm",
+      "room": "rooms/t04-l05-time-zone-and-call-analysis-are-guarded-defaults.html"
+    },
+    {
+      "front": "Numeric default in this lab?",
+      "back": "Not stated. Read the domain.",
+      "source": "Default campaign settings",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm",
+      "room": "rooms/t04-l05-time-zone-and-call-analysis-are-guarded-defaults.html"
+    },
+    {
+      "front": "Where is voice detection level?",
+      "back": "Campaign dialing defaults.",
+      "source": "Default campaign settings",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm",
+      "room": "rooms/t04-l06-call-analysis-is-not-a-guarantee.html"
+    },
+    {
+      "front": "Published accuracy?",
+      "back": "Not in this lab.",
+      "source": "Default campaign settings",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm",
+      "room": "rooms/t04-l06-call-analysis-is-not-a-guarantee.html"
+    },
+    {
+      "front": "Automatic voicemail?",
+      "back": "Named on the outbound product page.",
+      "source": "Default campaign settings",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm",
+      "room": "rooms/t04-l06-call-analysis-is-not-a-guarantee.html"
+    },
+    {
+      "front": "False machine?",
+      "back": "A live person misses the agent.",
+      "source": "Default campaign settings",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm",
+      "room": "rooms/t04-l06-call-analysis-is-not-a-guarantee.html"
+    },
+    {
+      "front": "Where is local caller ID marketed?",
+      "back": "Outbound product page.",
+      "source": "Outbound product page",
+      "url": "https://www.five9.com/products/capabilities/outbound-contact-center",
+      "room": "rooms/t04-l07-local-caller-id-is-a-profile-choice.html"
+    },
+    {
+      "front": "Which object overrides ANI?",
+      "back": "Campaign profile.",
+      "source": "Outbound product page",
+      "url": "https://www.five9.com/products/capabilities/outbound-contact-center",
+      "room": "rooms/t04-l07-local-caller-id-is-a-profile-choice.html"
+    },
+    {
+      "front": "Is that STIR/SHAKEN?",
+      "back": "No. Certified Caller is separate.",
+      "source": "Outbound product page",
+      "url": "https://www.five9.com/products/capabilities/outbound-contact-center",
+      "room": "rooms/t04-l07-local-caller-id-is-a-profile-choice.html"
+    },
+    {
+      "front": "Unassigned profile?",
+      "back": "No effect.",
+      "source": "Outbound product page",
+      "url": "https://www.five9.com/products/capabilities/outbound-contact-center",
+      "room": "rooms/t04-l07-local-caller-id-is-a-profile-choice.html"
+    },
+    {
+      "front": "Why preview?",
+      "back": "Context before the dial.",
+      "source": "Dialer product page",
+      "url": "https://www.five9.com/products/capabilities/dialer-system",
+      "room": "rooms/t05-l01-preview-lets-the-agent-read-first.html"
+    },
+    {
+      "front": "Same as TCPA?",
+      "back": "No. TCPA removes automatic dialing.",
+      "source": "Dialer product page",
+      "url": "https://www.five9.com/products/capabilities/dialer-system",
+      "room": "rooms/t05-l01-preview-lets-the-agent-read-first.html"
+    },
+    {
+      "front": "Overdial?",
+      "back": "Not the design.",
+      "source": "Dialer product page",
+      "url": "https://www.five9.com/products/capabilities/dialer-system",
+      "room": "rooms/t05-l01-preview-lets-the-agent-read-first.html"
+    },
+    {
+      "front": "Still needs a list?",
+      "back": "Yes.",
+      "source": "Dialer product page",
+      "url": "https://www.five9.com/products/capabilities/dialer-system",
+      "room": "rooms/t05-l01-preview-lets-the-agent-read-first.html"
+    },
+    {
+      "front": "One per agent?",
+      "back": "That is the outbound page.",
+      "source": "Outbound product page",
+      "url": "https://www.five9.com/products/capabilities/outbound-contact-center",
+      "room": "rooms/t05-l02-progressive-keeps-one-call-per-free-agent.html"
+    },
+    {
+      "front": "Ten-agent hint?",
+      "back": "Dialer page guidance, not a proven hard limit.",
+      "source": "Outbound product page",
+      "url": "https://www.five9.com/products/capabilities/outbound-contact-center",
+      "room": "rooms/t05-l02-progressive-keeps-one-call-per-free-agent.html"
+    },
+    {
+      "front": "Why low abandon?",
+      "back": "The agent is reserved.",
+      "source": "Outbound product page",
+      "url": "https://www.five9.com/products/capabilities/outbound-contact-center",
+      "room": "rooms/t05-l02-progressive-keeps-one-call-per-free-agent.html"
+    },
+    {
+      "front": "Simulator?",
+      "back": "Teaching model.",
+      "source": "Outbound product page",
+      "url": "https://www.five9.com/products/capabilities/outbound-contact-center",
+      "room": "rooms/t05-l02-progressive-keeps-one-call-per-free-agent.html"
+    },
+    {
+      "front": "Who sets the ratio?",
+      "back": "The administrator.",
+      "source": "Dialer product page",
+      "url": "https://www.five9.com/products/capabilities/dialer-system",
+      "room": "rooms/t05-l03-power-dials-a-ratio-you-chose.html"
+    },
+    {
+      "front": "Who is it for?",
+      "back": "Small team, large list.",
+      "source": "Dialer product page",
+      "url": "https://www.five9.com/products/capabilities/dialer-system",
+      "room": "rooms/t05-l03-power-dials-a-ratio-you-chose.html"
+    },
+    {
+      "front": "Extra live answer?",
+      "back": "An abandon.",
+      "source": "Dialer product page",
+      "url": "https://www.five9.com/products/capabilities/dialer-system",
+      "room": "rooms/t05-l03-power-dials-a-ratio-you-chose.html"
+    },
+    {
+      "front": "Where is the brake?",
+      "back": "Abandon monitor and max percent.",
+      "source": "Dialer product page",
+      "url": "https://www.five9.com/products/capabilities/dialer-system",
+      "room": "rooms/t05-l03-power-dials-a-ratio-you-chose.html"
+    },
+    {
+      "front": "Ten-agent line?",
+      "back": "Dialer page guidance.",
+      "source": "Dialer product page",
+      "url": "https://www.five9.com/products/capabilities/dialer-system",
+      "room": "rooms/t05-l04-predictive-fills-idle-time-and-it-can-drop-calls.html"
+    },
+    {
+      "front": "US window?",
+      "back": "30 days.",
+      "source": "Dialer product page",
+      "url": "https://www.five9.com/products/capabilities/dialer-system",
+      "room": "rooms/t05-l04-predictive-fills-idle-time-and-it-can-drop-calls.html"
+    },
+    {
+      "front": "Test article?",
+      "back": "Mixed field note.",
+      "source": "Dialer product page",
+      "url": "https://www.five9.com/products/capabilities/dialer-system",
+      "room": "rooms/t05-l04-predictive-fills-idle-time-and-it-can-drop-calls.html"
+    },
+    {
+      "front": "Simulator window?",
+      "back": "Not Five9's 30 days.",
+      "source": "Dialer product page",
+      "url": "https://www.five9.com/products/capabilities/dialer-system",
+      "room": "rooms/t05-l04-predictive-fills-idle-time-and-it-can-drop-calls.html"
+    },
+    {
+      "front": "Where does the mode exist?",
+      "back": "Domains enabled for it, with no other mode.",
+      "source": "TCPA manual touch",
+      "url": "https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US",
+      "room": "rooms/t05-l05-tcpa-manual-touch-is-a-typed-number.html"
+    },
+    {
+      "front": "Paste?",
+      "back": "Blocked.",
+      "source": "TCPA manual touch",
+      "url": "https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US",
+      "room": "rooms/t05-l05-tcpa-manual-touch-is-a-typed-number.html"
+    },
+    {
+      "front": "Dial enables when?",
+      "back": "The typed number matches.",
+      "source": "TCPA manual touch",
+      "url": "https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US",
+      "room": "rooms/t05-l05-tcpa-manual-touch-is-a-typed-number.html"
+    },
+    {
+      "front": "Timeout?",
+      "back": "Not Ready, no auto-dial.",
+      "source": "TCPA manual touch",
+      "url": "https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US",
+      "room": "rooms/t05-l05-tcpa-manual-touch-is-a-typed-number.html"
+    },
+    {
+      "front": "Why defaults?",
+      "back": "A stated compliance posture.",
+      "source": "Default campaign settings",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm",
+      "room": "rooms/t05-l06-the-defaults-are-the-compliance-posture.html"
+    },
+    {
+      "front": "Example warning?",
+      "back": "Max abandon percent.",
+      "source": "Default campaign settings",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm",
+      "room": "rooms/t05-l06-the-defaults-are-the-compliance-posture.html"
+    },
+    {
+      "front": "US vs UK?",
+      "back": "30 days vs 24 hours.",
+      "source": "Default campaign settings",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm",
+      "room": "rooms/t05-l06-the-defaults-are-the-compliance-posture.html"
+    },
+    {
+      "front": "Where is the legal text?",
+      "back": "The agency rule, not this lab.",
+      "source": "Default campaign settings",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm",
+      "room": "rooms/t05-l06-the-defaults-are-the-compliance-posture.html"
+    },
+    {
+      "front": "No consent?",
+      "back": "TCPA manual touch on an enabled domain.",
+      "source": "Dialer product page",
+      "url": "https://www.five9.com/products/capabilities/dialer-system",
+      "room": "rooms/t05-l07-pick-a-mode-in-one-page.html"
+    },
+    {
+      "front": "Forty agents?",
+      "back": "Predictive, eyes open.",
+      "source": "Dialer product page",
+      "url": "https://www.five9.com/products/capabilities/dialer-system",
+      "room": "rooms/t05-l07-pick-a-mode-in-one-page.html"
+    },
+    {
+      "front": "No drops, small team?",
+      "back": "Progressive.",
+      "source": "Dialer product page",
+      "url": "https://www.five9.com/products/capabilities/dialer-system",
+      "room": "rooms/t05-l07-pick-a-mode-in-one-page.html"
+    },
+    {
+      "front": "System of record?",
+      "back": "The domain dialog.",
+      "source": "Dialer product page",
+      "url": "https://www.five9.com/products/capabilities/dialer-system",
+      "room": "rooms/t05-l07-pick-a-mode-in-one-page.html"
+    },
+    {
+      "front": "What is blended?",
+      "back": "Agents moving across inbound and outbound.",
+      "source": "Outbound product page",
+      "url": "https://www.five9.com/products/capabilities/outbound-contact-center",
+      "room": "rooms/t06-l01-blended-is-a-staffing-plan.html"
+    },
+    {
+      "front": "Is it a campaign type?",
+      "back": "Not in the planning list.",
+      "source": "Outbound product page",
+      "url": "https://www.five9.com/products/capabilities/outbound-contact-center",
+      "room": "rooms/t06-l01-blended-is-a-staffing-plan.html"
+    },
+    {
+      "front": "Predictive plus shared agents?",
+      "back": "Availability gets stolen.",
+      "source": "Outbound product page",
+      "url": "https://www.five9.com/products/capabilities/outbound-contact-center",
+      "room": "rooms/t06-l01-blended-is-a-staffing-plan.html"
+    },
+    {
+      "front": "How do you build it?",
+      "back": "Skills and running campaigns.",
+      "source": "Outbound product page",
+      "url": "https://www.five9.com/products/capabilities/outbound-contact-center",
+      "room": "rooms/t06-l01-blended-is-a-staffing-plan.html"
+    },
+    {
+      "front": "Planning extras?",
+      "back": "Prompts and IVR.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t06-l02-autodial-is-the-ivr-s-outbound.html"
+    },
+    {
+      "front": "Needs a list?",
+      "back": "Yes.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t06-l02-autodial-is-the-ivr-s-outbound.html"
+    },
+    {
+      "front": "Skill tab?",
+      "back": "Outbound Skills.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t06-l02-autodial-is-the-ivr-s-outbound.html"
+    },
+    {
+      "front": "Read-first alternative?",
+      "back": "Outbound preview.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t06-l02-autodial-is-the-ivr-s-outbound.html"
+    },
+    {
+      "front": "Numeric ratio in this lesson?",
+      "back": "None.",
+      "source": "Inbound campaigns",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm",
+      "room": "rooms/t06-l03-priority-and-ratio-are-campaign-settings.html"
+    },
+    {
+      "front": "Steal rule?",
+      "back": "Write who may take the agent.",
+      "source": "Inbound campaigns",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm",
+      "room": "rooms/t06-l03-priority-and-ratio-are-campaign-settings.html"
+    },
+    {
+      "front": "Predictive on a shared pod?",
+      "back": "Exposed.",
+      "source": "Inbound campaigns",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm",
+      "room": "rooms/t06-l03-priority-and-ratio-are-campaign-settings.html"
+    },
+    {
+      "front": "Service level?",
+      "back": "A measure, not the dialer.",
+      "source": "Inbound campaigns",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm",
+      "room": "rooms/t06-l03-priority-and-ratio-are-campaign-settings.html"
+    },
+    {
+      "front": "TCPA timeout?",
+      "back": "Not Ready, no dial.",
+      "source": "TCPA manual touch",
+      "url": "https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US",
+      "room": "rooms/t06-l04-not-ready-is-a-real-state.html"
+    },
+    {
+      "front": "Count them as free?",
+      "back": "No.",
+      "source": "TCPA manual touch",
+      "url": "https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US",
+      "room": "rooms/t06-l04-not-ready-is-a-real-state.html"
+    },
+    {
+      "front": "Which report category?",
+      "back": "Agent reports.",
+      "source": "TCPA manual touch",
+      "url": "https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US",
+      "room": "rooms/t06-l04-not-ready-is-a-real-state.html"
+    },
+    {
+      "front": "Adding lines?",
+      "back": "Makes abandon worse.",
+      "source": "TCPA manual touch",
+      "url": "https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US",
+      "room": "rooms/t06-l04-not-ready-is-a-real-state.html"
+    },
+    {
+      "front": "Final code?",
+      "back": "Stops the record.",
+      "source": "Managing campaign dispositions",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dispositions/managing-dispositions.htm",
+      "room": "rooms/t06-l05-after-call-work-feeds-the-next-dial.html"
+    },
+    {
+      "front": "Pause vs wrap?",
+      "back": "Different gaps.",
+      "source": "Managing campaign dispositions",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dispositions/managing-dispositions.htm",
+      "room": "rooms/t06-l05-after-call-work-feeds-the-next-dial.html"
+    },
+    {
+      "front": "Default system redials?",
+      "back": "Often five.",
+      "source": "Managing campaign dispositions",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dispositions/managing-dispositions.htm",
+      "room": "rooms/t06-l05-after-call-work-feeds-the-next-dial.html"
+    },
+    {
+      "front": "Simulator wrap?",
+      "back": "Teaching delay.",
+      "source": "Managing campaign dispositions",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dispositions/managing-dispositions.htm",
+      "room": "rooms/t06-l05-after-call-work-feeds-the-next-dial.html"
+    },
+    {
+      "front": "Blend includes digital?",
+      "back": "The outbound page says so.",
+      "source": "Outbound product page",
+      "url": "https://www.five9.com/products/capabilities/outbound-contact-center",
+      "room": "rooms/t06-l06-digital-and-voice-share-the-person.html"
+    },
+    {
+      "front": "Plus promise?",
+      "back": "One screen.",
+      "source": "Outbound product page",
+      "url": "https://www.five9.com/products/capabilities/outbound-contact-center",
+      "room": "rooms/t06-l06-digital-and-voice-share-the-person.html"
+    },
+    {
+      "front": "Text blocked?",
+      "back": "Antivirus is a documented suspect.",
+      "source": "Outbound product page",
+      "url": "https://www.five9.com/products/capabilities/outbound-contact-center",
+      "room": "rooms/t06-l06-digital-and-voice-share-the-person.html"
+    },
+    {
+      "front": "Chat and predictive?",
+      "back": "The agent is busy.",
+      "source": "Outbound product page",
+      "url": "https://www.five9.com/products/capabilities/outbound-contact-center",
+      "room": "rooms/t06-l06-digital-and-voice-share-the-person.html"
+    },
+    {
+      "front": "No screen, no design?",
+      "back": "Correct.",
+      "source": "Outbound product page",
+      "url": "https://www.five9.com/products/capabilities/outbound-contact-center",
+      "room": "rooms/t06-l07-a-blend-you-can-defend.html"
+    },
+    {
+      "front": "Simulator equals domain?",
+      "back": "No.",
+      "source": "Outbound product page",
+      "url": "https://www.five9.com/products/capabilities/outbound-contact-center",
+      "room": "rooms/t06-l07-a-blend-you-can-defend.html"
+    },
+    {
+      "front": "US window?",
+      "back": "30 days.",
+      "source": "Outbound product page",
+      "url": "https://www.five9.com/products/capabilities/outbound-contact-center",
+      "room": "rooms/t06-l07-a-blend-you-can-defend.html"
+    },
+    {
+      "front": "Dedicated pod?",
+      "back": "Outside the steal rule.",
+      "source": "Outbound product page",
+      "url": "https://www.five9.com/products/capabilities/outbound-contact-center",
+      "room": "rooms/t06-l07-a-blend-you-can-defend.html"
+    },
+    {
+      "front": "Is Hangup in the chapter list?",
+      "back": "Not in the list this lab read.",
+      "source": "IVR modules",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm",
+      "room": "rooms/t07-l01-the-module-list-is-the-vocabulary.html"
+    },
+    {
+      "front": "When does Skill Transfer finish the script?",
+      "back": "When an agent connects.",
+      "source": "IVR modules",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm",
+      "room": "rooms/t07-l01-the-module-list-is-the-vocabulary.html"
+    },
+    {
+      "front": "Bench JSON?",
+      "back": "Not a VCC import.",
+      "source": "IVR modules",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm",
+      "room": "rooms/t07-l01-the-module-list-is-the-vocabulary.html"
+    },
+    {
+      "front": "Menu exists?",
+      "back": "Yes.",
+      "source": "IVR modules",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm",
+      "room": "rooms/t07-l01-the-module-list-is-the-vocabulary.html"
+    },
+    {
+      "front": "ZIP module?",
+      "back": "Input.",
+      "source": "IVR modules",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm",
+      "room": "rooms/t07-l02-play-menu-digits-and-voice.html"
+    },
+    {
+      "front": "Why No Match?",
+      "back": "Wrong input needs an exit.",
+      "source": "IVR modules",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm",
+      "room": "rooms/t07-l02-play-menu-digits-and-voice.html"
+    },
+    {
+      "front": "Speech modules?",
+      "back": "Voice Input and Natural Language Processing.",
+      "source": "IVR modules",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm",
+      "room": "rooms/t07-l02-play-menu-digits-and-voice.html"
+    },
+    {
+      "front": "TTS?",
+      "back": "Yes, in the example.",
+      "source": "IVR modules",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm",
+      "room": "rooms/t07-l02-play-menu-digits-and-voice.html"
+    },
+    {
+      "front": "Two ways?",
+      "back": "If/Else.",
+      "source": "If/Else module",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/ifelse-module.htm",
+      "room": "rooms/t07-l03-if-else-is-two-ways-case-is-more.html"
+    },
+    {
+      "front": "Three ways?",
+      "back": "Case.",
+      "source": "If/Else module",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/ifelse-module.htm",
+      "room": "rooms/t07-l03-if-else-is-two-ways-case-is-more.html"
+    },
+    {
+      "front": "Who writes the condition?",
+      "back": "You do.",
+      "source": "If/Else module",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/ifelse-module.htm",
+      "room": "rooms/t07-l03-if-else-is-two-ways-case-is-more.html"
+    },
+    {
+      "front": "Caller choice?",
+      "back": "Menu, not If/Else.",
+      "source": "If/Else module",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/ifelse-module.htm",
+      "room": "rooms/t07-l03-if-else-is-two-ways-case-is-more.html"
+    },
+    {
+      "front": "Either skill or both?",
+      "back": "Either.",
+      "source": "Skill Transfer functions",
+      "url": "https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features",
+      "room": "rooms/t07-l04-skill-transfer-has-more-than-a-skill-name.html"
+    },
+    {
+      "front": "Report recommendation?",
+      "back": "One skill per module.",
+      "source": "Skill Transfer functions",
+      "url": "https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features",
+      "room": "rooms/t07-l04-skill-transfer-has-more-than-a-skill-name.html"
+    },
+    {
+      "front": "No skill?",
+      "back": "Default queue.",
+      "source": "Skill Transfer functions",
+      "url": "https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features",
+      "room": "rooms/t07-l04-skill-transfer-has-more-than-a-skill-name.html"
+    },
+    {
+      "front": "Article's default disposition?",
+      "back": "Abandon.",
+      "source": "Skill Transfer functions",
+      "url": "https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features",
+      "room": "rooms/t07-l04-skill-transfer-has-more-than-a-skill-name.html"
+    },
+    {
+      "front": "Example request?",
+      "back": "XML web service POST.",
+      "source": "XML web service IVR example",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/examples/creating-ivr-script-xml-web-service-query.htm",
+      "room": "rooms/t07-l05-variables-lookup-and-query.html"
+    },
+    {
+      "front": "Why script variables?",
+      "back": "No agent on that call.",
+      "source": "XML web service IVR example",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/examples/creating-ivr-script-xml-web-service-query.htm",
+      "room": "rooms/t07-l05-variables-lookup-and-query.html"
+    },
+    {
+      "front": "History backfill?",
+      "back": "No.",
+      "source": "XML web service IVR example",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/examples/creating-ivr-script-xml-web-service-query.htm",
+      "room": "rooms/t07-l05-variables-lookup-and-query.html"
+    },
+    {
+      "front": "Lookup exists?",
+      "back": "Yes.",
+      "source": "XML web service IVR example",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/examples/creating-ivr-script-xml-web-service-query.htm",
+      "room": "rooms/t07-l05-variables-lookup-and-query.html"
+    },
+    {
+      "front": "Jump to another script?",
+      "back": "Foreign Script.",
+      "source": "IVR modules",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm",
+      "room": "rooms/t07-l06-iva-foreign-scripts-dnc-and-leaving-the-platform.html"
+    },
+    {
+      "front": "Opt out?",
+      "back": "Set DNC.",
+      "source": "IVR modules",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm",
+      "room": "rooms/t07-l06-iva-foreign-scripts-dnc-and-leaving-the-platform.html"
+    },
+    {
+      "front": "Digital keys?",
+      "back": "Build permission plus a task key.",
+      "source": "IVR modules",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm",
+      "room": "rooms/t07-l06-iva-foreign-scripts-dnc-and-leaving-the-platform.html"
+    },
+    {
+      "front": "Third party stays on your skill?",
+      "back": "No.",
+      "source": "IVR modules",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm",
+      "room": "rooms/t07-l06-iva-foreign-scripts-dnc-and-leaving-the-platform.html"
+    },
+    {
+      "front": "Which header?",
+      "back": "X-Frame-Options.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t07-l07-visual-ivr-and-frames.html"
+    },
+    {
+      "front": "Trust the old browser table?",
+      "back": "No. Retest.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t07-l07-visual-ivr-and-frames.html"
+    },
+    {
+      "front": "Who turns it on?",
+      "back": "A VCC administrator.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t07-l07-visual-ivr-and-frames.html"
+    },
+    {
+      "front": "Voice versus visual?",
+      "back": "Different surfaces.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t07-l07-visual-ivr-and-frames.html"
+    },
+    {
+      "front": "Membership?",
+      "back": "Agent or supervisor.",
+      "source": "Skill groups",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm",
+      "room": "rooms/t08-l01-a-skill-is-a-queue-with-people-in-it.html"
+    },
+    {
+      "front": "Empty skill?",
+      "back": "No delivery.",
+      "source": "Skill groups",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm",
+      "room": "rooms/t08-l01-a-skill-is-a-queue-with-people-in-it.html"
+    },
+    {
+      "front": "Service level?",
+      "back": "On the skill.",
+      "source": "Skill groups",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm",
+      "room": "rooms/t08-l01-a-skill-is-a-queue-with-people-in-it.html"
+    },
+    {
+      "front": "Several skills per user?",
+      "back": "Yes.",
+      "source": "Skill groups",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm",
+      "room": "rooms/t08-l01-a-skill-is-a-queue-with-people-in-it.html"
+    },
+    {
+      "front": "Inbound tab?",
+      "back": "Outbound Skills.",
+      "source": "Skill groups",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm",
+      "room": "rooms/t08-l02-the-tab-is-named-backwards-on-inbound.html"
+    },
+    {
+      "front": "Ready but wrong tab?",
+      "back": "No offer.",
+      "source": "Skill groups",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm",
+      "room": "rooms/t08-l02-the-tab-is-named-backwards-on-inbound.html"
+    },
+    {
+      "front": "Autodial?",
+      "back": "Same tab as inbound.",
+      "source": "Skill groups",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm",
+      "room": "rooms/t08-l02-the-tab-is-named-backwards-on-inbound.html"
+    },
+    {
+      "front": "Where documented?",
+      "back": "Skill groups topic.",
+      "source": "Skill groups",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm",
+      "room": "rooms/t08-l02-the-tab-is-named-backwards-on-inbound.html"
+    },
+    {
+      "front": "Any or all?",
+      "back": "Any one skill.",
+      "source": "Skill Transfer functions",
+      "url": "https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features",
+      "room": "rooms/t08-l03-one-module-one-skill-when-you-need-the-truth.html"
+    },
+    {
+      "front": "Report tip?",
+      "back": "One skill.",
+      "source": "Skill Transfer functions",
+      "url": "https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features",
+      "room": "rooms/t08-l03-one-module-one-skill-when-you-need-the-truth.html"
+    },
+    {
+      "front": "Deliberate pool?",
+      "back": "Allowed if intended.",
+      "source": "Skill Transfer functions",
+      "url": "https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features",
+      "room": "rooms/t08-l03-one-module-one-skill-when-you-need-the-truth.html"
+    },
+    {
+      "front": "No selection?",
+      "back": "Default.",
+      "source": "Skill Transfer functions",
+      "url": "https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features",
+      "room": "rooms/t08-l03-one-module-one-skill-when-you-need-the-truth.html"
+    },
+    {
+      "front": "Same number?",
+      "back": "No.",
+      "source": "Skill Transfer functions",
+      "url": "https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features",
+      "room": "rooms/t08-l04-skill-level-versus-list-order.html"
+    },
+    {
+      "front": "What does ignore-order do?",
+      "back": "Uses agent skill level.",
+      "source": "Skill Transfer functions",
+      "url": "https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features",
+      "room": "rooms/t08-l04-skill-level-versus-list-order.html"
+    },
+    {
+      "front": "Click-path quoted here?",
+      "back": "No.",
+      "source": "Skill Transfer functions",
+      "url": "https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features",
+      "room": "rooms/t08-l04-skill-level-versus-list-order.html"
+    },
+    {
+      "front": "Switch off?",
+      "back": "List order stands.",
+      "source": "Skill Transfer functions",
+      "url": "https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features",
+      "room": "rooms/t08-l04-skill-level-versus-list-order.html"
+    },
+    {
+      "front": "No selection?",
+      "back": "Default queue.",
+      "source": "Skill Transfer functions",
+      "url": "https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features",
+      "room": "rooms/t08-l05-default-is-a-queue-not-a-compliment.html"
+    },
+    {
+      "front": "Label?",
+      "back": "Default.",
+      "source": "Skill Transfer functions",
+      "url": "https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features",
+      "room": "rooms/t08-l05-default-is-a-queue-not-a-compliment.html"
+    },
+    {
+      "front": "User with no skills?",
+      "back": "Catch-all eligible.",
+      "source": "Skill Transfer functions",
+      "url": "https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features",
+      "room": "rooms/t08-l05-default-is-a-queue-not-a-compliment.html"
+    },
+    {
+      "front": "Safe pattern?",
+      "back": "Name the skill.",
+      "source": "Skill Transfer functions",
+      "url": "https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features",
+      "room": "rooms/t08-l05-default-is-a-queue-not-a-compliment.html"
+    },
+    {
+      "front": "Target without people?",
+      "back": "Still misses.",
+      "source": "Skill groups",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm",
+      "room": "rooms/t08-l06-service-level-is-the-scoreboard.html"
+    },
+    {
+      "front": "What steers?",
+      "back": "Priority.",
+      "source": "Skill groups",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm",
+      "room": "rooms/t08-l06-service-level-is-the-scoreboard.html"
+    },
+    {
+      "front": "Where is the target?",
+      "back": "The skill.",
+      "source": "Skill groups",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm",
+      "room": "rooms/t08-l06-service-level-is-the-scoreboard.html"
+    },
+    {
+      "front": "Easier target?",
+      "back": "A new definition, not new staff.",
+      "source": "Skill groups",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm",
+      "room": "rooms/t08-l06-service-level-is-the-scoreboard.html"
+    },
+    {
+      "front": "Greeting object?",
+      "back": "Skill audio.",
+      "source": "Skill groups",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm",
+      "room": "rooms/t08-l07-skill-voicemail-is-its-own-mailbox.html"
+    },
+    {
+      "front": "Default callback code?",
+      "back": "Abandon. Replace it.",
+      "source": "Skill groups",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm",
+      "room": "rooms/t08-l07-skill-voicemail-is-its-own-mailbox.html"
+    },
+    {
+      "front": "Why a specific code?",
+      "back": "So the promise is visible.",
+      "source": "Skill groups",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm",
+      "room": "rooms/t08-l07-skill-voicemail-is-its-own-mailbox.html"
+    },
+    {
+      "front": "Cell mailbox?",
+      "back": "Not this object.",
+      "source": "Skill groups",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm",
+      "room": "rooms/t08-l07-skill-voicemail-is-its-own-mailbox.html"
+    },
+    {
+      "front": "Form factor?",
+      "back": "One screen.",
+      "source": "Agent Desktop",
+      "url": "https://www.five9.com/products/capabilities/agent-desktop",
+      "room": "rooms/t09-l01-one-screen-is-the-product.html"
+    },
+    {
+      "front": "Transcription source?",
+      "back": "Engage page.",
+      "source": "Agent Desktop",
+      "url": "https://www.five9.com/products/capabilities/agent-desktop",
+      "room": "rooms/t09-l01-one-screen-is-the-product.html"
+    },
+    {
+      "front": "Adapter voice stack?",
+      "back": "Same underlying technology, per the desktop page.",
+      "source": "Agent Desktop",
+      "url": "https://www.five9.com/products/capabilities/agent-desktop",
+      "room": "rooms/t09-l01-one-screen-is-the-product.html"
+    },
+    {
+      "front": "Assist bandwidth?",
+      "back": "12 kbps extra.",
+      "source": "Agent Desktop",
+      "url": "https://www.five9.com/products/capabilities/agent-desktop",
+      "room": "rooms/t09-l01-one-screen-is-the-product.html"
+    },
+    {
+      "front": "Adapter transport?",
+      "back": "HTTPS and WSS.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t09-l02-plus-adapters-speak-https-and-wss.html"
+    },
+    {
+      "front": "Proxy?",
+      "back": "Must support WSS.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t09-l02-plus-adapters-speak-https-and-wss.html"
+    },
+    {
+      "front": "TLS 1.1?",
+      "back": "Not supported.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t09-l02-plus-adapters-speak-https-and-wss.html"
+    },
+    {
+      "front": "Pop down, voice up?",
+      "back": "Look at WSS.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t09-l02-plus-adapters-speak-https-and-wss.html"
+    },
+    {
+      "front": "Where is Assist named?",
+      "back": "Engage.",
+      "source": "Five9 Engage",
+      "url": "https://www.five9.com/platform/self-service-and-engagement",
+      "room": "rooms/t09-l03-transcription-and-assist-are-features-you-turn-o.html"
+    },
+    {
+      "front": "Studio's first named app?",
+      "back": "Summaries, among Agent Assist.",
+      "source": "Five9 Engage",
+      "url": "https://www.five9.com/platform/self-service-and-engagement",
+      "room": "rooms/t09-l03-transcription-and-assist-are-features-you-turn-o.html"
+    },
+    {
+      "front": "Universal model name?",
+      "back": "Do not assume one.",
+      "source": "Five9 Engage",
+      "url": "https://www.five9.com/platform/self-service-and-engagement",
+      "room": "rooms/t09-l03-transcription-and-assist-are-features-you-turn-o.html"
+    },
+    {
+      "front": "Why the same screen?",
+      "back": "So the agent sees it.",
+      "source": "Five9 Engage",
+      "url": "https://www.five9.com/platform/self-service-and-engagement",
+      "room": "rooms/t09-l03-transcription-and-assist-are-features-you-turn-o.html"
+    },
+    {
+      "front": "What does Plus show from WEM?",
+      "back": "Schedules, adherence, time off, evaluations.",
+      "source": "Agent Desktop",
+      "url": "https://www.five9.com/products/capabilities/agent-desktop",
+      "room": "rooms/t09-l04-wem-lives-in-the-same-desktop.html"
+    },
+    {
+      "front": "Break equals idle?",
+      "back": "No.",
+      "source": "Agent Desktop",
+      "url": "https://www.five9.com/products/capabilities/agent-desktop",
+      "room": "rooms/t09-l04-wem-lives-in-the-same-desktop.html"
+    },
+    {
+      "front": "CRM path?",
+      "back": "WFO connectors, per the desktop page.",
+      "source": "Agent Desktop",
+      "url": "https://www.five9.com/products/capabilities/agent-desktop",
+      "room": "rooms/t09-l04-wem-lives-in-the-same-desktop.html"
+    },
+    {
+      "front": "Adherence?",
+      "back": "Plan versus actual.",
+      "source": "Agent Desktop",
+      "url": "https://www.five9.com/products/capabilities/agent-desktop",
+      "room": "rooms/t09-l04-wem-lives-in-the-same-desktop.html"
+    },
+    {
+      "front": "Avast example means?",
+      "back": "AV can block text.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t09-l05-digital-text-can-be-blocked.html"
+    },
+    {
+      "front": "Blank text suspect?",
+      "back": "Antivirus.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t09-l05-digital-text-can-be-blocked.html"
+    },
+    {
+      "front": "Dropped call suspect?",
+      "back": "Efficiency Mode, among others.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t09-l05-digital-text-can-be-blocked.html"
+    },
+    {
+      "front": "Change both at once?",
+      "back": "No.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t09-l05-digital-text-can-be-blocked.html"
+    },
+    {
+      "front": "Analog?",
+      "back": "Not supported.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t09-l06-headsets-and-the-path-under-the-desk.html"
+    },
+    {
+      "front": "5G agent path?",
+      "back": "Not supported.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t09-l06-headsets-and-the-path-under-the-desk.html"
+    },
+    {
+      "front": "Default codec in that table?",
+      "back": "G.711.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t09-l06-headsets-and-the-path-under-the-desk.html"
+    },
+    {
+      "front": "One-way latency?",
+      "back": "Under 150 ms.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t09-l06-headsets-and-the-path-under-the-desk.html"
+    },
+    {
+      "front": "One-way audio next stop?",
+      "back": "NAT and SIP.",
+      "source": "Agent Desktop",
+      "url": "https://www.five9.com/products/capabilities/agent-desktop",
+      "room": "rooms/t09-l07-the-desktop-review.html"
+    },
+    {
+      "front": "Efficiency Mode?",
+      "back": "Desktop review.",
+      "source": "Agent Desktop",
+      "url": "https://www.five9.com/products/capabilities/agent-desktop",
+      "room": "rooms/t09-l07-the-desktop-review.html"
+    },
+    {
+      "front": "WSS?",
+      "back": "Desktop review.",
+      "source": "Agent Desktop",
+      "url": "https://www.five9.com/products/capabilities/agent-desktop",
+      "room": "rooms/t09-l07-the-desktop-review.html"
+    },
+    {
+      "front": "Skip the schedule?",
+      "back": "You will mis-count people.",
+      "source": "Agent Desktop",
+      "url": "https://www.five9.com/products/capabilities/agent-desktop",
+      "room": "rooms/t09-l07-the-desktop-review.html"
+    },
+    {
+      "front": "Verint?",
+      "back": "A named partner path, not the only path.",
+      "source": "Workforce engagement management",
+      "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+      "room": "rooms/t10-l01-five9-wem-and-a-verint-path-both-exist.html"
+    },
+    {
+      "front": "Data sheet pieces?",
+      "back": "Recording, QM, WFM, analytics, surveys, connectors.",
+      "source": "Workforce engagement management",
+      "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+      "room": "rooms/t10-l01-five9-wem-and-a-verint-path-both-exist.html"
+    },
+    {
+      "front": "Who upgrades?",
+      "back": "Five9, per the page.",
+      "source": "Workforce engagement management",
+      "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+      "room": "rooms/t10-l01-five9-wem-and-a-verint-path-both-exist.html"
+    },
+    {
+      "front": "Guess the vendor?",
+      "back": "No.",
+      "source": "Workforce engagement management",
+      "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+      "room": "rooms/t10-l01-five9-wem-and-a-verint-path-both-exist.html"
+    },
+    {
+      "front": "Does WFM pick preview vs power?",
+      "back": "No. It staffs.",
+      "source": "Workforce engagement management",
+      "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+      "room": "rooms/t10-l02-workforce-management-is-the-roster.html"
+    },
+    {
+      "front": "Break?",
+      "back": "Not available.",
+      "source": "Workforce engagement management",
+      "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+      "room": "rooms/t10-l02-workforce-management-is-the-roster.html"
+    },
+    {
+      "front": "Adherence?",
+      "back": "Plan versus actual.",
+      "source": "Workforce engagement management",
+      "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+      "room": "rooms/t10-l02-workforce-management-is-the-roster.html"
+    },
+    {
+      "front": "Service level needs?",
+      "back": "The people.",
+      "source": "Workforce engagement management",
+      "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+      "room": "rooms/t10-l02-workforce-management-is-the-roster.html"
+    },
+    {
+      "front": "Where do agents read evaluations?",
+      "back": "Plus, per the desktop page.",
+      "source": "Workforce engagement management",
+      "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+      "room": "rooms/t10-l03-quality-management-listens-on-purpose.html"
+    },
+    {
+      "front": "Hold recorded?",
+      "back": "Yes, per the EULA.",
+      "source": "Workforce engagement management",
+      "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+      "room": "rooms/t10-l03-quality-management-listens-on-purpose.html"
+    },
+    {
+      "front": "Who handles consent?",
+      "back": "The customer, per the EULA.",
+      "source": "Workforce engagement management",
+      "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+      "room": "rooms/t10-l03-quality-management-listens-on-purpose.html"
+    },
+    {
+      "front": "Wrong form?",
+      "back": "Teaches the wrong work.",
+      "source": "Workforce engagement management",
+      "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+      "room": "rooms/t10-l03-quality-management-listens-on-purpose.html"
+    },
+    {
+      "front": "Survey versus abandon?",
+      "back": "Different.",
+      "source": "Workforce engagement management",
+      "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+      "room": "rooms/t10-l04-analytics-and-surveys-sit-beside-the-call.html"
+    },
+    {
+      "front": "A topic without an owner?",
+      "back": "A poster.",
+      "source": "Workforce engagement management",
+      "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+      "room": "rooms/t10-l04-analytics-and-surveys-sit-beside-the-call.html"
+    },
+    {
+      "front": "Screens identical?",
+      "back": "Do not assume.",
+      "source": "Workforce engagement management",
+      "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+      "room": "rooms/t10-l04-analytics-and-surveys-sit-beside-the-call.html"
+    },
+    {
+      "front": "Surveys in the data sheet?",
+      "back": "Yes.",
+      "source": "Workforce engagement management",
+      "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+      "room": "rooms/t10-l04-analytics-and-surveys-sit-beside-the-call.html"
+    },
+    {
+      "front": "VCC audio rule?",
+      "back": "30 days or successful offload, or the contract.",
+      "source": "Data retention",
+      "url": "https://www.five9.com/legal/dataretention",
+      "room": "rooms/t10-l05-recordings-expire.html"
+    },
+    {
+      "front": "Failed copy?",
+      "back": "The clock continues.",
+      "source": "Data retention",
+      "url": "https://www.five9.com/legal/dataretention",
+      "room": "rooms/t10-l05-recordings-expire.html"
+    },
+    {
+      "front": "E911 audio?",
+      "back": "30 days on that page.",
+      "source": "Data retention",
+      "url": "https://www.five9.com/legal/dataretention",
+      "room": "rooms/t10-l05-recordings-expire.html"
+    },
+    {
+      "front": "Agent data?",
+      "back": "60 days on that page.",
+      "source": "Data retention",
+      "url": "https://www.five9.com/legal/dataretention",
+      "room": "rooms/t10-l05-recordings-expire.html"
+    },
+    {
+      "front": "Time off in Plus?",
+      "back": "Named.",
+      "source": "Agent Desktop",
+      "url": "https://www.five9.com/products/capabilities/agent-desktop",
+      "room": "rooms/t10-l06-the-agent-should-not-need-a-second-login.html"
+    },
+    {
+      "front": "Shift bidding?",
+      "back": "Named, rules not copied here.",
+      "source": "Agent Desktop",
+      "url": "https://www.five9.com/products/capabilities/agent-desktop",
+      "room": "rooms/t10-l06-the-agent-should-not-need-a-second-login.html"
+    },
+    {
+      "front": "Bid without a schedule change?",
+      "back": "The dialer never sees it.",
+      "source": "Agent Desktop",
+      "url": "https://www.five9.com/products/capabilities/agent-desktop",
+      "room": "rooms/t10-l06-the-agent-should-not-need-a-second-login.html"
+    },
+    {
+      "front": "Second login?",
+      "back": "Connector probably unused.",
+      "source": "Agent Desktop",
+      "url": "https://www.five9.com/products/capabilities/agent-desktop",
+      "room": "rooms/t10-l06-the-agent-should-not-need-a-second-login.html"
+    },
+    {
+      "front": "Approve time off here?",
+      "back": "No.",
+      "source": "Workforce engagement management",
+      "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+      "room": "rooms/t10-l07-what-this-lab-will-not-pretend-to-run.html"
+    },
+    {
+      "front": "Pacing bench?",
+      "back": "A model.",
+      "source": "Workforce engagement management",
+      "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+      "room": "rooms/t10-l07-what-this-lab-will-not-pretend-to-run.html"
+    },
+    {
+      "front": "Roster of record?",
+      "back": "The suite.",
+      "source": "Workforce engagement management",
+      "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+      "room": "rooms/t10-l07-what-this-lab-will-not-pretend-to-run.html"
+    },
+    {
+      "front": "Recording after the clock?",
+      "back": "The offload.",
+      "source": "Workforce engagement management",
+      "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+      "room": "rooms/t10-l07-what-this-lab-will-not-pretend-to-run.html"
+    },
+    {
+      "front": "Region matters?",
+      "back": "Yes. Use the matching portal.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t11-l01-studio-has-regions.html"
+    },
+    {
+      "front": "Legacy hosts listed?",
+      "back": "Yes.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t11-l01-studio-has-regions.html"
+    },
+    {
+      "front": "How to find SIP?",
+      "back": "DNS SRV.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t11-l01-studio-has-regions.html"
+    },
+    {
+      "front": "Paste Studio ports onto every trunk?",
+      "back": "No. Confirm the family.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t11-l01-studio-has-regions.html"
+    },
+    {
+      "front": "Digital key permission?",
+      "back": "Build.",
+      "source": "Studio digital IVA with VCC",
+      "url": "https://community.five9.com/s/article/Studio-7-Integrate-Digital-IVA-in-Studio-with-VCC?language=en_US",
+      "room": "rooms/t11-l02-a-task-key-is-not-a-vibe.html"
+    },
+    {
+      "front": "Task type in that article?",
+      "back": "ChatBot.",
+      "source": "Studio digital IVA with VCC",
+      "url": "https://community.five9.com/s/article/Studio-7-Integrate-Digital-IVA-in-Studio-with-VCC?language=en_US",
+      "room": "rooms/t11-l02-a-task-key-is-not-a-vibe.html"
+    },
+    {
+      "front": "Where does the key go?",
+      "back": "The VCC side.",
+      "source": "Studio digital IVA with VCC",
+      "url": "https://community.five9.com/s/article/Studio-7-Integrate-Digital-IVA-in-Studio-with-VCC?language=en_US",
+      "room": "rooms/t11-l02-a-task-key-is-not-a-vibe.html"
+    },
+    {
+      "front": "Same as voice?",
+      "back": "Do not assume.",
+      "source": "Studio digital IVA with VCC",
+      "url": "https://community.five9.com/s/article/Studio-7-Integrate-Digital-IVA-in-Studio-with-VCC?language=en_US",
+      "room": "rooms/t11-l02-a-task-key-is-not-a-vibe.html"
+    },
+    {
+      "front": "No failure branch?",
+      "back": "The caller is stranded.",
+      "source": "Five9 Engage",
+      "url": "https://www.five9.com/platform/self-service-and-engagement",
+      "room": "rooms/t11-l03-contain-or-hand-back-with-context.html"
+    },
+    {
+      "front": "No skill selected?",
+      "back": "Default.",
+      "source": "Five9 Engage",
+      "url": "https://www.five9.com/platform/self-service-and-engagement",
+      "room": "rooms/t11-l03-contain-or-hand-back-with-context.html"
+    },
+    {
+      "front": "History?",
+      "back": "Enable a reporting call variable. New calls only.",
+      "source": "Five9 Engage",
+      "url": "https://www.five9.com/platform/self-service-and-engagement",
+      "room": "rooms/t11-l03-contain-or-hand-back-with-context.html"
+    },
+    {
+      "front": "Engage handoff?",
+      "back": "With context.",
+      "source": "Five9 Engage",
+      "url": "https://www.five9.com/platform/self-service-and-engagement",
+      "room": "rooms/t11-l03-contain-or-hand-back-with-context.html"
+    },
+    {
+      "front": "Engine-agnostic?",
+      "back": "Yes.",
+      "source": "GenAI Studio",
+      "url": "https://www.five9.com/products/capabilities/gen-ai-studio",
+      "room": "rooms/t11-l04-genai-studio-is-a-hub-not-a-slogan.html"
+    },
+    {
+      "front": "First named app?",
+      "back": "Agent Assist summaries.",
+      "source": "GenAI Studio",
+      "url": "https://www.five9.com/products/capabilities/gen-ai-studio",
+      "room": "rooms/t11-l04-genai-studio-is-a-hub-not-a-slogan.html"
+    },
+    {
+      "front": "Test data?",
+      "back": "Real calls, per the page.",
+      "source": "GenAI Studio",
+      "url": "https://www.five9.com/products/capabilities/gen-ai-studio",
+      "room": "rooms/t11-l04-genai-studio-is-a-hub-not-a-slogan.html"
+    },
+    {
+      "front": "Untested prompt?",
+      "back": "Not the control the page describes.",
+      "source": "GenAI Studio",
+      "url": "https://www.five9.com/products/capabilities/gen-ai-studio",
+      "room": "rooms/t11-l04-genai-studio-is-a-hub-not-a-slogan.html"
+    },
+    {
+      "front": "Same block?",
+      "back": "No.",
+      "source": "IVR modules",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm",
+      "room": "rooms/t11-l05-nlp-in-the-ivr-is-not-the-same-as-studio.html"
+    },
+    {
+      "front": "Studio handoff?",
+      "back": "IVA Transfer.",
+      "source": "IVR modules",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm",
+      "room": "rooms/t11-l05-nlp-in-the-ivr-is-not-the-same-as-studio.html"
+    },
+    {
+      "front": "Short speech menu?",
+      "back": "An IVR module can do it.",
+      "source": "IVR modules",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm",
+      "room": "rooms/t11-l05-nlp-in-the-ivr-is-not-the-same-as-studio.html"
+    },
+    {
+      "front": "Wrong name?",
+      "back": "Wrong system.",
+      "source": "IVR modules",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm",
+      "room": "rooms/t11-l05-nlp-in-the-ivr-is-not-the-same-as-studio.html"
+    },
+    {
+      "front": "Prompt edit?",
+      "back": "A release.",
+      "source": "GenAI Studio",
+      "url": "https://www.five9.com/products/capabilities/gen-ai-studio",
+      "room": "rooms/t11-l06-prompts-are-a-production-change.html"
+    },
+    {
+      "front": "Test on?",
+      "back": "Call data.",
+      "source": "GenAI Studio",
+      "url": "https://www.five9.com/products/capabilities/gen-ai-studio",
+      "room": "rooms/t11-l06-prompts-are-a-production-change.html"
+    },
+    {
+      "front": "Same as a WAV?",
+      "back": "No.",
+      "source": "GenAI Studio",
+      "url": "https://www.five9.com/products/capabilities/gen-ai-studio",
+      "room": "rooms/t11-l06-prompts-are-a-production-change.html"
+    },
+    {
+      "front": "Invented policy?",
+      "back": "Not ready.",
+      "source": "GenAI Studio",
+      "url": "https://www.five9.com/products/capabilities/gen-ai-studio",
+      "room": "rooms/t11-l06-prompts-are-a-production-change.html"
+    },
+    {
+      "front": "Skip region?",
+      "back": "The review is incomplete.",
+      "source": "Studio digital IVA with VCC",
+      "url": "https://community.five9.com/s/article/Studio-7-Integrate-Digital-IVA-in-Studio-with-VCC?language=en_US",
+      "room": "rooms/t11-l07-a-bot-review-you-can-finish.html"
+    },
+    {
+      "front": "Build permission source?",
+      "back": "The digital IVA article.",
+      "source": "Studio digital IVA with VCC",
+      "url": "https://community.five9.com/s/article/Studio-7-Integrate-Digital-IVA-in-Studio-with-VCC?language=en_US",
+      "room": "rooms/t11-l07-a-bot-review-you-can-finish.html"
+    },
+    {
+      "front": "Why the clock?",
+      "back": "Audio expires.",
+      "source": "Studio digital IVA with VCC",
+      "url": "https://community.five9.com/s/article/Studio-7-Integrate-Digital-IVA-in-Studio-with-VCC?language=en_US",
+      "room": "rooms/t11-l07-a-bot-review-you-can-finish.html"
+    },
+    {
+      "front": "Does this lab host Studio?",
+      "back": "No.",
+      "source": "Studio digital IVA with VCC",
+      "url": "https://community.five9.com/s/article/Studio-7-Integrate-Digital-IVA-in-Studio-with-VCC?language=en_US",
+      "room": "rooms/t11-l07-a-bot-review-you-can-finish.html"
+    },
+    {
+      "front": "ServiceNow listed?",
+      "back": "Yes.",
+      "source": "Web adapter requirements",
+      "url": "https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/agent-integrations/web-based-adapters/application-requirements.htm",
+      "room": "rooms/t12-l01-the-adapter-family.html"
+    },
+    {
+      "front": "Homegrown CRM?",
+      "back": "CRM SDK.",
+      "source": "Web adapter requirements",
+      "url": "https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/agent-integrations/web-based-adapters/application-requirements.htm",
+      "room": "rooms/t12-l01-the-adapter-family.html"
+    },
+    {
+      "front": "URL pop versus adapter?",
+      "back": "Name which one.",
+      "source": "Web adapter requirements",
+      "url": "https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/agent-integrations/web-based-adapters/application-requirements.htm",
+      "room": "rooms/t12-l01-the-adapter-family.html"
+    },
+    {
+      "front": "Proxy?",
+      "back": "Must support WSS.",
+      "source": "Web adapter requirements",
+      "url": "https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/agent-integrations/web-based-adapters/application-requirements.htm",
+      "room": "rooms/t12-l01-the-adapter-family.html"
+    },
+    {
+      "front": "Is 2.46 forever?",
+      "back": "No. Recheck the PDF.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t12-l02-salesforce-versions-move.html"
+    },
+    {
+      "front": "SAML?",
+      "back": "2.0 in that PDF.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t12-l02-salesforce-versions-move.html"
+    },
+    {
+      "front": "Lightning?",
+      "back": "Supported.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t12-l02-salesforce-versions-move.html"
+    },
+    {
+      "front": "IE 11 remains for Salesforce?",
+      "back": "No. The exception is Oracle Service Cloud.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t12-l02-salesforce-versions-move.html"
+    },
+    {
+      "front": "Workspaces?",
+      "back": "Service Operations and Configurable.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t12-l03-servicenow-releases-are-named.html"
+    },
+    {
+      "front": "Those three names?",
+      "back": "Releases in the PDF.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t12-l03-servicenow-releases-are-named.html"
+    },
+    {
+      "front": "Off-list release?",
+      "back": "Do not call it supported.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t12-l03-servicenow-releases-are-named.html"
+    },
+    {
+      "front": "Forever?",
+      "back": "No.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t12-l03-servicenow-releases-are-named.html"
+    },
+    {
+      "front": "Epic listed?",
+      "back": "Yes.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t12-l04-the-rest-of-the-named-crms.html"
+    },
+    {
+      "front": "Salesforce package fixes Zendesk?",
+      "back": "No.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t12-l04-the-rest-of-the-named-crms.html"
+    },
+    {
+      "front": "NetSuite package in this lab?",
+      "back": "Not stated.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t12-l04-the-rest-of-the-named-crms.html"
+    },
+    {
+      "front": "IE exception scope?",
+      "back": "Oracle Service Cloud only.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t12-l04-the-rest-of-the-named-crms.html"
+    },
+    {
+      "front": "SDK named?",
+      "back": "Yes.",
+      "source": "APIs and SDKs",
+      "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks",
+      "room": "rooms/t12-l05-sdk-and-connectors-when-there-is-no-adapter.html"
+    },
+    {
+      "front": "Connectors named?",
+      "back": "Yes.",
+      "source": "APIs and SDKs",
+      "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks",
+      "room": "rooms/t12-l05-sdk-and-connectors-when-there-is-no-adapter.html"
+    },
+    {
+      "front": "Who retests custom code?",
+      "back": "You.",
+      "source": "APIs and SDKs",
+      "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks",
+      "room": "rooms/t12-l05-sdk-and-connectors-when-there-is-no-adapter.html"
+    },
+    {
+      "front": "URL pop scope?",
+      "back": "Smaller than a full adapter.",
+      "source": "APIs and SDKs",
+      "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks",
+      "room": "rooms/t12-l05-sdk-and-connectors-when-there-is-no-adapter.html"
+    },
+    {
+      "front": "Voice proves the pop?",
+      "back": "No.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t12-l06-screen-pop-down-voice-up.html"
+    },
+    {
+      "front": "Profiles and pop-ups?",
+      "back": "Yes, they can control them.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t12-l06-screen-pop-down-voice-up.html"
+    },
+    {
+      "front": "TLS 1.1?",
+      "back": "Unsupported.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t12-l06-screen-pop-down-voice-up.html"
+    },
+    {
+      "front": "Dead URL?",
+      "back": "Blank screen.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t12-l06-screen-pop-down-voice-up.html"
+    },
+    {
+      "front": "IVR Salesforce module?",
+      "back": "A script block.",
+      "source": "IVR modules",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm",
+      "room": "rooms/t12-l07-salesforce-modules-inside-the-ivr.html"
+    },
+    {
+      "front": "Einstein module?",
+      "back": "Named in the chapter.",
+      "source": "IVR modules",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm",
+      "room": "rooms/t12-l07-salesforce-modules-inside-the-ivr.html"
+    },
+    {
+      "front": "ZIP example?",
+      "back": "Query, not the Salesforce module.",
+      "source": "IVR modules",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm",
+      "room": "rooms/t12-l07-salesforce-modules-inside-the-ivr.html"
+    },
+    {
+      "front": "After connect?",
+      "back": "The adapter.",
+      "source": "IVR modules",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm",
+      "room": "rooms/t12-l07-salesforce-modules-inside-the-ivr.html"
+    },
+    {
+      "front": "Five9 ITSP?",
+      "back": "One of the three stories.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t13-l01-three-ways-a-call-can-enter.html"
+    },
+    {
+      "front": "Customer ITSP lands on?",
+      "back": "Five9 SBCs.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t13-l01-three-ways-a-call-can-enter.html"
+    },
+    {
+      "front": "Gateway names?",
+      "back": "Avaya, Cisco, Asterisk.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t13-l01-three-ways-a-call-can-enter.html"
+    },
+    {
+      "front": "Does Cisco here import UCCX?",
+      "back": "No.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t13-l01-three-ways-a-call-can-enter.html"
+    },
+    {
+      "front": "DNS?",
+      "back": "SRV preferred.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t13-l02-dns-codecs-and-the-default-voice.html"
+    },
+    {
+      "front": "Default codec?",
+      "back": "G.711.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t13-l02-dns-codecs-and-the-default-voice.html"
+    },
+    {
+      "front": "20 ms?",
+      "back": "Practitioner, uncertain, not a PDF quote here.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t13-l02-dns-codecs-and-the-default-voice.html"
+    },
+    {
+      "front": "Digit RFC?",
+      "back": "4733.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t13-l02-dns-codecs-and-the-default-voice.html"
+    },
+    {
+      "front": "Plus?",
+      "back": "128 kbps.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t13-l03-how-much-bandwidth-a-seat-costs.html"
+    },
+    {
+      "front": "Java agent?",
+      "back": "88 kbps.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t13-l03-how-much-bandwidth-a-seat-costs.html"
+    },
+    {
+      "front": "Assist?",
+      "back": "About +12.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t13-l03-how-much-bandwidth-a-seat-costs.html"
+    },
+    {
+      "front": "Satellite?",
+      "back": "Not supported.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t13-l03-how-much-bandwidth-a-seat-costs.html"
+    },
+    {
+      "front": "Double NAT?",
+      "back": "No.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t13-l04-nat-idle-timers-and-split-tunnels.html"
+    },
+    {
+      "front": "UDP idle?",
+      "back": "30 seconds.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t13-l04-nat-idle-timers-and-split-tunnels.html"
+    },
+    {
+      "front": "Shorter timer?",
+      "back": "Keepalives.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t13-l04-nat-idle-timers-and-split-tunnels.html"
+    },
+    {
+      "front": "Split tunnel?",
+      "back": "Do not exclude Five9.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t13-l04-nat-idle-timers-and-split-tunnels.html"
+    },
+    {
+      "front": "Handoff?",
+      "back": "Layer 3.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t13-l05-direct-connect-and-the-edges.html"
+    },
+    {
+      "front": "Failover?",
+      "back": "BGP.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t13-l05-direct-connect-and-the-edges.html"
+    },
+    {
+      "front": "London?",
+      "back": "LD5 in that PDF.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t13-l05-direct-connect-and-the-edges.html"
+    },
+    {
+      "front": "Is the list forever?",
+      "back": "No.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t13-l05-direct-connect-and-the-edges.html"
+    },
+    {
+      "front": "TLS floor?",
+      "back": "1.2.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t13-l06-tls-and-ports-that-are-not-universal.html"
+    },
+    {
+      "front": "TLS 1.1?",
+      "back": "Not supported.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t13-l06-tls-and-ports-that-are-not-universal.html"
+    },
+    {
+      "front": "Studio 5060 on every trunk?",
+      "back": "No.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t13-l06-tls-and-ports-that-are-not-universal.html"
+    },
+    {
+      "front": "5061 caveat?",
+      "back": "Beta in that PDF.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t13-l06-tls-and-ports-that-are-not-universal.html"
+    },
+    {
+      "front": "Headset?",
+      "back": "USB noise-canceling.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t13-l07-headsets-and-the-call-that-only-fails-one-way.html"
+    },
+    {
+      "front": "Analog?",
+      "back": "Not supported.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t13-l07-headsets-and-the-call-that-only-fails-one-way.html"
+    },
+    {
+      "front": "Wireless at scale?",
+      "back": "Not recommended.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t13-l07-headsets-and-the-call-that-only-fails-one-way.html"
+    },
+    {
+      "front": "Efficiency Mode?",
+      "back": "Can drop live calls.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t13-l07-headsets-and-the-call-that-only-fails-one-way.html"
+    },
+    {
+      "front": "Web2Campaign?",
+      "back": "A named API.",
+      "source": "APIs and SDKs",
+      "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks",
+      "room": "rooms/t14-l01-the-api-names-on-the-product-page.html"
+    },
+    {
+      "front": "Reporting versus Statistics?",
+      "back": "Both named, not the same label.",
+      "source": "APIs and SDKs",
+      "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks",
+      "room": "rooms/t14-l01-the-api-names-on-the-product-page.html"
+    },
+    {
+      "front": "Homegrown CRM?",
+      "back": "CRM SDK.",
+      "source": "APIs and SDKs",
+      "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks",
+      "room": "rooms/t14-l01-the-api-names-on-the-product-page.html"
+    },
+    {
+      "front": "SOAP or REST?",
+      "back": "Do not guess per family.",
+      "source": "APIs and SDKs",
+      "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks",
+      "room": "rooms/t14-l01-the-api-names-on-the-product-page.html"
+    },
+    {
+      "front": "Role?",
+      "back": "Reporting, plus a permission.",
+      "source": "Generating standard reports",
+      "url": "https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports",
+      "room": "rooms/t14-l02-reporting-is-a-role.html"
+    },
+    {
+      "front": "IVR category?",
+      "back": "Yes.",
+      "source": "Generating standard reports",
+      "url": "https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports",
+      "room": "rooms/t14-l02-reporting-is-a-role.html"
+    },
+    {
+      "front": "Admin without the role?",
+      "back": "No standard reports.",
+      "source": "Generating standard reports",
+      "url": "https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports",
+      "room": "rooms/t14-l02-reporting-is-a-role.html"
+    },
+    {
+      "front": "Digital versus Legacy Digital?",
+      "back": "Both named.",
+      "source": "Generating standard reports",
+      "url": "https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports",
+      "room": "rooms/t14-l02-reporting-is-a-role.html"
+    },
+    {
+      "front": "Three layouts?",
+      "back": "Tabular, Summary, Matrix.",
+      "source": "Generating standard reports",
+      "url": "https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports",
+      "room": "rooms/t14-l03-layouts-and-the-matrix-that-will-not-export.html"
+    },
+    {
+      "front": "Matrix to CSV?",
+      "back": "Not directly.",
+      "source": "Generating standard reports",
+      "url": "https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports",
+      "room": "rooms/t14-l03-layouts-and-the-matrix-that-will-not-export.html"
+    },
+    {
+      "front": "Row-level?",
+      "back": "Tabular.",
+      "source": "Generating standard reports",
+      "url": "https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports",
+      "room": "rooms/t14-l03-layouts-and-the-matrix-that-will-not-export.html"
+    },
+    {
+      "front": "Totals?",
+      "back": "Summary.",
+      "source": "Generating standard reports",
+      "url": "https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports",
+      "room": "rooms/t14-l03-layouts-and-the-matrix-that-will-not-export.html"
+    },
+    {
+      "front": "Call log window?",
+      "back": "About 60 days unless extended, per that article.",
+      "source": "Call log filters",
+      "url": "https://community.five9.com/s/article/Reporting-Apply-Filter-s-in-the-Call-Log-Report",
+      "room": "rooms/t14-l04-the-call-log-is-a-window-not-an-archive.html"
+    },
+    {
+      "front": "Audio?",
+      "back": "30 days, offload, or contract — whichever is sooner.",
+      "source": "Call log filters",
+      "url": "https://community.five9.com/s/article/Reporting-Apply-Filter-s-in-the-Call-Log-Report",
+      "room": "rooms/t14-l04-the-call-log-is-a-window-not-an-archive.html"
+    },
+    {
+      "front": "Same clock?",
+      "back": "No.",
+      "source": "Call log filters",
+      "url": "https://community.five9.com/s/article/Reporting-Apply-Filter-s-in-the-Call-Log-Report",
+      "room": "rooms/t14-l04-the-call-log-is-a-window-not-an-archive.html"
+    },
+    {
+      "front": "Why date the article?",
+      "back": "The window can change.",
+      "source": "Call log filters",
+      "url": "https://community.five9.com/s/article/Reporting-Apply-Filter-s-in-the-Call-Log-Report",
+      "room": "rooms/t14-l04-the-call-log-is-a-window-not-an-archive.html"
+    },
+    {
+      "front": "Backfill?",
+      "back": "No.",
+      "source": "Call variables for reporting",
+      "url": "https://community.five9.com/s/article/Administrator-Enabling-Call-Variables-for-Reporting?language=en_US",
+      "room": "rooms/t14-l05-call-variables-are-not-history.html"
+    },
+    {
+      "front": "Permission name?",
+      "back": "User Can Edit Call Variables.",
+      "source": "Call variables for reporting",
+      "url": "https://community.five9.com/s/article/Administrator-Enabling-Call-Variables-for-Reporting?language=en_US",
+      "room": "rooms/t14-l05-call-variables-are-not-history.html"
+    },
+    {
+      "front": "All dispositions includes custom?",
+      "back": "No.",
+      "source": "Call variables for reporting",
+      "url": "https://community.five9.com/s/article/Administrator-Enabling-Call-Variables-for-Reporting?language=en_US",
+      "room": "rooms/t14-l05-call-variables-are-not-history.html"
+    },
+    {
+      "front": "Both switches?",
+      "back": "Permission and the reporting flag.",
+      "source": "Call variables for reporting",
+      "url": "https://community.five9.com/s/article/Administrator-Enabling-Call-Variables-for-Reporting?language=en_US",
+      "room": "rooms/t14-l05-call-variables-are-not-history.html"
+    },
+    {
+      "front": "Prebuilt names?",
+      "back": "Zoom Phone and Teams, among the product lines.",
+      "source": "APIs and SDKs",
+      "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks",
+      "room": "rooms/t14-l06-prebuilt-uc-and-the-connector-that-is-not-an-ada.html"
+    },
+    {
+      "front": "Local Teams client?",
+      "back": "About 320 kbps.",
+      "source": "APIs and SDKs",
+      "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks",
+      "room": "rooms/t14-l06-prebuilt-uc-and-the-connector-that-is-not-an-ada.html"
+    },
+    {
+      "front": "URL pop?",
+      "back": "Web Connector.",
+      "source": "APIs and SDKs",
+      "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks",
+      "room": "rooms/t14-l06-prebuilt-uc-and-the-connector-that-is-not-an-ada.html"
+    },
+    {
+      "front": "Does prebuilt erase bandwidth?",
+      "back": "No.",
+      "source": "APIs and SDKs",
+      "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks",
+      "room": "rooms/t14-l06-prebuilt-uc-and-the-connector-that-is-not-an-ada.html"
+    },
+    {
+      "front": "Agent data?",
+      "back": "60 days.",
+      "source": "Data retention",
+      "url": "https://www.five9.com/legal/dataretention",
+      "room": "rooms/t14-l07-what-an-extract-is-allowed-to-remember.html"
+    },
+    {
+      "front": "Campaign state?",
+      "back": "120 days.",
+      "source": "Data retention",
+      "url": "https://www.five9.com/legal/dataretention",
+      "room": "rooms/t14-l07-what-an-extract-is-allowed-to-remember.html"
+    },
+    {
+      "front": "DIDs after closure?",
+      "back": "90 days.",
+      "source": "Data retention",
+      "url": "https://www.five9.com/legal/dataretention",
+      "room": "rooms/t14-l07-what-an-extract-is-allowed-to-remember.html"
+    },
+    {
+      "front": "Disabled domain?",
+      "back": "120 days after closure.",
+      "source": "Data retention",
+      "url": "https://www.five9.com/legal/dataretention",
+      "room": "rooms/t14-l07-what-an-extract-is-allowed-to-remember.html"
+    },
+    {
+      "front": "Official importer?",
+      "back": "None cited here.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t15-l01-there-is-no-import-button.html"
+    },
+    {
+      "front": "Cisco in the PDF?",
+      "back": "A gateway type.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t15-l01-there-is-no-import-button.html"
+    },
+    {
+      "front": "Build order?",
+      "back": "Skills through profiles, then campaigns.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t15-l01-there-is-no-import-button.html"
+    },
+    {
+      "front": "Blended?",
+      "back": "Not a fourth campaign type.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t15-l01-there-is-no-import-button.html"
+    },
+    {
+      "front": "CSQ maps toward?",
+      "back": "A skill group, as a teaching map.",
+      "source": "Skill groups",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm",
+      "room": "rooms/t15-l02-csqs-skills-and-the-partition-you-will-not-find.html"
+    },
+    {
+      "front": "Partitions?",
+      "back": "Not in Five9. Use domains.",
+      "source": "Skill groups",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm",
+      "room": "rooms/t15-l02-csqs-skills-and-the-partition-you-will-not-find.html"
+    },
+    {
+      "front": "Two tenants?",
+      "back": "Two domains.",
+      "source": "Skill groups",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm",
+      "room": "rooms/t15-l02-csqs-skills-and-the-partition-you-will-not-find.html"
+    },
+    {
+      "front": "Precision attributes?",
+      "back": "Redesign, do not invent a paste field.",
+      "source": "Skill groups",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm",
+      "room": "rooms/t15-l02-csqs-skills-and-the-partition-you-will-not-find.html"
+    },
+    {
+      "front": "Import the .aef?",
+      "back": "No.",
+      "source": "IVR modules",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm",
+      "room": "rooms/t15-l03-scripts-are-rebuilt-in-modules.html"
+    },
+    {
+      "front": "Greeting?",
+      "back": "Play.",
+      "source": "IVR modules",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm",
+      "room": "rooms/t15-l03-scripts-are-rebuilt-in-modules.html"
+    },
+    {
+      "front": "Queue?",
+      "back": "Skill Transfer.",
+      "source": "IVR modules",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm",
+      "room": "rooms/t15-l03-scripts-are-rebuilt-in-modules.html"
+    },
+    {
+      "front": "Builder JSON?",
+      "back": "Learning model only.",
+      "source": "IVR modules",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm",
+      "room": "rooms/t15-l03-scripts-are-rebuilt-in-modules.html"
+    },
+    {
+      "front": "Mode names?",
+      "back": "Preview, progressive, power, predictive, manual touch.",
+      "source": "Dialer product page",
+      "url": "https://www.five9.com/products/capabilities/dialer-system",
+      "room": "rooms/t15-l04-dialing-modes-do-not-survive-the-move-by-osmosis.html"
+    },
+    {
+      "front": "Simulator?",
+      "back": "A teaching model.",
+      "source": "Dialer product page",
+      "url": "https://www.five9.com/products/capabilities/dialer-system",
+      "room": "rooms/t15-l04-dialing-modes-do-not-survive-the-move-by-osmosis.html"
+    },
+    {
+      "front": "Copy the Cisco ratio into abandon %?",
+      "back": "No.",
+      "source": "Dialer product page",
+      "url": "https://www.five9.com/products/capabilities/dialer-system",
+      "room": "rooms/t15-l04-dialing-modes-do-not-survive-the-move-by-osmosis.html"
+    },
+    {
+      "front": "Numeric default?",
+      "back": "Not stated here.",
+      "source": "Dialer product page",
+      "url": "https://www.five9.com/products/capabilities/dialer-system",
+      "room": "rooms/t15-l04-dialing-modes-do-not-survive-the-move-by-osmosis.html"
+    },
+    {
+      "front": "Lists in the script file?",
+      "back": "No.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t15-l05-numbers-lists-and-ani-are-a-data-project.html"
+    },
+    {
+      "front": "ANI lives on?",
+      "back": "The campaign profile.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t15-l05-numbers-lists-and-ani-are-a-data-project.html"
+    },
+    {
+      "front": "Certified Caller?",
+      "back": "A separate project.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t15-l05-numbers-lists-and-ani-are-a-data-project.html"
+    },
+    {
+      "front": "Stopped inbound?",
+      "back": "Does not answer.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t15-l05-numbers-lists-and-ani-are-a-data-project.html"
+    },
+    {
+      "front": "INVITE failures?",
+      "back": "Check both sides.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t15-l06-the-gateway-cut-without-pretending-to-be-the-cub.html"
+    },
+    {
+      "front": "Extensions as DNIS?",
+      "back": "Do not assume it.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t15-l06-the-gateway-cut-without-pretending-to-be-the-cub.html"
+    },
+    {
+      "front": "20 ms?",
+      "back": "Uncertain practitioner note.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t15-l06-the-gateway-cut-without-pretending-to-be-the-cub.html"
+    },
+    {
+      "front": "SRV?",
+      "back": "Preferred on the Five9 side.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t15-l06-the-gateway-cut-without-pretending-to-be-the-cub.html"
+    },
+    {
+      "front": "Busy DNIS?",
+      "back": "Campaign not running.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t15-l07-cutover-morning-is-a-checklist-not-a-mood.html"
+    },
+    {
+      "front": "E911 address?",
+      "back": "Where the agent is.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t15-l07-cutover-morning-is-a-checklist-not-a-mood.html"
+    },
+    {
+      "front": "Test one path first?",
+      "back": "Yes.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t15-l07-cutover-morning-is-a-checklist-not-a-mood.html"
+    },
+    {
+      "front": "Why test the pop?",
+      "back": "It is a separate channel.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t15-l07-cutover-morning-is-a-checklist-not-a-mood.html"
+    },
+    {
+      "front": "Prefix?",
+      "back": "None. Dial 911.",
+      "source": "E911 data sheet",
+      "url": "https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF",
+      "room": "rooms/t16-l01-911-is-a-location-not-a-prefix.html"
+    },
+    {
+      "front": "Partner on the sheet?",
+      "back": "RedSky.",
+      "source": "E911 data sheet",
+      "url": "https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF",
+      "room": "rooms/t16-l01-911-is-a-location-not-a-prefix.html"
+    },
+    {
+      "front": "Wrong address?",
+      "back": "The EULA says the call can fail.",
+      "source": "E911 data sheet",
+      "url": "https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF",
+      "room": "rooms/t16-l01-911-is-a-location-not-a-prefix.html"
+    },
+    {
+      "front": "Same map on both docs?",
+      "back": "No. Cite which one.",
+      "source": "E911 data sheet",
+      "url": "https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF",
+      "room": "rooms/t16-l01-911-is-a-location-not-a-prefix.html"
+    },
+    {
+      "front": "Dispatchable?",
+      "back": "Where responders can find the person.",
+      "source": "E911 data sheet",
+      "url": "https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF",
+      "room": "rooms/t16-l02-the-address-has-to-be-the-room-they-are-in.html"
+    },
+    {
+      "front": "History fields?",
+      "back": "Time, user, number, location, recording, SIP invite.",
+      "source": "E911 data sheet",
+      "url": "https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF",
+      "room": "rooms/t16-l02-the-address-has-to-be-the-room-they-are-in.html"
+    },
+    {
+      "front": "History instead of registration?",
+      "back": "No.",
+      "source": "E911 data sheet",
+      "url": "https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF",
+      "room": "rooms/t16-l02-the-address-has-to-be-the-room-they-are-in.html"
+    },
+    {
+      "front": "A move?",
+      "back": "Register again.",
+      "source": "E911 data sheet",
+      "url": "https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF",
+      "room": "rooms/t16-l02-the-address-has-to-be-the-room-they-are-in.html"
+    },
+    {
+      "front": "Who owns notice?",
+      "back": "The customer.",
+      "source": "End user license agreement",
+      "url": "https://www.five9.com/legal/end-user-license-agreement",
+      "room": "rooms/t16-l03-recording-is-the-customer-s-duty-too.html"
+    },
+    {
+      "front": "Hold recorded?",
+      "back": "The EULA says it can be.",
+      "source": "End user license agreement",
+      "url": "https://www.five9.com/legal/end-user-license-agreement",
+      "room": "rooms/t16-l03-recording-is-the-customer-s-duty-too.html"
+    },
+    {
+      "front": "Transfer?",
+      "back": "Can still be recorded.",
+      "source": "End user license agreement",
+      "url": "https://www.five9.com/legal/end-user-license-agreement",
+      "room": "rooms/t16-l03-recording-is-the-customer-s-duty-too.html"
+    },
+    {
+      "front": "Universal script?",
+      "back": "No.",
+      "source": "End user license agreement",
+      "url": "https://www.five9.com/legal/end-user-license-agreement",
+      "room": "rooms/t16-l03-recording-is-the-customer-s-duty-too.html"
+    },
+    {
+      "front": "E911 recordings?",
+      "back": "30 days.",
+      "source": "Data retention",
+      "url": "https://www.five9.com/legal/dataretention",
+      "room": "rooms/t16-l04-retention-is-several-clocks.html"
+    },
+    {
+      "front": "Agent data?",
+      "back": "60 days.",
+      "source": "Data retention",
+      "url": "https://www.five9.com/legal/dataretention",
+      "room": "rooms/t16-l04-retention-is-several-clocks.html"
+    },
+    {
+      "front": "DIDs?",
+      "back": "90 days after closure.",
+      "source": "Data retention",
+      "url": "https://www.five9.com/legal/dataretention",
+      "room": "rooms/t16-l04-retention-is-several-clocks.html"
+    },
+    {
+      "front": "Audio?",
+      "back": "Sooner of 30 days, offload, or contract.",
+      "source": "Data retention",
+      "url": "https://www.five9.com/legal/dataretention",
+      "room": "rooms/t16-l04-retention-is-several-clocks.html"
+    },
+    {
+      "front": "Certified Caller?",
+      "back": "STIR/SHAKEN program.",
+      "source": "Certified Caller",
+      "url": "https://www.five9.com/resources/five9_certified_caller",
+      "room": "rooms/t16-l05-attestation-is-not-an-ani-field.html"
+    },
+    {
+      "front": "Profile ANI equals attestation?",
+      "back": "No.",
+      "source": "Certified Caller",
+      "url": "https://www.five9.com/resources/five9_certified_caller",
+      "room": "rooms/t16-l05-attestation-is-not-an-ani-field.html"
+    },
+    {
+      "front": "Regulators named?",
+      "back": "FCC and CRTC.",
+      "source": "Certified Caller",
+      "url": "https://www.five9.com/resources/five9_certified_caller",
+      "room": "rooms/t16-l05-attestation-is-not-an-ani-field.html"
+    },
+    {
+      "front": "Can you say the profile signs calls?",
+      "back": "No.",
+      "source": "Certified Caller",
+      "url": "https://www.five9.com/resources/five9_certified_caller",
+      "room": "rooms/t16-l05-attestation-is-not-an-ani-field.html"
+    },
+    {
+      "front": "Warning?",
+      "back": "Yes, if you change the max abandon percentage.",
+      "source": "Default campaign settings",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm",
+      "room": "rooms/t16-l06-abandon-rate-is-a-regulated-posture.html"
+    },
+    {
+      "front": "US window?",
+      "back": "Rolling 30 days.",
+      "source": "Default campaign settings",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm",
+      "room": "rooms/t16-l06-abandon-rate-is-a-regulated-posture.html"
+    },
+    {
+      "front": "UK window?",
+      "back": "24 hours.",
+      "source": "Default campaign settings",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm",
+      "room": "rooms/t16-l06-abandon-rate-is-a-regulated-posture.html"
+    },
+    {
+      "front": "Who sets the window?",
+      "back": "A Five9 representative.",
+      "source": "Default campaign settings",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm",
+      "room": "rooms/t16-l06-abandon-rate-is-a-regulated-posture.html"
+    },
+    {
+      "front": "Paste?",
+      "back": "Blocked.",
+      "source": "TCPA manual touch",
+      "url": "https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US",
+      "room": "rooms/t16-l07-tcpa-manual-touch-is-a-physical-control.html"
+    },
+    {
+      "front": "When does Dial enable?",
+      "back": "When the typed number matches.",
+      "source": "TCPA manual touch",
+      "url": "https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US",
+      "room": "rooms/t16-l07-tcpa-manual-touch-is-a-physical-control.html"
+    },
+    {
+      "front": "Timeout?",
+      "back": "Not Ready, no auto dial.",
+      "source": "TCPA manual touch",
+      "url": "https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US",
+      "room": "rooms/t16-l07-tcpa-manual-touch-is-a-physical-control.html"
+    },
+    {
+      "front": "Skip permission?",
+      "back": "User Can Skip Contact Records in TCPA Manual Touch.",
+      "source": "TCPA manual touch",
+      "url": "https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US",
+      "room": "rooms/t16-l07-tcpa-manual-touch-is-a-physical-control.html"
+    },
+    {
+      "front": "WEM equals the dialer?",
+      "back": "No.",
+      "source": "Agent Desktop",
+      "url": "https://www.five9.com/products/capabilities/agent-desktop",
+      "room": "rooms/t17-l01-the-domain-has-neighbors.html"
+    },
+    {
+      "front": "E911?",
+      "back": "Its own location service.",
+      "source": "Agent Desktop",
+      "url": "https://www.five9.com/products/capabilities/agent-desktop",
+      "room": "rooms/t17-l01-the-domain-has-neighbors.html"
+    },
+    {
+      "front": "Pop equals trunk?",
+      "back": "No.",
+      "source": "Agent Desktop",
+      "url": "https://www.five9.com/products/capabilities/agent-desktop",
+      "room": "rooms/t17-l01-the-domain-has-neighbors.html"
+    },
+    {
+      "front": "Uncited boxes?",
+      "back": "Leave them off.",
+      "source": "Agent Desktop",
+      "url": "https://www.five9.com/products/capabilities/agent-desktop",
+      "room": "rooms/t17-l01-the-domain-has-neighbors.html"
+    },
+    {
+      "front": "What does the page include?",
+      "back": "WFM, QM, analytics, surveys, recording, Verint.",
+      "source": "Workforce engagement management",
+      "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+      "room": "rooms/t17-l02-workforce-quality-and-the-recording-shelf.html"
+    },
+    {
+      "front": "Scores move skills by themselves?",
+      "back": "No.",
+      "source": "Workforce engagement management",
+      "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+      "room": "rooms/t17-l02-workforce-quality-and-the-recording-shelf.html"
+    },
+    {
+      "front": "Who upgrades the delivered solution?",
+      "back": "Five9, per the page.",
+      "source": "Workforce engagement management",
+      "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+      "room": "rooms/t17-l02-workforce-quality-and-the-recording-shelf.html"
+    },
+    {
+      "front": "Which retention text?",
+      "back": "The retention page.",
+      "source": "Workforce engagement management",
+      "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+      "room": "rooms/t17-l02-workforce-quality-and-the-recording-shelf.html"
+    },
+    {
+      "front": "Wallboard versus report?",
+      "back": "Different pipes.",
+      "source": "Workforce engagement management",
+      "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+      "room": "rooms/t17-l03-analytics-and-the-report-that-is-not-a-dashboard.html"
+    },
+    {
+      "front": "Statistics API?",
+      "back": "A named family.",
+      "source": "Workforce engagement management",
+      "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+      "room": "rooms/t17-l03-analytics-and-the-report-that-is-not-a-dashboard.html"
+    },
+    {
+      "front": "Reporting role?",
+      "back": "Gates standard reports.",
+      "source": "Workforce engagement management",
+      "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+      "room": "rooms/t17-l03-analytics-and-the-report-that-is-not-a-dashboard.html"
+    },
+    {
+      "front": "Matrix as CSV?",
+      "back": "No.",
+      "source": "Workforce engagement management",
+      "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+      "room": "rooms/t17-l03-analytics-and-the-report-that-is-not-a-dashboard.html"
+    },
+    {
+      "front": "Default model named here?",
+      "back": "No.",
+      "source": "Five9 Engage",
+      "url": "https://www.five9.com/platform/self-service-and-engagement",
+      "room": "rooms/t17-l04-ai-agents-are-a-handoff-with-a-name.html"
+    },
+    {
+      "front": "IVA Transfer?",
+      "back": "A real module.",
+      "source": "Five9 Engage",
+      "url": "https://www.five9.com/platform/self-service-and-engagement",
+      "room": "rooms/t17-l04-ai-agents-are-a-handoff-with-a-name.html"
+    },
+    {
+      "front": "Digital handoff?",
+      "back": "A Studio task key.",
+      "source": "Five9 Engage",
+      "url": "https://www.five9.com/platform/self-service-and-engagement",
+      "room": "rooms/t17-l04-ai-agents-are-a-handoff-with-a-name.html"
+    },
+    {
+      "front": "No exit?",
+      "back": "A dead end.",
+      "source": "Five9 Engage",
+      "url": "https://www.five9.com/platform/self-service-and-engagement",
+      "room": "rooms/t17-l04-ai-agents-are-a-handoff-with-a-name.html"
+    },
+    {
+      "front": "Epic listed?",
+      "back": "Yes.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t17-l05-crm-uc-and-the-desktop-are-three-contracts.html"
+    },
+    {
+      "front": "Local Teams?",
+      "back": "About 320 kbps.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t17-l05-crm-uc-and-the-desktop-are-three-contracts.html"
+    },
+    {
+      "front": "Blank card, live voice?",
+      "back": "Adapter incident.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t17-l05-crm-uc-and-the-desktop-are-three-contracts.html"
+    },
+    {
+      "front": "SDK?",
+      "back": "Unlisted CRMs.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t17-l05-crm-uc-and-the-desktop-are-three-contracts.html"
+    },
+    {
+      "front": "No page?",
+      "back": "Mark the word local.",
+      "source": "Generating standard reports",
+      "url": "https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports",
+      "room": "rooms/t17-l06-the-glossary-is-the-contract-with-yourself.html"
+    },
+    {
+      "front": "Two profiles?",
+      "back": "Different objects.",
+      "source": "Generating standard reports",
+      "url": "https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports",
+      "room": "rooms/t17-l06-the-glossary-is-the-contract-with-yourself.html"
+    },
+    {
+      "front": "Blended?",
+      "back": "Not a campaign type.",
+      "source": "Generating standard reports",
+      "url": "https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports",
+      "room": "rooms/t17-l06-the-glossary-is-the-contract-with-yourself.html"
+    },
+    {
+      "front": "Partition?",
+      "back": "A visiting word.",
+      "source": "Generating standard reports",
+      "url": "https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports",
+      "room": "rooms/t17-l06-the-glossary-is-the-contract-with-yourself.html"
+    },
+    {
+      "front": "Missing row?",
+      "back": "No citation yet.",
+      "source": "APIs and SDKs",
+      "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks",
+      "room": "rooms/t17-l07-read-the-map-before-you-add-a-box.html"
+    },
+    {
+      "front": "RedSky versus ITSP?",
+      "back": "Different roles.",
+      "source": "APIs and SDKs",
+      "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks",
+      "room": "rooms/t17-l07-read-the-map-before-you-add-a-box.html"
+    },
+    {
+      "front": "Studio versus Equinix?",
+      "back": "Different lists.",
+      "source": "APIs and SDKs",
+      "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks",
+      "room": "rooms/t17-l07-read-the-map-before-you-add-a-box.html"
+    },
+    {
+      "front": "Two Salesforces?",
+      "back": "Module versus adapter.",
+      "source": "APIs and SDKs",
+      "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks",
+      "room": "rooms/t17-l07-read-the-map-before-you-add-a-box.html"
+    },
+    {
+      "front": "Exam code in this lab?",
+      "back": "None.",
+      "source": "Five9 University",
+      "url": "https://www.five9.com/contact-center-services/training",
+      "room": "rooms/t18-l01-university-is-a-catalog-not-a-secret-exam-code.html"
+    },
+    {
+      "front": "Formats?",
+      "back": "Online, webinars, ILT, train-the-trainer, custom.",
+      "source": "Five9 University",
+      "url": "https://www.five9.com/contact-center-services/training",
+      "room": "rooms/t18-l01-university-is-a-catalog-not-a-secret-exam-code.html"
+    },
+    {
+      "front": "Assessments?",
+      "back": "Mentioned, no code quoted.",
+      "source": "Five9 University",
+      "url": "https://www.five9.com/contact-center-services/training",
+      "room": "rooms/t18-l01-university-is-a-catalog-not-a-secret-exam-code.html"
+    },
+    {
+      "front": "Invented codes?",
+      "back": "Ignore them.",
+      "source": "Five9 University",
+      "url": "https://www.five9.com/contact-center-services/training",
+      "room": "rooms/t18-l01-university-is-a-catalog-not-a-secret-exam-code.html"
+    },
+    {
+      "front": "What is the badge?",
+      "back": "IVA sales, for partners.",
+      "source": "IVA Sales Certified badge",
+      "url": "https://www.credly.com/org/five9/badge/five9-iva-sales-certified",
+      "room": "rooms/t18-l02-the-badge-we-could-verify-is-a-sales-badge.html"
+    },
+    {
+      "front": "Questions?",
+      "back": "20.",
+      "source": "IVA Sales Certified badge",
+      "url": "https://www.credly.com/org/five9/badge/five9-iva-sales-certified",
+      "room": "rooms/t18-l02-the-badge-we-could-verify-is-a-sales-badge.html"
+    },
+    {
+      "front": "Pass mark?",
+      "back": "80 percent.",
+      "source": "IVA Sales Certified badge",
+      "url": "https://www.credly.com/org/five9/badge/five9-iva-sales-certified",
+      "room": "rooms/t18-l02-the-badge-we-could-verify-is-a-sales-badge.html"
+    },
+    {
+      "front": "Admin substitute?",
+      "back": "No.",
+      "source": "IVA Sales Certified badge",
+      "url": "https://www.credly.com/org/five9/badge/five9-iva-sales-certified",
+      "room": "rooms/t18-l02-the-badge-we-could-verify-is-a-sales-badge.html"
+    },
+    {
+      "front": "Practice equals the planning order?",
+      "back": "Yes.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t18-l03-practice-is-the-domain-not-the-badge.html"
+    },
+    {
+      "front": "Stopped campaign?",
+      "back": "Busy DNIS.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t18-l03-practice-is-the-domain-not-the-badge.html"
+    },
+    {
+      "front": "Invent a percent?",
+      "back": "No.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t18-l03-practice-is-the-domain-not-the-badge.html"
+    },
+    {
+      "front": "Reporting role?",
+      "back": "Separate.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t18-l03-practice-is-the-domain-not-the-badge.html"
+    },
+    {
+      "front": "2.46?",
+      "back": "Dated PDF fact.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t18-l04-version-timelines-go-stale-on-purpose.html"
+    },
+    {
+      "front": "ServiceNow names?",
+      "back": "Australia, Zurich, Yokohama, in that reading.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t18-l04-version-timelines-go-stale-on-purpose.html"
+    },
+    {
+      "front": "JRE updates?",
+      "back": "421, 451, 461.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t18-l04-version-timelines-go-stale-on-purpose.html"
+    },
+    {
+      "front": "Curriculum brief equals the JRE list?",
+      "back": "No.",
+      "source": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "room": "rooms/t18-l04-version-timelines-go-stale-on-purpose.html"
+    },
+    {
+      "front": "Four beats?",
+      "back": "Object, behavior, page, gap.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t18-l05-how-to-answer-without-inventing.html"
+    },
+    {
+      "front": "Invent a port?",
+      "back": "No. Stop.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t18-l05-how-to-answer-without-inventing.html"
+    },
+    {
+      "front": "Cisco map?",
+      "back": "A teaching bridge.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t18-l05-how-to-answer-without-inventing.html"
+    },
+    {
+      "front": "Versions?",
+      "back": "Dated.",
+      "source": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "room": "rooms/t18-l05-how-to-answer-without-inventing.html"
+    },
+    {
+      "front": "Session goal?",
+      "back": "Object plus the page.",
+      "source": "Five9 University",
+      "url": "https://www.five9.com/contact-center-services/training",
+      "room": "rooms/t18-l06-a-study-week-that-stays-inside-the-documents.html"
+    },
+    {
+      "front": "Skip uncertain notes?",
+      "back": "No.",
+      "source": "Five9 University",
+      "url": "https://www.five9.com/contact-center-services/training",
+      "room": "rooms/t18-l06-a-study-week-that-stays-inside-the-documents.html"
+    },
+    {
+      "front": "Campaign types?",
+      "back": "Three.",
+      "source": "Five9 University",
+      "url": "https://www.five9.com/contact-center-services/training",
+      "room": "rooms/t18-l06-a-study-week-that-stays-inside-the-documents.html"
+    },
+    {
+      "front": "Boss logs?",
+      "back": "Synthetic.",
+      "source": "Five9 University",
+      "url": "https://www.five9.com/contact-center-services/training",
+      "room": "rooms/t18-l06-a-study-week-that-stays-inside-the-documents.html"
+    },
+    {
+      "front": "Can the lab edit your domain?",
+      "back": "No.",
+      "source": "Five9 University",
+      "url": "https://www.five9.com/contact-center-services/training",
+      "room": "rooms/t18-l07-what-this-lab-will-not-pretend-to-be.html"
+    },
+    {
+      "front": "IVR export?",
+      "back": "Learning file.",
+      "source": "Five9 University",
+      "url": "https://www.five9.com/contact-center-services/training",
+      "room": "rooms/t18-l07-what-this-lab-will-not-pretend-to-be.html"
+    },
+    {
+      "front": "Outage?",
+      "back": "Five9 support.",
+      "source": "Five9 University",
+      "url": "https://www.five9.com/contact-center-services/training",
+      "room": "rooms/t18-l07-what-this-lab-will-not-pretend-to-be.html"
+    },
+    {
+      "front": "Uncertain?",
+      "back": "Confirm before you depend on it.",
+      "source": "Five9 University",
+      "url": "https://www.five9.com/contact-center-services/training",
+      "room": "rooms/t18-l07-what-this-lab-will-not-pretend-to-be.html"
+    }
+  ]
+}

@@ -874,7 +874,7 @@ function paintMenu(bare) {
 let menuPushed = false;
 
 function setMenuExpanded(open) {
-  document.querySelectorAll("#menu-toggle, #tab-menu").forEach((button) => {
+  document.querySelectorAll("#tour-menu, #menu-toggle, #tab-menu").forEach((button) => {
     button.setAttribute("aria-expanded", open ? "true" : "false");
   });
 }
@@ -1108,7 +1108,7 @@ export function initUniversity() {
     });
   }
   const phoneMenu = document.querySelector("#phone-menu");
-  const openers = ["#menu-toggle", "#tab-menu"];
+  const openers = ["#tour-menu", "#menu-toggle", "#tab-menu"];
   openers.forEach((sel) => {
     const button = document.querySelector(sel);
     if (button) button.addEventListener("click", () => openPhoneMenu());

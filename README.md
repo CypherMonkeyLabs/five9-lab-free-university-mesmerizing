@@ -12,7 +12,7 @@ From the repository root:
 python3 -m http.server 8741
 ```
 
-Open [http://127.0.0.1:8741/campus/](http://127.0.0.1:8741/campus/). The root `index.html` redirects there. GitHub Pages can serve this tree as a static site; routing is hash-based.
+Open [http://127.0.0.1:8741/](http://127.0.0.1:8741/). That is the round-2 front door: menu, banner, guide, and downloads. The practice console stays at [http://127.0.0.1:8741/campus/](http://127.0.0.1:8741/campus/). GitHub Pages can serve this tree as a static site.
 
 Rebuild the lesson JSON after editing a track module:
 
@@ -41,7 +41,17 @@ node scripts/verify.mjs
 
 ## Screenshots
 
-![Home on a desktop width](docs/screenshots/home-desktop.png)
+Round-2 checks at 1440×900 and 390×844 are in `docs/screenshots/round2/`.
+
+![Home on a desktop width](docs/screenshots/round2/home-desktop.png)
+
+![Home on a phone width](docs/screenshots/round2/home-phone.png)
+
+![Guide open on a phone](docs/screenshots/round2/bot-phone.png)
+
+Earlier campus shots:
+
+![Campus home](docs/screenshots/home-desktop.png)
 
 ![Home with the mobile tab bar](docs/screenshots/home-mobile.png)
 

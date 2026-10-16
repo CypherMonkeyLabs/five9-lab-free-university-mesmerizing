@@ -1,0 +1,56 @@
+/* Colour, depth, and motion. Bright multicolour is the default. Dark is optional.
+   Adapted from the Webex lab wow.css. Reduced motion drops loops. */
+
+html[data-theme="bloom"] {
+  --bg: #f6f3ff;
+  --card: #ffffff;
+  --ink: #142033;
+  --muted: #334155;
+  --line: rgba(76, 29, 149, 0.16);
+}
+html[data-theme="dark"] {
+  --bg: #0b1020;
+  --card: #141a2e;
+  --ink: #eef4ff;
+  --muted: #cbd5e1;
+  --line: rgba(226, 232, 240, 0.16);
+}
+html[data-theme="dark"] body {
+  background:
+    radial-gradient(800px 360px at 0% 0%, rgba(34, 211, 238, 0.18), transparent 55%),
+    radial-gradient(700px 320px at 100% 0%, rgba(244, 114, 182, 0.16), transparent 50%),
+    var(--bg);
+}
+html[data-theme="dark"] .canon-banner { filter: saturate(1.05); }
+html[data-theme="dark"] .callout { background: #3b2a12; color: #ffedd5; }
+
+html[data-motion="full"] .menu-btn { animation: glow-pulse 2.8s ease-in-out infinite; }
+@keyframes glow-pulse {
+  50% { box-shadow: 0 0 22px rgba(236, 72, 153, 0.85); }
+}
+html[data-motion="reduce"] .menu-btn { animation: none; }
+
+.hero-title {
+  margin: 0;
+  font-size: clamp(2rem, 6vw, 3.4rem);
+  line-height: 1.05;
+  color: #1e1b4b;
+  background: none;
+}
+html[data-theme="dark"] .hero-title { color: #f8fafc; }
+
+.flow-line { stroke-dasharray: 8 6; }
+html[data-motion="full"] .flow-line { animation: flow-dash 2.4s linear infinite; }
+@keyframes flow-dash { to { stroke-dashoffset: -56; } }
+@media (prefers-reduced-motion: reduce) {
+  .flow-line { animation: none !important; }
+}
+
+.stat-row { display: flex; flex-wrap: wrap; gap: 10px; }
+.stat {
+  min-width: 120px; min-height: 72px; padding: 10px 12px; border-radius: 16px;
+  background: linear-gradient(160deg, #fff, #e0f2fe);
+  border: 2px solid #67e8f9;
+}
+html[data-theme="dark"] .stat { background: #111827; }
+.stat b { display: block; font-size: 1.4rem; }

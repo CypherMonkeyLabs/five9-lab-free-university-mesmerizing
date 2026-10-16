@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="neon" data-motion="full" data-font="16" data-look="day">
+<html lang="en" data-root="../" data-theme="light" data-motion="full" data-font="16" data-look="day">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Five9 Lab</title>
   <meta name="description" content="Independent study lab for Five9 Virtual Contact Center: campaigns, dialer modes, IVR, skills, Agent Desktop Plus, WEM, IVA, CRM, SIP, APIs, and Cisco migration.">
   <link rel="stylesheet" href="css/app.css">
+  <style>#guide{display:none !important}</style>
+  <link rel="stylesheet" href="../assets/css/footer.css">
   <link rel="stylesheet" href="css/university.css">
   <link rel="stylesheet" href="css/wow.css">
   <link rel="manifest" href="manifest.webmanifest">
@@ -15,7 +17,7 @@
     try {
       var saved = JSON.parse(localStorage.getItem("f9lab-settings") || "{}");
       if (saved.theme) document.documentElement.dataset.theme = saved.theme;
-      else document.documentElement.dataset.theme = "neon";
+      else document.documentElement.dataset.theme = "light";
       if (saved.font) document.documentElement.dataset.font = String(saved.font);
       if (saved.reduced === true) document.documentElement.dataset.motion = "reduce";
       if (saved.reduced === false) document.documentElement.dataset.motion = "full";
@@ -37,18 +39,8 @@
   <canvas id="sky" width="1440" height="900" aria-hidden="true" style="position:fixed;inset:0;width:100%;height:100%;pointer-events:none"></canvas>
   <a class="skip" href="#main">Skip to content</a>
   <div class="chrome" id="chrome">
-  <div class="utilbar" id="utilbar">
-    <nav class="brand-links" aria-label="Site links">
-      <a class="brand-link" href="https://github.com/cipher0x9"><svg class="brand-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>Visit my GitHub</a>
-      <a class="brand-link" href="https://github.com/CypherMonkeyLabs"><svg class="brand-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>Visit the Labs org</a>
-      <a class="brand-link" href="https://cyphermonkeylabs.com"><svg class="brand-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><ellipse cx="6" cy="8" rx="3" ry="3.5" fill="#a8653a"/><ellipse cx="18" cy="8" rx="3" ry="3.5" fill="#a8653a"/><circle cx="12" cy="13" r="7" fill="#c9844a"/><ellipse cx="12" cy="15.5" rx="3.2" ry="2.2" fill="#f0c9a0"/><circle cx="9.6" cy="12" r="1" fill="#1b120c"/><circle cx="14.4" cy="12" r="1" fill="#1b120c"/></svg>Visit Cypher Monkey Labs</a>
-      <a class="brand-link" href="https://x.com/Cypher0x9"><svg class="brand-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></svg>X</a>
-      <a class="brand-link" href="https://huggingface.co/Cypher0x9"><svg class="brand-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#FFD21E"/><circle cx="8.5" cy="10" r="1.3" fill="#111"/><circle cx="15.5" cy="10" r="1.3" fill="#111"/><path d="M8 14.5c1.2 1.6 6.8 1.6 8 0" fill="none" stroke="#111" stroke-width="1.4" stroke-linecap="round"/></svg>Hugging Face</a>
-    </nav>
-    <button type="button" class="linkish" id="offline-pack">Offline download</button>
-  </div>
-  <header class="topbar">
-    <a class="brand" href="#/">
+<header class="topbar">
+    <a class="brand" id="tour-home" href="#/">
       <svg class="mark" viewBox="0 0 36 36" aria-hidden="true">
         <rect width="36" height="36" rx="10" fill="currentColor" opacity="0.12"></rect>
         <path d="M7 24c5-10 17-10 22 0" fill="none" stroke="var(--cc-accent-1)" stroke-width="2"></path>
@@ -84,9 +76,8 @@
       </svg>
     </a>
     <div class="top-actions">
-      <button type="button" class="btn links-toggle" id="links-toggle" aria-expanded="false" aria-controls="utilbar">Links</button>
       <button type="button" class="btn" id="open-settings">Settings</button>
-      <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="phone-menu">
+      <button type="button" class="menu-toggle" id="tour-menu" aria-expanded="false" aria-controls="phone-menu">
         <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
         Menu
       </button>
@@ -104,7 +95,7 @@
     <a class="menu-item" href="#/downloads"><span class="menu-ico" data-icon="cheats" aria-hidden="true"></span><span class="menu-copy"><span class="menu-label" data-i18n="cheats">Cheat Codes</span><span class="menu-desc">HTML, PDF, and PNG study sheets.</span></span></a>
     <a class="menu-item" href="#/play"><span class="menu-ico" data-icon="play" aria-hidden="true"></span><span class="menu-copy"><span class="menu-label" data-i18n="play">Play</span><span class="menu-desc">Benches that use the same public facts.</span></span></a>
     <a class="menu-item" href="#/ecosystem"><span class="menu-ico" data-icon="ecosystem" aria-hidden="true"></span><span class="menu-copy"><span class="menu-label" data-i18n="ecosystem">Ecosystem</span><span class="menu-desc">Glossary, mind map, and neighboring systems.</span></span></a>
-    <a class="menu-item" href="#/offline"><span class="menu-ico" data-icon="downloads" aria-hidden="true"></span><span class="menu-copy"><span class="menu-label" data-i18n="downloads">Downloads</span><span class="menu-desc">Offline bundle and generated sheets.</span></span></a>
+    <a class="menu-item" id="tour-downloads" href="#/offline"><span class="menu-ico" data-icon="downloads" aria-hidden="true"></span><span class="menu-copy"><span class="menu-label" data-i18n="downloads">Downloads</span><span class="menu-desc">Offline bundle and generated sheets.</span></span></a>
     <a class="menu-item" href="#/career"><span class="menu-ico" data-icon="careers" aria-hidden="true"></span><span class="menu-copy"><span class="menu-label" data-i18n="careers">Careers</span><span class="menu-desc">Study frames, not a job requisition.</span></span></a>
   </nav>
   </div>
@@ -130,24 +121,19 @@
     </main>
   </div>
   <nav class="tabbar" id="tabbar" aria-label="Quick bar">
-    <a href="#/tracks" data-tab="learn"><span class="tab-ico" data-icon="learn" aria-hidden="true"></span><span class="tab-label">Learn</span><span class="tab-desc">Tracks and lessons</span></a>
-    <a href="#/atlas" data-tab="diagrams"><span class="tab-ico" data-icon="diagrams" aria-hidden="true"></span><span class="tab-label">Diagrams</span><span class="tab-desc">Atlas drawings</span></a>
-    <a href="#/play" data-tab="play"><span class="tab-ico" data-icon="play" aria-hidden="true"></span><span class="tab-label">Play</span><span class="tab-desc">Study benches</span></a>
-    <button type="button" id="tab-menu" aria-expanded="false" aria-controls="phone-menu"><span class="tab-ico" data-icon="menu" aria-hidden="true"></span><span class="tab-label">Menu</span><span class="tab-desc">All pages</span></button>
+    <button type="button" id="tab-menu" data-open-menu aria-expanded="false" aria-controls="phone-menu"><span class="tab-ico" data-icon="menu" aria-hidden="true"></span><span class="tab-label">Menu</span></button>
+    <a id="tour-learn" href="#/tracks" data-tab="learn"><span class="tab-ico" data-icon="learn" aria-hidden="true"></span><span class="tab-label">Learn</span><span class="tab-desc">Tracks and lessons</span></a>
+    <a id="tour-diagrams" href="#/atlas" data-tab="diagrams"><span class="tab-ico" data-icon="diagrams" aria-hidden="true"></span><span class="tab-label">Diagrams</span><span class="tab-desc">Atlas drawings</span></a>
+    <a id="tour-play" href="#/play" data-tab="play"><span class="tab-ico" data-icon="play" aria-hidden="true"></span><span class="tab-label">Play</span><span class="tab-desc">Study benches</span></a>
     <button type="button" id="tab-listen"><span class="tab-ico" data-icon="listen" aria-hidden="true"></span><span class="tab-label">Listen</span><span class="tab-desc">Study audio</span></button>
+  <button type="button" data-open-guide><span class="tab-label">Guide</span></button>
   </nav>
   <dialog id="phone-menu" aria-labelledby="phone-menu-title">
     <div class="phone-menu-bar">
       <h2 id="phone-menu-title">Menu</h2>
       <button type="button" class="btn" id="phone-close">Close</button>
     </div>
-    <nav class="brand-links" aria-label="Site links">
-      <a class="brand-link" href="https://github.com/cipher0x9"><svg class="brand-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>Visit my GitHub</a>
-      <a class="brand-link" href="https://github.com/CypherMonkeyLabs"><svg class="brand-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>Visit the Labs org</a>
-      <a class="brand-link" href="https://cyphermonkeylabs.com"><svg class="brand-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><ellipse cx="6" cy="8" rx="3" ry="3.5" fill="#a8653a"/><ellipse cx="18" cy="8" rx="3" ry="3.5" fill="#a8653a"/><circle cx="12" cy="13" r="7" fill="#c9844a"/><ellipse cx="12" cy="15.5" rx="3.2" ry="2.2" fill="#f0c9a0"/><circle cx="9.6" cy="12" r="1" fill="#1b120c"/><circle cx="14.4" cy="12" r="1" fill="#1b120c"/></svg>Visit Cypher Monkey Labs</a>
-      <a class="brand-link" href="https://x.com/Cypher0x9"><svg class="brand-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></svg>X</a>
-      <a class="brand-link" href="https://huggingface.co/Cypher0x9"><svg class="brand-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#FFD21E"/><circle cx="8.5" cy="10" r="1.3" fill="#111"/><circle cx="15.5" cy="10" r="1.3" fill="#111"/><path d="M8 14.5c1.2 1.6 6.8 1.6 8 0" fill="none" stroke="#111" stroke-width="1.4" stroke-linecap="round"/></svg>Hugging Face</a>
-    </nav>
+    
     <nav id="phone-nav" aria-label="All sections">
       <form class="menu-search" id="phone-search" role="search">
         <label class="menu-search-label" for="phone-q">Search</label>
@@ -251,6 +237,10 @@
     </div>
     <label class="choice"><input type="checkbox" id="set-motion"> Reduced motion</label>
     <div class="field">
+      <label for="set-ink">Font colour</label>
+      <input id="set-ink" type="color" value="#142033">
+    </div>
+    <div class="field">
       <label for="set-font">Text size</label>
       <select id="set-font">
         <option value="16">Default</option>
@@ -271,7 +261,7 @@
     <p><strong>How to share the lab</strong><br><audio id="lab-audio-share" controls preload="metadata" src="audio/architect-share.mp3"></audio></p>
     <label>Playback rate <select id="audio-rate" aria-label="Playback rate"><option value="0.85">0.85</option><option value="1" selected>1</option><option value="1.15">1.15</option><option value="1.3">1.3</option></select></label>
     <p id="audio-fallback" class="note" hidden>The audio files did not load. The scripts are in audio/scripts/.</p>
-    <p><a href="https://github.com/CypherMonkeyLabs/five9-lab-free-university-mesmerizing">Rate, comment, help</a> · <a href="https://cyphermonkeylabs.com">Share the lab</a></p>
+    
   </aside>
   <div id="tip" hidden></div>
   <dialog id="lightbox" aria-labelledby="lb-title">
@@ -302,34 +292,10 @@
     </section>
     <button type="button" id="guide-open" class="guide-launcher" aria-expanded="false" aria-controls="guide-panel">Guide Bot</button>
   </div>
-  <footer class="site-footer">
-    <nav class="brand-links" aria-label="Footer links">
-      <a class="brand-link" href="https://github.com/cipher0x9"><svg class="brand-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>Visit my GitHub</a>
-      <a class="brand-link" href="https://github.com/CypherMonkeyLabs"><svg class="brand-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>Visit the Labs org</a>
-      <a class="brand-link" href="https://cyphermonkeylabs.com"><svg class="brand-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><ellipse cx="6" cy="8" rx="3" ry="3.5" fill="#a8653a"/><ellipse cx="18" cy="8" rx="3" ry="3.5" fill="#a8653a"/><circle cx="12" cy="13" r="7" fill="#c9844a"/><ellipse cx="12" cy="15.5" rx="3.2" ry="2.2" fill="#f0c9a0"/><circle cx="9.6" cy="12" r="1" fill="#1b120c"/><circle cx="14.4" cy="12" r="1" fill="#1b120c"/></svg>Visit Cypher Monkey Labs</a>
-      <a class="brand-link" href="https://x.com/Cypher0x9"><svg class="brand-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></svg>X</a>
-      <a class="brand-link" href="https://huggingface.co/Cypher0x9"><svg class="brand-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#FFD21E"/><circle cx="8.5" cy="10" r="1.3" fill="#111"/><circle cx="15.5" cy="10" r="1.3" fill="#111"/><path d="M8 14.5c1.2 1.6 6.8 1.6 8 0" fill="none" stroke="#111" stroke-width="1.4" stroke-linecap="round"/></svg>Hugging Face</a>
-    </nav>
-    <p class="copyright">© 2026 CypherMonkeyLabs 🐒</p>
-    <div class="foot-grid">
-      <div>
-        <p class="signature">CYPHER0X9 · Five9 Lab · Signal University</p>
-        <p class="legal">Independent educational project, not affiliated with or endorsed by any vendor. Trademarks belong to their owners. MIT code, CC BY-NC-SA content. Product behavior belongs to the cited Five9 pages. This lab does not speak for Five9, Inc.</p>
-        <p><a href="https://github.com/CypherMonkeyLabs/five9-lab-free-university-mesmerizing">Rate, comment, help</a> · <a href="https://cyphermonkeylabs.com/#contact">Report a concern or takedown</a> · <a href="https://cyphermonkeylabs.com/#contact">Work with us</a></p>
-      </div>
-      <div>
-        <p class="kicker">Next lab</p>
-        <div class="next-labs">
-          <a href="https://cyphermonkeylabs.com/webex-lab-free-university-mesmerizing/">Webex Canon</a>
-          <a href="https://cyphermonkeylabs.com/uc-lab-free-university-mesmerizing/">UC Lab</a>
-          <a href="https://cyphermonkeylabs.com/ai-lab-free-university-mesmerizing/">AI Lab</a>
-          <a href="https://cyphermonkeylabs.com/five9-lab-free-university-mesmerizing/">Five9 Lab</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <footer class="site-footer lab-footer" data-canon-footer><aside class="disclaimer-panel" aria-labelledby="disc-title"><span class="disclaimer-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5 4.5 5.5v5.8c0 4.6 3.1 8.6 7.5 10.2 4.4-1.6 7.5-5.6 7.5-10.2V5.5z" fill="currentColor" opacity=".18" stroke="currentColor" stroke-width="1.6"/><path d="M8 12.2 10.6 14.6 16 9.4" fill="none" stroke="#0f766e" stroke-width="1.8" stroke-linecap="round"/></svg></span><div><h2 id="disc-title">A note from the student behind this lab</h2><p>This is an <strong>independent, free, learning-only student project</strong>. It respects every company and vendor, and every trademark belongs to its owner. It is <strong>not affiliated with or endorsed by</strong> any of them.</p><p>If anyone has a concern, the content will be removed or corrected promptly via the contact form at <a href="https://cyphermonkeylabs.com/#contact">https://cyphermonkeylabs.com/#contact</a>. Nothing here is sold. Happy to volunteer for any organization.</p><p>Confirm before relying on a number, a port, or a vendor case-study claim. Product behavior belongs to the cited page.</p></div></aside><p class="footer-brand">CypherMonkey Labs</p><nav class="brand-row" aria-label="Brand"><a class="brand-icon brand-web" href="https://cyphermonkeylabs.com" aria-label="CypherMonkey Labs website"><svg viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="16" cy="18" rx="8" ry="10" fill="#e8a15a"/><ellipse cx="48" cy="18" rx="8" ry="10" fill="#e8a15a"/><circle cx="32" cy="36" r="18" fill="#f6b26b"/><ellipse cx="32" cy="42" rx="8" ry="6" fill="#fde7c7"/><circle cx="26" cy="34" r="2" fill="#1b120c"/><circle cx="38" cy="34" r="2" fill="#1b120c"/><circle cx="26" cy="34" r="6" fill="none" stroke="#67e8f9" stroke-width="2"/><circle cx="38" cy="34" r="6" fill="none" stroke="#67e8f9" stroke-width="2"/><path d="M32 34h0M20 34H14M44 34h6" stroke="#67e8f9" stroke-width="2"/></svg></a><a class="brand-icon brand-gh" href="https://github.com/CypherMonkeyLabs" aria-label="GitHub organization"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 .5 12.3c0 5.22 3.38 9.65 8.07 11.22.59.12.8-.26.8-.57v-2.02c-3.28.73-3.97-1.42-3.97-1.42-.53-1.38-1.3-1.75-1.3-1.75-1.07-.75.08-.73.08-.73 1.18.08 1.8 1.24 1.8 1.24 1.05 1.84 2.76 1.31 3.43.99.1-.78.41-1.31.75-1.61-2.62-.31-5.37-1.34-5.37-5.98 0-1.32.46-2.4 1.22-3.25-.12-.3-.53-1.53.12-3.18 0 0 1-.33 3.3 1.25a11.3 11.3 0 0 1 6 0c2.3-1.58 3.3-1.25 3.3-1.25.65 1.65.24 2.88.12 3.18.76.85 1.22 1.93 1.22 3.25 0 4.65-2.76 5.66-5.39 5.96.42.38.8 1.12.8 2.26v3.35c0 .31.21.7.81.57A11.52 11.52 0 0 0 23.5 12.3 11.5 11.5 0 0 0 12 .5z"/></svg></a><a class="brand-icon brand-tree" href="https://linktr.ee/cypherMonkey" aria-label="Linktree"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="14" r="10" fill="#fff"/><circle cx="18" cy="26" r="9" fill="#fff"/><circle cx="46" cy="26" r="9" fill="#fff"/><circle cx="32" cy="24" r="8" fill="#fff"/><path d="M32 32v16" stroke="#fff" stroke-width="7" stroke-linecap="round"/><path d="M22 52h20" stroke="#fff" stroke-width="6" stroke-linecap="round"/></svg></a></nav><p class="site-copy">© 2026 CypherMonkeyLabs 🐒 · MIT code, CC BY-NC-SA content</p></footer>
   <script src="vendor/d3/d3.min.js"></script>
   <script src="vendor/markmap/view.js"></script>
   <script type="module" src="js/app.js"></script>
+  <script src="../guide/guide.js"></script>
 </body>
 </html>

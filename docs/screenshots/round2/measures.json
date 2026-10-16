@@ -1,0 +1,164 @@
+[
+  {
+    "name": "home-desktop",
+    "measure": {
+      "panel": null,
+      "dockTop": 0,
+      "bannerH": 52,
+      "headH": 116,
+      "greetHidden": true,
+      "innerH": 900
+    }
+  },
+  {
+    "name": "home-scrolled",
+    "measure": {
+      "panel": null,
+      "dockTop": 0,
+      "bannerH": 52,
+      "headH": 116,
+      "greetHidden": true,
+      "innerH": 900
+    }
+  },
+  {
+    "name": "menu-desktop",
+    "measure": {
+      "panel": null,
+      "dockTop": 0,
+      "bannerH": 52,
+      "headH": 116,
+      "greetHidden": true,
+      "innerH": 900
+    }
+  },
+  {
+    "name": "room-desktop",
+    "measure": {
+      "panel": null,
+      "dockTop": 0,
+      "bannerH": 52,
+      "headH": 116,
+      "greetHidden": true,
+      "innerH": 900
+    }
+  },
+  {
+    "name": "downloads-desktop",
+    "measure": {
+      "panel": null,
+      "dockTop": 0,
+      "bannerH": 52,
+      "headH": 116,
+      "greetHidden": true,
+      "innerH": 900
+    }
+  },
+  {
+    "name": "bot-desktop",
+    "measure": {
+      "panel": {
+        "top": 408,
+        "bottom": 680,
+        "height": 272
+      },
+      "dockTop": 0,
+      "bannerH": 52,
+      "headH": 116,
+      "greetHidden": true,
+      "innerH": 900
+    }
+  },
+  {
+    "name": "greet-desktop",
+    "measure": {
+      "panel": null,
+      "dockTop": 0,
+      "bannerH": 52,
+      "headH": 116,
+      "greetHidden": false,
+      "innerH": 900
+    }
+  },
+  {
+    "name": "home-phone",
+    "measure": {
+      "panel": null,
+      "dockTop": 780,
+      "bannerH": 52,
+      "headH": 116,
+      "greetHidden": true,
+      "innerH": 844
+    }
+  },
+  {
+    "name": "menu-phone",
+    "measure": {
+      "panel": null,
+      "dockTop": 780,
+      "bannerH": 52,
+      "headH": 116,
+      "greetHidden": true,
+      "innerH": 844
+    }
+  },
+  {
+    "name": "room-phone",
+    "measure": {
+      "panel": null,
+      "dockTop": 780,
+      "bannerH": 52,
+      "headH": 116,
+      "greetHidden": true,
+      "innerH": 844
+    }
+  },
+  {
+    "name": "bot-phone",
+    "measure": {
+      "panel": {
+        "top": 538,
+        "bottom": 780,
+        "height": 242
+      },
+      "dockTop": 780,
+      "bannerH": 52,
+      "headH": 116,
+      "greetHidden": true,
+      "innerH": 844
+    }
+  },
+  {
+    "name": "downloads-phone",
+    "measure": {
+      "panel": null,
+      "dockTop": 780,
+      "bannerH": 52,
+      "headH": 116,
+      "greetHidden": true,
+      "innerH": 844
+    }
+  },
+  {
+    "name": "footer-desktop",
+    "measure": {
+      "panel": null,
+      "dockTop": 0,
+      "bannerH": 52,
+      "headH": 116,
+      "greetHidden": true,
+      "innerH": 900
+    }
+  },
+  {
+    "name": "footer-phone",
+    "measure": {
+      "panel": null,
+      "dockTop": 780,
+      "bannerH": 52,
+      "headH": 116,
+      "greetHidden": true,
+      "innerH": 844
+    }
+  }
+]
