@@ -194,8 +194,41 @@ async function renderSection(ctx, key) {
   const section = data.sections[key];
   ctx.setTitle(section.title, section.lede);
   const extra = key === "career" ? `<p><a class="btn" href="#/interview">Interview deck</a> <a class="btn" href="#/certs">Credentials</a> <a class="btn" href="#/tracks">All tracks</a></p>` : "";
-  ctx.view.innerHTML = `<p class="note">${esc(data.banner)}</p>${figure(section.diagram, section.title)}${renderBlocks(section, data, ctx)}${extra}<p><a class="btn" href="#/downloads">Cheat sheets</a></p>`;
+  ctx.view.innerHTML = `${sectionDownloads(key, section.title)}<p class="note">${esc(data.banner)}</p>${figure(section.diagram, section.title)}${renderBlocks(section, data, ctx)}${extra}<p><a class="btn" href="#/downloads">Cheat sheets</a></p>`;
   bindChecks(ctx);
+  bindSectionSave(ctx, section.title);
+}
+
+const SECTION_SHEETS = {
+  e911: "e911",
+  security: "security-compliance",
+  migrate: "migration-cutover",
+  config: "config-checklist",
+  integrations: "crm-adapters",
+  sip: "ports-protocols"
+};
+
+function sectionDownloads(key, title) {
+  const sheet = SECTION_SHEETS[key];
+  const files = sheet
+    ? ["html", "pdf", "png"].map((ext) => `<a class="btn" href="downloads/${sheet}.${ext}" download>${ext.toUpperCase()}</a>`).join("")
+    : "";
+  return `<div class="section-downloads"><span class="note">Save ${esc(title)}</span>${files}<button type="button" class="btn" data-save-section>Save HTML</button></div>`;
+}
+
+function bindSectionSave(ctx, title) {
+  const button = ctx.view.querySelector("[data-save-section]");
+  if (!button) return;
+  button.addEventListener("click", () => {
+    const safe = String(title || "section").toLowerCase().replace(/[^a-z0-9]+/g, "-");
+    const html = `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>${esc(title)}</title></head><body><h1>${esc(title)}</h1>${ctx.view.innerHTML}<p>Independent student project. <a href="https://cyphermonkeylabs.com">Website</a> · <a href="https://github.com/CypherMonkeyLabs">GitHub</a> · <a href="https://linktr.ee/cypherMonkey">Linktree</a></p></body></html>`;
+    const blob = new Blob([html], { type: "text/html" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = `${safe}.html`;
+    link.click();
+    URL.revokeObjectURL(link.href);
+  });
 }
 
 function renderTrouble(ctx, data) {
@@ -404,7 +437,7 @@ async function renderDownloads(ctx, focusZip) {
   const manifest = await response.json();
   const sheets = manifest.files.map((file) => `<p><a class="btn" href="${esc(file.href)}" download>${esc(file.title)}</a> <span class="note">${esc(file.kind)}</span></p>`).join("");
   const zip = `<section id="offline-bundle" class="panel"><h2>Offline bundle</h2><p>The prebuilt zip is in the list above. This button rebuilds an uncompressed zip in the browser from the file list. It does not call another host.</p><button type="button" class="btn primary" id="build-pack">Download offline zip</button><p id="pack-status" class="note" role="status"></p></section>`;
-  ctx.view.innerHTML = `<p>Each sheet carries cyphermonkeylabs.com, linktr.ee/cyphermonkey, this repo, and the independent-study disclaimer.</p>${focusZip ? zip : ""}<div class="sheet-list">${sheets}</div>${focusZip ? "" : zip}`;
+  ctx.view.innerHTML = `<p>Each sheet carries cyphermonkeylabs.com, linktr.ee/cypherMonkey, this repo, and the independent-study disclaimer.</p>${focusZip ? zip : ""}<div class="sheet-list">${sheets}</div>${focusZip ? "" : zip}`;
   ctx.on(ctx.view.querySelector("#build-pack"), "click", () => downloadPack(ctx.view.querySelector("#pack-status")));
   if (focusZip) {
     const bundle = ctx.view.querySelector("#offline-bundle");

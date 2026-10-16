@@ -50,9 +50,9 @@ html[data-theme="dark"] section.panel {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  min-height: 340px;
-  margin: 0 0 18px;
-  padding: 36px 28px 32px;
+  min-height: 250px;
+  margin: 0 0 12px;
+  padding: 18px 24px 14px;
   border-radius: 28px;
   color: #f8fafc;
   background:
@@ -111,19 +111,23 @@ html[data-motion="full"] .hero-token { animation: hero-float 8s ease-in-out infi
 html[data-motion="full"] .hero-orb { animation-name: hero-orb-float; }
 @keyframes hero-orb-float { 50% { transform: translateY(-14px); } }
 @media (max-height: 880px) and (min-width: 900px) {
-  .hero-stage { min-height: 0; padding: 18px 24px 14px; }
-  .hero-stage .hero-title { font-size: 2.35rem; }
+  .hero-stage { min-height: 0; padding: 10px 20px 8px; }
+  .hero-stage .hero-title { font-size: 2rem; }
   .hero-stage .lede { margin: 8px 0; }
   .hero-orb-a { width: 112px; height: 112px; top: 14px; }
   .hero-orb-b { width: 70px; height: 70px; bottom: 16px; }
   .hero-orb-c { width: 52px; height: 52px; }
 }
 @media (max-width: 720px) {
-  .hero-stage { min-height: 0; padding: 22px 16px 18px; }
-  .hero-orb-a { width: 72px; height: 72px; right: 8px; top: 12px; }
+  .hero-stage { min-height: 0; padding: 12px 14px 10px; }
+  .hero-stage .hero-title { font-size: 1.55rem; }
+  .hero-stage .lede { font-size: 0.9rem; margin: 6px 0 8px; }
+  .hero-stage .actions { margin: 6px 0 0; }
+  .hero-stage .actions a { min-height: 36px; padding: 4px 10px; }
+  .hero-orb-a { width: 56px; height: 56px; right: 8px; top: 8px; }
   .hero-orb-b, .hero-orb-c, .hero-token-b { display: none; }
   .hero-orb-c { width: 48px; height: 48px; }
-  .hero-token-a { width: 52px; height: 52px; font-size: 1.4rem; right: 12px; top: auto; bottom: 12px; }
+  .hero-token-a { width: 44px; height: 44px; font-size: 1.2rem; right: 10px; top: auto; bottom: 8px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .hero-orb, .hero-token { animation: none !important; }
@@ -142,5 +146,123 @@ html[data-motion="full"] .flow-line { animation: flow-dash 2.4s linear infinite;
   background: linear-gradient(160deg, #fff, #e0f2fe);
   border: 2px solid #67e8f9;
 }
-html[data-theme="dark"] .stat { background: #111827; }
+html[data-theme="dark"] .stat,
+html[data-theme="midnight"] .stat,
+html[data-theme="solar"] .stat,
+html[data-theme="signal"] .stat {
+  background: #0b1224;
+  color: #f8fafc;
+  border-color: #22d3ee;
+}
+html[data-theme="dark"] .stat b,
+html[data-theme="midnight"] .stat b,
+html[data-theme="solar"] .stat b,
+html[data-theme="signal"] .stat b { color: #f8fafc; }
 .stat b { display: block; font-size: 1.4rem; }
+@media (max-width: 720px) {
+  .stat { min-width: 0; flex: 1 1 0; min-height: 0; padding: 6px 8px; }
+  .stat b { font-size: 1.2rem; }
+  #overview { margin-top: 8px; padding: 10px 12px 8px; }
+  #overview .lane-copy { margin: 6px 0 0; line-height: 1.3; padding-right: 96px; }
+  .hero-stage .lede { line-height: 1.3; }
+}
+
+/* Round 3: themes, particles, parallax. Motion stops when the page asks. */
+.fx-field {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+.fx-field span {
+  position: absolute;
+  bottom: -12px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #fff, #22d3ee 40%, #f472b6);
+  box-shadow: 0 0 12px #22d3ee;
+  animation: fx-rise 9s linear infinite;
+}
+@keyframes fx-rise {
+  from { transform: translateY(0); opacity: 0; }
+  12% { opacity: .85; }
+  to { transform: translateY(-110vh); opacity: 0; }
+}
+html[data-motion="full"] .hero-grid {
+  background-position: center calc(var(--parallax, 0px) * -0.35);
+}
+html[data-motion="full"] .hero-copy { transform: translateY(calc(var(--parallax, 0px) * -0.08)); }
+html[data-motion="full"] .fx-field { transform: translateY(calc(var(--parallax, 0px) * -0.25)); }
+html[data-motion="reduce"] .fx-field { display: none; }
+html[data-motion="reduce"] .hero-orb,
+html[data-motion="reduce"] .hero-token,
+html[data-motion="reduce"] .section-chip { animation: none; transform: none; }
+
+html[data-theme="midnight"],
+html[data-theme="dark"] {
+  --bg: #070b16;
+  --card: #12182b;
+  --ink: #eef4ff;
+  --muted: #cbd5e1;
+  color-scheme: dark;
+}
+html[data-theme="midnight"] body,
+html[data-theme="dark"] body {
+  background:
+    radial-gradient(700px 320px at 0% 0%, rgba(34, 211, 238, 0.22), transparent 55%),
+    radial-gradient(640px 300px at 100% 0%, rgba(244, 114, 182, 0.2), transparent 50%),
+    var(--bg);
+}
+html[data-theme="solar"] {
+  --bg: #2a1208;
+  --card: #3b1d0c;
+  --ink: #fff7ed;
+  --muted: #fed7aa;
+  color-scheme: dark;
+}
+html[data-theme="solar"] body {
+  background:
+    radial-gradient(720px 340px at 10% 0%, rgba(251, 191, 36, 0.45), transparent 55%),
+    radial-gradient(640px 300px at 100% 10%, rgba(244, 63, 94, 0.35), transparent 50%),
+    var(--bg);
+}
+html[data-theme="signal"] {
+  --bg: #04121a;
+  --card: #082433;
+  --ink: #ecfeff;
+  --muted: #a5f3fc;
+  color-scheme: dark;
+}
+html[data-theme="signal"] body {
+  background:
+    radial-gradient(680px 320px at 0% 0%, rgba(34, 211, 238, 0.4), transparent 55%),
+    radial-gradient(640px 280px at 100% 0%, rgba(168, 85, 247, 0.35), transparent 52%),
+    var(--bg);
+}
+html[data-theme="midnight"] .card,
+html[data-theme="midnight"] .room-card,
+html[data-theme="midnight"] section.panel,
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .room-card,
+html[data-theme="dark"] section.panel,
+html[data-theme="solar"] .card,
+html[data-theme="solar"] .room-card,
+html[data-theme="solar"] section.panel,
+html[data-theme="signal"] .card,
+html[data-theme="signal"] .room-card,
+html[data-theme="signal"] section.panel {
+  background:
+    linear-gradient(180deg, rgba(15, 23, 42, 0.92), rgba(30, 27, 75, 0.92)) padding-box,
+    linear-gradient(135deg, #22d3ee, #a78bfa, #f472b6) border-box;
+  color: #f8fafc;
+}
+html[data-motion="full"] .room-card:hover,
+html[data-motion="full"] .card:hover {
+  transform: perspective(500px) rotateX(4deg) translateY(-6px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .fx-field { display: none; }
+  .hero-orb, .hero-token, .section-chip, .room-card { animation: none !important; transform: none !important; }
+}

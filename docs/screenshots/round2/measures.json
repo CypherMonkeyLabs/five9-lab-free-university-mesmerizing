@@ -3,9 +3,9 @@
     "name": "home-desktop",
     "measure": {
       "panel": null,
-      "dockTop": 0,
+      "dockTop": 830,
       "bannerH": 52,
-      "headH": 116,
+      "headH": 120,
       "greetHidden": true,
       "innerH": 900
     }
@@ -14,9 +14,9 @@
     "name": "home-1280",
     "measure": {
       "panel": null,
-      "dockTop": 0,
+      "dockTop": 730,
       "bannerH": 52,
-      "headH": 116,
+      "headH": 120,
       "greetHidden": true,
       "innerH": 800
     }
@@ -25,9 +25,9 @@
     "name": "home-scrolled",
     "measure": {
       "panel": null,
-      "dockTop": 0,
+      "dockTop": 830,
       "bannerH": 52,
-      "headH": 116,
+      "headH": 120,
       "greetHidden": true,
       "innerH": 900
     }
@@ -36,9 +36,9 @@
     "name": "menu-desktop",
     "measure": {
       "panel": null,
-      "dockTop": 0,
+      "dockTop": 830,
       "bannerH": 52,
-      "headH": 116,
+      "headH": 120,
       "greetHidden": true,
       "innerH": 900
     }
@@ -47,9 +47,9 @@
     "name": "room-desktop",
     "measure": {
       "panel": null,
-      "dockTop": 0,
+      "dockTop": 830,
       "bannerH": 52,
-      "headH": 116,
+      "headH": 120,
       "greetHidden": true,
       "innerH": 900
     }
@@ -58,9 +58,9 @@
     "name": "downloads-desktop",
     "measure": {
       "panel": null,
-      "dockTop": 0,
+      "dockTop": 830,
       "bannerH": 52,
-      "headH": 116,
+      "headH": 120,
       "greetHidden": true,
       "innerH": 900
     }
@@ -69,13 +69,13 @@
     "name": "bot-desktop",
     "measure": {
       "panel": {
-        "top": 344,
-        "bottom": 616,
-        "height": 272
+        "top": 149,
+        "bottom": 544,
+        "height": 395
       },
-      "dockTop": 0,
+      "dockTop": 830,
       "bannerH": 52,
-      "headH": 116,
+      "headH": 120,
       "greetHidden": true,
       "innerH": 900
     }
@@ -84,9 +84,9 @@
     "name": "greet-desktop",
     "measure": {
       "panel": null,
-      "dockTop": 0,
+      "dockTop": 830,
       "bannerH": 52,
-      "headH": 116,
+      "headH": 120,
       "greetHidden": false,
       "innerH": 900
     }
@@ -95,9 +95,9 @@
     "name": "home-phone",
     "measure": {
       "panel": null,
-      "dockTop": 780,
+      "dockTop": 774,
       "bannerH": 52,
-      "headH": 116,
+      "headH": 120,
       "greetHidden": true,
       "innerH": 844
     }
@@ -106,9 +106,9 @@
     "name": "menu-phone",
     "measure": {
       "panel": null,
-      "dockTop": 780,
+      "dockTop": 774,
       "bannerH": 52,
-      "headH": 116,
+      "headH": 120,
       "greetHidden": true,
       "innerH": 844
     }
@@ -117,9 +117,9 @@
     "name": "room-phone",
     "measure": {
       "panel": null,
-      "dockTop": 780,
+      "dockTop": 774,
       "bannerH": 52,
-      "headH": 116,
+      "headH": 120,
       "greetHidden": true,
       "innerH": 844
     }
@@ -128,13 +128,13 @@
     "name": "bot-phone",
     "measure": {
       "panel": {
-        "top": 538,
-        "bottom": 780,
-        "height": 242
+        "top": 407,
+        "bottom": 772,
+        "height": 365
       },
-      "dockTop": 780,
+      "dockTop": 774,
       "bannerH": 52,
-      "headH": 116,
+      "headH": 120,
       "greetHidden": true,
       "innerH": 844
     }
@@ -143,9 +143,9 @@
     "name": "downloads-phone",
     "measure": {
       "panel": null,
-      "dockTop": 780,
+      "dockTop": 774,
       "bannerH": 52,
-      "headH": 116,
+      "headH": 120,
       "greetHidden": true,
       "innerH": 844
     }
@@ -154,9 +154,9 @@
     "name": "footer-desktop",
     "measure": {
       "panel": null,
-      "dockTop": 0,
+      "dockTop": 830,
       "bannerH": 52,
-      "headH": 116,
+      "headH": 120,
       "greetHidden": true,
       "innerH": 900
     }
@@ -165,9 +165,9 @@
     "name": "footer-1280",
     "measure": {
       "panel": null,
-      "dockTop": 0,
+      "dockTop": 730,
       "bannerH": 52,
-      "headH": 116,
+      "headH": 120,
       "greetHidden": true,
       "innerH": 800
     }
@@ -176,11 +176,59 @@
     "name": "footer-phone",
     "measure": {
       "panel": null,
-      "dockTop": 780,
+      "dockTop": 774,
       "bannerH": 52,
-      "headH": 116,
+      "headH": 120,
       "greetHidden": true,
       "innerH": 844
+    }
+  },
+  {
+    "name": "campus-desktop",
+    "measure": {
+      "panel": null,
+      "dockTop": null,
+      "bannerH": null,
+      "headH": null,
+      "greetHidden": true,
+      "innerH": 900
+    }
+  },
+  {
+    "name": "campus-phone",
+    "measure": {
+      "panel": null,
+      "dockTop": null,
+      "bannerH": null,
+      "headH": null,
+      "greetHidden": true,
+      "innerH": 844
+    }
+  },
+  {
+    "name": "read-desktop",
+    "measure": {
+      "panel": {
+        "top": 24,
+        "bottom": 544,
+        "height": 520
+      },
+      "dockTop": 830,
+      "bannerH": 52,
+      "headH": 120,
+      "greetHidden": true,
+      "innerH": 900
+    }
+  },
+  {
+    "name": "theme-signal",
+    "measure": {
+      "panel": null,
+      "dockTop": 830,
+      "bannerH": 52,
+      "headH": 120,
+      "greetHidden": true,
+      "innerH": 900
     }
   }
 ]

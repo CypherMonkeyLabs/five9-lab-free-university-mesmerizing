@@ -412,7 +412,7 @@ function flowSvg(flow, index) {
   return `<svg class="flow-svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="${esc(flow.title)}">${heads}${bodies}</svg>`;
 }
 
-function renderLesson(track, lesson) {
+function renderLesson(track, lesson, stem) {
   const key = `${track.id}/${lesson.id}`;
   session.progress.last = `#/lesson/${track.id}/${lesson.id}`;
   saveProgress();
@@ -423,12 +423,15 @@ function renderLesson(track, lesson) {
     const q = lesson.quiz[state.qi];
     const cardItem = lesson.cards[state.fi];
     const step = lesson.flow.steps[state.flow];
+    const downloads = stem ? `<div class="section-downloads"><a class="btn" href="../rooms/${stem}.html">Open room</a><a class="btn" href="../downloads/sections/${stem}-learn.html" download>Learn</a><a class="btn" href="../downloads/diagrams/${stem}.svg" download>SVG</a><a class="btn" href="../downloads/diagrams/${stem}.png" download>PNG</a><a class="btn" href="../downloads/diagrams/${stem}.html" download>Diagram</a></div>` : "";
     view.innerHTML = `
       <div class="lesson-layout">
         <article>
+          <section data-read-section="lesson">
+          ${downloads}
           <p class="kicker">${esc(track.title)}</p>
           <ul>${lesson.objectives.map((item) => `<li>${esc(item)}</li>`).join("")}</ul>
-          ${lesson.paragraphs.map((p) => `<p>${esc(p)}</p>`).join("")}
+          ${lesson.paragraphs.map((p) => `<p data-sentence>${esc(p)}</p>`).join("")}
           ${lesson.callout ? `<div class="callout"><strong>${esc(lesson.callout.title)}</strong><p>${esc(lesson.callout.body)}</p></div>` : ""}
           ${lesson.uncertain && lesson.uncertain.length ? `<div class="uncertain"><strong>Uncertain</strong><ul>${lesson.uncertain.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></div>` : ""}
           <figure class="figure">${figureSvg(lesson.figure)}<figcaption>${esc(lesson.figure.caption)}</figcaption></figure>
@@ -479,6 +482,7 @@ function renderLesson(track, lesson) {
             <ol class="cites">
               ${lesson.cites.map((cite) => `<li><a href="${esc(cite.url)}" rel="noopener" target="_blank">${esc(cite.label)}</a>${cite.note ? ` — ${esc(cite.note)}` : ""}</li>`).join("")}
             </ol>
+          </section>
           </section>
         </article>
         <aside class="scope" id="flow-box" tabindex="0" aria-label="Call flow player">
@@ -647,12 +651,23 @@ function renderLesson(track, lesson) {
   paint();
 }
 
+async function lessonStem(track, lesson) {
+  try {
+    const manifest = await getJson("../downloads/manifest.json");
+    const prefix = `${track.id}-${lesson.id}-`;
+    const hit = (manifest.diagrams || []).find((row) => String(row.id).startsWith(prefix));
+    return hit ? hit.id : "";
+  } catch (err) {
+    return "";
+  }
+}
+
 async function openLesson(trackId, lessonId) {
   const track = await getTrack(trackId);
   if (!track) return renderMissing("That track is not on this floor");
   const lesson = track.lessons.find((item) => item.id === lessonId);
   if (!lesson) return renderMissing("That lesson is not on this floor");
-  renderLesson(track, lesson);
+  renderLesson(track, lesson, await lessonStem(track, lesson));
 }
 
 function renderMissing(text) {

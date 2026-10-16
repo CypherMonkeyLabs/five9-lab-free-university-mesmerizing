@@ -216,8 +216,22 @@ html[data-motion="full"] .cg-monkey { animation: cg-bob 3.2s ease-in-out infinit
 .cg-callout p { margin: 0 0 8px; color: #142033; }
 .cg-callout-actions { display: flex; gap: 8px; flex-wrap: wrap; }
 
+.cg-speak { display: grid; gap: 8px; margin: 8px 0; }
+.cg-speak select, .cg-voice select {
+  appearance: none;
+  width: 100%;
+  min-height: 40px;
+  border-radius: 10px;
+  border: 2px solid #5b21b6;
+  background: #ede9fe url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%235b21b6' stroke-width='2'/%3E%3C/svg%3E") right 10px center no-repeat;
+  color: #1e1b4b;
+  font: 700 0.9rem/1.2 var(--sans, system-ui, sans-serif);
+  padding: 0 28px 0 10px;
+}
+.cg-speak button { width: 100%; }
 @media (max-width: 720px) {
-  .cg-monkey { display: none; }
+  .cg-monkey { display: block; width: 96px; height: 112px; }
+  .cg-root { z-index: 70; }
   .cg-panel {
     position: fixed;
     left: 0;

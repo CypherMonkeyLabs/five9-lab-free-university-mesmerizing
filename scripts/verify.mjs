@@ -104,7 +104,14 @@ const vendorOk = ["anime", "rough", "d3", "confetti", "markmap", "three"].every(
 if (!vendorOk) problems.push("vendor-license");
 
 const guideJs = readFileSync(join(root, "guide/guide.js"), "utf8");
-if (!guideJs.includes("pose-wave") || !guideJs.includes("cg-greet") || !guideJs.includes("Read along")) problems.push("guide");
+if (
+  !guideJs.includes("pose-wave") ||
+  !guideJs.includes("cg-greet") ||
+  !guideJs.includes("data-read") ||
+  !guideJs.includes("data-voice-name") ||
+  !guideJs.includes("is-reading") ||
+  !guideJs.includes("Read this page")
+) problems.push("guide");
 for (const id of ["tour-home", "tour-menu", "tour-learn", "tour-diagrams", "tour-play", "tour-downloads"]) {
   if (!rootPage.includes(`id="${id}"`)) problems.push(`tour ${id}`);
 }
