@@ -1,0 +1,71 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 1096 >>
+stream
+BT
+/F1 10 Tf
+48 740 Td
+14 TL
+(What an extract is allowed to remember   Learn it in 5 minutes) Tj
+T*
+() Tj
+T*
+(Reporting Web Services can move numbers out of the domain. Retention still applies to what) Tj
+T*
+(Five9 keeps, not to the warehouse you built. Once a row is in your bucket, your policy owns) Tj
+T*
+(it.) Tj
+T*
+(Disabled domains, campaign state, agent data, and numbers have their own retention lines:) Tj
+T*
+(agent data 60 days, campaign state 120 days, a disabled domain 120 days after closure, DIDs) Tj
+T*
+(and toll-free numbers 90 days after closure. Do not design a 'temporary' domain and expect) Tj
+T*
+(the DIDs to wait forever.) Tj
+T*
+() Tj
+T*
+(Sources and go deeper) Tj
+T*
+(Data retention. vendor. https://www.five9.com/legal/dataretention. last checked 2026-10.) Tj
+T*
+(APIs and SDKs. vendor.) Tj
+T*
+(https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks. last checked) Tj
+T*
+(2026-10.) Tj
+T*
+(Generating standard reports. community.) Tj
+T*
+(https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports. last checked) Tj
+T*
+(2026-10.) Tj
+T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Contents 2 0 R /Resources << /Font << /F1 1 0 R >> >> >>
+endobj
+4 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+5 0 obj
+<< /Type /Catalog /Pages 4 0 R >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000001227 00000 n 
+0000001353 00000 n 
+0000001410 00000 n 
+trailer << /Size 6 /Root 5 0 R >>
+startxref
+1459
+%%EOF

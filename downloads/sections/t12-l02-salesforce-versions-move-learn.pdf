@@ -1,0 +1,73 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 1316 >>
+stream
+BT
+/F1 10 Tf
+48 740 Td
+14 TL
+(Salesforce versions move   Learn it in 5 minutes) Tj
+T*
+() Tj
+T*
+(The technical requirements fetched for this lab say the Salesforce managed package is 2.46,) Tj
+T*
+(SAML 2.0 is supported, and Lightning CTI is supported on Sales Cloud and Service Cloud for) Tj
+T*
+(Professional, Enterprise, Unlimited, and Performance. Lightning Experience is supported for) Tj
+T*
+(the Plus adapter.) Tj
+T*
+(2.46 is a line in a PDF, not a law. The next PDF can move it. Write 'as of the PDF we read') Tj
+T*
+(on any design that copies the number. Internet Explorer is ended except IE 11 for the Oracle) Tj
+T*
+(Service Cloud adapter only, which is a different CRM.) Tj
+T*
+() Tj
+T*
+(Sources and go deeper) Tj
+T*
+(Technical requirements PDF. vendor.) Tj
+T*
+(https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf.) Tj
+T*
+(last checked 2026-10.) Tj
+T*
+(Web adapter requirements. vendor.) Tj
+T*
+(https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/agent-integrations/web-based-adapters/application-requirements.htm.) Tj
+T*
+(last checked 2026-10.) Tj
+T*
+(confirm. Managed package 2.46 and the edition list came from the technical requirements read) Tj
+T*
+(in October 2026. They will move.. last checked 2026-10.) Tj
+T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Contents 2 0 R /Resources << /Font << /F1 1 0 R >> >> >>
+endobj
+4 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+5 0 obj
+<< /Type /Catalog /Pages 4 0 R >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000001447 00000 n 
+0000001573 00000 n 
+0000001630 00000 n 
+trailer << /Size 6 /Root 5 0 R >>
+startxref
+1679
+%%EOF

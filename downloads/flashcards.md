@@ -1,0 +1,3878 @@
+# Flashcards
+
+- Outbound, what comes first?
+- Skill groups, then users, lists, dispositions, profiles, campaigns.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Which builds add IVR?
+- Inbound and autodial.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- What is a skill group?
+- Agents and supervisors for a campaign queue.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- What is a domain?
+- The VCC tenant.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Domain boundary?
+- Users, lists, skills, and campaigns stay in that domain.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- confirm. This lesson's CUCM comparison is a teaching map. Five9 does not publish it as a migration product.. last checked 2026-10.
+- CUCM partition equivalent?
+- There isn't one. Teach domain, skills, campaigns.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- confirm. This lesson's CUCM comparison is a teaching map. Five9 does not publish it as a migration product.. last checked 2026-10.
+- Skill membership?
+- Agent or supervisor users, and a user may have several skills.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- confirm. This lesson's CUCM comparison is a teaching map. Five9 does not publish it as a migration product.. last checked 2026-10.
+- Multiple skills on a campaign?
+- Yes.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- confirm. This lesson's CUCM comparison is a teaching map. Five9 does not publish it as a migration product.. last checked 2026-10.
+- Reporting menu missing?
+- Check the Reporting role and a reporting permission.
+- Skill groups
+- Sources and go deeper
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- Generating standard reports. community. https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports. last checked 2026-10.
+- Supervisor in a skill?
+- Yes, the skill topic allows it.
+- Skill groups
+- Sources and go deeper
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- Generating standard reports. community. https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports. last checked 2026-10.
+- Call variable permission?
+- User Can Edit Call Variables.
+- Skill groups
+- Sources and go deeper
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- Generating standard reports. community. https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports. last checked 2026-10.
+- Who edits IVR?
+- An administrator.
+- Skill groups
+- Sources and go deeper
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- Generating standard reports. community. https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports. last checked 2026-10.
+- Three types?
+- Inbound, outbound, autodial.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Stopped inbound?
+- Busy signal.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- What is blended?
+- Agents working inbound and outbound, not a fourth type.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Autodial needs?
+- List plus prompts and IVR, per the planning topic.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Final disposition?
+- Stops all numbers on that record for the campaign.
+- List dialing modes
+- Sources and go deeper
+- List dialing modes. community. https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US. last checked 2026-10.
+- Managing campaign dispositions. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dispositions/managing-dispositions.htm. last checked 2026-10.
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Which types load lists?
+- Outbound and autodial.
+- List dialing modes
+- Sources and go deeper
+- List dialing modes. community. https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US. last checked 2026-10.
+- Managing campaign dispositions. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dispositions/managing-dispositions.htm. last checked 2026-10.
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- What is number1?
+- The first phone field the dial order can use.
+- List dialing modes
+- Sources and go deeper
+- List dialing modes. community. https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US. last checked 2026-10.
+- Managing campaign dispositions. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dispositions/managing-dispositions.htm. last checked 2026-10.
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Does upload start dialing?
+- No.
+- List dialing modes
+- Sources and go deeper
+- List dialing modes. community. https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US. last checked 2026-10.
+- Managing campaign dispositions. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dispositions/managing-dispositions.htm. last checked 2026-10.
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Default system redials?
+- Often five, if the default count is left in place.
+- Managing campaign dispositions
+- Sources and go deeper
+- Managing campaign dispositions. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dispositions/managing-dispositions.htm. last checked 2026-10.
+- List dialing modes. community. https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US. last checked 2026-10.
+- What does reset change?
+- Selected codes on lists currently loaded.
+- Managing campaign dispositions
+- Sources and go deeper
+- Managing campaign dispositions. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dispositions/managing-dispositions.htm. last checked 2026-10.
+- List dialing modes. community. https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US. last checked 2026-10.
+- Safe reset rule?
+- Only codes you are willing to dial.
+- Managing campaign dispositions
+- Sources and go deeper
+- Managing campaign dispositions. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dispositions/managing-dispositions.htm. last checked 2026-10.
+- List dialing modes. community. https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US. last checked 2026-10.
+- Batch update?
+- Manual rows or scheduled CSV.
+- Managing campaign dispositions
+- Sources and go deeper
+- Managing campaign dispositions. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dispositions/managing-dispositions.htm. last checked 2026-10.
+- List dialing modes. community. https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US. last checked 2026-10.
+- Profiles per campaign?
+- One.
+- Campaign profiles
+- Sources and go deeper
+- Campaign profiles. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/campaign-profiles/_ch-campaign-profiles.htm. last checked 2026-10.
+- Assign a campaign profile. community. https://community.five9.com/s/article/Administrator-How-to-Create-Add-a-Campaign-Profile-and-Assign-it-to-a-Campaign?language=en_US. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Can a profile be shared?
+- Yes, across campaigns.
+- Campaign profiles
+- Sources and go deeper
+- Campaign profiles. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/campaign-profiles/_ch-campaign-profiles.htm. last checked 2026-10.
+- Assign a campaign profile. community. https://community.five9.com/s/article/Administrator-How-to-Create-Add-a-Campaign-Profile-and-Assign-it-to-a-Campaign?language=en_US. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- What can it override?
+- Defaults such as the ANI.
+- Campaign profiles
+- Sources and go deeper
+- Campaign profiles. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/campaign-profiles/_ch-campaign-profiles.htm. last checked 2026-10.
+- Assign a campaign profile. community. https://community.five9.com/s/article/Administrator-How-to-Create-Add-a-Campaign-Profile-and-Assign-it-to-a-Campaign?language=en_US. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- How can it change later?
+- Workflow rules.
+- Campaign profiles
+- Sources and go deeper
+- Campaign profiles. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/campaign-profiles/_ch-campaign-profiles.htm. last checked 2026-10.
+- Assign a campaign profile. community. https://community.five9.com/s/article/Administrator-How-to-Create-Add-a-Campaign-Profile-and-Assign-it-to-a-Campaign?language=en_US. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Mac ARM and Java admin?
+- Not supported. Use the web administrator.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- confirm. The fetched PDF names JRE 8 updates 421, 451, and 461, and macOS 15 Sequoia, 26 Tahoe, and 27 Golden Gate. Those lines are time-specific.. last checked 2026-10.
+- Why Plus?
+- Web apps do not need Java SE.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- confirm. The fetched PDF names JRE 8 updates 421, 451, and 461, and macOS 15 Sequoia, 26 Tahoe, and 27 Golden Gate. Those lines are time-specific.. last checked 2026-10.
+- Plus transport?
+- HTTPS and WSS.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- confirm. The fetched PDF names JRE 8 updates 421, 451, and 461, and macOS 15 Sequoia, 26 Tahoe, and 27 Golden Gate. Those lines are time-specific.. last checked 2026-10.
+- IE exception?
+- IE 11 for Oracle Service Cloud only.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- confirm. The fetched PDF names JRE 8 updates 421, 451, and 461, and macOS 15 Sequoia, 26 Tahoe, and 27 Golden Gate. Those lines are time-specific.. last checked 2026-10.
+- Profile or account first?
+- Profile, then account.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- Who joins a skill?
+- Agent or supervisor users.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- Missing permission symptom?
+- It looks like a missing feature.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- Call variable edits?
+- A named permission on the administrator role.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- Inbound tab name?
+- Outbound Skills.
+- Skill groups
+- Sources and go deeper
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- Outbound tab name?
+- Skills.
+- Skill groups
+- Sources and go deeper
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- Multiple skills per campaign?
+- Yes.
+- Skill groups
+- Sources and go deeper
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- Multiple skills per user?
+- Yes.
+- Skill groups
+- Sources and go deeper
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- Prompts before scripts?
+- Yes, on the inbound and autodial roadmap.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Skill greeting vs Play prompt?
+- Different objects.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Stopped campaign?
+- Busy, prompt unheard.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- TTS?
+- The query example uses a TTS prompt on Play.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- IVR module?
+- Set DNC.
+- IVR modules
+- Sources and go deeper
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- Generating standard reports. community. https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- confirm. Public pages do not spell out, in one paragraph, whether a custom disposition named DNC writes the same list as the Set DNC module. Confirm in your domain.. last checked 2026-10.
+- Is a disposition the same?
+- Not documented as the same object.
+- IVR modules
+- Sources and go deeper
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- Generating standard reports. community. https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- confirm. Public pages do not spell out, in one paragraph, whether a custom disposition named DNC writes the same list as the Set DNC module. Confirm in your domain.. last checked 2026-10.
+- Report category?
+- Do Not Call Reports.
+- IVR modules
+- Sources and go deeper
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- Generating standard reports. community. https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- confirm. Public pages do not spell out, in one paragraph, whether a custom disposition named DNC writes the same list as the Set DNC module. Confirm in your domain.. last checked 2026-10.
+- Product grouping?
+- With time-zone rules and Certified Caller.
+- IVR modules
+- Sources and go deeper
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- Generating standard reports. community. https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- confirm. Public pages do not spell out, in one paragraph, whether a custom disposition named DNC writes the same list as the Set DNC module. Confirm in your domain.. last checked 2026-10.
+- Efficiency Mode?
+- Off for live calls.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- confirm. Headset model numbers are not listed in the section this lab read. The PDF points at a separate recommended-headsets note.. last checked 2026-10.
+- Analog headsets?
+- Not supported.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- confirm. Headset model numbers are not listed in the section this lab read. The PDF points at a separate recommended-headsets note.. last checked 2026-10.
+- 5G?
+- Not supported.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- confirm. Headset model numbers are not listed in the section this lab read. The PDF points at a separate recommended-headsets note.. last checked 2026-10.
+- ADP bandwidth?
+- 128 kbps in the table, G.711 default.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- confirm. Headset model numbers are not listed in the section this lab read. The PDF points at a separate recommended-headsets note.. last checked 2026-10.
+- Skill voicemail?
+- Yes, with its own greeting.
+- Skill groups
+- Sources and go deeper
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- TCPA manual touch. community. https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US. last checked 2026-10.
+- Telephone Consumer Protection Act of 1991. wikipedia. https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991. last checked 2026-10.
+- TCPA timeout state?
+- Not Ready, no auto-dial.
+- Skill groups
+- Sources and go deeper
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- TCPA manual touch. community. https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US. last checked 2026-10.
+- Telephone Consumer Protection Act of 1991. wikipedia. https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991. last checked 2026-10.
+- Where do dialer settings live?
+- On the campaign, not in a side spreadsheet.
+- Skill groups
+- Sources and go deeper
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- TCPA manual touch. community. https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US. last checked 2026-10.
+- Telephone Consumer Protection Act of 1991. wikipedia. https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991. last checked 2026-10.
+- Profiles and pop-ups?
+- Profiles can control them.
+- Skill groups
+- Sources and go deeper
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- TCPA manual touch. community. https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US. last checked 2026-10.
+- Telephone Consumer Protection Act of 1991. wikipedia. https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991. last checked 2026-10.
+- Stopped inbound?
+- Busy.
+- Inbound campaigns
+- Sources and go deeper
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- What runs after answer?
+- The campaign IVR.
+- Inbound campaigns
+- Sources and go deeper
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- What is DNIS?
+- The called number presented to the campaign.
+- Inbound campaigns
+- Sources and go deeper
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- First busy check?
+- Is the campaign running?
+- Inbound campaigns
+- Sources and go deeper
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Script after agent connect?
+- Complete.
+- Inbound campaigns
+- Sources and go deeper
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- Skill Transfer functions. community. https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- confirm. A post-call survey exists as a campaign-admin topic title in the docs tree. This lesson does not describe its screens. Open that topic before you design one.. last checked 2026-10.
+- Long queue options?
+- Voicemail and third-party forward.
+- Inbound campaigns
+- Sources and go deeper
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- Skill Transfer functions. community. https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- confirm. A post-call survey exists as a campaign-admin topic title in the docs tree. This lesson does not describe its screens. Open that topic before you design one.. last checked 2026-10.
+- Priority?
+- Supported in the inbound topic.
+- Inbound campaigns
+- Sources and go deeper
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- Skill Transfer functions. community. https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- confirm. A post-call survey exists as a campaign-admin topic title in the docs tree. This lesson does not describe its screens. Open that topic before you design one.. last checked 2026-10.
+- Branching?
+- In the IVR script.
+- Inbound campaigns
+- Sources and go deeper
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- Skill Transfer functions. community. https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- confirm. A post-call survey exists as a campaign-admin topic title in the docs tree. This lesson does not describe its screens. Open that topic before you design one.. last checked 2026-10.
+- Hold vs voicemail?
+- Different.
+- Inbound campaigns
+- Sources and go deeper
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Third party module?
+- Third Party Transfer.
+- Inbound campaigns
+- Sources and go deeper
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Voicemail module?
+- Voicemail Transfer.
+- Inbound campaigns
+- Sources and go deeper
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Stopped campaign as overflow?
+- No. Callers hear busy.
+- Inbound campaigns
+- Sources and go deeper
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Where is service level?
+- On the skill group.
+- Inbound campaigns
+- Sources and go deeper
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- Skill Transfer functions. community. https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features. last checked 2026-10.
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- confirm. The exact numeric interaction between skill service level and Skill Transfer priority is not stated in the pages this lab quoted.. last checked 2026-10.
+- Where is IVR priority?
+- Skill Transfer's priority tab.
+- Inbound campaigns
+- Sources and go deeper
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- Skill Transfer functions. community. https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features. last checked 2026-10.
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- confirm. The exact numeric interaction between skill service level and Skill Transfer priority is not stated in the pages this lab quoted.. last checked 2026-10.
+- Are they the same knob?
+- No.
+- Inbound campaigns
+- Sources and go deeper
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- Skill Transfer functions. community. https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features. last checked 2026-10.
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- confirm. The exact numeric interaction between skill service level and Skill Transfer priority is not stated in the pages this lab quoted.. last checked 2026-10.
+- Who says inbound can be prioritized?
+- The inbound campaign topic.
+- Inbound campaigns
+- Sources and go deeper
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- Skill Transfer functions. community. https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features. last checked 2026-10.
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- confirm. The exact numeric interaction between skill service level and Skill Transfer priority is not stated in the pages this lab quoted.. last checked 2026-10.
+- When is the schedule set?
+- After scripts exist.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Nightly stop?
+- Causes busy, not a closed prompt.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Which types have the schedule topic?
+- Autodial and inbound.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Campaign state at night?
+- Running, with a different script.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Where?
+- Skill Transfer General tab.
+- Pause before transfer
+- Sources and go deeper
+- Pause before transfer. community. https://community.five9.com/s/article/Administrator-Pause-Before-Transfer?language=en_US. last checked 2026-10.
+- Skill Transfer functions. community. https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features. last checked 2026-10.
+- Default?
+- 0.
+- Pause before transfer
+- Sources and go deeper
+- Pause before transfer. community. https://community.five9.com/s/article/Administrator-Pause-Before-Transfer?language=en_US. last checked 2026-10.
+- Skill Transfer functions. community. https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features. last checked 2026-10.
+- On Hold in reports?
+- No.
+- Pause before transfer
+- Sources and go deeper
+- Pause before transfer. community. https://community.five9.com/s/article/Administrator-Pause-Before-Transfer?language=en_US. last checked 2026-10.
+- Skill Transfer functions. community. https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features. last checked 2026-10.
+- Why set it above 0?
+- A gap before the next call.
+- Pause before transfer
+- Sources and go deeper
+- Pause before transfer. community. https://community.five9.com/s/article/Administrator-Pause-Before-Transfer?language=en_US. last checked 2026-10.
+- Skill Transfer functions. community. https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features. last checked 2026-10.
+- Are the seven checks trunk settings?
+- No.
+- Inbound campaigns
+- Sources and go deeper
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Wrong skill tab?
+- Empty queue.
+- Inbound campaigns
+- Sources and go deeper
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Night busy?
+- State or schedule.
+- Inbound campaigns
+- Sources and go deeper
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Then what?
+- Trunk and topology.
+- Inbound campaigns
+- Sources and go deeper
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Does upload dial?
+- No.
+- List dialing modes
+- Sources and go deeper
+- List dialing modes. community. https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US. last checked 2026-10.
+- Managing campaign dispositions. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dispositions/managing-dispositions.htm. last checked 2026-10.
+- Which lists does reset touch?
+- Lists loaded in the campaign.
+- List dialing modes
+- Sources and go deeper
+- List dialing modes. community. https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US. last checked 2026-10.
+- Managing campaign dispositions. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dispositions/managing-dispositions.htm. last checked 2026-10.
+- number1?
+- A phone field.
+- List dialing modes
+- Sources and go deeper
+- List dialing modes. community. https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US. last checked 2026-10.
+- Managing campaign dispositions. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dispositions/managing-dispositions.htm. last checked 2026-10.
+- Sales list campaign type?
+- Outbound or autodial.
+- List dialing modes
+- Sources and go deeper
+- List dialing modes. community. https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US. last checked 2026-10.
+- Managing campaign dispositions. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dispositions/managing-dispositions.htm. last checked 2026-10.
+- Filter vs vertical?
+- Different.
+- Campaign profiles
+- Sources and go deeper
+- Campaign profiles. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/campaign-profiles/_ch-campaign-profiles.htm. last checked 2026-10.
+- List dialing modes. community. https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Profiles at once?
+- One.
+- Campaign profiles
+- Sources and go deeper
+- Campaign profiles. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/campaign-profiles/_ch-campaign-profiles.htm. last checked 2026-10.
+- List dialing modes. community. https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- ANI override?
+- On the profile.
+- Campaign profiles
+- Sources and go deeper
+- Campaign profiles. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/campaign-profiles/_ch-campaign-profiles.htm. last checked 2026-10.
+- List dialing modes. community. https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Pop-ups?
+- A profile can control them.
+- Campaign profiles
+- Sources and go deeper
+- Campaign profiles. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/campaign-profiles/_ch-campaign-profiles.htm. last checked 2026-10.
+- List dialing modes. community. https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Default list mode?
+- List penetration.
+- List dialing modes
+- Sources and go deeper
+- List dialing modes. community. https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US. last checked 2026-10.
+- Vertical list dialing chapter. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-list-dialing-mode/using-vertical-list-dialing.htm. last checked 2026-10.
+- confirm. The documentation portal has a vertical-dialing chapter. This lesson follows the community article's definitions because that page returned readable text. Confirm the portal chapter in your own admin guide.. last checked 2026-10.
+- Vertical in one sentence?
+- Finish one record's numbers, then move on.
+- List dialing modes
+- Sources and go deeper
+- List dialing modes. community. https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US. last checked 2026-10.
+- Vertical list dialing chapter. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-list-dialing-mode/using-vertical-list-dialing.htm. last checked 2026-10.
+- confirm. The documentation portal has a vertical-dialing chapter. This lesson follows the community article's definitions because that page returned readable text. Confirm the portal chapter in your own admin guide.. last checked 2026-10.
+- Compass words?
+- Use the definitions, not 'vertical' as a direction.
+- List dialing modes
+- Sources and go deeper
+- List dialing modes. community. https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US. last checked 2026-10.
+- Vertical list dialing chapter. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-list-dialing-mode/using-vertical-list-dialing.htm. last checked 2026-10.
+- confirm. The documentation portal has a vertical-dialing chapter. This lesson follows the community article's definitions because that page returned readable text. Confirm the portal chapter in your own admin guide.. last checked 2026-10.
+- Final disposition?
+- Stops the whole record.
+- List dialing modes
+- Sources and go deeper
+- List dialing modes. community. https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US. last checked 2026-10.
+- Vertical list dialing chapter. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-list-dialing-mode/using-vertical-list-dialing.htm. last checked 2026-10.
+- confirm. The documentation portal has a vertical-dialing chapter. This lesson follows the community article's definitions because that page returned readable text. Confirm the portal chapter in your own admin guide.. last checked 2026-10.
+- Reset Sale?
+- Only if you mean to call them again.
+- Managing campaign dispositions
+- Sources and go deeper
+- Managing campaign dispositions. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dispositions/managing-dispositions.htm. last checked 2026-10.
+- Which lists?
+- Currently loaded.
+- Managing campaign dispositions
+- Sources and go deeper
+- Managing campaign dispositions. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dispositions/managing-dispositions.htm. last checked 2026-10.
+- Position reset?
+- Back toward the top.
+- Managing campaign dispositions
+- Sources and go deeper
+- Managing campaign dispositions. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dispositions/managing-dispositions.htm. last checked 2026-10.
+- Proof?
+- List details.
+- Managing campaign dispositions
+- Sources and go deeper
+- Managing campaign dispositions. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dispositions/managing-dispositions.htm. last checked 2026-10.
+- US abandon window?
+- Rolling 30 days.
+- Default campaign settings
+- Sources and go deeper
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- confirm. The exact hour-by-hour time zone matrix is in the campaign guide and was not copied here. Local telemarketing law is not Five9's default screen.. last checked 2026-10.
+- UK window?
+- 24 hours.
+- Default campaign settings
+- Sources and go deeper
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- confirm. The exact hour-by-hour time zone matrix is in the campaign guide and was not copied here. Local telemarketing law is not Five9's default screen.. last checked 2026-10.
+- Who sets US vs UK?
+- A Five9 representative, per the topic.
+- Default campaign settings
+- Sources and go deeper
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- confirm. The exact hour-by-hour time zone matrix is in the campaign guide and was not copied here. Local telemarketing law is not Five9's default screen.. last checked 2026-10.
+- Numeric default in this lab?
+- Not stated. Read the domain.
+- Default campaign settings
+- Sources and go deeper
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- confirm. The exact hour-by-hour time zone matrix is in the campaign guide and was not copied here. Local telemarketing law is not Five9's default screen.. last checked 2026-10.
+- Where is voice detection level?
+- Campaign dialing defaults.
+- Default campaign settings
+- Sources and go deeper
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- Published accuracy?
+- Not in this lab.
+- Default campaign settings
+- Sources and go deeper
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- Automatic voicemail?
+- Named on the outbound product page.
+- Default campaign settings
+- Sources and go deeper
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- False machine?
+- A live person misses the agent.
+- Default campaign settings
+- Sources and go deeper
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- Where is local caller ID marketed?
+- Outbound product page.
+- Outbound product page
+- Sources and go deeper
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- Campaign profiles. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/campaign-profiles/_ch-campaign-profiles.htm. last checked 2026-10.
+- Certified Caller. vendor. https://www.five9.com/resources/five9_certified_caller. last checked 2026-10.
+- Call log filters. community. https://community.five9.com/s/article/Reporting-Apply-Filter-s-in-the-Call-Log-Report. last checked 2026-10.
+- RFC 8224, Authenticated Identity Management in SIP. rfc. https://www.rfc-editor.org/rfc/rfc8224. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Which object overrides ANI?
+- Campaign profile.
+- Outbound product page
+- Sources and go deeper
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- Campaign profiles. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/campaign-profiles/_ch-campaign-profiles.htm. last checked 2026-10.
+- Certified Caller. vendor. https://www.five9.com/resources/five9_certified_caller. last checked 2026-10.
+- Call log filters. community. https://community.five9.com/s/article/Reporting-Apply-Filter-s-in-the-Call-Log-Report. last checked 2026-10.
+- RFC 8224, Authenticated Identity Management in SIP. rfc. https://www.rfc-editor.org/rfc/rfc8224. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Is that STIR/SHAKEN?
+- No. Certified Caller is separate.
+- Outbound product page
+- Sources and go deeper
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- Campaign profiles. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/campaign-profiles/_ch-campaign-profiles.htm. last checked 2026-10.
+- Certified Caller. vendor. https://www.five9.com/resources/five9_certified_caller. last checked 2026-10.
+- Call log filters. community. https://community.five9.com/s/article/Reporting-Apply-Filter-s-in-the-Call-Log-Report. last checked 2026-10.
+- RFC 8224, Authenticated Identity Management in SIP. rfc. https://www.rfc-editor.org/rfc/rfc8224. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Unassigned profile?
+- No effect.
+- Outbound product page
+- Sources and go deeper
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- Campaign profiles. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/campaign-profiles/_ch-campaign-profiles.htm. last checked 2026-10.
+- Certified Caller. vendor. https://www.five9.com/resources/five9_certified_caller. last checked 2026-10.
+- Call log filters. community. https://community.five9.com/s/article/Reporting-Apply-Filter-s-in-the-Call-Log-Report. last checked 2026-10.
+- RFC 8224, Authenticated Identity Management in SIP. rfc. https://www.rfc-editor.org/rfc/rfc8224. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Why preview?
+- Context before the dial.
+- Dialer product page
+- Sources and go deeper
+- Dialer product page. vendor. https://www.five9.com/products/capabilities/dialer-system. last checked 2026-10.
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- TCPA manual touch. community. https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US. last checked 2026-10.
+- Telephone Consumer Protection Act of 1991. wikipedia. https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991. last checked 2026-10.
+- Same as TCPA?
+- No. TCPA removes automatic dialing.
+- Dialer product page
+- Sources and go deeper
+- Dialer product page. vendor. https://www.five9.com/products/capabilities/dialer-system. last checked 2026-10.
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- TCPA manual touch. community. https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US. last checked 2026-10.
+- Telephone Consumer Protection Act of 1991. wikipedia. https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991. last checked 2026-10.
+- Overdial?
+- Not the design.
+- Dialer product page
+- Sources and go deeper
+- Dialer product page. vendor. https://www.five9.com/products/capabilities/dialer-system. last checked 2026-10.
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- TCPA manual touch. community. https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US. last checked 2026-10.
+- Telephone Consumer Protection Act of 1991. wikipedia. https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991. last checked 2026-10.
+- Still needs a list?
+- Yes.
+- Dialer product page
+- Sources and go deeper
+- Dialer product page. vendor. https://www.five9.com/products/capabilities/dialer-system. last checked 2026-10.
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- TCPA manual touch. community. https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US. last checked 2026-10.
+- Telephone Consumer Protection Act of 1991. wikipedia. https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991. last checked 2026-10.
+- One per agent?
+- That is the outbound page.
+- Outbound product page
+- Sources and go deeper
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- Dialer product page. vendor. https://www.five9.com/products/capabilities/dialer-system. last checked 2026-10.
+- confirm. Five9 publishes both 'one customer per available agent' and 'adaptively control dialing pace' for progressive. This lab does not know which sentence the current build implements.. last checked 2026-10.
+- Ten-agent hint?
+- Dialer page guidance, not a proven hard limit.
+- Outbound product page
+- Sources and go deeper
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- Dialer product page. vendor. https://www.five9.com/products/capabilities/dialer-system. last checked 2026-10.
+- confirm. Five9 publishes both 'one customer per available agent' and 'adaptively control dialing pace' for progressive. This lab does not know which sentence the current build implements.. last checked 2026-10.
+- Why low abandon?
+- The agent is reserved.
+- Outbound product page
+- Sources and go deeper
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- Dialer product page. vendor. https://www.five9.com/products/capabilities/dialer-system. last checked 2026-10.
+- confirm. Five9 publishes both 'one customer per available agent' and 'adaptively control dialing pace' for progressive. This lab does not know which sentence the current build implements.. last checked 2026-10.
+- Simulator?
+- Teaching model.
+- Outbound product page
+- Sources and go deeper
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- Dialer product page. vendor. https://www.five9.com/products/capabilities/dialer-system. last checked 2026-10.
+- confirm. Five9 publishes both 'one customer per available agent' and 'adaptively control dialing pace' for progressive. This lab does not know which sentence the current build implements.. last checked 2026-10.
+- Who sets the ratio?
+- The administrator.
+- Dialer product page
+- Sources and go deeper
+- Dialer product page. vendor. https://www.five9.com/products/capabilities/dialer-system. last checked 2026-10.
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- Who is it for?
+- Small team, large list.
+- Dialer product page
+- Sources and go deeper
+- Dialer product page. vendor. https://www.five9.com/products/capabilities/dialer-system. last checked 2026-10.
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- Extra live answer?
+- An abandon.
+- Dialer product page
+- Sources and go deeper
+- Dialer product page. vendor. https://www.five9.com/products/capabilities/dialer-system. last checked 2026-10.
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- Where is the brake?
+- Abandon monitor and max percent.
+- Dialer product page
+- Sources and go deeper
+- Dialer product page. vendor. https://www.five9.com/products/capabilities/dialer-system. last checked 2026-10.
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- Ten-agent line?
+- Dialer page guidance.
+- Dialer product page
+- Sources and go deeper
+- Dialer product page. vendor. https://www.five9.com/products/capabilities/dialer-system. last checked 2026-10.
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- Dialing modes live testing. community. https://community.five9.com/s/article/Administrator-Campaign-Dialing-Modes-and-Live-Testing-Results. last checked 2026-10.
+- confirm. The exact throttle curve is not specified on the default-settings page. The community test article disagrees with itself about an instant drop to 1:1.. last checked 2026-10.
+- US window?
+- 30 days.
+- Dialer product page
+- Sources and go deeper
+- Dialer product page. vendor. https://www.five9.com/products/capabilities/dialer-system. last checked 2026-10.
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- Dialing modes live testing. community. https://community.five9.com/s/article/Administrator-Campaign-Dialing-Modes-and-Live-Testing-Results. last checked 2026-10.
+- confirm. The exact throttle curve is not specified on the default-settings page. The community test article disagrees with itself about an instant drop to 1:1.. last checked 2026-10.
+- Test article?
+- Mixed field note.
+- Dialer product page
+- Sources and go deeper
+- Dialer product page. vendor. https://www.five9.com/products/capabilities/dialer-system. last checked 2026-10.
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- Dialing modes live testing. community. https://community.five9.com/s/article/Administrator-Campaign-Dialing-Modes-and-Live-Testing-Results. last checked 2026-10.
+- confirm. The exact throttle curve is not specified on the default-settings page. The community test article disagrees with itself about an instant drop to 1:1.. last checked 2026-10.
+- Simulator window?
+- Not Five9's 30 days.
+- Dialer product page
+- Sources and go deeper
+- Dialer product page. vendor. https://www.five9.com/products/capabilities/dialer-system. last checked 2026-10.
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- Dialing modes live testing. community. https://community.five9.com/s/article/Administrator-Campaign-Dialing-Modes-and-Live-Testing-Results. last checked 2026-10.
+- confirm. The exact throttle curve is not specified on the default-settings page. The community test article disagrees with itself about an instant drop to 1:1.. last checked 2026-10.
+- Where does the mode exist?
+- Domains enabled for it, with no other mode.
+- TCPA manual touch
+- Sources and go deeper
+- TCPA manual touch. community. https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US. last checked 2026-10.
+- Telephone Consumer Protection Act of 1991. wikipedia. https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991. last checked 2026-10.
+- Paste?
+- Blocked.
+- TCPA manual touch
+- Sources and go deeper
+- TCPA manual touch. community. https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US. last checked 2026-10.
+- Telephone Consumer Protection Act of 1991. wikipedia. https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991. last checked 2026-10.
+- Dial enables when?
+- The typed number matches.
+- TCPA manual touch
+- Sources and go deeper
+- TCPA manual touch. community. https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US. last checked 2026-10.
+- Telephone Consumer Protection Act of 1991. wikipedia. https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991. last checked 2026-10.
+- Timeout?
+- Not Ready, no auto-dial.
+- TCPA manual touch
+- Sources and go deeper
+- TCPA manual touch. community. https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US. last checked 2026-10.
+- Telephone Consumer Protection Act of 1991. wikipedia. https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991. last checked 2026-10.
+- Why defaults?
+- A stated compliance posture.
+- Default campaign settings
+- Sources and go deeper
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- Example warning?
+- Max abandon percent.
+- Default campaign settings
+- Sources and go deeper
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- US vs UK?
+- 30 days vs 24 hours.
+- Default campaign settings
+- Sources and go deeper
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- Where is the legal text?
+- The agency rule, not this lab.
+- Default campaign settings
+- Sources and go deeper
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- No consent?
+- TCPA manual touch on an enabled domain.
+- Dialer product page
+- Sources and go deeper
+- Dialer product page. vendor. https://www.five9.com/products/capabilities/dialer-system. last checked 2026-10.
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- TCPA manual touch. community. https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US. last checked 2026-10.
+- Telephone Consumer Protection Act of 1991. wikipedia. https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991. last checked 2026-10.
+- Forty agents?
+- Predictive, eyes open.
+- Dialer product page
+- Sources and go deeper
+- Dialer product page. vendor. https://www.five9.com/products/capabilities/dialer-system. last checked 2026-10.
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- TCPA manual touch. community. https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US. last checked 2026-10.
+- Telephone Consumer Protection Act of 1991. wikipedia. https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991. last checked 2026-10.
+- No drops, small team?
+- Progressive.
+- Dialer product page
+- Sources and go deeper
+- Dialer product page. vendor. https://www.five9.com/products/capabilities/dialer-system. last checked 2026-10.
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- TCPA manual touch. community. https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US. last checked 2026-10.
+- Telephone Consumer Protection Act of 1991. wikipedia. https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991. last checked 2026-10.
+- System of record?
+- The domain dialog.
+- Dialer product page
+- Sources and go deeper
+- Dialer product page. vendor. https://www.five9.com/products/capabilities/dialer-system. last checked 2026-10.
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- TCPA manual touch. community. https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US. last checked 2026-10.
+- Telephone Consumer Protection Act of 1991. wikipedia. https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991. last checked 2026-10.
+- What is blended?
+- Agents moving across inbound and outbound.
+- Outbound product page
+- Sources and go deeper
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Dialer product page. vendor. https://www.five9.com/products/capabilities/dialer-system. last checked 2026-10.
+- confirm. A community test note says predictive agents should not also be skilled for inbound. That is consistent with the product story and is still a field note, not a settings screenshot.. last checked 2026-10.
+- Is it a campaign type?
+- Not in the planning list.
+- Outbound product page
+- Sources and go deeper
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Dialer product page. vendor. https://www.five9.com/products/capabilities/dialer-system. last checked 2026-10.
+- confirm. A community test note says predictive agents should not also be skilled for inbound. That is consistent with the product story and is still a field note, not a settings screenshot.. last checked 2026-10.
+- Predictive plus shared agents?
+- Availability gets stolen.
+- Outbound product page
+- Sources and go deeper
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Dialer product page. vendor. https://www.five9.com/products/capabilities/dialer-system. last checked 2026-10.
+- confirm. A community test note says predictive agents should not also be skilled for inbound. That is consistent with the product story and is still a field note, not a settings screenshot.. last checked 2026-10.
+- How do you build it?
+- Skills and running campaigns.
+- Outbound product page
+- Sources and go deeper
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Dialer product page. vendor. https://www.five9.com/products/capabilities/dialer-system. last checked 2026-10.
+- confirm. A community test note says predictive agents should not also be skilled for inbound. That is consistent with the product story and is still a field note, not a settings screenshot.. last checked 2026-10.
+- Planning extras?
+- Prompts and IVR.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Needs a list?
+- Yes.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Skill tab?
+- Outbound Skills.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Read-first alternative?
+- Outbound preview.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Numeric ratio in this lesson?
+- None.
+- Inbound campaigns
+- Sources and go deeper
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- confirm. The numeric behavior of campaign priority and ratio settings is in a guide topic this lab did not quote. Do not copy a ratio from the simulator into that dialog.. last checked 2026-10.
+- Steal rule?
+- Write who may take the agent.
+- Inbound campaigns
+- Sources and go deeper
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- confirm. The numeric behavior of campaign priority and ratio settings is in a guide topic this lab did not quote. Do not copy a ratio from the simulator into that dialog.. last checked 2026-10.
+- Predictive on a shared pod?
+- Exposed.
+- Inbound campaigns
+- Sources and go deeper
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- confirm. The numeric behavior of campaign priority and ratio settings is in a guide topic this lab did not quote. Do not copy a ratio from the simulator into that dialog.. last checked 2026-10.
+- Service level?
+- A measure, not the dialer.
+- Inbound campaigns
+- Sources and go deeper
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- confirm. The numeric behavior of campaign priority and ratio settings is in a guide topic this lab did not quote. Do not copy a ratio from the simulator into that dialog.. last checked 2026-10.
+- TCPA timeout?
+- Not Ready, no dial.
+- TCPA manual touch
+- Sources and go deeper
+- TCPA manual touch. community. https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US. last checked 2026-10.
+- Generating standard reports. community. https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports. last checked 2026-10.
+- Telephone Consumer Protection Act of 1991. wikipedia. https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991. last checked 2026-10.
+- Count them as free?
+- No.
+- TCPA manual touch
+- Sources and go deeper
+- TCPA manual touch. community. https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US. last checked 2026-10.
+- Generating standard reports. community. https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports. last checked 2026-10.
+- Telephone Consumer Protection Act of 1991. wikipedia. https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991. last checked 2026-10.
+- Which report category?
+- Agent reports.
+- TCPA manual touch
+- Sources and go deeper
+- TCPA manual touch. community. https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US. last checked 2026-10.
+- Generating standard reports. community. https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports. last checked 2026-10.
+- Telephone Consumer Protection Act of 1991. wikipedia. https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991. last checked 2026-10.
+- Adding lines?
+- Makes abandon worse.
+- TCPA manual touch
+- Sources and go deeper
+- TCPA manual touch. community. https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US. last checked 2026-10.
+- Generating standard reports. community. https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports. last checked 2026-10.
+- Telephone Consumer Protection Act of 1991. wikipedia. https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991. last checked 2026-10.
+- Final code?
+- Stops the record.
+- Managing campaign dispositions
+- Sources and go deeper
+- Managing campaign dispositions. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dispositions/managing-dispositions.htm. last checked 2026-10.
+- Pause before transfer. community. https://community.five9.com/s/article/Administrator-Pause-Before-Transfer?language=en_US. last checked 2026-10.
+- Pause vs wrap?
+- Different gaps.
+- Managing campaign dispositions
+- Sources and go deeper
+- Managing campaign dispositions. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dispositions/managing-dispositions.htm. last checked 2026-10.
+- Pause before transfer. community. https://community.five9.com/s/article/Administrator-Pause-Before-Transfer?language=en_US. last checked 2026-10.
+- Default system redials?
+- Often five.
+- Managing campaign dispositions
+- Sources and go deeper
+- Managing campaign dispositions. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dispositions/managing-dispositions.htm. last checked 2026-10.
+- Pause before transfer. community. https://community.five9.com/s/article/Administrator-Pause-Before-Transfer?language=en_US. last checked 2026-10.
+- Simulator wrap?
+- Teaching delay.
+- Managing campaign dispositions
+- Sources and go deeper
+- Managing campaign dispositions. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dispositions/managing-dispositions.htm. last checked 2026-10.
+- Pause before transfer. community. https://community.five9.com/s/article/Administrator-Pause-Before-Transfer?language=en_US. last checked 2026-10.
+- Blend includes digital?
+- The outbound page says so.
+- Outbound product page
+- Sources and go deeper
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- Plus promise?
+- One screen.
+- Outbound product page
+- Sources and go deeper
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- Text blocked?
+- Antivirus is a documented suspect.
+- Outbound product page
+- Sources and go deeper
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- Chat and predictive?
+- The agent is busy.
+- Outbound product page
+- Sources and go deeper
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- No screen, no design?
+- Correct.
+- Outbound product page
+- Sources and go deeper
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- Dialer product page. vendor. https://www.five9.com/products/capabilities/dialer-system. last checked 2026-10.
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Simulator equals domain?
+- No.
+- Outbound product page
+- Sources and go deeper
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- Dialer product page. vendor. https://www.five9.com/products/capabilities/dialer-system. last checked 2026-10.
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- US window?
+- 30 days.
+- Outbound product page
+- Sources and go deeper
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- Dialer product page. vendor. https://www.five9.com/products/capabilities/dialer-system. last checked 2026-10.
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Dedicated pod?
+- Outside the steal rule.
+- Outbound product page
+- Sources and go deeper
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- Dialer product page. vendor. https://www.five9.com/products/capabilities/dialer-system. last checked 2026-10.
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Is Hangup in the chapter list?
+- Not in the list this lab read.
+- IVR modules
+- Sources and go deeper
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Skill Transfer functions. community. https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- confirm. Some third-party notes mention a hangup behavior. It is not in the modules chapter quoted here.. last checked 2026-10.
+- When does Skill Transfer finish the script?
+- When an agent connects.
+- IVR modules
+- Sources and go deeper
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Skill Transfer functions. community. https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- confirm. Some third-party notes mention a hangup behavior. It is not in the modules chapter quoted here.. last checked 2026-10.
+- Bench JSON?
+- Not a VCC import.
+- IVR modules
+- Sources and go deeper
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Skill Transfer functions. community. https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- confirm. Some third-party notes mention a hangup behavior. It is not in the modules chapter quoted here.. last checked 2026-10.
+- Menu exists?
+- Yes.
+- IVR modules
+- Sources and go deeper
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Skill Transfer functions. community. https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- confirm. Some third-party notes mention a hangup behavior. It is not in the modules chapter quoted here.. last checked 2026-10.
+- ZIP module?
+- Input.
+- IVR modules
+- Sources and go deeper
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Menu module. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/menu-module.htm. last checked 2026-10.
+- XML web service IVR example. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/examples/creating-ivr-script-xml-web-service-query.htm. last checked 2026-10.
+- RFC 4733. rfc. https://www.rfc-editor.org/rfc/rfc4733. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Why No Match?
+- Wrong input needs an exit.
+- IVR modules
+- Sources and go deeper
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Menu module. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/menu-module.htm. last checked 2026-10.
+- XML web service IVR example. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/examples/creating-ivr-script-xml-web-service-query.htm. last checked 2026-10.
+- RFC 4733. rfc. https://www.rfc-editor.org/rfc/rfc4733. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Speech modules?
+- Voice Input and Natural Language Processing.
+- IVR modules
+- Sources and go deeper
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Menu module. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/menu-module.htm. last checked 2026-10.
+- XML web service IVR example. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/examples/creating-ivr-script-xml-web-service-query.htm. last checked 2026-10.
+- RFC 4733. rfc. https://www.rfc-editor.org/rfc/rfc4733. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- TTS?
+- Yes, in the example.
+- IVR modules
+- Sources and go deeper
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Menu module. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/menu-module.htm. last checked 2026-10.
+- XML web service IVR example. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/examples/creating-ivr-script-xml-web-service-query.htm. last checked 2026-10.
+- RFC 4733. rfc. https://www.rfc-editor.org/rfc/rfc4733. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Two ways?
+- If/Else.
+- If/Else module
+- Sources and go deeper
+- If/Else module. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/ifelse-module.htm. last checked 2026-10.
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Three ways?
+- Case.
+- If/Else module
+- Sources and go deeper
+- If/Else module. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/ifelse-module.htm. last checked 2026-10.
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Who writes the condition?
+- You do.
+- If/Else module
+- Sources and go deeper
+- If/Else module. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/ifelse-module.htm. last checked 2026-10.
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Caller choice?
+- Menu, not If/Else.
+- If/Else module
+- Sources and go deeper
+- If/Else module. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/ifelse-module.htm. last checked 2026-10.
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Either skill or both?
+- Either.
+- Skill Transfer functions
+- Sources and go deeper
+- Skill Transfer functions. community. https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features. last checked 2026-10.
+- Skill Transfer module chapter. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/skill-transfer-module.htm. last checked 2026-10.
+- Pause before transfer. community. https://community.five9.com/s/article/Administrator-Pause-Before-Transfer?language=en_US. last checked 2026-10.
+- confirm. The article says six tabs and then lists seven names. The editor is the count that matters.. last checked 2026-10.
+- Report recommendation?
+- One skill per module.
+- Skill Transfer functions
+- Sources and go deeper
+- Skill Transfer functions. community. https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features. last checked 2026-10.
+- Skill Transfer module chapter. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/skill-transfer-module.htm. last checked 2026-10.
+- Pause before transfer. community. https://community.five9.com/s/article/Administrator-Pause-Before-Transfer?language=en_US. last checked 2026-10.
+- confirm. The article says six tabs and then lists seven names. The editor is the count that matters.. last checked 2026-10.
+- No skill?
+- Default queue.
+- Skill Transfer functions
+- Sources and go deeper
+- Skill Transfer functions. community. https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features. last checked 2026-10.
+- Skill Transfer module chapter. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/skill-transfer-module.htm. last checked 2026-10.
+- Pause before transfer. community. https://community.five9.com/s/article/Administrator-Pause-Before-Transfer?language=en_US. last checked 2026-10.
+- confirm. The article says six tabs and then lists seven names. The editor is the count that matters.. last checked 2026-10.
+- Article's default disposition?
+- Abandon.
+- Skill Transfer functions
+- Sources and go deeper
+- Skill Transfer functions. community. https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features. last checked 2026-10.
+- Skill Transfer module chapter. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/skill-transfer-module.htm. last checked 2026-10.
+- Pause before transfer. community. https://community.five9.com/s/article/Administrator-Pause-Before-Transfer?language=en_US. last checked 2026-10.
+- confirm. The article says six tabs and then lists seven names. The editor is the count that matters.. last checked 2026-10.
+- Example request?
+- XML web service POST.
+- XML web service IVR example
+- Sources and go deeper
+- XML web service IVR example. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/examples/creating-ivr-script-xml-web-service-query.htm. last checked 2026-10.
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Call variables for reporting. community. https://community.five9.com/s/article/Administrator-Enabling-Call-Variables-for-Reporting?language=en_US. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Why script variables?
+- No agent on that call.
+- XML web service IVR example
+- Sources and go deeper
+- XML web service IVR example. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/examples/creating-ivr-script-xml-web-service-query.htm. last checked 2026-10.
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Call variables for reporting. community. https://community.five9.com/s/article/Administrator-Enabling-Call-Variables-for-Reporting?language=en_US. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- History backfill?
+- No.
+- XML web service IVR example
+- Sources and go deeper
+- XML web service IVR example. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/examples/creating-ivr-script-xml-web-service-query.htm. last checked 2026-10.
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Call variables for reporting. community. https://community.five9.com/s/article/Administrator-Enabling-Call-Variables-for-Reporting?language=en_US. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Lookup exists?
+- Yes.
+- XML web service IVR example
+- Sources and go deeper
+- XML web service IVR example. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/examples/creating-ivr-script-xml-web-service-query.htm. last checked 2026-10.
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Call variables for reporting. community. https://community.five9.com/s/article/Administrator-Enabling-Call-Variables-for-Reporting?language=en_US. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Jump to another script?
+- Foreign Script.
+- IVR modules
+- Sources and go deeper
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Studio digital IVA with VCC. community. https://community.five9.com/s/article/Studio-7-Integrate-Digital-IVA-in-Studio-with-VCC?language=en_US. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- confirm. Public pages describe IVA Transfer and a digital ChatBot integration separately. This lab does not claim they share one property sheet.. last checked 2026-10.
+- Opt out?
+- Set DNC.
+- IVR modules
+- Sources and go deeper
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Studio digital IVA with VCC. community. https://community.five9.com/s/article/Studio-7-Integrate-Digital-IVA-in-Studio-with-VCC?language=en_US. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- confirm. Public pages describe IVA Transfer and a digital ChatBot integration separately. This lab does not claim they share one property sheet.. last checked 2026-10.
+- Digital keys?
+- Build permission plus a task key.
+- IVR modules
+- Sources and go deeper
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Studio digital IVA with VCC. community. https://community.five9.com/s/article/Studio-7-Integrate-Digital-IVA-in-Studio-with-VCC?language=en_US. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- confirm. Public pages describe IVA Transfer and a digital ChatBot integration separately. This lab does not claim they share one property sheet.. last checked 2026-10.
+- Third party stays on your skill?
+- No.
+- IVR modules
+- Sources and go deeper
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Studio digital IVA with VCC. community. https://community.five9.com/s/article/Studio-7-Integrate-Digital-IVA-in-Studio-with-VCC?language=en_US. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- confirm. Public pages describe IVA Transfer and a digital ChatBot integration separately. This lab does not claim they share one property sheet.. last checked 2026-10.
+- Which header?
+- X-Frame-Options.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- confirm. The PDF's browser matrix is historical. Current browser behavior has to be tested.. last checked 2026-10.
+- Trust the old browser table?
+- No. Retest.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- confirm. The PDF's browser matrix is historical. Current browser behavior has to be tested.. last checked 2026-10.
+- Who turns it on?
+- A VCC administrator.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- confirm. The PDF's browser matrix is historical. Current browser behavior has to be tested.. last checked 2026-10.
+- Voice versus visual?
+- Different surfaces.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- confirm. The PDF's browser matrix is historical. Current browser behavior has to be tested.. last checked 2026-10.
+- Membership?
+- Agent or supervisor.
+- Skill groups
+- Sources and go deeper
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- Empty skill?
+- No delivery.
+- Skill groups
+- Sources and go deeper
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- Service level?
+- On the skill.
+- Skill groups
+- Sources and go deeper
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- Several skills per user?
+- Yes.
+- Skill groups
+- Sources and go deeper
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- Inbound tab?
+- Outbound Skills.
+- Skill groups
+- Sources and go deeper
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- Ready but wrong tab?
+- No offer.
+- Skill groups
+- Sources and go deeper
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- Autodial?
+- Same tab as inbound.
+- Skill groups
+- Sources and go deeper
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- Where documented?
+- Skill groups topic.
+- Skill groups
+- Sources and go deeper
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- Any or all?
+- Any one skill.
+- Skill Transfer functions
+- Sources and go deeper
+- Skill Transfer functions. community. https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features. last checked 2026-10.
+- Report tip?
+- One skill.
+- Skill Transfer functions
+- Sources and go deeper
+- Skill Transfer functions. community. https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features. last checked 2026-10.
+- Deliberate pool?
+- Allowed if intended.
+- Skill Transfer functions
+- Sources and go deeper
+- Skill Transfer functions. community. https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features. last checked 2026-10.
+- No selection?
+- Default.
+- Skill Transfer functions
+- Sources and go deeper
+- Skill Transfer functions. community. https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features. last checked 2026-10.
+- Same number?
+- No.
+- Skill Transfer functions
+- Sources and go deeper
+- Skill Transfer functions. community. https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features. last checked 2026-10.
+- confirm. The article names the option. The exact screen where an agent's skill level is edited was not quoted in this lab.. last checked 2026-10.
+- What does ignore-order do?
+- Uses agent skill level.
+- Skill Transfer functions
+- Sources and go deeper
+- Skill Transfer functions. community. https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features. last checked 2026-10.
+- confirm. The article names the option. The exact screen where an agent's skill level is edited was not quoted in this lab.. last checked 2026-10.
+- Click-path quoted here?
+- No.
+- Skill Transfer functions
+- Sources and go deeper
+- Skill Transfer functions. community. https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features. last checked 2026-10.
+- confirm. The article names the option. The exact screen where an agent's skill level is edited was not quoted in this lab.. last checked 2026-10.
+- Switch off?
+- List order stands.
+- Skill Transfer functions
+- Sources and go deeper
+- Skill Transfer functions. community. https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features. last checked 2026-10.
+- confirm. The article names the option. The exact screen where an agent's skill level is edited was not quoted in this lab.. last checked 2026-10.
+- No selection?
+- Default queue.
+- Skill Transfer functions
+- Sources and go deeper
+- Skill Transfer functions. community. https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features. last checked 2026-10.
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- Label?
+- Default.
+- Skill Transfer functions
+- Sources and go deeper
+- Skill Transfer functions. community. https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features. last checked 2026-10.
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- User with no skills?
+- Catch-all eligible.
+- Skill Transfer functions
+- Sources and go deeper
+- Skill Transfer functions. community. https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features. last checked 2026-10.
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- Safe pattern?
+- Name the skill.
+- Skill Transfer functions
+- Sources and go deeper
+- Skill Transfer functions. community. https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features. last checked 2026-10.
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- Target without people?
+- Still misses.
+- Skill groups
+- Sources and go deeper
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- What steers?
+- Priority.
+- Skill groups
+- Sources and go deeper
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- Where is the target?
+- The skill.
+- Skill groups
+- Sources and go deeper
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- Easier target?
+- A new definition, not new staff.
+- Skill groups
+- Sources and go deeper
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- Greeting object?
+- Skill audio.
+- Skill groups
+- Sources and go deeper
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- Skill Transfer functions. community. https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features. last checked 2026-10.
+- Default callback code?
+- Abandon. Replace it.
+- Skill groups
+- Sources and go deeper
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- Skill Transfer functions. community. https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features. last checked 2026-10.
+- Why a specific code?
+- So the promise is visible.
+- Skill groups
+- Sources and go deeper
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- Skill Transfer functions. community. https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features. last checked 2026-10.
+- Cell mailbox?
+- Not this object.
+- Skill groups
+- Sources and go deeper
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- Skill Transfer functions. community. https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features. last checked 2026-10.
+- Form factor?
+- One screen.
+- Agent Desktop
+- Sources and go deeper
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Five9 Engage. vendor. https://www.five9.com/platform/self-service-and-engagement. last checked 2026-10.
+- Transcription source?
+- Engage page.
+- Agent Desktop
+- Sources and go deeper
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Five9 Engage. vendor. https://www.five9.com/platform/self-service-and-engagement. last checked 2026-10.
+- Adapter voice stack?
+- Same underlying technology, per the desktop page.
+- Agent Desktop
+- Sources and go deeper
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Five9 Engage. vendor. https://www.five9.com/platform/self-service-and-engagement. last checked 2026-10.
+- Assist bandwidth?
+- 12 kbps extra.
+- Agent Desktop
+- Sources and go deeper
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Five9 Engage. vendor. https://www.five9.com/platform/self-service-and-engagement. last checked 2026-10.
+- Adapter transport?
+- HTTPS and WSS.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- Web adapter requirements. vendor. https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/agent-integrations/web-based-adapters/application-requirements.htm. last checked 2026-10.
+- RFC 8446, TLS 1.3. rfc. https://www.rfc-editor.org/rfc/rfc8446. last checked 2026-10.
+- RFC 6455, The WebSocket Protocol. rfc. https://www.rfc-editor.org/rfc/rfc6455. last checked 2026-10.
+- Proxy?
+- Must support WSS.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- Web adapter requirements. vendor. https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/agent-integrations/web-based-adapters/application-requirements.htm. last checked 2026-10.
+- RFC 8446, TLS 1.3. rfc. https://www.rfc-editor.org/rfc/rfc8446. last checked 2026-10.
+- RFC 6455, The WebSocket Protocol. rfc. https://www.rfc-editor.org/rfc/rfc6455. last checked 2026-10.
+- TLS 1.1?
+- Not supported.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- Web adapter requirements. vendor. https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/agent-integrations/web-based-adapters/application-requirements.htm. last checked 2026-10.
+- RFC 8446, TLS 1.3. rfc. https://www.rfc-editor.org/rfc/rfc8446. last checked 2026-10.
+- RFC 6455, The WebSocket Protocol. rfc. https://www.rfc-editor.org/rfc/rfc6455. last checked 2026-10.
+- Pop down, voice up?
+- Look at WSS.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- Web adapter requirements. vendor. https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/agent-integrations/web-based-adapters/application-requirements.htm. last checked 2026-10.
+- RFC 8446, TLS 1.3. rfc. https://www.rfc-editor.org/rfc/rfc8446. last checked 2026-10.
+- RFC 6455, The WebSocket Protocol. rfc. https://www.rfc-editor.org/rfc/rfc6455. last checked 2026-10.
+- Where is Assist named?
+- Engage.
+- Five9 Engage
+- Sources and go deeper
+- Five9 Engage. vendor. https://www.five9.com/platform/self-service-and-engagement. last checked 2026-10.
+- GenAI Studio. vendor. https://www.five9.com/products/capabilities/gen-ai-studio. last checked 2026-10.
+- confirm. GenAI Studio is described as engine-agnostic. This lab does not name the default model for a new domain.. last checked 2026-10.
+- Studio's first named app?
+- Summaries, among Agent Assist.
+- Five9 Engage
+- Sources and go deeper
+- Five9 Engage. vendor. https://www.five9.com/platform/self-service-and-engagement. last checked 2026-10.
+- GenAI Studio. vendor. https://www.five9.com/products/capabilities/gen-ai-studio. last checked 2026-10.
+- confirm. GenAI Studio is described as engine-agnostic. This lab does not name the default model for a new domain.. last checked 2026-10.
+- Universal model name?
+- Do not assume one.
+- Five9 Engage
+- Sources and go deeper
+- Five9 Engage. vendor. https://www.five9.com/platform/self-service-and-engagement. last checked 2026-10.
+- GenAI Studio. vendor. https://www.five9.com/products/capabilities/gen-ai-studio. last checked 2026-10.
+- confirm. GenAI Studio is described as engine-agnostic. This lab does not name the default model for a new domain.. last checked 2026-10.
+- Why the same screen?
+- So the agent sees it.
+- Five9 Engage
+- Sources and go deeper
+- Five9 Engage. vendor. https://www.five9.com/platform/self-service-and-engagement. last checked 2026-10.
+- GenAI Studio. vendor. https://www.five9.com/products/capabilities/gen-ai-studio. last checked 2026-10.
+- confirm. GenAI Studio is described as engine-agnostic. This lab does not name the default model for a new domain.. last checked 2026-10.
+- What does Plus show from WEM?
+- Schedules, adherence, time off, evaluations.
+- Agent Desktop
+- Sources and go deeper
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- Break equals idle?
+- No.
+- Agent Desktop
+- Sources and go deeper
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- CRM path?
+- WFO connectors, per the desktop page.
+- Agent Desktop
+- Sources and go deeper
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- Adherence?
+- Plan versus actual.
+- Agent Desktop
+- Sources and go deeper
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- Avast example means?
+- AV can block text.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Blank text suspect?
+- Antivirus.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Dropped call suspect?
+- Efficiency Mode, among others.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Change both at once?
+- No.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Analog?
+- Not supported.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- RFC 3550, RTP. rfc. https://www.rfc-editor.org/rfc/rfc3550. last checked 2026-10.
+- RFC 3551, RTP profile for audio and video. rfc. https://www.rfc-editor.org/rfc/rfc3551. last checked 2026-10.
+- ITU-T G.711. standard. https://www.itu.int/rec/T-REC-G.711. last checked 2026-10.
+- confirm. The iPad supervisor section says G711U and G711A are primary and that GSM or iLBC may be used but have not been tested. That sentence is about that app, not a blanket codec menu.. last checked 2026-10.
+- 5G agent path?
+- Not supported.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- RFC 3550, RTP. rfc. https://www.rfc-editor.org/rfc/rfc3550. last checked 2026-10.
+- RFC 3551, RTP profile for audio and video. rfc. https://www.rfc-editor.org/rfc/rfc3551. last checked 2026-10.
+- ITU-T G.711. standard. https://www.itu.int/rec/T-REC-G.711. last checked 2026-10.
+- confirm. The iPad supervisor section says G711U and G711A are primary and that GSM or iLBC may be used but have not been tested. That sentence is about that app, not a blanket codec menu.. last checked 2026-10.
+- Default codec in that table?
+- G.711.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- RFC 3550, RTP. rfc. https://www.rfc-editor.org/rfc/rfc3550. last checked 2026-10.
+- RFC 3551, RTP profile for audio and video. rfc. https://www.rfc-editor.org/rfc/rfc3551. last checked 2026-10.
+- ITU-T G.711. standard. https://www.itu.int/rec/T-REC-G.711. last checked 2026-10.
+- confirm. The iPad supervisor section says G711U and G711A are primary and that GSM or iLBC may be used but have not been tested. That sentence is about that app, not a blanket codec menu.. last checked 2026-10.
+- One-way latency?
+- Under 150 ms.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- RFC 3550, RTP. rfc. https://www.rfc-editor.org/rfc/rfc3550. last checked 2026-10.
+- RFC 3551, RTP profile for audio and video. rfc. https://www.rfc-editor.org/rfc/rfc3551. last checked 2026-10.
+- ITU-T G.711. standard. https://www.itu.int/rec/T-REC-G.711. last checked 2026-10.
+- confirm. The iPad supervisor section says G711U and G711A are primary and that GSM or iLBC may be used but have not been tested. That sentence is about that app, not a blanket codec menu.. last checked 2026-10.
+- One-way audio next stop?
+- NAT and SIP.
+- Agent Desktop
+- Sources and go deeper
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- IANA service names and port numbers. ports. https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- RFC 8446, TLS 1.3. rfc. https://www.rfc-editor.org/rfc/rfc8446. last checked 2026-10.
+- RFC 6455, The WebSocket Protocol. rfc. https://www.rfc-editor.org/rfc/rfc6455. last checked 2026-10.
+- RFC 1918, private internet addresses. rfc. https://www.rfc-editor.org/rfc/rfc1918. last checked 2026-10.
+- RFC 4787, NAT behavior for UDP. rfc. https://www.rfc-editor.org/rfc/rfc4787. last checked 2026-10.
+- Efficiency Mode?
+- Desktop review.
+- Agent Desktop
+- Sources and go deeper
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- IANA service names and port numbers. ports. https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- RFC 8446, TLS 1.3. rfc. https://www.rfc-editor.org/rfc/rfc8446. last checked 2026-10.
+- RFC 6455, The WebSocket Protocol. rfc. https://www.rfc-editor.org/rfc/rfc6455. last checked 2026-10.
+- RFC 1918, private internet addresses. rfc. https://www.rfc-editor.org/rfc/rfc1918. last checked 2026-10.
+- RFC 4787, NAT behavior for UDP. rfc. https://www.rfc-editor.org/rfc/rfc4787. last checked 2026-10.
+- WSS?
+- Desktop review.
+- Agent Desktop
+- Sources and go deeper
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- IANA service names and port numbers. ports. https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- RFC 8446, TLS 1.3. rfc. https://www.rfc-editor.org/rfc/rfc8446. last checked 2026-10.
+- RFC 6455, The WebSocket Protocol. rfc. https://www.rfc-editor.org/rfc/rfc6455. last checked 2026-10.
+- RFC 1918, private internet addresses. rfc. https://www.rfc-editor.org/rfc/rfc1918. last checked 2026-10.
+- RFC 4787, NAT behavior for UDP. rfc. https://www.rfc-editor.org/rfc/rfc4787. last checked 2026-10.
+- Skip the schedule?
+- You will mis-count people.
+- Agent Desktop
+- Sources and go deeper
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- IANA service names and port numbers. ports. https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- RFC 8446, TLS 1.3. rfc. https://www.rfc-editor.org/rfc/rfc8446. last checked 2026-10.
+- RFC 6455, The WebSocket Protocol. rfc. https://www.rfc-editor.org/rfc/rfc6455. last checked 2026-10.
+- RFC 1918, private internet addresses. rfc. https://www.rfc-editor.org/rfc/rfc1918. last checked 2026-10.
+- RFC 4787, NAT behavior for UDP. rfc. https://www.rfc-editor.org/rfc/rfc4787. last checked 2026-10.
+- Verint?
+- A named partner path, not the only path.
+- Workforce engagement management
+- Sources and go deeper
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- WEM data sheet. vendor. https://www.five9.com/resources/data-sheet/five9-wem. last checked 2026-10.
+- confirm. This lab does not know which suite a given customer bought. The product page says both native WEM and partners such as Verint are offered.. last checked 2026-10.
+- Data sheet pieces?
+- Recording, QM, WFM, analytics, surveys, connectors.
+- Workforce engagement management
+- Sources and go deeper
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- WEM data sheet. vendor. https://www.five9.com/resources/data-sheet/five9-wem. last checked 2026-10.
+- confirm. This lab does not know which suite a given customer bought. The product page says both native WEM and partners such as Verint are offered.. last checked 2026-10.
+- Who upgrades?
+- Five9, per the page.
+- Workforce engagement management
+- Sources and go deeper
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- WEM data sheet. vendor. https://www.five9.com/resources/data-sheet/five9-wem. last checked 2026-10.
+- confirm. This lab does not know which suite a given customer bought. The product page says both native WEM and partners such as Verint are offered.. last checked 2026-10.
+- Guess the vendor?
+- No.
+- Workforce engagement management
+- Sources and go deeper
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- WEM data sheet. vendor. https://www.five9.com/resources/data-sheet/five9-wem. last checked 2026-10.
+- confirm. This lab does not know which suite a given customer bought. The product page says both native WEM and partners such as Verint are offered.. last checked 2026-10.
+- Does WFM pick preview vs power?
+- No. It staffs.
+- Workforce engagement management
+- Sources and go deeper
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Break?
+- Not available.
+- Workforce engagement management
+- Sources and go deeper
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Adherence?
+- Plan versus actual.
+- Workforce engagement management
+- Sources and go deeper
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Service level needs?
+- The people.
+- Workforce engagement management
+- Sources and go deeper
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Where do agents read evaluations?
+- Plus, per the desktop page.
+- Workforce engagement management
+- Sources and go deeper
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- End user license agreement. vendor. https://www.five9.com/legal/end-user-license-agreement. last checked 2026-10.
+- Hold recorded?
+- Yes, per the EULA.
+- Workforce engagement management
+- Sources and go deeper
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- End user license agreement. vendor. https://www.five9.com/legal/end-user-license-agreement. last checked 2026-10.
+- Who handles consent?
+- The customer, per the EULA.
+- Workforce engagement management
+- Sources and go deeper
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- End user license agreement. vendor. https://www.five9.com/legal/end-user-license-agreement. last checked 2026-10.
+- Wrong form?
+- Teaches the wrong work.
+- Workforce engagement management
+- Sources and go deeper
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- End user license agreement. vendor. https://www.five9.com/legal/end-user-license-agreement. last checked 2026-10.
+- Survey versus abandon?
+- Different.
+- Workforce engagement management
+- Sources and go deeper
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- WEM data sheet. vendor. https://www.five9.com/resources/data-sheet/five9-wem. last checked 2026-10.
+- confirm. Screen names inside a partner analytics tool are not copied here.. last checked 2026-10.
+- A topic without an owner?
+- A poster.
+- Workforce engagement management
+- Sources and go deeper
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- WEM data sheet. vendor. https://www.five9.com/resources/data-sheet/five9-wem. last checked 2026-10.
+- confirm. Screen names inside a partner analytics tool are not copied here.. last checked 2026-10.
+- Screens identical?
+- Do not assume.
+- Workforce engagement management
+- Sources and go deeper
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- WEM data sheet. vendor. https://www.five9.com/resources/data-sheet/five9-wem. last checked 2026-10.
+- confirm. Screen names inside a partner analytics tool are not copied here.. last checked 2026-10.
+- Surveys in the data sheet?
+- Yes.
+- Workforce engagement management
+- Sources and go deeper
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- WEM data sheet. vendor. https://www.five9.com/resources/data-sheet/five9-wem. last checked 2026-10.
+- confirm. Screen names inside a partner analytics tool are not copied here.. last checked 2026-10.
+- VCC audio rule?
+- 30 days or successful offload, or the contract.
+- Data retention
+- Sources and go deeper
+- Data retention. vendor. https://www.five9.com/legal/dataretention. last checked 2026-10.
+- Enhanced 9-1-1. wikipedia. https://en.wikipedia.org/wiki/Enhanced_9-1-1. last checked 2026-10.
+- confirm. Contracts can override the published table. Read the agreement for the domain you are in.. last checked 2026-10.
+- Failed copy?
+- The clock continues.
+- Data retention
+- Sources and go deeper
+- Data retention. vendor. https://www.five9.com/legal/dataretention. last checked 2026-10.
+- Enhanced 9-1-1. wikipedia. https://en.wikipedia.org/wiki/Enhanced_9-1-1. last checked 2026-10.
+- confirm. Contracts can override the published table. Read the agreement for the domain you are in.. last checked 2026-10.
+- E911 audio?
+- 30 days on that page.
+- Data retention
+- Sources and go deeper
+- Data retention. vendor. https://www.five9.com/legal/dataretention. last checked 2026-10.
+- Enhanced 9-1-1. wikipedia. https://en.wikipedia.org/wiki/Enhanced_9-1-1. last checked 2026-10.
+- confirm. Contracts can override the published table. Read the agreement for the domain you are in.. last checked 2026-10.
+- Agent data?
+- 60 days on that page.
+- Data retention
+- Sources and go deeper
+- Data retention. vendor. https://www.five9.com/legal/dataretention. last checked 2026-10.
+- Enhanced 9-1-1. wikipedia. https://en.wikipedia.org/wiki/Enhanced_9-1-1. last checked 2026-10.
+- confirm. Contracts can override the published table. Read the agreement for the domain you are in.. last checked 2026-10.
+- Time off in Plus?
+- Named.
+- Agent Desktop
+- Sources and go deeper
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- confirm. Bidding rules are suite-specific and were not copied from a manual.. last checked 2026-10.
+- Shift bidding?
+- Named, rules not copied here.
+- Agent Desktop
+- Sources and go deeper
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- confirm. Bidding rules are suite-specific and were not copied from a manual.. last checked 2026-10.
+- Bid without a schedule change?
+- The dialer never sees it.
+- Agent Desktop
+- Sources and go deeper
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- confirm. Bidding rules are suite-specific and were not copied from a manual.. last checked 2026-10.
+- Second login?
+- Connector probably unused.
+- Agent Desktop
+- Sources and go deeper
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- confirm. Bidding rules are suite-specific and were not copied from a manual.. last checked 2026-10.
+- Approve time off here?
+- No.
+- Workforce engagement management
+- Sources and go deeper
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- Data retention. vendor. https://www.five9.com/legal/dataretention. last checked 2026-10.
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Pacing bench?
+- A model.
+- Workforce engagement management
+- Sources and go deeper
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- Data retention. vendor. https://www.five9.com/legal/dataretention. last checked 2026-10.
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Roster of record?
+- The suite.
+- Workforce engagement management
+- Sources and go deeper
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- Data retention. vendor. https://www.five9.com/legal/dataretention. last checked 2026-10.
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Recording after the clock?
+- The offload.
+- Workforce engagement management
+- Sources and go deeper
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- Data retention. vendor. https://www.five9.com/legal/dataretention. last checked 2026-10.
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Region matters?
+- Yes. Use the matching portal.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- IANA service names and port numbers. ports. https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- RFC 1035, domain names. rfc. https://www.rfc-editor.org/rfc/rfc1035. last checked 2026-10.
+- RFC 2782, DNS SRV. rfc. https://www.rfc-editor.org/rfc/rfc2782. last checked 2026-10.
+- RFC 9293, Transmission Control Protocol. rfc. https://www.rfc-editor.org/rfc/rfc9293. last checked 2026-10.
+- RFC 768, User Datagram Protocol. rfc. https://www.rfc-editor.org/rfc/rfc768. last checked 2026-10.
+- confirm. Studio signaling ports in the PDF are easy to misread as universal VCC trunk ports. Confirm which SBC your domain uses.. last checked 2026-10.
+- Legacy hosts listed?
+- Yes.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- IANA service names and port numbers. ports. https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- RFC 1035, domain names. rfc. https://www.rfc-editor.org/rfc/rfc1035. last checked 2026-10.
+- RFC 2782, DNS SRV. rfc. https://www.rfc-editor.org/rfc/rfc2782. last checked 2026-10.
+- RFC 9293, Transmission Control Protocol. rfc. https://www.rfc-editor.org/rfc/rfc9293. last checked 2026-10.
+- RFC 768, User Datagram Protocol. rfc. https://www.rfc-editor.org/rfc/rfc768. last checked 2026-10.
+- confirm. Studio signaling ports in the PDF are easy to misread as universal VCC trunk ports. Confirm which SBC your domain uses.. last checked 2026-10.
+- How to find SIP?
+- DNS SRV.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- IANA service names and port numbers. ports. https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- RFC 1035, domain names. rfc. https://www.rfc-editor.org/rfc/rfc1035. last checked 2026-10.
+- RFC 2782, DNS SRV. rfc. https://www.rfc-editor.org/rfc/rfc2782. last checked 2026-10.
+- RFC 9293, Transmission Control Protocol. rfc. https://www.rfc-editor.org/rfc/rfc9293. last checked 2026-10.
+- RFC 768, User Datagram Protocol. rfc. https://www.rfc-editor.org/rfc/rfc768. last checked 2026-10.
+- confirm. Studio signaling ports in the PDF are easy to misread as universal VCC trunk ports. Confirm which SBC your domain uses.. last checked 2026-10.
+- Paste Studio ports onto every trunk?
+- No. Confirm the family.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- IANA service names and port numbers. ports. https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- RFC 1035, domain names. rfc. https://www.rfc-editor.org/rfc/rfc1035. last checked 2026-10.
+- RFC 2782, DNS SRV. rfc. https://www.rfc-editor.org/rfc/rfc2782. last checked 2026-10.
+- RFC 9293, Transmission Control Protocol. rfc. https://www.rfc-editor.org/rfc/rfc9293. last checked 2026-10.
+- RFC 768, User Datagram Protocol. rfc. https://www.rfc-editor.org/rfc/rfc768. last checked 2026-10.
+- confirm. Studio signaling ports in the PDF are easy to misread as universal VCC trunk ports. Confirm which SBC your domain uses.. last checked 2026-10.
+- Digital key permission?
+- Build.
+- Studio digital IVA with VCC
+- Sources and go deeper
+- Studio digital IVA with VCC. community. https://community.five9.com/s/article/Studio-7-Integrate-Digital-IVA-in-Studio-with-VCC?language=en_US. last checked 2026-10.
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- confirm. Voice IVA Transfer property names are not copied key-for-key from the digital article.. last checked 2026-10.
+- Task type in that article?
+- ChatBot.
+- Studio digital IVA with VCC
+- Sources and go deeper
+- Studio digital IVA with VCC. community. https://community.five9.com/s/article/Studio-7-Integrate-Digital-IVA-in-Studio-with-VCC?language=en_US. last checked 2026-10.
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- confirm. Voice IVA Transfer property names are not copied key-for-key from the digital article.. last checked 2026-10.
+- Where does the key go?
+- The VCC side.
+- Studio digital IVA with VCC
+- Sources and go deeper
+- Studio digital IVA with VCC. community. https://community.five9.com/s/article/Studio-7-Integrate-Digital-IVA-in-Studio-with-VCC?language=en_US. last checked 2026-10.
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- confirm. Voice IVA Transfer property names are not copied key-for-key from the digital article.. last checked 2026-10.
+- Same as voice?
+- Do not assume.
+- Studio digital IVA with VCC
+- Sources and go deeper
+- Studio digital IVA with VCC. community. https://community.five9.com/s/article/Studio-7-Integrate-Digital-IVA-in-Studio-with-VCC?language=en_US. last checked 2026-10.
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- confirm. Voice IVA Transfer property names are not copied key-for-key from the digital article.. last checked 2026-10.
+- No failure branch?
+- The caller is stranded.
+- Five9 Engage
+- Sources and go deeper
+- Five9 Engage. vendor. https://www.five9.com/platform/self-service-and-engagement. last checked 2026-10.
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Call variables for reporting. community. https://community.five9.com/s/article/Administrator-Enabling-Call-Variables-for-Reporting?language=en_US. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- No skill selected?
+- Default.
+- Five9 Engage
+- Sources and go deeper
+- Five9 Engage. vendor. https://www.five9.com/platform/self-service-and-engagement. last checked 2026-10.
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Call variables for reporting. community. https://community.five9.com/s/article/Administrator-Enabling-Call-Variables-for-Reporting?language=en_US. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- History?
+- Enable a reporting call variable. New calls only.
+- Five9 Engage
+- Sources and go deeper
+- Five9 Engage. vendor. https://www.five9.com/platform/self-service-and-engagement. last checked 2026-10.
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Call variables for reporting. community. https://community.five9.com/s/article/Administrator-Enabling-Call-Variables-for-Reporting?language=en_US. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Engage handoff?
+- With context.
+- Five9 Engage
+- Sources and go deeper
+- Five9 Engage. vendor. https://www.five9.com/platform/self-service-and-engagement. last checked 2026-10.
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Call variables for reporting. community. https://community.five9.com/s/article/Administrator-Enabling-Call-Variables-for-Reporting?language=en_US. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Engine-agnostic?
+- Yes.
+- GenAI Studio
+- Sources and go deeper
+- GenAI Studio. vendor. https://www.five9.com/products/capabilities/gen-ai-studio. last checked 2026-10.
+- First named app?
+- Agent Assist summaries.
+- GenAI Studio
+- Sources and go deeper
+- GenAI Studio. vendor. https://www.five9.com/products/capabilities/gen-ai-studio. last checked 2026-10.
+- Test data?
+- Real calls, per the page.
+- GenAI Studio
+- Sources and go deeper
+- GenAI Studio. vendor. https://www.five9.com/products/capabilities/gen-ai-studio. last checked 2026-10.
+- Untested prompt?
+- Not the control the page describes.
+- GenAI Studio
+- Sources and go deeper
+- GenAI Studio. vendor. https://www.five9.com/products/capabilities/gen-ai-studio. last checked 2026-10.
+- Same block?
+- No.
+- IVR modules
+- Sources and go deeper
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Studio digital IVA with VCC. community. https://community.five9.com/s/article/Studio-7-Integrate-Digital-IVA-in-Studio-with-VCC?language=en_US. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Studio handoff?
+- IVA Transfer.
+- IVR modules
+- Sources and go deeper
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Studio digital IVA with VCC. community. https://community.five9.com/s/article/Studio-7-Integrate-Digital-IVA-in-Studio-with-VCC?language=en_US. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Short speech menu?
+- An IVR module can do it.
+- IVR modules
+- Sources and go deeper
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Studio digital IVA with VCC. community. https://community.five9.com/s/article/Studio-7-Integrate-Digital-IVA-in-Studio-with-VCC?language=en_US. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Wrong name?
+- Wrong system.
+- IVR modules
+- Sources and go deeper
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Studio digital IVA with VCC. community. https://community.five9.com/s/article/Studio-7-Integrate-Digital-IVA-in-Studio-with-VCC?language=en_US. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Prompt edit?
+- A release.
+- GenAI Studio
+- Sources and go deeper
+- GenAI Studio. vendor. https://www.five9.com/products/capabilities/gen-ai-studio. last checked 2026-10.
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Test on?
+- Call data.
+- GenAI Studio
+- Sources and go deeper
+- GenAI Studio. vendor. https://www.five9.com/products/capabilities/gen-ai-studio. last checked 2026-10.
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Same as a WAV?
+- No.
+- GenAI Studio
+- Sources and go deeper
+- GenAI Studio. vendor. https://www.five9.com/products/capabilities/gen-ai-studio. last checked 2026-10.
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Invented policy?
+- Not ready.
+- GenAI Studio
+- Sources and go deeper
+- GenAI Studio. vendor. https://www.five9.com/products/capabilities/gen-ai-studio. last checked 2026-10.
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Skip region?
+- The review is incomplete.
+- Studio digital IVA with VCC
+- Sources and go deeper
+- Studio digital IVA with VCC. community. https://community.five9.com/s/article/Studio-7-Integrate-Digital-IVA-in-Studio-with-VCC?language=en_US. last checked 2026-10.
+- GenAI Studio. vendor. https://www.five9.com/products/capabilities/gen-ai-studio. last checked 2026-10.
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- Data retention. vendor. https://www.five9.com/legal/dataretention. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Build permission source?
+- The digital IVA article.
+- Studio digital IVA with VCC
+- Sources and go deeper
+- Studio digital IVA with VCC. community. https://community.five9.com/s/article/Studio-7-Integrate-Digital-IVA-in-Studio-with-VCC?language=en_US. last checked 2026-10.
+- GenAI Studio. vendor. https://www.five9.com/products/capabilities/gen-ai-studio. last checked 2026-10.
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- Data retention. vendor. https://www.five9.com/legal/dataretention. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Why the clock?
+- Audio expires.
+- Studio digital IVA with VCC
+- Sources and go deeper
+- Studio digital IVA with VCC. community. https://community.five9.com/s/article/Studio-7-Integrate-Digital-IVA-in-Studio-with-VCC?language=en_US. last checked 2026-10.
+- GenAI Studio. vendor. https://www.five9.com/products/capabilities/gen-ai-studio. last checked 2026-10.
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- Data retention. vendor. https://www.five9.com/legal/dataretention. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Does this lab host Studio?
+- No.
+- Studio digital IVA with VCC
+- Sources and go deeper
+- Studio digital IVA with VCC. community. https://community.five9.com/s/article/Studio-7-Integrate-Digital-IVA-in-Studio-with-VCC?language=en_US. last checked 2026-10.
+- GenAI Studio. vendor. https://www.five9.com/products/capabilities/gen-ai-studio. last checked 2026-10.
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- Data retention. vendor. https://www.five9.com/legal/dataretention. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- ServiceNow listed?
+- Yes.
+- Web adapter requirements
+- Sources and go deeper
+- Web adapter requirements. vendor. https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/agent-integrations/web-based-adapters/application-requirements.htm. last checked 2026-10.
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- APIs and SDKs. vendor. https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks. last checked 2026-10.
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- RFC 6455, The WebSocket Protocol. rfc. https://www.rfc-editor.org/rfc/rfc6455. last checked 2026-10.
+- Homegrown CRM?
+- CRM SDK.
+- Web adapter requirements
+- Sources and go deeper
+- Web adapter requirements. vendor. https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/agent-integrations/web-based-adapters/application-requirements.htm. last checked 2026-10.
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- APIs and SDKs. vendor. https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks. last checked 2026-10.
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- RFC 6455, The WebSocket Protocol. rfc. https://www.rfc-editor.org/rfc/rfc6455. last checked 2026-10.
+- URL pop versus adapter?
+- Name which one.
+- Web adapter requirements
+- Sources and go deeper
+- Web adapter requirements. vendor. https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/agent-integrations/web-based-adapters/application-requirements.htm. last checked 2026-10.
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- APIs and SDKs. vendor. https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks. last checked 2026-10.
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- RFC 6455, The WebSocket Protocol. rfc. https://www.rfc-editor.org/rfc/rfc6455. last checked 2026-10.
+- Proxy?
+- Must support WSS.
+- Web adapter requirements
+- Sources and go deeper
+- Web adapter requirements. vendor. https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/agent-integrations/web-based-adapters/application-requirements.htm. last checked 2026-10.
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- APIs and SDKs. vendor. https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks. last checked 2026-10.
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- RFC 6455, The WebSocket Protocol. rfc. https://www.rfc-editor.org/rfc/rfc6455. last checked 2026-10.
+- Is 2.46 forever?
+- No. Recheck the PDF.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- Web adapter requirements. vendor. https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/agent-integrations/web-based-adapters/application-requirements.htm. last checked 2026-10.
+- confirm. Managed package 2.46 and the edition list came from the technical requirements read in October 2026. They will move.. last checked 2026-10.
+- SAML?
+- 2.0 in that PDF.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- Web adapter requirements. vendor. https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/agent-integrations/web-based-adapters/application-requirements.htm. last checked 2026-10.
+- confirm. Managed package 2.46 and the edition list came from the technical requirements read in October 2026. They will move.. last checked 2026-10.
+- Lightning?
+- Supported.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- Web adapter requirements. vendor. https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/agent-integrations/web-based-adapters/application-requirements.htm. last checked 2026-10.
+- confirm. Managed package 2.46 and the edition list came from the technical requirements read in October 2026. They will move.. last checked 2026-10.
+- IE 11 remains for Salesforce?
+- No. The exception is Oracle Service Cloud.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- Web adapter requirements. vendor. https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/agent-integrations/web-based-adapters/application-requirements.htm. last checked 2026-10.
+- confirm. Managed package 2.46 and the edition list came from the technical requirements read in October 2026. They will move.. last checked 2026-10.
+- Workspaces?
+- Service Operations and Configurable.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- ServiceNow Plus adapter. vendor. https://documentation.five9.com/bundle/servicenowadmins/page/crm-admins/ServiceNow/introduction/_ch-configuring-the-five9-plus-adapter-for-servicenow.htm. last checked 2026-10.
+- confirm. Australia, Zurich, and Yokohama were the names in the PDF read for this lab. Confirm the current list before an upgrade.. last checked 2026-10.
+- Those three names?
+- Releases in the PDF.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- ServiceNow Plus adapter. vendor. https://documentation.five9.com/bundle/servicenowadmins/page/crm-admins/ServiceNow/introduction/_ch-configuring-the-five9-plus-adapter-for-servicenow.htm. last checked 2026-10.
+- confirm. Australia, Zurich, and Yokohama were the names in the PDF read for this lab. Confirm the current list before an upgrade.. last checked 2026-10.
+- Off-list release?
+- Do not call it supported.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- ServiceNow Plus adapter. vendor. https://documentation.five9.com/bundle/servicenowadmins/page/crm-admins/ServiceNow/introduction/_ch-configuring-the-five9-plus-adapter-for-servicenow.htm. last checked 2026-10.
+- confirm. Australia, Zurich, and Yokohama were the names in the PDF read for this lab. Confirm the current list before an upgrade.. last checked 2026-10.
+- Forever?
+- No.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- ServiceNow Plus adapter. vendor. https://documentation.five9.com/bundle/servicenowadmins/page/crm-admins/ServiceNow/introduction/_ch-configuring-the-five9-plus-adapter-for-servicenow.htm. last checked 2026-10.
+- confirm. Australia, Zurich, and Yokohama were the names in the PDF read for this lab. Confirm the current list before an upgrade.. last checked 2026-10.
+- Epic listed?
+- Yes.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- Web adapter requirements. vendor. https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/agent-integrations/web-based-adapters/application-requirements.htm. last checked 2026-10.
+- Salesforce package fixes Zendesk?
+- No.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- Web adapter requirements. vendor. https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/agent-integrations/web-based-adapters/application-requirements.htm. last checked 2026-10.
+- NetSuite package in this lab?
+- Not stated.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- Web adapter requirements. vendor. https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/agent-integrations/web-based-adapters/application-requirements.htm. last checked 2026-10.
+- IE exception scope?
+- Oracle Service Cloud only.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- Web adapter requirements. vendor. https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/agent-integrations/web-based-adapters/application-requirements.htm. last checked 2026-10.
+- SDK named?
+- Yes.
+- APIs and SDKs
+- Sources and go deeper
+- APIs and SDKs. vendor. https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks. last checked 2026-10.
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Connectors named?
+- Yes.
+- APIs and SDKs
+- Sources and go deeper
+- APIs and SDKs. vendor. https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks. last checked 2026-10.
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Who retests custom code?
+- You.
+- APIs and SDKs
+- Sources and go deeper
+- APIs and SDKs. vendor. https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks. last checked 2026-10.
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- URL pop scope?
+- Smaller than a full adapter.
+- APIs and SDKs
+- Sources and go deeper
+- APIs and SDKs. vendor. https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks. last checked 2026-10.
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Voice proves the pop?
+- No.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- Campaign profiles. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/campaign-profiles/_ch-campaign-profiles.htm. last checked 2026-10.
+- Web adapter requirements. vendor. https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/agent-integrations/web-based-adapters/application-requirements.htm. last checked 2026-10.
+- RFC 8446, TLS 1.3. rfc. https://www.rfc-editor.org/rfc/rfc8446. last checked 2026-10.
+- RFC 6455, The WebSocket Protocol. rfc. https://www.rfc-editor.org/rfc/rfc6455. last checked 2026-10.
+- Profiles and pop-ups?
+- Yes, they can control them.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- Campaign profiles. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/campaign-profiles/_ch-campaign-profiles.htm. last checked 2026-10.
+- Web adapter requirements. vendor. https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/agent-integrations/web-based-adapters/application-requirements.htm. last checked 2026-10.
+- RFC 8446, TLS 1.3. rfc. https://www.rfc-editor.org/rfc/rfc8446. last checked 2026-10.
+- RFC 6455, The WebSocket Protocol. rfc. https://www.rfc-editor.org/rfc/rfc6455. last checked 2026-10.
+- TLS 1.1?
+- Unsupported.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- Campaign profiles. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/campaign-profiles/_ch-campaign-profiles.htm. last checked 2026-10.
+- Web adapter requirements. vendor. https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/agent-integrations/web-based-adapters/application-requirements.htm. last checked 2026-10.
+- RFC 8446, TLS 1.3. rfc. https://www.rfc-editor.org/rfc/rfc8446. last checked 2026-10.
+- RFC 6455, The WebSocket Protocol. rfc. https://www.rfc-editor.org/rfc/rfc6455. last checked 2026-10.
+- Dead URL?
+- Blank screen.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- Campaign profiles. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/campaign-profiles/_ch-campaign-profiles.htm. last checked 2026-10.
+- Web adapter requirements. vendor. https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/agent-integrations/web-based-adapters/application-requirements.htm. last checked 2026-10.
+- RFC 8446, TLS 1.3. rfc. https://www.rfc-editor.org/rfc/rfc8446. last checked 2026-10.
+- RFC 6455, The WebSocket Protocol. rfc. https://www.rfc-editor.org/rfc/rfc6455. last checked 2026-10.
+- IVR Salesforce module?
+- A script block.
+- IVR modules
+- Sources and go deeper
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- XML web service IVR example. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/examples/creating-ivr-script-xml-web-service-query.htm. last checked 2026-10.
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Einstein module?
+- Named in the chapter.
+- IVR modules
+- Sources and go deeper
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- XML web service IVR example. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/examples/creating-ivr-script-xml-web-service-query.htm. last checked 2026-10.
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- ZIP example?
+- Query, not the Salesforce module.
+- IVR modules
+- Sources and go deeper
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- XML web service IVR example. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/examples/creating-ivr-script-xml-web-service-query.htm. last checked 2026-10.
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- After connect?
+- The adapter.
+- IVR modules
+- Sources and go deeper
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- XML web service IVR example. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/examples/creating-ivr-script-xml-web-service-query.htm. last checked 2026-10.
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Five9 ITSP?
+- One of the three stories.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- SIP trunk options chapter. vendor. https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/SIP-trunk-options/_ch-five9-sip-trunk-options.htm. last checked 2026-10.
+- RFC 3261. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- RFC 3550, RTP. rfc. https://www.rfc-editor.org/rfc/rfc3550. last checked 2026-10.
+- RFC 3551, RTP profile for audio and video. rfc. https://www.rfc-editor.org/rfc/rfc3551. last checked 2026-10.
+- ITU-T G.711. standard. https://www.itu.int/rec/T-REC-G.711. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Customer ITSP lands on?
+- Five9 SBCs.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- SIP trunk options chapter. vendor. https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/SIP-trunk-options/_ch-five9-sip-trunk-options.htm. last checked 2026-10.
+- RFC 3261. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- RFC 3550, RTP. rfc. https://www.rfc-editor.org/rfc/rfc3550. last checked 2026-10.
+- RFC 3551, RTP profile for audio and video. rfc. https://www.rfc-editor.org/rfc/rfc3551. last checked 2026-10.
+- ITU-T G.711. standard. https://www.itu.int/rec/T-REC-G.711. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Gateway names?
+- Avaya, Cisco, Asterisk.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- SIP trunk options chapter. vendor. https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/SIP-trunk-options/_ch-five9-sip-trunk-options.htm. last checked 2026-10.
+- RFC 3261. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- RFC 3550, RTP. rfc. https://www.rfc-editor.org/rfc/rfc3550. last checked 2026-10.
+- RFC 3551, RTP profile for audio and video. rfc. https://www.rfc-editor.org/rfc/rfc3551. last checked 2026-10.
+- ITU-T G.711. standard. https://www.itu.int/rec/T-REC-G.711. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Does Cisco here import UCCX?
+- No.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- SIP trunk options chapter. vendor. https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/SIP-trunk-options/_ch-five9-sip-trunk-options.htm. last checked 2026-10.
+- RFC 3261. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- RFC 3550, RTP. rfc. https://www.rfc-editor.org/rfc/rfc3550. last checked 2026-10.
+- RFC 3551, RTP profile for audio and video. rfc. https://www.rfc-editor.org/rfc/rfc3551. last checked 2026-10.
+- ITU-T G.711. standard. https://www.itu.int/rec/T-REC-G.711. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- DNS?
+- SRV preferred.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- SIP trunk options chapter. vendor. https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/SIP-trunk-options/_ch-five9-sip-trunk-options.htm. last checked 2026-10.
+- RFC 3261. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- RFC 4733. rfc. https://www.rfc-editor.org/rfc/rfc4733. last checked 2026-10.
+- RFC 3550, RTP. rfc. https://www.rfc-editor.org/rfc/rfc3550. last checked 2026-10.
+- RFC 3551, RTP profile for audio and video. rfc. https://www.rfc-editor.org/rfc/rfc3551. last checked 2026-10.
+- ITU-T G.711. standard. https://www.itu.int/rec/T-REC-G.711. last checked 2026-10.
+- RFC 1035, domain names. rfc. https://www.rfc-editor.org/rfc/rfc1035. last checked 2026-10.
+- RFC 2782, DNS SRV. rfc. https://www.rfc-editor.org/rfc/rfc2782. last checked 2026-10.
+- confirm. A 20 ms packet time is a practitioner note about Cisco gateways, not a figure quoted from the Five9 technical requirements in this lab.. last checked 2026-10.
+- Default codec?
+- G.711.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- SIP trunk options chapter. vendor. https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/SIP-trunk-options/_ch-five9-sip-trunk-options.htm. last checked 2026-10.
+- RFC 3261. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- RFC 4733. rfc. https://www.rfc-editor.org/rfc/rfc4733. last checked 2026-10.
+- RFC 3550, RTP. rfc. https://www.rfc-editor.org/rfc/rfc3550. last checked 2026-10.
+- RFC 3551, RTP profile for audio and video. rfc. https://www.rfc-editor.org/rfc/rfc3551. last checked 2026-10.
+- ITU-T G.711. standard. https://www.itu.int/rec/T-REC-G.711. last checked 2026-10.
+- RFC 1035, domain names. rfc. https://www.rfc-editor.org/rfc/rfc1035. last checked 2026-10.
+- RFC 2782, DNS SRV. rfc. https://www.rfc-editor.org/rfc/rfc2782. last checked 2026-10.
+- confirm. A 20 ms packet time is a practitioner note about Cisco gateways, not a figure quoted from the Five9 technical requirements in this lab.. last checked 2026-10.
+- 20 ms?
+- Practitioner, uncertain, not a PDF quote here.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- SIP trunk options chapter. vendor. https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/SIP-trunk-options/_ch-five9-sip-trunk-options.htm. last checked 2026-10.
+- RFC 3261. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- RFC 4733. rfc. https://www.rfc-editor.org/rfc/rfc4733. last checked 2026-10.
+- RFC 3550, RTP. rfc. https://www.rfc-editor.org/rfc/rfc3550. last checked 2026-10.
+- RFC 3551, RTP profile for audio and video. rfc. https://www.rfc-editor.org/rfc/rfc3551. last checked 2026-10.
+- ITU-T G.711. standard. https://www.itu.int/rec/T-REC-G.711. last checked 2026-10.
+- RFC 1035, domain names. rfc. https://www.rfc-editor.org/rfc/rfc1035. last checked 2026-10.
+- RFC 2782, DNS SRV. rfc. https://www.rfc-editor.org/rfc/rfc2782. last checked 2026-10.
+- confirm. A 20 ms packet time is a practitioner note about Cisco gateways, not a figure quoted from the Five9 technical requirements in this lab.. last checked 2026-10.
+- Digit RFC?
+- 4733.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- SIP trunk options chapter. vendor. https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/SIP-trunk-options/_ch-five9-sip-trunk-options.htm. last checked 2026-10.
+- RFC 3261. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- RFC 4733. rfc. https://www.rfc-editor.org/rfc/rfc4733. last checked 2026-10.
+- RFC 3550, RTP. rfc. https://www.rfc-editor.org/rfc/rfc3550. last checked 2026-10.
+- RFC 3551, RTP profile for audio and video. rfc. https://www.rfc-editor.org/rfc/rfc3551. last checked 2026-10.
+- ITU-T G.711. standard. https://www.itu.int/rec/T-REC-G.711. last checked 2026-10.
+- RFC 1035, domain names. rfc. https://www.rfc-editor.org/rfc/rfc1035. last checked 2026-10.
+- RFC 2782, DNS SRV. rfc. https://www.rfc-editor.org/rfc/rfc2782. last checked 2026-10.
+- confirm. A 20 ms packet time is a practitioner note about Cisco gateways, not a figure quoted from the Five9 technical requirements in this lab.. last checked 2026-10.
+- Plus?
+- 128 kbps.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- Java agent?
+- 88 kbps.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- Assist?
+- About +12.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- Satellite?
+- Not supported.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- Double NAT?
+- No.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- RFC 1918. rfc. https://www.rfc-editor.org/rfc/rfc1918. last checked 2026-10.
+- RFC 3261. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- RFC 3550, RTP. rfc. https://www.rfc-editor.org/rfc/rfc3550. last checked 2026-10.
+- RFC 3551, RTP profile for audio and video. rfc. https://www.rfc-editor.org/rfc/rfc3551. last checked 2026-10.
+- ITU-T G.711. standard. https://www.itu.int/rec/T-REC-G.711. last checked 2026-10.
+- RFC 768, User Datagram Protocol. rfc. https://www.rfc-editor.org/rfc/rfc768. last checked 2026-10.
+- RFC 4787, NAT behavior for UDP. rfc. https://www.rfc-editor.org/rfc/rfc4787. last checked 2026-10.
+- UDP idle?
+- 30 seconds.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- RFC 1918. rfc. https://www.rfc-editor.org/rfc/rfc1918. last checked 2026-10.
+- RFC 3261. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- RFC 3550, RTP. rfc. https://www.rfc-editor.org/rfc/rfc3550. last checked 2026-10.
+- RFC 3551, RTP profile for audio and video. rfc. https://www.rfc-editor.org/rfc/rfc3551. last checked 2026-10.
+- ITU-T G.711. standard. https://www.itu.int/rec/T-REC-G.711. last checked 2026-10.
+- RFC 768, User Datagram Protocol. rfc. https://www.rfc-editor.org/rfc/rfc768. last checked 2026-10.
+- RFC 4787, NAT behavior for UDP. rfc. https://www.rfc-editor.org/rfc/rfc4787. last checked 2026-10.
+- Shorter timer?
+- Keepalives.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- RFC 1918. rfc. https://www.rfc-editor.org/rfc/rfc1918. last checked 2026-10.
+- RFC 3261. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- RFC 3550, RTP. rfc. https://www.rfc-editor.org/rfc/rfc3550. last checked 2026-10.
+- RFC 3551, RTP profile for audio and video. rfc. https://www.rfc-editor.org/rfc/rfc3551. last checked 2026-10.
+- ITU-T G.711. standard. https://www.itu.int/rec/T-REC-G.711. last checked 2026-10.
+- RFC 768, User Datagram Protocol. rfc. https://www.rfc-editor.org/rfc/rfc768. last checked 2026-10.
+- RFC 4787, NAT behavior for UDP. rfc. https://www.rfc-editor.org/rfc/rfc4787. last checked 2026-10.
+- Split tunnel?
+- Do not exclude Five9.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- RFC 1918. rfc. https://www.rfc-editor.org/rfc/rfc1918. last checked 2026-10.
+- RFC 3261. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- RFC 3550, RTP. rfc. https://www.rfc-editor.org/rfc/rfc3550. last checked 2026-10.
+- RFC 3551, RTP profile for audio and video. rfc. https://www.rfc-editor.org/rfc/rfc3551. last checked 2026-10.
+- ITU-T G.711. standard. https://www.itu.int/rec/T-REC-G.711. last checked 2026-10.
+- RFC 768, User Datagram Protocol. rfc. https://www.rfc-editor.org/rfc/rfc768. last checked 2026-10.
+- RFC 4787, NAT behavior for UDP. rfc. https://www.rfc-editor.org/rfc/rfc4787. last checked 2026-10.
+- Handoff?
+- Layer 3.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- IANA service names and port numbers. ports. https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml. last checked 2026-10.
+- confirm. CH3, DC10, LD5, AM4, FR8, SP4, TY11, and SY5 are the Equinix Fabric edges in the technical requirements read in October 2026.. last checked 2026-10.
+- Failover?
+- BGP.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- IANA service names and port numbers. ports. https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml. last checked 2026-10.
+- confirm. CH3, DC10, LD5, AM4, FR8, SP4, TY11, and SY5 are the Equinix Fabric edges in the technical requirements read in October 2026.. last checked 2026-10.
+- London?
+- LD5 in that PDF.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- IANA service names and port numbers. ports. https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml. last checked 2026-10.
+- confirm. CH3, DC10, LD5, AM4, FR8, SP4, TY11, and SY5 are the Equinix Fabric edges in the technical requirements read in October 2026.. last checked 2026-10.
+- Is the list forever?
+- No.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- IANA service names and port numbers. ports. https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml. last checked 2026-10.
+- confirm. CH3, DC10, LD5, AM4, FR8, SP4, TY11, and SY5 are the Equinix Fabric edges in the technical requirements read in October 2026.. last checked 2026-10.
+- TLS floor?
+- 1.2.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- SIP trunk options chapter. vendor. https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/SIP-trunk-options/_ch-five9-sip-trunk-options.htm. last checked 2026-10.
+- IANA service names and port numbers. ports. https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- RFC 3550, RTP. rfc. https://www.rfc-editor.org/rfc/rfc3550. last checked 2026-10.
+- RFC 3551, RTP profile for audio and video. rfc. https://www.rfc-editor.org/rfc/rfc3551. last checked 2026-10.
+- ITU-T G.711. standard. https://www.itu.int/rec/T-REC-G.711. last checked 2026-10.
+- RFC 8446, TLS 1.3. rfc. https://www.rfc-editor.org/rfc/rfc8446. last checked 2026-10.
+- RFC 9293, Transmission Control Protocol. rfc. https://www.rfc-editor.org/rfc/rfc9293. last checked 2026-10.
+- RFC 768, User Datagram Protocol. rfc. https://www.rfc-editor.org/rfc/rfc768. last checked 2026-10.
+- confirm. Studio TCP 5061 is described as beta in the PDF read for this lab. Confirm before you depend on it.. last checked 2026-10.
+- TLS 1.1?
+- Not supported.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- SIP trunk options chapter. vendor. https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/SIP-trunk-options/_ch-five9-sip-trunk-options.htm. last checked 2026-10.
+- IANA service names and port numbers. ports. https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- RFC 3550, RTP. rfc. https://www.rfc-editor.org/rfc/rfc3550. last checked 2026-10.
+- RFC 3551, RTP profile for audio and video. rfc. https://www.rfc-editor.org/rfc/rfc3551. last checked 2026-10.
+- ITU-T G.711. standard. https://www.itu.int/rec/T-REC-G.711. last checked 2026-10.
+- RFC 8446, TLS 1.3. rfc. https://www.rfc-editor.org/rfc/rfc8446. last checked 2026-10.
+- RFC 9293, Transmission Control Protocol. rfc. https://www.rfc-editor.org/rfc/rfc9293. last checked 2026-10.
+- RFC 768, User Datagram Protocol. rfc. https://www.rfc-editor.org/rfc/rfc768. last checked 2026-10.
+- confirm. Studio TCP 5061 is described as beta in the PDF read for this lab. Confirm before you depend on it.. last checked 2026-10.
+- Studio 5060 on every trunk?
+- No.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- SIP trunk options chapter. vendor. https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/SIP-trunk-options/_ch-five9-sip-trunk-options.htm. last checked 2026-10.
+- IANA service names and port numbers. ports. https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- RFC 3550, RTP. rfc. https://www.rfc-editor.org/rfc/rfc3550. last checked 2026-10.
+- RFC 3551, RTP profile for audio and video. rfc. https://www.rfc-editor.org/rfc/rfc3551. last checked 2026-10.
+- ITU-T G.711. standard. https://www.itu.int/rec/T-REC-G.711. last checked 2026-10.
+- RFC 8446, TLS 1.3. rfc. https://www.rfc-editor.org/rfc/rfc8446. last checked 2026-10.
+- RFC 9293, Transmission Control Protocol. rfc. https://www.rfc-editor.org/rfc/rfc9293. last checked 2026-10.
+- RFC 768, User Datagram Protocol. rfc. https://www.rfc-editor.org/rfc/rfc768. last checked 2026-10.
+- confirm. Studio TCP 5061 is described as beta in the PDF read for this lab. Confirm before you depend on it.. last checked 2026-10.
+- 5061 caveat?
+- Beta in that PDF.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- SIP trunk options chapter. vendor. https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/SIP-trunk-options/_ch-five9-sip-trunk-options.htm. last checked 2026-10.
+- IANA service names and port numbers. ports. https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- RFC 3550, RTP. rfc. https://www.rfc-editor.org/rfc/rfc3550. last checked 2026-10.
+- RFC 3551, RTP profile for audio and video. rfc. https://www.rfc-editor.org/rfc/rfc3551. last checked 2026-10.
+- ITU-T G.711. standard. https://www.itu.int/rec/T-REC-G.711. last checked 2026-10.
+- RFC 8446, TLS 1.3. rfc. https://www.rfc-editor.org/rfc/rfc8446. last checked 2026-10.
+- RFC 9293, Transmission Control Protocol. rfc. https://www.rfc-editor.org/rfc/rfc9293. last checked 2026-10.
+- RFC 768, User Datagram Protocol. rfc. https://www.rfc-editor.org/rfc/rfc768. last checked 2026-10.
+- confirm. Studio TCP 5061 is described as beta in the PDF read for this lab. Confirm before you depend on it.. last checked 2026-10.
+- Headset?
+- USB noise-canceling.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- RFC 3550, RTP. rfc. https://www.rfc-editor.org/rfc/rfc3550. last checked 2026-10.
+- RFC 3551, RTP profile for audio and video. rfc. https://www.rfc-editor.org/rfc/rfc3551. last checked 2026-10.
+- ITU-T G.711. standard. https://www.itu.int/rec/T-REC-G.711. last checked 2026-10.
+- RFC 8446, TLS 1.3. rfc. https://www.rfc-editor.org/rfc/rfc8446. last checked 2026-10.
+- RFC 1918, private internet addresses. rfc. https://www.rfc-editor.org/rfc/rfc1918. last checked 2026-10.
+- RFC 4787, NAT behavior for UDP. rfc. https://www.rfc-editor.org/rfc/rfc4787. last checked 2026-10.
+- Analog?
+- Not supported.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- RFC 3550, RTP. rfc. https://www.rfc-editor.org/rfc/rfc3550. last checked 2026-10.
+- RFC 3551, RTP profile for audio and video. rfc. https://www.rfc-editor.org/rfc/rfc3551. last checked 2026-10.
+- ITU-T G.711. standard. https://www.itu.int/rec/T-REC-G.711. last checked 2026-10.
+- RFC 8446, TLS 1.3. rfc. https://www.rfc-editor.org/rfc/rfc8446. last checked 2026-10.
+- RFC 1918, private internet addresses. rfc. https://www.rfc-editor.org/rfc/rfc1918. last checked 2026-10.
+- RFC 4787, NAT behavior for UDP. rfc. https://www.rfc-editor.org/rfc/rfc4787. last checked 2026-10.
+- Wireless at scale?
+- Not recommended.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- RFC 3550, RTP. rfc. https://www.rfc-editor.org/rfc/rfc3550. last checked 2026-10.
+- RFC 3551, RTP profile for audio and video. rfc. https://www.rfc-editor.org/rfc/rfc3551. last checked 2026-10.
+- ITU-T G.711. standard. https://www.itu.int/rec/T-REC-G.711. last checked 2026-10.
+- RFC 8446, TLS 1.3. rfc. https://www.rfc-editor.org/rfc/rfc8446. last checked 2026-10.
+- RFC 1918, private internet addresses. rfc. https://www.rfc-editor.org/rfc/rfc1918. last checked 2026-10.
+- RFC 4787, NAT behavior for UDP. rfc. https://www.rfc-editor.org/rfc/rfc4787. last checked 2026-10.
+- Efficiency Mode?
+- Can drop live calls.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- RFC 3550, RTP. rfc. https://www.rfc-editor.org/rfc/rfc3550. last checked 2026-10.
+- RFC 3551, RTP profile for audio and video. rfc. https://www.rfc-editor.org/rfc/rfc3551. last checked 2026-10.
+- ITU-T G.711. standard. https://www.itu.int/rec/T-REC-G.711. last checked 2026-10.
+- RFC 8446, TLS 1.3. rfc. https://www.rfc-editor.org/rfc/rfc8446. last checked 2026-10.
+- RFC 1918, private internet addresses. rfc. https://www.rfc-editor.org/rfc/rfc1918. last checked 2026-10.
+- RFC 4787, NAT behavior for UDP. rfc. https://www.rfc-editor.org/rfc/rfc4787. last checked 2026-10.
+- Web2Campaign?
+- A named API.
+- APIs and SDKs
+- Sources and go deeper
+- APIs and SDKs. vendor. https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks. last checked 2026-10.
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- confirm. The overview page says REST and also lists Web Services families. This lab does not assign a transport to each family.. last checked 2026-10.
+- Reporting versus Statistics?
+- Both named, not the same label.
+- APIs and SDKs
+- Sources and go deeper
+- APIs and SDKs. vendor. https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks. last checked 2026-10.
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- confirm. The overview page says REST and also lists Web Services families. This lab does not assign a transport to each family.. last checked 2026-10.
+- Homegrown CRM?
+- CRM SDK.
+- APIs and SDKs
+- Sources and go deeper
+- APIs and SDKs. vendor. https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks. last checked 2026-10.
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- confirm. The overview page says REST and also lists Web Services families. This lab does not assign a transport to each family.. last checked 2026-10.
+- SOAP or REST?
+- Do not guess per family.
+- APIs and SDKs
+- Sources and go deeper
+- APIs and SDKs. vendor. https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks. last checked 2026-10.
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- confirm. The overview page says REST and also lists Web Services families. This lab does not assign a transport to each family.. last checked 2026-10.
+- Role?
+- Reporting, plus a permission.
+- Generating standard reports
+- Sources and go deeper
+- Generating standard reports. community. https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports. last checked 2026-10.
+- Call log reports chapter. vendor. https://documentation.five9.com/bundle/reports-dashboards/page/reports-dashboards/description-standard-and-social-reports/call-log-reports.htm. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Automatic call distributor. wikipedia. https://en.wikipedia.org/wiki/Automatic_call_distributor. last checked 2026-10.
+- IVR category?
+- Yes.
+- Generating standard reports
+- Sources and go deeper
+- Generating standard reports. community. https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports. last checked 2026-10.
+- Call log reports chapter. vendor. https://documentation.five9.com/bundle/reports-dashboards/page/reports-dashboards/description-standard-and-social-reports/call-log-reports.htm. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Automatic call distributor. wikipedia. https://en.wikipedia.org/wiki/Automatic_call_distributor. last checked 2026-10.
+- Admin without the role?
+- No standard reports.
+- Generating standard reports
+- Sources and go deeper
+- Generating standard reports. community. https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports. last checked 2026-10.
+- Call log reports chapter. vendor. https://documentation.five9.com/bundle/reports-dashboards/page/reports-dashboards/description-standard-and-social-reports/call-log-reports.htm. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Automatic call distributor. wikipedia. https://en.wikipedia.org/wiki/Automatic_call_distributor. last checked 2026-10.
+- Digital versus Legacy Digital?
+- Both named.
+- Generating standard reports
+- Sources and go deeper
+- Generating standard reports. community. https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports. last checked 2026-10.
+- Call log reports chapter. vendor. https://documentation.five9.com/bundle/reports-dashboards/page/reports-dashboards/description-standard-and-social-reports/call-log-reports.htm. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Automatic call distributor. wikipedia. https://en.wikipedia.org/wiki/Automatic_call_distributor. last checked 2026-10.
+- Three layouts?
+- Tabular, Summary, Matrix.
+- Generating standard reports
+- Sources and go deeper
+- Generating standard reports. community. https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports. last checked 2026-10.
+- Matrix to CSV?
+- Not directly.
+- Generating standard reports
+- Sources and go deeper
+- Generating standard reports. community. https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports. last checked 2026-10.
+- Row-level?
+- Tabular.
+- Generating standard reports
+- Sources and go deeper
+- Generating standard reports. community. https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports. last checked 2026-10.
+- Totals?
+- Summary.
+- Generating standard reports
+- Sources and go deeper
+- Generating standard reports. community. https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports. last checked 2026-10.
+- Call log window?
+- About 60 days unless extended, per that article.
+- Call log filters
+- Sources and go deeper
+- Call log filters. community. https://community.five9.com/s/article/Reporting-Apply-Filter-s-in-the-Call-Log-Report. last checked 2026-10.
+- Data retention. vendor. https://www.five9.com/legal/dataretention. last checked 2026-10.
+- Call log reports chapter. vendor. https://documentation.five9.com/bundle/reports-dashboards/page/reports-dashboards/description-standard-and-social-reports/call-log-reports.htm. last checked 2026-10.
+- confirm. The 60-day call log window is from a community article dated 14 July 2026. Confirm the current window before you promise it.. last checked 2026-10.
+- Audio?
+- 30 days, offload, or contract — whichever is sooner.
+- Call log filters
+- Sources and go deeper
+- Call log filters. community. https://community.five9.com/s/article/Reporting-Apply-Filter-s-in-the-Call-Log-Report. last checked 2026-10.
+- Data retention. vendor. https://www.five9.com/legal/dataretention. last checked 2026-10.
+- Call log reports chapter. vendor. https://documentation.five9.com/bundle/reports-dashboards/page/reports-dashboards/description-standard-and-social-reports/call-log-reports.htm. last checked 2026-10.
+- confirm. The 60-day call log window is from a community article dated 14 July 2026. Confirm the current window before you promise it.. last checked 2026-10.
+- Same clock?
+- No.
+- Call log filters
+- Sources and go deeper
+- Call log filters. community. https://community.five9.com/s/article/Reporting-Apply-Filter-s-in-the-Call-Log-Report. last checked 2026-10.
+- Data retention. vendor. https://www.five9.com/legal/dataretention. last checked 2026-10.
+- Call log reports chapter. vendor. https://documentation.five9.com/bundle/reports-dashboards/page/reports-dashboards/description-standard-and-social-reports/call-log-reports.htm. last checked 2026-10.
+- confirm. The 60-day call log window is from a community article dated 14 July 2026. Confirm the current window before you promise it.. last checked 2026-10.
+- Why date the article?
+- The window can change.
+- Call log filters
+- Sources and go deeper
+- Call log filters. community. https://community.five9.com/s/article/Reporting-Apply-Filter-s-in-the-Call-Log-Report. last checked 2026-10.
+- Data retention. vendor. https://www.five9.com/legal/dataretention. last checked 2026-10.
+- Call log reports chapter. vendor. https://documentation.five9.com/bundle/reports-dashboards/page/reports-dashboards/description-standard-and-social-reports/call-log-reports.htm. last checked 2026-10.
+- confirm. The 60-day call log window is from a community article dated 14 July 2026. Confirm the current window before you promise it.. last checked 2026-10.
+- Backfill?
+- No.
+- Call variables for reporting
+- Sources and go deeper
+- Call variables for reporting. community. https://community.five9.com/s/article/Administrator-Enabling-Call-Variables-for-Reporting?language=en_US. last checked 2026-10.
+- Generating standard reports. community. https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports. last checked 2026-10.
+- Permission name?
+- User Can Edit Call Variables.
+- Call variables for reporting
+- Sources and go deeper
+- Call variables for reporting. community. https://community.five9.com/s/article/Administrator-Enabling-Call-Variables-for-Reporting?language=en_US. last checked 2026-10.
+- Generating standard reports. community. https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports. last checked 2026-10.
+- All dispositions includes custom?
+- No.
+- Call variables for reporting
+- Sources and go deeper
+- Call variables for reporting. community. https://community.five9.com/s/article/Administrator-Enabling-Call-Variables-for-Reporting?language=en_US. last checked 2026-10.
+- Generating standard reports. community. https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports. last checked 2026-10.
+- Both switches?
+- Permission and the reporting flag.
+- Call variables for reporting
+- Sources and go deeper
+- Call variables for reporting. community. https://community.five9.com/s/article/Administrator-Enabling-Call-Variables-for-Reporting?language=en_US. last checked 2026-10.
+- Generating standard reports. community. https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports. last checked 2026-10.
+- Prebuilt names?
+- Zoom Phone and Teams, among the product lines.
+- APIs and SDKs
+- Sources and go deeper
+- APIs and SDKs. vendor. https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks. last checked 2026-10.
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Local Teams client?
+- About 320 kbps.
+- APIs and SDKs
+- Sources and go deeper
+- APIs and SDKs. vendor. https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks. last checked 2026-10.
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- URL pop?
+- Web Connector.
+- APIs and SDKs
+- Sources and go deeper
+- APIs and SDKs. vendor. https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks. last checked 2026-10.
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Does prebuilt erase bandwidth?
+- No.
+- APIs and SDKs
+- Sources and go deeper
+- APIs and SDKs. vendor. https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks. last checked 2026-10.
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Agent data?
+- 60 days.
+- Data retention
+- Sources and go deeper
+- Data retention. vendor. https://www.five9.com/legal/dataretention. last checked 2026-10.
+- APIs and SDKs. vendor. https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks. last checked 2026-10.
+- Generating standard reports. community. https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports. last checked 2026-10.
+- Campaign state?
+- 120 days.
+- Data retention
+- Sources and go deeper
+- Data retention. vendor. https://www.five9.com/legal/dataretention. last checked 2026-10.
+- APIs and SDKs. vendor. https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks. last checked 2026-10.
+- Generating standard reports. community. https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports. last checked 2026-10.
+- DIDs after closure?
+- 90 days.
+- Data retention
+- Sources and go deeper
+- Data retention. vendor. https://www.five9.com/legal/dataretention. last checked 2026-10.
+- APIs and SDKs. vendor. https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks. last checked 2026-10.
+- Generating standard reports. community. https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports. last checked 2026-10.
+- Disabled domain?
+- 120 days after closure.
+- Data retention
+- Sources and go deeper
+- Data retention. vendor. https://www.five9.com/legal/dataretention. last checked 2026-10.
+- APIs and SDKs. vendor. https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks. last checked 2026-10.
+- Generating standard reports. community. https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports. last checked 2026-10.
+- Official importer?
+- None cited here.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- SIP trunk options chapter. vendor. https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/SIP-trunk-options/_ch-five9-sip-trunk-options.htm. last checked 2026-10.
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- confirm. Five9 publishes Cisco as a SIP gateway type. This lab did not find an official UCCX or UCCE migration wizard. Mappings below are instructional.. last checked 2026-10.
+- Cisco in the PDF?
+- A gateway type.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- SIP trunk options chapter. vendor. https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/SIP-trunk-options/_ch-five9-sip-trunk-options.htm. last checked 2026-10.
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- confirm. Five9 publishes Cisco as a SIP gateway type. This lab did not find an official UCCX or UCCE migration wizard. Mappings below are instructional.. last checked 2026-10.
+- Build order?
+- Skills through profiles, then campaigns.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- SIP trunk options chapter. vendor. https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/SIP-trunk-options/_ch-five9-sip-trunk-options.htm. last checked 2026-10.
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- confirm. Five9 publishes Cisco as a SIP gateway type. This lab did not find an official UCCX or UCCE migration wizard. Mappings below are instructional.. last checked 2026-10.
+- Blended?
+- Not a fourth campaign type.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- SIP trunk options chapter. vendor. https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/SIP-trunk-options/_ch-five9-sip-trunk-options.htm. last checked 2026-10.
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- confirm. Five9 publishes Cisco as a SIP gateway type. This lab did not find an official UCCX or UCCE migration wizard. Mappings below are instructional.. last checked 2026-10.
+- CSQ maps toward?
+- A skill group, as a teaching map.
+- Skill groups
+- Sources and go deeper
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- confirm. The CSQ-to-skill mapping is a teaching bridge, not a Five9 migration utility.. last checked 2026-10.
+- Partitions?
+- Not in Five9. Use domains.
+- Skill groups
+- Sources and go deeper
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- confirm. The CSQ-to-skill mapping is a teaching bridge, not a Five9 migration utility.. last checked 2026-10.
+- Two tenants?
+- Two domains.
+- Skill groups
+- Sources and go deeper
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- confirm. The CSQ-to-skill mapping is a teaching bridge, not a Five9 migration utility.. last checked 2026-10.
+- Precision attributes?
+- Redesign, do not invent a paste field.
+- Skill groups
+- Sources and go deeper
+- Skill groups. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm. last checked 2026-10.
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- confirm. The CSQ-to-skill mapping is a teaching bridge, not a Five9 migration utility.. last checked 2026-10.
+- Import the .aef?
+- No.
+- IVR modules
+- Sources and go deeper
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- confirm. Module mapping from UCCX steps is instructional. Validate every script in a domain.. last checked 2026-10.
+- Greeting?
+- Play.
+- IVR modules
+- Sources and go deeper
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- confirm. Module mapping from UCCX steps is instructional. Validate every script in a domain.. last checked 2026-10.
+- Queue?
+- Skill Transfer.
+- IVR modules
+- Sources and go deeper
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- confirm. Module mapping from UCCX steps is instructional. Validate every script in a domain.. last checked 2026-10.
+- Builder JSON?
+- Learning model only.
+- IVR modules
+- Sources and go deeper
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- confirm. Module mapping from UCCX steps is instructional. Validate every script in a domain.. last checked 2026-10.
+- Mode names?
+- Preview, progressive, power, predictive, manual touch.
+- Dialer product page
+- Sources and go deeper
+- Dialer product page. vendor. https://www.five9.com/products/capabilities/dialer-system. last checked 2026-10.
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- IANA service names and port numbers. ports. https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml. last checked 2026-10.
+- confirm. The dialer product page and the outbound product page describe progressive pacing in different words. Quote the page you use.. last checked 2026-10.
+- Simulator?
+- A teaching model.
+- Dialer product page
+- Sources and go deeper
+- Dialer product page. vendor. https://www.five9.com/products/capabilities/dialer-system. last checked 2026-10.
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- IANA service names and port numbers. ports. https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml. last checked 2026-10.
+- confirm. The dialer product page and the outbound product page describe progressive pacing in different words. Quote the page you use.. last checked 2026-10.
+- Copy the Cisco ratio into abandon %?
+- No.
+- Dialer product page
+- Sources and go deeper
+- Dialer product page. vendor. https://www.five9.com/products/capabilities/dialer-system. last checked 2026-10.
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- IANA service names and port numbers. ports. https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml. last checked 2026-10.
+- confirm. The dialer product page and the outbound product page describe progressive pacing in different words. Quote the page you use.. last checked 2026-10.
+- Numeric default?
+- Not stated here.
+- Dialer product page
+- Sources and go deeper
+- Dialer product page. vendor. https://www.five9.com/products/capabilities/dialer-system. last checked 2026-10.
+- Outbound product page. vendor. https://www.five9.com/products/capabilities/outbound-contact-center. last checked 2026-10.
+- IANA service names and port numbers. ports. https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml. last checked 2026-10.
+- confirm. The dialer product page and the outbound product page describe progressive pacing in different words. Quote the page you use.. last checked 2026-10.
+- Lists in the script file?
+- No.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- Data retention. vendor. https://www.five9.com/legal/dataretention. last checked 2026-10.
+- RFC 8224, Authenticated Identity Management in SIP. rfc. https://www.rfc-editor.org/rfc/rfc8224. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- ANI lives on?
+- The campaign profile.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- Data retention. vendor. https://www.five9.com/legal/dataretention. last checked 2026-10.
+- RFC 8224, Authenticated Identity Management in SIP. rfc. https://www.rfc-editor.org/rfc/rfc8224. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Certified Caller?
+- A separate project.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- Data retention. vendor. https://www.five9.com/legal/dataretention. last checked 2026-10.
+- RFC 8224, Authenticated Identity Management in SIP. rfc. https://www.rfc-editor.org/rfc/rfc8224. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Stopped inbound?
+- Does not answer.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- Data retention. vendor. https://www.five9.com/legal/dataretention. last checked 2026-10.
+- RFC 8224, Authenticated Identity Management in SIP. rfc. https://www.rfc-editor.org/rfc/rfc8224. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- INVITE failures?
+- Check both sides.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- SIP trunk options chapter. vendor. https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/SIP-trunk-options/_ch-five9-sip-trunk-options.htm. last checked 2026-10.
+- RFC 3261. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- RFC 3550, RTP. rfc. https://www.rfc-editor.org/rfc/rfc3550. last checked 2026-10.
+- RFC 3551, RTP profile for audio and video. rfc. https://www.rfc-editor.org/rfc/rfc3551. last checked 2026-10.
+- ITU-T G.711. standard. https://www.itu.int/rec/T-REC-G.711. last checked 2026-10.
+- RFC 8446, TLS 1.3. rfc. https://www.rfc-editor.org/rfc/rfc8446. last checked 2026-10.
+- RFC 1035, domain names. rfc. https://www.rfc-editor.org/rfc/rfc1035. last checked 2026-10.
+- RFC 2782, DNS SRV. rfc. https://www.rfc-editor.org/rfc/rfc2782. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- RFC 1918, private internet addresses. rfc. https://www.rfc-editor.org/rfc/rfc1918. last checked 2026-10.
+- RFC 4787, NAT behavior for UDP. rfc. https://www.rfc-editor.org/rfc/rfc4787. last checked 2026-10.
+- confirm. NANP versus E.164, 20 ms ptime, and 'no internal extensions' are practitioner cautions. They are not quoted here as Five9 requirements.. last checked 2026-10.
+- Extensions as DNIS?
+- Do not assume it.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- SIP trunk options chapter. vendor. https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/SIP-trunk-options/_ch-five9-sip-trunk-options.htm. last checked 2026-10.
+- RFC 3261. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- RFC 3550, RTP. rfc. https://www.rfc-editor.org/rfc/rfc3550. last checked 2026-10.
+- RFC 3551, RTP profile for audio and video. rfc. https://www.rfc-editor.org/rfc/rfc3551. last checked 2026-10.
+- ITU-T G.711. standard. https://www.itu.int/rec/T-REC-G.711. last checked 2026-10.
+- RFC 8446, TLS 1.3. rfc. https://www.rfc-editor.org/rfc/rfc8446. last checked 2026-10.
+- RFC 1035, domain names. rfc. https://www.rfc-editor.org/rfc/rfc1035. last checked 2026-10.
+- RFC 2782, DNS SRV. rfc. https://www.rfc-editor.org/rfc/rfc2782. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- RFC 1918, private internet addresses. rfc. https://www.rfc-editor.org/rfc/rfc1918. last checked 2026-10.
+- RFC 4787, NAT behavior for UDP. rfc. https://www.rfc-editor.org/rfc/rfc4787. last checked 2026-10.
+- confirm. NANP versus E.164, 20 ms ptime, and 'no internal extensions' are practitioner cautions. They are not quoted here as Five9 requirements.. last checked 2026-10.
+- 20 ms?
+- Uncertain practitioner note.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- SIP trunk options chapter. vendor. https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/SIP-trunk-options/_ch-five9-sip-trunk-options.htm. last checked 2026-10.
+- RFC 3261. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- RFC 3550, RTP. rfc. https://www.rfc-editor.org/rfc/rfc3550. last checked 2026-10.
+- RFC 3551, RTP profile for audio and video. rfc. https://www.rfc-editor.org/rfc/rfc3551. last checked 2026-10.
+- ITU-T G.711. standard. https://www.itu.int/rec/T-REC-G.711. last checked 2026-10.
+- RFC 8446, TLS 1.3. rfc. https://www.rfc-editor.org/rfc/rfc8446. last checked 2026-10.
+- RFC 1035, domain names. rfc. https://www.rfc-editor.org/rfc/rfc1035. last checked 2026-10.
+- RFC 2782, DNS SRV. rfc. https://www.rfc-editor.org/rfc/rfc2782. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- RFC 1918, private internet addresses. rfc. https://www.rfc-editor.org/rfc/rfc1918. last checked 2026-10.
+- RFC 4787, NAT behavior for UDP. rfc. https://www.rfc-editor.org/rfc/rfc4787. last checked 2026-10.
+- confirm. NANP versus E.164, 20 ms ptime, and 'no internal extensions' are practitioner cautions. They are not quoted here as Five9 requirements.. last checked 2026-10.
+- SRV?
+- Preferred on the Five9 side.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- SIP trunk options chapter. vendor. https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/SIP-trunk-options/_ch-five9-sip-trunk-options.htm. last checked 2026-10.
+- RFC 3261. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- RFC 3550, RTP. rfc. https://www.rfc-editor.org/rfc/rfc3550. last checked 2026-10.
+- RFC 3551, RTP profile for audio and video. rfc. https://www.rfc-editor.org/rfc/rfc3551. last checked 2026-10.
+- ITU-T G.711. standard. https://www.itu.int/rec/T-REC-G.711. last checked 2026-10.
+- RFC 8446, TLS 1.3. rfc. https://www.rfc-editor.org/rfc/rfc8446. last checked 2026-10.
+- RFC 1035, domain names. rfc. https://www.rfc-editor.org/rfc/rfc1035. last checked 2026-10.
+- RFC 2782, DNS SRV. rfc. https://www.rfc-editor.org/rfc/rfc2782. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- RFC 1918, private internet addresses. rfc. https://www.rfc-editor.org/rfc/rfc1918. last checked 2026-10.
+- RFC 4787, NAT behavior for UDP. rfc. https://www.rfc-editor.org/rfc/rfc4787. last checked 2026-10.
+- confirm. NANP versus E.164, 20 ms ptime, and 'no internal extensions' are practitioner cautions. They are not quoted here as Five9 requirements.. last checked 2026-10.
+- Busy DNIS?
+- Campaign not running.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- E911 data sheet. vendor. https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF. last checked 2026-10.
+- Data retention. vendor. https://www.five9.com/legal/dataretention. last checked 2026-10.
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Enhanced 9-1-1. wikipedia. https://en.wikipedia.org/wiki/Enhanced_9-1-1. last checked 2026-10.
+- confirm. This checklist is a teaching bridge for cutover discipline. It is not an official Five9 UCCE runbook.. last checked 2026-10.
+- E911 address?
+- Where the agent is.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- E911 data sheet. vendor. https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF. last checked 2026-10.
+- Data retention. vendor. https://www.five9.com/legal/dataretention. last checked 2026-10.
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Enhanced 9-1-1. wikipedia. https://en.wikipedia.org/wiki/Enhanced_9-1-1. last checked 2026-10.
+- confirm. This checklist is a teaching bridge for cutover discipline. It is not an official Five9 UCCE runbook.. last checked 2026-10.
+- Test one path first?
+- Yes.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- E911 data sheet. vendor. https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF. last checked 2026-10.
+- Data retention. vendor. https://www.five9.com/legal/dataretention. last checked 2026-10.
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Enhanced 9-1-1. wikipedia. https://en.wikipedia.org/wiki/Enhanced_9-1-1. last checked 2026-10.
+- confirm. This checklist is a teaching bridge for cutover discipline. It is not an official Five9 UCCE runbook.. last checked 2026-10.
+- Why test the pop?
+- It is a separate channel.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Inbound campaigns. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm. last checked 2026-10.
+- E911 data sheet. vendor. https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF. last checked 2026-10.
+- Data retention. vendor. https://www.five9.com/legal/dataretention. last checked 2026-10.
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Enhanced 9-1-1. wikipedia. https://en.wikipedia.org/wiki/Enhanced_9-1-1. last checked 2026-10.
+- confirm. This checklist is a teaching bridge for cutover discipline. It is not an official Five9 UCCE runbook.. last checked 2026-10.
+- Prefix?
+- None. Dial 911.
+- E911 data sheet
+- Sources and go deeper
+- E911 data sheet. vendor. https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF. last checked 2026-10.
+- End user license agreement. vendor. https://www.five9.com/legal/end-user-license-agreement. last checked 2026-10.
+- Enhanced 9-1-1. wikipedia. https://en.wikipedia.org/wiki/Enhanced_9-1-1. last checked 2026-10.
+- confirm. The 2022 data sheet says US and territories. The EULA text this lab read also says US or Canada. Re-read both before you publish a coverage map.. last checked 2026-10.
+- Partner on the sheet?
+- RedSky.
+- E911 data sheet
+- Sources and go deeper
+- E911 data sheet. vendor. https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF. last checked 2026-10.
+- End user license agreement. vendor. https://www.five9.com/legal/end-user-license-agreement. last checked 2026-10.
+- Enhanced 9-1-1. wikipedia. https://en.wikipedia.org/wiki/Enhanced_9-1-1. last checked 2026-10.
+- confirm. The 2022 data sheet says US and territories. The EULA text this lab read also says US or Canada. Re-read both before you publish a coverage map.. last checked 2026-10.
+- Wrong address?
+- The EULA says the call can fail.
+- E911 data sheet
+- Sources and go deeper
+- E911 data sheet. vendor. https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF. last checked 2026-10.
+- End user license agreement. vendor. https://www.five9.com/legal/end-user-license-agreement. last checked 2026-10.
+- Enhanced 9-1-1. wikipedia. https://en.wikipedia.org/wiki/Enhanced_9-1-1. last checked 2026-10.
+- confirm. The 2022 data sheet says US and territories. The EULA text this lab read also says US or Canada. Re-read both before you publish a coverage map.. last checked 2026-10.
+- Same map on both docs?
+- No. Cite which one.
+- E911 data sheet
+- Sources and go deeper
+- E911 data sheet. vendor. https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF. last checked 2026-10.
+- End user license agreement. vendor. https://www.five9.com/legal/end-user-license-agreement. last checked 2026-10.
+- Enhanced 9-1-1. wikipedia. https://en.wikipedia.org/wiki/Enhanced_9-1-1. last checked 2026-10.
+- confirm. The 2022 data sheet says US and territories. The EULA text this lab read also says US or Canada. Re-read both before you publish a coverage map.. last checked 2026-10.
+- Dispatchable?
+- Where responders can find the person.
+- E911 data sheet
+- Sources and go deeper
+- E911 data sheet. vendor. https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF. last checked 2026-10.
+- End user license agreement. vendor. https://www.five9.com/legal/end-user-license-agreement. last checked 2026-10.
+- MyE911 call history. community. https://community.five9.com/s/article/MyE911-Call-History?language=en_US. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- Enhanced 9-1-1. wikipedia. https://en.wikipedia.org/wiki/Enhanced_9-1-1. last checked 2026-10.
+- History fields?
+- Time, user, number, location, recording, SIP invite.
+- E911 data sheet
+- Sources and go deeper
+- E911 data sheet. vendor. https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF. last checked 2026-10.
+- End user license agreement. vendor. https://www.five9.com/legal/end-user-license-agreement. last checked 2026-10.
+- MyE911 call history. community. https://community.five9.com/s/article/MyE911-Call-History?language=en_US. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- Enhanced 9-1-1. wikipedia. https://en.wikipedia.org/wiki/Enhanced_9-1-1. last checked 2026-10.
+- History instead of registration?
+- No.
+- E911 data sheet
+- Sources and go deeper
+- E911 data sheet. vendor. https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF. last checked 2026-10.
+- End user license agreement. vendor. https://www.five9.com/legal/end-user-license-agreement. last checked 2026-10.
+- MyE911 call history. community. https://community.five9.com/s/article/MyE911-Call-History?language=en_US. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- Enhanced 9-1-1. wikipedia. https://en.wikipedia.org/wiki/Enhanced_9-1-1. last checked 2026-10.
+- A move?
+- Register again.
+- E911 data sheet
+- Sources and go deeper
+- E911 data sheet. vendor. https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF. last checked 2026-10.
+- End user license agreement. vendor. https://www.five9.com/legal/end-user-license-agreement. last checked 2026-10.
+- MyE911 call history. community. https://community.five9.com/s/article/MyE911-Call-History?language=en_US. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- Enhanced 9-1-1. wikipedia. https://en.wikipedia.org/wiki/Enhanced_9-1-1. last checked 2026-10.
+- Who owns notice?
+- The customer.
+- End user license agreement
+- Sources and go deeper
+- End user license agreement. vendor. https://www.five9.com/legal/end-user-license-agreement. last checked 2026-10.
+- Data retention. vendor. https://www.five9.com/legal/dataretention. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Hold recorded?
+- The EULA says it can be.
+- End user license agreement
+- Sources and go deeper
+- End user license agreement. vendor. https://www.five9.com/legal/end-user-license-agreement. last checked 2026-10.
+- Data retention. vendor. https://www.five9.com/legal/dataretention. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Transfer?
+- Can still be recorded.
+- End user license agreement
+- Sources and go deeper
+- End user license agreement. vendor. https://www.five9.com/legal/end-user-license-agreement. last checked 2026-10.
+- Data retention. vendor. https://www.five9.com/legal/dataretention. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Universal script?
+- No.
+- End user license agreement
+- Sources and go deeper
+- End user license agreement. vendor. https://www.five9.com/legal/end-user-license-agreement. last checked 2026-10.
+- Data retention. vendor. https://www.five9.com/legal/dataretention. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- E911 recordings?
+- 30 days.
+- Data retention
+- Sources and go deeper
+- Data retention. vendor. https://www.five9.com/legal/dataretention. last checked 2026-10.
+- Enhanced 9-1-1. wikipedia. https://en.wikipedia.org/wiki/Enhanced_9-1-1. last checked 2026-10.
+- Agent data?
+- 60 days.
+- Data retention
+- Sources and go deeper
+- Data retention. vendor. https://www.five9.com/legal/dataretention. last checked 2026-10.
+- Enhanced 9-1-1. wikipedia. https://en.wikipedia.org/wiki/Enhanced_9-1-1. last checked 2026-10.
+- DIDs?
+- 90 days after closure.
+- Data retention
+- Sources and go deeper
+- Data retention. vendor. https://www.five9.com/legal/dataretention. last checked 2026-10.
+- Enhanced 9-1-1. wikipedia. https://en.wikipedia.org/wiki/Enhanced_9-1-1. last checked 2026-10.
+- Audio?
+- Sooner of 30 days, offload, or contract.
+- Data retention
+- Sources and go deeper
+- Data retention. vendor. https://www.five9.com/legal/dataretention. last checked 2026-10.
+- Enhanced 9-1-1. wikipedia. https://en.wikipedia.org/wiki/Enhanced_9-1-1. last checked 2026-10.
+- Certified Caller?
+- STIR/SHAKEN program.
+- Certified Caller
+- Sources and go deeper
+- Certified Caller. vendor. https://www.five9.com/resources/five9_certified_caller. last checked 2026-10.
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- RFC 8224, Authenticated Identity Management in SIP. rfc. https://www.rfc-editor.org/rfc/rfc8224. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Profile ANI equals attestation?
+- No.
+- Certified Caller
+- Sources and go deeper
+- Certified Caller. vendor. https://www.five9.com/resources/five9_certified_caller. last checked 2026-10.
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- RFC 8224, Authenticated Identity Management in SIP. rfc. https://www.rfc-editor.org/rfc/rfc8224. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Regulators named?
+- FCC and CRTC.
+- Certified Caller
+- Sources and go deeper
+- Certified Caller. vendor. https://www.five9.com/resources/five9_certified_caller. last checked 2026-10.
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- RFC 8224, Authenticated Identity Management in SIP. rfc. https://www.rfc-editor.org/rfc/rfc8224. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Can you say the profile signs calls?
+- No.
+- Certified Caller
+- Sources and go deeper
+- Certified Caller. vendor. https://www.five9.com/resources/five9_certified_caller. last checked 2026-10.
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- RFC 8224, Authenticated Identity Management in SIP. rfc. https://www.rfc-editor.org/rfc/rfc8224. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Warning?
+- Yes, if you change the max abandon percentage.
+- Default campaign settings
+- Sources and go deeper
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- TCPA manual touch. community. https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US. last checked 2026-10.
+- Telephone Consumer Protection Act of 1991. wikipedia. https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991. last checked 2026-10.
+- confirm. This lab does not publish a numeric default for Max Abandoned Call Percentage. The defaults page describes the windows and the warning, not a percent we are willing to repeat.. last checked 2026-10.
+- US window?
+- Rolling 30 days.
+- Default campaign settings
+- Sources and go deeper
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- TCPA manual touch. community. https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US. last checked 2026-10.
+- Telephone Consumer Protection Act of 1991. wikipedia. https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991. last checked 2026-10.
+- confirm. This lab does not publish a numeric default for Max Abandoned Call Percentage. The defaults page describes the windows and the warning, not a percent we are willing to repeat.. last checked 2026-10.
+- UK window?
+- 24 hours.
+- Default campaign settings
+- Sources and go deeper
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- TCPA manual touch. community. https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US. last checked 2026-10.
+- Telephone Consumer Protection Act of 1991. wikipedia. https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991. last checked 2026-10.
+- confirm. This lab does not publish a numeric default for Max Abandoned Call Percentage. The defaults page describes the windows and the warning, not a percent we are willing to repeat.. last checked 2026-10.
+- Who sets the window?
+- A Five9 representative.
+- Default campaign settings
+- Sources and go deeper
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- TCPA manual touch. community. https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US. last checked 2026-10.
+- Telephone Consumer Protection Act of 1991. wikipedia. https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991. last checked 2026-10.
+- confirm. This lab does not publish a numeric default for Max Abandoned Call Percentage. The defaults page describes the windows and the warning, not a percent we are willing to repeat.. last checked 2026-10.
+- Paste?
+- Blocked.
+- TCPA manual touch
+- Sources and go deeper
+- TCPA manual touch. community. https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US. last checked 2026-10.
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- Telephone Consumer Protection Act of 1991. wikipedia. https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991. last checked 2026-10.
+- When does Dial enable?
+- When the typed number matches.
+- TCPA manual touch
+- Sources and go deeper
+- TCPA manual touch. community. https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US. last checked 2026-10.
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- Telephone Consumer Protection Act of 1991. wikipedia. https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991. last checked 2026-10.
+- Timeout?
+- Not Ready, no auto dial.
+- TCPA manual touch
+- Sources and go deeper
+- TCPA manual touch. community. https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US. last checked 2026-10.
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- Telephone Consumer Protection Act of 1991. wikipedia. https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991. last checked 2026-10.
+- Skip permission?
+- User Can Skip Contact Records in TCPA Manual Touch.
+- TCPA manual touch
+- Sources and go deeper
+- TCPA manual touch. community. https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US. last checked 2026-10.
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- Telephone Consumer Protection Act of 1991. wikipedia. https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991. last checked 2026-10.
+- WEM equals the dialer?
+- No.
+- Agent Desktop
+- Sources and go deeper
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- APIs and SDKs. vendor. https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks. last checked 2026-10.
+- E911 data sheet. vendor. https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- Enhanced 9-1-1. wikipedia. https://en.wikipedia.org/wiki/Enhanced_9-1-1. last checked 2026-10.
+- E911?
+- Its own location service.
+- Agent Desktop
+- Sources and go deeper
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- APIs and SDKs. vendor. https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks. last checked 2026-10.
+- E911 data sheet. vendor. https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- Enhanced 9-1-1. wikipedia. https://en.wikipedia.org/wiki/Enhanced_9-1-1. last checked 2026-10.
+- Pop equals trunk?
+- No.
+- Agent Desktop
+- Sources and go deeper
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- APIs and SDKs. vendor. https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks. last checked 2026-10.
+- E911 data sheet. vendor. https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- Enhanced 9-1-1. wikipedia. https://en.wikipedia.org/wiki/Enhanced_9-1-1. last checked 2026-10.
+- Uncited boxes?
+- Leave them off.
+- Agent Desktop
+- Sources and go deeper
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- APIs and SDKs. vendor. https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks. last checked 2026-10.
+- E911 data sheet. vendor. https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- Enhanced 9-1-1. wikipedia. https://en.wikipedia.org/wiki/Enhanced_9-1-1. last checked 2026-10.
+- What does the page include?
+- WFM, QM, analytics, surveys, recording, Verint.
+- Workforce engagement management
+- Sources and go deeper
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- WEM data sheet. vendor. https://www.five9.com/resources/data-sheet/five9-wem. last checked 2026-10.
+- Scores move skills by themselves?
+- No.
+- Workforce engagement management
+- Sources and go deeper
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- WEM data sheet. vendor. https://www.five9.com/resources/data-sheet/five9-wem. last checked 2026-10.
+- Who upgrades the delivered solution?
+- Five9, per the page.
+- Workforce engagement management
+- Sources and go deeper
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- WEM data sheet. vendor. https://www.five9.com/resources/data-sheet/five9-wem. last checked 2026-10.
+- Which retention text?
+- The retention page.
+- Workforce engagement management
+- Sources and go deeper
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- WEM data sheet. vendor. https://www.five9.com/resources/data-sheet/five9-wem. last checked 2026-10.
+- Wallboard versus report?
+- Different pipes.
+- Workforce engagement management
+- Sources and go deeper
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- Generating standard reports. community. https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports. last checked 2026-10.
+- APIs and SDKs. vendor. https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks. last checked 2026-10.
+- Automatic call distributor. wikipedia. https://en.wikipedia.org/wiki/Automatic_call_distributor. last checked 2026-10.
+- Statistics API?
+- A named family.
+- Workforce engagement management
+- Sources and go deeper
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- Generating standard reports. community. https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports. last checked 2026-10.
+- APIs and SDKs. vendor. https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks. last checked 2026-10.
+- Automatic call distributor. wikipedia. https://en.wikipedia.org/wiki/Automatic_call_distributor. last checked 2026-10.
+- Reporting role?
+- Gates standard reports.
+- Workforce engagement management
+- Sources and go deeper
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- Generating standard reports. community. https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports. last checked 2026-10.
+- APIs and SDKs. vendor. https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks. last checked 2026-10.
+- Automatic call distributor. wikipedia. https://en.wikipedia.org/wiki/Automatic_call_distributor. last checked 2026-10.
+- Matrix as CSV?
+- No.
+- Workforce engagement management
+- Sources and go deeper
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- Generating standard reports. community. https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports. last checked 2026-10.
+- APIs and SDKs. vendor. https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks. last checked 2026-10.
+- Automatic call distributor. wikipedia. https://en.wikipedia.org/wiki/Automatic_call_distributor. last checked 2026-10.
+- Default model named here?
+- No.
+- Five9 Engage
+- Sources and go deeper
+- Five9 Engage. vendor. https://www.five9.com/platform/self-service-and-engagement. last checked 2026-10.
+- GenAI Studio. vendor. https://www.five9.com/products/capabilities/gen-ai-studio. last checked 2026-10.
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- confirm. GenAI Studio's product page describes an engine-agnostic studio and names Agent Assist summaries as an initial consumer. It does not name a default model for this lab to repeat.. last checked 2026-10.
+- IVA Transfer?
+- A real module.
+- Five9 Engage
+- Sources and go deeper
+- Five9 Engage. vendor. https://www.five9.com/platform/self-service-and-engagement. last checked 2026-10.
+- GenAI Studio. vendor. https://www.five9.com/products/capabilities/gen-ai-studio. last checked 2026-10.
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- confirm. GenAI Studio's product page describes an engine-agnostic studio and names Agent Assist summaries as an initial consumer. It does not name a default model for this lab to repeat.. last checked 2026-10.
+- Digital handoff?
+- A Studio task key.
+- Five9 Engage
+- Sources and go deeper
+- Five9 Engage. vendor. https://www.five9.com/platform/self-service-and-engagement. last checked 2026-10.
+- GenAI Studio. vendor. https://www.five9.com/products/capabilities/gen-ai-studio. last checked 2026-10.
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- confirm. GenAI Studio's product page describes an engine-agnostic studio and names Agent Assist summaries as an initial consumer. It does not name a default model for this lab to repeat.. last checked 2026-10.
+- No exit?
+- A dead end.
+- Five9 Engage
+- Sources and go deeper
+- Five9 Engage. vendor. https://www.five9.com/platform/self-service-and-engagement. last checked 2026-10.
+- GenAI Studio. vendor. https://www.five9.com/products/capabilities/gen-ai-studio. last checked 2026-10.
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- confirm. GenAI Studio's product page describes an engine-agnostic studio and names Agent Assist summaries as an initial consumer. It does not name a default model for this lab to repeat.. last checked 2026-10.
+- Epic listed?
+- Yes.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- APIs and SDKs. vendor. https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks. last checked 2026-10.
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Local Teams?
+- About 320 kbps.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- APIs and SDKs. vendor. https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks. last checked 2026-10.
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- Blank card, live voice?
+- Adapter incident.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- APIs and SDKs. vendor. https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks. last checked 2026-10.
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- SDK?
+- Unlisted CRMs.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- APIs and SDKs. vendor. https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks. last checked 2026-10.
+- Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last checked 2026-10.
+- No page?
+- Mark the word local.
+- Generating standard reports
+- Sources and go deeper
+- Generating standard reports. community. https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports. last checked 2026-10.
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Two profiles?
+- Different objects.
+- Generating standard reports
+- Sources and go deeper
+- Generating standard reports. community. https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports. last checked 2026-10.
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Blended?
+- Not a campaign type.
+- Generating standard reports
+- Sources and go deeper
+- Generating standard reports. community. https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports. last checked 2026-10.
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Partition?
+- A visiting word.
+- Generating standard reports
+- Sources and go deeper
+- Generating standard reports. community. https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports. last checked 2026-10.
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Missing row?
+- No citation yet.
+- APIs and SDKs
+- Sources and go deeper
+- APIs and SDKs. vendor. https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks. last checked 2026-10.
+- E911 data sheet. vendor. https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF. last checked 2026-10.
+- Certified Caller. vendor. https://www.five9.com/resources/five9_certified_caller. last checked 2026-10.
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Enhanced 9-1-1. wikipedia. https://en.wikipedia.org/wiki/Enhanced_9-1-1. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- RedSky versus ITSP?
+- Different roles.
+- APIs and SDKs
+- Sources and go deeper
+- APIs and SDKs. vendor. https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks. last checked 2026-10.
+- E911 data sheet. vendor. https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF. last checked 2026-10.
+- Certified Caller. vendor. https://www.five9.com/resources/five9_certified_caller. last checked 2026-10.
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Enhanced 9-1-1. wikipedia. https://en.wikipedia.org/wiki/Enhanced_9-1-1. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Studio versus Equinix?
+- Different lists.
+- APIs and SDKs
+- Sources and go deeper
+- APIs and SDKs. vendor. https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks. last checked 2026-10.
+- E911 data sheet. vendor. https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF. last checked 2026-10.
+- Certified Caller. vendor. https://www.five9.com/resources/five9_certified_caller. last checked 2026-10.
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Enhanced 9-1-1. wikipedia. https://en.wikipedia.org/wiki/Enhanced_9-1-1. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Two Salesforces?
+- Module versus adapter.
+- APIs and SDKs
+- Sources and go deeper
+- APIs and SDKs. vendor. https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks. last checked 2026-10.
+- E911 data sheet. vendor. https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF. last checked 2026-10.
+- Certified Caller. vendor. https://www.five9.com/resources/five9_certified_caller. last checked 2026-10.
+- Workforce engagement management. vendor. https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- ITU-T E.164, international public telecommunication numbering. standard. https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.
+- Enhanced 9-1-1. wikipedia. https://en.wikipedia.org/wiki/Enhanced_9-1-1. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Exam code in this lab?
+- None.
+- Five9 University
+- Sources and go deeper
+- Five9 University. vendor. https://www.five9.com/contact-center-services/training. last checked 2026-10.
+- Administrator training classes. community. https://community.five9.com/s/article/Five9-University-Five9-Administrator-Training-Classes?language=en_US. last checked 2026-10.
+- University curriculum brief, April 2023. vendor. https://www.five9.com/sites/default/files/2023-04/Five9_University_Curriculum_Brief_v5.pdf. last checked 2026-10.
+- confirm. The curriculum brief is from April 2023. Course lists move. This lab found no public administrator exam code to quote.. last checked 2026-10.
+- Formats?
+- Online, webinars, ILT, train-the-trainer, custom.
+- Five9 University
+- Sources and go deeper
+- Five9 University. vendor. https://www.five9.com/contact-center-services/training. last checked 2026-10.
+- Administrator training classes. community. https://community.five9.com/s/article/Five9-University-Five9-Administrator-Training-Classes?language=en_US. last checked 2026-10.
+- University curriculum brief, April 2023. vendor. https://www.five9.com/sites/default/files/2023-04/Five9_University_Curriculum_Brief_v5.pdf. last checked 2026-10.
+- confirm. The curriculum brief is from April 2023. Course lists move. This lab found no public administrator exam code to quote.. last checked 2026-10.
+- Assessments?
+- Mentioned, no code quoted.
+- Five9 University
+- Sources and go deeper
+- Five9 University. vendor. https://www.five9.com/contact-center-services/training. last checked 2026-10.
+- Administrator training classes. community. https://community.five9.com/s/article/Five9-University-Five9-Administrator-Training-Classes?language=en_US. last checked 2026-10.
+- University curriculum brief, April 2023. vendor. https://www.five9.com/sites/default/files/2023-04/Five9_University_Curriculum_Brief_v5.pdf. last checked 2026-10.
+- confirm. The curriculum brief is from April 2023. Course lists move. This lab found no public administrator exam code to quote.. last checked 2026-10.
+- Invented codes?
+- Ignore them.
+- Five9 University
+- Sources and go deeper
+- Five9 University. vendor. https://www.five9.com/contact-center-services/training. last checked 2026-10.
+- Administrator training classes. community. https://community.five9.com/s/article/Five9-University-Five9-Administrator-Training-Classes?language=en_US. last checked 2026-10.
+- University curriculum brief, April 2023. vendor. https://www.five9.com/sites/default/files/2023-04/Five9_University_Curriculum_Brief_v5.pdf. last checked 2026-10.
+- confirm. The curriculum brief is from April 2023. Course lists move. This lab found no public administrator exam code to quote.. last checked 2026-10.
+- What is the badge?
+- IVA sales, for partners.
+- IVA Sales Certified badge
+- Sources and go deeper
+- IVA Sales Certified badge. vendor. https://www.credly.com/org/five9/badge/five9-iva-sales-certified. last checked 2026-10.
+- Partner IVA sales certification. vendor. https://www.five9.com/blog/five9-partners-can-now-become-sales-certified-five9-university-partners. last checked 2026-10.
+- Five9 University. vendor. https://www.five9.com/contact-center-services/training. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- confirm. Badge details were read from the public Credly page and the partner blog. Confirm the current attempt rules before you depend on them.. last checked 2026-10.
+- Questions?
+- 20.
+- IVA Sales Certified badge
+- Sources and go deeper
+- IVA Sales Certified badge. vendor. https://www.credly.com/org/five9/badge/five9-iva-sales-certified. last checked 2026-10.
+- Partner IVA sales certification. vendor. https://www.five9.com/blog/five9-partners-can-now-become-sales-certified-five9-university-partners. last checked 2026-10.
+- Five9 University. vendor. https://www.five9.com/contact-center-services/training. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- confirm. Badge details were read from the public Credly page and the partner blog. Confirm the current attempt rules before you depend on them.. last checked 2026-10.
+- Pass mark?
+- 80 percent.
+- IVA Sales Certified badge
+- Sources and go deeper
+- IVA Sales Certified badge. vendor. https://www.credly.com/org/five9/badge/five9-iva-sales-certified. last checked 2026-10.
+- Partner IVA sales certification. vendor. https://www.five9.com/blog/five9-partners-can-now-become-sales-certified-five9-university-partners. last checked 2026-10.
+- Five9 University. vendor. https://www.five9.com/contact-center-services/training. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- confirm. Badge details were read from the public Credly page and the partner blog. Confirm the current attempt rules before you depend on them.. last checked 2026-10.
+- Admin substitute?
+- No.
+- IVA Sales Certified badge
+- Sources and go deeper
+- IVA Sales Certified badge. vendor. https://www.credly.com/org/five9/badge/five9-iva-sales-certified. last checked 2026-10.
+- Partner IVA sales certification. vendor. https://www.five9.com/blog/five9-partners-can-now-become-sales-certified-five9-university-partners. last checked 2026-10.
+- Five9 University. vendor. https://www.five9.com/contact-center-services/training. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- confirm. Badge details were read from the public Credly page and the partner blog. Confirm the current attempt rules before you depend on them.. last checked 2026-10.
+- Practice equals the planning order?
+- Yes.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Administrator training classes. community. https://community.five9.com/s/article/Five9-University-Five9-Administrator-Training-Classes?language=en_US. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Stopped campaign?
+- Busy DNIS.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Administrator training classes. community. https://community.five9.com/s/article/Five9-University-Five9-Administrator-Training-Classes?language=en_US. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Invent a percent?
+- No.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Administrator training classes. community. https://community.five9.com/s/article/Five9-University-Five9-Administrator-Training-Classes?language=en_US. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Reporting role?
+- Separate.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- Administrator training classes. community. https://community.five9.com/s/article/Five9-University-Five9-Administrator-Training-Classes?language=en_US. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- 2.46?
+- Dated PDF fact.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- University curriculum brief, April 2023. vendor. https://www.five9.com/sites/default/files/2023-04/Five9_University_Curriculum_Brief_v5.pdf. last checked 2026-10.
+- confirm. Salesforce 2.46, ServiceNow Australia/Zurich/Yokohama, JRE 8 updates 421/451/461, and macOS Sequoia 15, Tahoe 26, and Golden Gate 27 are from the technical requirements read in October 2026.. last checked 2026-10.
+- ServiceNow names?
+- Australia, Zurich, Yokohama, in that reading.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- University curriculum brief, April 2023. vendor. https://www.five9.com/sites/default/files/2023-04/Five9_University_Curriculum_Brief_v5.pdf. last checked 2026-10.
+- confirm. Salesforce 2.46, ServiceNow Australia/Zurich/Yokohama, JRE 8 updates 421/451/461, and macOS Sequoia 15, Tahoe 26, and Golden Gate 27 are from the technical requirements read in October 2026.. last checked 2026-10.
+- JRE updates?
+- 421, 451, 461.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- University curriculum brief, April 2023. vendor. https://www.five9.com/sites/default/files/2023-04/Five9_University_Curriculum_Brief_v5.pdf. last checked 2026-10.
+- confirm. Salesforce 2.46, ServiceNow Australia/Zurich/Yokohama, JRE 8 updates 421/451/461, and macOS Sequoia 15, Tahoe 26, and Golden Gate 27 are from the technical requirements read in October 2026.. last checked 2026-10.
+- Curriculum brief equals the JRE list?
+- No.
+- Technical requirements PDF
+- Sources and go deeper
+- Technical requirements PDF. vendor. https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf. last checked 2026-10.
+- University curriculum brief, April 2023. vendor. https://www.five9.com/sites/default/files/2023-04/Five9_University_Curriculum_Brief_v5.pdf. last checked 2026-10.
+- confirm. Salesforce 2.46, ServiceNow Australia/Zurich/Yokohama, JRE 8 updates 421/451/461, and macOS Sequoia 15, Tahoe 26, and Golden Gate 27 are from the technical requirements read in October 2026.. last checked 2026-10.
+- Four beats?
+- Object, behavior, page, gap.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- IANA service names and port numbers. ports. https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Invent a port?
+- No. Stop.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- IANA service names and port numbers. ports. https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Cisco map?
+- A teaching bridge.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- IANA service names and port numbers. ports. https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Versions?
+- Dated.
+- Planning your implementation
+- Sources and go deeper
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- IVR modules. vendor. https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm. last checked 2026-10.
+- IANA service names and port numbers. ports. https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Session goal?
+- Object plus the page.
+- Five9 University
+- Sources and go deeper
+- Five9 University. vendor. https://www.five9.com/contact-center-services/training. last checked 2026-10.
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- Enhanced 9-1-1. wikipedia. https://en.wikipedia.org/wiki/Enhanced_9-1-1. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Skip uncertain notes?
+- No.
+- Five9 University
+- Sources and go deeper
+- Five9 University. vendor. https://www.five9.com/contact-center-services/training. last checked 2026-10.
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- Enhanced 9-1-1. wikipedia. https://en.wikipedia.org/wiki/Enhanced_9-1-1. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Campaign types?
+- Three.
+- Five9 University
+- Sources and go deeper
+- Five9 University. vendor. https://www.five9.com/contact-center-services/training. last checked 2026-10.
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- Enhanced 9-1-1. wikipedia. https://en.wikipedia.org/wiki/Enhanced_9-1-1. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Boss logs?
+- Synthetic.
+- Five9 University
+- Sources and go deeper
+- Five9 University. vendor. https://www.five9.com/contact-center-services/training. last checked 2026-10.
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Default campaign settings. vendor. https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm. last checked 2026-10.
+- RFC 3261, SIP: Session Initiation Protocol. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.
+- Enhanced 9-1-1. wikipedia. https://en.wikipedia.org/wiki/Enhanced_9-1-1. last checked 2026-10.
+- Interactive voice response. wikipedia. https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.
+- Can the lab edit your domain?
+- No.
+- Five9 University
+- Sources and go deeper
+- Five9 University. vendor. https://www.five9.com/contact-center-services/training. last checked 2026-10.
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- IVR export?
+- Learning file.
+- Five9 University
+- Sources and go deeper
+- Five9 University. vendor. https://www.five9.com/contact-center-services/training. last checked 2026-10.
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Outage?
+- Five9 support.
+- Five9 University
+- Sources and go deeper
+- Five9 University. vendor. https://www.five9.com/contact-center-services/training. last checked 2026-10.
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+- Uncertain?
+- Confirm before you depend on it.
+- Five9 University
+- Sources and go deeper
+- Five9 University. vendor. https://www.five9.com/contact-center-services/training. last checked 2026-10.
+- Planning your implementation. vendor. https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm. last checked 2026-10.
+
+## Sources and go deeper
+
+- [Planning your implementation](https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm). vendor. last checked 2026-10.
+- [Technical requirements PDF](https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf). vendor. last checked 2026-10.
+- [IANA service names and port numbers](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml). ports. last checked 2026-10.
+- [RFC 3261, SIP: Session Initiation Protocol](https://www.rfc-editor.org/rfc/rfc3261). rfc. last checked 2026-10.
+- [Interactive voice response](https://en.wikipedia.org/wiki/Interactive_voice_response). wikipedia. last checked 2026-10.

@@ -1,0 +1,35 @@
+{
+  "id": "t07-l06-iva-foreign-scripts-dnc-and-leaving-the-platform",
+  "title": "IVA, foreign scripts, DNC, and leaving the platform",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "IVR modules",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Studio digital IVA with VCC",
+      "url": "https://community.five9.com/s/article/Studio-7-Integrate-Digital-IVA-in-Studio-with-VCC?language=en_US",
+      "kind": "community",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Interactive voice response",
+      "url": "https://en.wikipedia.org/wiki/Interactive_voice_response",
+      "kind": "wikipedia",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Public pages describe IVA Transfer and a digital ChatBot integration separately. This lab does not claim they share one property sheet.",
+      "url": "",
+      "kind": "note",
+      "status": "confirm",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

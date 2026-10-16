@@ -1,0 +1,67 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 1043 >>
+stream
+BT
+/F1 10 Tf
+48 740 Td
+14 TL
+(Transcription and assist are features you turn on   Learn it in 5 minutes) Tj
+T*
+() Tj
+T*
+(The Engage page describes transcription, sentiment language, and Agent Assist suggestions on) Tj
+T*
+(the desktop. GenAI Studio's page says it powers Five9 AI applications and initially focuses) Tj
+T*
+(on Agent Assist summaries, with control over the output.) Tj
+T*
+(None of those pages name a single model you can assume is the default in every domain. If a) Tj
+T*
+(design says 'it uses model X,' mark that sentence uncertain until the domain's GenAI Studio) Tj
+T*
+(screen says it.) Tj
+T*
+() Tj
+T*
+(Sources and go deeper) Tj
+T*
+(Five9 Engage. vendor. https://www.five9.com/platform/self-service-and-engagement. last) Tj
+T*
+(checked 2026-10.) Tj
+T*
+(GenAI Studio. vendor. https://www.five9.com/products/capabilities/gen-ai-studio. last) Tj
+T*
+(checked 2026-10.) Tj
+T*
+(confirm. GenAI Studio is described as engine-agnostic. This lab does not name the default) Tj
+T*
+(model for a new domain.. last checked 2026-10.) Tj
+T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Contents 2 0 R /Resources << /Font << /F1 1 0 R >> >> >>
+endobj
+4 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+5 0 obj
+<< /Type /Catalog /Pages 4 0 R >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000001174 00000 n 
+0000001300 00000 n 
+0000001357 00000 n 
+trailer << /Size 6 /Root 5 0 R >>
+startxref
+1406
+%%EOF

@@ -1,0 +1,21 @@
+{
+  "id": "t01-l03-roles-on-the-floor",
+  "title": "Roles on the floor",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Skill groups",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Generating standard reports",
+      "url": "https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports",
+      "kind": "community",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

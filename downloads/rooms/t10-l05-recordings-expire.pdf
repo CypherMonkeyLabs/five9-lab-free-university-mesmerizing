@@ -1,0 +1,69 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 1080 >>
+stream
+BT
+/F1 10 Tf
+48 740 Td
+14 TL
+(Recordings expire) Tj
+T*
+() Tj
+T*
+(The retention page says VCC audio recordings are kept for the sooner of 30 days or a) Tj
+T*
+(successful SFTP or FTP offload, or as the contract says. E911 call recordings are listed at) Tj
+T*
+(30 days. Agent data is 60 days. Campaign state is 120 days. Disabled domains are listed at) Tj
+T*
+(120 days after closure. DIDs and toll-free numbers are listed at 90 days after closure.) Tj
+T*
+(If you need a call from last quarter, the offload had to succeed. A failed SFTP job is a) Tj
+T*
+(silent deletion clock. QM cannot score what is already gone.) Tj
+T*
+(Plan the offload) Tj
+T*
+(Do not promise a recording past the clock) Tj
+T*
+() Tj
+T*
+(Sources and go deeper) Tj
+T*
+(Data retention. vendor. https://www.five9.com/legal/dataretention. last checked 2026-10.) Tj
+T*
+(Enhanced 9-1-1. wikipedia. https://en.wikipedia.org/wiki/Enhanced_9-1-1. last checked) Tj
+T*
+(2026-10.) Tj
+T*
+(confirm. Contracts can override the published table. Read the agreement for the domain you) Tj
+T*
+(are in.. last checked 2026-10.) Tj
+T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Contents 2 0 R /Resources << /Font << /F1 1 0 R >> >> >>
+endobj
+4 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+5 0 obj
+<< /Type /Catalog /Pages 4 0 R >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000001211 00000 n 
+0000001337 00000 n 
+0000001394 00000 n 
+trailer << /Size 6 /Root 5 0 R >>
+startxref
+1443
+%%EOF

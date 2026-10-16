@@ -27,12 +27,11 @@
     '<div class="cg-handle" aria-hidden="true"></div>' +
     '<div class="cg-bar"><h2 id="cg-title">Five9 guide</h2>' +
     '<button type="button" data-close>Close</button></div>' +
+    '<div class="cg-speak"><button type="button" data-read>Read this page</button>' +
+    '<label>Voice <select data-voice-name aria-label="Speaking voice"></select></label></div>' +
     '<div class="cg-cards"></div><div class="cg-log" role="log"></div>' +
     '<details class="cg-extra"><summary>More tools</summary>' +
-    '<div class="cg-tools"><button type="button" data-read>Read along</button>' +
-    '<button type="button" data-voice-toggle>Voice settings</button></div>' +
-    '<div class="cg-voice" hidden><label>Voice <select data-voice-name></select></label>' +
-    '<label>Rate <input data-rate type="range" min="0.8" max="1.2" step="0.05" value="0.95"></label>' +
+    '<div class="cg-voice"><label>Rate <input data-rate type="range" min="0.8" max="1.2" step="0.05" value="0.95"></label>' +
     '<label>Pitch <input data-pitch type="range" min="0.8" max="1.2" step="0.05" value="1"></label>' +
     '<label><input data-ambient type="checkbox"> Soft ambient sound, off unless you check this</label></div>' +
     '<div class="cg-chips"></div>' +
@@ -153,6 +152,12 @@
   function fillVoices() {
     var list = voices();
     voiceSel.innerHTML = "";
+    if (!list.length) {
+      var empty = document.createElement("option");
+      empty.value = "";
+      empty.textContent = "Browser default";
+      voiceSel.appendChild(empty);
+    }
     list.forEach(function (voice) {
       var opt = document.createElement("option");
       opt.value = voice.name;
@@ -170,7 +175,10 @@
     return list[0] || null;
   }
   function speak(text, onend) {
-    if (!window.speechSynthesis) { if (onend) onend(); return; }
+    if (!window.speechSynthesis) {
+      window.setTimeout(function () { if (onend) onend(); }, 2400);
+      return;
+    }
     window.speechSynthesis.cancel();
     var utter = new SpeechSynthesisUtterance(text);
     var voice = pickVoice();
@@ -204,6 +212,8 @@
       document.querySelectorAll(".is-spoken").forEach(function (el) { el.classList.remove("is-spoken"); });
       document.querySelectorAll("section.is-reading, .section-chip.is-reading").forEach(function (el) { el.classList.remove("is-reading"); });
       node.classList.add("is-spoken");
+      var motion = root.dataset.motion === "reduce" ? "auto" : "smooth";
+      node.scrollIntoView({ block: "center", behavior: motion });
       var section = node.closest("section");
       if (section) {
         section.classList.add("is-reading");
@@ -215,7 +225,7 @@
             chip.scrollIntoView({ inline: "center", block: "nearest" });
           }
         }
-        section.scrollIntoView({ block: "center", behavior: root.dataset.motion === "reduce" ? "auto" : "smooth" });
+        section.scrollIntoView({ block: "nearest", behavior: motion });
       }
       index += 1;
       speak(node.textContent || "", next);
@@ -418,7 +428,6 @@
   }
   host.querySelector("[data-close]").addEventListener("click", function () { setOpen(false); dock(); });
   host.querySelector("[data-read]").addEventListener("click", readAlong);
-  host.querySelector("[data-voice-toggle]").addEventListener("click", function () { voiceBox.hidden = !voiceBox.hidden; });
   form.addEventListener("submit", function (event) {
     event.preventDefault();
     var text = input.value.trim();

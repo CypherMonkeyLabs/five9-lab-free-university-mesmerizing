@@ -1,0 +1,13 @@
+# Dated notes
+
+- 2022-11: E911 data sheet on the public site names emergency services and RedSky. The PDF date is in the file path. Treat coverage claims as dated. E911 data sheet 2023-04: University curriculum brief names online, webinar, instructor-led, train-the-trainer, and custom formats. The live catalog wins if they differ. University curriculum brief 2026-03: Technical-requirements change log says Studio 7 network text was clarified for GCP and for CHI/VIR, and callback, email, and VoiceStream IP notes were updated. This lab does not copy those IP ranges. Technical requirements PDF 2026-07: The same change log consolidates Verint Workforce Optimization IPs and mentions added domains for US, Canadian, and European centers. IP lists move. Use the PDF, not a copy in this lab. Technical requirements PDF 2026-07-14: A community article describes the call log as a filtered window of about 60 days unless retention is extended. Re-read it before you promise an archive. Call log filters 2026-08-01: Java-based Agent Desktop and Supervisor Desktop are no longer on the customer portal after this date. The page tells people to use Agent Desktop Plus and Supervisor Desktop Plus. Java VCC Administrator remains documented, including a web launch. Java application requirements 2026-09-25: VCC Administrator via Web is documented as a browser launch with no local Java. The page lists gaps versus Java admin: usernames with spaces or non-English characters, some audio playback, HTML script preview, Trusted IP bypass, and Cmd+A. VCC Administrator as a web application
+
+## Sources and go deeper
+
+- [E911 data sheet](https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF). vendor. last checked 2026-10.
+- [University curriculum brief](https://www.five9.com/sites/default/files/2023-04/Five9_University_Curriculum_Brief_v5.pdf). vendor. last checked 2026-10.
+- [Technical requirements PDF](https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf). vendor. last checked 2026-10.
+- [Call log filters](https://community.five9.com/s/article/Reporting-Apply-Filter-s-in-the-Call-Log-Report). community. last checked 2026-10.
+- [Java application requirements](https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/agent-supervisor-apps/java-based-application-reqs.htm). vendor. last checked 2026-10.
+- [VCC Administrator as a web application](https://documentation.five9.com/bundle/admin-console/page/admin-console/java-vcc/_ch-vcc-on-the-web.htm). vendor. last checked 2026-10.
+- [Enhanced 9-1-1](https://en.wikipedia.org/wiki/Enhanced_9-1-1). wikipedia. last checked 2026-10.

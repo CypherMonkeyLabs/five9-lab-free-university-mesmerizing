@@ -1,0 +1,28 @@
+{
+  "id": "t10-l03-quality-management-listens-on-purpose",
+  "title": "Quality management listens on purpose",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Workforce engagement management",
+      "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Agent Desktop",
+      "url": "https://www.five9.com/products/capabilities/agent-desktop",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "End user license agreement",
+      "url": "https://www.five9.com/legal/end-user-license-agreement",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

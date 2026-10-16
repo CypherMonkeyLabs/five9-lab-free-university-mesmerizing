@@ -1,0 +1,75 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 1250 >>
+stream
+BT
+/F1 10 Tf
+48 740 Td
+14 TL
+(Direct Connect and the edges) Tj
+T*
+() Tj
+T*
+(Direct Connect in the requirements is a Layer-3 handoff. There is no Layer-2 requirement.) Tj
+T*
+(The port is 10, 100, or 1000 full duplex, and failover uses BGP. Equinix Fabric edges named) Tj
+T*
+(in the PDF this lab read are Chicago CH3, Washington DC10, London LD5, Amsterdam AM4,) Tj
+T*
+(Frankfurt FR8, S o Paulo SP4, Tokyo TY11, and Sydney SY5.) Tj
+T*
+(Those city codes are a snapshot. A new PDF can add or retire an edge. Write the date next to) Tj
+T*
+(the list before a circuit is ordered.) Tj
+T*
+(Order Layer 3 with BGP) Tj
+T*
+(Date the Equinix edge list) Tj
+T*
+() Tj
+T*
+(Sources and go deeper) Tj
+T*
+(Technical requirements PDF. vendor.) Tj
+T*
+(https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf.) Tj
+T*
+(last checked 2026-10.) Tj
+T*
+(IANA service names and port numbers. ports.) Tj
+T*
+(https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml.) Tj
+T*
+(last checked 2026-10.) Tj
+T*
+(confirm. CH3, DC10, LD5, AM4, FR8, SP4, TY11, and SY5 are the Equinix Fabric edges in the) Tj
+T*
+(technical requirements read in October 2026.. last checked 2026-10.) Tj
+T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Contents 2 0 R /Resources << /Font << /F1 1 0 R >> >> >>
+endobj
+4 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+5 0 obj
+<< /Type /Catalog /Pages 4 0 R >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000001381 00000 n 
+0000001507 00000 n 
+0000001564 00000 n 
+trailer << /Size 6 /Root 5 0 R >>
+startxref
+1613
+%%EOF

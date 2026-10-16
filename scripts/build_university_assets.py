@@ -12,6 +12,8 @@ import json
 import zipfile
 from pathlib import Path
 
+from go_deeper import assemble, lesson_sources, sources_html, sources_lines, sources_md
+
 ROOT = Path(__file__).resolve().parents[1]
 CAMPUS = ROOT / "campus"
 DOWNLOADS = CAMPUS / "downloads"
@@ -19,7 +21,7 @@ REPO = "https://github.com/CypherMonkeyLabs/five9-lab-free-university-mesmerizin
 FOOT = [
     "CYPHER0X9 Five9 Lab. Independent study. Not affiliated with Five9.",
     "https://cyphermonkeylabs.com",
-    "https://linktr.ee/cyphermonkey",
+    "https://linktr.ee/cypherMonkey",
     REPO,
     "MIT code, CC BY-NC-SA content. Trademarks belong to their owners.",
 ]
@@ -119,11 +121,13 @@ def paginate(lines: list[str], size: int = 46) -> list[list[str]]:
     return pages or [["(empty)"]]
 
 
+def sheet_rows(title: str, lines: list[str], sources: list[tuple[str, str]]) -> list:
+    return assemble(title + " " + " ".join(lines), [{"label": label, "url": url} for label, url in sources])
+
+
 def sheet_html(title: str, lines: list[str], sources: list[tuple[str, str]]) -> str:
     body = "\n".join(f"<li>{html.escape(line)}</li>" for line in lines)
-    cites = "\n".join(
-        f'<li><a href="{html.escape(url)}">{html.escape(label)}</a></li>' for label, url in sources
-    )
+    cites = sources_html(sheet_rows(title, lines, sources))
     foot = " · ".join(f'<a href="{html.escape(item)}">{html.escape(item)}</a>' if item.startswith("http") else html.escape(item) for item in FOOT)
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -146,8 +150,7 @@ def sheet_html(title: str, lines: list[str], sources: list[tuple[str, str]]) -> 
   <h1>{html.escape(title)}</h1>
   <p>Five9 Lab study card. Numbers and names point at the sources. This is not a Five9 document.</p>
   <ol>{body}</ol>
-  <h2>Sources</h2>
-  <ol>{cites}</ol>
+  {cites}
   <footer>{foot}</footer>
 </body>
 </html>
@@ -227,6 +230,7 @@ def main() -> None:
                     "track": track["title"],
                     "lesson": lesson["title"],
                     "href": href,
+                    "sources": lesson_sources(lesson),
                 })
     for row in eco["glossary"]:
         items.append({
@@ -377,11 +381,16 @@ def main() -> None:
     )
     manifest_files = []
     for sheet in sheets:
-        lines = sheet["lines"] + [""] + FOOT
+        rows = sheet_rows(sheet["title"], sheet["lines"], sheet["sources"])
+        lines = sheet["lines"] + [""] + sources_lines(rows) + [""] + FOOT
         html_name = f"{sheet['slug']}.html"
         pdf_name = f"{sheet['slug']}.pdf"
         png_name = f"{sheet['slug']}.png"
         (DOWNLOADS / html_name).write_text(sheet_html(sheet["title"], sheet["lines"], sheet["sources"]), encoding="utf-8")
+        (DOWNLOADS / f"{sheet['slug']}.md").write_text(
+            f"# {sheet['title']}\n\n" + "\n".join(f"- {line}" for line in sheet["lines"]) + "\n\n" + sources_md(rows),
+            encoding="utf-8",
+        )
         write_pdf(DOWNLOADS / pdf_name, paginate(lines))
         write_png(DOWNLOADS / png_name, sheet["title"], sheet["lines"])
         for kind, name in (("HTML", html_name), ("PDF", pdf_name), ("PNG", png_name)):
@@ -392,10 +401,11 @@ def main() -> None:
         card_lines.append(f"Q: {card['front']}")
         card_lines.append(f"A: {card['back']}")
         card_lines.append(f"   {card['track']}")
+        card_lines.extend(sources_lines(card.get("sources") or []))
         card_lines.append("")
     write_pdf(DOWNLOADS / "flashcards.pdf", paginate(card_lines + FOOT, 40))
     card_items = "\n".join(
-        f"<article class='card'><h2>{html.escape(card['front'])}</h2><p>{html.escape(card['back'])}</p><p>{html.escape(card['track'])}</p></article>"
+        f"<article class='card'><h2>{html.escape(card['front'])}</h2><p>{html.escape(card['back'])}</p><p>{html.escape(card['track'])}</p>{sources_html(card.get('sources') or [])}</article>"
         for card in cards
     )
     (DOWNLOADS / "flashcards.html").write_text(

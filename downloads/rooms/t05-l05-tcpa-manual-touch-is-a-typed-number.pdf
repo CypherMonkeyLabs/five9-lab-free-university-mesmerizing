@@ -1,0 +1,77 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 1332 >>
+stream
+BT
+/F1 10 Tf
+48 740 Td
+14 TL
+(TCPA manual touch is a typed number) Tj
+T*
+() Tj
+T*
+(TCPA manual touch exists only on domains enabled for it. The community article says those) Tj
+T*
+(domains are generally for telemarketing to cell phones without express consent, and that no) Tj
+T*
+(other dialing mode is available. Contacts are shown and not dialed. The agent must type the) Tj
+T*
+(external number. Paste and drag-and-drop are not allowed. The Dial button enables when the) Tj
+T*
+(typed number matches.) Tj
+T*
+(Preview time still exists. If it expires, the agent goes Not Ready and nothing auto-dials.) Tj
+T*
+(Dial Immediately and Dial Number are removed. The rule also covers click-to-dial, previews,) Tj
+T*
+(and queue or voicemail callbacks. Internal speed dial and a third-party transfer do not make) Tj
+T*
+(you retype. There is a permission to skip records.) Tj
+T*
+(Enforce typed external dials) Tj
+T*
+(Include callbacks in the rule) Tj
+T*
+() Tj
+T*
+(Sources and go deeper) Tj
+T*
+(TCPA manual touch. community.) Tj
+T*
+(https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US.) Tj
+T*
+(last checked 2026-10.) Tj
+T*
+(Telephone Consumer Protection Act of 1991. wikipedia.) Tj
+T*
+(https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991. last checked) Tj
+T*
+(2026-10.) Tj
+T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Contents 2 0 R /Resources << /Font << /F1 1 0 R >> >> >>
+endobj
+4 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+5 0 obj
+<< /Type /Catalog /Pages 4 0 R >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000001463 00000 n 
+0000001589 00000 n 
+0000001646 00000 n 
+trailer << /Size 6 /Root 5 0 R >>
+startxref
+1695
+%%EOF

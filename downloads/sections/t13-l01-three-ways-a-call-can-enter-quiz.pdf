@@ -1,0 +1,79 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 1331 >>
+stream
+BT
+/F1 10 Tf
+48 740 Td
+14 TL
+(Three ways a call can enter   Quiz) Tj
+T*
+() Tj
+T*
+(Five9 can provide the ITSP trunks. True or false?) Tj
+T*
+(A customer ITSP connects toward) Tj
+T*
+(Named gateway types include) Tj
+T*
+(Transports named for gateway-to-gateway are) Tj
+T*
+(A Cisco gateway option means UCCX scripts import. True or false?) Tj
+T*
+() Tj
+T*
+(Sources and go deeper) Tj
+T*
+(Technical requirements PDF. vendor.) Tj
+T*
+(https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf.) Tj
+T*
+(last checked 2026-10.) Tj
+T*
+(SIP trunk options chapter. vendor.) Tj
+T*
+(https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/SIP-trunk-options/_ch-five9-sip-trunk-options.htm.) Tj
+T*
+(last checked 2026-10.) Tj
+T*
+(RFC 3261. rfc. https://www.rfc-editor.org/rfc/rfc3261. last checked 2026-10.) Tj
+T*
+(RFC 3550, RTP. rfc. https://www.rfc-editor.org/rfc/rfc3550. last checked 2026-10.) Tj
+T*
+(RFC 3551, RTP profile for audio and video. rfc. https://www.rfc-editor.org/rfc/rfc3551. last) Tj
+T*
+(checked 2026-10.) Tj
+T*
+(ITU-T G.711. standard. https://www.itu.int/rec/T-REC-G.711. last checked 2026-10.) Tj
+T*
+(ITU-T E.164, international public telecommunication numbering. standard.) Tj
+T*
+(https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.) Tj
+T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Contents 2 0 R /Resources << /Font << /F1 1 0 R >> >> >>
+endobj
+4 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+5 0 obj
+<< /Type /Catalog /Pages 4 0 R >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000001462 00000 n 
+0000001588 00000 n 
+0000001645 00000 n 
+trailer << /Size 6 /Root 5 0 R >>
+startxref
+1694
+%%EOF

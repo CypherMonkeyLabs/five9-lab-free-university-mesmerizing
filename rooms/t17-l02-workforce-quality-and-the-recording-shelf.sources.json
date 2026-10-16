@@ -1,0 +1,21 @@
+{
+  "id": "t17-l02-workforce-quality-and-the-recording-shelf",
+  "title": "Workforce, quality, and the recording shelf",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Workforce engagement management",
+      "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "WEM data sheet",
+      "url": "https://www.five9.com/resources/data-sheet/five9-wem",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

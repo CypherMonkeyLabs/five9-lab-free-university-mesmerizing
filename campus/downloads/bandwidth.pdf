@@ -3,7 +3,7 @@
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
 endobj
 2 0 obj
-<< /Length 1557 >>
+<< /Length 2107 >>
 stream
 BT
 /F1 10 Tf
@@ -41,11 +41,29 @@ T*
 T*
 () Tj
 T*
+(Sources and go deeper) Tj
+T*
+(Technical requirements PDF. vendor.) Tj
+T*
+(https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf.) Tj
+T*
+(last checked 2026-10.) Tj
+T*
+(RFC 3550, RTP. rfc. https://www.rfc-editor.org/rfc/rfc3550. last checked 2026-10.) Tj
+T*
+(RFC 3551, RTP profile for audio and video. rfc. https://www.rfc-editor.org/rfc/rfc3551. last) Tj
+T*
+(checked 2026-10.) Tj
+T*
+(ITU-T G.711. standard. https://www.itu.int/rec/T-REC-G.711. last checked 2026-10.) Tj
+T*
+() Tj
+T*
 (CYPHER0X9 Five9 Lab. Independent study. Not affiliated with Five9.) Tj
 T*
 (https://cyphermonkeylabs.com) Tj
 T*
-(https://linktr.ee/cyphermonkey) Tj
+(https://linktr.ee/cypherMonkey) Tj
 T*
 (https://github.com/CypherMonkeyLabs/five9-lab-free-university-mesmerizing) Tj
 T*
@@ -68,10 +86,10 @@ xref
 0000000000 65535 f 
 0000000009 00000 n 
 0000000079 00000 n 
-0000001688 00000 n 
-0000001814 00000 n 
-0000001871 00000 n 
+0000002238 00000 n 
+0000002364 00000 n 
+0000002421 00000 n 
 trailer << /Size 6 /Root 5 0 R >>
 startxref
-1920
+2470
 %%EOF

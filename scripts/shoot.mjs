@@ -140,6 +140,10 @@ await shoot("downloads-phone", 390, 844, "downloads.html");
 await shoot("footer-desktop", 1440, 900, "index.html", "window.scrollTo(0, document.body.scrollHeight);");
 await shoot("footer-1280", 1280, 800, "index.html", "window.scrollTo(0, document.body.scrollHeight);");
 await shoot("footer-phone", 390, 844, "index.html", "window.scrollTo(0, document.body.scrollHeight);");
+await shoot("campus-desktop", 1440, 900, "campus/index.html", "new Promise((resolve) => setTimeout(resolve, 1200))");
+await shoot("campus-phone", 390, 844, "campus/index.html", "new Promise((resolve) => setTimeout(resolve, 1200))");
+await shoot("read-desktop", 1440, 900, "rooms/t01-l01-a-contact-center-is-not-a-phone-system.html", "var b=document.querySelector('[data-read]'); if(b) b.click();");
+await shoot("theme-signal", 1440, 900, "index.html", "document.documentElement.dataset.theme='signal';");
 
 writeFileSync(`${out}/measures.json`, JSON.stringify(shots, null, 2));
 ws.close();

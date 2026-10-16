@@ -1,0 +1,12 @@
+# CRM, UC, and the desktop are three contracts
+
+- Plus adapters named in the technical requirements include Salesforce, ServiceNow, Dynamics 365, Zendesk, Oracle, NetSuite, Epic, and the Agent Desktop Toolkit. Zoom Phone and Teams show up as prebuilt paths on the API page. A UC app on the PC is also a bandwidth line, about 320 kbps.
+- The agent's screen can show a CRM card, a UC window, and Agent Assist at once. When one is blank, name which contract failed.
+- Treat adapter, UC integration, and local UC app as three lines
+- Budget Assist and Teams separately
+
+## Sources and go deeper
+
+- [Technical requirements PDF](https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf). vendor. last checked 2026-10. Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall.
+- [APIs and SDKs](https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks). vendor. last checked 2026-10.
+- [Agent Desktop](https://www.five9.com/products/capabilities/agent-desktop). vendor. last checked 2026-10.

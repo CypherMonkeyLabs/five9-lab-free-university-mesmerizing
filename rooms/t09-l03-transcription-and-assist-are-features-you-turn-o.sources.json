@@ -1,0 +1,28 @@
+{
+  "id": "t09-l03-transcription-and-assist-are-features-you-turn-o",
+  "title": "Transcription and assist are features you turn on",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Five9 Engage",
+      "url": "https://www.five9.com/platform/self-service-and-engagement",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "GenAI Studio",
+      "url": "https://www.five9.com/products/capabilities/gen-ai-studio",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "GenAI Studio is described as engine-agnostic. This lab does not name the default model for a new domain.",
+      "url": "",
+      "kind": "note",
+      "status": "confirm",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

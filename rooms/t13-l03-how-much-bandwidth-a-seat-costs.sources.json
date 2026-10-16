@@ -1,0 +1,15 @@
+{
+  "id": "t13-l03-how-much-bandwidth-a-seat-costs",
+  "title": "How much bandwidth a seat costs",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10",
+      "note": "Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall."
+    }
+  ]
+}

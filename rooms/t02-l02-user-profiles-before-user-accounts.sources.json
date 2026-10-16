@@ -1,0 +1,21 @@
+{
+  "id": "t02-l02-user-profiles-before-user-accounts",
+  "title": "User profiles before user accounts",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Skill groups",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

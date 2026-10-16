@@ -1,0 +1,35 @@
+{
+  "id": "t05-l01-preview-lets-the-agent-read-first",
+  "title": "Preview lets the agent read first",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Dialer product page",
+      "url": "https://www.five9.com/products/capabilities/dialer-system",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Outbound product page",
+      "url": "https://www.five9.com/products/capabilities/outbound-contact-center",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "TCPA manual touch",
+      "url": "https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US",
+      "kind": "community",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Telephone Consumer Protection Act of 1991",
+      "url": "https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991",
+      "kind": "wikipedia",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

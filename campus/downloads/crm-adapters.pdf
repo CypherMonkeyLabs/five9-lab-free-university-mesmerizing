@@ -3,7 +3,7 @@
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
 endobj
 2 0 obj
-<< /Length 756 >>
+<< /Length 1394 >>
 stream
 BT
 /F1 10 Tf
@@ -23,11 +23,35 @@ T*
 T*
 () Tj
 T*
+(Sources and go deeper) Tj
+T*
+(Technical requirements PDF. vendor.) Tj
+T*
+(https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf.) Tj
+T*
+(last checked 2026-10.) Tj
+T*
+(APIs and SDKs. vendor.) Tj
+T*
+(https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks. last checked) Tj
+T*
+(2026-10.) Tj
+T*
+(RFC 6455, The WebSocket Protocol. rfc. https://www.rfc-editor.org/rfc/rfc6455. last checked) Tj
+T*
+(2026-10.) Tj
+T*
+(Interactive voice response. wikipedia.) Tj
+T*
+(https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.) Tj
+T*
+() Tj
+T*
 (CYPHER0X9 Five9 Lab. Independent study. Not affiliated with Five9.) Tj
 T*
 (https://cyphermonkeylabs.com) Tj
 T*
-(https://linktr.ee/cyphermonkey) Tj
+(https://linktr.ee/cypherMonkey) Tj
 T*
 (https://github.com/CypherMonkeyLabs/five9-lab-free-university-mesmerizing) Tj
 T*
@@ -50,10 +74,10 @@ xref
 0000000000 65535 f 
 0000000009 00000 n 
 0000000079 00000 n 
-0000000886 00000 n 
-0000001012 00000 n 
-0000001069 00000 n 
+0000001525 00000 n 
+0000001651 00000 n 
+0000001708 00000 n 
 trailer << /Size 6 /Root 5 0 R >>
 startxref
-1118
+1757
 %%EOF

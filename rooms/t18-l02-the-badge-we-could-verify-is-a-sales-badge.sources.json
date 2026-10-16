@@ -1,0 +1,42 @@
+{
+  "id": "t18-l02-the-badge-we-could-verify-is-a-sales-badge",
+  "title": "The badge we could verify is a sales badge",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "IVA Sales Certified badge",
+      "url": "https://www.credly.com/org/five9/badge/five9-iva-sales-certified",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Partner IVA sales certification",
+      "url": "https://www.five9.com/blog/five9-partners-can-now-become-sales-certified-five9-university-partners",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Five9 University",
+      "url": "https://www.five9.com/contact-center-services/training",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Interactive voice response",
+      "url": "https://en.wikipedia.org/wiki/Interactive_voice_response",
+      "kind": "wikipedia",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Badge details were read from the public Credly page and the partner blog. Confirm the current attempt rules before you depend on them.",
+      "url": "",
+      "kind": "note",
+      "status": "confirm",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

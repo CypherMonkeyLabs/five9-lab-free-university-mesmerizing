@@ -1,0 +1,21 @@
+{
+  "id": "t18-l07-what-this-lab-will-not-pretend-to-be",
+  "title": "What this lab will not pretend to be",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Five9 University",
+      "url": "https://www.five9.com/contact-center-services/training",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "t14-l02-reporting-is-a-role",
+  "title": "Reporting is a role",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Generating standard reports",
+      "url": "https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports",
+      "kind": "community",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Call log reports chapter",
+      "url": "https://documentation.five9.com/bundle/reports-dashboards/page/reports-dashboards/description-standard-and-social-reports/call-log-reports.htm",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Interactive voice response",
+      "url": "https://en.wikipedia.org/wiki/Interactive_voice_response",
+      "kind": "wikipedia",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Automatic call distributor",
+      "url": "https://en.wikipedia.org/wiki/Automatic_call_distributor",
+      "kind": "wikipedia",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

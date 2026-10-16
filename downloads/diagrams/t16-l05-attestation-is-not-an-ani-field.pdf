@@ -1,0 +1,63 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 805 >>
+stream
+BT
+/F1 10 Tf
+48 740 Td
+14 TL
+(Attestation is not an ANI field) Tj
+T*
+() Tj
+T*
+(A profile is not an attestation product.) Tj
+T*
+() Tj
+T*
+(Sources and go deeper) Tj
+T*
+(Certified Caller. vendor. https://www.five9.com/resources/five9_certified_caller. last) Tj
+T*
+(checked 2026-10.) Tj
+T*
+(Default campaign settings. vendor.) Tj
+T*
+(https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm.) Tj
+T*
+(last checked 2026-10.) Tj
+T*
+(RFC 8224, Authenticated Identity Management in SIP. rfc.) Tj
+T*
+(https://www.rfc-editor.org/rfc/rfc8224. last checked 2026-10.) Tj
+T*
+(ITU-T E.164, international public telecommunication numbering. standard.) Tj
+T*
+(https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.) Tj
+T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Contents 2 0 R /Resources << /Font << /F1 1 0 R >> >> >>
+endobj
+4 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+5 0 obj
+<< /Type /Catalog /Pages 4 0 R >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000000935 00000 n 
+0000001061 00000 n 
+0000001118 00000 n 
+trailer << /Size 6 /Root 5 0 R >>
+startxref
+1167
+%%EOF

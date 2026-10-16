@@ -1,0 +1,28 @@
+{
+  "id": "t10-l01-five9-wem-and-a-verint-path-both-exist",
+  "title": "Five9 WEM and a Verint path both exist",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Workforce engagement management",
+      "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "WEM data sheet",
+      "url": "https://www.five9.com/resources/data-sheet/five9-wem",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "This lab does not know which suite a given customer bought. The product page says both native WEM and partners such as Verint are offered.",
+      "url": "",
+      "kind": "note",
+      "status": "confirm",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

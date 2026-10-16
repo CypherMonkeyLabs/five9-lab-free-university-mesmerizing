@@ -1,0 +1,49 @@
+{
+  "id": "t18-l06-a-study-week-that-stays-inside-the-documents",
+  "title": "A study week that stays inside the documents",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Five9 University",
+      "url": "https://www.five9.com/contact-center-services/training",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Default campaign settings",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "RFC 3261, SIP: Session Initiation Protocol",
+      "url": "https://www.rfc-editor.org/rfc/rfc3261",
+      "kind": "rfc",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Enhanced 9-1-1",
+      "url": "https://en.wikipedia.org/wiki/Enhanced_9-1-1",
+      "kind": "wikipedia",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Interactive voice response",
+      "url": "https://en.wikipedia.org/wiki/Interactive_voice_response",
+      "kind": "wikipedia",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

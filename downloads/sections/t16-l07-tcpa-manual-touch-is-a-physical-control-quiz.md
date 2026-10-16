@@ -1,0 +1,13 @@
+# TCPA manual touch is a physical control · Quiz
+
+- Paste in TCPA manual touch
+- Dial enables when
+- Preview timeout
+- Internal speed dial requires retyping. True or false?
+- Skipping records requires
+
+## Sources and go deeper
+
+- [TCPA manual touch](https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US). community. last checked 2026-10.
+- [Default campaign settings](https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm). vendor. last checked 2026-10.
+- [Telephone Consumer Protection Act of 1991](https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991). wikipedia. last checked 2026-10.

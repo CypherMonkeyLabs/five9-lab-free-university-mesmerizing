@@ -1,0 +1,20 @@
+# The gateway cut, without pretending to be the CUBE guide · Learn it in 5 minutes
+
+- When the third SIP story is a Cisco gateway, the technical requirements are still the Five9 side: DNS SRV preferred, G.711 as the default codec, TLS 1.2, no double NAT. What the gateway itself must rewrite — number format, a normalization script, early media — lives in Cisco's documentation.
+- Practitioner notes often mention G.711 at 20 ms, NANP versus E.164, and 'do not send internal extensions.' Treat every one of those as uncertain until the trunk guide you and the carrier signed actually says them. RFC 3261 tells you what an INVITE is. It does not choose your dial plan.
+
+## Sources and go deeper
+
+- [Technical requirements PDF](https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf). vendor. last checked 2026-10. Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall.
+- [SIP trunk options chapter](https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/SIP-trunk-options/_ch-five9-sip-trunk-options.htm). vendor. last checked 2026-10.
+- [RFC 3261](https://www.rfc-editor.org/rfc/rfc3261). rfc. last checked 2026-10.
+- [RFC 3550, RTP](https://www.rfc-editor.org/rfc/rfc3550). rfc. last checked 2026-10.
+- [RFC 3551, RTP profile for audio and video](https://www.rfc-editor.org/rfc/rfc3551). rfc. last checked 2026-10.
+- [ITU-T G.711](https://www.itu.int/rec/T-REC-G.711). standard. last checked 2026-10.
+- [RFC 8446, TLS 1.3](https://www.rfc-editor.org/rfc/rfc8446). rfc. last checked 2026-10.
+- [RFC 1035, domain names](https://www.rfc-editor.org/rfc/rfc1035). rfc. last checked 2026-10.
+- [RFC 2782, DNS SRV](https://www.rfc-editor.org/rfc/rfc2782). rfc. last checked 2026-10.
+- [ITU-T E.164, international public telecommunication numbering](https://www.itu.int/rec/T-REC-E.164). standard. last checked 2026-10.
+- [RFC 1918, private internet addresses](https://www.rfc-editor.org/rfc/rfc1918). rfc. last checked 2026-10.
+- [RFC 4787, NAT behavior for UDP](https://www.rfc-editor.org/rfc/rfc4787). rfc. last checked 2026-10.
+- confirm. NANP versus E.164, 20 ms ptime, and 'no internal extensions' are practitioner cautions. They are not quoted here as Five9 requirements.. last checked 2026-10.

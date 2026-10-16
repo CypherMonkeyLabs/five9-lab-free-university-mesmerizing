@@ -1,0 +1,35 @@
+{
+  "id": "t16-l01-911-is-a-location-not-a-prefix",
+  "title": "911 is a location, not a prefix",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "E911 data sheet",
+      "url": "https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "End user license agreement",
+      "url": "https://www.five9.com/legal/end-user-license-agreement",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Enhanced 9-1-1",
+      "url": "https://en.wikipedia.org/wiki/Enhanced_9-1-1",
+      "kind": "wikipedia",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "The 2022 data sheet says US and territories. The EULA text this lab read also says US or Canada. Re-read both before you publish a coverage map.",
+      "url": "",
+      "kind": "note",
+      "status": "confirm",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

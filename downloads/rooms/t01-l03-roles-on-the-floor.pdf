@@ -1,0 +1,71 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 1081 >>
+stream
+BT
+/F1 10 Tf
+48 740 Td
+14 TL
+(Roles on the floor) Tj
+T*
+() Tj
+T*
+(The same person is not every role. Agents take contacts. Supervisors can sit in skill groups) Tj
+T*
+(with agents. Administrators configure the domain. Reporting is its own permission: standard) Tj
+T*
+(reports do not appear without the Reporting role and at least one reporting permission.) Tj
+T*
+(Administrator permissions are finer than the job title. Editing call variables, for example,) Tj
+T*
+(depends on 'User Can Edit Call Variables' on the administrator role. Skipping a permission) Tj
+T*
+(looks like a missing feature.) Tj
+T*
+(Separate agent, supervisor, admin, and reporting) Tj
+T*
+(Name one fine-grained admin permission) Tj
+T*
+() Tj
+T*
+(Sources and go deeper) Tj
+T*
+(Skill groups. vendor.) Tj
+T*
+(https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm.) Tj
+T*
+(last checked 2026-10.) Tj
+T*
+(Generating standard reports. community.) Tj
+T*
+(https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports. last checked) Tj
+T*
+(2026-10.) Tj
+T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Contents 2 0 R /Resources << /Font << /F1 1 0 R >> >> >>
+endobj
+4 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+5 0 obj
+<< /Type /Catalog /Pages 4 0 R >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000001212 00000 n 
+0000001338 00000 n 
+0000001395 00000 n 
+trailer << /Size 6 /Root 5 0 R >>
+startxref
+1444
+%%EOF

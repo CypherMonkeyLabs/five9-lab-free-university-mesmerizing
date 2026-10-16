@@ -104,7 +104,14 @@ const vendorOk = ["anime", "rough", "d3", "confetti", "markmap", "three"].every(
 if (!vendorOk) problems.push("vendor-license");
 
 const guideJs = readFileSync(join(root, "guide/guide.js"), "utf8");
-if (!guideJs.includes("pose-wave") || !guideJs.includes("cg-greet") || !guideJs.includes("Read along")) problems.push("guide");
+if (
+  !guideJs.includes("pose-wave") ||
+  !guideJs.includes("cg-greet") ||
+  !guideJs.includes("data-read") ||
+  !guideJs.includes("data-voice-name") ||
+  !guideJs.includes("is-reading") ||
+  !guideJs.includes("Read this page")
+) problems.push("guide");
 for (const id of ["tour-home", "tour-menu", "tour-learn", "tour-diagrams", "tour-play", "tour-downloads"]) {
   if (!rootPage.includes(`id="${id}"`)) problems.push(`tour ${id}`);
 }
@@ -123,6 +130,9 @@ if (!existsSync(join(root, "downloads/five9-lab-bundle.zip"))) problems.push("zi
 const roomName = readdirSync(join(root, "rooms")).find((file) => file.endsWith(".html"));
 const roomText = readFileSync(join(root, "rooms", roomName), "utf8");
 if (!roomText.includes("data-export") || !roomText.includes(".png") || !roomText.includes("disclaimer-panel")) problems.push("room-download");
+if (!roomText.includes("Sources and go deeper") || !roomText.includes("last checked 2026-10")) problems.push("sources-block");
+const sourceName = roomName.replace(/\.html$/, ".sources.json");
+if (!existsSync(join(root, "rooms", sourceName))) problems.push("sources-json");
 const newSheet = readFileSync(join(sheetDir, sheetHtml[0]), "utf8");
 if (!newSheet.includes("https://linktr.ee/cypherMonkey") || !newSheet.includes("disclaimer-panel")) problems.push("new-sheet-brand");
 

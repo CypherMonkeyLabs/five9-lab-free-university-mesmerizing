@@ -1,0 +1,21 @@
+{
+  "id": "t09-l01-one-screen-is-the-product",
+  "title": "One screen is the product",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Agent Desktop",
+      "url": "https://www.five9.com/products/capabilities/agent-desktop",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Five9 Engage",
+      "url": "https://www.five9.com/platform/self-service-and-engagement",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

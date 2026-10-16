@@ -8,11 +8,15 @@
   var openers = document.querySelectorAll("[data-open-menu]");
   var closer = document.querySelector("[data-close-menu]");
 
+  var themes = ["bloom", "midnight", "solar", "signal"];
+  var themeLabel = { bloom: "Aurora", midnight: "Midnight", solar: "Solar", signal: "Signal" };
   function setTheme(name) {
-    root.dataset.theme = name === "dark" ? "dark" : "bloom";
-    try { localStorage.setItem("f9-theme", root.dataset.theme); } catch (err) { /* private mode */ }
+    if (name === "dark") name = "midnight";
+    if (themes.indexOf(name) < 0) name = "bloom";
+    root.dataset.theme = name;
+    try { localStorage.setItem("f9-theme", name); } catch (err) { /* private mode */ }
     var btn = document.querySelector("[data-theme-toggle]");
-    if (btn) btn.textContent = root.dataset.theme === "dark" ? "Bright" : "Dark";
+    if (btn) btn.textContent = themeLabel[name];
   }
   function setFont(size) {
     if (["sm", "md", "lg", "xl"].indexOf(size) < 0) size = "md";
@@ -35,7 +39,7 @@
 
   try {
     var theme = localStorage.getItem("f9-theme");
-    if (theme === "dark" || theme === "bloom") setTheme(theme);
+    if (theme) setTheme(theme);
     var font = localStorage.getItem("f9-font");
     if (font) setFont(font);
     var ink = localStorage.getItem("f9-ink");
@@ -80,9 +84,12 @@
   if (color) color.addEventListener("input", function () { setInk(color.value); });
   var themeBtn = document.querySelector("[data-theme-toggle]");
   if (themeBtn) {
-    themeBtn.textContent = root.dataset.theme === "dark" ? "Bright" : "Dark";
+    if (root.dataset.theme === "dark") root.dataset.theme = "midnight";
+    if (themes.indexOf(root.dataset.theme) < 0) root.dataset.theme = "bloom";
+    themeBtn.textContent = themeLabel[root.dataset.theme];
     themeBtn.addEventListener("click", function () {
-      setTheme(root.dataset.theme === "dark" ? "bloom" : "dark");
+      var index = themes.indexOf(root.dataset.theme);
+      setTheme(themes[(index + 1) % themes.length]);
     });
   }
   var motionBtn = document.querySelector("[data-motion-toggle]");
@@ -92,6 +99,28 @@
       motionBtn.setAttribute("aria-pressed", root.dataset.motion === "reduce" ? "true" : "false");
     });
   }
+
+  var stage = document.querySelector(".hero-stage");
+  if (stage && !stage.querySelector(".fx-field")) {
+    var field = document.createElement("div");
+    field.className = "fx-field";
+    field.setAttribute("aria-hidden", "true");
+    for (var i = 0; i < 16; i += 1) {
+      var dot = document.createElement("span");
+      dot.style.left = (4 + Math.random() * 92) + "%";
+      dot.style.animationDelay = (-Math.random() * 9) + "s";
+      dot.style.animationDuration = (7 + Math.random() * 7) + "s";
+      dot.style.width = dot.style.height = (4 + Math.random() * 7) + "px";
+      field.appendChild(dot);
+    }
+    stage.appendChild(field);
+  }
+  function parallax() {
+    var y = root.dataset.motion === "reduce" ? 0 : (window.scrollY || 0);
+    root.style.setProperty("--parallax", Math.round(y * 0.22) + "px");
+  }
+  window.addEventListener("scroll", parallax, { passive: true });
+  parallax();
 
   if (!document.getElementById("guide-mount")) {
     var mount = document.createElement("div");

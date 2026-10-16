@@ -1,0 +1,36 @@
+{
+  "id": "t09-l02-plus-adapters-speak-https-and-wss",
+  "title": "Plus adapters speak HTTPS and WSS",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10",
+      "note": "Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall."
+    },
+    {
+      "label": "Web adapter requirements",
+      "url": "https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/agent-integrations/web-based-adapters/application-requirements.htm",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "RFC 8446, TLS 1.3",
+      "url": "https://www.rfc-editor.org/rfc/rfc8446",
+      "kind": "rfc",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "RFC 6455, The WebSocket Protocol",
+      "url": "https://www.rfc-editor.org/rfc/rfc6455",
+      "kind": "rfc",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

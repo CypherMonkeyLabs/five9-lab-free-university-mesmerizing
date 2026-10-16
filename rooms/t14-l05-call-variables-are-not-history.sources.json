@@ -1,0 +1,21 @@
+{
+  "id": "t14-l05-call-variables-are-not-history",
+  "title": "Call variables are not history",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Call variables for reporting",
+      "url": "https://community.five9.com/s/article/Administrator-Enabling-Call-Variables-for-Reporting?language=en_US",
+      "kind": "community",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Generating standard reports",
+      "url": "https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports",
+      "kind": "community",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

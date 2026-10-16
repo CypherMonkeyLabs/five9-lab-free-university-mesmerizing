@@ -1,0 +1,42 @@
+{
+  "id": "t16-l02-the-address-has-to-be-the-room-they-are-in",
+  "title": "The address has to be the room they are in",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "E911 data sheet",
+      "url": "https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "End user license agreement",
+      "url": "https://www.five9.com/legal/end-user-license-agreement",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "MyE911 call history",
+      "url": "https://community.five9.com/s/article/MyE911-Call-History?language=en_US",
+      "kind": "community",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "RFC 3261, SIP: Session Initiation Protocol",
+      "url": "https://www.rfc-editor.org/rfc/rfc3261",
+      "kind": "rfc",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Enhanced 9-1-1",
+      "url": "https://en.wikipedia.org/wiki/Enhanced_9-1-1",
+      "kind": "wikipedia",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

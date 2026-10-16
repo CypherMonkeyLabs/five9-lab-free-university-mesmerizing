@@ -1,0 +1,29 @@
+{
+  "id": "t18-l04-version-timelines-go-stale-on-purpose",
+  "title": "Version timelines go stale on purpose",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10",
+      "note": "October 2026 reading."
+    },
+    {
+      "label": "University curriculum brief, April 2023",
+      "url": "https://www.five9.com/sites/default/files/2023-04/Five9_University_Curriculum_Brief_v5.pdf",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Salesforce 2.46, ServiceNow Australia/Zurich/Yokohama, JRE 8 updates 421/451/461, and macOS Sequoia 15, Tahoe 26, and Golden Gate 27 are from the technical requirements read in October 2026.",
+      "url": "",
+      "kind": "note",
+      "status": "confirm",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

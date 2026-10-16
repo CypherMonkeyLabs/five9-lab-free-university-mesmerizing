@@ -1,0 +1,65 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 958 >>
+stream
+BT
+/F1 10 Tf
+48 740 Td
+14 TL
+(User profiles before user accounts   Learn it in 5 minutes) Tj
+T*
+() Tj
+T*
+(The planning roadmap says to define user profiles before you add user accounts. A profile is) Tj
+T*
+(the permission bundle. An account is the person. Creating people first and hoping the) Tj
+T*
+(default permissions match the job is how reporting and call-variable edits go missing.) Tj
+T*
+(Skill groups then take users who already have the agent or supervisor role. An administrator) Tj
+T*
+(account is not automatically a member of a queue.) Tj
+T*
+() Tj
+T*
+(Sources and go deeper) Tj
+T*
+(Planning your implementation. vendor.) Tj
+T*
+(https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm.) Tj
+T*
+(last checked 2026-10.) Tj
+T*
+(Skill groups. vendor.) Tj
+T*
+(https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm.) Tj
+T*
+(last checked 2026-10.) Tj
+T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Contents 2 0 R /Resources << /Font << /F1 1 0 R >> >> >>
+endobj
+4 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+5 0 obj
+<< /Type /Catalog /Pages 4 0 R >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000001088 00000 n 
+0000001214 00000 n 
+0000001271 00000 n 
+trailer << /Size 6 /Root 5 0 R >>
+startxref
+1320
+%%EOF

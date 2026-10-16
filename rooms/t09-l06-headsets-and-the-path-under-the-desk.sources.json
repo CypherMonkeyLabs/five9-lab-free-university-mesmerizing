@@ -1,0 +1,43 @@
+{
+  "id": "t09-l06-headsets-and-the-path-under-the-desk",
+  "title": "Headsets and the path under the desk",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10",
+      "note": "Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall."
+    },
+    {
+      "label": "RFC 3550, RTP",
+      "url": "https://www.rfc-editor.org/rfc/rfc3550",
+      "kind": "rfc",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "RFC 3551, RTP profile for audio and video",
+      "url": "https://www.rfc-editor.org/rfc/rfc3551",
+      "kind": "rfc",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "ITU-T G.711",
+      "url": "https://www.itu.int/rec/T-REC-G.711",
+      "kind": "standard",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "The iPad supervisor section says G711U and G711A are primary and that GSM or iLBC may be used but have not been tested. That sentence is about that app, not a blanket codec menu.",
+      "url": "",
+      "kind": "note",
+      "status": "confirm",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

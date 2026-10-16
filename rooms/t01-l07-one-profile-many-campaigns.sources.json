@@ -1,0 +1,28 @@
+{
+  "id": "t01-l07-one-profile-many-campaigns",
+  "title": "One profile, many campaigns",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Campaign profiles",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/campaign-profiles/_ch-campaign-profiles.htm",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Assign a campaign profile",
+      "url": "https://community.five9.com/s/article/Administrator-How-to-Create-Add-a-Campaign-Profile-and-Assign-it-to-a-Campaign?language=en_US",
+      "kind": "community",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "ITU-T E.164, international public telecommunication numbering",
+      "url": "https://www.itu.int/rec/T-REC-E.164",
+      "kind": "standard",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    }
+  ]
+}
