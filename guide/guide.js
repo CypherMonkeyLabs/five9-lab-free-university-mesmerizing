@@ -45,7 +45,9 @@
     '<div class="cg-cards" data-greet-cards></div>' +
     '<button type="button" data-greet-dock>Dock the guide</button></div></div>' +
     '<div class="cg-tour" hidden><div class="cg-tour-back"></div><div class="cg-spot" hidden></div>' +
-    '<div class="cg-callout" role="dialog" aria-label="First visit tour"><p data-tour-copy></p>' +
+    '<div class="cg-callout" role="dialog" aria-label="First visit tour">' +
+    '<p class="cg-tour-count"><span class="cg-tour-num" data-tour-num>1</span> <span data-tour-count>1 of 6</span></p>' +
+    '<p data-tour-copy></p>' +
     '<div class="cg-callout-actions"><button type="button" data-tour-back>Back</button>' +
     '<button type="button" data-tour-next>Next</button><button type="button" data-tour-skip>Skip</button></div></div></div>';
   document.body.appendChild(host);
@@ -372,31 +374,96 @@
     place();
   }
 
+  function overlaps(a, b, gap) {
+    return !(a.right + gap < b.left || a.left - gap > b.right || a.bottom + gap < b.top || a.top - gap > b.bottom);
+  }
+  function revealRail(target) {
+    var rail = target && target.closest(".section-rail");
+    if (!rail) return;
+    var railRect = rail.getBoundingClientRect();
+    var rect = target.getBoundingClientRect();
+    var delta = (rect.left + rect.width / 2) - (railRect.left + rail.clientWidth / 2);
+    rail.scrollLeft += delta;
+  }
+  function placeCallout(callout, target) {
+    var vw = window.innerWidth;
+    var vh = window.innerHeight;
+    var margin = 8;
+    var dock = 88;
+    callout.style.width = Math.min(340, vw - margin * 2) + "px";
+    var cw = callout.offsetWidth;
+    var ch = callout.offsetHeight;
+    var left = Math.max(margin, Math.round((vw - cw) / 2));
+    if (left + cw > vw - margin) left = Math.max(margin, vw - cw - margin);
+    var blocked = [];
+    var title = document.querySelector(".hero-title, #main h1");
+    var hero = document.querySelector(".hero-stage");
+    if (title) blocked.push({ rect: title.getBoundingClientRect(), weight: 20 });
+    if (hero) blocked.push({ rect: hero.getBoundingClientRect(), weight: 8 });
+    if (target) blocked.push({ rect: target.getBoundingClientRect(), weight: 6 });
+    var candidates = [vh - ch - margin - dock, margin];
+    blocked.forEach(function (item) {
+      candidates.push(item.rect.bottom + 12);
+      candidates.push(item.rect.top - ch - 12);
+    });
+    var best = vh - ch - margin - dock;
+    var bestScore = Infinity;
+    candidates.forEach(function (top) {
+      var y = top;
+      if (y + ch > vh - margin - dock) y = vh - ch - margin - dock;
+      if (y < margin) y = margin;
+      var box = { left: left, right: left + cw, top: y, bottom: y + ch };
+      var score = Math.abs(y - (vh - ch - margin - dock)) * 0.04;
+      blocked.forEach(function (item) {
+        if (!overlaps(box, item.rect, 8)) return;
+        var width = Math.max(0, Math.min(box.right, item.rect.right) - Math.max(box.left, item.rect.left));
+        var height = Math.max(0, Math.min(box.bottom, item.rect.bottom) - Math.max(box.top, item.rect.top));
+        score += width * height * item.weight;
+      });
+      if (score < bestScore) {
+        bestScore = score;
+        best = y;
+      }
+    });
+    callout.style.left = left + "px";
+    callout.style.top = best + "px";
+    callout.style.right = "auto";
+    callout.style.bottom = "auto";
+  }
   function showStep() {
     var item = steps[step];
     var target = document.querySelector(item.sel) || document.querySelector("#tour-menu");
     if (target && target.getBoundingClientRect().height < 8) {
       target = document.querySelector("[data-open-guide]") || document.querySelector("#tour-menu");
     }
+    host.classList.add("is-touring");
     tour.hidden = false;
-    tourCopy.textContent = (step + 1) + " of " + steps.length + ". " + item.text;
-    if (!target) { spot.hidden = true; return; }
-    target.scrollIntoView({ block: "center", inline: "nearest" });
-    var rect = target.getBoundingClientRect();
-    spot.hidden = false;
-    spot.style.left = (rect.left - 6) + "px";
-    spot.style.top = (rect.top - 6) + "px";
-    spot.style.width = (rect.width + 12) + "px";
-    spot.style.height = (rect.height + 12) + "px";
+    var num = tour.querySelector("[data-tour-num]");
+    var count = tour.querySelector("[data-tour-count]");
+    if (num) num.textContent = String(step + 1);
+    if (count) count.textContent = (step + 1) + " of " + steps.length;
+    tourCopy.textContent = item.text;
+    if (target) revealRail(target);
     var callout = tour.querySelector(".cg-callout");
-    var top = rect.bottom + 12;
-    if (top > window.innerHeight - 160) top = Math.max(12, rect.top - 150);
-    callout.style.top = top + "px";
-    callout.style.left = Math.min(window.innerWidth - 372, Math.max(12, rect.left)) + "px";
+    if (!target) {
+      spot.hidden = true;
+      placeCallout(callout, null);
+      return;
+    }
+    var rect = target.getBoundingClientRect();
+    var left = Math.max(4, rect.left - 6);
+    var top = Math.max(4, rect.top - 6);
+    spot.hidden = false;
+    spot.style.left = left + "px";
+    spot.style.top = top + "px";
+    spot.style.width = Math.max(12, Math.min(rect.width + 12, window.innerWidth - left - 4)) + "px";
+    spot.style.height = Math.max(12, Math.min(rect.height + 12, window.innerHeight - top - 4)) + "px";
+    placeCallout(callout, target);
   }
   function endTour(skipped) {
     tour.hidden = true;
     spot.hidden = true;
+    host.classList.remove("is-touring");
     store.set("f9-tour", "1");
     if (!skipped) pose("cheer");
     greet();
@@ -552,6 +619,9 @@
   }, 180000);
 
   window.addEventListener("scroll", place, { passive: true });
-  window.addEventListener("resize", place);
+  window.addEventListener("resize", function () {
+    place();
+    if (!tour.hidden) showStep();
+  });
   place();
 })();

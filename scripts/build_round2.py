@@ -15,11 +15,13 @@ from go_deeper import (
     front_sources,
     lesson_sources,
     markdown_doc,
+    merge_sources,
     pack_record,
     pack_sections,
     sources_from_html,
     sources_html,
     sources_lines,
+    status_for,
     track_sources,
 )
 
@@ -293,6 +295,9 @@ h1{font-size:1.4rem} a{color:#0b3a8f}
 .brand-web{background:#4c1d95}.brand-gh{background:#24292f}.brand-tree{background:linear-gradient(160deg,#34d399,#047857);box-shadow:0 0 0 3px rgba(52,211,153,.7),0 0 14px rgba(16,185,129,.9)}
 .site-copy{font-weight:800}
 svg.figure{max-width:100%;height:auto}
+.sources-deeper{margin:16px 0;padding:14px 16px;border:2px solid #5b21b6;border-radius:16px;background:#f5f3ff;color:#1e1b4b}
+.sources-deeper h2{margin:0 0 8px}
+.sources-deeper a{color:#1d4ed8;font-weight:700}
 """
 
 
@@ -739,11 +744,50 @@ def build_deck(tracks):
     (ROOT / "downloads" / "five9-study-deck.pptx").write_bytes(pptx_bytes(slides))
 
 
-def page_bodies(tracks, records, uni, eco, certs, interview, manifest):
+def find_record(records, track_id: str, lesson_id: str):
+    for record in records:
+        if record["track"]["id"] == track_id and record["lesson"]["id"] == lesson_id:
+            return record
+    return None
+
+
+def opened_cite_bits(lesson: dict) -> str:
+    bits = []
+    for cite in lesson.get("cites") or []:
+        label = str(cite.get("label") or "Source")
+        url = str(cite.get("url") or "")
+        if url.startswith("https://") and status_for(url) == "ok":
+            bits.append(f'<a href="{esc(url)}">{esc(label)}</a>')
+        else:
+            bits.append(f"<strong>confirm</strong>. {esc(label)}. last checked 2026-10.")
+    return " ".join(bits)
+
+
+def cited_lesson(record) -> str:
+    lesson = record["lesson"]
+    paras = "".join(f"<p>{sentences(part)}</p>" for part in (lesson.get("paragraphs") or [])[:2])
+    return (
+        f'<article class="cite-block"><h3><a href="{esc(record["href"])}">{esc(lesson["title"])}</a></h3>'
+        f"{paras}<p class=\"cite-line\">Opened in 2026-10: {opened_cite_bits(lesson)}</p></article>"
+    )
+
+
+def home_sources(records):
+    picked = [
+        find_record(records, "t01", "l01"),
+        find_record(records, "t01", "l02"),
+        find_record(records, "t01", "l04"),
+    ]
+    groups = [lesson_sources(record["lesson"]) for record in picked if record]
+    groups.append(front_sources("domain skill sip ivr campaign contact center"))
+    return merge_sources(groups)
+
+
+def home_document(tracks, records, drawing_count: int):
     stats = (
         f'<div class="stat-row"><div class="stat"><b>{len(tracks)}</b> tracks</div>'
         f'<div class="stat"><b>{len(records)}</b> rooms</div>'
-        f'<div class="stat"><b>{len(manifest)}</b> drawings</div></div>'
+        f'<div class="stat"><b>{drawing_count}</b> drawings</div></div>'
     )
     track_cards = []
     for track in tracks:
@@ -755,7 +799,28 @@ def page_bodies(tracks, records, uni, eco, certs, interview, manifest):
         '<p class="lane-copy" data-sentence>126 drawings. Each SVG is the diagram and the flow, counted once. '
         'The practice atlas is a separate set.</p>'
     )
-    home = (
+    l01 = find_record(records, "t01", "l01")
+    l02 = find_record(records, "t01", "l02")
+    l04 = find_record(records, "t01", "l04")
+    order = "".join(
+        f'<li>{esc(row.get("label") or "")}</li>'
+        for row in ((l01["lesson"].get("figure") or {}).get("rows") or [])
+    ) if l01 else ""
+    week = "".join(
+        f'<li><a href="tracks/{esc(track["id"])}.html">{esc(track["title"])}</a>. {esc(track.get("summary") or track.get("blurb") or "")}</li>'
+        for track in tracks[:8]
+    )
+    primer = (
+        '<p data-sentence>The front door used to stop at the track tiles. These three rooms are the published build, with the pages that were opened in 2026-10.</p>'
+        + (cited_lesson(l01) if l01 else "")
+        + (cited_lesson(l02) if l02 else "")
+        + (cited_lesson(l04) if l04 else "")
+        + f'<h3>Outbound build order</h3><ol>{order}</ol>'
+        + '<p data-sentence>Inbound and autodial add prompts and IVR scripts on that path. A DNIS stays quiet until the inbound campaign is running. A page that did not open is marked confirm and is not given a link.</p>'
+        + f'<h3>A first pass through the floor</h3><ol>{week}</ol>'
+    )
+    rows = home_sources(records)
+    return (
         '<section class="hero-stage">'
         '<div class="hero-grid" aria-hidden="true"></div>'
         '<div class="hero-orb hero-orb-a" aria-hidden="true"></div>'
@@ -766,15 +831,23 @@ def page_bodies(tracks, records, uni, eco, certs, interview, manifest):
         '<div class="hero-copy">'
         '<p class="kicker">Five9 Virtual Contact Center</p>'
         '<h1 class="hero-title">Learn the floor without a live domain.</h1>'
-        f'<p class="lede" data-sentence>Eighteen tracks, from the domain model to a teaching bridge off Cisco contact center. Citations stay on the page. Confirm before relying.</p>'
+        '<p class="lede" data-sentence>Eighteen tracks, from the domain model to a teaching bridge off Cisco contact center. Citations stay on the page. Confirm before relying.</p>'
         '<div class="actions"><a href="start.html#ten">Finish in 10 minutes</a><a href="start.html#full">Full course</a>'
         '<a href="downloads.html">Just download</a><a href="campus/index.html">Open app</a>'
         f'<a href="{REPO}">View repo</a></div>'
         '</div></section>'
+        + section("primer", "Read this before you pick a track", primer, [("HTML", "downloads/sections/home-primer.html")])
+        + section("sources", "Sources and go deeper", sources_html(rows, heading=False), [("HTML", "downloads/sections/home-sources.html")])
         + section("overview", "Start here", stats + overview_note, [("HTML", "downloads/sections/home-overview.html")])
         + section("tracks", "Tracks", f'<div class="card-grid">{"".join(track_cards)}</div>', [("HTML", "downloads/sections/home-tracks.html")])
-    )
+    ), stats, overview_note, track_cards, primer, rows
+
+
+def page_bodies(tracks, records, uni, eco, certs, interview, manifest):
+    home, stats, overview_note, track_cards, primer, rows = home_document(tracks, records, len(manifest))
     door = front_sources("overview")
+    emit_export("downloads/sections/home-primer.html", "Read this before you pick a track", primer, ["Domain, campaign types, and the outbound build order."], rows)
+    emit_export("downloads/sections/home-sources.html", "Sources and go deeper", sources_html(rows), ["Sources and go deeper"], rows, html_ready=True)
     emit_export("downloads/sections/home-overview.html", "Five9 Lab overview", stats + overview_note, ["126 drawings. Each SVG is the diagram and the flow, counted once."], door)
     emit_export("downloads/sections/home-tracks.html", "Tracks", f'<div class="card-grid">{"".join(track_cards)}</div>', [track["title"] for track in tracks], door)
     write_page("index.html", "Five9 Lab", "Independent study floor for Five9 Virtual Contact Center.", home, "index.html")
@@ -1007,7 +1080,13 @@ def page_bodies(tracks, records, uni, eco, certs, interview, manifest):
                     + dl_links([(p.suffix.upper().lstrip("."), f"{folder}/{p.name}") for p in paths])
                     + "</article>"
                 )
-    downloads = '<h1>Downloads</h1><p data-sentence>Standalone files. Each one carries the disclaimer. Confirm before relying.</p>' + "".join(download_cards)
+    download_sources = front_sources("downloads sheets flashcards ivr sip ports contact center")
+    downloads = (
+        '<h1>Downloads</h1><p data-sentence>Standalone files. Each one carries the disclaimer and a Sources and go deeper block. '
+        'A page that did not open is marked confirm and is not given a link.</p>'
+        + sources_html(download_sources)
+        + "".join(download_cards)
+    )
     write_page("downloads.html", "Downloads", "Sheets, cards, templates, and a bundle.", section("library", "Library", downloads, [("ZIP", "downloads/five9-lab-bundle.zip")]), "downloads.html")
 
 
