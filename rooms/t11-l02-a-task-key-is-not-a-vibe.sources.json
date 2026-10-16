@@ -1,0 +1,35 @@
+{
+  "id": "t11-l02-a-task-key-is-not-a-vibe",
+  "title": "A task key is not a vibe",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Studio digital IVA with VCC",
+      "url": "https://community.five9.com/s/article/Studio-7-Integrate-Digital-IVA-in-Studio-with-VCC?language=en_US",
+      "kind": "community",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "IVR modules",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Interactive voice response",
+      "url": "https://en.wikipedia.org/wiki/Interactive_voice_response",
+      "kind": "wikipedia",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Voice IVA Transfer property names are not copied key-for-key from the digital article.",
+      "url": "",
+      "kind": "note",
+      "status": "confirm",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

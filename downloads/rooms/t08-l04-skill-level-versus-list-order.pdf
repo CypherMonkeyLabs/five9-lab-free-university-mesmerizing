@@ -1,0 +1,69 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 1015 >>
+stream
+BT
+/F1 10 Tf
+48 740 Td
+14 TL
+(Skill level versus list order) Tj
+T*
+() Tj
+T*
+(The skill transfer article describes an option to ignore the order of skills in the module) Tj
+T*
+(and distribute by the agent's skill level instead. Order and level are different ideas.) Tj
+T*
+(Order is the list you typed. Level is a property of the agent.) Tj
+T*
+(This lab does not quote the click-path for editing an agent's level. If you use the option,) Tj
+T*
+(confirm in the editor which number wins. Do not assume the top of the list is the highest) Tj
+T*
+(level.) Tj
+T*
+(Pick list order or agent level) Tj
+T*
+(Do not assume they match) Tj
+T*
+() Tj
+T*
+(Sources and go deeper) Tj
+T*
+(Skill Transfer functions. community.) Tj
+T*
+(https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features.) Tj
+T*
+(last checked 2026-10.) Tj
+T*
+(confirm. The article names the option. The exact screen where an agent's skill level is) Tj
+T*
+(edited was not quoted in this lab.. last checked 2026-10.) Tj
+T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Contents 2 0 R /Resources << /Font << /F1 1 0 R >> >> >>
+endobj
+4 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+5 0 obj
+<< /Type /Catalog /Pages 4 0 R >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000001146 00000 n 
+0000001272 00000 n 
+0000001329 00000 n 
+trailer << /Size 6 /Root 5 0 R >>
+startxref
+1378
+%%EOF

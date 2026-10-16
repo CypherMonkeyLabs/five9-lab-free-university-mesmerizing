@@ -1,0 +1,43 @@
+{
+  "id": "t05-l04-predictive-fills-idle-time-and-it-can-drop-calls",
+  "title": "Predictive fills idle time, and it can drop calls",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Dialer product page",
+      "url": "https://www.five9.com/products/capabilities/dialer-system",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Outbound product page",
+      "url": "https://www.five9.com/products/capabilities/outbound-contact-center",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Default campaign settings",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Dialing modes live testing",
+      "url": "https://community.five9.com/s/article/Administrator-Campaign-Dialing-Modes-and-Live-Testing-Results",
+      "kind": "community",
+      "status": "ok",
+      "lastChecked": "2026-10",
+      "note": "Community test notes. Wording inside the article is not uniform."
+    },
+    {
+      "label": "The exact throttle curve is not specified on the default-settings page. The community test article disagrees with itself about an instant drop to 1:1.",
+      "url": "",
+      "kind": "note",
+      "status": "confirm",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

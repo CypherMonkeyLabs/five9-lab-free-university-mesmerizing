@@ -1,0 +1,73 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 1301 >>
+stream
+BT
+/F1 10 Tf
+48 740 Td
+14 TL
+(Time zone and call analysis are guarded defaults) Tj
+T*
+() Tj
+T*
+(The campaign admin tree includes time zone dialing options, and the default-settings topic) Tj
+T*
+(says call analysis and voice detection level ship with vendor defaults. Changing defaults) Tj
+T*
+(can raise a compliance warning. The same topic says US domains watch abandon rate for 30) Tj
+T*
+(rolling days and UK domains for 24 hours, and that a Five9 representative sets which kind of) Tj
+T*
+(domain you have.) Tj
+T*
+(This lab will not invent the legal calling window or the numeric abandon default. Both move,) Tj
+T*
+(and both are jurisdiction-specific. Open the current page and the current rule before you) Tj
+T*
+(widen either one.) Tj
+T*
+(Name the 30-day and 24-hour windows) Tj
+T*
+(Refuse to invent the legal dialing hours) Tj
+T*
+() Tj
+T*
+(Sources and go deeper) Tj
+T*
+(Default campaign settings. vendor.) Tj
+T*
+(https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm.) Tj
+T*
+(last checked 2026-10.) Tj
+T*
+(confirm. The exact hour-by-hour time zone matrix is in the campaign guide and was not copied) Tj
+T*
+(here. Local telemarketing law is not Five9's default screen.. last checked 2026-10.) Tj
+T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Contents 2 0 R /Resources << /Font << /F1 1 0 R >> >> >>
+endobj
+4 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+5 0 obj
+<< /Type /Catalog /Pages 4 0 R >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000001432 00000 n 
+0000001558 00000 n 
+0000001615 00000 n 
+trailer << /Size 6 /Root 5 0 R >>
+startxref
+1664
+%%EOF

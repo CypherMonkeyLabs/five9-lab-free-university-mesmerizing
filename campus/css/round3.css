@@ -95,6 +95,10 @@ html[data-motion="full"] .rail a:hover { transform: translateX(4px); }
   font-weight: 800;
 }
 
+.sources-deeper { margin: 12px 0 4px; }
+.sources-deeper li { margin: 6px 0; }
+.sources-deeper .source-kind { font-weight: 800; letter-spacing: .04em; text-transform: uppercase; color: #22d3ee; }
+
 @media (prefers-reduced-motion: reduce) {
   #primary-menu .menu-item, .rail a, .tabbar a { transform: none !important; transition: none !important; }
 }

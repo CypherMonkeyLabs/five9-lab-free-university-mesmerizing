@@ -1,0 +1,29 @@
+{
+  "id": "t14-l01-the-api-names-on-the-product-page",
+  "title": "The API names on the product page",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "APIs and SDKs",
+      "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10",
+      "note": "Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall."
+    },
+    {
+      "label": "The overview page says REST and also lists Web Services families. This lab does not assign a transport to each family.",
+      "url": "",
+      "kind": "note",
+      "status": "confirm",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

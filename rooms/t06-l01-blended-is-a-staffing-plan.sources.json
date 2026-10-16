@@ -1,0 +1,35 @@
+{
+  "id": "t06-l01-blended-is-a-staffing-plan",
+  "title": "Blended is a staffing plan",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Outbound product page",
+      "url": "https://www.five9.com/products/capabilities/outbound-contact-center",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Dialer product page",
+      "url": "https://www.five9.com/products/capabilities/dialer-system",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "A community test note says predictive agents should not also be skilled for inbound. That is consistent with the product story and is still a field note, not a settings screenshot.",
+      "url": "",
+      "kind": "note",
+      "status": "confirm",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

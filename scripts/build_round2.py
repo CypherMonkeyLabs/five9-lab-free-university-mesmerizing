@@ -10,6 +10,19 @@ import sys
 import zipfile
 from pathlib import Path
 
+from build_university_assets import paginate, write_pdf
+from go_deeper import (
+    front_sources,
+    lesson_sources,
+    markdown_doc,
+    pack_record,
+    pack_sections,
+    sources_from_html,
+    sources_html,
+    sources_lines,
+    track_sources,
+)
+
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "campus" / "data"
 OUT_DIAG = ROOT / "downloads" / "diagrams"
@@ -283,6 +296,25 @@ svg.figure{max-width:100%;height:auto}
 """
 
 
+def emit_export(rel: str, title: str, body: str, lines: list[str], sources: list, html_ready: bool = False) -> None:
+    standalone(rel, title, body if html_ready else body + sources_html(sources))
+    base = ROOT / rel
+    prose = [line for line in lines if line]
+    base.with_suffix(".md").write_text(markdown_doc(title, prose, sources), encoding="utf-8")
+    write_pdf(base.with_suffix(".pdf"), paginate([title, ""] + prose + [""] + sources_lines(sources)))
+    base.with_suffix(".docx").write_bytes(docx_bytes(title, prose + sources_lines(sources)))
+
+
+def write_room_formats(record_id: str, title: str, lines: list[str], sources: list) -> None:
+    folder = ROOT / "downloads" / "rooms"
+    folder.mkdir(parents=True, exist_ok=True)
+    prose = [line for line in lines if line]
+    (ROOT / "rooms" / f"{record_id}.md").write_text(markdown_doc(title, prose, sources), encoding="utf-8")
+    (folder / f"{record_id}.md").write_text(markdown_doc(title, prose, sources), encoding="utf-8")
+    write_pdf(folder / f"{record_id}.pdf", paginate([title, ""] + prose + [""] + sources_lines(sources)))
+    (folder / f"{record_id}.docx").write_bytes(docx_bytes(title, prose + sources_lines(sources)))
+
+
 def standalone(rel: str, title: str, body: str) -> None:
     depth = rel.count("/")
     prefix = "../" * depth
@@ -514,13 +546,14 @@ def build_rooms(records, eco):
         cards = lesson.get("cards") or []
         if cards:
             example += "<ul>" + "".join(f"<li><strong>{esc(card.get('front'))}</strong> {esc(card.get('back'))}</li>" for card in cards) + "</ul>"
-        cites = lesson.get("cites") or []
-        sources = "<ul>" + "".join(
-            f'<li><a href="{esc(cite.get("url"))}">{esc(cite.get("label") or cite.get("url"))}</a></li>' for cite in cites
-        ) + "</ul>"
-        uncertain = lesson.get("uncertain") or []
-        if uncertain:
-            sources += "<ul>" + "".join(f'<li class="callout">Confirm before relying. {esc(item)}</li>' for item in uncertain) + "</ul>"
+        source_rows = lesson_sources(lesson)
+        (ROOT / "rooms" / f"{rid}.sources.json").write_text(
+            json.dumps(pack_record(rid, lesson["title"], source_rows), ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
+        room_lines = list(paras) + list(lesson.get("objectives") or [])
+        write_room_formats(rid, lesson["title"], room_lines, source_rows)
+        sources = sources_html(source_rows)
         term = glossary[index % len(glossary)] if glossary else {"term": "Domain", "meaning": "The tenant.", "url": WEB, "source": "Five9"}
         integ = integrations[index % len(integrations)] if integrations else {"system": "CRM SDK", "how": "Bring your own.", "url": WEB, "source": "APIs"}
         fault = lesson.get("fault") or {}
@@ -535,21 +568,41 @@ def build_rooms(records, eco):
             "<p><strong>Future hook.</strong> The guide's cloud endpoint stays unset. Confirm before relying on a dated catalog or a case-study number.</p>"
         )
         parts = {
-            "learn": ("Learn it in 5 minutes", learn_inner),
-            "visual": ("Visual", visual),
-            "example": ("Worked example", example),
-            "quiz": ("Quiz", quiz_html(lesson.get("quiz") or [])),
-            "sources": ("Sources", sources),
-            "ecosystem": ("Ecosystem", eco_inner),
+            "learn": ("Learn it in 5 minutes", learn_inner, paras),
+            "visual": ("Visual", visual, [(lesson.get("figure") or {}).get("caption") or "Lesson flow."]),
+            "example": ("Worked example", example, [lab.get("goal") or "", *(lab.get("steps") or []), lab.get("success") or ""]),
+            "quiz": ("Quiz", quiz_html(lesson.get("quiz") or []), [item.get("q") or "" for item in lesson.get("quiz") or []]),
+            "sources": ("Sources and go deeper", sources, []),
+            "ecosystem": ("Ecosystem", eco_inner, []),
         }
         chunks = []
-        for key, (title, inner) in parts.items():
+        for key, (title, inner, lines) in parts.items():
             section_rel = f"downloads/sections/{rid}-{key}.html"
-            standalone(section_rel, f"{lesson['title']} · {title}", inner)
-            links = [( "HTML", f"{prefix_dl}-{key}.html" )]
+            emit_export(section_rel, f"{lesson['title']} · {title}", inner, lines, source_rows, html_ready=(key == "sources"))
+            links = [
+                ("HTML", f"{prefix_dl}-{key}.html"),
+                ("MD", f"{prefix_dl}-{key}.md"),
+                ("PDF", f"{prefix_dl}-{key}.pdf"),
+                ("DOCX", f"{prefix_dl}-{key}.docx"),
+            ]
             if key == "visual":
-                links = [("SVG", f"{diagram}.svg"), ("PNG", f"{diagram}.png"), ("HTML", f"{diagram}.html")]
-            chunks.append(section(key, title, inner, links))
+                links = [("SVG", f"{diagram}.svg"), ("PNG", f"{diagram}.png"), ("HTML", f"{diagram}.html"), ("MD", f"{diagram}.md"), ("PDF", f"{diagram}.pdf")]
+            if key == "sources":
+                links.extend([
+                    ("JSON", f"{rid}.sources.json"),
+                    ("MD", f"{rid}.md"),
+                    ("PDF", f"../downloads/rooms/{rid}.pdf"),
+                    ("DOCX", f"../downloads/rooms/{rid}.docx"),
+                ])
+            visible = sources_html(source_rows, heading=False) if key == "sources" else inner
+            chunks.append(section(key, title, visible, links))
+        emit_export(
+            f"downloads/diagrams/{rid}.html",
+            lesson["title"],
+            f'<div class="figure">{svg}</div><p>{esc((lesson.get("figure") or {}).get("caption") or "Lesson flow.")}</p>',
+            [(lesson.get("figure") or {}).get("caption") or "Lesson flow."],
+            source_rows,
+        )
         body = (
             f'<p class="kicker">{esc(track["short"] if track.get("short") else track["title"])}</p>'
             f'<h1>{esc(lesson["title"])}</h1>'
@@ -564,14 +617,16 @@ def build_rooms(records, eco):
     return kb
 
 
-def sheet(name: str, title: str, body: str) -> None:
-    standalone(f"downloads/sheets/{name}.html", title, body)
+def sheet(name: str, title: str, body: str, sources: list | None = None) -> None:
+    rows = sources if sources is not None else sources_from_html(f"{title} {body}")
+    plain = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", body)).strip()
+    emit_export(f"downloads/sheets/{name}.html", title, body, [plain], rows)
 
 
 def build_sheets(tracks, uni, eco, certs, interview):
     for track in tracks:
         items = "".join(f"<li><strong>{esc(lesson['title'])}</strong> {esc((lesson.get('paragraphs') or [''])[0])}</li>" for lesson in track["lessons"])
-        sheet(track["id"], track["title"], f"<p>{esc(track.get('summary') or '')}</p><ol>{items}</ol><p>Confirm before relying.</p>")
+        sheet(track["id"], track["title"], f"<p>{esc(track.get('summary') or '')}</p><ol>{items}</ol>", track_sources(track))
     glossary = "".join(
         f"<li><strong>{esc(term['term'])}</strong> {esc(term['meaning'])} <a href=\"{esc(term['url'])}\">{esc(term['source'])}</a></li>"
         for term in eco.get("glossary") or []
@@ -639,8 +694,8 @@ def build_templates():
     )
     for name, (title, lines) in templates.items():
         body = "<ol>" + "".join(f"<li>{esc(line)}</li>" for line in lines) + "</ol>"
-        standalone(f"downloads/templates/{name}.html", title, body)
-        (OUT_TEMPLATES / f"{name}.docx").write_bytes(docx_bytes(title, lines + [disclaimer]))
+        rows = front_sources(title + " " + " ".join(lines))
+        emit_export(f"downloads/templates/{name}.html", title, body, lines + [disclaimer], rows)
 
 
 def build_flashcards(records):
@@ -656,9 +711,22 @@ def build_flashcards(records):
                 "url": cite.get("url") or "",
                 "room": record["href"],
             })
+    card_sources = {}
+    for record in records:
+        card_sources[record["href"]] = lesson_sources(record["lesson"])
+    for card in cards:
+        card["sources"] = card_sources.get(card["room"], [])
     (ROOT / "downloads" / "flashcards.json").write_text(json.dumps({"cards": cards}, ensure_ascii=False, indent=2), encoding="utf-8")
-    items = "".join(f"<article><h2>{esc(card['front'])}</h2><p>{esc(card['back'])}</p><p><a href=\"{esc(card['url'])}\">{esc(card['source'])}</a></p></article>" for card in cards)
-    standalone("downloads/flashcards.html", "Flashcards", items)
+    items = "".join(
+        f"<article><h2>{esc(card['front'])}</h2><p>{esc(card['back'])}</p><p><a href=\"{esc(card['url'])}\">{esc(card['source'])}</a></p>{sources_html(card['sources'])}</article>"
+        for card in cards
+    )
+    lines = []
+    for card in cards:
+        lines.extend([card["front"], card["back"], card["source"], ""])
+        lines.extend(sources_lines(card["sources"]))
+        lines.append("")
+    emit_export("downloads/flashcards.html", "Flashcards", items, lines, front_sources("flashcards ivr sip"), html_ready=True)
 
 
 def build_deck(tracks):
@@ -666,6 +734,8 @@ def build_deck(tracks):
     for track in tracks:
         slides.append((track["title"], track.get("summary") or track.get("blurb") or ""))
     slides.append(("Disclaimer", "Independent, free, learning-only student project. Contact https://cyphermonkeylabs.com/#contact."))
+    door = front_sources("study deck")
+    slides.append(("Sources and go deeper", " ".join(sources_lines(door))))
     (ROOT / "downloads" / "five9-study-deck.pptx").write_bytes(pptx_bytes(slides))
 
 
@@ -704,8 +774,9 @@ def page_bodies(tracks, records, uni, eco, certs, interview, manifest):
         + section("overview", "Start here", stats + overview_note, [("HTML", "downloads/sections/home-overview.html")])
         + section("tracks", "Tracks", f'<div class="card-grid">{"".join(track_cards)}</div>', [("HTML", "downloads/sections/home-tracks.html")])
     )
-    standalone("downloads/sections/home-overview.html", "Five9 Lab overview", stats + overview_note)
-    standalone("downloads/sections/home-tracks.html", "Tracks", f'<div class="card-grid">{"".join(track_cards)}</div>')
+    door = front_sources("overview")
+    emit_export("downloads/sections/home-overview.html", "Five9 Lab overview", stats + overview_note, ["126 drawings. Each SVG is the diagram and the flow, counted once."], door)
+    emit_export("downloads/sections/home-tracks.html", "Tracks", f'<div class="card-grid">{"".join(track_cards)}</div>', [track["title"] for track in tracks], door)
     write_page("index.html", "Five9 Lab", "Independent study floor for Five9 Virtual Contact Center.", home, "index.html")
 
     ten = records[:3]
@@ -718,8 +789,8 @@ def page_bodies(tracks, records, uni, eco, certs, interview, manifest):
         + section("ten", "Finish in 10 minutes", f'<p data-sentence>Read these three rooms, then stop. They are the build order, the tenant, and the next object.</p><ol>{ten_links}</ol>', [("HTML", "downloads/sections/start-ten.html")])
         + section("full", "Full course", f'<p data-sentence>The full course is the eighteen tracks. Each room has a five-minute read, a drawing, an example, a quiz, sources, and an ecosystem panel.</p><ol>{full}</ol>', [("HTML", "downloads/sections/start-full.html")])
     )
-    standalone("downloads/sections/start-ten.html", "Ten minutes", f"<ol>{ten_links}</ol>")
-    standalone("downloads/sections/start-full.html", "Full course", f"<ol>{full}</ol>")
+    emit_export("downloads/sections/start-ten.html", "Ten minutes", f"<ol>{ten_links}</ol>", ["Ten minutes"], door)
+    emit_export("downloads/sections/start-full.html", "Full course", f"<ol>{full}</ol>", ["Full course"], door)
     write_page("start.html", "Learn", "Ten-minute path and the full Five9 course.", start, "start.html")
 
     for track in tracks:
@@ -727,7 +798,10 @@ def page_bodies(tracks, records, uni, eco, certs, interview, manifest):
         for record in records:
             if record["track"]["id"] == track["id"]:
                 links.append(f'<a class="room-card" href="../{esc(record["href"])}"><strong>{esc(record["lesson"]["title"])}</strong><p>{esc((record["lesson"].get("paragraphs") or [""])[0][:180])}</p></a>')
-        body = f'<h1>{esc(track["title"])}</h1><p data-sentence>{esc(track.get("summary") or "")}</p><div class="card-grid">{"".join(links)}</div>'
+        body = (
+            f'<h1>{esc(track["title"])}</h1><p data-sentence>{esc(track.get("summary") or "")}</p>'
+            f'<div class="card-grid">{"".join(links)}</div>{sources_html(track_sources(track))}'
+        )
         write_page(f'tracks/{track["id"]}.html', track["title"], track.get("blurb") or track["title"], body, f'tracks/{track["id"]}.html')
 
     diagram_links = []
@@ -763,7 +837,7 @@ def page_bodies(tracks, records, uni, eco, certs, interview, manifest):
         )
     charts = f'<h1>Charts</h1><p data-sentence>These bars count lessons in this repository. They are not traffic, revenue, or a Five9 report.</p>{"".join(bars)}'
     write_page("charts.html", "Charts", "Repository counts.", section("charts", "Lesson counts", charts, [("HTML", "downloads/sections/charts.html")]), "charts.html")
-    standalone("downloads/sections/charts.html", "Lesson counts", charts)
+    emit_export("downloads/sections/charts.html", "Lesson counts", charts, ["Lesson counts"], door)
 
     port = (uni.get("ports") or [{}])[0]
     play = (
@@ -798,7 +872,7 @@ def page_bodies(tracks, records, uni, eco, certs, interview, manifest):
             [("HTML", "downloads/sections/listen.html")],
         )
     )
-    standalone("downloads/sections/listen.html", "Listen", "<p>Study audio lives with the practice console.</p>")
+    emit_export("downloads/sections/listen.html", "Listen", "<p>Study audio lives with the practice console.</p>", ["Study audio lives with the practice console."], door)
     write_page("listen.html", "Listen", "Study audio.", listen, "listen.html")
 
     help_body = (
@@ -809,7 +883,7 @@ def page_bodies(tracks, records, uni, eco, certs, interview, manifest):
         + section("downloads-help", "Downloads", '<p data-sentence>Every section has a coloured download button. The Downloads page lists sheets, cards, templates, the deck, and one bundle.</p>', [("HTML", "downloads.html")])
     )
     for name, title in [("help-menu", "Menu"), ("help-course", "Course"), ("help-bot", "Bot")]:
-        standalone(f"downloads/sections/{name}.html", title, f"<p>{esc(title)} help for the Five9 lab.</p>")
+        emit_export(f"downloads/sections/{name}.html", title, f"<p>{esc(title)} help for the Five9 lab.</p>", [f"{title} help for the Five9 lab."], door)
     write_page("help.html", "Help", "How to use the Five9 lab.", help_body, "help.html")
 
     legal = (
@@ -820,7 +894,7 @@ def page_bodies(tracks, records, uni, eco, certs, interview, manifest):
         + section("access", "Accessibility", '<p data-sentence>Font size and font colour are in the header. The drawer is a list of links. Reduced motion stops the glow loop and the flow dash.</p>', [("HTML", "downloads/sections/legal.html")])
         + section("removal", "Removal", f'<p data-sentence>A concern goes through the contact form at {CONTACT}. The page will be removed or corrected.</p>', [("HTML", "downloads/sections/legal.html")])
     )
-    standalone("downloads/sections/legal.html", "Legal", "<p>MIT code. CC BY-NC-SA content. Independent study.</p>")
+    emit_export("downloads/sections/legal.html", "Legal", "<p>MIT code. CC BY-NC-SA content. Independent study.</p>", ["MIT code. CC BY-NC-SA content. Independent study."], door)
     write_page("legal.html", "Legal and credits", "Copyright, licences, privacy, and removal.", legal, "legal.html")
 
     glossary = "".join(
@@ -894,6 +968,8 @@ def page_bodies(tracks, records, uni, eco, certs, interview, manifest):
             ("JSON", "downloads/flashcards.json"),
             ("HTML", "downloads/flashcards.html"),
             ("PDF", "downloads/flashcards.pdf"),
+            ("MD", "downloads/flashcards.md"),
+            ("DOCX", "downloads/flashcards.docx"),
         ]) + "</article>",
         '<article class="panel"><h2>Study deck</h2>' + dl_links([("PPTX", "downloads/five9-study-deck.pptx")]) + "</article>",
         '<article class="panel"><h2>Everything</h2><p>One optional bundle of this downloads folder.</p>' + dl_links([("ZIP", "downloads/five9-lab-bundle.zip")]) + "</article>",
@@ -903,7 +979,7 @@ def page_bodies(tracks, records, uni, eco, certs, interview, manifest):
     for folder_name, folder in groups:
         links = []
         for path in sorted((ROOT / folder).glob("*")):
-            if path.suffix.lower() not in {".html", ".svg", ".png", ".pdf", ".docx", ".json"}:
+            if path.suffix.lower() not in {".html", ".svg", ".png", ".pdf", ".docx", ".json", ".md"}:
                 continue
             if path.name.endswith(".html") or path.suffix.lower() in {".svg", ".png", ".pdf", ".docx"}:
                 links.append((path.suffix.upper().lstrip("."), f"{folder}/{path.name}"))
@@ -1060,6 +1136,10 @@ def main():
     build_deck(tracks)
     page_bodies(tracks, records, uni, eco, certs, interview, manifest)
     (ROOT / "downloads" / "manifest.json").write_text(json.dumps({"diagrams": manifest, "rooms": len(records), "tracks": len(tracks)}, ensure_ascii=False), encoding="utf-8")
+    (DATA / "section-sources.json").write_text(
+        json.dumps({"checked": "2026-10", "sections": pack_sections(uni, eco)}, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
     patch_campus()
     print(f"rooms {len(records)} diagrams {len(manifest)} tracks {len(tracks)}")
 

@@ -1,0 +1,83 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 1534 >>
+stream
+BT
+/F1 10 Tf
+48 740 Td
+14 TL
+(Skill Transfer has more than a skill name) Tj
+T*
+() Tj
+T*
+(The community article lists General, Skills, Announcement, Priority, Connectors, Queue) Tj
+T*
+(Callback, and Disposition. It also says 'six tabs' and then names more than six. Count the) Tj
+T*
+(tabs in your editor. Do not trust the word six.) Tj
+T*
+(Multiple skills mean any agent who has one of them may get the call. The article says Five9) Tj
+T*
+(recommends one skill in the module if you want useful reports. No skill selected sends calls) Tj
+T*
+(toward users with no skills, labeled Default. Pause Before Transfer defaults to 0 and is not) Tj
+T*
+(On Hold in a report. The default disposition named in that article is Abandon.) Tj
+T*
+(Count the tabs in the editor) Tj
+T*
+(Prefer one skill when you need the report) Tj
+T*
+() Tj
+T*
+(Sources and go deeper) Tj
+T*
+(Skill Transfer functions. community.) Tj
+T*
+(https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features.) Tj
+T*
+(last checked 2026-10.) Tj
+T*
+(Skill Transfer module chapter. vendor.) Tj
+T*
+(https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/skill-transfer-module.htm.) Tj
+T*
+(last checked 2026-10.) Tj
+T*
+(Pause before transfer. community.) Tj
+T*
+(https://community.five9.com/s/article/Administrator-Pause-Before-Transfer?language=en_US.) Tj
+T*
+(last checked 2026-10.) Tj
+T*
+(confirm. The article says six tabs and then lists seven names. The editor is the count that) Tj
+T*
+(matters.. last checked 2026-10.) Tj
+T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Contents 2 0 R /Resources << /Font << /F1 1 0 R >> >> >>
+endobj
+4 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+5 0 obj
+<< /Type /Catalog /Pages 4 0 R >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000001665 00000 n 
+0000001791 00000 n 
+0000001848 00000 n 
+trailer << /Size 6 /Root 5 0 R >>
+startxref
+1897
+%%EOF

@@ -1,0 +1,35 @@
+{
+  "id": "t15-l04-dialing-modes-do-not-survive-the-move-by-osmosis",
+  "title": "Dialing modes do not survive the move by osmosis",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Dialer product page",
+      "url": "https://www.five9.com/products/capabilities/dialer-system",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Outbound product page",
+      "url": "https://www.five9.com/products/capabilities/outbound-contact-center",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "IANA service names and port numbers",
+      "url": "https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml",
+      "kind": "ports",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "The dialer product page and the outbound product page describe progressive pacing in different words. Quote the page you use.",
+      "url": "",
+      "kind": "note",
+      "status": "confirm",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

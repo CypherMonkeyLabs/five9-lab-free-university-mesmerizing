@@ -1,0 +1,63 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 996 >>
+stream
+BT
+/F1 10 Tf
+48 740 Td
+14 TL
+(The defaults are the compliance posture   Learn it in 5 minutes) Tj
+T*
+() Tj
+T*
+(For every dialing mode, the default-settings topic says options start at values Five9) Tj
+T*
+(recommends for FCC, FTC, and UK Ofcom telemarketing rules. If you change them you can see a) Tj
+T*
+(warning. The example field is Max Abandoned Call Percentage.) Tj
+T*
+(Other defaulted fields on that page include max queue time, the out-of-numbers alert,) Tj
+T*
+(whether abandon percentage is monitored, call analysis, voice detection level, and the) Tj
+T*
+(action when max queue time expires. Calculations differ for US and European domains. The) Tj
+T*
+(topic tells you to refer to the current agency rules.) Tj
+T*
+() Tj
+T*
+(Sources and go deeper) Tj
+T*
+(Default campaign settings. vendor.) Tj
+T*
+(https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm.) Tj
+T*
+(last checked 2026-10.) Tj
+T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Contents 2 0 R /Resources << /Font << /F1 1 0 R >> >> >>
+endobj
+4 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+5 0 obj
+<< /Type /Catalog /Pages 4 0 R >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000001126 00000 n 
+0000001252 00000 n 
+0000001309 00000 n 
+trailer << /Size 6 /Root 5 0 R >>
+startxref
+1358
+%%EOF

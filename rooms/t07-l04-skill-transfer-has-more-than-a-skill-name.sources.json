@@ -1,0 +1,35 @@
+{
+  "id": "t07-l04-skill-transfer-has-more-than-a-skill-name",
+  "title": "Skill Transfer has more than a skill name",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Skill Transfer functions",
+      "url": "https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features",
+      "kind": "community",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Skill Transfer module chapter",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/skill-transfer-module.htm",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Pause before transfer",
+      "url": "https://community.five9.com/s/article/Administrator-Pause-Before-Transfer?language=en_US",
+      "kind": "community",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "The article says six tabs and then lists seven names. The editor is the count that matters.",
+      "url": "",
+      "kind": "note",
+      "status": "confirm",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

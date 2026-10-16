@@ -3,7 +3,7 @@
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
 endobj
 2 0 obj
-<< /Length 1603 >>
+<< /Length 2621 >>
 stream
 BT
 /F1 10 Tf
@@ -57,37 +57,88 @@ T*
 T*
 () Tj
 T*
+(Sources and go deeper) Tj
+T*
+(Planning your implementation. vendor.) Tj
+T*
+(https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm.) Tj
+T*
+(last checked 2026-10.) Tj
+T*
+(Campaign profiles. vendor.) Tj
+T*
+(https://documentation.five9.com/bundle/basic-admin/page/basic-admin/campaign-profiles/_ch-campaign-profiles.htm.) Tj
+T*
+(last checked 2026-10.) Tj
+T*
+(Inbound campaigns. vendor.) Tj
+T*
+(https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm.) Tj
+T*
+(last checked 2026-10.) Tj
+T*
+(List dialing modes. community.) Tj
+T*
+(https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US.) Tj
+T*
+(last checked 2026-10.) Tj
+T*
+(ITU-T E.164, international public telecommunication numbering. standard.) Tj
+T*
+(https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.) Tj
+T*
+(Interactive voice response. wikipedia.) Tj
+T*
+(https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.) Tj
+T*
+() Tj
+T*
 (CYPHER0X9 Five9 Lab. Independent study. Not affiliated with Five9.) Tj
 T*
 (https://cyphermonkeylabs.com) Tj
 T*
-(https://linktr.ee/cyphermonkey) Tj
+(https://linktr.ee/cypherMonkey) Tj
 T*
 (https://github.com/CypherMonkeyLabs/five9-lab-free-university-mesmerizing) Tj
-T*
-(MIT code, CC BY-NC-SA content. Trademarks belong to their owners.) Tj
 T*
 ET
 endstream
 endobj
 3 0 obj
-<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Contents 2 0 R /Resources << /Font << /F1 1 0 R >> >> >>
+<< /Length 105 >>
+stream
+BT
+/F1 10 Tf
+48 740 Td
+14 TL
+(MIT code, CC BY-NC-SA content. Trademarks belong to their owners.) Tj
+T*
+ET
+endstream
 endobj
 4 0 obj
-<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+<< /Type /Page /Parent 6 0 R /MediaBox [0 0 612 792] /Contents 2 0 R /Resources << /Font << /F1 1 0 R >> >> >>
 endobj
 5 0 obj
-<< /Type /Catalog /Pages 4 0 R >>
+<< /Type /Page /Parent 6 0 R /MediaBox [0 0 612 792] /Contents 3 0 R /Resources << /Font << /F1 1 0 R >> >> >>
+endobj
+6 0 obj
+<< /Type /Pages /Kids [4 0 R 5 0 R] /Count 2 >>
+endobj
+7 0 obj
+<< /Type /Catalog /Pages 6 0 R >>
 endobj
 xref
-0 6
+0 8
 0000000000 65535 f 
 0000000009 00000 n 
 0000000079 00000 n 
-0000001734 00000 n 
-0000001860 00000 n 
-0000001917 00000 n 
-trailer << /Size 6 /Root 5 0 R >>
+0000002752 00000 n 
+0000002908 00000 n 
+0000003034 00000 n 
+0000003160 00000 n 
+0000003223 00000 n 
+trailer << /Size 8 /Root 7 0 R >>
 startxref
-1966
+3272
 %%EOF

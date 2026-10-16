@@ -1,0 +1,21 @@
+{
+  "id": "t06-l05-after-call-work-feeds-the-next-dial",
+  "title": "After-call work feeds the next dial",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Managing campaign dispositions",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dispositions/managing-dispositions.htm",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Pause before transfer",
+      "url": "https://community.five9.com/s/article/Administrator-Pause-Before-Transfer?language=en_US",
+      "kind": "community",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

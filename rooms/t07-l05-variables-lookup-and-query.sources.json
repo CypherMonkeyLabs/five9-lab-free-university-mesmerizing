@@ -1,0 +1,35 @@
+{
+  "id": "t07-l05-variables-lookup-and-query",
+  "title": "Variables, lookup, and query",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "XML web service IVR example",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/examples/creating-ivr-script-xml-web-service-query.htm",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "IVR modules",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Call variables for reporting",
+      "url": "https://community.five9.com/s/article/Administrator-Enabling-Call-Variables-for-Reporting?language=en_US",
+      "kind": "community",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Interactive voice response",
+      "url": "https://en.wikipedia.org/wiki/Interactive_voice_response",
+      "kind": "wikipedia",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

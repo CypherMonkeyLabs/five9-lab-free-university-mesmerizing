@@ -1,0 +1,22 @@
+{
+  "id": "t02-l06-workstations-that-drop-live-calls",
+  "title": "Workstations that drop live calls",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10",
+      "note": "Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall."
+    },
+    {
+      "label": "Headset model numbers are not listed in the section this lab read. The PDF points at a separate recommended-headsets note.",
+      "url": "",
+      "kind": "note",
+      "status": "confirm",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

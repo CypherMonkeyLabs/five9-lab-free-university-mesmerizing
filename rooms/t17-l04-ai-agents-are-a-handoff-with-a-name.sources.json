@@ -1,0 +1,42 @@
+{
+  "id": "t17-l04-ai-agents-are-a-handoff-with-a-name",
+  "title": "AI agents are a handoff with a name",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Five9 Engage",
+      "url": "https://www.five9.com/platform/self-service-and-engagement",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "GenAI Studio",
+      "url": "https://www.five9.com/products/capabilities/gen-ai-studio",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Agent Desktop",
+      "url": "https://www.five9.com/products/capabilities/agent-desktop",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Interactive voice response",
+      "url": "https://en.wikipedia.org/wiki/Interactive_voice_response",
+      "kind": "wikipedia",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "GenAI Studio's product page describes an engine-agnostic studio and names Agent Assist summaries as an initial consumer. It does not name a default model for this lab to repeat.",
+      "url": "",
+      "kind": "note",
+      "status": "confirm",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

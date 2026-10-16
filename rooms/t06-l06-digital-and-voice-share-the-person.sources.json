@@ -1,0 +1,29 @@
+{
+  "id": "t06-l06-digital-and-voice-share-the-person",
+  "title": "Digital and voice share the person",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Outbound product page",
+      "url": "https://www.five9.com/products/capabilities/outbound-contact-center",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Agent Desktop",
+      "url": "https://www.five9.com/products/capabilities/agent-desktop",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10",
+      "note": "Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall."
+    }
+  ]
+}

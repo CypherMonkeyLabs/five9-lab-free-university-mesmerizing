@@ -1,0 +1,36 @@
+{
+  "id": "t07-l07-visual-ivr-and-frames",
+  "title": "Visual IVR and frames",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10",
+      "note": "Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall."
+    },
+    {
+      "label": "IVR modules",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Interactive voice response",
+      "url": "https://en.wikipedia.org/wiki/Interactive_voice_response",
+      "kind": "wikipedia",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "The PDF's browser matrix is historical. Current browser behavior has to be tested.",
+      "url": "",
+      "kind": "note",
+      "status": "confirm",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 1512 >>
+stream
+BT
+/F1 10 Tf
+48 740 Td
+14 TL
+(Headsets and the path under the desk   Learn it in 5 minutes) Tj
+T*
+() Tj
+T*
+(USB noise-canceling headsets are the recommendation. Analog is not supported. Wireless is) Tj
+T*
+(discouraged above about ten active agents because of delay. Wired LAN is preferred. Wi-Fi is) Tj
+T*
+(tolerated only when bandwidth holds. Satellite and cellular, including 5G, are not) Tj
+T*
+(supported.) Tj
+T*
+(Agent Desktop Plus and the adapters are listed at 128 kbps for G.711, which the PDF says is) Tj
+T*
+(the default codec. Agent Assist adds 12 kbps. CRM in the same session adds another 64 kbps) Tj
+T*
+(in that table. A VPN adds 64 kbps. Latency to the data center should be under 150 ms one) Tj
+T*
+(way.) Tj
+T*
+() Tj
+T*
+(Sources and go deeper) Tj
+T*
+(Technical requirements PDF. vendor.) Tj
+T*
+(https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf.) Tj
+T*
+(last checked 2026-10.) Tj
+T*
+(RFC 3550, RTP. rfc. https://www.rfc-editor.org/rfc/rfc3550. last checked 2026-10.) Tj
+T*
+(RFC 3551, RTP profile for audio and video. rfc. https://www.rfc-editor.org/rfc/rfc3551. last) Tj
+T*
+(checked 2026-10.) Tj
+T*
+(ITU-T G.711. standard. https://www.itu.int/rec/T-REC-G.711. last checked 2026-10.) Tj
+T*
+(confirm. The iPad supervisor section says G711U and G711A are primary and that GSM or iLBC) Tj
+T*
+(may be used but have not been tested. That sentence is about that app, not a blanket codec) Tj
+T*
+(menu.. last checked 2026-10.) Tj
+T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Contents 2 0 R /Resources << /Font << /F1 1 0 R >> >> >>
+endobj
+4 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+5 0 obj
+<< /Type /Catalog /Pages 4 0 R >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000001643 00000 n 
+0000001769 00000 n 
+0000001826 00000 n 
+trailer << /Size 6 /Root 5 0 R >>
+startxref
+1875
+%%EOF

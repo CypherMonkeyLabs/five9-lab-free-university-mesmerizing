@@ -1,0 +1,28 @@
+{
+  "id": "t14-l07-what-an-extract-is-allowed-to-remember",
+  "title": "What an extract is allowed to remember",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Data retention",
+      "url": "https://www.five9.com/legal/dataretention",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "APIs and SDKs",
+      "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Generating standard reports",
+      "url": "https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports",
+      "kind": "community",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

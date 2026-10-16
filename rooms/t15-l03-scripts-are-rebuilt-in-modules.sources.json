@@ -1,0 +1,35 @@
+{
+  "id": "t15-l03-scripts-are-rebuilt-in-modules",
+  "title": "Scripts are rebuilt in modules",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "IVR modules",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Inbound campaigns",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Interactive voice response",
+      "url": "https://en.wikipedia.org/wiki/Interactive_voice_response",
+      "kind": "wikipedia",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Module mapping from UCCX steps is instructional. Validate every script in a domain.",
+      "url": "",
+      "kind": "note",
+      "status": "confirm",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

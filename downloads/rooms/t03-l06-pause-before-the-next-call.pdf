@@ -1,0 +1,71 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 1094 >>
+stream
+BT
+/F1 10 Tf
+48 740 Td
+14 TL
+(Pause before the next call) Tj
+T*
+() Tj
+T*
+(Skill Transfer has Pause Before Transfer, in seconds, on the General tab. The default is 0.) Tj
+T*
+(A value above 0 waits that long after an agent is selected before the call is delivered, so) Tj
+T*
+(a queue does not slap the next call down instantly.) Tj
+T*
+(The community article says those seconds do not show as On Hold in a report. On Plus) Tj
+T*
+(applications the caller can sit in a Connecting state. Setting the pause to 0 removes that) Tj
+T*
+(connecting bar. Do not 'fix' a report by deleting the pause if agents asked for the breath.) Tj
+T*
+(Set pause on purpose) Tj
+T*
+(Do not expect it in the hold column) Tj
+T*
+() Tj
+T*
+(Sources and go deeper) Tj
+T*
+(Pause before transfer. community.) Tj
+T*
+(https://community.five9.com/s/article/Administrator-Pause-Before-Transfer?language=en_US.) Tj
+T*
+(last checked 2026-10.) Tj
+T*
+(Skill Transfer functions. community.) Tj
+T*
+(https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features.) Tj
+T*
+(last checked 2026-10.) Tj
+T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Contents 2 0 R /Resources << /Font << /F1 1 0 R >> >> >>
+endobj
+4 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+5 0 obj
+<< /Type /Catalog /Pages 4 0 R >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000001225 00000 n 
+0000001351 00000 n 
+0000001408 00000 n 
+trailer << /Size 6 /Root 5 0 R >>
+startxref
+1457
+%%EOF

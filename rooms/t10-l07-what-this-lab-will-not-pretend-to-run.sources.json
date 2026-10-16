@@ -1,0 +1,28 @@
+{
+  "id": "t10-l07-what-this-lab-will-not-pretend-to-run",
+  "title": "What this lab will not pretend to run",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Workforce engagement management",
+      "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Data retention",
+      "url": "https://www.five9.com/legal/dataretention",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Agent Desktop",
+      "url": "https://www.five9.com/products/capabilities/agent-desktop",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

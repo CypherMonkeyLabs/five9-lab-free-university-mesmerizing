@@ -1,0 +1,28 @@
+{
+  "id": "t06-l03-priority-and-ratio-are-campaign-settings",
+  "title": "Priority and ratio are campaign settings",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Inbound campaigns",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Skill groups",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "The numeric behavior of campaign priority and ratio settings is in a guide topic this lab did not quote. Do not copy a ratio from the simulator into that dialog.",
+      "url": "",
+      "kind": "note",
+      "status": "confirm",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

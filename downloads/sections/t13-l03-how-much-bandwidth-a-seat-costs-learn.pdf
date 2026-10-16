@@ -1,0 +1,63 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 949 >>
+stream
+BT
+/F1 10 Tf
+48 740 Td
+14 TL
+(How much bandwidth a seat costs   Learn it in 5 minutes) Tj
+T*
+() Tj
+T*
+(The requirements give planning numbers. Agent Desktop Plus and the Plus adapters are 128) Tj
+T*
+(kbps. The Java agent is 88 kbps. Agent Assist adds about 12 kbps. A VPN adds about 64. CRM) Tj
+T*
+(or other business apps add about 64. A UC client such as Teams, Zoom, Office@Hand,) Tj
+T*
+(RingCentral, or Nextiva is called out around 320 kbps.) Tj
+T*
+(One-way latency should stay under 150 ms. Wi-Fi is acceptable when the bandwidth is actually) Tj
+T*
+(there. Wired is preferred. Satellite is not supported. Cellular and 5G are not supported.) Tj
+T*
+(Those are support statements, not opinions.) Tj
+T*
+() Tj
+T*
+(Sources and go deeper) Tj
+T*
+(Technical requirements PDF. vendor.) Tj
+T*
+(https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf.) Tj
+T*
+(last checked 2026-10.) Tj
+T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Contents 2 0 R /Resources << /Font << /F1 1 0 R >> >> >>
+endobj
+4 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+5 0 obj
+<< /Type /Catalog /Pages 4 0 R >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000001079 00000 n 
+0000001205 00000 n 
+0000001262 00000 n 
+trailer << /Size 6 /Root 5 0 R >>
+startxref
+1311
+%%EOF

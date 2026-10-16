@@ -1,0 +1,22 @@
+{
+  "id": "t12-l04-the-rest-of-the-named-crms",
+  "title": "The rest of the named CRMs",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10",
+      "note": "Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall."
+    },
+    {
+      "label": "Web adapter requirements",
+      "url": "https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/agent-integrations/web-based-adapters/application-requirements.htm",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

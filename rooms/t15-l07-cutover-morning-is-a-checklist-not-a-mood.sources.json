@@ -1,0 +1,64 @@
+{
+  "id": "t15-l07-cutover-morning-is-a-checklist-not-a-mood",
+  "title": "Cutover morning is a checklist, not a mood",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Planning your implementation",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Inbound campaigns",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "E911 data sheet",
+      "url": "https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Data retention",
+      "url": "https://www.five9.com/legal/dataretention",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10",
+      "note": "Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall."
+    },
+    {
+      "label": "ITU-T E.164, international public telecommunication numbering",
+      "url": "https://www.itu.int/rec/T-REC-E.164",
+      "kind": "standard",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Enhanced 9-1-1",
+      "url": "https://en.wikipedia.org/wiki/Enhanced_9-1-1",
+      "kind": "wikipedia",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "This checklist is a teaching bridge for cutover discipline. It is not an official Five9 UCCE runbook.",
+      "url": "",
+      "kind": "note",
+      "status": "confirm",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

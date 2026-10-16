@@ -130,6 +130,9 @@ if (!existsSync(join(root, "downloads/five9-lab-bundle.zip"))) problems.push("zi
 const roomName = readdirSync(join(root, "rooms")).find((file) => file.endsWith(".html"));
 const roomText = readFileSync(join(root, "rooms", roomName), "utf8");
 if (!roomText.includes("data-export") || !roomText.includes(".png") || !roomText.includes("disclaimer-panel")) problems.push("room-download");
+if (!roomText.includes("Sources and go deeper") || !roomText.includes("last checked 2026-10")) problems.push("sources-block");
+const sourceName = roomName.replace(/\.html$/, ".sources.json");
+if (!existsSync(join(root, "rooms", sourceName))) problems.push("sources-json");
 const newSheet = readFileSync(join(sheetDir, sheetHtml[0]), "utf8");
 if (!newSheet.includes("https://linktr.ee/cypherMonkey") || !newSheet.includes("disclaimer-panel")) problems.push("new-sheet-brand");
 

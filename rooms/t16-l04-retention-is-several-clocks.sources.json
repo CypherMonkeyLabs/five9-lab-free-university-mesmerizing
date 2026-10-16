@@ -1,0 +1,21 @@
+{
+  "id": "t16-l04-retention-is-several-clocks",
+  "title": "Retention is several clocks",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Data retention",
+      "url": "https://www.five9.com/legal/dataretention",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Enhanced 9-1-1",
+      "url": "https://en.wikipedia.org/wiki/Enhanced_9-1-1",
+      "kind": "wikipedia",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

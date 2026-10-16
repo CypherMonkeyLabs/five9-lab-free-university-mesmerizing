@@ -1,0 +1,50 @@
+{
+  "id": "t04-l07-local-caller-id-is-a-profile-choice",
+  "title": "Local caller ID is a profile choice",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Outbound product page",
+      "url": "https://www.five9.com/products/capabilities/outbound-contact-center",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Campaign profiles",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/campaign-profiles/_ch-campaign-profiles.htm",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Certified Caller",
+      "url": "https://www.five9.com/resources/five9_certified_caller",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Call log filters",
+      "url": "https://community.five9.com/s/article/Reporting-Apply-Filter-s-in-the-Call-Log-Report",
+      "kind": "community",
+      "status": "ok",
+      "lastChecked": "2026-10",
+      "note": "Community article dated 14 July 2026."
+    },
+    {
+      "label": "RFC 8224, Authenticated Identity Management in SIP",
+      "url": "https://www.rfc-editor.org/rfc/rfc8224",
+      "kind": "rfc",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "ITU-T E.164, international public telecommunication numbering",
+      "url": "https://www.itu.int/rec/T-REC-E.164",
+      "kind": "standard",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

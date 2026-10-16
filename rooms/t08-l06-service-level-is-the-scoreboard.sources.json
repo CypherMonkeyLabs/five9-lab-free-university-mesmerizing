@@ -1,0 +1,21 @@
+{
+  "id": "t08-l06-service-level-is-the-scoreboard",
+  "title": "Service level is the scoreboard",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Skill groups",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Inbound campaigns",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "t16-l03-recording-is-the-customer-s-duty-too",
+  "title": "Recording is the customer's duty too",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "End user license agreement",
+      "url": "https://www.five9.com/legal/end-user-license-agreement",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Data retention",
+      "url": "https://www.five9.com/legal/dataretention",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Interactive voice response",
+      "url": "https://en.wikipedia.org/wiki/Interactive_voice_response",
+      "kind": "wikipedia",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

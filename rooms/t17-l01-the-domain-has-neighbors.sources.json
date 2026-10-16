@@ -1,0 +1,49 @@
+{
+  "id": "t17-l01-the-domain-has-neighbors",
+  "title": "The domain has neighbors",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Agent Desktop",
+      "url": "https://www.five9.com/products/capabilities/agent-desktop",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Workforce engagement management",
+      "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "APIs and SDKs",
+      "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "E911 data sheet",
+      "url": "https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "RFC 3261, SIP: Session Initiation Protocol",
+      "url": "https://www.rfc-editor.org/rfc/rfc3261",
+      "kind": "rfc",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Enhanced 9-1-1",
+      "url": "https://en.wikipedia.org/wiki/Enhanced_9-1-1",
+      "kind": "wikipedia",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

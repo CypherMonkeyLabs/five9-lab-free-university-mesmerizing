@@ -1,0 +1,79 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 1455 >>
+stream
+BT
+/F1 10 Tf
+48 740 Td
+14 TL
+(911 is a location, not a prefix) Tj
+T*
+() Tj
+T*
+(The E911 data sheet says agents dial 911 directly, with no prefix, and that the service) Tj
+T*
+(sends a dispatchable location. It names the United States and its territories, Kari's Law,) Tj
+T*
+(and RAY BAUM'S Act. The partner named on that sheet is RedSky.) Tj
+T*
+(The end-user license also discusses emergency calling and names the United States or Canada.) Tj
+T*
+(It says the call can fail if the address is wrong or unregistered, if power or internet is) Tj
+T*
+(lost, if the service is suspended, during an outage, or with bad gear. The data sheet and) Tj
+T*
+(the EULA do not draw the same map. Say which document you are quoting.) Tj
+T*
+(Dial 911 with no prefix) Tj
+T*
+(Cite the data sheet and the EULA separately) Tj
+T*
+() Tj
+T*
+(Sources and go deeper) Tj
+T*
+(E911 data sheet. vendor.) Tj
+T*
+(https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF.) Tj
+T*
+(last checked 2026-10.) Tj
+T*
+(End user license agreement. vendor. https://www.five9.com/legal/end-user-license-agreement.) Tj
+T*
+(last checked 2026-10.) Tj
+T*
+(Enhanced 9-1-1. wikipedia. https://en.wikipedia.org/wiki/Enhanced_9-1-1. last checked) Tj
+T*
+(2026-10.) Tj
+T*
+(confirm. The 2022 data sheet says US and territories. The EULA text this lab read also says) Tj
+T*
+(US or Canada. Re-read both before you publish a coverage map.. last checked 2026-10.) Tj
+T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Contents 2 0 R /Resources << /Font << /F1 1 0 R >> >> >>
+endobj
+4 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+5 0 obj
+<< /Type /Catalog /Pages 4 0 R >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000001586 00000 n 
+0000001712 00000 n 
+0000001769 00000 n 
+trailer << /Size 6 /Root 5 0 R >>
+startxref
+1818
+%%EOF

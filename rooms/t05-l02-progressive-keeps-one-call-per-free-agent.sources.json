@@ -1,0 +1,28 @@
+{
+  "id": "t05-l02-progressive-keeps-one-call-per-free-agent",
+  "title": "Progressive keeps one call per free agent",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Outbound product page",
+      "url": "https://www.five9.com/products/capabilities/outbound-contact-center",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Dialer product page",
+      "url": "https://www.five9.com/products/capabilities/dialer-system",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Five9 publishes both 'one customer per available agent' and 'adaptively control dialing pace' for progressive. This lab does not know which sentence the current build implements.",
+      "url": "",
+      "kind": "note",
+      "status": "confirm",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

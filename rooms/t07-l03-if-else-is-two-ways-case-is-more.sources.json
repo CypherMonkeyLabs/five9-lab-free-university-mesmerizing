@@ -1,0 +1,28 @@
+{
+  "id": "t07-l03-if-else-is-two-ways-case-is-more",
+  "title": "If/Else is two ways. Case is more",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "If/Else module",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/ifelse-module.htm",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "IVR modules",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Interactive voice response",
+      "url": "https://en.wikipedia.org/wiki/Interactive_voice_response",
+      "kind": "wikipedia",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

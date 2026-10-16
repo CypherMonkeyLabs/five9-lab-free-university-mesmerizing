@@ -1,0 +1,1043 @@
+{
+  "checked": "2026-10",
+  "sections": {
+    "deploy": [
+      {
+        "label": "SIP trunk options",
+        "url": "https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/SIP-trunk-options/_ch-five9-sip-trunk-options.htm",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "WebRTC community article",
+        "url": "https://community.five9.com/s/article/VCC-Five9-WebRTC",
+        "kind": "community",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Technical requirements PDF",
+        "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Java application requirements",
+        "url": "https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/agent-supervisor-apps/java-based-application-reqs.htm",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "IANA service names and port numbers",
+        "url": "https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml",
+        "kind": "ports",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "RFC 3261, SIP: Session Initiation Protocol",
+        "url": "https://www.rfc-editor.org/rfc/rfc3261",
+        "kind": "rfc",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "RFC 3550, RTP",
+        "url": "https://www.rfc-editor.org/rfc/rfc3550",
+        "kind": "rfc",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "RFC 3551, RTP profile for audio and video",
+        "url": "https://www.rfc-editor.org/rfc/rfc3551",
+        "kind": "rfc",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "ITU-T G.711",
+        "url": "https://www.itu.int/rec/T-REC-G.711",
+        "kind": "standard",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "RFC 1035, domain names",
+        "url": "https://www.rfc-editor.org/rfc/rfc1035",
+        "kind": "rfc",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "RFC 2782, DNS SRV",
+        "url": "https://www.rfc-editor.org/rfc/rfc2782",
+        "kind": "rfc",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "RFC 8825, WebRTC overview",
+        "url": "https://www.rfc-editor.org/rfc/rfc8825",
+        "kind": "rfc",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Enhanced 9-1-1",
+        "url": "https://en.wikipedia.org/wiki/Enhanced_9-1-1",
+        "kind": "wikipedia",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      }
+    ],
+    "migrate": [
+      {
+        "label": "Planning your implementation",
+        "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "IVR modules",
+        "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "SIP trunk options",
+        "url": "https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/SIP-trunk-options/_ch-five9-sip-trunk-options.htm",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "E911 data sheet",
+        "url": "https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "RFC 3261, SIP: Session Initiation Protocol",
+        "url": "https://www.rfc-editor.org/rfc/rfc3261",
+        "kind": "rfc",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "ITU-T E.164, international public telecommunication numbering",
+        "url": "https://www.itu.int/rec/T-REC-E.164",
+        "kind": "standard",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Enhanced 9-1-1",
+        "url": "https://en.wikipedia.org/wiki/Enhanced_9-1-1",
+        "kind": "wikipedia",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Interactive voice response",
+        "url": "https://en.wikipedia.org/wiki/Interactive_voice_response",
+        "kind": "wikipedia",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      }
+    ],
+    "config": [
+      {
+        "label": "Planning your implementation",
+        "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Campaign profiles",
+        "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/campaign-profiles/_ch-campaign-profiles.htm",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Inbound campaigns",
+        "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "List dialing modes",
+        "url": "https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US",
+        "kind": "community",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "ITU-T E.164, international public telecommunication numbering",
+        "url": "https://www.itu.int/rec/T-REC-E.164",
+        "kind": "standard",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Interactive voice response",
+        "url": "https://en.wikipedia.org/wiki/Interactive_voice_response",
+        "kind": "wikipedia",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      }
+    ],
+    "sip": [
+      {
+        "label": "SIP trunk options",
+        "url": "https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/SIP-trunk-options/_ch-five9-sip-trunk-options.htm",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "RFC 3261",
+        "url": "https://www.rfc-editor.org/rfc/rfc3261",
+        "kind": "rfc",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "RFC 4733",
+        "url": "https://www.rfc-editor.org/rfc/rfc4733",
+        "kind": "rfc",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Certified Caller",
+        "url": "https://www.five9.com/resources/five9_certified_caller",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "RFC 3550, RTP",
+        "url": "https://www.rfc-editor.org/rfc/rfc3550",
+        "kind": "rfc",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "RFC 3551, RTP profile for audio and video",
+        "url": "https://www.rfc-editor.org/rfc/rfc3551",
+        "kind": "rfc",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "ITU-T G.711",
+        "url": "https://www.itu.int/rec/T-REC-G.711",
+        "kind": "standard",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "RFC 1035, domain names",
+        "url": "https://www.rfc-editor.org/rfc/rfc1035",
+        "kind": "rfc",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "RFC 2782, DNS SRV",
+        "url": "https://www.rfc-editor.org/rfc/rfc2782",
+        "kind": "rfc",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "RFC 8825, WebRTC overview",
+        "url": "https://www.rfc-editor.org/rfc/rfc8825",
+        "kind": "rfc",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "RFC 8224, Authenticated Identity Management in SIP",
+        "url": "https://www.rfc-editor.org/rfc/rfc8224",
+        "kind": "rfc",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "ITU-T E.164, international public telecommunication numbering",
+        "url": "https://www.itu.int/rec/T-REC-E.164",
+        "kind": "standard",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Enhanced 9-1-1",
+        "url": "https://en.wikipedia.org/wiki/Enhanced_9-1-1",
+        "kind": "wikipedia",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      }
+    ],
+    "wfm": [
+      {
+        "label": "Workforce engagement management",
+        "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "WEM data sheet",
+        "url": "https://www.five9.com/resources/data-sheet/five9-wem",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Erlang unit, textbook model",
+        "url": "https://en.wikipedia.org/wiki/Erlang_(unit)",
+        "kind": "wikipedia",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      }
+    ],
+    "record": [
+      {
+        "label": "Workforce engagement management",
+        "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Data retention",
+        "url": "https://www.five9.com/legal/dataretention",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "End-user license agreement",
+        "url": "https://www.five9.com/legal/end-user-license-agreement",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Supervisor workstation requirements",
+        "url": "https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/workforce-optimization/supervisor-workstation-reqs/supervisor-workstation-reqs.htm",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "RFC 9293, Transmission Control Protocol",
+        "url": "https://www.rfc-editor.org/rfc/rfc9293",
+        "kind": "rfc",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Enhanced 9-1-1",
+        "url": "https://en.wikipedia.org/wiki/Enhanced_9-1-1",
+        "kind": "wikipedia",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      }
+    ],
+    "e911": [
+      {
+        "label": "E911 data sheet",
+        "url": "https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "MyE911 call history",
+        "url": "https://community.five9.com/s/article/MyE911-Call-History?language=en_US",
+        "kind": "community",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "RFC 3261, SIP: Session Initiation Protocol",
+        "url": "https://www.rfc-editor.org/rfc/rfc3261",
+        "kind": "rfc",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Enhanced 9-1-1",
+        "url": "https://en.wikipedia.org/wiki/Enhanced_9-1-1",
+        "kind": "wikipedia",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      }
+    ],
+    "analytics": [
+      {
+        "label": "Generating standard reports",
+        "url": "https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports",
+        "kind": "community",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Call variables for reporting",
+        "url": "https://community.five9.com/s/article/Administrator-Enabling-Call-Variables-for-Reporting?language=en_US",
+        "kind": "community",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "APIs and SDKs",
+        "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Call log filters",
+        "url": "https://community.five9.com/s/article/Reporting-Apply-Filter-s-in-the-Call-Log-Report",
+        "kind": "community",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      }
+    ],
+    "integrations": [
+      {
+        "label": "Technical requirements PDF",
+        "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "APIs and SDKs",
+        "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "IVR modules",
+        "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "ServiceNow Plus adapter",
+        "url": "https://documentation.five9.com/bundle/servicenowadmins/page/crm-admins/ServiceNow/introduction/_ch-configuring-the-five9-plus-adapter-for-servicenow.htm",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "RFC 6455, The WebSocket Protocol",
+        "url": "https://www.rfc-editor.org/rfc/rfc6455",
+        "kind": "rfc",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Interactive voice response",
+        "url": "https://en.wikipedia.org/wiki/Interactive_voice_response",
+        "kind": "wikipedia",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      }
+    ],
+    "ai": [
+      {
+        "label": "Studio digital IVA with VCC",
+        "url": "https://community.five9.com/s/article/Studio-7-Integrate-Digital-IVA-in-Studio-with-VCC?language=en_US",
+        "kind": "community",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "GenAI Studio",
+        "url": "https://www.five9.com/products/capabilities/gen-ai-studio",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "IVR modules",
+        "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "IVA Sales Certified badge",
+        "url": "https://www.credly.com/org/five9/badge/five9-iva-sales-certified",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Interactive voice response",
+        "url": "https://en.wikipedia.org/wiki/Interactive_voice_response",
+        "kind": "wikipedia",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      }
+    ],
+    "security": [
+      {
+        "label": "Technical requirements PDF",
+        "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "VCC Administrator via Web",
+        "url": "https://documentation.five9.com/bundle/admin-console/page/admin-console/java-vcc/_ch-vcc-on-the-web.htm",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "TCPA manual touch",
+        "url": "https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US",
+        "kind": "community",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Default campaign settings",
+        "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Certified Caller",
+        "url": "https://www.five9.com/resources/five9_certified_caller",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "RFC 8446, TLS 1.3",
+        "url": "https://www.rfc-editor.org/rfc/rfc8446",
+        "kind": "rfc",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "RFC 6455, The WebSocket Protocol",
+        "url": "https://www.rfc-editor.org/rfc/rfc6455",
+        "kind": "rfc",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "RFC 8224, Authenticated Identity Management in SIP",
+        "url": "https://www.rfc-editor.org/rfc/rfc8224",
+        "kind": "rfc",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "ITU-T E.164, international public telecommunication numbering",
+        "url": "https://www.itu.int/rec/T-REC-E.164",
+        "kind": "standard",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Telephone Consumer Protection Act of 1991",
+        "url": "https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991",
+        "kind": "wikipedia",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      }
+    ],
+    "roadmap": [
+      {
+        "label": "Five9 University",
+        "url": "https://www.five9.com/contact-center-services/training",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Technical requirements PDF",
+        "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      }
+    ],
+    "career": [
+      {
+        "label": "Five9 University",
+        "url": "https://www.five9.com/contact-center-services/training",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Dialer product page",
+        "url": "https://www.five9.com/products/capabilities/dialer-system",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Outbound product page",
+        "url": "https://www.five9.com/products/capabilities/outbound-contact-center",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "RFC 3261, SIP: Session Initiation Protocol",
+        "url": "https://www.rfc-editor.org/rfc/rfc3261",
+        "kind": "rfc",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Interactive voice response",
+        "url": "https://en.wikipedia.org/wiki/Interactive_voice_response",
+        "kind": "wikipedia",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      }
+    ],
+    "glossary": [
+      {
+        "label": "Planning your implementation",
+        "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/intro/planning-your-implementation.htm",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Skill groups",
+        "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Campaign profiles",
+        "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/campaign-profiles/_ch-campaign-profiles.htm",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Inbound campaigns",
+        "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "List dialing modes",
+        "url": "https://community.five9.com/s/article/Administrator-List-Dialing-Modes-and-its-Differences?language=en_US",
+        "kind": "community",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Dialer product page",
+        "url": "https://www.five9.com/products/capabilities/dialer-system",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Outbound product page",
+        "url": "https://www.five9.com/products/capabilities/outbound-contact-center",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "TCPA manual touch",
+        "url": "https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US",
+        "kind": "community",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Default campaign settings",
+        "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "IVR modules",
+        "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Skill Transfer functions",
+        "url": "https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features",
+        "kind": "community",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Call variables for reporting",
+        "url": "https://community.five9.com/s/article/Administrator-Enabling-Call-Variables-for-Reporting?language=en_US",
+        "kind": "community",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Generating standard reports",
+        "url": "https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports",
+        "kind": "community",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Call log filters",
+        "url": "https://community.five9.com/s/article/Reporting-Apply-Filter-s-in-the-Call-Log-Report",
+        "kind": "community",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "APIs and SDKs",
+        "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Technical requirements PDF",
+        "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Certified Caller",
+        "url": "https://www.five9.com/resources/five9_certified_caller",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "E911 data sheet",
+        "url": "https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "MyE911 call history",
+        "url": "https://community.five9.com/s/article/MyE911-Call-History?language=en_US",
+        "kind": "community",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Workforce engagement management",
+        "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "GenAI Studio",
+        "url": "https://www.five9.com/products/capabilities/gen-ai-studio",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Studio digital IVA with VCC",
+        "url": "https://community.five9.com/s/article/Studio-7-Integrate-Digital-IVA-in-Studio-with-VCC?language=en_US",
+        "kind": "community",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Agent Desktop",
+        "url": "https://www.five9.com/products/capabilities/agent-desktop",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Data retention",
+        "url": "https://www.five9.com/legal/dataretention",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "RFC 3261",
+        "url": "https://www.rfc-editor.org/rfc/rfc3261",
+        "kind": "rfc",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "RFC 4733",
+        "url": "https://www.rfc-editor.org/rfc/rfc4733",
+        "kind": "rfc",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "RFC 3550, RTP",
+        "url": "https://www.rfc-editor.org/rfc/rfc3550",
+        "kind": "rfc",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "RFC 3551, RTP profile for audio and video",
+        "url": "https://www.rfc-editor.org/rfc/rfc3551",
+        "kind": "rfc",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "ITU-T G.711",
+        "url": "https://www.itu.int/rec/T-REC-G.711",
+        "kind": "standard",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "RFC 8446, TLS 1.3",
+        "url": "https://www.rfc-editor.org/rfc/rfc8446",
+        "kind": "rfc",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "RFC 1035, domain names",
+        "url": "https://www.rfc-editor.org/rfc/rfc1035",
+        "kind": "rfc",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "RFC 2782, DNS SRV",
+        "url": "https://www.rfc-editor.org/rfc/rfc2782",
+        "kind": "rfc",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "RFC 6455, The WebSocket Protocol",
+        "url": "https://www.rfc-editor.org/rfc/rfc6455",
+        "kind": "rfc",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "RFC 8224, Authenticated Identity Management in SIP",
+        "url": "https://www.rfc-editor.org/rfc/rfc8224",
+        "kind": "rfc",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "ITU-T E.164, international public telecommunication numbering",
+        "url": "https://www.itu.int/rec/T-REC-E.164",
+        "kind": "standard",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Enhanced 9-1-1",
+        "url": "https://en.wikipedia.org/wiki/Enhanced_9-1-1",
+        "kind": "wikipedia",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Telephone Consumer Protection Act of 1991",
+        "url": "https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991",
+        "kind": "wikipedia",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Interactive voice response",
+        "url": "https://en.wikipedia.org/wiki/Interactive_voice_response",
+        "kind": "wikipedia",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      }
+    ],
+    "trouble": [
+      {
+        "label": "Inbound campaigns",
+        "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/creating-campaigns/types-of-campaigns/inbound-campaigns.htm",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Skill Transfer functions",
+        "url": "https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features",
+        "kind": "community",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Community port article",
+        "url": "https://community.five9.com/s/article/Network-Port-Requirements-for-Softphone-Gateway-PSTN-Customers?language=en_US",
+        "kind": "community",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Technical requirements PDF",
+        "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "TCPA manual touch",
+        "url": "https://community.five9.com/s/article/Administrator-TCPA-Manual-Touch-Dialing-Mode?language=en_US",
+        "kind": "community",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Default campaign settings",
+        "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dialing-modes/default-campaign-settings.htm",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "E911 data sheet",
+        "url": "https://www.five9.com/sites/default/files/2022-11/Data-sheet-Five9-emergency-services%20%28E911%29.PDF",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Generating standard reports",
+        "url": "https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports",
+        "kind": "community",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Data retention",
+        "url": "https://www.five9.com/legal/dataretention",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Studio digital IVA with VCC",
+        "url": "https://community.five9.com/s/article/Studio-7-Integrate-Digital-IVA-in-Studio-with-VCC?language=en_US",
+        "kind": "community",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "IANA service names and port numbers",
+        "url": "https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml",
+        "kind": "ports",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "RFC 3261, SIP: Session Initiation Protocol",
+        "url": "https://www.rfc-editor.org/rfc/rfc3261",
+        "kind": "rfc",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "RFC 3550, RTP",
+        "url": "https://www.rfc-editor.org/rfc/rfc3550",
+        "kind": "rfc",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "RFC 3551, RTP profile for audio and video",
+        "url": "https://www.rfc-editor.org/rfc/rfc3551",
+        "kind": "rfc",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "ITU-T G.711",
+        "url": "https://www.itu.int/rec/T-REC-G.711",
+        "kind": "standard",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "RFC 768, User Datagram Protocol",
+        "url": "https://www.rfc-editor.org/rfc/rfc768",
+        "kind": "rfc",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "RFC 6455, The WebSocket Protocol",
+        "url": "https://www.rfc-editor.org/rfc/rfc6455",
+        "kind": "rfc",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "RFC 8825, WebRTC overview",
+        "url": "https://www.rfc-editor.org/rfc/rfc8825",
+        "kind": "rfc",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "ITU-T E.164, international public telecommunication numbering",
+        "url": "https://www.itu.int/rec/T-REC-E.164",
+        "kind": "standard",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Enhanced 9-1-1",
+        "url": "https://en.wikipedia.org/wiki/Enhanced_9-1-1",
+        "kind": "wikipedia",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Telephone Consumer Protection Act of 1991",
+        "url": "https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991",
+        "kind": "wikipedia",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      }
+    ]
+  }
+}

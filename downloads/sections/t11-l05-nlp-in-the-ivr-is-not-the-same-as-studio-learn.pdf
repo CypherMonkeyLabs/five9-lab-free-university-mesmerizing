@@ -1,0 +1,71 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 1143 >>
+stream
+BT
+/F1 10 Tf
+48 740 Td
+14 TL
+(NLP in the IVR is not the same as Studio   Learn it in 5 minutes) Tj
+T*
+() Tj
+T*
+(The modules chapter includes a Natural Language Processing module and Voice Input, and it) Tj
+T*
+(also includes IVA Transfer. They are different blocks. NLP inside a script is not) Tj
+T*
+(automatically a Studio task, and a Studio task is not automatically the NLP module.) Tj
+T*
+(Pick the block that matches the design. If the work is a Studio bot with a task key, use IVA) Tj
+T*
+(Transfer and the Studio article. If the work is a grammar in the IVR, use the IVR module and) Tj
+T*
+(its own properties.) Tj
+T*
+() Tj
+T*
+(Sources and go deeper) Tj
+T*
+(IVR modules. vendor.) Tj
+T*
+(https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm.) Tj
+T*
+(last checked 2026-10.) Tj
+T*
+(Studio digital IVA with VCC. community.) Tj
+T*
+(https://community.five9.com/s/article/Studio-7-Integrate-Digital-IVA-in-Studio-with-VCC?language=en_US.) Tj
+T*
+(last checked 2026-10.) Tj
+T*
+(Interactive voice response. wikipedia.) Tj
+T*
+(https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.) Tj
+T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Contents 2 0 R /Resources << /Font << /F1 1 0 R >> >> >>
+endobj
+4 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+5 0 obj
+<< /Type /Catalog /Pages 4 0 R >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000001274 00000 n 
+0000001400 00000 n 
+0000001457 00000 n 
+trailer << /Size 6 /Root 5 0 R >>
+startxref
+1506
+%%EOF

@@ -1,0 +1,77 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 1395 >>
+stream
+BT
+/F1 10 Tf
+48 740 Td
+14 TL
+(The module list is the vocabulary   Learn it in 5 minutes) Tj
+T*
+() Tj
+T*
+(The IVR modules chapter names the blocks you may place. The list includes Play, Menu, Get) Tj
+T*
+(Digits, Input, Voice Input, If/Else, Case, Set Variable, Lookup Contact Record, Query, Skill) Tj
+T*
+(Transfer, IVA Transfer, Voicemail Transfer, Set DNC, Third Party Transfer, Foreign Script,) Tj
+T*
+(Language, and others such as Conference, Iterator, and the Salesforce modules.) Tj
+T*
+(This lab's builder uses those names. It does not contain a module called Hangup, because) Tj
+T*
+(that name is not in the chapter list this lab read. A transfer that completes the script is) Tj
+T*
+(the ending the skill article describes.) Tj
+T*
+() Tj
+T*
+(Sources and go deeper) Tj
+T*
+(IVR modules. vendor.) Tj
+T*
+(https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm.) Tj
+T*
+(last checked 2026-10.) Tj
+T*
+(Skill Transfer functions. community.) Tj
+T*
+(https://community.five9.com/s/article/Administrator-IVR-Skill-Transfer-Module-Functions-and-Features.) Tj
+T*
+(last checked 2026-10.) Tj
+T*
+(Interactive voice response. wikipedia.) Tj
+T*
+(https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.) Tj
+T*
+(confirm. Some third-party notes mention a hangup behavior. It is not in the modules chapter) Tj
+T*
+(quoted here.. last checked 2026-10.) Tj
+T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Contents 2 0 R /Resources << /Font << /F1 1 0 R >> >> >>
+endobj
+4 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+5 0 obj
+<< /Type /Catalog /Pages 4 0 R >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000001526 00000 n 
+0000001652 00000 n 
+0000001709 00000 n 
+trailer << /Size 6 /Root 5 0 R >>
+startxref
+1758
+%%EOF

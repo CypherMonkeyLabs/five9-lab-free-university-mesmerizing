@@ -1,0 +1,13 @@
+# NLP in the IVR is not the same as Studio · Quiz
+
+- NLP module and IVA Transfer are
+- A Studio task is attached with
+- A short speech menu can stay
+- Region still matters for
+- Naming the wrong block
+
+## Sources and go deeper
+
+- [IVR modules](https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm). vendor. last checked 2026-10.
+- [Studio digital IVA with VCC](https://community.five9.com/s/article/Studio-7-Integrate-Digital-IVA-in-Studio-with-VCC?language=en_US). community. last checked 2026-10.
+- [Interactive voice response](https://en.wikipedia.org/wiki/Interactive_voice_response). wikipedia. last checked 2026-10.

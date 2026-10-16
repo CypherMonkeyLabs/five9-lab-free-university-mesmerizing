@@ -1,0 +1,42 @@
+{
+  "id": "t07-l02-play-menu-digits-and-voice",
+  "title": "Play, Menu, digits, and voice",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "IVR modules",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/_ch-modules.htm",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Menu module",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/modules/menu-module.htm",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "XML web service IVR example",
+      "url": "https://documentation.five9.com/bundle/ivr-admin/page/ivr-admin/examples/creating-ivr-script-xml-web-service-query.htm",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "RFC 4733",
+      "url": "https://www.rfc-editor.org/rfc/rfc4733",
+      "kind": "rfc",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Interactive voice response",
+      "url": "https://en.wikipedia.org/wiki/Interactive_voice_response",
+      "kind": "wikipedia",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

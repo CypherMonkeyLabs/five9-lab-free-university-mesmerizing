@@ -317,6 +317,10 @@ th, td { border-bottom: 1px solid var(--line); text-align: left; padding: 8px; v
   .section-chip { transform: none; transition: none; }
   .drawer, .drawer-back { transition: none; }
 }
+.sources-deeper { margin: 12px 0 4px; }
+.sources-deeper h2 { margin: 0 0 8px; }
+.sources-deeper li { margin: 6px 0; }
+.sources-deeper .source-kind { font-size: 0.78rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; color: #5b21b6; }
 @media print {
   .site-head, .canon-banner, .phone-dock, .drawer, .drawer-back, .dl-row { display: none !important; }
   body { background: #fff; padding: 0; }

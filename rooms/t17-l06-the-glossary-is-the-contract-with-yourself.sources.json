@@ -1,0 +1,29 @@
+{
+  "id": "t17-l06-the-glossary-is-the-contract-with-yourself",
+  "title": "The glossary is the contract with yourself",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Generating standard reports",
+      "url": "https://community.five9.com/s/article/Reporting-I-Generating-Standard-Reports",
+      "kind": "community",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10",
+      "note": "Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall."
+    },
+    {
+      "label": "ITU-T E.164, international public telecommunication numbering",
+      "url": "https://www.itu.int/rec/T-REC-E.164",
+      "kind": "standard",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

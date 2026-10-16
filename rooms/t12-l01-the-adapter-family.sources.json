@@ -1,0 +1,43 @@
+{
+  "id": "t12-l01-the-adapter-family",
+  "title": "The adapter family",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Web adapter requirements",
+      "url": "https://documentation.five9.com/bundle/technical-reqs/page/technical-reqs/agent-integrations/web-based-adapters/application-requirements.htm",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Agent Desktop",
+      "url": "https://www.five9.com/products/capabilities/agent-desktop",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "APIs and SDKs",
+      "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10",
+      "note": "Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall."
+    },
+    {
+      "label": "RFC 6455, The WebSocket Protocol",
+      "url": "https://www.rfc-editor.org/rfc/rfc6455",
+      "kind": "rfc",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

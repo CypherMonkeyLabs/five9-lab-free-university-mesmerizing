@@ -1,0 +1,14 @@
+{
+  "id": "t04-l04-reset-is-a-loaded-gun",
+  "title": "Reset is a loaded gun",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Managing campaign dispositions",
+      "url": "https://documentation.five9.com/bundle/campaign-admin/page/campaign-admin/configuring-campaigns/configuring-dispositions/managing-dispositions.htm",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

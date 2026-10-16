@@ -1,0 +1,43 @@
+{
+  "id": "t11-l07-a-bot-review-you-can-finish",
+  "title": "A bot review you can finish",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Studio digital IVA with VCC",
+      "url": "https://community.five9.com/s/article/Studio-7-Integrate-Digital-IVA-in-Studio-with-VCC?language=en_US",
+      "kind": "community",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "GenAI Studio",
+      "url": "https://www.five9.com/products/capabilities/gen-ai-studio",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Technical requirements PDF",
+      "url": "https://documentation-be.five9.com/bundle/five9-technical-requirements/raw/resource/enus/five9-technical-requirements.pdf",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10",
+      "note": "Fetched for this lab in October 2026. Re-read before you buy hardware or open a firewall."
+    },
+    {
+      "label": "Data retention",
+      "url": "https://www.five9.com/legal/dataretention",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Interactive voice response",
+      "url": "https://en.wikipedia.org/wiki/Interactive_voice_response",
+      "kind": "wikipedia",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    }
+  ]
+}
