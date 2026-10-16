@@ -97,6 +97,29 @@ function build(key, M) {
     add(mesh(new THREE.SphereGeometry(0.72, 18, 14), M.a, 0, 0, 0));
     add(mesh(new THREE.TorusGeometry(0.74, 0.03, 6, 24), M.b, 0, 0, 0, [Math.PI / 2.2, 0, 0]));
     add(mesh(new THREE.TorusGeometry(0.74, 0.03, 6, 24), M.c, 0, 0, 0, [0.4, 0.6, 0]));
+  } else if (key === "t19") {
+    add(mesh(new THREE.ConeGeometry(0.72, 0.9, 4), M.a, 0, -0.15, 0, [Math.PI, 0, 0]));
+    [-0.28, 0, 0.28].forEach((x, i) => add(mesh(new THREE.SphereGeometry(0.16, 10, 10), i === 1 ? M.c : M.b, x, 0.42, 0)));
+  } else if (key === "t20") {
+    add(mesh(new THREE.BoxGeometry(1.05, 0.9, 0.12), M.a, 0, 0, 0));
+    add(mesh(new THREE.BoxGeometry(1.05, 0.16, 0.14), M.c, 0, 0.37, 0.02));
+    [[-0.28, 0.05], [0, 0.05], [0.28, 0.05], [-0.28, -0.28], [0, -0.28], [0.28, -0.28]].forEach(([x, y]) => {
+      add(mesh(new THREE.BoxGeometry(0.16, 0.12, 0.08), M.b, x, y, 0.08));
+    });
+  } else if (key === "t21") {
+    add(mesh(new THREE.TorusGeometry(0.46, 0.08, 10, 20), M.a, -0.34, 0.05, 0, [0, Math.PI / 2, 0]));
+    add(mesh(new THREE.TorusGeometry(0.46, 0.08, 10, 20), M.b, 0.34, 0.05, 0, [0, Math.PI / 2, 0]));
+    add(mesh(new THREE.BoxGeometry(0.7, 0.08, 0.08), M.c, 0, 0.42, 0));
+    add(mesh(new THREE.SphereGeometry(0.12, 10, 10), M.c, 0, -0.15, 0.1));
+  } else if (key === "t22") {
+    add(mesh(new THREE.BoxGeometry(0.55, 0.42, 0.2), M.a, -0.38, 0, 0));
+    add(mesh(new THREE.BoxGeometry(0.55, 0.42, 0.2), M.b, 0.38, 0, 0));
+    add(mesh(new THREE.CylinderGeometry(0.05, 0.05, 0.36, 8), M.c, 0, 0, 0, [0, 0, Math.PI / 2]));
+  } else if (key === "t23") {
+    [[0, 0.55], [-0.55, -0.15], [0.55, -0.15], [0, -0.55]].forEach(([x, y], i) => {
+      add(mesh(new THREE.SphereGeometry(0.18, 12, 12), i % 2 ? M.b : M.a, x, y, 0));
+    });
+    add(mesh(new THREE.OctahedronGeometry(0.22, 0), M.c, 0, 0, 0.05));
   } else {
     add(mesh(new THREE.TorusGeometry(0.55, 0.12, 10, 24), M.c, 0, 0, 0));
     add(mesh(new THREE.OctahedronGeometry(0.32, 0), M.b, 0, 0, 0.05));
@@ -140,7 +163,7 @@ export function warmGlyphs() {
   }
   if (warming) return warming.then(paintImages);
   colorKey = nextKey;
-  const keys = Array.from({ length: 18 }, (_, i) => `t${String(i + 1).padStart(2, "0")}`);
+  const keys = Array.from({ length: 23 }, (_, i) => `t${String(i + 1).padStart(2, "0")}`);
   warming = (async () => {
     const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, preserveDrawingBuffer: true });
     renderer.setPixelRatio(1);

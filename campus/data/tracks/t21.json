@@ -1,0 +1,1336 @@
+{
+  "id": "t21",
+  "title": "Quality management and analytics",
+  "short": "Quality",
+  "blurb": "Evaluations, monitoring, analytics wording, and the claims this check would not upgrade.",
+  "group": "Quality",
+  "level": "Practice",
+  "summary": "Quality scores a recording against a form. Analytics sweeps interactions. The percents stay on the page that printed them.",
+  "lessons": [
+    {
+      "id": "l01",
+      "title": "Quality management scores the work on purpose",
+      "level": "foundation",
+      "minutes": 12,
+      "objectives": [
+        "Keep QM, surveys, and analytics apart",
+        "Do not invent the small-share percent"
+      ],
+      "paragraphs": [
+        "The workforce engagement page describes quality management as multi-channel evaluations, real-time agent desktop monitoring and assistance, and automated scoring and evaluation selection. The quality page says manual review covers a small share of interactions and frames that as a problem the product is aimed at. It does not give this lab a measured percent.",
+        "A score without a recording and a form is a mood. The WEM data-sheet page says the suite is about integrating recording with quality management, interaction analytics, workforce management, recording data protection, customer surveys, and CRM connectors. Those are the pieces. They are not one button."
+      ],
+      "cites": [
+        {
+          "label": "Workforce engagement management",
+          "url": "https://www.five9.com/products/capabilities/workforce-optimization"
+        },
+        {
+          "label": "Quality management",
+          "url": "https://www.five9.com/products/capabilities/call-center-quality-management-monitoring-tools"
+        },
+        {
+          "label": "WEM data sheet",
+          "url": "https://www.five9.com/resources/data-sheet/five9-wem"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "stack",
+        "title": "Pieces named beside quality",
+        "caption": "From the data-sheet page.",
+        "rows": [
+          {
+            "label": "Recording"
+          },
+          {
+            "label": "Quality management"
+          },
+          {
+            "label": "Interaction analytics"
+          },
+          {
+            "label": "Surveys"
+          },
+          {
+            "label": "CRM connectors"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Separate the pieces",
+        "lanes": [
+          "QM",
+          "Survey"
+        ],
+        "steps": [
+          {
+            "lane": "QM",
+            "title": "Form",
+            "detail": "An evaluation has a form.",
+            "frame": "form"
+          },
+          {
+            "lane": "Record",
+            "title": "Exist",
+            "detail": "Recording is a different piece.",
+            "frame": "rec"
+          },
+          {
+            "lane": "Analytics",
+            "title": "Pattern",
+            "detail": "Analytics looks across interactions.",
+            "frame": "an"
+          },
+          {
+            "lane": "Survey",
+            "title": "One",
+            "detail": "A survey is the customer's score of a contact.",
+            "frame": "sv"
+          },
+          {
+            "lane": "Reader",
+            "title": "Small",
+            "detail": "Small share is the page's phrase, not a lab measurement.",
+            "frame": "small"
+          },
+          {
+            "lane": "Reader",
+            "title": "Stop",
+            "detail": "No percent is added.",
+            "frame": "stop"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Multi-channel evaluations are named under",
+          "choices": [
+            "The codec list",
+            "Quality management on the WEM page",
+            "The dialer modes",
+            "The badge"
+          ],
+          "answer": 1,
+          "why": "The WEM page puts them there."
+        },
+        {
+          "q": "Automated scoring is",
+          "choices": [
+            "Absent",
+            "Named with evaluation selection",
+            "Illegal on the page",
+            "A list mode"
+          ],
+          "answer": 1,
+          "why": "The WEM line includes it."
+        },
+        {
+          "q": "A customer survey and a QM score are",
+          "choices": [
+            "The same object",
+            "Both named, and not the same sentence",
+            "Both ANI",
+            "Both prompts"
+          ],
+          "answer": 1,
+          "why": "The data-sheet list keeps them separate."
+        },
+        {
+          "q": "The phrase small share is",
+          "choices": [
+            "A percent this lab measured",
+            "The quality page's own wording",
+            "A port number",
+            "An exam code"
+          ],
+          "answer": 1,
+          "why": "Do not turn it into a number."
+        },
+        {
+          "q": "Recording data protection is",
+          "choices": [
+            "On the data-sheet list",
+            "Denied",
+            "A campaign type",
+            "A skill tab"
+          ],
+          "answer": 1,
+          "why": "The page includes it."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Evaluations?",
+          "back": "Named under QM."
+        },
+        {
+          "front": "Automated scoring?",
+          "back": "Named."
+        },
+        {
+          "front": "Survey equals QM?",
+          "back": "No."
+        },
+        {
+          "front": "Small share?",
+          "back": "The page's phrase, not a measured percent."
+        }
+      ],
+      "lab": {
+        "title": "Name four pieces",
+        "goal": "Recording, QM, analytics, surveys.",
+        "steps": [
+          "Do not average them into one health number"
+        ],
+        "success": "Each piece keeps its name.",
+        "href": ""
+      },
+      "fault": {
+        "title": "A dashboard averages abandon, a survey, and a QM score into one percent",
+        "symptom": "The pages list them as separate tools.",
+        "log": "HEALTH blended",
+        "choices": [
+          "Split the numbers",
+          "Publish the blend",
+          "Delete recordings",
+          "Change ANI"
+        ],
+        "answer": 0,
+        "cause": "A blend hides which tool moved.",
+        "fix": "Show the pieces."
+      }
+    },
+    {
+      "id": "l02",
+      "title": "The evaluation list is forms, queries, coaching, and assignment",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Match the form to the queue",
+        "Treat the CRM names as a catalog"
+      ],
+      "paragraphs": [
+        "The WEM quality list names call, screen, and digital-channel transcription capture, real-time call and desktop monitoring, flexible evaluation form creation, query, coaching packages, and automated evaluation assignment.",
+        "The same list ends with pre-built CRM integration for Salesforce, Zendesk, Oracle, and ServiceNow. That is a quality-page list. It is not a promise that every floor bought every name."
+      ],
+      "cites": [
+        {
+          "label": "Workforce engagement management",
+          "url": "https://www.five9.com/products/capabilities/workforce-optimization"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "stack",
+        "title": "Quality list that opened",
+        "caption": "Copy the nouns. Skip the contract you have not seen.",
+        "rows": [
+          {
+            "label": "Transcription capture"
+          },
+          {
+            "label": "Live monitoring"
+          },
+          {
+            "label": "Flexible forms"
+          },
+          {
+            "label": "Coaching packages"
+          },
+          {
+            "label": "Automated assignment"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Build one form",
+        "lanes": [
+          "QM",
+          "CRM"
+        ],
+        "steps": [
+          {
+            "lane": "QM",
+            "title": "Form",
+            "detail": "The form matches the work.",
+            "frame": "form"
+          },
+          {
+            "lane": "QM",
+            "title": "Query",
+            "detail": "The page says you can query.",
+            "frame": "query"
+          },
+          {
+            "lane": "QM",
+            "title": "Assign",
+            "detail": "Assignment can be automated.",
+            "frame": "assign"
+          },
+          {
+            "lane": "QM",
+            "title": "Coach",
+            "detail": "Coaching packages are named.",
+            "frame": "coach"
+          },
+          {
+            "lane": "CRM",
+            "title": "Names",
+            "detail": "Four CRM names are on this list.",
+            "frame": "names"
+          },
+          {
+            "lane": "Contract",
+            "title": "Check",
+            "detail": "The purchase is still a question.",
+            "frame": "check"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Flexible evaluation forms are",
+          "choices": [
+            "Absent",
+            "On the quality list",
+            "A dialer mode",
+            "A codec"
+          ],
+          "answer": 1,
+          "why": "The list includes form creation."
+        },
+        {
+          "q": "Transcription capture on that list includes",
+          "choices": [
+            "Only the first second of voice",
+            "Call, screen, and digital channel",
+            "Only 911",
+            "Only chat"
+          ],
+          "answer": 1,
+          "why": "Those three are named."
+        },
+        {
+          "q": "Automated evaluation assignment is",
+          "choices": [
+            "Named",
+            "Forbidden",
+            "A list reset",
+            "A badge"
+          ],
+          "answer": 1,
+          "why": "The list includes it."
+        },
+        {
+          "q": "The CRM names on this quality list are",
+          "choices": [
+            "None",
+            "Salesforce, Zendesk, Oracle, and ServiceNow",
+            "Only Epic",
+            "Only a URL pop"
+          ],
+          "answer": 1,
+          "why": "That is the list."
+        },
+        {
+          "q": "Naming a CRM here means the floor bought it. True or false?",
+          "choices": [
+            "True",
+            "False. It means the page names the integration",
+            "True if the agent is Ready",
+            "True for UK domains only"
+          ],
+          "answer": 1,
+          "why": "A catalog is not a contract."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Forms?",
+          "back": "Flexible creation is listed."
+        },
+        {
+          "front": "Transcription?",
+          "back": "Call, screen, and digital."
+        },
+        {
+          "front": "Assignment?",
+          "back": "Can be automated."
+        },
+        {
+          "front": "CRM names?",
+          "back": "Salesforce, Zendesk, Oracle, ServiceNow."
+        }
+      ],
+      "lab": {
+        "title": "One form line",
+        "goal": "Write a behavior a stranger could score from a recording.",
+        "steps": [
+          "Name the behavior",
+          "Name the evidence",
+          "Do not call it a vibe"
+        ],
+        "success": "The line points at something the recording could hold.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Agents are scored on a sales form for a complaint queue",
+        "symptom": "The form was copied from another campaign.",
+        "log": "FORM sales QUEUE complaints",
+        "choices": [
+          "Use a form that matches the work",
+          "Keep the sales form for speed",
+          "Delete recordings",
+          "Enable an old browser"
+        ],
+        "answer": 0,
+        "cause": "The form is the definition of good.",
+        "fix": "Score the work they were asked to do."
+      }
+    },
+    {
+      "id": "l03",
+      "title": "Monitoring and coaching are on the quality pages",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Cite the page that printed the sentence",
+        "Do not move it onto the skill tab"
+      ],
+      "paragraphs": [
+        "The WEM list includes real-time call and desktop monitoring. The quality page adds real-time monitoring and coaching, and a line that says supervisors can be flagged for immediate coaching with dynamic guidance. It also says agent assistance can be personalized from agent competency.",
+        "The page says competency is infused into routing decisions. That sentence is on the quality page. It is not a field on the skill groups chapter this lab read. Do not paste it into the skill tab as if the admin guide had printed it."
+      ],
+      "cites": [
+        {
+          "label": "Workforce engagement management",
+          "url": "https://www.five9.com/products/capabilities/workforce-optimization"
+        },
+        {
+          "label": "Quality management",
+          "url": "https://www.five9.com/products/capabilities/call-center-quality-management-monitoring-tools"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "compare",
+        "title": "Two quality sentences",
+        "caption": "Both opened. They are not the skill chapter.",
+        "leftTitle": "WEM list",
+        "rightTitle": "Quality page",
+        "left": [
+          "Real-time call and desktop monitoring"
+        ],
+        "right": [
+          "Coaching flags",
+          "Competency in routing and assistance"
+        ]
+      },
+      "flow": {
+        "title": "A live call",
+        "lanes": [
+          "Monitor",
+          "Coach"
+        ],
+        "steps": [
+          {
+            "lane": "Monitor",
+            "title": "Watch",
+            "detail": "Call and desktop monitoring are named.",
+            "frame": "watch"
+          },
+          {
+            "lane": "Coach",
+            "title": "Flag",
+            "detail": "The quality page says supervisors can be flagged.",
+            "frame": "flag"
+          },
+          {
+            "lane": "Assist",
+            "title": "Guide",
+            "detail": "Assistance can use competency.",
+            "frame": "guide"
+          },
+          {
+            "lane": "Route",
+            "title": "Separate",
+            "detail": "The routing sentence stays on the quality page.",
+            "frame": "route"
+          },
+          {
+            "lane": "Skill",
+            "title": "Closed",
+            "detail": "The skill chapter did not print that field.",
+            "frame": "skill"
+          },
+          {
+            "lane": "Reader",
+            "title": "Cite",
+            "detail": "The note names which page.",
+            "frame": "cite"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Real-time desktop monitoring is",
+          "choices": [
+            "Absent",
+            "On the WEM quality list",
+            "A trunk feature",
+            "A list mode"
+          ],
+          "answer": 1,
+          "why": "The list includes it."
+        },
+        {
+          "q": "Flagging a supervisor for coaching is",
+          "choices": [
+            "Named on the quality page",
+            "Forbidden",
+            "A disposition",
+            "A codec"
+          ],
+          "answer": 1,
+          "why": "The page says it."
+        },
+        {
+          "q": "Competency-based routing is a sentence on",
+          "choices": [
+            "The skill groups chapter this lab read",
+            "The quality page",
+            "The Wikipedia ACD page only",
+            "The badge"
+          ],
+          "answer": 1,
+          "why": "Keep it on the quality page."
+        },
+        {
+          "q": "Personalized assistance is",
+          "choices": [
+            "Named",
+            "Denied",
+            "A SIP header",
+            "An exam code"
+          ],
+          "answer": 1,
+          "why": "The quality page says guidance based on competency."
+        },
+        {
+          "q": "Pasting that routing sentence into the skill tab is",
+          "choices": [
+            "Required",
+            "A way to invent a field",
+            "How service level is calculated",
+            "How ANI works"
+          ],
+          "answer": 1,
+          "why": "The skill chapter did not print it."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Desktop monitoring?",
+          "back": "On the WEM list."
+        },
+        {
+          "front": "Coaching flag?",
+          "back": "On the quality page."
+        },
+        {
+          "front": "Which page owns competency routing?",
+          "back": "The quality page."
+        },
+        {
+          "front": "Paste it into skills?",
+          "back": "No."
+        }
+      ],
+      "lab": {
+        "title": "Place the sentence",
+        "goal": "Write the competency line and the page title above it.",
+        "steps": [
+          "Quality page",
+          "Not the skill tab"
+        ],
+        "success": "A reader can see which page you mean.",
+        "href": ""
+      },
+      "fault": {
+        "title": "A skill design says competency routing because the quality page exists",
+        "symptom": "The skill chapter did not print the field.",
+        "log": "SKILL competency SOURCE quality-page",
+        "choices": [
+          "Keep the sentence on the quality note",
+          "Add a fake skill field",
+          "Delete the queue",
+          "Change ANI"
+        ],
+        "answer": 0,
+        "cause": "The pages are neighbors, not the same dialog.",
+        "fix": "Leave the skill tab alone."
+      }
+    },
+    {
+      "id": "l04",
+      "title": "Analytics is a sweep across interactions",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Quote the percent with its page",
+        "Keep surveys and analytics apart"
+      ],
+      "paragraphs": [
+        "The WEM page says interaction analytics analyzes 100 percent of captured interactions to find trends, automate the quality process, and see where service went well or badly. The feature list names voice, chat, and email, 100 percent call transcription, automated QM scoring, statistical group comparison, ad hoc word or phrase search, automatic categorization, and emotion and sentiment analysis.",
+        "The quality page's conversational-intelligence line says analyze up to 100 percent of interactions. Up to 100 percent and 100 percent are not the same sentence. Quote the page you mean. This lesson does not average them into a single guarantee."
+      ],
+      "cites": [
+        {
+          "label": "Workforce engagement management",
+          "url": "https://www.five9.com/products/capabilities/workforce-optimization"
+        },
+        {
+          "label": "Quality management",
+          "url": "https://www.five9.com/products/capabilities/call-center-quality-management-monitoring-tools"
+        }
+      ],
+      "uncertain": [
+        "The WEM page says 100 percent of captured interactions and 100 percent call transcription. The quality page says up to 100 percent. This lesson does not merge them."
+      ],
+      "figure": {
+        "kind": "compare",
+        "title": "Read the percent you cite",
+        "caption": "The pages do not match word for word.",
+        "leftTitle": "WEM analytics list",
+        "rightTitle": "Quality page",
+        "left": [
+          "100 percent of captured interactions",
+          "100 percent call transcription"
+        ],
+        "right": [
+          "Up to 100 percent of interactions"
+        ]
+      },
+      "flow": {
+        "title": "A phrase spikes",
+        "lanes": [
+          "Calls",
+          "Analytics"
+        ],
+        "steps": [
+          {
+            "lane": "Calls",
+            "title": "Happen",
+            "detail": "Many contacts mention a fee.",
+            "frame": "fee"
+          },
+          {
+            "lane": "Analytics",
+            "title": "Search",
+            "detail": "Ad hoc word search is on the list.",
+            "frame": "search"
+          },
+          {
+            "lane": "Analytics",
+            "title": "Bucket",
+            "detail": "Automatic categorization is on the list.",
+            "frame": "bucket"
+          },
+          {
+            "lane": "Analytics",
+            "title": "Feel",
+            "detail": "Emotion and sentiment are named.",
+            "frame": "feel"
+          },
+          {
+            "lane": "Reader",
+            "title": "Percent",
+            "detail": "The percent stays attached to its page.",
+            "frame": "percent"
+          },
+          {
+            "lane": "Action",
+            "title": "Separate",
+            "detail": "A survey is still a different piece.",
+            "frame": "survey"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Channels named on the analytics list are",
+          "choices": [
+            "Voice only",
+            "Voice, chat, and email",
+            "Only SMS",
+            "Only video"
+          ],
+          "answer": 1,
+          "why": "The list names those three."
+        },
+        {
+          "q": "Ad hoc word or phrase search is",
+          "choices": [
+            "Absent",
+            "On the list",
+            "A dialer mode",
+            "A port"
+          ],
+          "answer": 1,
+          "why": "The list includes it."
+        },
+        {
+          "q": "Emotion and sentiment analysis is",
+          "choices": [
+            "Named",
+            "Denied",
+            "A codec",
+            "A badge"
+          ],
+          "answer": 1,
+          "why": "The list includes it."
+        },
+        {
+          "q": "100 percent call transcription is a sentence on",
+          "choices": [
+            "The quality page's up-to line",
+            "The WEM analytics list",
+            "The skill tab",
+            "The badge"
+          ],
+          "answer": 1,
+          "why": "Quote that list if you say 100 percent transcription."
+        },
+        {
+          "q": "Up to 100 percent and 100 percent should be",
+          "choices": [
+            "Averaged",
+            "Quoted from the page that printed each one",
+            "Ignored",
+            "Treated as a port"
+          ],
+          "answer": 1,
+          "why": "They are different sentences."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Channels?",
+          "back": "Voice, chat, email."
+        },
+        {
+          "front": "Word search?",
+          "back": "Yes."
+        },
+        {
+          "front": "Sentiment?",
+          "back": "Named."
+        },
+        {
+          "front": "Which percent?",
+          "back": "Quote the page."
+        }
+      ],
+      "lab": {
+        "title": "Quote one percent",
+        "goal": "Copy one sentence and the page title.",
+        "steps": [
+          "Do not merge the two percents"
+        ],
+        "success": "The title matches the sentence.",
+        "href": ""
+      },
+      "fault": {
+        "title": "A slide says every interaction is transcribed because one page said up to 100 percent",
+        "symptom": "Up to is not a guarantee, and the other page is about captured interactions and calls.",
+        "log": "SLIDE every-interaction",
+        "choices": [
+          "Quote the page you mean",
+          "Upgrade up-to into always",
+          "Delete recordings",
+          "Change ANI"
+        ],
+        "answer": 0,
+        "cause": "The wording is the fact.",
+        "fix": "Use the page's words."
+      }
+    },
+    {
+      "id": "l05",
+      "title": "Performance views are dashboards, wallboards, and KPIs",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Use the performance nouns the page printed",
+        "Leave unread PDF claims out"
+      ],
+      "paragraphs": [
+        "The WEM page lists performance management separately from quality and from analytics: role-based customizable dashboards, customizable KPIs and metrics, real-time performance visibility, data from external sources, wallboards, and gamification.",
+        "A wallboard is not a standard report, and gamification is not a disposition. The page names them. It does not define a formula for a KPI. The analytics PDF downloaded in this check did not yield readable sentences, so no retention month and no chart-count is taken from it."
+      ],
+      "cites": [
+        {
+          "label": "Workforce engagement management",
+          "url": "https://www.five9.com/products/capabilities/workforce-optimization"
+        }
+      ],
+      "uncertain": [
+        "A Five9 Analytics PDF downloaded in this check did not yield readable sentences. No retention period or visualization count is taken from it."
+      ],
+      "figure": {
+        "kind": "stack",
+        "title": "Performance list",
+        "caption": "Names only.",
+        "rows": [
+          {
+            "label": "Role-based dashboards"
+          },
+          {
+            "label": "Custom KPIs"
+          },
+          {
+            "label": "Real-time visibility"
+          },
+          {
+            "label": "External data"
+          },
+          {
+            "label": "Wallboards"
+          },
+          {
+            "label": "Gamification"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Hang a board",
+        "lanes": [
+          "Page",
+          "Floor"
+        ],
+        "steps": [
+          {
+            "lane": "Page",
+            "title": "List",
+            "detail": "Wallboards are named.",
+            "frame": "list"
+          },
+          {
+            "lane": "Page",
+            "title": "Role",
+            "detail": "Dashboards can be role-based.",
+            "frame": "role"
+          },
+          {
+            "lane": "Page",
+            "title": "Out",
+            "detail": "External sources are named.",
+            "frame": "out"
+          },
+          {
+            "lane": "Floor",
+            "title": "Ask",
+            "detail": "Which KPI is still a local choice.",
+            "frame": "ask"
+          },
+          {
+            "lane": "Reader",
+            "title": "PDF",
+            "detail": "The analytics PDF did not yield sentences.",
+            "frame": "pdf"
+          },
+          {
+            "lane": "Reader",
+            "title": "Stop",
+            "detail": "No chart count is copied.",
+            "frame": "stop"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Wallboards are",
+          "choices": [
+            "Absent",
+            "On the performance list",
+            "A dialing mode",
+            "A skill tab"
+          ],
+          "answer": 1,
+          "why": "The list includes them."
+        },
+        {
+          "q": "Gamification is",
+          "choices": [
+            "Named on that list",
+            "A disposition",
+            "A codec",
+            "Forbidden"
+          ],
+          "answer": 1,
+          "why": "The list includes it."
+        },
+        {
+          "q": "External data sources are",
+          "choices": [
+            "Denied",
+            "Named",
+            "Only SIP",
+            "Only the IVR"
+          ],
+          "answer": 1,
+          "why": "The list says data aggregation from external sources."
+        },
+        {
+          "q": "A KPI formula in this lesson is",
+          "choices": [
+            "Fully derived",
+            "Not stated. The page says KPIs can be customized",
+            "Always service level",
+            "Always abandon"
+          ],
+          "answer": 1,
+          "why": "Customizable is not a formula."
+        },
+        {
+          "q": "The analytics PDF in this check",
+          "choices": [
+            "Supplied a retention month",
+            "Downloaded and did not yield readable sentences",
+            "Replaced the WEM page",
+            "Named an exam code"
+          ],
+          "answer": 1,
+          "why": "Unreadable text is not a citation."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Wallboards?",
+          "back": "Named."
+        },
+        {
+          "front": "Gamification?",
+          "back": "Named, not a disposition."
+        },
+        {
+          "front": "External data?",
+          "back": "Named."
+        },
+        {
+          "front": "PDF sentences?",
+          "back": "Did not yield."
+        }
+      ],
+      "lab": {
+        "title": "Pick a view",
+        "goal": "Say dashboard, wallboard, or KPI, and say the formula is not in this lesson.",
+        "steps": [
+          "One view",
+          "No invented formula"
+        ],
+        "success": "The note matches the list.",
+        "href": ""
+      },
+      "fault": {
+        "title": "A wallboard is exported as the call-log archive",
+        "symptom": "The performance list and the call log are different tools.",
+        "log": "BOARD called call-log",
+        "choices": [
+          "Call the board a board",
+          "Replace the call log with it",
+          "Delete recordings",
+          "Reset lists"
+        ],
+        "answer": 0,
+        "cause": "Names matter.",
+        "fix": "Keep the board on the performance list."
+      }
+    },
+    {
+      "id": "l06",
+      "title": "Agents can read evaluations without a second story",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Show the evaluation where the page says it can live",
+        "Confirm consent on the license"
+      ],
+      "paragraphs": [
+        "The desktop page says Plus can show schedules, adherence, time-off requests, and evaluations without leaving the desktop. The same page says WFO connectors can show schedules, adherence, time off, shift bidding, and evaluation review inside the CRM.",
+        "Recording on the WEM page is described as full-time capture of customer interactions and agent screens, kept in encrypted storage. That is the page's sentence. Notice and consent laws are not restated here, because this check did not re-open the license. Do not skip them. Confirm them on the license before you record."
+      ],
+      "cites": [
+        {
+          "label": "Agent Desktop",
+          "url": "https://www.five9.com/platform/self-service-and-engagement/agent-desktop"
+        },
+        {
+          "label": "Workforce engagement management",
+          "url": "https://www.five9.com/products/capabilities/workforce-optimization"
+        }
+      ],
+      "uncertain": [
+        "Notice and consent are not re-quoted in this chapter. The license page was not the source opened for these lessons."
+      ],
+      "figure": {
+        "kind": "path",
+        "title": "Where an evaluation can be read",
+        "caption": "From the desktop page.",
+        "rows": [
+          {
+            "label": "Agent Desktop Plus"
+          },
+          {
+            "label": "A WFO connector inside the CRM"
+          },
+          {
+            "label": "The recording the WEM page describes"
+          },
+          {
+            "label": "The license, still to be confirmed"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Close the loop",
+        "lanes": [
+          "Record",
+          "Agent"
+        ],
+        "steps": [
+          {
+            "lane": "Record",
+            "title": "Store",
+            "detail": "The WEM page says encrypted storage.",
+            "frame": "store"
+          },
+          {
+            "lane": "QM",
+            "title": "Score",
+            "detail": "The evaluation exists.",
+            "frame": "score"
+          },
+          {
+            "lane": "Agent",
+            "title": "Plus",
+            "detail": "Plus can show it.",
+            "frame": "plus"
+          },
+          {
+            "lane": "CRM",
+            "title": "Connector",
+            "detail": "The connector path is also named.",
+            "frame": "crm"
+          },
+          {
+            "lane": "Law",
+            "title": "Open",
+            "detail": "The license is not re-quoted here.",
+            "frame": "law"
+          },
+          {
+            "lane": "Reader",
+            "title": "Say",
+            "detail": "The note says which path is installed.",
+            "frame": "say"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Evaluations in Plus are",
+          "choices": [
+            "Hidden",
+            "Named on the desktop page",
+            "A trunk feature",
+            "A list mode"
+          ],
+          "answer": 1,
+          "why": "The page lists them."
+        },
+        {
+          "q": "Shift bidding inside the CRM is",
+          "choices": [
+            "On the WFO connector line",
+            "A dialer mode",
+            "Absent",
+            "A codec"
+          ],
+          "answer": 1,
+          "why": "The desktop page includes it."
+        },
+        {
+          "q": "Encrypted storage of recordings and screens is",
+          "choices": [
+            "Named on the WEM page",
+            "Denied",
+            "Only for 911",
+            "A badge"
+          ],
+          "answer": 1,
+          "why": "The page says encrypted storage."
+        },
+        {
+          "q": "This lesson restates notice and consent law. True or false?",
+          "choices": [
+            "True, with a statute number",
+            "False. The license was not re-opened for this chapter",
+            "True for every country",
+            "True if ANI is local"
+          ],
+          "answer": 1,
+          "why": "Confirm the license. Do not invent the statute."
+        },
+        {
+          "q": "A second system of record for the same evaluation is",
+          "choices": [
+            "Required by the page",
+            "Something to question if Plus or the connector was the design",
+            "A codec",
+            "A list reset"
+          ],
+          "answer": 1,
+          "why": "The page's point is that the evaluation can live where the agent already works."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Plus shows evaluations?",
+          "back": "Yes, per the desktop page."
+        },
+        {
+          "front": "CRM path?",
+          "back": "WFO connector, including evaluation review."
+        },
+        {
+          "front": "Encrypted storage?",
+          "back": "Named on the WEM page."
+        },
+        {
+          "front": "Consent law quoted here?",
+          "back": "No. Confirm the license."
+        }
+      ],
+      "lab": {
+        "title": "Name the path",
+        "goal": "Plus or the CRM connector, and say the license is still to be read.",
+        "steps": [
+          "One path",
+          "License marked confirm"
+        ],
+        "success": "You did not invent a consent rule.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Agents are sent to a third site for scores the desktop page already names",
+        "symptom": "The extra login was never justified.",
+        "log": "LOGIN extra PATH plus",
+        "choices": [
+          "Use the path the page names",
+          "Keep the extra site",
+          "Delete evaluations",
+          "Change ANI"
+        ],
+        "answer": 0,
+        "cause": "The page offers Plus and the connector.",
+        "fix": "Start with the path you bought."
+      }
+    },
+    {
+      "id": "l07",
+      "title": "A quality review you can finish",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Finish the note",
+        "Label product claims as product claims"
+      ],
+      "paragraphs": [
+        "Finish a quality note with the lists that opened. Name the form, the monitoring, the analytics sentence with its percent attached to a page, and the place the agent reads the score. Say whether you mean the WEM list or the quality page when the words differ.",
+        "The quality page also says routing, assistance, and coaching can be refined with zero human involvement. That is the page's claim. This lab did not run that cycle. Treat it as a product sentence, not as a result you measured."
+      ],
+      "cites": [
+        {
+          "label": "Quality management",
+          "url": "https://www.five9.com/products/capabilities/call-center-quality-management-monitoring-tools"
+        },
+        {
+          "label": "Workforce engagement management",
+          "url": "https://www.five9.com/products/capabilities/workforce-optimization"
+        }
+      ],
+      "uncertain": [
+        "The quality page says routing, assistance, and coaching can be refined with zero human involvement. This lab did not test that claim."
+      ],
+      "figure": {
+        "kind": "path",
+        "title": "The review",
+        "caption": "Page, then claim, then gap.",
+        "rows": [
+          {
+            "label": "Which list"
+          },
+          {
+            "label": "Which percent"
+          },
+          {
+            "label": "Where the agent reads it"
+          },
+          {
+            "label": "The zero-human sentence, labeled as theirs"
+          },
+          {
+            "label": "The unread license and the unread PDF"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Sign the note",
+        "lanes": [
+          "Note",
+          "Gap"
+        ],
+        "steps": [
+          {
+            "lane": "Note",
+            "title": "List",
+            "detail": "WEM list or quality page, named.",
+            "frame": "list"
+          },
+          {
+            "lane": "Note",
+            "title": "Percent",
+            "detail": "One percent, one page.",
+            "frame": "percent"
+          },
+          {
+            "lane": "Note",
+            "title": "Reader",
+            "detail": "Plus or the connector.",
+            "frame": "reader"
+          },
+          {
+            "lane": "Note",
+            "title": "Claim",
+            "detail": "Zero human involvement stays in quotes.",
+            "frame": "claim"
+          },
+          {
+            "lane": "Gap",
+            "title": "Law",
+            "detail": "Consent is confirm.",
+            "frame": "law"
+          },
+          {
+            "lane": "Gap",
+            "title": "PDF",
+            "detail": "The analytics PDF stays out.",
+            "frame": "pdf"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "A finished note names",
+          "choices": [
+            "An invented KPI formula",
+            "The list, the percent's page, and where the agent reads the score",
+            "A package version",
+            "An exam code"
+          ],
+          "answer": 1,
+          "why": "Those are the opened facts."
+        },
+        {
+          "q": "Zero human involvement is",
+          "choices": [
+            "A result this lab measured",
+            "A sentence on the quality page",
+            "A skill-tab field",
+            "A port"
+          ],
+          "answer": 1,
+          "why": "Quote it as their sentence."
+        },
+        {
+          "q": "Merging the two 100 percent lines is",
+          "choices": [
+            "Required",
+            "A mistake",
+            "How transcription works",
+            "How adherence works"
+          ],
+          "answer": 1,
+          "why": "Keep the pages apart."
+        },
+        {
+          "q": "The unread analytics PDF belongs",
+          "choices": [
+            "In the note as a number",
+            "Outside the note",
+            "As the service level",
+            "As the abandon rate"
+          ],
+          "answer": 1,
+          "why": "No sentence was read from it."
+        },
+        {
+          "q": "Signing a note that adds a consent statute from memory is",
+          "choices": [
+            "Complete",
+            "Ahead of the source",
+            "Required",
+            "A codec choice"
+          ],
+          "answer": 1,
+          "why": "Confirm the license."
+        }
+      ],
+      "cards": [
+        {
+          "front": "What must the note name?",
+          "back": "List, percent page, where the score is read."
+        },
+        {
+          "front": "Zero human involvement?",
+          "back": "Their sentence, not a lab result."
+        },
+        {
+          "front": "Merge the percents?",
+          "back": "No."
+        },
+        {
+          "front": "PDF numbers?",
+          "back": "Leave them out."
+        }
+      ],
+      "lab": {
+        "title": "Finish one note",
+        "goal": "Use the lists and mark the gaps.",
+        "steps": [
+          "One percent with its page",
+          "Consent marked confirm",
+          "PDF left out"
+        ],
+        "success": "Nothing unread was filled in.",
+        "href": ""
+      },
+      "fault": {
+        "title": "The review adds a 13-month analytics retention from a PDF this check could not read",
+        "symptom": "The number has no sentence behind it.",
+        "log": "RETAIN 13 SOURCE unreadable",
+        "choices": [
+          "Remove the number",
+          "Publish it",
+          "Add a wallboard",
+          "Reset lists"
+        ],
+        "answer": 0,
+        "cause": "Unreadable text is not a fact.",
+        "fix": "Delete the number."
+      }
+    }
+  ]
+}

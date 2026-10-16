@@ -19,7 +19,7 @@ REQUIRED = ("id", "title", "level", "objectives", "paragraphs", "cites", "figure
 def main():
     built = []
     quiz = cards = labs = faults = cites = 0
-    for n in range(1, 19):
+    for n in range(1, 24):
         mod = importlib.import_module(f"t{n:02d}")
         track = mod.build()
         if track["id"] != f"t{n:02d}":

@@ -1,0 +1,71 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 1269 >>
+stream
+BT
+/F1 10 Tf
+48 740 Td
+14 TL
+(Native WEM and a partner path both exist   Learn it in 5 minutes) Tj
+T*
+() Tj
+T*
+(The workforce engagement page says Five9 offers WEM natively and also partners with vendors) Tj
+T*
+(such as Verint. It says Five9 manages installation, configuration, maintenance, and upgrades) Tj
+T*
+(for the WEM solution they deliver.) Tj
+T*
+(The WFM page is the native product story this chapter read. It does not say a given floor is) Tj
+T*
+(native rather than Verint. Ask. The WFM card for pre-built CRM integrations names Oracle and) Tj
+T*
+(ServiceNow on that page. A longer CRM list lives on the desktop and API pages, in the CRM) Tj
+T*
+(chapter, and should not be pasted back as if the WFM card printed it.) Tj
+T*
+() Tj
+T*
+(Sources and go deeper) Tj
+T*
+(Workforce engagement management. vendor.) Tj
+T*
+(https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.) Tj
+T*
+(Workforce management. vendor.) Tj
+T*
+(https://www.five9.com/platform/insights-and-analytics/workforce-management. last checked) Tj
+T*
+(2026-10.) Tj
+T*
+(confirm. This lab does not know which WEM suite a given customer bought. The WFM CRM card) Tj
+T*
+(read here names Oracle and ServiceNow, not the longer adapter list. last checked 2026-10.) Tj
+T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Contents 2 0 R /Resources << /Font << /F1 1 0 R >> >> >>
+endobj
+4 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+5 0 obj
+<< /Type /Catalog /Pages 4 0 R >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000001400 00000 n 
+0000001526 00000 n 
+0000001583 00000 n 
+trailer << /Size 6 /Root 5 0 R >>
+startxref
+1632
+%%EOF

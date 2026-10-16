@@ -18,6 +18,11 @@
 - Safety and compliance
 - Ecosystem
 - Certifications and practice
+- Skills routing and ACD
+- Workforce management
+- Quality management and analytics
+- CRM and CTI integrations
+- Ecosystem
 
 ## Sources and go deeper
 

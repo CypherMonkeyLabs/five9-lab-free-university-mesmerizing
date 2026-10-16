@@ -16,4 +16,4 @@
 - [ITU-T E.164, international public telecommunication numbering](https://www.itu.int/rec/T-REC-E.164). standard. last checked 2026-10.
 - [RFC 1918, private internet addresses](https://www.rfc-editor.org/rfc/rfc1918). rfc. last checked 2026-10.
 - [RFC 4787, NAT behavior for UDP](https://www.rfc-editor.org/rfc/rfc4787). rfc. last checked 2026-10.
-- confirm. NANP versus E.164, 20 ms ptime, and 'no internal extensions' are practitioner cautions. They are not quoted here as Five9 requirements.. last checked 2026-10.
+- confirm. NANP versus E.164, 20 ms ptime, and 'no internal extensions' are practitioner cautions. They are not quoted here as Five9 requirements. last checked 2026-10.

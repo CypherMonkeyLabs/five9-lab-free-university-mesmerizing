@@ -806,6 +806,20 @@
         "lastChecked": "2026-10"
       },
       {
+        "label": "Automatic call distributor",
+        "url": "https://en.wikipedia.org/wiki/Automatic_call_distributor",
+        "kind": "wikipedia",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
+        "label": "Workforce management",
+        "url": "https://www.five9.com/platform/insights-and-analytics/workforce-management",
+        "kind": "vendor",
+        "status": "ok",
+        "lastChecked": "2026-10"
+      },
+      {
         "label": "RFC 3550, RTP",
         "url": "https://www.rfc-editor.org/rfc/rfc3550",
         "kind": "rfc",

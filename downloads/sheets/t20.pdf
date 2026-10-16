@@ -1,0 +1,127 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 3660 >>
+stream
+BT
+/F1 10 Tf
+48 740 Td
+14 TL
+(Workforce management) Tj
+T*
+() Tj
+T*
+(WFM is the roster. The pages name the tools and leave the formulas unnamed. Workforce) Tj
+T*
+(management staffs the work The Five9 workforce management page says WFM aligns agent) Tj
+T*
+(resources with contact volumes through the day, so the right number of agents with the right) Tj
+T*
+(skills are available. It describes volumes that sometimes exceed the people on hand, and) Tj
+T*
+(times when more agents are on hand than the work needs. Forecasts are multiskill and) Tj
+T*
+(multichannel The WFM page says accurate contact-volume forecasts are the base for staffing,) Tj
+T*
+(and that you create multiskill, multichannel forecasts. The feature list names multiple) Tj
+T*
+(forecasting algorithms, inbound, outbound, and blended environments, and what-if analysis.) Tj
+T*
+(Schedules can be built or bid The WFM page says you can schedule agents automatically based) Tj
+T*
+(on preferences, or let them bid on schedules, and that the plans are there to meet service) Tj
+T*
+(goals and limit labor cost. The feature list adds flexible start and stop times, and) Tj
+T*
+(optimization of lunch, break, meeting, and coaching. Intraday is a comparison, a reforecast,) Tj
+T*
+(and a notice The WEM page says intraday management and automated adjustment sit with) Tj
+T*
+(workforce management. The WFM page&#x27;s change card says you compare interval by interval) Tj
+T*
+(to the plan, reforecast automatically, flex the schedule, and notify agents in a few clicks.) Tj
+T*
+(Adherence is plan versus what the person did The WFM page says adherence can be tracked over) Tj
+T*
+(time or in real time. The feature list adds historical adherence, real-time monitoring,) Tj
+T*
+(out-of-adherence alerts, and both an agent view and a supervisor view. The agent can see the) Tj
+T*
+(plan, including on a phone The agent portal on the WFM page lists viewing schedules and) Tj
+T*
+(adherence, bidding on shifts, requesting schedule changes, vacation, and voluntary overtime,) Tj
+T*
+(plus notifications and alerts. The mobile card lists Android and iOS, self-service away from) Tj
+T*
+(the desk, absentee and late check-in, and alerts. Native WEM and a partner path both exist) Tj
+T*
+(The workforce engagement page says Five9 offers WEM natively and also partners with vendors) Tj
+T*
+(such as Verint. It says Five9 manages installation, configuration, maintenance, and upgrades) Tj
+T*
+(for the WEM solution they deliver.) Tj
+T*
+() Tj
+T*
+(Sources and go deeper) Tj
+T*
+(Workforce management. vendor.) Tj
+T*
+(https://www.five9.com/platform/insights-and-analytics/workforce-management. last checked) Tj
+T*
+(2026-10.) Tj
+T*
+(Workforce engagement management. vendor.) Tj
+T*
+(https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.) Tj
+T*
+(Erlang \(unit\). wikipedia. https://en.wikipedia.org/wiki/Erlang_\(unit\). last checked 2026-10.) Tj
+T*
+(confirm. The WFM page says multiple forecasting algorithms and does not name them. This) Tj
+T*
+(lesson does not call the engine Erlang C. last checked 2026-10.) Tj
+T*
+(confirm. The WFM page says six change notification channels and does not name them. last) Tj
+T*
+(checked 2026-10.) Tj
+T*
+(Agent Desktop. vendor.) Tj
+T*
+(https://www.five9.com/platform/self-service-and-engagement/agent-desktop. last checked) Tj
+T*
+(2026-10.) Tj
+T*
+(Agent Desktop. vendor. https://www.five9.com/products/capabilities/agent-desktop. last) Tj
+T*
+(checked 2026-10.) Tj
+T*
+(confirm. This lab does not know which WEM suite a given customer bought. The WFM CRM card) Tj
+T*
+(read here names Oracle and ServiceNow, not the longer adapter list. last checked 2026-10.) Tj
+T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Contents 2 0 R /Resources << /Font << /F1 1 0 R >> >> >>
+endobj
+4 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+5 0 obj
+<< /Type /Catalog /Pages 4 0 R >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000003791 00000 n 
+0000003917 00000 n 
+0000003974 00000 n 
+trailer << /Size 6 /Root 5 0 R >>
+startxref
+4023
+%%EOF

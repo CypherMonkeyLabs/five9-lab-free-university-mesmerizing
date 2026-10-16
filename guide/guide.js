@@ -82,8 +82,8 @@
   var stopped = store.get("f9-offers-stop") === "1";
 
   var steps = [
-    { sel: "#tour-home", text: "Home is the front door. Eighteen tracks start here." },
-    { sel: "#tour-menu", text: "Menu opens the drawer. It lists Learn, Diagrams, Play, Listen, Downloads, and Help." },
+    { sel: "#tour-home", text: "Home is the front door. Twenty-three tracks start here." },
+    { sel: "#tour-menu", text: "Menu opens the drawer. Skills and ACD, Workforce, Quality, CRM and CTI, and Ecosystem each have an icon, a label, and one line." },
     { sel: "#tour-learn", text: "Learn is the ten-minute path and the full course." },
     { sel: "#tour-diagrams", text: "Diagrams are the drawings. Every one can be saved." },
     { sel: "#tour-play", text: "Play is the port game and the daily question. Listen is the study audio beside it." },

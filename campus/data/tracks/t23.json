@@ -1,0 +1,1348 @@
+{
+  "id": "t23",
+  "title": "Ecosystem",
+  "short": "Ecosystem",
+  "blurb": "Glossary, mind map, sister technologies, the integration list, teaching bridges, and hooks that stay blank.",
+  "group": "Ecosystem",
+  "level": "Practice",
+  "summary": "A box needs a page. A line is teaching. A gap stays a gap until a body comes back.",
+  "lessons": [
+    {
+      "id": "l01",
+      "title": "The glossary is a contract with the page",
+      "level": "foundation",
+      "minutes": 12,
+      "objectives": [
+        "Keep the page on the row",
+        "Reject words that have no page"
+      ],
+      "paragraphs": [
+        "A glossary row in this lab is a term, a meaning, and the page that printed the meaning. Domain, skill group, campaign, and the rest already follow that rule. A new word with no page does not get a row.",
+        "ACD is allowed because the Wikipedia article defines it. Skill group is allowed because the Five9 chapter defines it. A private acronym from a slide is not allowed until a public page says it."
+      ],
+      "cites": [
+        {
+          "label": "Automatic call distributor",
+          "url": "https://en.wikipedia.org/wiki/Automatic_call_distributor"
+        },
+        {
+          "label": "Skill groups",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "compare",
+        "title": "In the glossary or not",
+        "caption": "The test is a page.",
+        "leftTitle": "Has a page",
+        "rightTitle": "No page",
+        "left": [
+          "ACD on Wikipedia",
+          "Skill group on the admin chapter"
+        ],
+        "right": [
+          "A slide acronym",
+          "A guessed field name"
+        ]
+      },
+      "flow": {
+        "title": "Test one word",
+        "lanes": [
+          "Word",
+          "Page"
+        ],
+        "steps": [
+          {
+            "lane": "Word",
+            "title": "Hear",
+            "detail": "Someone says a new acronym.",
+            "frame": "hear"
+          },
+          {
+            "lane": "Page",
+            "title": "Find",
+            "detail": "Look for the public page.",
+            "frame": "find"
+          },
+          {
+            "lane": "Page",
+            "title": "Fail",
+            "detail": "If the body did not open, there is no row.",
+            "frame": "fail"
+          },
+          {
+            "lane": "Word",
+            "title": "Keep",
+            "detail": "The meaning stays shorter than the page.",
+            "frame": "keep"
+          },
+          {
+            "lane": "Reader",
+            "title": "Link",
+            "detail": "The row points at the page.",
+            "frame": "link"
+          },
+          {
+            "lane": "Reader",
+            "title": "Drop",
+            "detail": "No page, no row.",
+            "frame": "drop"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "A glossary row needs",
+          "choices": [
+            "A confident tone",
+            "A term, a meaning, and a page",
+            "A package version",
+            "An exam code"
+          ],
+          "answer": 1,
+          "why": "That is the contract."
+        },
+        {
+          "q": "ACD is in bounds because",
+          "choices": [
+            "Every contact center uses it",
+            "The Wikipedia page defines it",
+            "Five9 printed a formula",
+            "A badge says so"
+          ],
+          "answer": 1,
+          "why": "The article opened."
+        },
+        {
+          "q": "A slide acronym with no public page",
+          "choices": [
+            "Gets a row anyway",
+            "Does not get a row",
+            "Becomes a skill",
+            "Becomes a port"
+          ],
+          "answer": 1,
+          "why": "No page, no row."
+        },
+        {
+          "q": "The meaning may",
+          "choices": [
+            "Add facts the page did not say",
+            "Stay inside the page",
+            "Include a customer quote as a spec",
+            "Include an unread PDF number"
+          ],
+          "answer": 1,
+          "why": "The page is the ceiling."
+        },
+        {
+          "q": "Skill group and ACD in one row would",
+          "choices": [
+            "Be precise",
+            "Hide which page you mean",
+            "Be required",
+            "Fix the tab name"
+          ],
+          "answer": 1,
+          "why": "They are different pages."
+        }
+      ],
+      "cards": [
+        {
+          "front": "What does a row need?",
+          "back": "Term, meaning, page."
+        },
+        {
+          "front": "ACD allowed?",
+          "back": "Yes, from Wikipedia."
+        },
+        {
+          "front": "Slide acronym?",
+          "back": "No row."
+        },
+        {
+          "front": "Merge ACD and skill group?",
+          "back": "No."
+        }
+      ],
+      "lab": {
+        "title": "Accept or reject",
+        "goal": "Take three words from a meeting and keep only the ones with a page.",
+        "steps": [
+          "One kept",
+          "One rejected",
+          "The page named"
+        ],
+        "success": "The rejected word has no row.",
+        "href": ""
+      },
+      "fault": {
+        "title": "The glossary gains a row for a field nobody could open",
+        "symptom": "The row has a meaning and no page.",
+        "log": "ROW field SOURCE none",
+        "choices": [
+          "Delete the row",
+          "Publish it",
+          "Add a skill",
+          "Change ANI"
+        ],
+        "answer": 0,
+        "cause": "The contract failed.",
+        "fix": "Remove the row."
+      }
+    },
+    {
+      "id": "l02",
+      "title": "The mind map only holds boxes you can cite",
+      "level": "foundation",
+      "minutes": 12,
+      "objectives": [
+        "Draw only cited boxes",
+        "Put unread pages on the edge as gaps"
+      ],
+      "paragraphs": [
+        "A mind map of this floor can hold a domain, skill groups, the agent desktop, WFM, quality, and the API list, because each of those has a page this lab read. The lines between them are teaching lines. A line is not a protocol.",
+        "The map fails when a box is a rumor. An unread admin dialog, an unreadable analytics PDF, and a marketplace this lab did not recount do not become boxes. They become a gap at the edge."
+      ],
+      "cites": [
+        {
+          "label": "Skill groups",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm"
+        },
+        {
+          "label": "Agent Desktop",
+          "url": "https://www.five9.com/platform/self-service-and-engagement/agent-desktop"
+        },
+        {
+          "label": "Workforce management",
+          "url": "https://www.five9.com/platform/insights-and-analytics/workforce-management"
+        },
+        {
+          "label": "APIs and SDKs",
+          "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "path",
+        "title": "Boxes this check can draw",
+        "caption": "Each one has a page.",
+        "rows": [
+          {
+            "label": "Skill groups"
+          },
+          {
+            "label": "Agent desktop"
+          },
+          {
+            "label": "WFM"
+          },
+          {
+            "label": "Quality pages"
+          },
+          {
+            "label": "API list"
+          },
+          {
+            "label": "A gap, not a box"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Add or refuse a box",
+        "lanes": [
+          "Map",
+          "Page"
+        ],
+        "steps": [
+          {
+            "lane": "Map",
+            "title": "Ask",
+            "detail": "Which page is this box?",
+            "frame": "ask"
+          },
+          {
+            "lane": "Page",
+            "title": "Open",
+            "detail": "The page returned a body.",
+            "frame": "open"
+          },
+          {
+            "lane": "Map",
+            "title": "Draw",
+            "detail": "The box uses the page's noun.",
+            "frame": "draw"
+          },
+          {
+            "lane": "Page",
+            "title": "Closed",
+            "detail": "No body, no box.",
+            "frame": "closed"
+          },
+          {
+            "lane": "Map",
+            "title": "Gap",
+            "detail": "The gap is labeled confirm.",
+            "frame": "gap"
+          },
+          {
+            "lane": "Reader",
+            "title": "Line",
+            "detail": "The line is a teaching line, not a protocol.",
+            "frame": "line"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "A box without a page is",
+          "choices": [
+            "Still useful",
+            "Not allowed on this map",
+            "A skill",
+            "A port"
+          ],
+          "answer": 1,
+          "why": "The map is a citation."
+        },
+        {
+          "q": "The line between desktop and CRM means",
+          "choices": [
+            "A specific socket this lab measured",
+            "A teaching link to the page that named the integration",
+            "A codec",
+            "A badge"
+          ],
+          "answer": 1,
+          "why": "Do not upgrade a line into a protocol."
+        },
+        {
+          "q": "An unreadable PDF becomes",
+          "choices": [
+            "A box with numbers",
+            "A gap",
+            "The service level",
+            "The abandon rate"
+          ],
+          "answer": 1,
+          "why": "No sentence, no box."
+        },
+        {
+          "q": "Skill groups can be a box because",
+          "choices": [
+            "Everyone knows them",
+            "The admin chapter returned a body",
+            "The marketplace said so",
+            "A quote said so"
+          ],
+          "answer": 1,
+          "why": "The chapter opened."
+        },
+        {
+          "q": "Confirm on the edge of the map means",
+          "choices": [
+            "The box is certified",
+            "The page did not return a body",
+            "The line is a trunk",
+            "The count was audited"
+          ],
+          "answer": 1,
+          "why": "Leave it off the drawing."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Box needs?",
+          "back": "A page."
+        },
+        {
+          "front": "Line is a protocol?",
+          "back": "No."
+        },
+        {
+          "front": "Unreadable PDF?",
+          "back": "A gap."
+        },
+        {
+          "front": "Skill groups box?",
+          "back": "Yes."
+        }
+      ],
+      "lab": {
+        "title": "Draw five boxes",
+        "goal": "Use only pages this chapter cites. Add one gap.",
+        "steps": [
+          "Name each page",
+          "Name the gap"
+        ],
+        "success": "No rumor became a box.",
+        "href": ""
+      },
+      "fault": {
+        "title": "The map adds a screen-pop box with fields",
+        "symptom": "No page in this chapter printed those fields.",
+        "log": "BOX screen-pop",
+        "choices": [
+          "Turn it into a gap",
+          "Keep the fields",
+          "Delete skills",
+          "Reset lists"
+        ],
+        "answer": 0,
+        "cause": "A box without a page breaks the map.",
+        "fix": "Remove the box."
+      }
+    },
+    {
+      "id": "l03",
+      "title": "Sister technologies are the names on the neighboring pages",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Caption each sister with its page",
+        "Refuse unnamed products"
+      ],
+      "paragraphs": [
+        "Sister technologies, in this lab, means products the Five9 pages name as living beside the domain. The WEM page names Verint as a partner example beside native WEM. The API page names Zoom Phone and Microsoft Teams. The CRM lists name Salesforce, ServiceNow, and the other CRMs on those lists.",
+        "A sister is not a synonym. Verint is not native WEM. Teams is not Salesforce. The quality page's competency routing is not the skill-group chapter. Put the sister next to the domain and keep its own page."
+      ],
+      "cites": [
+        {
+          "label": "Workforce engagement management",
+          "url": "https://www.five9.com/products/capabilities/workforce-optimization"
+        },
+        {
+          "label": "APIs and SDKs",
+          "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "stack",
+        "title": "Sisters this check can name",
+        "caption": "Each stays on its page.",
+        "rows": [
+          {
+            "label": "Verint, as a WEM partner example"
+          },
+          {
+            "label": "Zoom Phone and Microsoft Teams"
+          },
+          {
+            "label": "The CRM names on the API list"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Place a sister",
+        "lanes": [
+          "Domain",
+          "Sister"
+        ],
+        "steps": [
+          {
+            "lane": "Domain",
+            "title": "Center",
+            "detail": "Skills and campaigns stay in the domain.",
+            "frame": "center"
+          },
+          {
+            "lane": "Sister",
+            "title": "Verint",
+            "detail": "Off to the side, with the WEM page.",
+            "frame": "verint"
+          },
+          {
+            "lane": "Sister",
+            "title": "Teams",
+            "detail": "Off to the side, with the API page.",
+            "frame": "teams"
+          },
+          {
+            "lane": "Reader",
+            "title": "Refuse",
+            "detail": "Do not merge the names.",
+            "frame": "refuse"
+          },
+          {
+            "lane": "Reader",
+            "title": "Ask",
+            "detail": "Which one this floor bought.",
+            "frame": "ask"
+          },
+          {
+            "lane": "Reader",
+            "title": "Cite",
+            "detail": "The caption names the page.",
+            "frame": "cite"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Verint is a sister because",
+          "choices": [
+            "It is the only WEM",
+            "The WEM page names it as a partner example",
+            "It is a codec",
+            "It is a campaign type"
+          ],
+          "answer": 1,
+          "why": "The page says both native and partner."
+        },
+        {
+          "q": "Teams belongs next to",
+          "choices": [
+            "The skill group",
+            "The API page's UC list",
+            "The forecast formula",
+            "The badge"
+          ],
+          "answer": 1,
+          "why": "That is the page that named it."
+        },
+        {
+          "q": "Calling Teams a CRM adapter is",
+          "choices": [
+            "Accurate",
+            "A mix of two lists",
+            "Required",
+            "A prompt"
+          ],
+          "answer": 1,
+          "why": "The page separates them."
+        },
+        {
+          "q": "A product the pages do not name",
+          "choices": [
+            "Can still be drawn as a sister",
+            "Stays off the map",
+            "Becomes a skill",
+            "Becomes a port"
+          ],
+          "answer": 1,
+          "why": "No name, no box."
+        },
+        {
+          "q": "Native WEM and Verint",
+          "choices": [
+            "Are synonyms",
+            "Are two statements on one page",
+            "Are both dialer modes",
+            "Are both lists"
+          ],
+          "answer": 1,
+          "why": "Ask which one is installed."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Why Verint?",
+          "back": "The WEM page names it."
+        },
+        {
+          "front": "Where does Teams go?",
+          "back": "On the API UC list."
+        },
+        {
+          "front": "Unnamed product?",
+          "back": "Off the map."
+        },
+        {
+          "front": "Synonym?",
+          "back": "No."
+        }
+      ],
+      "lab": {
+        "title": "Caption three sisters",
+        "goal": "Name, page, and job.",
+        "steps": [
+          "Verint",
+          "Teams or Zoom Phone",
+          "One CRM"
+        ],
+        "success": "Each caption has a page.",
+        "href": ""
+      },
+      "fault": {
+        "title": "The diagram labels Verint as native Five9 WFM",
+        "symptom": "The page said partner example.",
+        "log": "LABEL verint=native",
+        "choices": [
+          "Relabel it as the partner example",
+          "Leave the label",
+          "Delete forecasts",
+          "Change ANI"
+        ],
+        "answer": 0,
+        "cause": "The word partner is the fact.",
+        "fix": "Fix the label."
+      }
+    },
+    {
+      "id": "l04",
+      "title": "The integration map is the API list, drawn",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Draw the API list",
+        "Do not draw payloads"
+      ],
+      "paragraphs": [
+        "An integration map for this chapter is the API list turned sideways: CTI, Configuration, Reporting, Statistics, Web2Campaign, CRM SDK, and Web Connectors, plus the prebuilt CRM names and the UC names. REST is the access sentence for agents, administrators, supervisors, and reporting users.",
+        "Web Connectors and the CRM SDK are both on that list and they are not the same row. A connector that opens a page and an SDK you build against are different objects. The map labels both. It does not invent payloads."
+      ],
+      "cites": [
+        {
+          "label": "APIs and SDKs",
+          "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "path",
+        "title": "One list, one map",
+        "caption": "Labels only.",
+        "rows": [
+          {
+            "label": "CTI Web Services API"
+          },
+          {
+            "label": "Reporting and Statistics, as two names"
+          },
+          {
+            "label": "CRM SDK"
+          },
+          {
+            "label": "Web Connectors"
+          },
+          {
+            "label": "Prebuilt CRM and UC names"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Place a label",
+        "lanes": [
+          "List",
+          "Map"
+        ],
+        "steps": [
+          {
+            "lane": "List",
+            "title": "Read",
+            "detail": "The seven API names are copied.",
+            "frame": "read"
+          },
+          {
+            "lane": "Map",
+            "title": "Split",
+            "detail": "Reporting and Statistics stay apart.",
+            "frame": "split"
+          },
+          {
+            "lane": "Map",
+            "title": "SDK",
+            "detail": "The SDK is its own box.",
+            "frame": "sdk"
+          },
+          {
+            "lane": "Map",
+            "title": "Web",
+            "detail": "Web Connectors are their own box.",
+            "frame": "web"
+          },
+          {
+            "lane": "Map",
+            "title": "CRM",
+            "detail": "Prebuilt names sit beside them.",
+            "frame": "crm"
+          },
+          {
+            "lane": "Reader",
+            "title": "Stop",
+            "detail": "No payload is drawn.",
+            "frame": "stop"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Statistics and Reporting on the map are",
+          "choices": [
+            "One box",
+            "Two names from the list",
+            "Codecs",
+            "Prompts"
+          ],
+          "answer": 1,
+          "why": "The page prints both."
+        },
+        {
+          "q": "The CRM SDK is for",
+          "choices": [
+            "A named adapter you already have",
+            "A CRM you bring, per the desktop and API pages",
+            "A forecast",
+            "A greeting"
+          ],
+          "answer": 1,
+          "why": "That is the bring-your-own line."
+        },
+        {
+          "q": "Web Connectors are",
+          "choices": [
+            "The same box as the SDK",
+            "A separate name on the list",
+            "Skill groups",
+            "Dispositions"
+          ],
+          "answer": 1,
+          "why": "Do not merge them."
+        },
+        {
+          "q": "A payload field on this map is",
+          "choices": [
+            "Required",
+            "Not drawn",
+            "Always ANI",
+            "Always the case number"
+          ],
+          "answer": 1,
+          "why": "The list does not print payloads."
+        },
+        {
+          "q": "REST on the map is",
+          "choices": [
+            "A guess about every API",
+            "The page's sentence about who the REST APIs serve",
+            "A port",
+            "A badge"
+          ],
+          "answer": 1,
+          "why": "Agents, administrators, supervisors, and reporting users."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Reporting versus Statistics?",
+          "back": "Two names."
+        },
+        {
+          "front": "SDK versus connector?",
+          "back": "Two names."
+        },
+        {
+          "front": "Payloads?",
+          "back": "Not drawn."
+        },
+        {
+          "front": "Who does the REST sentence name?",
+          "back": "Agents, administrators, supervisors, reporting users."
+        }
+      ],
+      "lab": {
+        "title": "Draw the map",
+        "goal": "Seven API labels and no fields.",
+        "steps": [
+          "CTI",
+          "SDK",
+          "Web Connectors"
+        ],
+        "success": "A reader can see they are different boxes.",
+        "href": ""
+      },
+      "fault": {
+        "title": "The map shows Web Connectors and the SDK as one cloud",
+        "symptom": "The page printed two names.",
+        "log": "MAP merged",
+        "choices": [
+          "Split the boxes",
+          "Leave the cloud",
+          "Delete Salesforce",
+          "Add a skill"
+        ],
+        "answer": 0,
+        "cause": "Two names, two boxes.",
+        "fix": "Split them."
+      }
+    },
+    {
+      "id": "l05",
+      "title": "A bridge is a teaching map, not an import",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Label the bridge as teaching",
+        "Leave unread vendors off it"
+      ],
+      "paragraphs": [
+        "A cross-platform bridge says how a person who knows another contact center might look for the same idea. Skill group is the Five9 queue the admin chapter describes. It is not a claim that another vendor's queue object imports.",
+        "This chapter does not add gateway vendors, release names, or a migration wizard. Those sentences live on pages this chapter did not re-read. If you cannot open them, the bridge stops at the teaching sentence and the rest is confirm."
+      ],
+      "cites": [
+        {
+          "label": "Skill groups",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm"
+        }
+      ],
+      "uncertain": [
+        "This chapter does not re-quote gateway vendors or a migration wizard. Those pages were not the ones opened for these lessons."
+      ],
+      "figure": {
+        "kind": "compare",
+        "title": "Bridge versus import",
+        "caption": "Only one of these is claimed.",
+        "leftTitle": "Teaching bridge",
+        "rightTitle": "Import",
+        "left": [
+          "A word in this lab for a word on a Five9 page"
+        ],
+        "right": [
+          "Not described by the pages this chapter read"
+        ]
+      },
+      "flow": {
+        "title": "Translate one word",
+        "lanes": [
+          "Other",
+          "Five9"
+        ],
+        "steps": [
+          {
+            "lane": "Other",
+            "title": "Word",
+            "detail": "Someone says queue.",
+            "frame": "word"
+          },
+          {
+            "lane": "Five9",
+            "title": "Page",
+            "detail": "The chapter says skill group.",
+            "frame": "page"
+          },
+          {
+            "lane": "Reader",
+            "title": "Bridge",
+            "detail": "The note says it is a teaching bridge.",
+            "frame": "bridge"
+          },
+          {
+            "lane": "Reader",
+            "title": "Stop",
+            "detail": "No import button is drawn.",
+            "frame": "stop"
+          },
+          {
+            "lane": "Reader",
+            "title": "Gap",
+            "detail": "Unread vendor pages stay confirm.",
+            "frame": "gap"
+          },
+          {
+            "lane": "Reader",
+            "title": "Cite",
+            "detail": "The Five9 side has a URL.",
+            "frame": "cite"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "A teaching bridge is",
+          "choices": [
+            "An import product",
+            "A way to point a familiar word at a cited Five9 word",
+            "A codec",
+            "A badge"
+          ],
+          "answer": 1,
+          "why": "It is a note, not a converter."
+        },
+        {
+          "q": "Skill group, on the Five9 side of the bridge, comes from",
+          "choices": [
+            "Memory",
+            "The skill groups chapter",
+            "A marketplace count",
+            "A quote"
+          ],
+          "answer": 1,
+          "why": "The chapter opened."
+        },
+        {
+          "q": "An import button in this chapter is",
+          "choices": [
+            "Documented",
+            "Not documented",
+            "On the WFM page",
+            "On the API list"
+          ],
+          "answer": 1,
+          "why": "These pages do not describe one."
+        },
+        {
+          "q": "A gateway vendor added from an unread PDF is",
+          "choices": [
+            "A bridge",
+            "A confirm, with no box",
+            "Required",
+            "A prompt"
+          ],
+          "answer": 1,
+          "why": "Unread stays off the bridge."
+        },
+        {
+          "q": "The other vendor's word can be",
+          "choices": [
+            "Used as if Five9 printed it",
+            "The reader's word, labeled as theirs",
+            "A disposition",
+            "A forecast"
+          ],
+          "answer": 1,
+          "why": "Label whose word it is."
+        }
+      ],
+      "cards": [
+        {
+          "front": "What is a bridge?",
+          "back": "A teaching note."
+        },
+        {
+          "front": "Five9 queue word?",
+          "back": "Skill group."
+        },
+        {
+          "front": "Import button?",
+          "back": "Not in this chapter."
+        },
+        {
+          "front": "Unread vendor?",
+          "back": "Confirm, no box."
+        }
+      ],
+      "lab": {
+        "title": "Write one bridge",
+        "goal": "Their word, Five9 word, page, and the word teaching.",
+        "steps": [
+          "No import",
+          "No unread vendor"
+        ],
+        "success": "The note can be checked.",
+        "href": ""
+      },
+      "fault": {
+        "title": "The bridge says a foreign queue object imports into a skill group",
+        "symptom": "No page in this chapter said that.",
+        "log": "IMPORT claimed",
+        "choices": [
+          "Reduce it to a teaching note",
+          "Promise the import",
+          "Delete the domain",
+          "Change ANI"
+        ],
+        "answer": 0,
+        "cause": "A translation is not a converter.",
+        "fix": "Remove the import."
+      }
+    },
+    {
+      "id": "l06",
+      "title": "Future hooks stay unset until a page exists",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Name the gap",
+        "Add a date only when a page prints one"
+      ],
+      "paragraphs": [
+        "A future hook is a place the lab expects to grow and refuses to fake. The guide's cloud endpoint is unset. A product sentence that says often or up to is not a roadmap date. The API page's over 55 was not recounted.",
+        "When a child page later returns a body, the hook can become a box. Until then it stays a hook: a named gap, last checked with the month, and no URL if the body did not open. That is how the map stays true while the catalog moves."
+      ],
+      "cites": [
+        {
+          "label": "APIs and SDKs",
+          "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks"
+        },
+        {
+          "label": "Workforce management",
+          "url": "https://www.five9.com/platform/insights-and-analytics/workforce-management"
+        }
+      ],
+      "uncertain": [
+        "This lab's guide does not call a cloud endpoint. No product roadmap date is added in this chapter."
+      ],
+      "figure": {
+        "kind": "path",
+        "title": "A hook",
+        "caption": "Not a feature.",
+        "rows": [
+          {
+            "label": "Name the gap"
+          },
+          {
+            "label": "Say the body did not return"
+          },
+          {
+            "label": "No date"
+          },
+          {
+            "label": "No guessed field"
+          },
+          {
+            "label": "Replace the hook only when a page opens"
+          }
+        ]
+      },
+      "flow": {
+        "title": "File one hook",
+        "lanes": [
+          "Gap",
+          "Later"
+        ],
+        "steps": [
+          {
+            "lane": "Gap",
+            "title": "Name",
+            "detail": "Skill Transfer priority, for example.",
+            "frame": "name"
+          },
+          {
+            "lane": "Gap",
+            "title": "Status",
+            "detail": "Body did not return.",
+            "frame": "status"
+          },
+          {
+            "lane": "Later",
+            "title": "Wait",
+            "detail": "No month is promised.",
+            "frame": "wait"
+          },
+          {
+            "lane": "Later",
+            "title": "Open",
+            "detail": "A future reader opens the page.",
+            "frame": "open"
+          },
+          {
+            "lane": "Map",
+            "title": "Swap",
+            "detail": "The hook becomes a box only then.",
+            "frame": "swap"
+          },
+          {
+            "lane": "Reader",
+            "title": "Keep",
+            "detail": "Until then the hook stays blank.",
+            "frame": "keep"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "A future hook may include",
+          "choices": [
+            "A made-up release date",
+            "The name of a page that did not return a body",
+            "A customer metric",
+            "An exam code"
+          ],
+          "answer": 1,
+          "why": "The name of the gap is the content."
+        },
+        {
+          "q": "The guide cloud endpoint is",
+          "choices": [
+            "A Five9 API",
+            "Unset in this lab",
+            "The CTI API",
+            "The forecast engine"
+          ],
+          "answer": 1,
+          "why": "Do not pretend it calls out."
+        },
+        {
+          "q": "Over 55 becomes a hook if",
+          "choices": [
+            "You recount and the number moves",
+            "You want a rounder number",
+            "Teams is removed",
+            "Verint is native"
+          ],
+          "answer": 1,
+          "why": "A recount would replace their sentence. Until then, quote them."
+        },
+        {
+          "q": "Turning a hook into a box requires",
+          "choices": [
+            "Confidence",
+            "A page that returned a body",
+            "A quote",
+            "A theme"
+          ],
+          "answer": 1,
+          "why": "The page is the gate."
+        },
+        {
+          "q": "A roadmap date this chapter adds is",
+          "choices": [
+            "January",
+            "None",
+            "Next quarter",
+            "2027"
+          ],
+          "answer": 1,
+          "why": "No date was on the pages."
+        }
+      ],
+      "cards": [
+        {
+          "front": "What may a hook hold?",
+          "back": "The name of an unread page."
+        },
+        {
+          "front": "Guide endpoint?",
+          "back": "Unset."
+        },
+        {
+          "front": "When does a hook become a box?",
+          "back": "When a page returns a body."
+        },
+        {
+          "front": "Roadmap date?",
+          "back": "None added."
+        }
+      ],
+      "lab": {
+        "title": "Write two hooks",
+        "goal": "Use gaps from the routing and CRM chapters.",
+        "steps": [
+          "No dates",
+          "No fields"
+        ],
+        "success": "Both hooks are names, not features.",
+        "href": ""
+      },
+      "fault": {
+        "title": "The hook is dated next spring",
+        "symptom": "No page said that.",
+        "log": "DATE next-spring",
+        "choices": [
+          "Remove the date",
+          "Publish it",
+          "Add a skill",
+          "Reset a list"
+        ],
+        "answer": 0,
+        "cause": "A hook is not a calendar.",
+        "fix": "Delete the date."
+      }
+    },
+    {
+      "id": "l07",
+      "title": "Read the map before you add a box",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Run the six checks",
+        "Cut any box that has no page"
+      ],
+      "paragraphs": [
+        "The review is the whole ecosystem section in one pass. Glossary: every new word has a page. Mind map: every box has a page and every line is teaching. Sisters: Verint, Zoom Phone, Teams, and the CRM names, each captioned. Integration map: the API list, unmerged. Bridges: teaching only. Hooks: named gaps, no dates.",
+        "If a box fails the test, it comes off. The domain in the middle is still the skill groups, the campaigns, and the desktop the other chapters described. The neighbors do not leak into that box."
+      ],
+      "cites": [
+        {
+          "label": "Skill groups",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm"
+        },
+        {
+          "label": "Agent Desktop",
+          "url": "https://www.five9.com/platform/self-service-and-engagement/agent-desktop"
+        },
+        {
+          "label": "APIs and SDKs",
+          "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks"
+        },
+        {
+          "label": "Workforce engagement management",
+          "url": "https://www.five9.com/products/capabilities/workforce-optimization"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "path",
+        "title": "The pass",
+        "caption": "Six checks.",
+        "rows": [
+          {
+            "label": "Glossary"
+          },
+          {
+            "label": "Mind map"
+          },
+          {
+            "label": "Sisters"
+          },
+          {
+            "label": "Integration map"
+          },
+          {
+            "label": "Bridges"
+          },
+          {
+            "label": "Hooks"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Review a crowded map",
+        "lanes": [
+          "Box",
+          "Test"
+        ],
+        "steps": [
+          {
+            "lane": "Box",
+            "title": "Find",
+            "detail": "One box has no caption.",
+            "frame": "find"
+          },
+          {
+            "lane": "Test",
+            "title": "Page",
+            "detail": "Ask for the page.",
+            "frame": "page"
+          },
+          {
+            "lane": "Test",
+            "title": "Fail",
+            "detail": "No page, the box leaves.",
+            "frame": "fail"
+          },
+          {
+            "lane": "Sister",
+            "title": "Check",
+            "detail": "Verint is not labeled native.",
+            "frame": "verint"
+          },
+          {
+            "lane": "API",
+            "title": "Check",
+            "detail": "SDK and connectors are split.",
+            "frame": "api"
+          },
+          {
+            "lane": "Hook",
+            "title": "Check",
+            "detail": "No date was added.",
+            "frame": "hook"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "A box with no page",
+          "choices": [
+            "Stays for color",
+            "Comes off the map",
+            "Becomes a skill",
+            "Becomes a port"
+          ],
+          "answer": 1,
+          "why": "The review removes it."
+        },
+        {
+          "q": "A sister caption must include",
+          "choices": [
+            "A quote",
+            "The page that named it",
+            "A package version",
+            "An exam code"
+          ],
+          "answer": 1,
+          "why": "The page is the caption."
+        },
+        {
+          "q": "An integration map that merges SDK and Web Connectors",
+          "choices": [
+            "Passes",
+            "Fails",
+            "Is the forecast",
+            "Is adherence"
+          ],
+          "answer": 1,
+          "why": "The list printed two names."
+        },
+        {
+          "q": "A bridge that promises an import",
+          "choices": [
+            "Passes",
+            "Fails",
+            "Is required",
+            "Is a prompt"
+          ],
+          "answer": 1,
+          "why": "Teaching is the only claim."
+        },
+        {
+          "q": "A hook with a season on it",
+          "choices": [
+            "Passes",
+            "Fails",
+            "Is the WFM card",
+            "Is the CTI API"
+          ],
+          "answer": 1,
+          "why": "No date was sourced."
+        }
+      ],
+      "cards": [
+        {
+          "front": "No page?",
+          "back": "Remove the box."
+        },
+        {
+          "front": "Sister caption?",
+          "back": "Includes the page."
+        },
+        {
+          "front": "Merged SDK?",
+          "back": "Fails."
+        },
+        {
+          "front": "Dated hook?",
+          "back": "Fails."
+        }
+      ],
+      "lab": {
+        "title": "Run the pass",
+        "goal": "Take a sketch and mark each box keep or cut.",
+        "steps": [
+          "One cut",
+          "One keep",
+          "The reason"
+        ],
+        "success": "The cut box had no page.",
+        "href": ""
+      },
+      "fault": {
+        "title": "The center box says the CRM fields live inside the skill group",
+        "symptom": "The neighbors leaked.",
+        "log": "CENTER includes CRM fields",
+        "choices": [
+          "Put the fields back on the CRM gap",
+          "Leave them in the center",
+          "Delete WFM",
+          "Change ANI"
+        ],
+        "answer": 0,
+        "cause": "The center is the domain objects the admin chapter described.",
+        "fix": "Move the fields out."
+      }
+    }
+  ]
+}

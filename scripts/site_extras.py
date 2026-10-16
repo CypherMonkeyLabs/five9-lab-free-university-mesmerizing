@@ -99,6 +99,10 @@ def glossary():
         ("Retention", "Separate clocks for audio, E911 recordings, agent data, campaign state, domains, and DIDs.", RETAIN),
         ("RFC 3261", "The SIP specification. It does not choose your dial plan.", RFC3261),
         ("RFC 4733", "Telephone events, the usual way DTMF rides in the media.", RFC4733),
+        ("ACD", "Wikipedia's name for a device that answers and distributes incoming calls to a group of agents. Not a Five9 field by itself.", ("Automatic call distributor", "https://en.wikipedia.org/wiki/Automatic_call_distributor")),
+        ("Forecast", "The WFM page's base for staffing: multiskill, multichannel, several algorithms it does not name.", ("Workforce management", "https://www.five9.com/platform/insights-and-analytics/workforce-management")),
+        ("Adherence", "Plan versus what the person did. The WFM page lists historical and real-time views, plus alerts.", ("Workforce management", "https://www.five9.com/platform/insights-and-analytics/workforce-management")),
+        ("CTI Web Services API", "One name on the APIs page. Not a screen-pop field list.", ("APIs and SDKs", "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks")),
     ]
     return [{"term": t, "meaning": m, "url": u, "source": s} for t, m, (s, u) in rows]
 

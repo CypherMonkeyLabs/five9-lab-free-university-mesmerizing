@@ -1,0 +1,1311 @@
+{
+  "id": "t19",
+  "title": "Skills routing and ACD",
+  "short": "Skills and ACD",
+  "blurb": "How a Five9 skill group routes work, and which ACD details this check could not read.",
+  "group": "Routing",
+  "level": "Practice",
+  "summary": "A skill group is the queue the admin chapter describes. The general word ACD stays on its own page.",
+  "lessons": [
+    {
+      "id": "l01",
+      "title": "An ACD distributes. A skill group is the Five9 queue",
+      "level": "foundation",
+      "minutes": 12,
+      "objectives": [
+        "Separate the general word from the Five9 object",
+        "Quote the page that opened"
+      ],
+      "paragraphs": [
+        "Wikipedia describes an automatic call distributor as a telephony device that answers and distributes incoming calls to a group of terminals or agents. It says the route can depend on the caller's number, the number dialed, the time of day, or an answer to a voice prompt, and that an advanced system may take input from CTI, CSTA, or an IVR.",
+        "The Five9 skill groups chapter is the queue this lab could read. It says skill groups organize users who have the agent or supervisor role into groups assigned to the call queues that are part of campaigns. That is the Five9 object. The Wikipedia article is the general word ACD. Do not treat them as the same paragraph."
+      ],
+      "cites": [
+        {
+          "label": "Automatic call distributor",
+          "url": "https://en.wikipedia.org/wiki/Automatic_call_distributor"
+        },
+        {
+          "label": "Skill groups",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "compare",
+        "title": "Two pages",
+        "caption": "Read both. Quote the one you mean.",
+        "leftTitle": "Wikipedia ACD",
+        "rightTitle": "Five9 skill group",
+        "left": [
+          "Distributes incoming calls",
+          "May use number, time, or a prompt"
+        ],
+        "right": [
+          "Agent or supervisor users",
+          "A queue inside a campaign"
+        ]
+      },
+      "flow": {
+        "title": "Name the object",
+        "lanes": [
+          "Reader",
+          "Page"
+        ],
+        "steps": [
+          {
+            "lane": "Reader",
+            "title": "Ask",
+            "detail": "Is this the general word or the Five9 object?",
+            "frame": "ask"
+          },
+          {
+            "lane": "Page",
+            "title": "Wiki",
+            "detail": "The general word is on Wikipedia.",
+            "frame": "wiki"
+          },
+          {
+            "lane": "Page",
+            "title": "Skill",
+            "detail": "The Five9 queue is the skill group.",
+            "frame": "skill"
+          },
+          {
+            "lane": "Reader",
+            "title": "Role",
+            "detail": "Only agent or supervisor users are named.",
+            "frame": "role"
+          },
+          {
+            "lane": "Reader",
+            "title": "Stop",
+            "detail": "Do not paste a vendor algorithm the page did not print.",
+            "frame": "stop"
+          },
+          {
+            "lane": "Reader",
+            "title": "Cite",
+            "detail": "The sentence keeps its page.",
+            "frame": "cite"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "An ACD, on the Wikipedia page, distributes calls to",
+          "choices": [
+            "A single voicemail box only",
+            "A group of terminals or agents",
+            "A campaign profile",
+            "A Credly badge"
+          ],
+          "answer": 1,
+          "why": "That is the article's definition."
+        },
+        {
+          "q": "Who can be in a Five9 skill group, per the chapter that opened?",
+          "choices": [
+            "Any login",
+            "Users with the agent or supervisor role",
+            "SIP trunks",
+            "Campaign profiles by themselves"
+          ],
+          "answer": 1,
+          "why": "The chapter names those roles."
+        },
+        {
+          "q": "CTI, on the Wikipedia page, is",
+          "choices": [
+            "A Five9 package version",
+            "One input an advanced ACD may use",
+            "A dialing mode",
+            "A list reset"
+          ],
+          "answer": 1,
+          "why": "The article lists CTI, CSTA, or IVR as possible inputs."
+        },
+        {
+          "q": "The skill group and the Wikipedia ACD are",
+          "choices": [
+            "One sentence you can merge",
+            "Two pages. Quote the one you mean",
+            "Both codecs",
+            "Both exam codes"
+          ],
+          "answer": 1,
+          "why": "They answer different questions."
+        },
+        {
+          "q": "A route based on the number dialed is described on",
+          "choices": [
+            "The Wikipedia ACD page",
+            "A package number",
+            "The Credly badge",
+            "A theme swatch"
+          ],
+          "answer": 1,
+          "why": "The article includes the number dialed."
+        }
+      ],
+      "cards": [
+        {
+          "front": "General word?",
+          "back": "ACD, on Wikipedia."
+        },
+        {
+          "front": "Five9 queue?",
+          "back": "A skill group."
+        },
+        {
+          "front": "Who is in it?",
+          "back": "Agent or supervisor users."
+        },
+        {
+          "front": "Merge the pages?",
+          "back": "No."
+        }
+      ],
+      "lab": {
+        "title": "Two sentences",
+        "goal": "Write one Wikipedia sentence and one Five9 sentence.",
+        "steps": [
+          "Name the ACD idea",
+          "Name the skill group",
+          "Do not invent a routing algorithm"
+        ],
+        "success": "Each sentence has its own page.",
+        "href": ""
+      },
+      "fault": {
+        "title": "A design says Five9 always routes longest-idle",
+        "symptom": "No opened page in this chapter says that.",
+        "log": "CLAIM longest-idle SOURCE none",
+        "choices": [
+          "Delete the claim until a page prints it",
+          "Keep it because other ACDs do it",
+          "Change the codec",
+          "Add a badge"
+        ],
+        "answer": 0,
+        "cause": "A general ACD idea is not a Five9 setting.",
+        "fix": "Cite the page or drop the sentence."
+      }
+    },
+    {
+      "id": "l02",
+      "title": "One person, several skills. One campaign, several groups",
+      "level": "foundation",
+      "minutes": 12,
+      "objectives": [
+        "Allow multiple memberships",
+        "Label the tie-break as unread"
+      ],
+      "paragraphs": [
+        "The same chapter says users can be assigned to multiple skill groups, and campaigns can have multiple skill groups. Membership is not a single label for life.",
+        "A campaign with several groups is a pool you chose. A user in several groups can be offered work from more than one queue. This page does not say which queue wins when both are ringing. That tie-break did not come back in this check."
+      ],
+      "cites": [
+        {
+          "label": "Skill groups",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm"
+        }
+      ],
+      "uncertain": [
+        "Which skill wins when one agent is eligible for two ringing queues was not on the skill groups chapter this lab read."
+      ],
+      "figure": {
+        "kind": "stack",
+        "title": "What the chapter allows",
+        "caption": "Both directions are written.",
+        "rows": [
+          {
+            "label": "A user in more than one skill group"
+          },
+          {
+            "label": "A campaign with more than one skill group"
+          },
+          {
+            "label": "A tie-break that this check did not read"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Count memberships",
+        "lanes": [
+          "Admin",
+          "User"
+        ],
+        "steps": [
+          {
+            "lane": "Admin",
+            "title": "Groups",
+            "detail": "Billing and Sales both exist.",
+            "frame": "groups"
+          },
+          {
+            "lane": "User",
+            "title": "Both",
+            "detail": "One agent is in both.",
+            "frame": "both"
+          },
+          {
+            "lane": "Campaign",
+            "title": "Pool",
+            "detail": "The campaign lists both groups.",
+            "frame": "pool"
+          },
+          {
+            "lane": "Admin",
+            "title": "Ask",
+            "detail": "Which call should win is still a question.",
+            "frame": "ask"
+          },
+          {
+            "lane": "Admin",
+            "title": "Gap",
+            "detail": "The tie-break is not copied from this page.",
+            "frame": "gap"
+          },
+          {
+            "lane": "Admin",
+            "title": "Note",
+            "detail": "The design says pool, and says the tie-break is unread.",
+            "frame": "note"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "A user may belong to",
+          "choices": [
+            "Only one skill group",
+            "Multiple skill groups",
+            "No role at all",
+            "Only a profile"
+          ],
+          "answer": 1,
+          "why": "The chapter says multiple."
+        },
+        {
+          "q": "A campaign may have",
+          "choices": [
+            "Only one skill group",
+            "Multiple skill groups",
+            "No queues",
+            "Only ANI"
+          ],
+          "answer": 1,
+          "why": "The chapter says campaigns can have multiple."
+        },
+        {
+          "q": "The tie-break when two skills can take the call is",
+          "choices": [
+            "Printed as longest idle on this page",
+            "Not in the chapter this lab read",
+            "Always the codec",
+            "Always Default"
+          ],
+          "answer": 1,
+          "why": "Do not invent it."
+        },
+        {
+          "q": "A pool is",
+          "choices": [
+            "Forbidden",
+            "What you get when the campaign lists more than one group",
+            "A SIP header",
+            "A badge"
+          ],
+          "answer": 1,
+          "why": "Multiple groups on a campaign are allowed."
+        },
+        {
+          "q": "Supervisor users are",
+          "choices": [
+            "Excluded",
+            "Named alongside agents",
+            "Trunks",
+            "Lists"
+          ],
+          "answer": 1,
+          "why": "The chapter names the supervisor role."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Several skills per user?",
+          "back": "Yes."
+        },
+        {
+          "front": "Several groups per campaign?",
+          "back": "Yes."
+        },
+        {
+          "front": "Tie-break quoted?",
+          "back": "No."
+        },
+        {
+          "front": "Pool allowed?",
+          "back": "Yes."
+        }
+      ],
+      "lab": {
+        "title": "Draw the pool",
+        "goal": "Name two groups and one person who is in both.",
+        "steps": [
+          "Billing",
+          "Sales",
+          "The shared person",
+          "The unread tie-break"
+        ],
+        "success": "The drawing matches the chapter, and the gap is labeled.",
+        "href": ""
+      },
+      "fault": {
+        "title": "The runbook says a person can have only one skill",
+        "symptom": "The chapter says otherwise.",
+        "log": "RUNBOOK one-skill PAGE multiple",
+        "choices": [
+          "Correct the runbook",
+          "Delete the extra membership to match the runbook",
+          "Change ANI",
+          "Stop the domain"
+        ],
+        "answer": 0,
+        "cause": "The public chapter allows multiple memberships.",
+        "fix": "Fix the runbook."
+      }
+    },
+    {
+      "id": "l03",
+      "title": "Outbound uses Skills. Inbound and autodial use Outbound Skills",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Memorize the tab names",
+        "Check the tab before the carrier"
+      ],
+      "paragraphs": [
+        "The chapter splits the tabs. Outbound campaigns route dialer calls by the skill groups on the Skills tab of the campaign properties. Inbound and autodial campaigns route to the skill groups listed on the Outbound Skills tab of the inbound campaign properties.",
+        "The word outbound sits on an inbound campaign. That is the published name. Ready agents on the other tab are not the queue the page describes."
+      ],
+      "cites": [
+        {
+          "label": "Skill groups",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "compare",
+        "title": "Read the tab",
+        "caption": "The chapter names both.",
+        "leftTitle": "Outbound campaign",
+        "rightTitle": "Inbound and autodial",
+        "left": [
+          "Skills tab"
+        ],
+        "right": [
+          "Outbound Skills tab"
+        ]
+      },
+      "flow": {
+        "title": "Attach one group twice",
+        "lanes": [
+          "Admin",
+          "Campaign"
+        ],
+        "steps": [
+          {
+            "lane": "Admin",
+            "title": "Group",
+            "detail": "Support exists and has members.",
+            "frame": "group"
+          },
+          {
+            "lane": "Campaign",
+            "title": "Out",
+            "detail": "The outbound campaign uses Skills.",
+            "frame": "skills"
+          },
+          {
+            "lane": "Campaign",
+            "title": "In",
+            "detail": "The inbound campaign uses Outbound Skills.",
+            "frame": "out"
+          },
+          {
+            "lane": "Campaign",
+            "title": "Wrong",
+            "detail": "Skills on an inbound campaign is the other tab.",
+            "frame": "wrong"
+          },
+          {
+            "lane": "Agent",
+            "title": "Ready",
+            "detail": "Ready does not repair the tab.",
+            "frame": "ready"
+          },
+          {
+            "lane": "Admin",
+            "title": "Retest",
+            "detail": "A test call is the check.",
+            "frame": "test"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Inbound skill assignment lives on a tab named",
+          "choices": [
+            "Inbound Skills",
+            "Outbound Skills",
+            "ANI",
+            "Pause"
+          ],
+          "answer": 1,
+          "why": "That is the published name."
+        },
+        {
+          "q": "Outbound campaigns use",
+          "choices": [
+            "Outbound Skills",
+            "The Skills tab",
+            "No skills",
+            "Only Default"
+          ],
+          "answer": 1,
+          "why": "The chapter says the Skills tab."
+        },
+        {
+          "q": "Autodial is grouped with",
+          "choices": [
+            "Outbound's Skills tab",
+            "Inbound, on Outbound Skills",
+            "No queue",
+            "A badge"
+          ],
+          "answer": 1,
+          "why": "The chapter names inbound and autodial together."
+        },
+        {
+          "q": "Ready agents on the wrong tab",
+          "choices": [
+            "Still receive the call the page describes",
+            "Are not the assignment the page describes",
+            "Change the codec",
+            "Export a matrix"
+          ],
+          "answer": 1,
+          "why": "The campaign is pointing at the other list."
+        },
+        {
+          "q": "The awkward name is",
+          "choices": [
+            "A rumor",
+            "Printed on the skill groups chapter",
+            "An exam code",
+            "A JRE flag"
+          ],
+          "answer": 1,
+          "why": "It is in the chapter."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Inbound tab?",
+          "back": "Outbound Skills."
+        },
+        {
+          "front": "Outbound tab?",
+          "back": "Skills."
+        },
+        {
+          "front": "Autodial?",
+          "back": "With inbound."
+        },
+        {
+          "front": "Ready on the wrong tab?",
+          "back": "Not the assignment the page describes."
+        }
+      ],
+      "lab": {
+        "title": "Label two campaigns",
+        "goal": "Write the tab name under inbound and under outbound.",
+        "steps": [
+          "Inbound",
+          "Outbound",
+          "Autodial"
+        ],
+        "success": "Inbound and autodial match.",
+        "href": ""
+      },
+      "fault": {
+        "title": "Support never rings on the new inbound line",
+        "symptom": "The group was saved on Skills.",
+        "log": "INBOUND tab=Skills",
+        "choices": [
+          "Move it to Outbound Skills",
+          "Add power lines",
+          "Delete the prompt",
+          "Enable an old browser"
+        ],
+        "answer": 0,
+        "cause": "Wrong tab.",
+        "fix": "Use the tab the chapter names."
+      }
+    },
+    {
+      "id": "l04",
+      "title": "You can add, change, remove, and message the group",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Use the four verbs the chapter names",
+        "Do not invent the dialogs"
+      ],
+      "paragraphs": [
+        "The chapter says you can add, modify, and remove skill groups. It also says you can send a message to all the agents in a skill group.",
+        "Those four verbs are the administration the page states. The click-path inside each verb is a child topic. This check read the chapter, not a screenshot of every dialog."
+      ],
+      "cites": [
+        {
+          "label": "Skill groups",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "path",
+        "title": "Four verbs",
+        "caption": "Stay inside the sentence.",
+        "rows": [
+          {
+            "label": "Add"
+          },
+          {
+            "label": "Modify"
+          },
+          {
+            "label": "Remove"
+          },
+          {
+            "label": "Message every agent in the group"
+          }
+        ]
+      },
+      "flow": {
+        "title": "A new queue",
+        "lanes": [
+          "Admin",
+          "Agents"
+        ],
+        "steps": [
+          {
+            "lane": "Admin",
+            "title": "Add",
+            "detail": "The group is created.",
+            "frame": "add"
+          },
+          {
+            "lane": "Admin",
+            "title": "Modify",
+            "detail": "The name or the membership changes.",
+            "frame": "mod"
+          },
+          {
+            "lane": "Admin",
+            "title": "Message",
+            "detail": "One note goes to the members.",
+            "frame": "msg"
+          },
+          {
+            "lane": "Admin",
+            "title": "Remove",
+            "detail": "Removal is allowed, and it is not casual.",
+            "frame": "rem"
+          },
+          {
+            "lane": "Agents",
+            "title": "See",
+            "detail": "The message is for the people in the group.",
+            "frame": "see"
+          },
+          {
+            "lane": "Admin",
+            "title": "Stop",
+            "detail": "Do not invent extra buttons.",
+            "frame": "stop"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Removing a skill group is",
+          "choices": [
+            "Forbidden",
+            "One of the actions the chapter names",
+            "A dialer mode",
+            "A codec"
+          ],
+          "answer": 1,
+          "why": "The chapter says you can remove them."
+        },
+        {
+          "q": "A message from the skill group goes to",
+          "choices": [
+            "The carrier",
+            "All the agents in that skill group",
+            "Only supervisors outside the group",
+            "The IVR prompt library"
+          ],
+          "answer": 1,
+          "why": "The chapter says all the agents in the group."
+        },
+        {
+          "q": "Modify means",
+          "choices": [
+            "The group can be changed",
+            "The group is frozen",
+            "ANI changes by itself",
+            "The domain closes"
+          ],
+          "answer": 1,
+          "why": "The chapter includes modify."
+        },
+        {
+          "q": "The dialog screenshots for each verb were",
+          "choices": [
+            "Quoted click by click in this lesson",
+            "Not the page this lesson read. The chapter states the verbs",
+            "A SIP trace",
+            "A badge"
+          ],
+          "answer": 1,
+          "why": "Do not invent the dialog."
+        },
+        {
+          "q": "Add is",
+          "choices": [
+            "Unsupported",
+            "Named",
+            "A list mode",
+            "A retention clock"
+          ],
+          "answer": 1,
+          "why": "The chapter says you can add skill groups."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Remove allowed?",
+          "back": "Yes, the chapter says so."
+        },
+        {
+          "front": "Who gets the message?",
+          "back": "Agents in the group."
+        },
+        {
+          "front": "Click-path quoted?",
+          "back": "No."
+        },
+        {
+          "front": "Modify?",
+          "back": "Named."
+        }
+      ],
+      "lab": {
+        "title": "Write the four verbs",
+        "goal": "Add, modify, remove, message.",
+        "steps": [
+          "Do not add a fifth verb",
+          "Say who receives the message"
+        ],
+        "success": "The list matches the chapter.",
+        "href": ""
+      },
+      "fault": {
+        "title": "A runbook says skill groups cannot be removed",
+        "symptom": "The chapter says they can.",
+        "log": "RUNBOOK remove=no PAGE remove=yes",
+        "choices": [
+          "Correct the runbook and treat removal as a real change",
+          "Keep the runbook",
+          "Reset a list",
+          "Change TLS"
+        ],
+        "answer": 0,
+        "cause": "The public chapter includes remove.",
+        "fix": "Update the runbook."
+      }
+    },
+    {
+      "id": "l05",
+      "title": "Service level and voicemail are topics on the same chapter",
+      "level": "practice",
+      "minutes": 12,
+      "objectives": [
+        "Name the topic",
+        "Refuse the unread procedure"
+      ],
+      "paragraphs": [
+        "The skill groups table of contents that opened lists Managing Skill Group Service Levels, Routing Voicemail Messages to Skill Groups, Managing Skill Voicemail Messages, Managing Skill Voicemail Greetings, and Managing Audio Files for Skill Groups.",
+        "Those titles say the work exists on the chapter. The child pages did not return a body in this check, so this lesson does not describe the service-level math or the voicemail click-path. The titles are the fact. The procedure is confirm."
+      ],
+      "cites": [
+        {
+          "label": "Skill groups",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm"
+        }
+      ],
+      "uncertain": [
+        "The service-level and skill-voicemail child pages did not return a body in this check. No threshold and no click-path is stated."
+      ],
+      "figure": {
+        "kind": "stack",
+        "title": "Titles this check could read",
+        "caption": "Procedures under them did not open.",
+        "rows": [
+          {
+            "label": "Service levels"
+          },
+          {
+            "label": "Routing voicemail to skill groups"
+          },
+          {
+            "label": "Voicemail messages and greetings"
+          },
+          {
+            "label": "Audio files"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Stop at the title",
+        "lanes": [
+          "Reader",
+          "Child page"
+        ],
+        "steps": [
+          {
+            "lane": "Reader",
+            "title": "See",
+            "detail": "The contents list names service level.",
+            "frame": "see"
+          },
+          {
+            "lane": "Reader",
+            "title": "See2",
+            "detail": "It also names skill voicemail.",
+            "frame": "vm"
+          },
+          {
+            "lane": "Child",
+            "title": "Closed",
+            "detail": "The child page did not return a body.",
+            "frame": "closed"
+          },
+          {
+            "lane": "Reader",
+            "title": "Refuse",
+            "detail": "No percent and no click-path is copied.",
+            "frame": "refuse"
+          },
+          {
+            "lane": "Reader",
+            "title": "Say",
+            "detail": "The design says the topic exists.",
+            "frame": "say"
+          },
+          {
+            "lane": "Reader",
+            "title": "Mark",
+            "detail": "The procedure is marked confirm.",
+            "frame": "mark"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Service level appears as",
+          "choices": [
+            "An invented percent",
+            "A topic title on the skill groups chapter",
+            "A dialer mode",
+            "A badge"
+          ],
+          "answer": 1,
+          "why": "The contents list names it."
+        },
+        {
+          "q": "Skill voicemail routing appears as",
+          "choices": [
+            "Absent",
+            "A topic title on the same chapter",
+            "A list penetration mode",
+            "A codec"
+          ],
+          "answer": 1,
+          "why": "The contents list names it."
+        },
+        {
+          "q": "This lesson's service-level formula is",
+          "choices": [
+            "Fully quoted",
+            "Not quoted. The child page did not return a body",
+            "Always 80/20",
+            "A JRE flag"
+          ],
+          "answer": 1,
+          "why": "Do not invent the math."
+        },
+        {
+          "q": "Greetings are",
+          "choices": [
+            "Named as a topic title",
+            "Denied by the chapter",
+            "A campaign type",
+            "An exam code"
+          ],
+          "answer": 1,
+          "why": "Managing Skill Voicemail Greetings is on the contents list."
+        },
+        {
+          "q": "A page that did not return a body is",
+          "choices": [
+            "Still linked as if it were read",
+            "Marked confirm, with no procedure copied",
+            "Treated as a law",
+            "Ignored"
+          ],
+          "answer": 1,
+          "why": "Confirm means the body was not read."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Service level on the contents?",
+          "back": "Yes."
+        },
+        {
+          "front": "Formula quoted?",
+          "back": "No."
+        },
+        {
+          "front": "Voicemail topic?",
+          "back": "Yes."
+        },
+        {
+          "front": "Child page body?",
+          "back": "Did not return."
+        }
+      ],
+      "lab": {
+        "title": "List the titles",
+        "goal": "Write the topic names you are allowed to say.",
+        "steps": [
+          "Service level",
+          "Voicemail routing",
+          "Greetings",
+          "The missing procedure"
+        ],
+        "success": "The missing procedure is labeled confirm.",
+        "href": ""
+      },
+      "fault": {
+        "title": "A slide prints 80 percent in 20 seconds as the Five9 default",
+        "symptom": "The child page did not open, so the number has no source here.",
+        "log": "SL 80/20 SOURCE unread",
+        "choices": [
+          "Remove the number",
+          "Keep it as industry habit",
+          "Add lines",
+          "Change ANI"
+        ],
+        "answer": 0,
+        "cause": "A habit is not the chapter.",
+        "fix": "Delete the number until the child page is read."
+      }
+    },
+    {
+      "id": "l06",
+      "title": "Adding skills to a campaign points at another guide",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Follow the pointer",
+        "Do not fill the gap from memory"
+      ],
+      "paragraphs": [
+        "The skill groups chapter says that adding skill groups to campaigns is covered in Configuring Skills in the Campaign Administrator's Guide. It does not paste that guide into the chapter.",
+        "The Configuring Skills page and the Skill Transfer module page did not return a body in this check. Priority numbers, an ignore-order switch, and a Default queue label are not copied here. If you need them, open those pages yourself and mark anything you cannot read as confirm."
+      ],
+      "cites": [
+        {
+          "label": "Skill groups",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm"
+        }
+      ],
+      "uncertain": [
+        "Configuring Skills and the Skill Transfer module page did not return a body in this check. No priority value is stated."
+      ],
+      "figure": {
+        "kind": "path",
+        "title": "Where the sentence stops",
+        "caption": "The pointer is not the other guide.",
+        "rows": [
+          {
+            "label": "Skill groups chapter"
+          },
+          {
+            "label": "Pointer to Configuring Skills"
+          },
+          {
+            "label": "That page did not return a body"
+          },
+          {
+            "label": "No priority number is copied"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Follow the pointer",
+        "lanes": [
+          "Chapter",
+          "Guide"
+        ],
+        "steps": [
+          {
+            "lane": "Chapter",
+            "title": "Point",
+            "detail": "It names Configuring Skills.",
+            "frame": "point"
+          },
+          {
+            "lane": "Guide",
+            "title": "Closed",
+            "detail": "The page did not return a body.",
+            "frame": "closed"
+          },
+          {
+            "lane": "Reader",
+            "title": "Wait",
+            "detail": "No priority value is typed from memory.",
+            "frame": "wait"
+          },
+          {
+            "lane": "Reader",
+            "title": "IVR",
+            "detail": "Skill Transfer's own page also did not return a body.",
+            "frame": "ivr"
+          },
+          {
+            "lane": "Reader",
+            "title": "Say",
+            "detail": "The design says the pointer exists.",
+            "frame": "say"
+          },
+          {
+            "lane": "Reader",
+            "title": "Confirm",
+            "detail": "The unread page is confirm.",
+            "frame": "confirm"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Where does the chapter send you to add skills to a campaign?",
+          "choices": [
+            "The Credly badge",
+            "Configuring Skills in the Campaign Administrator's Guide",
+            "The codec page",
+            "A community rumor only"
+          ],
+          "answer": 1,
+          "why": "That is the pointer."
+        },
+        {
+          "q": "Did this check read the Configuring Skills body?",
+          "choices": [
+            "Yes, every field",
+            "No. The page did not return a body",
+            "Yes, as a PDF appendix",
+            "It is the same page as skill groups"
+          ],
+          "answer": 1,
+          "why": "A pointer is not the other page."
+        },
+        {
+          "q": "A priority number for Skill Transfer in this lesson is",
+          "choices": [
+            "Quoted",
+            "Not quoted",
+            "Always 20",
+            "Always 100"
+          ],
+          "answer": 1,
+          "why": "That page did not return a body."
+        },
+        {
+          "q": "Default queue behavior in this lesson is",
+          "choices": [
+            "Fully specified",
+            "Not copied, because that article body did not return",
+            "Always abandon",
+            "A list mode"
+          ],
+          "answer": 1,
+          "why": "Do not reuse an unread article as if this page printed it."
+        },
+        {
+          "q": "The safe sentence is",
+          "choices": [
+            "The chapter points at another guide",
+            "The other guide's fields, from memory",
+            "Longest idle is the default",
+            "Level 1 is defined here"
+          ],
+          "answer": 1,
+          "why": "Stay on the sentence you read."
+        }
+      ],
+      "cards": [
+        {
+          "front": "Pointer name?",
+          "back": "Configuring Skills."
+        },
+        {
+          "front": "Body read?",
+          "back": "No."
+        },
+        {
+          "front": "Priority number?",
+          "back": "Not in this lesson."
+        },
+        {
+          "front": "Safe sentence?",
+          "back": "The chapter points elsewhere."
+        }
+      ],
+      "lab": {
+        "title": "Write the pointer",
+        "goal": "One sentence that names the guide and stops.",
+        "steps": [
+          "Configuring Skills",
+          "Campaign Administrator's Guide",
+          "No extra field"
+        ],
+        "success": "The sentence does not invent a field.",
+        "href": ""
+      },
+      "fault": {
+        "title": "A diagram shows Skill Transfer priority 20 as the Five9 default",
+        "symptom": "This check did not read that module page.",
+        "log": "PRIORITY 20 SOURCE unread",
+        "choices": [
+          "Remove the number",
+          "Publish the diagram",
+          "Add predictive lines",
+          "Change the greeting"
+        ],
+        "answer": 0,
+        "cause": "An unread page is not a default.",
+        "fix": "Delete the number."
+      }
+    },
+    {
+      "id": "l07",
+      "title": "A routing review you can finish",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Finish the note",
+        "Leave the unread fields blank"
+      ],
+      "paragraphs": [
+        "A routing note can be finished with the pages that opened. Say that a skill group is agent or supervisor users on a campaign queue. Say whether the user and the campaign have one group or several. Say which tab the campaign type uses. Say that service level and voicemail are topic titles.",
+        "Then stop. Availability, caller ID, ANI, IVR, and DNIS are routing inputs on the Wikipedia page, not a Five9 field list. Competency-based routing is a sentence on the quality page, in the quality chapter, not a skill-group setting this page printed."
+      ],
+      "cites": [
+        {
+          "label": "Skill groups",
+          "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm"
+        },
+        {
+          "label": "Automatic call distributor",
+          "url": "https://en.wikipedia.org/wiki/Automatic_call_distributor"
+        }
+      ],
+      "uncertain": [],
+      "figure": {
+        "kind": "path",
+        "title": "The review",
+        "caption": "Five lines, then a gap list.",
+        "rows": [
+          {
+            "label": "Who is in the group"
+          },
+          {
+            "label": "How many groups"
+          },
+          {
+            "label": "Which tab"
+          },
+          {
+            "label": "Which topic titles exist"
+          },
+          {
+            "label": "Which pages did not open"
+          }
+        ]
+      },
+      "flow": {
+        "title": "Review one queue",
+        "lanes": [
+          "Note",
+          "Gap"
+        ],
+        "steps": [
+          {
+            "lane": "Note",
+            "title": "Who",
+            "detail": "Agents or supervisors.",
+            "frame": "who"
+          },
+          {
+            "lane": "Note",
+            "title": "Count",
+            "detail": "One group or several, on purpose.",
+            "frame": "count"
+          },
+          {
+            "lane": "Note",
+            "title": "Tab",
+            "detail": "Skills, or Outbound Skills.",
+            "frame": "tab"
+          },
+          {
+            "lane": "Note",
+            "title": "Titles",
+            "detail": "Service level and voicemail are titles.",
+            "frame": "titles"
+          },
+          {
+            "lane": "Gap",
+            "title": "Unread",
+            "detail": "Tie-break, formula, and priority stay blank.",
+            "frame": "gap"
+          },
+          {
+            "lane": "Note",
+            "title": "Sign",
+            "detail": "The note matches the opened pages.",
+            "frame": "sign"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "q": "A finished routing note includes",
+          "choices": [
+            "A guessed longest-idle rule",
+            "Roles, membership, the tab, and the topic titles",
+            "A package version",
+            "An exam code"
+          ],
+          "answer": 1,
+          "why": "Those are the sentences this chapter read."
+        },
+        {
+          "q": "Wikipedia routing inputs such as ANI and DNIS are",
+          "choices": [
+            "Five9 field names by themselves",
+            "On the Wikipedia page, not a Five9 dialog this chapter read",
+            "Codecs",
+            "Badges"
+          ],
+          "answer": 1,
+          "why": "Keep the page attached to the sentence."
+        },
+        {
+          "q": "The tie-break belongs in the note as",
+          "choices": [
+            "A number",
+            "A blank marked confirm",
+            "Level 1",
+            "Priority 20"
+          ],
+          "answer": 1,
+          "why": "It was not read."
+        },
+        {
+          "q": "The tab for inbound is",
+          "choices": [
+            "Skills",
+            "Outbound Skills",
+            "Either, it does not matter",
+            "Absent"
+          ],
+          "answer": 1,
+          "why": "The chapter names Outbound Skills."
+        },
+        {
+          "q": "Signing a note that adds an unread default is",
+          "choices": [
+            "Thorough",
+            "A failure of the review",
+            "Required",
+            "A codec choice"
+          ],
+          "answer": 1,
+          "why": "The review stops at the opened pages."
+        }
+      ],
+      "cards": [
+        {
+          "front": "What must the note name?",
+          "back": "Roles, membership, tab, topic titles."
+        },
+        {
+          "front": "Wikipedia inputs?",
+          "back": "Not Five9 fields by themselves."
+        },
+        {
+          "front": "Unread tie-break?",
+          "back": "Leave it blank."
+        },
+        {
+          "front": "Inbound tab?",
+          "back": "Outbound Skills."
+        }
+      ],
+      "lab": {
+        "title": "Finish one note",
+        "goal": "Use a real or sample queue and stop at the gaps.",
+        "steps": [
+          "Name the group",
+          "Name the tab",
+          "List the confirms"
+        ],
+        "success": "Nothing unread was filled in.",
+        "href": ""
+      },
+      "fault": {
+        "title": "The review adds a skill level of 1 as the highest priority",
+        "symptom": "That sentence was not on the page this chapter read.",
+        "log": "LEVEL 1 SOURCE unread",
+        "choices": [
+          "Remove it",
+          "Keep it as a common ACD habit",
+          "Add a third skill",
+          "Reset the list"
+        ],
+        "answer": 0,
+        "cause": "A habit is not the chapter.",
+        "fix": "Delete the level until its page is read."
+      }
+    }
+  ]
+}

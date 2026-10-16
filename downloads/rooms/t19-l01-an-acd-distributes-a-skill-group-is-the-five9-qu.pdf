@@ -1,0 +1,77 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 1399 >>
+stream
+BT
+/F1 10 Tf
+48 740 Td
+14 TL
+(An ACD distributes. A skill group is the Five9 queue) Tj
+T*
+() Tj
+T*
+(Wikipedia describes an automatic call distributor as a telephony device that answers and) Tj
+T*
+(distributes incoming calls to a group of terminals or agents. It says the route can depend) Tj
+T*
+(on the caller's number, the number dialed, the time of day, or an answer to a voice prompt,) Tj
+T*
+(and that an advanced system may take input from CTI, CSTA, or an IVR.) Tj
+T*
+(The Five9 skill groups chapter is the queue this lab could read. It says skill groups) Tj
+T*
+(organize users who have the agent or supervisor role into groups assigned to the call queues) Tj
+T*
+(that are part of campaigns. That is the Five9 object. The Wikipedia article is the general) Tj
+T*
+(word ACD. Do not treat them as the same paragraph.) Tj
+T*
+(Separate the general word from the Five9 object) Tj
+T*
+(Quote the page that opened) Tj
+T*
+() Tj
+T*
+(Sources and go deeper) Tj
+T*
+(Automatic call distributor. wikipedia.) Tj
+T*
+(https://en.wikipedia.org/wiki/Automatic_call_distributor. last checked 2026-10.) Tj
+T*
+(Skill groups. vendor.) Tj
+T*
+(https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm.) Tj
+T*
+(last checked 2026-10.) Tj
+T*
+(Interactive voice response. wikipedia.) Tj
+T*
+(https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.) Tj
+T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Contents 2 0 R /Resources << /Font << /F1 1 0 R >> >> >>
+endobj
+4 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+5 0 obj
+<< /Type /Catalog /Pages 4 0 R >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000001530 00000 n 
+0000001656 00000 n 
+0000001713 00000 n 
+trailer << /Size 6 /Root 5 0 R >>
+startxref
+1762
+%%EOF

@@ -3,7 +3,7 @@
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
 endobj
 2 0 obj
-<< /Length 1398 >>
+<< /Length 1397 >>
 stream
 BT
 /F1 10 Tf
@@ -47,7 +47,7 @@ T*
 T*
 (confirm. A 20 ms packet time is a practitioner note about Cisco gateways, not a figure) Tj
 T*
-(quoted from the Five9 technical requirements in this lab.. last checked 2026-10.) Tj
+(quoted from the Five9 technical requirements in this lab. last checked 2026-10.) Tj
 T*
 ET
 endstream
@@ -66,10 +66,10 @@ xref
 0000000000 65535 f 
 0000000009 00000 n 
 0000000079 00000 n 
-0000001529 00000 n 
-0000001655 00000 n 
-0000001712 00000 n 
+0000001528 00000 n 
+0000001654 00000 n 
+0000001711 00000 n 
 trailer << /Size 6 /Root 5 0 R >>
 startxref
-1761
+1760
 %%EOF

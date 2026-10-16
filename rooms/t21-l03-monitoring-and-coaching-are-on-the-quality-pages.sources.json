@@ -1,0 +1,21 @@
+{
+  "id": "t21-l03-monitoring-and-coaching-are-on-the-quality-pages",
+  "title": "Monitoring and coaching are on the quality pages",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Workforce engagement management",
+      "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Quality management",
+      "url": "https://www.five9.com/products/capabilities/call-center-quality-management-monitoring-tools",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

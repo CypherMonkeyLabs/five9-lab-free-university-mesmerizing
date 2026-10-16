@@ -1,0 +1,13 @@
+# CTI is a named API, not a vibe · Worked example
+
+- Pick three from the list and do not describe their payloads.
+- CTI
+- One neighbor
+- No invented field
+- The names match the page.
+
+## Sources and go deeper
+
+- [APIs and SDKs](https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks). vendor. last checked 2026-10.
+- [Automatic call distributor](https://en.wikipedia.org/wiki/Automatic_call_distributor). wikipedia. last checked 2026-10.
+- confirm. Salesforce screen pop, click-to-dial, and package versions were not on the pages this chapter could read. last checked 2026-10.

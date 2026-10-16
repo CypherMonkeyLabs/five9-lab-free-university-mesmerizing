@@ -1,0 +1,121 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 3497 >>
+stream
+BT
+/F1 10 Tf
+48 740 Td
+14 TL
+(Skills routing and ACD) Tj
+T*
+() Tj
+T*
+(A skill group is the queue the admin chapter describes. The general word ACD stays on its) Tj
+T*
+(own page. An ACD distributes. A skill group is the Five9 queue Wikipedia describes an) Tj
+T*
+(automatic call distributor as a telephony device that answers and distributes incoming calls) Tj
+T*
+(to a group of terminals or agents. It says the route can depend on the caller&#x27;s number,) Tj
+T*
+(the number dialed, the time of day, or an answer to a voice prompt, and that an advanced) Tj
+T*
+(system may take input from CTI, CSTA, or an IVR. One person, several skills. One campaign,) Tj
+T*
+(several groups The same chapter says users can be assigned to multiple skill groups, and) Tj
+T*
+(campaigns can have multiple skill groups. Membership is not a single label for life.) Tj
+T*
+(Outbound uses Skills. Inbound and autodial use Outbound Skills The chapter splits the tabs.) Tj
+T*
+(Outbound campaigns route dialer calls by the skill groups on the Skills tab of the campaign) Tj
+T*
+(properties. Inbound and autodial campaigns route to the skill groups listed on the Outbound) Tj
+T*
+(Skills tab of the inbound campaign properties. You can add, change, remove, and message the) Tj
+T*
+(group The chapter says you can add, modify, and remove skill groups. It also says you can) Tj
+T*
+(send a message to all the agents in a skill group. Service level and voicemail are topics on) Tj
+T*
+(the same chapter The skill groups table of contents that opened lists Managing Skill Group) Tj
+T*
+(Service Levels, Routing Voicemail Messages to Skill Groups, Managing Skill Voicemail) Tj
+T*
+(Messages, Managing Skill Voicemail Greetings, and Managing Audio Files for Skill Groups.) Tj
+T*
+(Adding skills to a campaign points at another guide The skill groups chapter says that) Tj
+T*
+(adding skill groups to campaigns is covered in Configuring Skills in the Campaign) Tj
+T*
+(Administrator&#x27;s Guide. It does not paste that guide into the chapter. A routing review) Tj
+T*
+(you can finish A routing note can be finished with the pages that opened. Say that a skill) Tj
+T*
+(group is agent or supervisor users on a campaign queue. Say whether the user and the) Tj
+T*
+(campaign have one group or several. Say which tab the campaign type uses. Say that service) Tj
+T*
+(level and voicemail are topic titles.) Tj
+T*
+() Tj
+T*
+(Sources and go deeper) Tj
+T*
+(Automatic call distributor. wikipedia.) Tj
+T*
+(https://en.wikipedia.org/wiki/Automatic_call_distributor. last checked 2026-10.) Tj
+T*
+(Skill groups. vendor.) Tj
+T*
+(https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm.) Tj
+T*
+(last checked 2026-10.) Tj
+T*
+(Interactive voice response. wikipedia.) Tj
+T*
+(https://en.wikipedia.org/wiki/Interactive_voice_response. last checked 2026-10.) Tj
+T*
+(confirm. Which skill wins when one agent is eligible for two ringing queues was not on the) Tj
+T*
+(skill groups chapter this lab read. last checked 2026-10.) Tj
+T*
+(confirm. The service-level and skill-voicemail child pages did not return a body in this) Tj
+T*
+(check. No threshold and no click-path is stated. last checked 2026-10.) Tj
+T*
+(confirm. Configuring Skills and the Skill Transfer module page did not return a body in this) Tj
+T*
+(check. No priority value is stated. last checked 2026-10.) Tj
+T*
+(ITU-T E.164, international public telecommunication numbering. standard.) Tj
+T*
+(https://www.itu.int/rec/T-REC-E.164. last checked 2026-10.) Tj
+T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Contents 2 0 R /Resources << /Font << /F1 1 0 R >> >> >>
+endobj
+4 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+5 0 obj
+<< /Type /Catalog /Pages 4 0 R >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000003628 00000 n 
+0000003754 00000 n 
+0000003811 00000 n 
+trailer << /Size 6 /Root 5 0 R >>
+startxref
+3860
+%%EOF

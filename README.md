@@ -24,7 +24,7 @@ node scripts/verify.mjs
 
 ## What you can do
 
-- Eighteen tracks, loaded one at a time. The first paint does not download Three.js or the track files.
+- Twenty-three tracks, loaded one at a time. The first paint does not download Three.js or the track files. Skills and ACD, workforce, quality, CRM and CTI, and the ecosystem are in the menu.
 - Each lesson has a figure, a Play / Pause / Step / Inspect flow, a quiz, flashcards, a lab, and a fault log.
 - IVR script builder. Module names follow the IVR Administrator's Guide. The export is a learning JSON, not a file VCC can import.
 - Dialer pacing simulator for preview, progressive, power, predictive, and TCPA manual touch. It is a classroom clock, not the Five9 dialer.
@@ -37,7 +37,7 @@ node scripts/verify.mjs
 
 ## Counts
 
-`node scripts/verify.mjs` reports 18 tracks, 126 lessons, 630 quiz questions, 504 flashcards, 126 labs, 126 faults, 36 interview answers, 8 boss incidents, and 40 glossary rows. The counted shell (HTML, `app.css`, `app.js`, and loaders) stays under the script's limit. Three.js stays off the first paint. University CSS, diagrams, and the cheat-sheet files load with the pages that need them.
+`node scripts/verify.mjs` reports 23 tracks, 161 lessons, 805 quiz questions, 644 flashcards, 161 labs, 161 faults, 36 interview answers, 8 boss incidents, and 44 glossary rows. The round-2 build writes 161 drawings, one SVG and one PNG per lesson. The counted shell (HTML, `app.css`, `app.js`, and loaders) stays under the script's limit. Three.js stays off the first paint. University CSS, diagrams, and the cheat-sheet files load with the pages that need them.
 
 ## Screenshots
 

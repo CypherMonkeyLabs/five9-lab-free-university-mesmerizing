@@ -335,7 +335,7 @@ async function renderHome() {
 }
 
 function renderTracks() {
-  setTitle("Tracks", "Eighteen paths from the domain model to a Cisco cutover.");
+  setTitle("Tracks", `${session.catalog.tracks.length} paths from the domain model through routing, workforce, quality, CRM, and the ecosystem.`);
   const groups = {};
   session.catalog.tracks.forEach((track) => {
     groups[track.group] = groups[track.group] || [];

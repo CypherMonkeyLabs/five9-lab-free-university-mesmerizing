@@ -1,0 +1,71 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 1129 >>
+stream
+BT
+/F1 10 Tf
+48 740 Td
+14 TL
+(CTI is a named API, not a vibe   Learn it in 5 minutes) Tj
+T*
+() Tj
+T*
+(The APIs and SDKs page lists a Computer Telephony Integration \(CTI\) Web Services API next to) Tj
+T*
+(Configuration, Reporting, Statistics, Web2Campaign, the CRM SDK, and Web Connectors. CTI, on) Tj
+T*
+(that page, is one of those names.) Tj
+T*
+(Wikipedia's ACD article says an advanced distributor may use computer telephony integration) Tj
+T*
+(as an input to the route. That is the general word. Five9's page is the product name. A) Tj
+T*
+(screen pop, a click-to-dial button, and a package version were not on the pages this chapter) Tj
+T*
+(read.) Tj
+T*
+() Tj
+T*
+(Sources and go deeper) Tj
+T*
+(APIs and SDKs. vendor.) Tj
+T*
+(https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks. last checked) Tj
+T*
+(2026-10.) Tj
+T*
+(Automatic call distributor. wikipedia.) Tj
+T*
+(https://en.wikipedia.org/wiki/Automatic_call_distributor. last checked 2026-10.) Tj
+T*
+(confirm. Salesforce screen pop, click-to-dial, and package versions were not on the pages) Tj
+T*
+(this chapter could read. last checked 2026-10.) Tj
+T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Contents 2 0 R /Resources << /Font << /F1 1 0 R >> >> >>
+endobj
+4 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+5 0 obj
+<< /Type /Catalog /Pages 4 0 R >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000001260 00000 n 
+0000001386 00000 n 
+0000001443 00000 n 
+trailer << /Size 6 /Root 5 0 R >>
+startxref
+1492
+%%EOF

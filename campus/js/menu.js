@@ -21,7 +21,11 @@ const ICONS = {
   badges: '<path d="M12 3l2.2 4.6 5 .7-3.6 3.5.9 5L12 14.8 7.5 16.8l.9-5L4.8 8.3l5-.7z"></path>',
   menu: '<path d="M5 7h14"></path><path d="M5 12h14"></path><path d="M5 17h14"></path>',
   listen: '<path d="M4 10v4h3l4 3V7L7 10z"></path><path d="M16 9a4 4 0 0 1 0 6"></path>',
-  search: '<circle cx="11" cy="11" r="6"></circle><path d="M15.5 15.5L20 20"></path>'
+  search: '<circle cx="11" cy="11" r="6"></circle><path d="M15.5 15.5L20 20"></path>',
+  acd: '<path d="M8 4h3l1 3-2 1a9 9 0 0 0 4 4l1-2 3 1v3a2 2 0 0 1-2 2A13 13 0 0 1 6 6a2 2 0 0 1 2-2z"></path>',
+  wfm: '<rect x="4" y="5" width="16" height="15" rx="2"></rect><path d="M8 3v4"></path><path d="M16 3v4"></path><path d="M4 10h16"></path>',
+  quality: '<path d="M4 10v4h3l4 3V7L7 10z"></path><path d="M16 9a4 4 0 0 1 0 6"></path>',
+  crm: '<path d="M8 8h4v4H8z"></path><path d="M14 12h4v4h-4z"></path><path d="M12 10h2"></path>'
 };
 
 export function paintMenuIcons(root) {

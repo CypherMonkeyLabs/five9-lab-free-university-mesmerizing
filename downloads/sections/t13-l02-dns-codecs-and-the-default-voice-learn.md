@@ -14,4 +14,4 @@
 - [ITU-T G.711](https://www.itu.int/rec/T-REC-G.711). standard. last checked 2026-10.
 - [RFC 1035, domain names](https://www.rfc-editor.org/rfc/rfc1035). rfc. last checked 2026-10.
 - [RFC 2782, DNS SRV](https://www.rfc-editor.org/rfc/rfc2782). rfc. last checked 2026-10.
-- confirm. A 20 ms packet time is a practitioner note about Cisco gateways, not a figure quoted from the Five9 technical requirements in this lab.. last checked 2026-10.
+- confirm. A 20 ms packet time is a practitioner note about Cisco gateways, not a figure quoted from the Five9 technical requirements in this lab. last checked 2026-10.

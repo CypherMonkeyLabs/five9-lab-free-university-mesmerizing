@@ -1,0 +1,14 @@
+{
+  "id": "t23-l04-the-integration-map-is-the-api-list-drawn",
+  "title": "The integration map is the API list, drawn",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "APIs and SDKs",
+      "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

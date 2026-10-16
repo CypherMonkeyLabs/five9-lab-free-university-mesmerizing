@@ -1,0 +1,28 @@
+{
+  "id": "t22-l01-cti-is-a-named-api-not-a-vibe",
+  "title": "CTI is a named API, not a vibe",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "APIs and SDKs",
+      "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Automatic call distributor",
+      "url": "https://en.wikipedia.org/wiki/Automatic_call_distributor",
+      "kind": "wikipedia",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Salesforce screen pop, click-to-dial, and package versions were not on the pages this chapter could read.",
+      "url": "",
+      "kind": "note",
+      "status": "confirm",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

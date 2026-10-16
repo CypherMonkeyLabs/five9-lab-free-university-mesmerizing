@@ -1,0 +1,14 @@
+{
+  "id": "t19-l04-you-can-add-change-remove-and-message-the-group",
+  "title": "You can add, change, remove, and message the group",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Skill groups",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

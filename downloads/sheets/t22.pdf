@@ -1,0 +1,152 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 3561 >>
+stream
+BT
+/F1 10 Tf
+48 740 Td
+14 TL
+(CRM and CTI integrations) Tj
+T*
+() Tj
+T*
+(Public pages name the CRMs and the CTI API. Admin feature lists that did not open stay) Tj
+T*
+(blank. CTI is a named API, not a vibe The APIs and SDKs page lists a Computer Telephony) Tj
+T*
+(Integration \(CTI\) Web Services API next to Configuration, Reporting, Statistics,) Tj
+T*
+(Web2Campaign, the CRM SDK, and Web Connectors. CTI, on that page, is one of those names. The) Tj
+T*
+(prebuilt CRM names are a list The APIs page says it has pre-built integrations with) Tj
+T*
+(Salesforce, ServiceNow, Microsoft Dynamics 365, Oracle Service Cloud, Oracle NetSuite, and) Tj
+T*
+(Zendesk. A later line says robust pre-built integrations with Salesforce, ServiceNow,) Tj
+T*
+(Microsoft, Oracle, and Zendesk. Plus and a prebuilt adapter share a technology story The) Tj
+T*
+(desktop page says that whether you deploy Agent Desktop Plus or a pre-built CRM integration,) Tj
+T*
+(you get the same underlying technology. It also describes the Agent Desktop Toolkit as REST) Tj
+T*
+(APIs, reference UIs, and other tools to embed agent functionality in a custom CRM or another) Tj
+T*
+(CRM. Workforce tools can show up inside the CRM The desktop page says WFO connectors reach) Tj
+T*
+(schedules, adherence, time-off requests, shift bidding, and evaluation review from inside) Tj
+T*
+(the CRM. The WFM page says you can embed WFM in the CRM and extend it to CRM digital) Tj
+T*
+(channels, and its pre-built CRM card names Oracle and ServiceNow. Zoom Phone and Teams are) Tj
+T*
+(on the same API page The APIs page also lists pre-built integrations with Zoom Phone and) Tj
+T*
+(Microsoft Teams. It says those connections are so agents can reach someone to resolve a) Tj
+T*
+(question or consult an expert. That is a UC story, not a CRM adapter. Salesforce and) Tj
+T*
+(ServiceNow are names until the admin page opens Salesforce and ServiceNow are on the API) Tj
+T*
+(list, the desktop line, and the quality list. ServiceNow is also on the WFM CRM card with) Tj
+T*
+(Oracle. That is what this chapter can say about them. A CRM note you can defend A defendable) Tj
+T*
+(note names the surface, the list, and the gap. Surface: Plus, prebuilt, toolkit, or) Tj
+T*
+(bookmark. List: the API CRM names, the UC names, or the WFO actions. Gap: anything from an) Tj
+T*
+(admin guide that did not open, marked confirm, with no URL and no guessed field.) Tj
+T*
+() Tj
+T*
+(Sources and go deeper) Tj
+T*
+(APIs and SDKs. vendor.) Tj
+T*
+(https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks. last checked) Tj
+T*
+(2026-10.) Tj
+T*
+(Automatic call distributor. wikipedia.) Tj
+T*
+(https://en.wikipedia.org/wiki/Automatic_call_distributor. last checked 2026-10.) Tj
+T*
+(confirm. Salesforce screen pop, click-to-dial, and package versions were not on the pages) Tj
+T*
+(this chapter could read. last checked 2026-10.) Tj
+T*
+(Agent Desktop. vendor.) Tj
+T*
+(https://www.five9.com/platform/self-service-and-engagement/agent-desktop. last checked) Tj
+T*
+(2026-10.) Tj
+T*
+(confirm. This chapter does not restate Salesforce package numbers. The) Tj
+T*
+(technical-requirements PDF was not the page quoted here. last checked 2026-10.) Tj
+T*
+(Workforce management. vendor.) Tj
+T*
+(https://www.five9.com/platform/insights-and-analytics/workforce-management. last checked) Tj
+T*
+(2026-10.) Tj
+T*
+(Workforce engagement management. vendor.) Tj
+T*
+(https://www.five9.com/products/capabilities/workforce-optimization. last checked 2026-10.) Tj
+T*
+(confirm. This lab did not open the partner marketplace, so over 55 is the API page's) Tj
+T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Length 399 >>
+stream
+BT
+/F1 10 Tf
+48 740 Td
+14 TL
+(sentence and not a fresh count. last checked 2026-10.) Tj
+T*
+(confirm. ServiceNow workspace names, Salesforce Lightning editions, screen pop, and) Tj
+T*
+(click-to-dial did not return a body in this check. last checked 2026-10.) Tj
+T*
+(confirm. Project size is not on the API page. Minimal coding is their phrase, not an) Tj
+T*
+(estimate. last checked 2026-10.) Tj
+T*
+ET
+endstream
+endobj
+4 0 obj
+<< /Type /Page /Parent 6 0 R /MediaBox [0 0 612 792] /Contents 2 0 R /Resources << /Font << /F1 1 0 R >> >> >>
+endobj
+5 0 obj
+<< /Type /Page /Parent 6 0 R /MediaBox [0 0 612 792] /Contents 3 0 R /Resources << /Font << /F1 1 0 R >> >> >>
+endobj
+6 0 obj
+<< /Type /Pages /Kids [4 0 R 5 0 R] /Count 2 >>
+endobj
+7 0 obj
+<< /Type /Catalog /Pages 6 0 R >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000003692 00000 n 
+0000004142 00000 n 
+0000004268 00000 n 
+0000004394 00000 n 
+0000004457 00000 n 
+trailer << /Size 8 /Root 7 0 R >>
+startxref
+4506
+%%EOF

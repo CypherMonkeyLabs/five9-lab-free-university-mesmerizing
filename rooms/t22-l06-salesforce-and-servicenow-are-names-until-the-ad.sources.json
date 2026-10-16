@@ -1,0 +1,35 @@
+{
+  "id": "t22-l06-salesforce-and-servicenow-are-names-until-the-ad",
+  "title": "Salesforce and ServiceNow are names until the admin page opens",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "APIs and SDKs",
+      "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Agent Desktop",
+      "url": "https://www.five9.com/platform/self-service-and-engagement/agent-desktop",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Workforce management",
+      "url": "https://www.five9.com/platform/insights-and-analytics/workforce-management",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "ServiceNow workspace names, Salesforce Lightning editions, screen pop, and click-to-dial did not return a body in this check.",
+      "url": "",
+      "kind": "note",
+      "status": "confirm",
+      "lastChecked": "2026-10"
+    }
+  ]
+}

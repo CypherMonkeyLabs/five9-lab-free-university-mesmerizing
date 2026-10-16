@@ -3,7 +3,7 @@
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
 endobj
 2 0 obj
-<< /Length 1825 >>
+<< /Length 1824 >>
 stream
 BT
 /F1 10 Tf
@@ -59,7 +59,7 @@ T*
 T*
 (confirm. NANP versus E.164, 20 ms ptime, and 'no internal extensions' are practitioner) Tj
 T*
-(cautions. They are not quoted here as Five9 requirements.. last checked 2026-10.) Tj
+(cautions. They are not quoted here as Five9 requirements. last checked 2026-10.) Tj
 T*
 ET
 endstream
@@ -78,10 +78,10 @@ xref
 0000000000 65535 f 
 0000000009 00000 n 
 0000000079 00000 n 
-0000001956 00000 n 
-0000002082 00000 n 
-0000002139 00000 n 
+0000001955 00000 n 
+0000002081 00000 n 
+0000002138 00000 n 
 trailer << /Size 6 /Root 5 0 R >>
 startxref
-2188
+2187
 %%EOF

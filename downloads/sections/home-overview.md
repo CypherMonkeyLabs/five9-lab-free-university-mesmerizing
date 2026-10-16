@@ -1,6 +1,6 @@
 # Five9 Lab overview
 
-- 126 drawings. Each SVG is the diagram and the flow, counted once.
+- 161 drawings. Each SVG is the diagram and the flow, counted once.
 
 ## Sources and go deeper
 

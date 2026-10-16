@@ -1,0 +1,67 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 890 >>
+stream
+BT
+/F1 10 Tf
+48 740 Td
+14 TL
+(The integration map is the API list, drawn) Tj
+T*
+() Tj
+T*
+(An integration map for this chapter is the API list turned sideways: CTI, Configuration,) Tj
+T*
+(Reporting, Statistics, Web2Campaign, CRM SDK, and Web Connectors, plus the prebuilt CRM) Tj
+T*
+(names and the UC names. REST is the access sentence for agents, administrators, supervisors,) Tj
+T*
+(and reporting users.) Tj
+T*
+(Web Connectors and the CRM SDK are both on that list and they are not the same row. A) Tj
+T*
+(connector that opens a page and an SDK you build against are different objects. The map) Tj
+T*
+(labels both. It does not invent payloads.) Tj
+T*
+(Draw the API list) Tj
+T*
+(Do not draw payloads) Tj
+T*
+() Tj
+T*
+(Sources and go deeper) Tj
+T*
+(APIs and SDKs. vendor.) Tj
+T*
+(https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks. last checked) Tj
+T*
+(2026-10.) Tj
+T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Contents 2 0 R /Resources << /Font << /F1 1 0 R >> >> >>
+endobj
+4 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+5 0 obj
+<< /Type /Catalog /Pages 4 0 R >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000001020 00000 n 
+0000001146 00000 n 
+0000001203 00000 n 
+trailer << /Size 6 /Root 5 0 R >>
+startxref
+1252
+%%EOF

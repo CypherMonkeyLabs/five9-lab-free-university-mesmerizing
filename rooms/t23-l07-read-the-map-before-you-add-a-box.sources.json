@@ -1,0 +1,35 @@
+{
+  "id": "t23-l07-read-the-map-before-you-add-a-box",
+  "title": "Read the map before you add a box",
+  "checked": "2026-10",
+  "sources": [
+    {
+      "label": "Skill groups",
+      "url": "https://documentation.five9.com/bundle/basic-admin/page/basic-admin/skill-groups/_ch-skill-groups.htm",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Agent Desktop",
+      "url": "https://www.five9.com/platform/self-service-and-engagement/agent-desktop",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "APIs and SDKs",
+      "url": "https://www.five9.com/platform/integrations-and-ecosystem/apis-and-sdks",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    },
+    {
+      "label": "Workforce engagement management",
+      "url": "https://www.five9.com/products/capabilities/workforce-optimization",
+      "kind": "vendor",
+      "status": "ok",
+      "lastChecked": "2026-10"
+    }
+  ]
+}
