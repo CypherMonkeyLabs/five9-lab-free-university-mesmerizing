@@ -501,6 +501,11 @@
     if (host.classList.contains("is-greet")) { dock(); return; }
     setOpen(panel.hidden);
   });
+  document.addEventListener("keydown", function (event) {
+    if (event.key !== "Escape") return;
+    if (!tour.hidden) { endTour(true); return; }
+    if (host.classList.contains("is-greet")) dock();
+  });
   host.querySelectorAll("[data-greet-dock]").forEach(function (btn) {
     btn.addEventListener("click", function () { dock(); });
   });
