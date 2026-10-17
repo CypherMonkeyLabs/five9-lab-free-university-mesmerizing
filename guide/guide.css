@@ -205,6 +205,10 @@ html[data-motion="full"] .cg-monkey { animation: cg-bob 3.2s ease-in-out infinit
 .cg-root.is-touring .cg-monkey,
 .cg-root.is-touring .cg-nudge { visibility: hidden; }
 .cg-root.is-clear .cg-tour { visibility: visible; }
+/* R2 QA: on wide screens the tour callout never reaches the dock, so the guide stays visible during the first-visit tour. */
+@media (min-width: 900px) {
+  .cg-root.is-touring .cg-monkey { visibility: visible; pointer-events: none; }
+}
 .cg-tour {
   position: fixed;
   inset: 0;
