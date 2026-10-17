@@ -1,5 +1,5 @@
 /* Offline shell for the Five9 university. Same-origin GET only. */
-var CACHE = "five9-university-r2";
+var CACHE = "five9-university-r3";
 var SHELL = [
   "./",
   "./index.html",

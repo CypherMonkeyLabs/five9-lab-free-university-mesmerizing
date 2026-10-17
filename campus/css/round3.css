@@ -104,3 +104,10 @@ html[data-motion="full"] .rail a:hover { transform: translateX(4px); }
 }
 html[data-motion="reduce"] #primary-menu .menu-item:hover,
 html[data-motion="reduce"] .rail a:hover { transform: none; }
+
+/* R2 QA: Settings button had light text on a pale pink fill (contrast 1.14). Dark fill keeps the light label readable. */
+.top-actions #open-settings, .top-actions .btn#open-settings {
+  background: #0f172a !important;
+  color: #f8fafc !important;
+  border: 1px solid #94a3b8;
+}

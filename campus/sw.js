@@ -1,4 +1,4 @@
-const CACHE = "f9lab-shell-v7";
+const CACHE = "f9lab-shell-v8";
 const SHELL = [
   "./",
   "./index.html",
