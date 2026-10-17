@@ -310,3 +310,12 @@ html[data-motion="full"] .cg-monkey { animation: cg-bob 3.2s ease-in-out infinit
 @media (prefers-reduced-motion: reduce) {
   .cg-monkey { animation: none; }
 }
+
+/* Campus pages: university.css gives every body child position: relative, which parked the guide at the
+   bottom of the page. This id selector wins, keeps the guide fixed, and lifts it above the quick bar. */
+body > #tour-bot.cg-root {
+  position: fixed;
+  right: 12px;
+  bottom: calc(var(--dock-h, var(--tab-h, 0px)) + env(safe-area-inset-bottom, 0px) + 12px);
+  z-index: 70;
+}
