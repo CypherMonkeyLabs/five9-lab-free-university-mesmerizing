@@ -144,38 +144,11 @@
     log.appendChild(p);
     log.scrollTop = log.scrollHeight;
   }
-  function titleTextBottom() {
-    var title = document.querySelector(".hero-title, #main > h1");
-    if (!title) title = document.querySelector("#main h1, .section-head h2");
-    if (!title) return 0;
-    var range = document.createRange();
-    range.selectNodeContents(title);
-    var rects = range.getClientRects();
-    var bottom = 0;
-    for (var i = 0; i < rects.length; i++) {
-      if (rects[i].width > 1 && rects[i].height > 1) bottom = Math.max(bottom, rects[i].bottom);
-    }
-    return bottom;
-  }
-  function fitPanel() {
-    if (!panel) return;
-    panel.style.maxHeight = "";
-    if (panel.hidden || window.innerWidth > 720) return;
-    var bottom = titleTextBottom();
-    if (!bottom) return;
-    var dock = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--dock-h")) || 72;
-    var gap = 12;
-    if (panel.getBoundingClientRect().top >= bottom + gap) return;
-    var limit = window.innerHeight - dock - bottom - gap;
-    if (limit < 96) limit = 96;
-    panel.style.maxHeight = limit + "px";
-  }
   function setOpen(open) {
     panel.hidden = !open;
     monkey.setAttribute("aria-expanded", open ? "true" : "false");
     pose(open ? "wave" : "idle");
     if (open) showCards();
-    fitPanel();
   }
 
   function voices() {
@@ -385,7 +358,6 @@
       if (rect.top < window.innerHeight - 80 && rect.bottom > 80) hide = rect.top < window.innerHeight * 0.72;
     }
     host.classList.toggle("is-clear", hide);
-    fitPanel();
   }
 
   function greet() {

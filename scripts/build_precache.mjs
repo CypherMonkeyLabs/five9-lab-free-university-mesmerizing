@@ -53,7 +53,7 @@ if (missing.length) {
 const body = ["  \"./\",", ...chosen.map((rel) => `  "./${rel}",`)].join("\n");
 const swPath = path.join(root, "sw.js");
 let sw = fs.readFileSync(swPath, "utf8");
-if (!sw.includes("five9-university-r8")) {
+if (!sw.includes("five9-university-r9")) {
   console.error("cache name was not bumped");
   process.exit(1);
 }

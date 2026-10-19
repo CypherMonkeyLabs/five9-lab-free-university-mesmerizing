@@ -121,33 +121,41 @@ test("chat input fills the phone sheet", async ({ browser }) => {
   }
 });
 
-test("short phone answer log is at least 120px", async ({ browser }) => {
-  const context = await browser.newContext({
-    viewport: { width: 390, height: 430 },
-    hasTouch: true,
-    reducedMotion: "reduce",
-  });
-  const page = await context.newPage();
-  await ready(page);
-  await page.goto("/index.html");
-  await page.locator(".cg-monkey").click();
-  await page.waitForFunction(() => window.__f9botReady === true);
-  await expect(page.locator(".chrome-stack")).toBeHidden();
-  await expect(page.locator(".phone-dock")).toBeHidden();
-  await page.locator("#py-chat-input").fill("What is a skill group?");
-  await page.locator("#py-chat-input").press("Enter");
-  const log = page.locator(".py-chat-log");
-  await expect(log).toBeVisible();
-  await expect(log.locator(".py-msg-bot").last()).toContainText(/skill/i);
-  const visible = await log.evaluate((el) => {
-    const box = el.getBoundingClientRect();
-    const top = Math.max(box.top, 0);
-    const bottom = Math.min(box.bottom, window.innerHeight);
-    return { height: box.height, visible: bottom - top };
-  });
-  expect(visible.height).toBeGreaterThanOrEqual(120);
-  expect(visible.visible).toBeGreaterThanOrEqual(120);
-  await context.close();
+test("answer log stays readable on both phones", async ({ browser }) => {
+  for (const viewport of [
+    { width: 390, height: 844 },
+    { width: 390, height: 430 },
+  ]) {
+    const context = await browser.newContext({
+      viewport,
+      hasTouch: true,
+      reducedMotion: "reduce",
+    });
+    const page = await context.newPage();
+    await ready(page);
+    await page.goto("/index.html");
+    await page.locator(".cg-monkey").click();
+    await page.waitForFunction(() => window.__f9botReady === true);
+    if (viewport.height === 430) {
+      await expect(page.locator(".chrome-stack")).toBeHidden();
+      await expect(page.locator(".phone-dock")).toBeHidden();
+    }
+    await page.locator("#py-chat-input").fill("What is a skill group?");
+    await page.locator("#py-chat-input").press("Enter");
+    const log = page.locator(".py-chat-log");
+    await expect(log).toBeVisible();
+    await expect(log.locator(".py-msg-bot").last()).toContainText(/skill/i);
+    const visible = await log.evaluate((el) => {
+      const box = el.getBoundingClientRect();
+      const panel = document.querySelector("#cg-panel").getBoundingClientRect();
+      const top = Math.max(box.top, panel.top, 0);
+      const bottom = Math.min(box.bottom, panel.bottom, window.innerHeight);
+      return { height: box.height, visible: Math.max(0, bottom - top) };
+    });
+    expect(visible.height, `${viewport.width}x${viewport.height} log height`).toBeGreaterThanOrEqual(120);
+    expect(visible.visible, `${viewport.width}x${viewport.height} visible log`).toBeGreaterThanOrEqual(120);
+    await context.close();
+  }
 });
 
 test("routing desk is a labelled simulation", async ({ page }) => {
