@@ -316,8 +316,8 @@ function injection(raw) {
   return patterns.some((pattern) => pattern.test(q) || pattern.test(original));
 }
 
-const AMBIGUOUS = new Set("set list time key name file type open read match pass break call run end add new get use make home world page level course value data text line number item code help start show play count group say says said want need look come take give know think tell tell".split(" "));
-const STRONG_WORDS = new Set("five9 vcc adp campaign campaigns inbound outbound autodial disposition dispositions dnis ivr skill skills skillgroup queue queues acd preview progressive predictive power tcpa dnc manualtouch sip codec codecs webrtc ani crm cti salesforce servicenow adapter adapters sdk connector recording e911 voicemail prompt prompts profile profiles script scripts module modules gateway cutover partition csq uccx ucce workstation reason erlang supervisor permission contact contacts field fields dialer pacing abandon attestation retention screenpop callerid callanalysis servicelevel acw notready bandwidth nat tls pstn trunk trunks layout reporting wfm wem iva genai adherence forecast schedule quality evaluation coaching analytics wallboard dashboard zoom teams softphone station callback blended listpenetration timezone domain tenant redsky verint studio taskkey nlp transcript headset dns srv srtp rtp".split(" "));
+const AMBIGUOUS = new Set("set list time key name file type open read match pass break call run end add new get use make home world page level course value data text line number item code help start show play count group say says said want need look come take give know think tell tell history island python microsoft pizza password background crash prime topping change changed".split(" "));
+const STRONG_WORDS = new Set("five9 vcc adp campaign campaigns inbound outbound autodial disposition dispositions dnis ivr skill skills skillgroup queue queues acd preview progressive predictive power tcpa dnc manualtouch sip codec codecs webrtc ani crm cti salesforce servicenow adapter adapters sdk connector recording e911 voicemail prompt prompts profile profiles script scripts module modules gateway cutover partition csq uccx ucce workstation reason erlang supervisor permission contact contacts field fields dialer pacing abandon attestation retention screenpop callerid callanalysis servicelevel acw notready bandwidth nat tls pstn trunk trunks layout reporting wfm wem iva genai adherence forecast schedule quality evaluation coaching analytics wallboard dashboard zoom teams softphone station callback blended listpenetration timezone domain tenant redsky verint studio taskkey nlp transcript headset dns srv srtp rtp java jre variable variables".split(" "));
 const GENERIC_ENGLISH = new Set("time life home world page course help start people person spanish tokyo poem sea thank thanks meaning telephone calorie calories banana capital hiking restaurant population colour color breakfast winter rainfall lullaby haiku mango egg moon landing movie pizza weather flight story dragon cricket tire cake president bitcoin joke french goodbye".split(" "));
 
 function buildDomain(df, seeds) {
@@ -358,37 +358,53 @@ function typoKind(word, domain, syn, pool, freq) {
   if (!kind) return "";
   if (kind === "weak" && sharedPrefix(word, fix) < 2) return "";
   if (word.length >= 6 && sharedPrefix(word, fix) < 2) return "";
+  if (kind === "strong") {
+    const forms = [fix, stem(fix), canon(fix, syn)];
+    if (forms.some((form) => form && STRONG_WORDS.has(form))) return "curated";
+    return "indexed";
+  }
   return kind;
+}
+
+function inCurated(word, syn) {
+  const forms = [word, stem(word)];
+  const canonical = canon(word, syn);
+  if (canonical) forms.push(canonical, stem(canonical));
+  return forms.some((form) => STRONG_WORDS.has(form));
 }
 
 function hasDomainTerm(text, domain, syn, pool, freq) {
   const parts = normalize(text).split(" ").filter((word) => word && word.length >= 2 && !STOP.has(word) && !FILLER.has(word));
   if (!parts.length) return false;
-  let strong = 0;
-  let weak = 0;
+  let curated = 0;
+  let indexed = 0;
+  let ambiguous = 0;
   let foreign = 0;
-  let typoStrong = 0;
+  const lessonWord = (word) => domain.strong.has(word) || domain.strong.has(stem(word));
   for (const word of parts) {
-    const rawKind = domainKind(word, domain, syn);
-    if (rawKind === "strong") {
-      strong += 1;
+    if (inCurated(word, syn)) {
+      curated += 1;
       continue;
     }
-    if (rawKind === "weak") {
-      weak += 1;
+    if (AMBIGUOUS.has(word) || AMBIGUOUS.has(stem(word)) || GENERIC_ENGLISH.has(word) || GENERIC_ENGLISH.has(stem(word))) {
+      ambiguous += 1;
+      continue;
+    }
+    if (lessonWord(word)) {
+      indexed += 1;
       continue;
     }
     const kind = typoKind(word, domain, syn, pool, freq);
-    if (kind === "stop") continue;
-    if (kind === "strong") typoStrong += 1;
-    else if (kind === "weak") weak += 1;
+    if (kind === "curated") curated += 1;
+    else if (kind === "indexed" || kind === "strong") indexed += 1;
+    else if (kind === "stop" || kind === "weak") ambiguous += 1;
     else if (word.length <= 3 || STOP.has(stem(word))) continue;
     else foreign += 1;
   }
-  if (strong >= 1) return true;
-  if (typoStrong >= 1 && foreign === 0) return true;
-  if (weak >= 2 && foreign === 0) return true;
-  return weak >= 1 && foreign === 0;
+  if (foreign > 0 && curated <= foreign) return false;
+  if (curated > 0) return true;
+  if (ambiguous > 0 && indexed === 0) return false;
+  return indexed > 0 && foreign === 0;
 }
 
 const GREET_FILL = new Set("there friend guide everyone folks all buddy pal anyone home up whats ya bot again today please just so hi hello".split(" "));
@@ -664,7 +680,8 @@ export function createRetriever(index) {
     if (/\bivr\b|\bskript\b/.test(normalized)) addForm("ivr");
     if (/\bsalesforce\b|\bsalesforse\b/.test(normalized)) addForm("salesforce");
     if (/\bservicenow\b/.test(normalized)) addForm("servicenow");
-    if (/\bwebrtc\b|\bsofphone\b|\bsoftphone\b/.test(normalized)) addForm("webrtc");
+    if (/\bwebrtc\b/.test(normalized)) addForm("webrtc");
+    if (/\bsofphone\b|\bsoftphone\b/.test(normalized)) addForm("softphone");
     if (/\be911\b|\b911\b/.test(normalized)) addForm("e911");
     if (/\buccx\b|\bmigraton\b|\bmigration\b/.test(normalized)) addForm("uccx");
     if (/\bvoicemail\b|\bvoicemal\b/.test(normalized)) addForm("voicemail");
@@ -1065,12 +1082,20 @@ export function createRetriever(index) {
     const seed = matchSeed(routed.searchText);
     if (seed) return fromSeed(seed, limited);
     const qTerms = queryTokens(routed.searchText, syn, pool, knownSet, seedPool, freq);
+    const anchors = [...new Set(qTerms.filter((term) => STRONG_WORDS.has(term)))];
     const indexed = qTerms.filter((term) => df.has(term));
     const topical = indexed.filter((term) => !/^\d+$/.test(term));
     const unknownTerms = qTerms.filter((term) => !df.has(term));
     if (qTerms.length && !topical.length) return fallbackAnswer([], routed.followMode);
     if (unknownTerms.length > indexed.length && indexed.length <= 1) return fallbackAnswer([], routed.followMode);
-    const hits = search(routed.searchText, 4);
+    let hits = search(routed.searchText, 4);
+    if (anchors.length) {
+      hits = hits.filter((hit) => {
+        const doc = docs.find((item) => item.i === hit.id);
+        if (!doc) return false;
+        return anchors.some((term) => doc.tf.has(term) || doc.ttf.has(term));
+      });
+    }
     const top = hits[0];
     const second = hits[1];
     const topDoc = top ? docs.find((doc) => doc.i === top.id) : null;

@@ -53,6 +53,48 @@ test("home, guide, and lesson at both sizes", async ({ browser }) => {
   }
 });
 
+test("short phone shows the chat input and Send", async ({ browser }) => {
+  const context = await browser.newContext({
+    viewport: { width: 390, height: 430 },
+    hasTouch: true,
+    reducedMotion: "reduce",
+  });
+  const page = await context.newPage();
+  await ready(page);
+  await page.goto("/index.html");
+  await page.locator(".cg-monkey").click();
+  await page.waitForFunction(() => window.__f9botReady === true);
+  const input = page.locator("#py-chat-input");
+  const send = page.locator(".py-chat-form button[type='submit']");
+  await expect(input).toBeVisible();
+  await expect(send).toBeVisible();
+  const inputBox = await input.boundingBox();
+  const sendBox = await send.boundingBox();
+  expect(inputBox).toBeTruthy();
+  expect(sendBox).toBeTruthy();
+  expect(inputBox.y).toBeGreaterThanOrEqual(0);
+  expect(inputBox.y + inputBox.height).toBeLessThanOrEqual(430);
+  expect(sendBox.y).toBeGreaterThanOrEqual(0);
+  expect(sendBox.y + sendBox.height).toBeLessThanOrEqual(430);
+  const uncovered = await page.evaluate(() => {
+    function hit(el) {
+      const box = el.getBoundingClientRect();
+      const x = box.left + box.width / 2;
+      const y = box.top + box.height / 2;
+      const top = document.elementFromPoint(x, y);
+      return Boolean(top && (top === el || el.contains(top)));
+    }
+    return {
+      input: hit(document.querySelector("#py-chat-input")),
+      send: hit(document.querySelector(".py-chat-form button[type='submit']")),
+    };
+  });
+  expect(uncovered.input).toBe(true);
+  expect(uncovered.send).toBe(true);
+  await page.screenshot({ path: path.join(shot, "bot-390x430.png") });
+  await context.close();
+});
+
 test("routing desk is a labelled simulation", async ({ page }) => {
   await ready(page);
   await page.goto("/play.html");

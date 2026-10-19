@@ -1,6 +1,6 @@
 /* Offline shell for the Five9 university. Scope is this directory.
    Precache list is rewritten by scripts/build_precache.mjs. Budget 3.5 MB. */
-const CACHE_NAME = "five9-university-r5";
+const CACHE_NAME = "five9-university-r6";
 const SHELL_ASSETS = [
   "./",
   "./index.html",

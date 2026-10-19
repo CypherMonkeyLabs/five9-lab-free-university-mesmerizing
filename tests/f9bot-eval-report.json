@@ -1,6 +1,6 @@
 {
   "total": 167,
-  "passed": 134,
+  "passed": 133,
   "failed": [
     {
       "id": "title:lesson:t02/l02",
@@ -30,6 +30,12 @@
       "id": "title:lesson:t06/l02",
       "ok": false,
       "href": "rooms/t07-l01-the-module-list-is-the-vocabulary.html",
+      "mode": "answer"
+    },
+    {
+      "id": "title:lesson:t06/l03",
+      "ok": false,
+      "href": "rooms/t01-l04-three-campaign-types.html",
       "mode": "answer"
     },
     {

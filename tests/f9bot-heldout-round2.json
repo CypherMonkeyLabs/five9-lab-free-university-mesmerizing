@@ -1,0 +1,85 @@
+{
+  "questions": 102,
+  "beginner": {
+    "total": 40,
+    "relevant": 39,
+    "relevantPct": 97.5,
+    "confidentWrong": 0
+  },
+  "typo": {
+    "total": 15,
+    "relevant": 13,
+    "relevantPct": 86.7,
+    "confidentWrong": 0
+  },
+  "offtopic": {
+    "total": 15,
+    "relevant": 15,
+    "relevantPct": 100,
+    "confidentWrong": 0
+  },
+  "nav": {
+    "total": 10,
+    "relevant": 10,
+    "relevantPct": 100,
+    "confidentWrong": 0
+  },
+  "inject": {
+    "total": 10,
+    "relevant": 10,
+    "relevantPct": 100,
+    "confidentWrong": 0
+  },
+  "followTurns": {
+    "total": 12,
+    "relevant": 12,
+    "relevantPct": 100,
+    "confidentWrong": 0
+  },
+  "followPairs": {
+    "ok": 6,
+    "total": 6
+  },
+  "target": {
+    "offtopicConfidentWrong": 0,
+    "injectConfidentWrong": 0
+  },
+  "misses": [
+    {
+      "id": "b21",
+      "group": "beginner",
+      "q": "which protocols do Plus adapters use",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. Closest pages: Plus and a prebuilt adapter share a technology story; Plus adapters speak HTTPS and WSS. I only answer from this lab's lessons. You can also u"
+    },
+    {
+      "id": "t11",
+      "group": "typo",
+      "q": "webrtc sofphone path",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. Closest pages: Default is a queue, not a compliment. I only answer from this lab's lessons. You can also use Search."
+    },
+    {
+      "id": "t14",
+      "group": "typo",
+      "q": "call analaysis is not certain",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. I only answer from this lab's lessons. You can also use Search."
+    }
+  ]
+}

@@ -62,7 +62,8 @@ export const SYN = {
 
 export const SEED_RULES = [
   { i: "seed:domain", lesson: "t01/l02", topic: "domain", any: ["domain", "tenant"], block: ["campaign", "skill"], loose: true },
-  { i: "seed:campaign-types", lesson: "t01/l04", topic: "campaign", all: ["campaign"], any: ["type", "types"], block: ["profile", "list", "autodial", "disposition"], loose: true },
+  { i: "seed:campaign-types", lesson: "t01/l04", topic: "campaign", all: ["campaign"], any: ["type", "types"], block: ["profile", "list", "autodial", "disposition"], loose: true, rank: 8 },
+  { i: "seed:campaign-plain", lesson: "t01/l04", topic: "campaign", any: ["campaign"], block: ["profile", "list", "autodial", "disposition", "skill", "acd", "queue", "type", "types", "inbound", "outbound", "dnis", "schedule", "preview", "progressive", "predictive", "power", "number", "numbers"], loose: true, rank: 2 },
   { i: "seed:disposition", lesson: "t01/l06", topic: "disposition", any: ["disposition", "dispostion"], block: ["profile"], loose: true },
   { i: "seed:profile", lesson: "t01/l07", topic: "profile", all: ["profile"], any: ["campaign", "profile"], block: ["disposition", "callerid"], loose: true },
   { i: "seed:skillgroup", lesson: "t02/l03", topic: "skill", any: ["skillgroup", "skill"], block: ["transfer", "voicemail", "acd", "inbound"], loose: true, rank: 4 },
@@ -87,7 +88,8 @@ export const SEED_RULES = [
   { i: "seed:genai", lesson: "t11/l04", topic: "genai", any: ["genai"], loose: true },
   { i: "seed:salesforce", lesson: "t12/l02", topic: "salesforce", any: ["salesforce", "salesforse"], loose: true, rank: 6 },
   { i: "seed:servicenow", lesson: "t12/l03", topic: "servicenow", any: ["servicenow"], loose: true, rank: 6 },
-  { i: "seed:sip-entry", lesson: "t13/l01", topic: "sip", any: ["sip", "webrtc", "pstn"], block: ["codec", "tls", "bandwidth"], loose: true },
+  { i: "seed:sip-entry", lesson: "t13/l01", topic: "sip", any: ["sip", "webrtc", "pstn"], block: ["codec", "tls", "bandwidth", "softphone"], loose: true },
+  { i: "seed:softphone", lesson: "t08/l05", topic: "softphone", any: ["softphone", "sofphone"], block: ["webrtc", "sip", "codec", "headset"], loose: true, rank: 8 },
   { i: "seed:codec", lesson: "t13/l02", topic: "codec", any: ["codec"], loose: true },
   { i: "seed:tls", lesson: "t13/l06", topic: "tls", any: ["tls"], loose: true },
   { i: "seed:reporting", lesson: "t14/l02", topic: "reporting", any: ["reporting", "report"], block: ["log", "layout"], loose: true },
