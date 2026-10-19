@@ -17,6 +17,7 @@ const required = [
   "assets/css/frame.css",
   "assets/css/wow.css",
   "assets/css/footer.css",
+  "assets/js/theme-boot.js",
   "assets/js/frame.js",
   "assets/js/university.js",
   "assets/js/route-sim.js",
@@ -53,7 +54,7 @@ if (missing.length) {
 const body = ["  \"./\",", ...chosen.map((rel) => `  "./${rel}",`)].join("\n");
 const swPath = path.join(root, "sw.js");
 let sw = fs.readFileSync(swPath, "utf8");
-if (!sw.includes("five9-university-r9")) {
+if (!sw.includes("five9-university-r10")) {
   console.error("cache name was not bumped");
   process.exit(1);
 }
