@@ -1,14 +1,18 @@
 {
   "name": "Five9 Lab",
   "short_name": "Five9 Lab",
+  "description": "An independent study floor for Five9 Virtual Contact Center by Cypher Monkey, a lifelong student and AI builder.",
+  "id": "./",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#f6f3ff",
+  "background_color": "#0b1020",
   "theme_color": "#4c1d95",
   "lang": "en",
   "icons": [
     { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
-    { "src": "favicon.ico", "sizes": "48x48", "type": "image/x-icon" }
+    { "src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ]
 }

@@ -111,7 +111,7 @@ def build():
     R.append(L("l06", "The glossary is the contract with yourself", "foundation", [
         "Teams lose hours to words that Five9 uses narrowly: domain, skill, campaign profile, DNIS, disposition, list penetration, vertical dialing, campaign, autodial, blended, manual touch. The ecosystem glossary in this lab defines the ones we could cite and marks the rest.",
         "If you cannot point at a page, say 'we use this word locally' and keep it out of a design that claims to be vendor language.",
-    ], [REPORTS, TECH], path("A word earns its place", "Citation or a local label.", ["Say the word", "Open the page", "Quote it", "Or mark it local"]),
+    ], [REPORTS, TECH], path("A word unlocks its place", "Citation or a local label.", ["Say the word", "Open the page", "Quote it", "Or mark it local"]),
     "A design review", ["Word", "Page", "Label"], [
         ("Word", "Hear", "Someone says 'partition' or 'CSQ'.", "hear"),
         ("Page", "Find", "You look for the Five9 page.", "find"),

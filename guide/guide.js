@@ -30,14 +30,12 @@
     '<div class="cg-speak"><button type="button" data-read>Read this page</button>' +
     '<label>Voice <select data-voice-name aria-label="Speaking voice"></select></label></div>' +
     '<div class="cg-cards"></div><div class="cg-log" role="log"></div>' +
+    '<div data-f9-chat></div>' +
     '<details class="cg-extra"><summary>More tools</summary>' +
     '<div class="cg-voice"><label>Rate <input data-rate type="range" min="0.8" max="1.2" step="0.05" value="0.95"></label>' +
     '<label>Pitch <input data-pitch type="range" min="0.8" max="1.2" step="0.05" value="1"></label>' +
     '<label><input data-ambient type="checkbox"> Soft ambient sound, off unless you check this</label></div>' +
-    '<div class="cg-chips"></div>' +
-    '<form class="cg-form"><button type="button" data-mic>Mic</button>' +
-    '<input type="text" aria-label="Ask or type" placeholder="Ask, or type if the mic is unavailable">' +
-    '<button type="submit">Send</button></form></details></section>' +
+    '</details></section>' +
     '<div class="cg-greet" hidden><div class="cg-greet-card" role="dialog" aria-modal="true" aria-labelledby="cg-greet-title">' +
     '<div class="cg-greet-art" aria-hidden="true">' + monkeySvg() + '</div>' +
     '<h2 id="cg-greet-title">Welcome</h2>' +
@@ -56,14 +54,16 @@
   css.rel = "stylesheet";
   css.href = base + "guide/guide.css";
   document.head.appendChild(css);
+  var chatCss = document.createElement("link");
+  chatCss.rel = "stylesheet";
+  chatCss.href = base + "shared/pybot-chat/chat.css";
+  document.head.appendChild(chatCss);
 
   var monkey = host.querySelector(".cg-monkey");
   var panel = host.querySelector(".cg-panel");
   var log = host.querySelector(".cg-log");
   var cards = host.querySelector(".cg-cards");
   var chips = host.querySelector(".cg-chips");
-  var form = host.querySelector(".cg-form");
-  var input = form.querySelector("input");
   var nudge = host.querySelector(".cg-nudge");
   var tour = host.querySelector(".cg-tour");
   var spot = tour.querySelector(".cg-spot");
@@ -73,8 +73,21 @@
   var rate = host.querySelector("[data-rate]");
   var pitch = host.querySelector("[data-pitch]");
   var ambientBox = host.querySelector("[data-ambient]");
-  var micBtn = host.querySelector("[data-mic]");
   var kb = [];
+  var messages = [];
+  var paintChat = null;
+  var chatRoot = null;
+  var retriever = null;
+  var chatReady = Promise.resolve();
+  var topics = [
+    "What is a skill group?",
+    "What is a disposition?",
+    "What is preview dialing?",
+    "What is a DNIS?",
+    "What is TCPA manual touch?",
+    "Where do I start?",
+    "What can you help with?"
+  ];
   var speaking = false;
   var audioCtx = null;
   var step = 0;
@@ -131,38 +144,11 @@
     log.appendChild(p);
     log.scrollTop = log.scrollHeight;
   }
-  function titleTextBottom() {
-    var title = document.querySelector(".hero-title, #main > h1");
-    if (!title) title = document.querySelector("#main h1, .section-head h2");
-    if (!title) return 0;
-    var range = document.createRange();
-    range.selectNodeContents(title);
-    var rects = range.getClientRects();
-    var bottom = 0;
-    for (var i = 0; i < rects.length; i++) {
-      if (rects[i].width > 1 && rects[i].height > 1) bottom = Math.max(bottom, rects[i].bottom);
-    }
-    return bottom;
-  }
-  function fitPanel() {
-    if (!panel) return;
-    panel.style.maxHeight = "";
-    if (panel.hidden || window.innerWidth > 720) return;
-    var bottom = titleTextBottom();
-    if (!bottom) return;
-    var dock = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--dock-h")) || 72;
-    var gap = 12;
-    if (panel.getBoundingClientRect().top >= bottom + gap) return;
-    var limit = window.innerHeight - dock - bottom - gap;
-    if (limit < 96) limit = 96;
-    panel.style.maxHeight = limit + "px";
-  }
   function setOpen(open) {
     panel.hidden = !open;
     monkey.setAttribute("aria-expanded", open ? "true" : "false");
     pose(open ? "wave" : "idle");
     if (open) showCards();
-    fitPanel();
   }
 
   function voices() {
@@ -372,7 +358,6 @@
       if (rect.top < window.innerHeight - 80 && rect.bottom > 80) hide = rect.top < window.innerHeight * 0.72;
     }
     host.classList.toggle("is-clear", hide);
-    fitPanel();
   }
 
   function greet() {
@@ -528,12 +513,108 @@
   }
   host.querySelector("[data-close]").addEventListener("click", function () { setOpen(false); dock(); });
   host.querySelector("[data-read]").addEventListener("click", readAlong);
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
-    var text = input.value.trim();
-    if (!text) return;
-    input.value = "";
-    reply(text);
+  function siteUrl(path) {
+    var rel = base || "./";
+    if (rel && rel.charAt(rel.length - 1) !== "/") rel += "/";
+    return new URL(path, new URL(rel, document.baseURI)).href;
+  }
+  function localize(answer) {
+    function fix(href) {
+      if (!href || /^(https?:|#)/.test(href)) return href || "";
+      return (base || "") + href;
+    }
+    return {
+      role: "bot",
+      text: answer.text || "",
+      href: fix(answer.href || ""),
+      link: answer.link || "",
+      example: answer.example || "",
+      follow: answer.follow || "",
+      followQ: answer.followQ || "",
+      closest: (answer.closest || []).map(function (hit) {
+        return { title: hit.title, href: fix(hit.href) };
+      })
+    };
+  }
+  function askGuide(text) {
+    messages.push({ role: "user", text: text });
+    if (paintChat && chatRoot) paintChat(chatRoot, messages, true);
+    pose("think");
+    var run = function () {
+      if (!retriever) {
+        messages.push({ role: "bot", text: "I don't have that yet. The lesson index is not on this page yet." });
+        if (paintChat && chatRoot) paintChat(chatRoot, messages, false);
+        return;
+      }
+      var answer = retriever.ask(text, {
+        progress: function () {
+          return { done: 0, total: 161, xpLevel: 1, nextHref: "start.html", nextTitle: "Learn" };
+        }
+      });
+      messages.push(localize(answer));
+      if (paintChat && chatRoot) paintChat(chatRoot, messages, false);
+      pose(answer.mode === "answer" || answer.mode === "intent" ? "speak" : "think");
+    };
+    if (retriever) run();
+    else chatReady.then(run, run);
+  }
+  chatReady = Promise.all([
+    import(siteUrl("shared/pybot-chat/engine.js")),
+    import(siteUrl("shared/pybot-chat/ui.js")),
+    fetch(siteUrl("js/content/f9bot-index.json")).then(function (res) { return res.json(); })
+  ]).then(function (parts) {
+    var engine = parts[0];
+    var ui = parts[1];
+    paintChat = ui.paintChat;
+    retriever = engine.createRetriever(parts[2]);
+    var slot = host.querySelector("[data-f9-chat]");
+    if (!slot) return;
+    slot.innerHTML = ui.chatMarkup(topics);
+    chatRoot = slot.querySelector("[data-py-chat]");
+    paintChat(chatRoot, messages, false);
+    var form = chatRoot.querySelector(".py-chat-form");
+    var input = ui.chatInput(chatRoot);
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      var text = input.value.trim();
+      if (!text) return;
+      input.value = "";
+      askGuide(text);
+    });
+    chatRoot.addEventListener("click", function (event) {
+      var chip = event.target.closest("[data-py-ask]");
+      if (chip) {
+        askGuide(chip.getAttribute("data-py-ask"));
+        return;
+      }
+      if (event.target.closest("[data-py-clear]")) {
+        messages = [];
+        if (retriever) retriever.reset();
+        paintChat(chatRoot, messages, false);
+      }
+    });
+    var mic = chatRoot.querySelector("[data-py-mic]");
+    if (mic) mic.addEventListener("click", function () {
+      var Rec = window.SpeechRecognition || window.webkitSpeechRecognition;
+      pose("listen");
+      if (!Rec) {
+        messages.push({ role: "bot", text: "This browser has no voice input. Type in the box." });
+        paintChat(chatRoot, messages, false);
+        input.focus();
+        return;
+      }
+      var rec = new Rec();
+      rec.lang = "en-US";
+      rec.onresult = function (event) {
+        input.value = event.results[0][0].transcript;
+        pose("speak");
+      };
+      rec.onerror = function () { input.focus(); };
+      try { rec.start(); } catch (err) { input.focus(); }
+    });
+    window.__f9botReady = true;
+  }).catch(function () {
+    window.__f9botReady = false;
   });
   voiceSel.addEventListener("change", function () { store.set("f9-voice", voiceSel.value); });
   rate.addEventListener("change", function () { store.set("f9-rate", rate.value); });
@@ -558,28 +639,6 @@
       gain.connect(audioCtx.destination);
       osc.start();
     } else audioCtx.resume();
-  });
-
-  micBtn.addEventListener("click", function () {
-    var Rec = window.SpeechRecognition || window.webkitSpeechRecognition;
-    pose("listen");
-    if (!Rec) {
-      say("This browser has no voice input. Type in the box.");
-      input.focus();
-      pose("think");
-      return;
-    }
-    var rec = new Rec();
-    rec.lang = "en-US";
-    rec.onresult = function (event) {
-      input.value = event.results[0][0].transcript;
-      pose("speak");
-    };
-    rec.onerror = function () {
-      say("The mic did not return words. Type instead.");
-      input.focus();
-    };
-    try { rec.start(); } catch (err) { say("The mic is busy. Type instead."); input.focus(); }
   });
 
   tour.querySelector("[data-tour-next]").addEventListener("click", function () {

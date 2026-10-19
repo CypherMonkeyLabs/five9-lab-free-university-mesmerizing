@@ -47,11 +47,19 @@ html[data-motion="full"] .cg-monkey { animation: cg-bob 3.2s ease-in-out infinit
 @keyframes cg-bob { 50% { transform: perspective(520px) rotateY(-12deg) rotateX(6deg) translateY(-10px); } }
 
 .cg-panel {
+  --ink: #142033;
+  --bg: #ffffff;
+  --bg-elev: #f5f3ff;
+  --accent: #5b21b6;
+  --accent-2: #0891b2;
+  --line: rgba(76, 29, 149, 0.35);
+  --muted: #334155;
+  --btn-ink: #ffffff;
   position: absolute;
   right: 0;
   bottom: 272px;
-  width: min(260px, calc(100vw - 24px));
-  max-height: min(60vh, 520px);
+  width: min(340px, calc(100vw - 24px));
+  max-height: min(70vh, 640px);
   overflow: auto;
   background: #ffffff;
   color: #142033;
@@ -275,19 +283,47 @@ html[data-motion="full"] .cg-monkey { animation: cg-bob 3.2s ease-in-out infinit
   padding: 0 28px 0 10px;
 }
 .cg-speak button { width: 100%; }
+html[data-theme="dark"] .cg-panel {
+  --ink: #eef4ff;
+  --bg: #141a2e;
+  --bg-elev: #1e1b4b;
+  --muted: #cbd5e1;
+  color: var(--ink);
+  background: var(--bg);
+}
 @media (max-width: 720px) {
+  .cg-root:has(.cg-panel:not([hidden])) .cg-monkey { visibility: hidden; }
   .cg-monkey { display: block; width: 96px; height: 112px; }
   .cg-root { z-index: 70; }
   .cg-panel {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
     position: fixed;
     left: 0;
     right: 0;
-    top: auto;
-    bottom: var(--dock-h, 64px);
+    top: 8px;
+    bottom: auto;
     width: auto;
-    max-height: 60vh;
+    height: calc(100dvh - var(--dock-h, 72px) - 8px);
+    max-height: none;
+    overflow: hidden;
     border-radius: 18px 18px 0 0;
     z-index: 64;
+  }
+  .cg-panel .cg-cards {
+    flex: 0 0 auto;
+    flex-wrap: nowrap;
+    max-height: 44px;
+    margin: 4px 0;
+    overflow-x: auto;
+  }
+  .cg-panel .cg-speak { flex: 0 0 auto; margin: 4px 0; gap: 4px; }
+  .cg-panel [data-f9-chat] {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
   }
   .cg-handle {
     display: block;
@@ -310,6 +346,28 @@ html[data-motion="full"] .cg-monkey { animation: cg-bob 3.2s ease-in-out infinit
     max-height: min(36vh, 260px);
   }
   .cg-greet-art { width: 72px; height: 84px; }
+}
+@media (max-width: 720px) and (max-height: 520px) {
+  .cg-panel {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 90;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: auto;
+    height: 100dvh;
+    max-height: none;
+    border-radius: 0;
+    padding: 8px;
+  }
+  .cg-speak,
+  .cg-log,
+  .cg-cards,
+  .cg-extra { display: none; }
+  .cg-panel [data-f9-chat] { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
 }
 @media (prefers-reduced-motion: reduce) {
   .cg-monkey { animation: none; }

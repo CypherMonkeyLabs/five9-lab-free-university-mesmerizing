@@ -1,0 +1,2287 @@
+{
+  "lab": "five9",
+  "lessons": [
+    {
+      "key": "t01/l01",
+      "title": "A contact center is not a phone system",
+      "level": 1,
+      "outcomes": [
+        "Name the outbound build order",
+        "Say where IVR enters an inbound build"
+      ],
+      "sources": [
+        "s3f47fab2a7",
+        "secfd36cda2"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t01/l02",
+      "title": "The domain is the tenant",
+      "level": 1,
+      "outcomes": [
+        "State the domain boundary",
+        "Say which roles join a skill group"
+      ],
+      "sources": [
+        "s3f47fab2a7",
+        "secfd36cda2"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t01/l03",
+      "title": "Roles on the floor",
+      "level": 1,
+      "outcomes": [
+        "Separate agent, supervisor, admin, and reporting",
+        "Name one fine-grained admin permission"
+      ],
+      "sources": [
+        "secfd36cda2",
+        "sd2edbce5bf"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t01/l04",
+      "title": "Three campaign types",
+      "level": 1,
+      "outcomes": [
+        "Name the three campaign types",
+        "Explain blended without inventing a fourth type"
+      ],
+      "sources": [
+        "s3f47fab2a7",
+        "sad77f493da",
+        "s3fcf9f5549"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t01/l05",
+      "title": "Contacts, fields, and lists",
+      "level": 1,
+      "outcomes": [
+        "Describe a contact row",
+        "Explain a final disposition"
+      ],
+      "sources": [
+        "s0f723acb76",
+        "s954e29217e",
+        "s3f47fab2a7"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t01/l06",
+      "title": "Dispositions are the dialer's memory",
+      "level": 1,
+      "outcomes": [
+        "Explain redial count versus a final code",
+        "Say what a reset is allowed to touch"
+      ],
+      "sources": [
+        "s954e29217e",
+        "s0f723acb76"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t01/l07",
+      "title": "One profile, many campaigns",
+      "level": 1,
+      "outcomes": [
+        "Assign one profile",
+        "Name two things a profile is for"
+      ],
+      "sources": [
+        "sea90889276",
+        "s078e2ddcbe"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t02/l01",
+      "title": "Two administrator applications",
+      "level": 1,
+      "outcomes": [
+        "Choose Java or web admin",
+        "Remember the ARM exception"
+      ],
+      "sources": [
+        "scf71bf45a4"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t02/l02",
+      "title": "User profiles before user accounts",
+      "level": 1,
+      "outcomes": [
+        "Create a profile before accounts",
+        "Keep admin rights off the agent profile"
+      ],
+      "sources": [
+        "s3f47fab2a7",
+        "secfd36cda2"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t02/l03",
+      "title": "Skill groups are the queues",
+      "level": 1,
+      "outcomes": [
+        "Use the correct skills tab",
+        "Put one agent in two groups"
+      ],
+      "sources": [
+        "secfd36cda2"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t02/l04",
+      "title": "Prompts before the script",
+      "level": 1,
+      "outcomes": [
+        "Record prompts before scripts",
+        "Keep skill audio separate"
+      ],
+      "sources": [
+        "s3f47fab2a7",
+        "secfd36cda2"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t02/l05",
+      "title": "Do-not-call is a list, and a module",
+      "level": 1,
+      "outcomes": [
+        "Use the Set DNC module",
+        "Do not confuse it with a disposition label"
+      ],
+      "sources": [
+        "s6cadfc225d",
+        "s3fcf9f5549",
+        "sd2edbce5bf"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t02/l06",
+      "title": "Workstations that drop live calls",
+      "level": 1,
+      "outcomes": [
+        "Apply the workstation rules",
+        "Quote the bandwidth table, not a guess"
+      ],
+      "sources": [
+        "scf71bf45a4"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t02/l07",
+      "title": "Reason codes, voicemail, and what admin is not",
+      "level": 1,
+      "outcomes": [
+        "Treat voicemail as a skill object",
+        "Keep dialer math in the campaign"
+      ],
+      "sources": [
+        "secfd36cda2",
+        "s187a4487cc"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t03/l01",
+      "title": "A DNIS answers only while the campaign runs",
+      "level": 4,
+      "outcomes": [
+        "Tie DNIS, run state, and IVR together",
+        "Check state before the carrier"
+      ],
+      "sources": [
+        "sad77f493da"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t03/l02",
+      "title": "The script is the inbound product",
+      "level": 4,
+      "outcomes": [
+        "List inbound script jobs",
+        "Remember that connect ends the script"
+      ],
+      "sources": [
+        "sad77f493da",
+        "s34bb3269d0"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t03/l03",
+      "title": "Queue treatment is a choice, not a hope",
+      "level": 4,
+      "outcomes": [
+        "Choose an overflow module",
+        "Do not use a stopped campaign as a prompt"
+      ],
+      "sources": [
+        "sad77f493da",
+        "s6cadfc225d"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t03/l04",
+      "title": "Priority and service level",
+      "level": 4,
+      "outcomes": [
+        "Separate priority from service level",
+        "Point at the screen for each"
+      ],
+      "sources": [
+        "sad77f493da",
+        "s34bb3269d0",
+        "secfd36cda2"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t03/l05",
+      "title": "Schedules, not a stopped campaign",
+      "level": 4,
+      "outcomes": [
+        "Prefer a schedule to a stopped campaign",
+        "Keep state running"
+      ],
+      "sources": [
+        "s3f47fab2a7",
+        "sad77f493da"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t03/l06",
+      "title": "Pause before the next call",
+      "level": 4,
+      "outcomes": [
+        "Set pause on purpose",
+        "Do not expect it in the hold column"
+      ],
+      "sources": [
+        "s1234d1faf9",
+        "s34bb3269d0"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t03/l07",
+      "title": "Inbound design review",
+      "level": 4,
+      "outcomes": [
+        "Run a seven-point inbound review",
+        "Escalate to the trunk only after they pass"
+      ],
+      "sources": [
+        "sad77f493da",
+        "secfd36cda2",
+        "s3f47fab2a7"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t04/l01",
+      "title": "A list is not a campaign",
+      "level": 4,
+      "outcomes": [
+        "Separate file, list, and running campaign",
+        "Map number1"
+      ],
+      "sources": [
+        "s0f723acb76",
+        "s954e29217e"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t04/l02",
+      "title": "Profiles filter the list the agent sees",
+      "level": 4,
+      "outcomes": [
+        "Filter with a profile",
+        "Keep dialing mode on the campaign"
+      ],
+      "sources": [
+        "sea90889276",
+        "s0f723acb76"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t04/l03",
+      "title": "List penetration and vertical dialing",
+      "level": 4,
+      "outcomes": [
+        "Walk both list modes on paper",
+        "Respect a final disposition"
+      ],
+      "sources": [
+        "s0f723acb76",
+        "s1443d4f4d1"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t04/l04",
+      "title": "Reset is a loaded gun",
+      "level": 4,
+      "outcomes": [
+        "Reset codes on purpose",
+        "Prove it with list details"
+      ],
+      "sources": [
+        "s954e29217e"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t04/l05",
+      "title": "Time zone and call analysis are guarded defaults",
+      "level": 4,
+      "outcomes": [
+        "Name the 30-day and 24-hour windows",
+        "Refuse to invent the legal dialing hours"
+      ],
+      "sources": [
+        "sc2b6f1347e"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t04/l06",
+      "title": "Call analysis is not a guarantee",
+      "level": 4,
+      "outcomes": [
+        "Treat detection as a tuned field",
+        "Do not quote a fake accuracy"
+      ],
+      "sources": [
+        "sc2b6f1347e",
+        "s3fcf9f5549"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t04/l07",
+      "title": "Local caller ID is a profile choice",
+      "level": 4,
+      "outcomes": [
+        "Override ANI with a profile",
+        "Keep STIR/SHAKEN as its own project"
+      ],
+      "sources": [
+        "s3fcf9f5549",
+        "sea90889276",
+        "s25d2a2bde7",
+        "sba12aad588"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t05/l01",
+      "title": "Preview lets the agent read first",
+      "level": 7,
+      "outcomes": [
+        "Choose preview for context",
+        "Separate it from TCPA"
+      ],
+      "sources": [
+        "sa582584055",
+        "s3fcf9f5549",
+        "s187a4487cc"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t05/l02",
+      "title": "Progressive keeps one call per free agent",
+      "level": 7,
+      "outcomes": [
+        "Quote the one-call sentence",
+        "Check the other sentence in the UI"
+      ],
+      "sources": [
+        "s3fcf9f5549",
+        "sa582584055"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t05/l03",
+      "title": "Power dials a ratio you chose",
+      "level": 7,
+      "outcomes": [
+        "Set a power ratio on purpose",
+        "Treat the abandon warning as a brake"
+      ],
+      "sources": [
+        "sa582584055",
+        "s3fcf9f5549",
+        "sc2b6f1347e"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t05/l04",
+      "title": "Predictive fills idle time, and it can drop calls",
+      "level": 7,
+      "outcomes": [
+        "Explain predictive without claiming the source code",
+        "Quote the 30-day and 24-hour windows"
+      ],
+      "sources": [
+        "sa582584055",
+        "s3fcf9f5549",
+        "sc2b6f1347e",
+        "sa489305996"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t05/l05",
+      "title": "TCPA manual touch is a typed number",
+      "level": 7,
+      "outcomes": [
+        "Enforce typed external dials",
+        "Include callbacks in the rule"
+      ],
+      "sources": [
+        "s187a4487cc"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t05/l06",
+      "title": "The defaults are the compliance posture",
+      "level": 7,
+      "outcomes": [
+        "Name the defaulted fields",
+        "Treat the warning as part of the design"
+      ],
+      "sources": [
+        "sc2b6f1347e"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t05/l07",
+      "title": "Pick a mode in one page",
+      "level": 7,
+      "outcomes": [
+        "Match five constraints to five modes",
+        "Keep TCPA domains pure"
+      ],
+      "sources": [
+        "sa582584055",
+        "s3fcf9f5549",
+        "sc2b6f1347e",
+        "s187a4487cc"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t06/l01",
+      "title": "Blended is a staffing plan",
+      "level": 7,
+      "outcomes": [
+        "Define blended from the product page",
+        "Keep predictive agents dedicated"
+      ],
+      "sources": [
+        "s3fcf9f5549",
+        "s3f47fab2a7",
+        "sa582584055"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t06/l02",
+      "title": "Autodial is the IVR's outbound",
+      "level": 7,
+      "outcomes": [
+        "Choose autodial for scripted outbound",
+        "Use the inbound-style skill tab"
+      ],
+      "sources": [
+        "s3f47fab2a7",
+        "secfd36cda2",
+        "sad77f493da"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t06/l03",
+      "title": "Priority and ratio are campaign settings",
+      "level": 7,
+      "outcomes": [
+        "Leave undocumented ratio fields unread-by-you",
+        "Write a steal rule anyway"
+      ],
+      "sources": [
+        "sad77f493da",
+        "secfd36cda2"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t06/l04",
+      "title": "Not Ready is a real state",
+      "level": 7,
+      "outcomes": [
+        "Subtract Not Ready before you pace",
+        "Use agent reports"
+      ],
+      "sources": [
+        "s187a4487cc",
+        "sd2edbce5bf"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t06/l05",
+      "title": "After-call work feeds the next dial",
+      "level": 7,
+      "outcomes": [
+        "Separate wrap, pause, and hold",
+        "Let dispositions decide the next dial"
+      ],
+      "sources": [
+        "s954e29217e",
+        "s1234d1faf9"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t06/l06",
+      "title": "Digital and voice share the person",
+      "level": 7,
+      "outcomes": [
+        "Include digital in the blend",
+        "Check antivirus when text disappears"
+      ],
+      "sources": [
+        "s3fcf9f5549",
+        "sa8d903ea0a",
+        "scf71bf45a4"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t06/l07",
+      "title": "A blend you can defend",
+      "level": 7,
+      "outcomes": [
+        "Defend a blend with six screens",
+        "Keep the simulator in the classroom"
+      ],
+      "sources": [
+        "s3fcf9f5549",
+        "sa582584055",
+        "sc2b6f1347e",
+        "s3f47fab2a7"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t07/l01",
+      "title": "The module list is the vocabulary",
+      "level": 4,
+      "outcomes": [
+        "Use published module names",
+        "Treat the bench file as a model"
+      ],
+      "sources": [
+        "s6cadfc225d",
+        "s34bb3269d0"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t07/l02",
+      "title": "Play, Menu, digits, and voice",
+      "level": 4,
+      "outcomes": [
+        "Draw the failure exit",
+        "Store digits in a named variable"
+      ],
+      "sources": [
+        "s6cadfc225d",
+        "sce8e21e362",
+        "seaa323000e",
+        "s4a34543d02"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t07/l03",
+      "title": "If/Else is two ways. Case is more",
+      "level": 4,
+      "outcomes": [
+        "Match branch count to the module",
+        "Keep conditions readable"
+      ],
+      "sources": [
+        "sb5fa423574",
+        "s6cadfc225d"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t07/l04",
+      "title": "Skill Transfer has more than a skill name",
+      "level": 4,
+      "outcomes": [
+        "Count the tabs in the editor",
+        "Prefer one skill when you need the report"
+      ],
+      "sources": [
+        "s34bb3269d0",
+        "s504128f49b",
+        "s1234d1faf9"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t07/l05",
+      "title": "Variables, lookup, and query",
+      "level": 4,
+      "outcomes": [
+        "Keep script variables and reporting variables apart",
+        "Do not expect a backfill"
+      ],
+      "sources": [
+        "seaa323000e",
+        "s6cadfc225d",
+        "s0475ccb990"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t07/l06",
+      "title": "IVA, foreign scripts, DNC, and leaving the platform",
+      "level": 4,
+      "outcomes": [
+        "Name the exit module",
+        "Keep digital IVA and voice IVA in their own notes"
+      ],
+      "sources": [
+        "s6cadfc225d",
+        "s45e56cc7e4"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t07/l07",
+      "title": "Visual IVR and frames",
+      "level": 4,
+      "outcomes": [
+        "Protect visual IVR from hostile frames",
+        "Retest browsers"
+      ],
+      "sources": [
+        "scf71bf45a4",
+        "s6cadfc225d"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t08/l01",
+      "title": "A skill is a queue with people in it",
+      "level": 4,
+      "outcomes": [
+        "Staff the skill",
+        "Set a service level you can explain"
+      ],
+      "sources": [
+        "secfd36cda2"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t08/l02",
+      "title": "The tab is named backwards on inbound",
+      "level": 4,
+      "outcomes": [
+        "Memorize the awkward tab name",
+        "Check it before the trunk"
+      ],
+      "sources": [
+        "secfd36cda2"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t08/l03",
+      "title": "One module, one skill, when you need the truth",
+      "level": 4,
+      "outcomes": [
+        "Choose pool or precision out loud",
+        "Match the report to that choice"
+      ],
+      "sources": [
+        "s34bb3269d0"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t08/l04",
+      "title": "Skill level versus list order",
+      "level": 4,
+      "outcomes": [
+        "Pick list order or agent level",
+        "Do not assume they match"
+      ],
+      "sources": [
+        "s34bb3269d0"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t08/l05",
+      "title": "Default is a queue, not a compliment",
+      "level": 4,
+      "outcomes": [
+        "Treat Default as a catch-all",
+        "Name a skill on every transfer"
+      ],
+      "sources": [
+        "s34bb3269d0",
+        "secfd36cda2"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t08/l06",
+      "title": "Service level is the scoreboard",
+      "level": 4,
+      "outcomes": [
+        "Set a service level you mean",
+        "Do not move it to hide a miss"
+      ],
+      "sources": [
+        "secfd36cda2",
+        "sad77f493da"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t08/l07",
+      "title": "Skill voicemail is its own mailbox",
+      "level": 4,
+      "outcomes": [
+        "Give skill voicemail its own greeting",
+        "Give callbacks their own disposition"
+      ],
+      "sources": [
+        "secfd36cda2",
+        "s34bb3269d0"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t09/l01",
+      "title": "One screen is the product",
+      "level": 4,
+      "outcomes": [
+        "Describe Plus as one screen",
+        "Count extra windows as a defect"
+      ],
+      "sources": [
+        "sa8d903ea0a",
+        "sf3e7a61261"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t09/l02",
+      "title": "Plus adapters speak HTTPS and WSS",
+      "level": 4,
+      "outcomes": [
+        "Separate voice from the pop channel",
+        "Require TLS 1.2 and WSS"
+      ],
+      "sources": [
+        "scf71bf45a4",
+        "s9cce87a9a6"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t09/l03",
+      "title": "Transcription and assist are features you turn on",
+      "level": 4,
+      "outcomes": [
+        "Keep Assist on the one screen",
+        "Do not invent the model name"
+      ],
+      "sources": [
+        "sf3e7a61261",
+        "s0913c0c866"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t09/l04",
+      "title": "WEM lives in the same desktop",
+      "level": 4,
+      "outcomes": [
+        "Show the schedule on the desktop",
+        "Do not dial a break"
+      ],
+      "sources": [
+        "sa8d903ea0a",
+        "sc64dff4a82"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t09/l05",
+      "title": "Digital text can be blocked",
+      "level": 4,
+      "outcomes": [
+        "Match blank text to antivirus",
+        "Match dropped calls to power management"
+      ],
+      "sources": [
+        "scf71bf45a4"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t09/l06",
+      "title": "Headsets and the path under the desk",
+      "level": 4,
+      "outcomes": [
+        "Budget the kilobits",
+        "Refuse a cellular agent path"
+      ],
+      "sources": [
+        "scf71bf45a4"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t09/l07",
+      "title": "The desktop review",
+      "level": 4,
+      "outcomes": [
+        "Run the desktop review",
+        "Escalate one-way audio to the network track"
+      ],
+      "sources": [
+        "sa8d903ea0a",
+        "scf71bf45a4"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t10/l01",
+      "title": "Five9 WEM and a Verint path both exist",
+      "level": 4,
+      "outcomes": [
+        "Ask which WEM",
+        "List the pieces in the contract"
+      ],
+      "sources": [
+        "sc64dff4a82",
+        "s4c3bb5fa14"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t10/l02",
+      "title": "Workforce management is the roster",
+      "level": 4,
+      "outcomes": [
+        "Feed the dialer from the schedule",
+        "Treat adherence as evidence"
+      ],
+      "sources": [
+        "sc64dff4a82",
+        "sa8d903ea0a"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t10/l03",
+      "title": "Quality management listens on purpose",
+      "level": 4,
+      "outcomes": [
+        "Match the form to the queue",
+        "Remember hold is in the recording"
+      ],
+      "sources": [
+        "sc64dff4a82",
+        "sa8d903ea0a",
+        "s891bf62b1c"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t10/l04",
+      "title": "Analytics and surveys sit beside the call",
+      "level": 4,
+      "outcomes": [
+        "Keep survey, abandon, and topics apart",
+        "Give every topic an owner"
+      ],
+      "sources": [
+        "sc64dff4a82",
+        "s4c3bb5fa14"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t10/l05",
+      "title": "Recordings expire",
+      "level": 4,
+      "outcomes": [
+        "Plan the offload",
+        "Do not promise a recording past the clock"
+      ],
+      "sources": [
+        "s30cd3bdc96"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t10/l06",
+      "title": "The agent should not need a second login",
+      "level": 4,
+      "outcomes": [
+        "Put WEM actions where the agent already works",
+        "Make the result a schedule"
+      ],
+      "sources": [
+        "sa8d903ea0a",
+        "sc64dff4a82"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t10/l07",
+      "title": "What this lab will not pretend to run",
+      "level": 4,
+      "outcomes": [
+        "Keep the lab and the tenant apart",
+        "Name the system of record"
+      ],
+      "sources": [
+        "sc64dff4a82",
+        "s30cd3bdc96",
+        "sa8d903ea0a"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t11/l01",
+      "title": "Studio has regions",
+      "level": 7,
+      "outcomes": [
+        "Match Studio region to the domain",
+        "Prefer DNS SRV over a pinned IP"
+      ],
+      "sources": [
+        "scf71bf45a4"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t11/l02",
+      "title": "A task key is not a vibe",
+      "level": 7,
+      "outcomes": [
+        "Follow the digital key steps",
+        "Keep voice steps in their own note"
+      ],
+      "sources": [
+        "s45e56cc7e4",
+        "s6cadfc225d"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t11/l03",
+      "title": "Contain, or hand back with context",
+      "level": 7,
+      "outcomes": [
+        "Design both endings",
+        "Pass a reason the agent can see"
+      ],
+      "sources": [
+        "sf3e7a61261",
+        "s6cadfc225d",
+        "s0475ccb990"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t11/l04",
+      "title": "GenAI Studio is a hub, not a slogan",
+      "level": 7,
+      "outcomes": [
+        "Ask to see model, prompt, and test",
+        "Do not ship an untested summary"
+      ],
+      "sources": [
+        "s0913c0c866"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t11/l05",
+      "title": "NLP in the IVR is not the same as Studio",
+      "level": 7,
+      "outcomes": [
+        "Use the module name you configured",
+        "Keep Studio for tasks with keys"
+      ],
+      "sources": [
+        "s6cadfc225d",
+        "s45e56cc7e4"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t11/l06",
+      "title": "Prompts are a production change",
+      "level": 7,
+      "outcomes": [
+        "Treat prompt edits as releases",
+        "Test on calls before they go live"
+      ],
+      "sources": [
+        "s0913c0c866",
+        "s3f47fab2a7"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t11/l07",
+      "title": "A bot review you can finish",
+      "level": 7,
+      "outcomes": [
+        "Finish the eight checks",
+        "Refuse a slide that skips them"
+      ],
+      "sources": [
+        "s45e56cc7e4",
+        "s0913c0c866",
+        "scf71bf45a4",
+        "s30cd3bdc96"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t12/l01",
+      "title": "The adapter family",
+      "level": 4,
+      "outcomes": [
+        "Name the adapter, the SDK, or the connector",
+        "Keep WSS in the design"
+      ],
+      "sources": [
+        "s9cce87a9a6",
+        "sa8d903ea0a",
+        "sf68a610afd",
+        "scf71bf45a4"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t12/l02",
+      "title": "Salesforce versions move",
+      "level": 4,
+      "outcomes": [
+        "Date every Salesforce version you copy",
+        "Do not keep IE for Salesforce"
+      ],
+      "sources": [
+        "scf71bf45a4",
+        "s9cce87a9a6"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t12/l03",
+      "title": "ServiceNow releases are named",
+      "level": 4,
+      "outcomes": [
+        "Check the ServiceNow release list"
+      ],
+      "sources": [
+        "scf71bf45a4",
+        "sfa7469e46f"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t12/l04",
+      "title": "The rest of the named CRMs",
+      "level": 4,
+      "outcomes": [
+        "Give each CRM its own chapter",
+        "Do not reuse another product's version"
+      ],
+      "sources": [
+        "scf71bf45a4",
+        "s9cce87a9a6"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t12/l05",
+      "title": "SDK and connectors when there is no adapter",
+      "level": 4,
+      "outcomes": [
+        "Use the SDK or a connector on purpose",
+        "Own the retest"
+      ],
+      "sources": [
+        "sf68a610afd",
+        "sa8d903ea0a"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t12/l06",
+      "title": "Screen pop down, voice up",
+      "level": 4,
+      "outcomes": [
+        "Split voice from the pop",
+        "Check the profile's pop-up control"
+      ],
+      "sources": [
+        "scf71bf45a4",
+        "sea90889276",
+        "s9cce87a9a6"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t12/l07",
+      "title": "Salesforce modules inside the IVR",
+      "level": 4,
+      "outcomes": [
+        "Say whether you mean the IVR module or the adapter",
+        "Test both"
+      ],
+      "sources": [
+        "s6cadfc225d",
+        "seaa323000e",
+        "sa8d903ea0a"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t13/l01",
+      "title": "Three ways a call can enter",
+      "level": 7,
+      "outcomes": [
+        "Name the three SIP stories",
+        "Refuse to treat a Cisco gateway as a UCCX import"
+      ],
+      "sources": [
+        "scf71bf45a4",
+        "sd78b63696a",
+        "sb212a3a9e9"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t13/l02",
+      "title": "DNS, codecs, and the default voice",
+      "level": 7,
+      "outcomes": [
+        "Prefer DNS SRV",
+        "Keep G.711 as the default you can cite"
+      ],
+      "sources": [
+        "scf71bf45a4",
+        "sd78b63696a",
+        "sb212a3a9e9",
+        "s4a34543d02"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t13/l03",
+      "title": "How much bandwidth a seat costs",
+      "level": 7,
+      "outcomes": [
+        "Add the published per-seat numbers",
+        "Reject satellite and cellular"
+      ],
+      "sources": [
+        "scf71bf45a4"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t13/l04",
+      "title": "NAT, idle timers, and split tunnels",
+      "level": 7,
+      "outcomes": [
+        "Reject double NAT",
+        "Keep Five9 inside the VPN"
+      ],
+      "sources": [
+        "scf71bf45a4",
+        "s70f1b3206b",
+        "sb212a3a9e9"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t13/l05",
+      "title": "Direct Connect and the edges",
+      "level": 7,
+      "outcomes": [
+        "Order Layer 3 with BGP",
+        "Date the Equinix edge list"
+      ],
+      "sources": [
+        "scf71bf45a4"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t13/l06",
+      "title": "TLS, and ports that are not universal",
+      "level": 7,
+      "outcomes": [
+        "Require TLS 1.2",
+        "Keep Studio ports in the Studio box"
+      ],
+      "sources": [
+        "scf71bf45a4",
+        "sd78b63696a"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t13/l07",
+      "title": "Headsets, and the call that only fails one way",
+      "level": 7,
+      "outcomes": [
+        "Specify USB headsets",
+        "Check Efficiency Mode before you blame the trunk"
+      ],
+      "sources": [
+        "scf71bf45a4"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t14/l01",
+      "title": "The API names on the product page",
+      "level": 7,
+      "outcomes": [
+        "Use the product names",
+        "Leave SOAP versus REST unmarked until you read that guide"
+      ],
+      "sources": [
+        "sf68a610afd",
+        "scf71bf45a4"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t14/l02",
+      "title": "Reporting is a role",
+      "level": 7,
+      "outcomes": [
+        "Separate the Reporting role from administration",
+        "Pick the category that matches the question"
+      ],
+      "sources": [
+        "sd2edbce5bf",
+        "s2f0b8faa4a"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t14/l03",
+      "title": "Layouts, and the matrix that will not export",
+      "level": 7,
+      "outcomes": [
+        "Match the layout to the question",
+        "Do not call a matrix a CSV"
+      ],
+      "sources": [
+        "sd2edbce5bf"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t14/l04",
+      "title": "The call log is a window, not an archive",
+      "level": 7,
+      "outcomes": [
+        "Separate the call log window from audio retention",
+        "Date the article you are quoting"
+      ],
+      "sources": [
+        "sba12aad588",
+        "s30cd3bdc96",
+        "s2f0b8faa4a"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t14/l05",
+      "title": "Call variables are not history",
+      "level": 7,
+      "outcomes": [
+        "Enable reporting before you need the column",
+        "Check custom dispositions one by one"
+      ],
+      "sources": [
+        "s0475ccb990",
+        "sd2edbce5bf"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t14/l06",
+      "title": "Prebuilt UC and the connector that is not an adapter",
+      "level": 7,
+      "outcomes": [
+        "Name prebuilt UC separately from the desktop app",
+        "Budget about 320 kbps when the UC client runs locally"
+      ],
+      "sources": [
+        "sf68a610afd",
+        "scf71bf45a4",
+        "sa8d903ea0a"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t14/l07",
+      "title": "What an extract is allowed to remember",
+      "level": 7,
+      "outcomes": [
+        "Export before the clocks run out",
+        "Keep DID retention separate from domain retention"
+      ],
+      "sources": [
+        "s30cd3bdc96",
+        "sf68a610afd",
+        "sd2edbce5bf"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t15/l01",
+      "title": "There is no import button",
+      "level": 7,
+      "outcomes": [
+        "Call this track a teaching bridge",
+        "Start from the Five9 planning order"
+      ],
+      "sources": [
+        "s3f47fab2a7",
+        "sd78b63696a",
+        "scf71bf45a4"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t15/l02",
+      "title": "CSQs, skills, and the partition you will not find",
+      "level": 7,
+      "outcomes": [
+        "Map a CSQ to a skill group",
+        "Drop partitions from the design"
+      ],
+      "sources": [
+        "secfd36cda2",
+        "s3f47fab2a7"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t15/l03",
+      "title": "Scripts are rebuilt in modules",
+      "level": 7,
+      "outcomes": [
+        "Rebuild flows as named modules",
+        "Treat the builder export as a study file"
+      ],
+      "sources": [
+        "s6cadfc225d",
+        "sad77f493da"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t15/l04",
+      "title": "Dialing modes do not survive the move by osmosis",
+      "level": 7,
+      "outcomes": [
+        "Choose a Five9 mode by its own definition",
+        "Keep the simulator in the classroom"
+      ],
+      "sources": [
+        "sa582584055",
+        "s3fcf9f5549"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t15/l05",
+      "title": "Numbers, lists, and ANI are a data project",
+      "level": 7,
+      "outcomes": [
+        "Load lists, DNC, and dispositions as data",
+        "Assign the ANI profile"
+      ],
+      "sources": [
+        "s3f47fab2a7",
+        "sad77f493da",
+        "s30cd3bdc96"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t15/l06",
+      "title": "The gateway cut, without pretending to be the CUBE guide",
+      "level": 7,
+      "outcomes": [
+        "Keep Five9 requirements and gateway chores in two columns",
+        "Do not cite a Cisco example as a Five9 default"
+      ],
+      "sources": [
+        "scf71bf45a4",
+        "sd78b63696a",
+        "sb212a3a9e9"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t15/l07",
+      "title": "Cutover morning is a checklist, not a mood",
+      "level": 7,
+      "outcomes": [
+        "Run one DNIS, one dial, one pop, one location",
+        "Stop the repoint when any line fails"
+      ],
+      "sources": [
+        "s3f47fab2a7",
+        "sad77f493da",
+        "s8d2d125cb1",
+        "s30cd3bdc96",
+        "scf71bf45a4"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t16/l01",
+      "title": "911 is a location, not a prefix",
+      "level": 7,
+      "outcomes": [
+        "Dial 911 with no prefix",
+        "Cite the data sheet and the EULA separately"
+      ],
+      "sources": [
+        "s8d2d125cb1",
+        "s891bf62b1c"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t16/l02",
+      "title": "The address has to be the room they are in",
+      "level": 7,
+      "outcomes": [
+        "Register where the agent is",
+        "Use MyE911 history as the audit"
+      ],
+      "sources": [
+        "s8d2d125cb1",
+        "s891bf62b1c",
+        "se48cf6e6c1"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t16/l03",
+      "title": "Recording is the customer's duty too",
+      "level": 7,
+      "outcomes": [
+        "Play the notice counsel wrote",
+        "Assume hold and transfer can be recorded"
+      ],
+      "sources": [
+        "s891bf62b1c",
+        "s30cd3bdc96"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t16/l04",
+      "title": "Retention is several clocks",
+      "level": 7,
+      "outcomes": [
+        "Quote the clock for the object",
+        "Offload audio you must keep"
+      ],
+      "sources": [
+        "s30cd3bdc96"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t16/l05",
+      "title": "Attestation is not an ANI field",
+      "level": 7,
+      "outcomes": [
+        "Keep ANI and attestation in separate sentences",
+        "Cite Certified Caller before you say signed"
+      ],
+      "sources": [
+        "s25d2a2bde7",
+        "sc2b6f1347e"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t16/l06",
+      "title": "Abandon rate is a regulated posture",
+      "level": 7,
+      "outcomes": [
+        "Read the abandon warning",
+        "Keep the US 30-day and UK 24-hour windows straight"
+      ],
+      "sources": [
+        "sc2b6f1347e",
+        "s187a4487cc"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t16/l07",
+      "title": "TCPA manual touch is a physical control",
+      "level": 7,
+      "outcomes": [
+        "Type external numbers in manual touch",
+        "Treat a grey Dial button as the control working"
+      ],
+      "sources": [
+        "s187a4487cc",
+        "sc2b6f1347e"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t17/l01",
+      "title": "The domain has neighbors",
+      "level": 4,
+      "outcomes": [
+        "Name the neighbors",
+        "Give each one its own failure"
+      ],
+      "sources": [
+        "sa8d903ea0a",
+        "sc64dff4a82",
+        "sf68a610afd",
+        "s8d2d125cb1"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t17/l02",
+      "title": "Workforce, quality, and the recording shelf",
+      "level": 4,
+      "outcomes": [
+        "Name native WEM or Verint",
+        "Keep quality scores out of the router unless an admin change says so"
+      ],
+      "sources": [
+        "sc64dff4a82",
+        "s4c3bb5fa14"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t17/l03",
+      "title": "Analytics and the report that is not a dashboard rumor",
+      "level": 4,
+      "outcomes": [
+        "Name the pipe that produced the number",
+        "Do not average a wallboard and a report"
+      ],
+      "sources": [
+        "sc64dff4a82",
+        "sd2edbce5bf",
+        "sf68a610afd"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t17/l04",
+      "title": "AI agents are a handoff with a name",
+      "level": 4,
+      "outcomes": [
+        "Give every bot a named exit",
+        "Do not invent a model name"
+      ],
+      "sources": [
+        "sf3e7a61261",
+        "s0913c0c866",
+        "sa8d903ea0a"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t17/l05",
+      "title": "CRM, UC, and the desktop are three contracts",
+      "level": 4,
+      "outcomes": [
+        "Treat adapter, UC integration, and local UC app as three lines",
+        "Budget Assist and Teams separately"
+      ],
+      "sources": [
+        "scf71bf45a4",
+        "sf68a610afd",
+        "sa8d903ea0a"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t17/l06",
+      "title": "The glossary is the contract with yourself",
+      "level": 4,
+      "outcomes": [
+        "Cite a word or mark it local",
+        "Keep campaign profile and user profile apart"
+      ],
+      "sources": [
+        "sd2edbce5bf",
+        "scf71bf45a4"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t17/l07",
+      "title": "Read the map before you add a box",
+      "level": 4,
+      "outcomes": [
+        "Check the integration row before you buy",
+        "Split logos that hide two products"
+      ],
+      "sources": [
+        "sf68a610afd",
+        "s8d2d125cb1",
+        "s25d2a2bde7",
+        "sc64dff4a82",
+        "scf71bf45a4"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t18/l01",
+      "title": "University is a catalog, not a secret exam code",
+      "level": 1,
+      "outcomes": [
+        "Say that assessments exist without inventing a code",
+        "Date the curriculum brief"
+      ],
+      "sources": [
+        "se4f2d8f989",
+        "s14827d3a85",
+        "sfab498d9e6"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t18/l02",
+      "title": "The badge we could verify is a sales badge",
+      "level": 1,
+      "outcomes": [
+        "Describe the sales badge accurately",
+        "Do not use it as an admin license"
+      ],
+      "sources": [
+        "s864ce0b79c",
+        "s3f90811cfc",
+        "se4f2d8f989"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t18/l03",
+      "title": "Practice is the domain, not the badge",
+      "level": 1,
+      "outcomes": [
+        "Practice the objects",
+        "Treat invented codes as a negative signal"
+      ],
+      "sources": [
+        "s3f47fab2a7",
+        "s6cadfc225d",
+        "s14827d3a85"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t18/l04",
+      "title": "Version timelines go stale on purpose",
+      "level": 1,
+      "outcomes": [
+        "Date every version you copy",
+        "Re-read the PDF before you freeze a standard"
+      ],
+      "sources": [
+        "scf71bf45a4",
+        "sfab498d9e6"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t18/l05",
+      "title": "How to answer without inventing",
+      "level": 1,
+      "outcomes": [
+        "Use object, behavior, page, and gap",
+        "Prefer a marked unknown to a fake precision"
+      ],
+      "sources": [
+        "s3f47fab2a7",
+        "sc2b6f1347e",
+        "s6cadfc225d"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t18/l06",
+      "title": "A study week that stays inside the documents",
+      "level": 1,
+      "outcomes": [
+        "End each session on the cited page",
+        "Read the uncertain notes"
+      ],
+      "sources": [
+        "se4f2d8f989",
+        "s3f47fab2a7",
+        "sc2b6f1347e"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t18/l07",
+      "title": "What this lab will not pretend to be",
+      "level": 1,
+      "outcomes": [
+        "Cite the vendor page",
+        "Keep this lab in the study column"
+      ],
+      "sources": [
+        "se4f2d8f989",
+        "s3f47fab2a7"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t19/l01",
+      "title": "An ACD distributes. A skill group is the Five9 queue",
+      "level": 4,
+      "outcomes": [
+        "Separate the general word from the Five9 object",
+        "Quote the page that opened"
+      ],
+      "sources": [
+        "sfa6fb77c02",
+        "secfd36cda2"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t19/l02",
+      "title": "One person, several skills. One campaign, several groups",
+      "level": 4,
+      "outcomes": [
+        "Allow multiple memberships",
+        "Label the tie-break as unread"
+      ],
+      "sources": [
+        "secfd36cda2"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t19/l03",
+      "title": "Outbound uses Skills. Inbound and autodial use Outbound Skills",
+      "level": 4,
+      "outcomes": [
+        "Memorize the tab names",
+        "Check the tab before the carrier"
+      ],
+      "sources": [
+        "secfd36cda2"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t19/l04",
+      "title": "You can add, change, remove, and message the group",
+      "level": 4,
+      "outcomes": [
+        "Use the four verbs the chapter names",
+        "Do not invent the dialogs"
+      ],
+      "sources": [
+        "secfd36cda2"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t19/l05",
+      "title": "Service level and voicemail are topics on the same chapter",
+      "level": 4,
+      "outcomes": [
+        "Name the topic",
+        "Refuse the unread procedure"
+      ],
+      "sources": [
+        "secfd36cda2"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t19/l06",
+      "title": "Adding skills to a campaign points at another guide",
+      "level": 4,
+      "outcomes": [
+        "Follow the pointer",
+        "Do not fill the gap from memory"
+      ],
+      "sources": [
+        "secfd36cda2"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t19/l07",
+      "title": "A routing review you can finish",
+      "level": 4,
+      "outcomes": [
+        "Finish the note",
+        "Leave the unread fields blank"
+      ],
+      "sources": [
+        "secfd36cda2",
+        "sfa6fb77c02"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t20/l01",
+      "title": "Workforce management staffs the work",
+      "level": 4,
+      "outcomes": [
+        "Call WFM the roster layer",
+        "Keep it off the campaign-type list"
+      ],
+      "sources": [
+        "s64684efe13",
+        "sc64dff4a82"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t20/l02",
+      "title": "Forecasts are multiskill and multichannel",
+      "level": 4,
+      "outcomes": [
+        "Copy the forecast list",
+        "Leave the algorithm unnamed"
+      ],
+      "sources": [
+        "s64684efe13"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t20/l03",
+      "title": "Schedules can be built or bid",
+      "level": 4,
+      "outcomes": [
+        "Pick preference or bidding on purpose",
+        "Include the blocks the page lists"
+      ],
+      "sources": [
+        "s64684efe13"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t20/l04",
+      "title": "Intraday is a comparison, a reforecast, and a notice",
+      "level": 4,
+      "outcomes": [
+        "Use the intraday steps the card lists",
+        "Leave the six channels unnamed"
+      ],
+      "sources": [
+        "s64684efe13",
+        "sc64dff4a82"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t20/l05",
+      "title": "Adherence is plan versus what the person did",
+      "level": 4,
+      "outcomes": [
+        "Treat adherence as plan versus actual",
+        "Do not invent the alert threshold"
+      ],
+      "sources": [
+        "s64684efe13"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t20/l06",
+      "title": "The agent can see the plan, including on a phone",
+      "level": 4,
+      "outcomes": [
+        "Offer the portal, the phone, or Plus",
+        "Do not assume the connector is installed"
+      ],
+      "sources": [
+        "s64684efe13",
+        "s900b75bb16",
+        "sa8d903ea0a"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t20/l07",
+      "title": "Native WEM and a partner path both exist",
+      "level": 4,
+      "outcomes": [
+        "Ask which suite",
+        "Keep each CRM list on its own page"
+      ],
+      "sources": [
+        "sc64dff4a82",
+        "s64684efe13"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t21/l01",
+      "title": "Quality management scores the work on purpose",
+      "level": 4,
+      "outcomes": [
+        "Keep QM, surveys, and analytics apart",
+        "Do not invent the small-share percent"
+      ],
+      "sources": [
+        "sc64dff4a82",
+        "s4f53e56d67",
+        "s4c3bb5fa14"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t21/l02",
+      "title": "The evaluation list is forms, queries, coaching, and assignment",
+      "level": 4,
+      "outcomes": [
+        "Match the form to the queue",
+        "Treat the CRM names as a catalog"
+      ],
+      "sources": [
+        "sc64dff4a82"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t21/l03",
+      "title": "Monitoring and coaching are on the quality pages",
+      "level": 4,
+      "outcomes": [
+        "Cite the page that printed the sentence",
+        "Do not move it onto the skill tab"
+      ],
+      "sources": [
+        "sc64dff4a82",
+        "s4f53e56d67"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t21/l04",
+      "title": "Analytics is a sweep across interactions",
+      "level": 4,
+      "outcomes": [
+        "Quote the percent with its page",
+        "Keep surveys and analytics apart"
+      ],
+      "sources": [
+        "sc64dff4a82",
+        "s4f53e56d67"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t21/l05",
+      "title": "Performance views are dashboards, wallboards, and KPIs",
+      "level": 4,
+      "outcomes": [
+        "Use the performance nouns the page printed",
+        "Leave unread PDF claims out"
+      ],
+      "sources": [
+        "sc64dff4a82"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t21/l06",
+      "title": "Agents can read evaluations without a second story",
+      "level": 4,
+      "outcomes": [
+        "Show the evaluation where the page says it can live",
+        "Confirm consent on the license"
+      ],
+      "sources": [
+        "s900b75bb16",
+        "sc64dff4a82"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t21/l07",
+      "title": "A quality review you can finish",
+      "level": 4,
+      "outcomes": [
+        "Finish the note",
+        "Label product claims as product claims"
+      ],
+      "sources": [
+        "s4f53e56d67",
+        "sc64dff4a82"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t22/l01",
+      "title": "CTI is a named API, not a vibe",
+      "level": 4,
+      "outcomes": [
+        "Use the API name the page printed",
+        "Leave screen pop unspecified"
+      ],
+      "sources": [
+        "sf68a610afd"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t22/l02",
+      "title": "The prebuilt CRM names are a list",
+      "level": 4,
+      "outcomes": [
+        "Spell the name the page spelled",
+        "Send unlisted CRMs to the SDK"
+      ],
+      "sources": [
+        "sf68a610afd",
+        "s900b75bb16"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t22/l03",
+      "title": "Plus and a prebuilt adapter share a technology story",
+      "level": 4,
+      "outcomes": [
+        "Name Plus, the prebuilt integration, or the toolkit",
+        "Do not call a bookmark an adapter"
+      ],
+      "sources": [
+        "s900b75bb16"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t22/l04",
+      "title": "Workforce tools can show up inside the CRM",
+      "level": 4,
+      "outcomes": [
+        "Ask which connector was bought",
+        "Keep the three lists apart"
+      ],
+      "sources": [
+        "s900b75bb16",
+        "s64684efe13",
+        "sc64dff4a82"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t22/l05",
+      "title": "Zoom Phone and Teams are on the same API page",
+      "level": 4,
+      "outcomes": [
+        "Keep UC names off the CRM list",
+        "Quote over 55 as their count"
+      ],
+      "sources": [
+        "sf68a610afd"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t22/l06",
+      "title": "Salesforce and ServiceNow are names until the admin page opens",
+      "level": 4,
+      "outcomes": [
+        "Stop at the published name",
+        "Mark unread admin pages confirm"
+      ],
+      "sources": [
+        "sf68a610afd",
+        "s900b75bb16",
+        "s64684efe13"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t22/l07",
+      "title": "A CRM note you can defend",
+      "level": 4,
+      "outcomes": [
+        "Name the surface and the list",
+        "Leave unread features blank"
+      ],
+      "sources": [
+        "sf68a610afd",
+        "s900b75bb16"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t23/l01",
+      "title": "The glossary is a contract with the page",
+      "level": 4,
+      "outcomes": [
+        "Keep the page on the row",
+        "Reject words that have no page"
+      ],
+      "sources": [
+        "sfa6fb77c02",
+        "secfd36cda2"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t23/l02",
+      "title": "The mind map only holds boxes you can cite",
+      "level": 4,
+      "outcomes": [
+        "Draw only cited boxes",
+        "Put unread pages on the edge as gaps"
+      ],
+      "sources": [
+        "secfd36cda2",
+        "s900b75bb16",
+        "s64684efe13",
+        "sf68a610afd"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t23/l03",
+      "title": "Sister technologies are the names on the neighboring pages",
+      "level": 4,
+      "outcomes": [
+        "Caption each sister with its page",
+        "Refuse unnamed products"
+      ],
+      "sources": [
+        "sc64dff4a82",
+        "sf68a610afd"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t23/l04",
+      "title": "The integration map is the API list, drawn",
+      "level": 4,
+      "outcomes": [
+        "Draw the API list",
+        "Do not draw payloads"
+      ],
+      "sources": [
+        "sf68a610afd"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t23/l05",
+      "title": "A bridge is a teaching map, not an import",
+      "level": 4,
+      "outcomes": [
+        "Label the bridge as teaching",
+        "Leave unread vendors off it"
+      ],
+      "sources": [
+        "secfd36cda2"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t23/l06",
+      "title": "Future hooks stay unset until a page exists",
+      "level": 4,
+      "outcomes": [
+        "Name the gap",
+        "Add a date only when a page prints one"
+      ],
+      "sources": [
+        "sf68a610afd",
+        "s64684efe13"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "t23/l07",
+      "title": "Read the map before you add a box",
+      "level": 4,
+      "outcomes": [
+        "Run the six checks",
+        "Cut any box that has no page"
+      ],
+      "sources": [
+        "secfd36cda2",
+        "s900b75bb16",
+        "sf68a610afd",
+        "sc64dff4a82"
+      ],
+      "last_verified": null
+    }
+  ]
+}

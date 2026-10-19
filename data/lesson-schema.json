@@ -1,0 +1,12 @@
+{
+  "required": [
+    "key",
+    "title",
+    "level",
+    "outcomes",
+    "sources",
+    "last_verified"
+  ],
+  "levelMin": 0,
+  "levelMax": 10
+}

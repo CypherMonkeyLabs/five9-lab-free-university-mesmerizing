@@ -1,0 +1,115 @@
+{
+  "lab": "five9",
+  "components": [
+    {
+      "name": "three.js",
+      "version": "r169",
+      "licence": "MIT",
+      "url": "https://github.com/mrdoob/three.js",
+      "licence_file": "campus/vendor/three/LICENSE",
+      "files": [
+        {
+          "path": "campus/vendor/three/LICENSE",
+          "sha256": "4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454"
+        },
+        {
+          "path": "campus/vendor/three/OrbitControls.js",
+          "sha256": "80efaadea4f8a636a65fb0bd08bfef62f3d93a0bb94e2e7500f23176c5c07f4e"
+        },
+        {
+          "path": "campus/vendor/three/three.module.js",
+          "sha256": "f7cee3c7533449a1505cc12cb5128b89e3d4fd3d7ea62b05f9f5464a217472ee"
+        }
+      ]
+    },
+    {
+      "name": "anime.js",
+      "version": "unconfirmed",
+      "licence": "MIT",
+      "url": "https://github.com/juliangarnier/anime",
+      "licence_file": "campus/vendor/anime/LICENSE",
+      "files": [
+        {
+          "path": "campus/vendor/anime/LICENSE",
+          "sha256": "3f3e835a9952cfc2a6ca836fb95b3257c981f24fa3ef51249055acb09931897b"
+        },
+        {
+          "path": "campus/vendor/anime/LICENSE.md",
+          "sha256": "3f3e835a9952cfc2a6ca836fb95b3257c981f24fa3ef51249055acb09931897b"
+        },
+        {
+          "path": "campus/vendor/anime/anime.esm.min.js",
+          "sha256": "a19015a1a92d52025a2fb6703b6d67eadd1cc2aeaf880770e96e04cf6aa07be1"
+        }
+      ]
+    },
+    {
+      "name": "rough.js",
+      "version": "unconfirmed",
+      "licence": "MIT",
+      "url": "https://github.com/rough-stuff/rough",
+      "licence_file": "campus/vendor/rough/LICENSE",
+      "files": [
+        {
+          "path": "campus/vendor/rough/LICENSE",
+          "sha256": "dca9a392272606ac748ac0976a2a1133f14eef841c27beaa51a844d53c56a09d"
+        },
+        {
+          "path": "campus/vendor/rough/rough.esm.js",
+          "sha256": "e921535f216ebc93d422489d614da955b5286812220b3149fc70978f4cb5bd45"
+        }
+      ]
+    },
+    {
+      "name": "D3",
+      "version": "7.9.0",
+      "licence": "ISC",
+      "url": "https://github.com/d3/d3",
+      "licence_file": "campus/vendor/d3/LICENSE",
+      "files": [
+        {
+          "path": "campus/vendor/d3/LICENSE",
+          "sha256": "3e6849627f74ff73c257a3ae1efb574015d94fc1035c05ec3c15805165efcbc4"
+        },
+        {
+          "path": "campus/vendor/d3/d3.min.js",
+          "sha256": "f2094bbf6141b359722c4fe454eb6c4b0f0e42cc10cc7af921fc158fceb86539"
+        }
+      ]
+    },
+    {
+      "name": "markmap-view",
+      "version": "unconfirmed",
+      "licence": "MIT",
+      "url": "https://github.com/markmap/markmap",
+      "licence_file": "campus/vendor/markmap/LICENSE",
+      "files": [
+        {
+          "path": "campus/vendor/markmap/LICENSE",
+          "sha256": "6595d9ee0cf25c14d247e7d78f82f9e3b291bb6a2265e34cb084dc46bdab7cf4"
+        },
+        {
+          "path": "campus/vendor/markmap/view.js",
+          "sha256": "861eb6d20af18aaa300878d46d695722a73625c58b40f49236af027f18b74e07"
+        }
+      ]
+    },
+    {
+      "name": "canvas-confetti",
+      "version": "unconfirmed",
+      "licence": "ISC",
+      "url": "https://github.com/catdad/canvas-confetti",
+      "licence_file": "campus/vendor/confetti/LICENSE",
+      "files": [
+        {
+          "path": "campus/vendor/confetti/LICENSE",
+          "sha256": "fd44477c30a832a1dee9ef0b6cfb34677fbe5ef58c0cf655d27c646f11bb2f7a"
+        },
+        {
+          "path": "campus/vendor/confetti/confetti.module.mjs",
+          "sha256": "d29dc7b2dae5d04baf55666e4f677bbf7f8b0bf587e1ace6098823c4363e7589"
+        }
+      ]
+    }
+  ]
+}
