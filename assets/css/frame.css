@@ -349,6 +349,8 @@ th, td { border-bottom: 1px solid var(--line); text-align: left; padding: 8px; v
 }
 @media (max-width: 720px) and (max-height: 520px) {
   :root { --head-h: 48px; --dock-h: 64px; }
+  body:has(#cg-panel:not([hidden])) .chrome-stack,
+  body:has(#cg-panel:not([hidden])) .phone-dock { display: none; }
   .head-tools { display: none; }
   .canon-banner {
     height: 40px;

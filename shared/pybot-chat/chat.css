@@ -150,9 +150,9 @@
 .py-beta-badge { display: inline-block; padding: 1px 7px; margin-right: 4px; border-radius: 999px; border: 1px solid var(--accent); background: var(--accent); color: var(--btn-ink); font-weight: 700; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; }
 @media (max-height: 559px) { .py-chat-beta { font-size: 0.7rem; } }
 @media (max-width: 720px) and (max-height: 520px) {
-  .py-chat { display: flex; flex-direction: column; min-height: 0; overflow: hidden; }
+  .py-chat { display: flex; flex-direction: column; flex: 1 1 auto; min-height: 0; overflow: hidden; }
   .py-chat-form { order: -1; flex: 0 0 auto; }
-  .py-chat-log { order: 0; flex: 0 1 36px; min-height: 0; max-height: 36px; }
+  .py-chat-log { order: 0; flex: 1 1 auto; min-height: 120px; max-height: none; }
   .py-chat > .bp-link,
   .py-chat-beta,
   .py-chat-try,

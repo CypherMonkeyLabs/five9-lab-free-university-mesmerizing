@@ -333,15 +333,22 @@ html[data-theme="dark"] .cg-panel {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    z-index: 80;
-    max-height: calc(100dvh - var(--head-h, 48px) - 40px - var(--dock-h, 64px) - 16px);
+    z-index: 90;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: auto;
+    height: 100dvh;
+    max-height: none;
+    border-radius: 0;
     padding: 8px;
   }
   .cg-speak,
   .cg-log,
   .cg-cards,
   .cg-extra { display: none; }
-  .cg-panel [data-f9-chat] { min-height: 0; display: flex; flex-direction: column; }
+  .cg-panel [data-f9-chat] { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
 }
 @media (prefers-reduced-motion: reduce) {
   .cg-monkey { animation: none; }

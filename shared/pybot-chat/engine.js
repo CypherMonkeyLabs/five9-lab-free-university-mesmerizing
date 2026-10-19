@@ -374,41 +374,52 @@ function inCurated(word, syn) {
   return forms.some((form) => STRONG_WORDS.has(form));
 }
 
-function hasDomainTerm(text, domain, syn, pool, freq) {
+function addLexeme(lexicon, word) {
+  if (!word || word.length < 4) return;
+  if (STOP.has(word) || FILLER.has(word) || GENERIC_ENGLISH.has(word) || AMBIGUOUS.has(word) || SCIENCE.has(word)) return;
+  lexicon.add(word);
+}
+
+function buildLexicon(docs, extra) {
+  const lexicon = new Set(STRONG_WORDS);
+  const titleCounts = new Map();
+  const titlePhrases = new Set();
+  for (const doc of docs) {
+    if (doc.k === "lesson" && doc.ti) titlePhrases.add(normalize(doc.ti));
+  }
+  for (const phrase of (extra && extra.titles) || []) titlePhrases.add(normalize(phrase));
+  for (const phrase of titlePhrases) {
+    const seen = new Set();
+    for (const word of normalize(phrase).split(" ")) {
+      if (!word || seen.has(word)) continue;
+      seen.add(word);
+      titleCounts.set(word, (titleCounts.get(word) || 0) + 1);
+    }
+  }
+  for (const [word, count] of titleCounts) {
+    if (count >= 2) addLexeme(lexicon, word);
+  }
+  for (const phrase of (extra && extra.glossary) || []) {
+    for (const word of normalize(phrase).split(" ")) addLexeme(lexicon, word);
+  }
+  return lexicon;
+}
+
+function hasAllowlist(text, lexicon, syn, lexPool, freq) {
   const parts = normalize(text).split(" ").filter((word) => word && word.length >= 2 && !STOP.has(word) && !FILLER.has(word));
   if (!parts.length) return false;
-  let curated = 0;
-  let indexed = 0;
-  let ambiguous = 0;
-  let foreign = 0;
-  let science = 0;
-  const lessonWord = (word) => domain.strong.has(word) || domain.strong.has(stem(word));
   for (const word of parts) {
-    if (SCIENCE.has(word) || SCIENCE.has(stem(word))) science += 1;
-    if (inCurated(word, syn)) {
-      curated += 1;
-      continue;
-    }
-    if (AMBIGUOUS.has(word) || AMBIGUOUS.has(stem(word)) || GENERIC_ENGLISH.has(word) || GENERIC_ENGLISH.has(stem(word))) {
-      ambiguous += 1;
-      continue;
-    }
-    if (lessonWord(word)) {
-      indexed += 1;
-      continue;
-    }
-    const kind = typoKind(word, domain, syn, pool, freq);
-    if (kind === "curated") curated += 1;
-    else if (kind === "indexed" || kind === "strong") indexed += 1;
-    else if (kind === "stop" || kind === "weak") ambiguous += 1;
-    else if (word.length <= 3 || STOP.has(stem(word))) continue;
-    else foreign += 1;
+    const forms = [word, stem(word)];
+    const canonical = canon(word, syn);
+    if (canonical) forms.push(canonical, stem(canonical));
+    if (forms.some((form) => form && lexicon.has(form))) return true;
+    if (word.length < 5) continue;
+    if (GENERIC_ENGLISH.has(word) || GENERIC_ENGLISH.has(stem(word)) || SCIENCE.has(word) || SCIENCE.has(stem(word)) || AMBIGUOUS.has(word) || AMBIGUOUS.has(stem(word))) continue;
+    const fix = fuzzy(word, lexPool, word.length >= 8 ? 2 : 1, freq);
+    if (!fix || !lexicon.has(fix) || sharedPrefix(word, fix) < 3) continue;
+    return true;
   }
-  if (science > 0 && curated === 0) return false;
-  if (foreign > 0 && curated <= foreign) return false;
-  if (curated > 0) return true;
-  if (ambiguous > 0 && indexed === 0) return false;
-  return indexed > 0 && foreign === 0;
+  return false;
 }
 
 const GREET_FILL = new Set("there friend guide everyone folks all buddy pal anyone home up whats ya bot again today please just so hi hello".split(" "));
@@ -529,6 +540,8 @@ export function createRetriever(index) {
   const freq = new Map(df);
   tdf.forEach((count, term) => freq.set(term, (freq.get(term) || 0) + count));
   const domain = buildDomain(df, index && index.seeds);
+  const lexicon = buildLexicon(docs, index && index.lexicon);
+  const lexPool = [...lexicon];
   const seeds = Array.isArray(index && index.seeds) ? index.seeds : [];
   const seedPool = [];
   const seedSeen = new Set();
@@ -1082,7 +1095,7 @@ export function createRetriever(index) {
     const limited = String(raw || "").slice(0, 400);
     const routed = route(limited, host || {});
     if (!routed.searchText) return routed;
-    if (!hasDomainTerm(routed.searchText, domain, syn, pool, freq)) return fallbackAnswer([], routed.followMode, true);
+    if (!hasAllowlist(routed.searchText, lexicon, syn, lexPool, freq)) return fallbackAnswer([], routed.followMode, true);
     const seed = matchSeed(routed.searchText);
     if (seed) return fromSeed(seed, limited);
     const qTerms = queryTokens(routed.searchText, syn, pool, knownSet, seedPool, freq);

@@ -112,6 +112,9 @@ const seeds = SEED_RULES.map((rule) => {
   };
 });
 
-const index = { v: 1, lab: "five9", syn: SYN, seeds, docs };
+const glossaryHtml = readFileSync(join(root, "glossary.html"), "utf8");
+const glossary = [...glossaryHtml.matchAll(/<li><strong>([^<]+)<\/strong>/g)].map((match) => match[1].trim());
+const titles = [...lessons.values()].map(({ lesson }) => lesson.title);
+const index = { v: 1, lab: "five9", syn: SYN, seeds, lexicon: { titles, glossary }, docs };
 writeFileSync(outPath, `${JSON.stringify(index)}\n`);
 console.log(`f9bot index docs ${docs.length} seeds ${seeds.length} bytes ${Buffer.byteLength(JSON.stringify(index))}`);
