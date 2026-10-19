@@ -1,0 +1,204 @@
+{
+  "total": 167,
+  "passed": 134,
+  "failed": [
+    {
+      "id": "title:lesson:t02/l02",
+      "ok": false,
+      "href": "rooms/t01-l07-one-profile-many-campaigns.html",
+      "mode": "answer"
+    },
+    {
+      "id": "title:lesson:t02/l07",
+      "ok": false,
+      "href": "rooms/t08-l07-skill-voicemail-is-its-own-mailbox.html",
+      "mode": "answer"
+    },
+    {
+      "id": "title:lesson:t04/l02",
+      "ok": false,
+      "href": "rooms/t01-l07-one-profile-many-campaigns.html",
+      "mode": "answer"
+    },
+    {
+      "id": "title:lesson:t04/l05",
+      "ok": false,
+      "href": "rooms/t04-l06-call-analysis-is-not-a-guarantee.html",
+      "mode": "answer"
+    },
+    {
+      "id": "title:lesson:t06/l02",
+      "ok": false,
+      "href": "rooms/t07-l01-the-module-list-is-the-vocabulary.html",
+      "mode": "answer"
+    },
+    {
+      "id": "title:lesson:t07/l06",
+      "ok": false,
+      "href": "rooms/t02-l05-do-not-call-is-a-list-and-a-module.html",
+      "mode": "answer"
+    },
+    {
+      "id": "title:lesson:t07/l07",
+      "ok": false,
+      "href": "rooms/t07-l01-the-module-list-is-the-vocabulary.html",
+      "mode": "answer"
+    },
+    {
+      "id": "title:lesson:t08/l03",
+      "ok": false,
+      "href": "rooms/t02-l03-skill-groups-are-the-queues.html",
+      "mode": "answer"
+    },
+    {
+      "id": "title:lesson:t08/l04",
+      "ok": false,
+      "href": "rooms/t02-l03-skill-groups-are-the-queues.html",
+      "mode": "answer"
+    },
+    {
+      "id": "title:lesson:t09/l04",
+      "ok": false,
+      "href": "rooms/t09-l01-one-screen-is-the-product.html",
+      "mode": "answer"
+    },
+    {
+      "id": "title:lesson:t09/l07",
+      "ok": false,
+      "href": "rooms/t09-l01-one-screen-is-the-product.html",
+      "mode": "answer"
+    },
+    {
+      "id": "title:lesson:t10/l03",
+      "ok": false,
+      "href": "rooms/t21-l01-quality-management-scores-the-work-on-purpose.html",
+      "mode": "answer"
+    },
+    {
+      "id": "title:lesson:t10/l07",
+      "ok": false,
+      "href": "",
+      "mode": "fallback"
+    },
+    {
+      "id": "title:lesson:t11/l05",
+      "ok": false,
+      "href": "rooms/t07-l01-the-module-list-is-the-vocabulary.html",
+      "mode": "answer"
+    },
+    {
+      "id": "title:lesson:t12/l07",
+      "ok": false,
+      "href": "rooms/t12-l02-salesforce-versions-move.html",
+      "mode": "answer"
+    },
+    {
+      "id": "title:lesson:t15/l03",
+      "ok": false,
+      "href": "rooms/t07-l01-the-module-list-is-the-vocabulary.html",
+      "mode": "answer"
+    },
+    {
+      "id": "title:lesson:t16/l03",
+      "ok": false,
+      "href": "rooms/t10-l05-recordings-expire.html",
+      "mode": "answer"
+    },
+    {
+      "id": "title:lesson:t16/l07",
+      "ok": false,
+      "href": "rooms/t05-l05-tcpa-manual-touch-is-a-typed-number.html",
+      "mode": "answer"
+    },
+    {
+      "id": "title:lesson:t17/l01",
+      "ok": false,
+      "href": "rooms/t01-l02-the-domain-is-the-tenant.html",
+      "mode": "answer"
+    },
+    {
+      "id": "title:lesson:t17/l02",
+      "ok": false,
+      "href": "rooms/t21-l01-quality-management-scores-the-work-on-purpose.html",
+      "mode": "answer"
+    },
+    {
+      "id": "title:lesson:t17/l03",
+      "ok": false,
+      "href": "rooms/t14-l02-reporting-is-a-role.html",
+      "mode": "answer"
+    },
+    {
+      "id": "title:lesson:t17/l05",
+      "ok": false,
+      "href": "rooms/t09-l01-one-screen-is-the-product.html",
+      "mode": "answer"
+    },
+    {
+      "id": "title:lesson:t17/l07",
+      "ok": false,
+      "href": "rooms/t23-l07-read-the-map-before-you-add-a-box.html",
+      "mode": "answer"
+    },
+    {
+      "id": "title:lesson:t18/l03",
+      "ok": false,
+      "href": "rooms/t01-l02-the-domain-is-the-tenant.html",
+      "mode": "answer"
+    },
+    {
+      "id": "title:lesson:t18/l07",
+      "ok": false,
+      "href": "",
+      "mode": "fallback"
+    },
+    {
+      "id": "title:lesson:t19/l02",
+      "ok": false,
+      "href": "rooms/t02-l03-skill-groups-are-the-queues.html",
+      "mode": "answer"
+    },
+    {
+      "id": "title:lesson:t19/l03",
+      "ok": false,
+      "href": "rooms/t06-l02-autodial-is-the-ivr-s-outbound.html",
+      "mode": "answer"
+    },
+    {
+      "id": "title:lesson:t19/l05",
+      "ok": false,
+      "href": "rooms/t08-l07-skill-voicemail-is-its-own-mailbox.html",
+      "mode": "answer"
+    },
+    {
+      "id": "title:lesson:t19/l06",
+      "ok": false,
+      "href": "rooms/t02-l03-skill-groups-are-the-queues.html",
+      "mode": "answer"
+    },
+    {
+      "id": "title:lesson:t21/l03",
+      "ok": false,
+      "href": "rooms/t21-l01-quality-management-scores-the-work-on-purpose.html",
+      "mode": "answer"
+    },
+    {
+      "id": "title:lesson:t21/l07",
+      "ok": false,
+      "href": "rooms/t21-l01-quality-management-scores-the-work-on-purpose.html",
+      "mode": "answer"
+    },
+    {
+      "id": "title:lesson:t22/l06",
+      "ok": false,
+      "href": "rooms/t12-l02-salesforce-versions-move.html",
+      "mode": "answer"
+    },
+    {
+      "id": "title:lesson:t23/l05",
+      "ok": false,
+      "href": "rooms/t15-l01-there-is-no-import-button.html",
+      "mode": "answer"
+    }
+  ]
+}

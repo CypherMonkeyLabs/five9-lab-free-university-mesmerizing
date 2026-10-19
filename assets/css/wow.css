@@ -265,4 +265,57 @@ html[data-motion="full"] .card:hover {
 @media (prefers-reduced-motion: reduce) {
   .fx-field { display: none; }
   .hero-orb, .hero-token, .section-chip, .room-card { animation: none !important; transform: none !important; }
+  .route-node { transform: none !important; }
+}
+
+.route-desk { display: grid; gap: 12px; }
+.route-sim-note { margin: 0; font-weight: 700; }
+.route-stage {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  perspective: 800px;
+}
+.route-node {
+  min-height: 44px;
+  min-width: 44px;
+  border-radius: 14px;
+  border: 2px solid #5b21b6;
+  background: #ede9fe;
+  color: #1e1b4b;
+  font: 700 0.95rem/1.2 "Segoe UI", system-ui, sans-serif;
+  padding: 10px 12px;
+  cursor: pointer;
+  transform: rotateX(8deg);
+}
+.route-node[aria-pressed="true"] { background: #5b21b6; color: #ffffff; }
+.route-fields { display: flex; flex-wrap: wrap; gap: 10px; align-items: end; }
+.route-fields label { display: grid; gap: 4px; font-weight: 700; }
+.route-fields button {
+  min-height: 44px;
+  border-radius: 10px;
+  border: 2px solid #5b21b6;
+  background: #5b21b6;
+  color: #ffffff;
+  font: 700 1rem/1.2 "Segoe UI", system-ui, sans-serif;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+.route-fields select, .route-fields input {
+  min-height: 44px;
+  border-radius: 10px;
+  border: 2px solid #5b21b6;
+  background: #ffffff;
+  color: #142033;
+  font: inherit;
+  padding: 6px 8px;
+}
+.route-out { margin: 0; padding: 12px; border-radius: 12px; background: #eef2ff; color: #1e1b4b; }
+html[data-theme="dark"] .route-out { background: #1e1b4b; color: #f8fafc; }
+html[data-theme="dark"] .route-fields select,
+html[data-theme="dark"] .route-fields input { background: #0b1020; color: #f8fafc; }
+html[data-motion="reduce"] .route-node { transform: none; }
+.route-node:focus-visible, .route-fields select:focus-visible, .route-fields input:focus-visible, .route-fields button:focus-visible {
+  outline: 3px solid #0891b2;
+  outline-offset: 2px;
 }

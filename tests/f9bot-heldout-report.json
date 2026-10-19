@@ -1,0 +1,85 @@
+{
+  "questions": 102,
+  "beginner": {
+    "total": 40,
+    "relevant": 39,
+    "relevantPct": 97.5,
+    "confidentWrong": 0
+  },
+  "typo": {
+    "total": 15,
+    "relevant": 14,
+    "relevantPct": 93.3,
+    "confidentWrong": 1
+  },
+  "offtopic": {
+    "total": 15,
+    "relevant": 14,
+    "relevantPct": 93.3,
+    "confidentWrong": 1
+  },
+  "nav": {
+    "total": 10,
+    "relevant": 10,
+    "relevantPct": 100,
+    "confidentWrong": 0
+  },
+  "inject": {
+    "total": 10,
+    "relevant": 10,
+    "relevantPct": 100,
+    "confidentWrong": 0
+  },
+  "followTurns": {
+    "total": 12,
+    "relevant": 12,
+    "relevantPct": 100,
+    "confidentWrong": 0
+  },
+  "followPairs": {
+    "ok": 6,
+    "total": 6
+  },
+  "target": {
+    "offtopicConfidentWrong": 0,
+    "injectConfidentWrong": 0
+  },
+  "misses": [
+    {
+      "id": "b21",
+      "group": "beginner",
+      "q": "which protocols do Plus adapters use",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. Closest pages: Plus and a prebuilt adapter share a technology story; Plus adapters speak HTTPS and WSS. I only answer from this lab's lessons. You can also u"
+    },
+    {
+      "id": "t07",
+      "group": "typo",
+      "q": "do not cal list",
+      "relevant": false,
+      "confidentWrong": true,
+      "clean": false,
+      "href": "rooms/t15-l05-numbers-lists-and-ani-are-a-data-project.html",
+      "mode": "answer",
+      "intent": "",
+      "text": "Numbers, lists, and ANI are a data project. Source check 2026-10; unconfirmed if the vendor page moved. DNIS values, calling lists, dispositions, and do-not-call entries are domain"
+    },
+    {
+      "id": "o06",
+      "group": "offtopic",
+      "q": "how do I change a car tire",
+      "relevant": false,
+      "confidentWrong": true,
+      "clean": false,
+      "href": "rooms/t05-l04-predictive-fills-idle-time-and-it-can-drop-calls.html",
+      "mode": "answer",
+      "intent": "",
+      "text": "Predictive fills idle time, and it can drop calls. Source check 2026-10; unconfirmed if the vendor page moved. The dialer page says predictive mode uses algorithms to predict agent"
+    }
+  ]
+}

@@ -47,11 +47,19 @@ html[data-motion="full"] .cg-monkey { animation: cg-bob 3.2s ease-in-out infinit
 @keyframes cg-bob { 50% { transform: perspective(520px) rotateY(-12deg) rotateX(6deg) translateY(-10px); } }
 
 .cg-panel {
+  --ink: #142033;
+  --bg: #ffffff;
+  --bg-elev: #f5f3ff;
+  --accent: #5b21b6;
+  --accent-2: #0891b2;
+  --line: rgba(76, 29, 149, 0.35);
+  --muted: #334155;
+  --btn-ink: #ffffff;
   position: absolute;
   right: 0;
   bottom: 272px;
-  width: min(260px, calc(100vw - 24px));
-  max-height: min(60vh, 520px);
+  width: min(340px, calc(100vw - 24px));
+  max-height: min(70vh, 640px);
   overflow: auto;
   background: #ffffff;
   color: #142033;
@@ -275,7 +283,16 @@ html[data-motion="full"] .cg-monkey { animation: cg-bob 3.2s ease-in-out infinit
   padding: 0 28px 0 10px;
 }
 .cg-speak button { width: 100%; }
+html[data-theme="dark"] .cg-panel {
+  --ink: #eef4ff;
+  --bg: #141a2e;
+  --bg-elev: #1e1b4b;
+  --muted: #cbd5e1;
+  color: var(--ink);
+  background: var(--bg);
+}
 @media (max-width: 720px) {
+  .cg-root:has(.cg-panel:not([hidden])) .cg-monkey { visibility: hidden; }
   .cg-monkey { display: block; width: 96px; height: 112px; }
   .cg-root { z-index: 70; }
   .cg-panel {
