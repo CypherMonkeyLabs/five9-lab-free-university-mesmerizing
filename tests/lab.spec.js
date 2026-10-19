@@ -95,6 +95,32 @@ test("short phone shows the chat input and Send", async ({ browser }) => {
   await context.close();
 });
 
+test("chat input fills the phone sheet", async ({ browser }) => {
+  for (const viewport of [
+    { width: 390, height: 844 },
+    { width: 390, height: 430 },
+  ]) {
+    const context = await browser.newContext({
+      viewport,
+      hasTouch: true,
+      reducedMotion: "reduce",
+    });
+    const page = await context.newPage();
+    await ready(page);
+    await page.goto("/index.html");
+    await page.locator(".cg-monkey").click();
+    await page.waitForFunction(() => window.__f9botReady === true);
+    const input = page.locator("#py-chat-input");
+    await expect(input).toBeVisible();
+    const box = await input.boundingBox();
+    expect(box, `${viewport.width}x${viewport.height}`).toBeTruthy();
+    expect(box.width, `${viewport.width}x${viewport.height} input width`).toBeGreaterThanOrEqual(180);
+    expect(box.y, `${viewport.width}x${viewport.height} input top`).toBeGreaterThanOrEqual(0);
+    expect(box.y + box.height, `${viewport.width}x${viewport.height} input bottom`).toBeLessThanOrEqual(viewport.height);
+    await context.close();
+  }
+});
+
 test("routing desk is a labelled simulation", async ({ page }) => {
   await ready(page);
   await page.goto("/play.html");

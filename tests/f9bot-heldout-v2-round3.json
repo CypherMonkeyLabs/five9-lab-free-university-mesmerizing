@@ -1,0 +1,157 @@
+{
+  "questions": 102,
+  "beginner": {
+    "total": 40,
+    "relevant": 33,
+    "relevantPct": 82.5,
+    "confidentWrong": 2
+  },
+  "typo": {
+    "total": 15,
+    "relevant": 13,
+    "relevantPct": 86.7,
+    "confidentWrong": 0
+  },
+  "offtopic": {
+    "total": 15,
+    "relevant": 15,
+    "relevantPct": 100,
+    "confidentWrong": 0
+  },
+  "nav": {
+    "total": 10,
+    "relevant": 10,
+    "relevantPct": 100,
+    "confidentWrong": 0
+  },
+  "inject": {
+    "total": 10,
+    "relevant": 10,
+    "relevantPct": 100,
+    "confidentWrong": 0
+  },
+  "followTurns": {
+    "total": 12,
+    "relevant": 12,
+    "relevantPct": 100,
+    "confidentWrong": 0
+  },
+  "followPairs": {
+    "ok": 6,
+    "total": 6
+  },
+  "target": {
+    "offtopicConfidentWrong": 0,
+    "injectConfidentWrong": 0
+  },
+  "misses": [
+    {
+      "id": "b03",
+      "group": "beginner",
+      "q": "How does an outbound dialer remember a call outcome",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. Closest pages: Dispositions are the dialer's memory; Outbound uses Skills. Inbound and autodial use Outbound Skills. I only answer from this lab's lessons. Y"
+    },
+    {
+      "id": "b06",
+      "group": "beginner",
+      "q": "Where does the suppression list live for people who asked not to be called",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. I only answer from this lab's lessons. You can also use Search."
+    },
+    {
+      "id": "b09",
+      "group": "beginner",
+      "q": "Why is a pile of numbers not the same as a campaign",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. Closest pages: A list is not a campaign; Numbers, lists, and ANI are a data project. I only answer from this lab's lessons. You can also use Search."
+    },
+    {
+      "id": "b14",
+      "group": "beginner",
+      "q": "Which dialing mode can drop a live answer",
+      "relevant": false,
+      "confidentWrong": true,
+      "clean": false,
+      "href": "rooms/t02-l06-workstations-that-drop-live-calls.html",
+      "mode": "answer",
+      "intent": "",
+      "text": "Workstations that drop live calls. Source check 2026-10; unconfirmed if the vendor page moved. The technical requirements tell you to turn off Windows 11 Efficiency Mode on PCs tha"
+    },
+    {
+      "id": "b16",
+      "group": "beginner",
+      "q": "Which campaign type is the IVR placing the outbound call",
+      "relevant": false,
+      "confidentWrong": true,
+      "clean": false,
+      "href": "rooms/t01-l04-three-campaign-types.html",
+      "mode": "answer",
+      "intent": "seed",
+      "text": "Three campaign types. Source check 2026-10; unconfirmed if the vendor page moved. Public admin topics describe three campaign types: inbound, outbound, and autodial. Inbound answer"
+    },
+    {
+      "id": "b22",
+      "group": "beginner",
+      "q": "Do call recordings remain forever with no expiry",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. I only answer from this lab's lessons. You can also use Search."
+    },
+    {
+      "id": "b29",
+      "group": "beginner",
+      "q": "Is reporting a role someone is granted",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. I only answer from this lab's lessons. You can also use Search."
+    },
+    {
+      "id": "t07",
+      "group": "typo",
+      "q": "do not cal suppression",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. I only answer from this lab's lessons. You can also use Search."
+    },
+    {
+      "id": "t11",
+      "group": "typo",
+      "q": "sofphone webrtc entry",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. Closest pages: Default is a queue, not a compliment. I only answer from this lab's lessons. You can also use Search."
+    }
+  ]
+}

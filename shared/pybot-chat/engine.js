@@ -236,7 +236,7 @@ function queryTokens(text, syn, pool, knownSet, seedPool, freq) {
     if (!isKnown(word)) {
       const collapsed = collapseToKnown(word, isKnown);
       if (collapsed) word = collapsed;
-      else if (allowFuzzy && !GENERIC_ENGLISH.has(word)) {
+      else if (allowFuzzy && !GENERIC_ENGLISH.has(word) && !GENERIC_ENGLISH.has(stem(word))) {
         const fix = fuzzy(word, pool, 0, freq);
         if (fix) word = fix;
         else if (seedPool && word.length <= 3) {
@@ -318,7 +318,8 @@ function injection(raw) {
 
 const AMBIGUOUS = new Set("set list time key name file type open read match pass break call run end add new get use make home world page level course value data text line number item code help start show play count group say says said want need look come take give know think tell tell history island python microsoft pizza password background crash prime topping change changed".split(" "));
 const STRONG_WORDS = new Set("five9 vcc adp campaign campaigns inbound outbound autodial disposition dispositions dnis ivr skill skills skillgroup queue queues acd preview progressive predictive power tcpa dnc manualtouch sip codec codecs webrtc ani crm cti salesforce servicenow adapter adapters sdk connector recording e911 voicemail prompt prompts profile profiles script scripts module modules gateway cutover partition csq uccx ucce workstation reason erlang supervisor permission contact contacts field fields dialer pacing abandon attestation retention screenpop callerid callanalysis servicelevel acw notready bandwidth nat tls pstn trunk trunks layout reporting wfm wem iva genai adherence forecast schedule quality evaluation coaching analytics wallboard dashboard zoom teams softphone station callback blended listpenetration timezone domain tenant redsky verint studio taskkey nlp transcript headset dns srv srtp rtp java jre variable variables".split(" "));
-const GENERIC_ENGLISH = new Set("time life home world page course help start people person spanish tokyo poem sea thank thanks meaning telephone calorie calories banana capital hiking restaurant population colour color breakfast winter rainfall lullaby haiku mango egg moon landing movie pizza weather flight story dragon cricket tire cake president bitcoin joke french goodbye".split(" "));
+const SCIENCE = new Set("mars jupiter saturn venus mercury neptune uranus pluto planet planets astronomy galaxy orbit orbits nasa solar star stars comet asteroid telescope lunar phobos deimos science physics chemistry biology geology universe cosmos gravity nebula eclipse meteor meteorite quantum einstein molecule molecules electron electrons atom atoms relativity observatory constellation supernova photosynthesis black hole holes dwarf dwarfs pulsar quasar milky moon moons".split(" "));
+const GENERIC_ENGLISH = new Set(`time life home world page course help start people person spanish tokyo poem sea thank thanks meaning telephone calorie calories banana capital hiking restaurant population colour color breakfast winter rainfall lullaby haiku mango egg landing movie pizza weather flight story dragon cricket tire cake president bitcoin joke french goodbye ${[...SCIENCE].join(" ")}`.split(" "));
 
 function buildDomain(df, seeds) {
   const strong = new Set(STRONG_WORDS);
@@ -350,7 +351,7 @@ function domainKind(word, domain, syn) {
 }
 
 function typoKind(word, domain, syn, pool, freq) {
-  if (!word || word.length < 4 || GENERIC_ENGLISH.has(word)) return "";
+  if (!word || word.length < 4 || GENERIC_ENGLISH.has(word) || GENERIC_ENGLISH.has(stem(word))) return "";
   const fix = fuzzy(word, pool, word.length >= 7 ? 2 : 1, freq);
   if (!fix) return "";
   if (STOP.has(fix) || STOP.has(stem(fix))) return "stop";
@@ -380,8 +381,10 @@ function hasDomainTerm(text, domain, syn, pool, freq) {
   let indexed = 0;
   let ambiguous = 0;
   let foreign = 0;
+  let science = 0;
   const lessonWord = (word) => domain.strong.has(word) || domain.strong.has(stem(word));
   for (const word of parts) {
+    if (SCIENCE.has(word) || SCIENCE.has(stem(word))) science += 1;
     if (inCurated(word, syn)) {
       curated += 1;
       continue;
@@ -401,6 +404,7 @@ function hasDomainTerm(text, domain, syn, pool, freq) {
     else if (word.length <= 3 || STOP.has(stem(word))) continue;
     else foreign += 1;
   }
+  if (science > 0 && curated === 0) return false;
   if (foreign > 0 && curated <= foreign) return false;
   if (curated > 0) return true;
   if (ambiguous > 0 && indexed === 0) return false;
@@ -626,7 +630,7 @@ export function createRetriever(index) {
       const stopFix = fuzzy(word, STOP_WORDS, 1);
       if (stopFix) return stopFix;
     }
-    if (!allowFuzzy || GENERIC_ENGLISH.has(word)) return word;
+    if (!allowFuzzy || GENERIC_ENGLISH.has(word) || GENERIC_ENGLISH.has(stem(word))) return word;
     const fix = fuzzy(word, pool, 0, freq);
     if (fix) return fix;
     if (word.length <= 4) {
