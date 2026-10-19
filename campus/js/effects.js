@@ -72,7 +72,7 @@ async function mountStage(host) {
   if (!host || host.dataset.live === "1") return;
   if (document.documentElement.dataset.motion === "reduce") return;
   host.dataset.live = "1";
-  const THREE = await import("three");
+  const THREE = await import("../vendor/three/three.module.js");
   const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
   renderer.setPixelRatio(cappedPixelRatio());
   renderer.setSize(108, 108, false);

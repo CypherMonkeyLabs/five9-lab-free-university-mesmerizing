@@ -2,6 +2,7 @@
 <html lang="en" data-root="../" data-theme="light" data-motion="full" data-font="16" data-look="day">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' blob: data:; font-src 'self' data:; connect-src 'self'; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Five9 Lab</title>
   <meta name="description" content="Independent study lab for Five9 Virtual Contact Center: campaigns, dialer modes, IVR, skills, Agent Desktop Plus, WEM, IVA, CRM, SIP, APIs, and Cisco migration.">
@@ -14,26 +15,7 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <script>
-    try {
-      var saved = JSON.parse(localStorage.getItem("f9lab-settings") || "{}");
-      if (saved.theme) document.documentElement.dataset.theme = saved.theme;
-      else document.documentElement.dataset.theme = "light";
-      if (saved.font) document.documentElement.dataset.font = String(saved.font);
-      if (saved.reduced === true) document.documentElement.dataset.motion = "reduce";
-      if (saved.reduced === false) document.documentElement.dataset.motion = "full";
-      if (saved.reduced == null && matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        document.documentElement.dataset.motion = "reduce";
-      }
-    } catch (err) { /* keep defaults */ }
-  </script>
-  <script type="importmap">
-  {
-    "imports": {
-      "three": "./vendor/three/three.module.js"
-    }
-  }
-  </script>
+  <script src="js/theme-boot.js"></script>
 </head>
 <body>
   <div id="readbar"></div>

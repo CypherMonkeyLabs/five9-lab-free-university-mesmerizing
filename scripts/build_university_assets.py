@@ -26,6 +26,15 @@ FOOT = [
     "MIT code, CC BY-NC-SA content. Trademarks belong to their owners.",
 ]
 
+# Meta policy for every generated HTML page. script-src stays 'self', so builders
+# must keep scripts in external files.
+CSP_META = (
+    '<meta http-equiv="Content-Security-Policy" content="default-src \'self\'; '
+    "script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; "
+    "media-src 'self' blob: data:; font-src 'self' data:; connect-src 'self'; "
+    "worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'\">"
+)
+
 
 def load(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
@@ -133,6 +142,7 @@ def sheet_html(title: str, lines: list[str], sources: list[tuple[str, str]]) -> 
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  {CSP_META}
   <title>{html.escape(title)}</title>
   <link rel="icon" href="../favicon.ico" sizes="16x16 32x32 48x48">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
@@ -409,7 +419,7 @@ def main() -> None:
         for card in cards
     )
     (DOWNLOADS / "flashcards.html").write_text(
-        f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Five9 Lab flashcards</title>
+        f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">{CSP_META}<title>Five9 Lab flashcards</title>
         <link rel="icon" href="../favicon.ico" sizes="16x16 32x32 48x48">
         <link rel="icon" href="../favicon.svg" type="image/svg+xml">
         <style>body{{font:15px/1.4 sans-serif;margin:24px}} .card{{break-inside:avoid;border:1px solid #ccc;padding:12px;margin:8px 0}} footer{{font-size:12px}}</style></head>

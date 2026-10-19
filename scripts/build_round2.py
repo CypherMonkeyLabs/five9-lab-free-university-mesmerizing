@@ -10,7 +10,7 @@ import sys
 import zipfile
 from pathlib import Path
 
-from build_university_assets import paginate, write_pdf
+from build_university_assets import CSP_META, paginate, write_pdf
 from go_deeper import (
     front_sources,
     lesson_sources,
@@ -168,6 +168,7 @@ def head(title: str, prefix: str, desc: str) -> str:
 <html lang="en" data-theme="bloom" data-font="md" data-motion="full" data-root="{esc(prefix)}">
 <head>
 <meta charset="utf-8">
+{CSP_META}
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
@@ -177,7 +178,7 @@ def head(title: str, prefix: str, desc: str) -> str:
 <link rel="stylesheet" href="{prefix}assets/css/frame.css">
 <link rel="stylesheet" href="{prefix}assets/css/wow.css">
 <link rel="stylesheet" href="{prefix}assets/css/footer.css">
-<script>try{{var t=localStorage.getItem("f9-theme");if(t==="dark"||t==="bloom")document.documentElement.dataset.theme=t;var f=localStorage.getItem("f9-font");if(f)document.documentElement.dataset.font=f;var m=localStorage.getItem("f9-motion");if(m==="reduce"||m==="full")document.documentElement.dataset.motion=m;var ink=localStorage.getItem("f9-ink");if(ink&&/^#[0-9a-f]{{6}}$/i.test(ink))document.documentElement.style.setProperty("--ink",ink);}}catch(e){{}}</script>
+<script src="{prefix}assets/js/theme-boot.js"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -335,6 +336,7 @@ def standalone(rel: str, title: str, body: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     doc = (
         "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"utf-8\">"
+        f"{CSP_META}"
         f"<title>{esc(title)}</title><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">"
         f'<link rel="icon" href="{prefix}favicon.svg" type="image/svg+xml">'
         f'<link rel="icon" href="{prefix}favicon.ico">'
